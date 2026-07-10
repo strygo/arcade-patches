@@ -7,7 +7,9 @@
       "Everything on this site was built and verified against real MAME sets, with automated acceptance runs and human review of every change."
     ],
     "repo_url": null,
-    "contact_note": "For questions, corrections, or takedown requests, open an issue on the GitHub repository."
+    "contact_note": "For questions, corrections, or takedown requests, open an issue on the GitHub repository.",
+    "author": "Steve Gordon",
+    "author_url": "https://x.com/strygo"
   },
   "patches": [
     {

@@ -33,6 +33,18 @@ ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 GENERATED = ROOT / "data" / "generated"
 
+# Set from the site config at the start of main(); used by readme/MRA credits.
+SITE: dict = {}
+
+
+def author_line() -> str:
+    """One-line author credit, e.g. 'Steve Gordon (https://x.com/strygo)'."""
+    name = SITE.get("author")
+    if not name:
+        return ""
+    url = SITE.get("author_url")
+    return f"{name} ({url})" if url else name
+
 STATUS_LABELS = {
     "released": "Released",
     "release-candidate": "Release candidate",
@@ -80,6 +92,10 @@ def make_readme(patch: dict, members: list, fmt: str) -> str:
         f"Version:  {patch['version']} ({patch['date']})",
         f"Target:   MAME set '{patch['set']}' — {patch['game']}",
         f"Hardware: {patch['hardware']}",
+    ]
+    if author_line():
+        lines.append(f"Patch by: {author_line()}")
+    lines += [
         "",
         "ABOUT THIS PROJECT",
         "",
@@ -191,9 +207,10 @@ def zip_writer(out_path: Path, stamp: tuple):
 
 def mra_header_note(patch: dict) -> str:
     mra_cfg = patch["mra"]
+    credit = f"\n    Patch by {author_line()}.\n" if author_line() else ""
     return f"""    {patch['title']} — English translation patch ({patch['version']})
     An unofficial fan translation of {patch['game']}.
-
+{credit}
     This is a patch-overlay MRA: it references the ORIGINAL, unmodified
     MAME romset ({patch['set']}.zip) and applies the translation in memory
     while the game loads. It contains no ROM data. Settings and saves use
@@ -759,6 +776,8 @@ fan-work practice, please get in touch and it will be addressed promptly.
 def main() -> None:
     config = json.loads((ROOT / "data" / "patches.json").read_text())
     site, patches = config["site"], config["patches"]
+    global SITE
+    SITE = site
 
     DOCS.mkdir(exist_ok=True)
     (DOCS / ".nojekyll").write_text("")
