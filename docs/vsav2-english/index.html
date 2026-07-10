@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vampire Savior 2 — Arcade Patches</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="home" href="../index.html">Arcade Patches</a>
+    <div class="tagline">Translation and restoration patches for arcade fighting games.</div>
+  </div>
+</header>
+<main>
+<a class="back" href="../index.html">&larr; All patches</a>
+<h1>Vampire Savior 2</h1>
+<p class="subtitle">English translation</p>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire Savior 2: The Lord of Vampire (Japan 970913)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>vsav2</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-07-10</dd></dl>
+<h2>Screenshots</h2>
+<figure class="shot"><div class="pair"><div><p class="label">Original</p><img src="../img/vsav2-english/00_before.png" alt="Original: Character select. Lei-Lei becomes Hsien-Ko."></div><div><p class="label">Patched</p><img src="../img/vsav2-english/00_after.png" alt="Patched: Character select. Lei-Lei becomes Hsien-Ko."></div></div><figcaption>Character select. Lei-Lei becomes Hsien-Ko.</figcaption></figure>
+<figure class="shot single"><img src="../img/vsav2-english/01_single.png" alt="Bulleta under her Western name, Baby Bonnie Hood."><figcaption>Bulleta under her Western name, Baby Bonnie Hood.</figcaption></figure>
+<figure class="shot single"><img src="../img/vsav2-english/02_single.png" alt="Post-fight quotes in English (B.B. Hood shown, natural route capture)."><figcaption>Post-fight quotes in English (B.B. Hood shown, natural route capture).</figcaption></figure>
+<figure class="shot"><div class="pair"><div><p class="label">Original</p><img src="../img/vsav2-english/03_before.png" alt="Original: The same ending page before and after: the Japanese source and its relocated English translation."></div><div><p class="label">Patched</p><img src="../img/vsav2-english/03_after.png" alt="Patched: The same ending page before and after: the Japanese source and its relocated English translation."></div></div><figcaption>The same ending page before and after: the Japanese source and its relocated English translation.</figcaption></figure>
+<figure class="shot single"><img src="../img/vsav2-english/04_single.png" alt="The title art is intentionally unchanged — the official U.S. arcade release of the previous game also used Vampire Savior branding."><figcaption>The title art is intentionally unchanged — the official U.S. arcade release of the previous game also used Vampire Savior branding.</figcaption></figure>
+<h2>About this patch</h2>
+<p>Vampire Savior 2 is a Japan-only update of Vampire Savior with a shuffled roster — Donovan, Huitzil, and Pyron join the fight, while Gallon, Aulbath, and Sasquatch sit this one out — plus its own set of endings. It never came out in English. This patch translates the entire game.</p>
+<p>Where the dialogue matches the Western release of Vampire Savior, the patch reuses Capcom&#x27;s own English so it reads like the official localization. The lines unique to this version — the quotes for Huitzil, Pyron, and Donovan, along with every ending and the final confrontation with Jedah — are newly translated to read naturally while staying true to the original.</p>
+<p>The title screen keeps the Vampire Savior 2 name, which is how the game appeared in arcades. &#x27;Darkstalkers 3&#x27; was a later name used only for the home versions.</p>
+<h2>What's changed</h2><ul>
+<li>USA region presentation</li>
+<li>Western character names on character select, route map, and fight HUD: Bulleta → Baby Bonnie Hood, Zabel → L.Raptor, Lei-Lei → Hsien-Ko, Phobos → Huitzil</li>
+<li>All 241 post-fight quotes in English (192 official arcade records reused verbatim, 48 VS2-only records newly translated)</li>
+<li>All 29 ending pages and both 4-page Jedah final-boss dialogs translated and relocated into verified free ROM space</li>
+<li>Route stage names and option labels verified byte-identical to the official U.S. arcade records</li>
+</ul>
+<h2>Downloads</h2>
+<div class="download">
+  <div class="kind">ROM patch (IPS) — MAME, emulators, original hardware</div>
+  <div class="file"><a href="../downloads/vsav2-english-rc1-ips.zip">vsav2-english-rc1-ips.zip</a>
+  (15 KB)</div>
+  <div class="hash">SHA-256: 22cd6869f19359cc7f12b8d280c48bc35cd0d33d368f3267ce70e85e798bcdd2</div>
+</div>
+<div class="download">
+  <div class="kind">MiSTer (MRA patch overlay)</div>
+  <div class="file"><a href="../downloads/vsav2-english-rc1-mra.zip">vsav2-english-rc1-mra.zip</a>
+  (19 KB)</div>
+  <div class="hash">SHA-256: d9f01ac322f72731e066411a46de7b047f377218d4b5b61378e9684bdd4fdc15</div>
+</div>
+<p>Neither download contains ROM data: you need your own dump of
+<strong>Vampire Savior 2: The Lord of Vampire (Japan 970913)</strong> as the MAME set <code>vsav2.zip</code>.
+Each zip includes a <code>readme.txt</code> with full instructions.</p>
+<h2>How to apply (ROM patch)</h2>
+<pre><code>unzip vsav2-english-rc1-ips.zip -d vsav2-patch
+cd vsav2-patch
+python3 apply.py /path/to/vsav2.zip</code></pre>
+<p>This verifies every file against the checksums below before and after patching,
+then writes <code>vsav2_patched.zip</code>. Rename it to <code>vsav2.zip</code>
+and put it ahead of the stock set in your MAME rompath. Alternatively, apply each
+file in <code>ips/</code> with any IPS patcher (Flips, Lunar IPS, …) to the ROM file
+of the same name and re-zip the set yourself.</p>
+<p>MAME reports checksum warnings for the patched program ROMs when loading —
+that is expected, and the game runs normally.</p>
+<h2>MiSTer</h2>
+<p>Copy <code>Vampire Savior 2 (English Translation).mra</code> from the MRA download anywhere under
+<code>_Arcade/</code> on your MiSTer, and have the stock, unmodified romset at
+<code>games/mame/vsav2.zip</code> (split MAME sets also need <code>qsound.zip</code>).
+You need Jotego's <code>jtcps2</code> core, which the standard MiSTer downloader
+(update_all) installs automatically.</p>
+<p>The MRA references your original romset and applies the translation in memory
+while the game loads — nothing on your SD card is modified. The translation keeps
+its own settings and saves under the setname <code>vsav2en</code>.</p>
+<h3>Changed ROMs</h3>
+<table>
+<tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
+<tr><td class="mono">vs2j.03</td><td>512 KB</td><td class="mono">89fd86b4</td><td class="mono">a211712c</td></tr>
+<tr><td class="mono">vs2j.04</td><td>512 KB</td><td class="mono">107c091b</td><td class="mono">50c7dbba</td></tr>
+<tr><td class="mono">vs2j.08</td><td>512 KB</td><td class="mono">2018c120</td><td class="mono">cb8b85c6</td></tr>
+</table>
+<h2>Notes</h2><ul class="notes">
+<li>Release candidate: the translation is complete and every changed surface has passed automated acceptance, but wording review is still open. Report anything that reads badly.</li>
+<li>MAME reports checksum warnings for the three patched program ROMs. This is expected; the game boots and plays normally.</li>
+</ul>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
+    by Capcom. All game titles, characters, and artwork remain the property of their
+    respective owners. No ROMs or other copyrighted game data are hosted here.</p>
+    <p><a href="../legal.html">Legal &amp; disclaimers</a></p>
+  </div>
+</footer>
+</body>
+</html>

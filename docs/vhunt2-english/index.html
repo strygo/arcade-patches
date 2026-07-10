@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Night Warriors 2 — Arcade Patches</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="home" href="../index.html">Arcade Patches</a>
+    <div class="tagline">Translation and restoration patches for arcade fighting games.</div>
+  </div>
+</header>
+<main>
+<a class="back" href="../index.html">&larr; All patches</a>
+<h1>Night Warriors 2</h1>
+<p class="subtitle">Vampire Hunter 2 — English translation</p>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>vhunt2</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-07-10</dd></dl>
+<h2>Screenshots</h2>
+<figure class="shot"><div class="pair"><div><p class="label">Original</p><img src="../img/vhunt2-english/00_before.png" alt="Original: Title screen. The arcade-native Night Warriors 2 logo, completed from the unused Western title path in the original ROM."></div><div><p class="label">Patched</p><img src="../img/vhunt2-english/00_after.png" alt="Patched: Title screen. The arcade-native Night Warriors 2 logo, completed from the unused Western title path in the original ROM."></div></div><figcaption>Title screen. The arcade-native Night Warriors 2 logo, completed from the unused Western title path in the original ROM.</figcaption></figure>
+<figure class="shot"><div class="pair"><div><p class="label">Original</p><img src="../img/vhunt2-english/01_before.png" alt="Original: Character select. Phobos becomes Huitzil, his official Western name."></div><div><p class="label">Patched</p><img src="../img/vhunt2-english/01_after.png" alt="Patched: Character select. Phobos becomes Huitzil, his official Western name."></div></div><figcaption>Character select. Phobos becomes Huitzil, his official Western name.</figcaption></figure>
+<figure class="shot single"><img src="../img/vhunt2-english/02_single.png" alt="Post-fight quotes — all 225 messages are in English (Anakaris shown)."><figcaption>Post-fight quotes — all 225 messages are in English (Anakaris shown).</figcaption></figure>
+<figure class="shot single"><img src="../img/vhunt2-english/03_single.png" alt="Ending narration in English, captured on a natural playthrough route."><figcaption>Ending narration in English, captured on a natural playthrough route.</figcaption></figure>
+<figure class="shot single"><img src="../img/vhunt2-english/04_single.png" alt="Staff roll under the Night Warriors 2 name."><figcaption>Staff roll under the Night Warriors 2 name.</figcaption></figure>
+<h2>About this patch</h2>
+<p>Vampire Hunter 2 is a 1997 Capcom fighter that only ever reached Japanese arcades. Its predecessor came to the West as Night Warriors: Darkstalkers&#x27; Revenge, but this sequel never made the trip. This patch translates the whole game into English and gives it the Western name it should have had: Night Warriors 2.</p>
+<p>The Night Warriors 2 title screen isn&#x27;t a fan mock-up. An unused Western title was already tucked away inside the original game — the patch finishes it and switches it on, leaving the gameplay exactly as it was.</p>
+<p>Where Capcom&#x27;s own English wording exists in the Western Darkstalkers games, the patch reuses it so the writing matches the official localization. Everything else — the victory taunts, the boss exchanges, and every character&#x27;s ending — is freshly translated and checked in the actual game.</p>
+<h2>What's changed</h2><ul>
+<li>Arcade-native Night Warriors 2 title screen, built from the ROM&#x27;s unused Western title path</li>
+<li>USA region presentation (warning screen and region byte)</li>
+<li>Western character names on character select, route map labels, and the fight HUD: Zabel → L.Raptor, Gallon → J.Talbain, Lei-Lei → Hsien-Ko, Phobos → Huitzil, Aulbath → Rikuo</li>
+<li>English route/stage titles</li>
+<li>All 225 post-fight quotes in English</li>
+<li>All boss dialog and every character ending translated (44 records, verified on natural routes)</li>
+<li>English staff roll under the Night Warriors 2 name</li>
+</ul>
+<h2>Downloads</h2>
+<div class="download">
+  <div class="kind">ROM patch (IPS) — MAME, emulators, original hardware</div>
+  <div class="file"><a href="../downloads/vhunt2-english-rc1-ips.zip">vhunt2-english-rc1-ips.zip</a>
+  (15 KB)</div>
+  <div class="hash">SHA-256: a881ed507e4804e7dbaf6eb61514d5576e1780cecb99e8808dca45411824f6ca</div>
+</div>
+<div class="download">
+  <div class="kind">MiSTer (MRA patch overlay)</div>
+  <div class="file"><a href="../downloads/vhunt2-english-rc1-mra.zip">vhunt2-english-rc1-mra.zip</a>
+  (19 KB)</div>
+  <div class="hash">SHA-256: 877b4966c91200bdd850a201f9fd00fe98f753633eed74fac80d73fc59872503</div>
+</div>
+<p>Neither download contains ROM data: you need your own dump of
+<strong>Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)</strong> as the MAME set <code>vhunt2.zip</code>.
+Each zip includes a <code>readme.txt</code> with full instructions.</p>
+<h2>How to apply (ROM patch)</h2>
+<pre><code>unzip vhunt2-english-rc1-ips.zip -d vhunt2-patch
+cd vhunt2-patch
+python3 apply.py /path/to/vhunt2.zip</code></pre>
+<p>This verifies every file against the checksums below before and after patching,
+then writes <code>vhunt2_patched.zip</code>. Rename it to <code>vhunt2.zip</code>
+and put it ahead of the stock set in your MAME rompath. Alternatively, apply each
+file in <code>ips/</code> with any IPS patcher (Flips, Lunar IPS, …) to the ROM file
+of the same name and re-zip the set yourself.</p>
+<p>MAME reports checksum warnings for the patched program ROMs when loading —
+that is expected, and the game runs normally.</p>
+<h2>MiSTer</h2>
+<p>Copy <code>Night Warriors 2 (English Translation).mra</code> from the MRA download anywhere under
+<code>_Arcade/</code> on your MiSTer, and have the stock, unmodified romset at
+<code>games/mame/vhunt2.zip</code> (split MAME sets also need <code>qsound.zip</code>).
+You need Jotego's <code>jtcps2</code> core, which the standard MiSTer downloader
+(update_all) installs automatically.</p>
+<p>The MRA references your original romset and applies the translation in memory
+while the game loads — nothing on your SD card is modified. The translation keeps
+its own settings and saves under the setname <code>nwarr2en</code>.</p>
+<h3>Changed ROMs</h3>
+<table>
+<tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
+<tr><td class="mono">vh2j.03a</td><td>512 KB</td><td class="mono">9ae8f186</td><td class="mono">1ce8d926</td></tr>
+<tr><td class="mono">vh2j.04a</td><td>512 KB</td><td class="mono">e2fabf53</td><td class="mono">6b232eae</td></tr>
+<tr><td class="mono">vh2j.08</td><td>512 KB</td><td class="mono">ac873dff</td><td class="mono">be9d8a6c</td></tr>
+</table>
+<h2>Notes</h2><ul class="notes">
+<li>MAME reports checksum warnings for the three patched program ROMs. This is expected; the game boots and plays normally.</li>
+<li>Official English donor text comes from the Western Night Warriors and Vampire Savior arcade sets and is only used where the Japanese source record was demonstrably equivalent.</li>
+</ul>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
+    by Capcom. All game titles, characters, and artwork remain the property of their
+    respective owners. No ROMs or other copyrighted game data are hosted here.</p>
+    <p><a href="../legal.html">Legal &amp; disclaimers</a></p>
+  </div>
+</footer>
+</body>
+</html>

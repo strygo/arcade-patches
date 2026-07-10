@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Street Fighter Alpha 3 Upper — Arcade Patches</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="home" href="../index.html">Arcade Patches</a>
+    <div class="tagline">Translation and restoration patches for arcade fighting games.</div>
+  </div>
+</header>
+<main>
+<a class="back" href="../index.html">&larr; All patches</a>
+<h1>Street Fighter Alpha 3 Upper</h1>
+<p class="subtitle">NAOMI GD-ROM multi-region patch</p>
+<div class="badges"><span class="badge plain">v1.0</span><span class="badge plain">Sega NAOMI GD-ROM</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 3 Upper (Japan, GDL-0002)</dd><dt>Hardware</dt><dd>Sega NAOMI GD-ROM</dd><dt>MAME set</dt><dd>sfz3ugd</dd><dt>Version</dt><dd>1.0</dd><dt>Updated</dt><dd>2026-07-10</dd></dl>
+<h2>Screenshots</h2>
+<figure class="shot"><div class="pair"><div><p class="label">Japan region</p><img src="../img/sfz3ugd-multiregion/00_before.png" alt="Japan region: The same patched disc on two BIOS regions. The game&#x27;s own region-dependent title art shows Street Fighter Zero 3 on a Japanese board and Street Fighter Alpha 3 on a USA board — note the U.S. copyright line under the American title."></div><div><p class="label">USA region</p><img src="../img/sfz3ugd-multiregion/00_after.png" alt="USA region: The same patched disc on two BIOS regions. The game&#x27;s own region-dependent title art shows Street Fighter Zero 3 on a Japanese board and Street Fighter Alpha 3 on a USA board — note the U.S. copyright line under the American title."></div></div><figcaption>The same patched disc on two BIOS regions. The game&#x27;s own region-dependent title art shows Street Fighter Zero 3 on a Japanese board and Street Fighter Alpha 3 on a USA board — note the U.S. copyright line under the American title.</figcaption></figure>
+<figure class="shot"><div class="pair"><div><p class="label">Original</p><img src="../img/sfz3ugd-multiregion/01_before.png" alt="Original: A USA-region NAOMI BIOS: the original Japanese GD-ROM is refused; the patched image is accepted and loads."></div><div><p class="label">Patched</p><img src="../img/sfz3ugd-multiregion/01_after.png" alt="Patched: A USA-region NAOMI BIOS: the original Japanese GD-ROM is refused; the patched image is accepted and loads."></div></div><figcaption>A USA-region NAOMI BIOS: the original Japanese GD-ROM is refused; the patched image is accepted and loads.</figcaption></figure>
+<h2>About this patch</h2>
+<p>Street Fighter Zero 3 Upper is an enhanced version of Street Fighter Alpha 3 that only came to arcades in Japan, on Sega&#x27;s NAOMI hardware. Because it&#x27;s flagged as a Japanese release, a US or Export machine rejects the disc on sight with &quot;THIS GAME IS NOT ACCEPTABLE BY MAIN BOARD.&quot;</p>
+<p>This patch flips that region flag so the very same disc boots on Japanese, US, and Export systems. Nothing about the game itself changes — but on a US or Export machine it now shows its Western Street Fighter Alpha 3 branding instead of the Japanese Street Fighter Zero 3, exactly as an overseas release would have.</p>
+<p>It&#x27;s the smallest change possible: only the region flag is touched, and the game, its language, and its settings are left just as Capcom shipped them. Booting was confirmed on all three region setups.</p>
+<h2>What's changed</h2><ul>
+<li>NAOMI header region mask: Japan → Japan + USA + Export (one byte in the game header, eight encrypted bytes on disc)</li>
+<li>Nothing else — this is a region unlock only; it does not translate or otherwise modify the game</li>
+</ul>
+<h2>Download</h2>
+<div class="download">
+  <div class="kind">NAOMI GD-ROM patch — data-free, drives your own chdman</div>
+  <div class="file"><a href="../downloads/sfz3ugd-multiregion-1.0-chd.zip">sfz3ugd-multiregion-1.0-chd.zip</a>
+  (4 KB)</div>
+  <div class="hash">SHA-256: 8ab61f7e389192cf61829974efa58cf69a34fcb34f4a0202cc6b30d4fed52e3a</div>
+</div>
+<p>The download contains <strong>no game data at all</strong> — just a description of
+the change (8 bytes in track 3) and an apply script. You
+need your own dump of <strong>Street Fighter Zero 3 Upper (Japan, GDL-0002)</strong>: the MAME set
+<code>sfz3ugd.zip</code> plus <code>sfz3ugd/gdl-0002.chd</code>.</p>
+<h2>How to apply</h2>
+<pre><code>unzip sfz3ugd-multiregion-1.0-chd.zip -d sfz3ugd-patch
+cd sfz3ugd-patch
+python3 apply.py /path/to/sfz3ugd/gdl-0002.chd</code></pre>
+<p>Requirements: Python 3, <code>chdman</code> (it ships with every MAME
+distribution), and about 2.5&nbsp;GB of temporary disk space. The script verifies
+your dump, unpacks it with chdman, patches 8 bytes, rebuilds the CHD, and
+verifies the result against the checksum below — if anything does not match,
+nothing is kept.</p>
+<p>Rename the verified output to <code>gdl-0002.chd</code> inside an
+<code>sfz3ugd/</code> folder placed ahead of the stock set in your MAME rompath.
+MAME reports a checksum warning for the patched CHD — that is expected, and the
+game boots on Japanese, USA, and Export BIOS regions.</p>
+<h3>CHD checksums</h3>
+<table>
+<tr><th></th><th>SHA-1</th><th>Data SHA-1</th></tr>
+<tr><td>Original</td><td class="mono">fceb1014a1c673c91a4529fff75aebfd734d5f4e</td>
+<td class="mono">471d5f7ddd966f5639312ccd044421f4184dbfc6</td></tr>
+<tr><td>Patched</td><td class="mono">fc009c51d9c9ac8cd72df15ab4196df03130f70b</td>
+<td class="mono">6948c210393c9de59e84dcc9d0086b6a64873f56</td></tr>
+</table>
+<h2>Notes</h2><ul class="notes">
+<li>Applying the patch requires chdman (bundled with every MAME release) and about 2.5 GB of temporary disk space.</li>
+<li>MAME reports a checksum warning for the patched CHD. This is expected; the game boots and plays normally.</li>
+<li>For optical drive emulators on real hardware, the patched CHD can be unpacked to GDI with chdman extractcd.</li>
+<li>You still need the unchanged sfz3ugd.zip (security PIC) alongside the CHD.</li>
+</ul>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
+    by Capcom. All game titles, characters, and artwork remain the property of their
+    respective owners. No ROMs or other copyrighted game data are hosted here.</p>
+    <p><a href="../legal.html">Legal &amp; disclaimers</a></p>
+  </div>
+</footer>
+</body>
+</html>

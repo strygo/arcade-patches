@@ -1,0 +1,141 @@
+{
+  "ips_zipname": "vsav2-english-rc1-ips.zip",
+  "mra_zipname": "vsav2-english-rc1-mra.zip",
+  "members": [
+    {
+      "name": "dl-1425.bin",
+      "size": 24576,
+      "stock_crc32": "d6cf5ef5",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.01",
+      "size": 131072,
+      "stock_crc32": "35190139",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.02",
+      "size": 131072,
+      "stock_crc32": "c32dba09",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.11m",
+      "size": 4194304,
+      "stock_crc32": "d67e47b7",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.12m",
+      "size": 4194304,
+      "stock_crc32": "6d020a14",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.13m",
+      "size": 4194304,
+      "stock_crc32": "5c852f52",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.14m",
+      "size": 4194304,
+      "stock_crc32": "cd09bd63",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.15m",
+      "size": 4194304,
+      "stock_crc32": "a20f58af",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.16m",
+      "size": 4194304,
+      "stock_crc32": "e0182c15",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.17m",
+      "size": 4194304,
+      "stock_crc32": "39db59ad",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.18m",
+      "size": 4194304,
+      "stock_crc32": "778dc4f6",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.19m",
+      "size": 4194304,
+      "stock_crc32": "00c763a7",
+      "action": "copy"
+    },
+    {
+      "name": "vs2.20m",
+      "size": 4194304,
+      "stock_crc32": "605d9d1d",
+      "action": "copy"
+    },
+    {
+      "name": "vs2j.03",
+      "size": 524288,
+      "stock_crc32": "89fd86b4",
+      "action": "patch",
+      "patched_crc32": "a211712c"
+    },
+    {
+      "name": "vs2j.04",
+      "size": 524288,
+      "stock_crc32": "107c091b",
+      "action": "patch",
+      "patched_crc32": "50c7dbba"
+    },
+    {
+      "name": "vs2j.05",
+      "size": 524288,
+      "stock_crc32": "61979638",
+      "action": "copy"
+    },
+    {
+      "name": "vs2j.06",
+      "size": 524288,
+      "stock_crc32": "f37c5bc2",
+      "action": "copy"
+    },
+    {
+      "name": "vs2j.07",
+      "size": 524288,
+      "stock_crc32": "8f885809",
+      "action": "copy"
+    },
+    {
+      "name": "vs2j.08",
+      "size": 524288,
+      "stock_crc32": "2018c120",
+      "action": "patch",
+      "patched_crc32": "cb8b85c6"
+    },
+    {
+      "name": "vs2j.09",
+      "size": 524288,
+      "stock_crc32": "fac3c217",
+      "action": "copy"
+    },
+    {
+      "name": "vs2j.10",
+      "size": 524288,
+      "stock_crc32": "eb490213",
+      "action": "copy"
+    },
+    {
+      "name": "vsav2.key",
+      "size": 20,
+      "stock_crc32": "289028ce",
+      "action": "copy"
+    }
+  ]
+}

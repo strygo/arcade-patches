@@ -1,0 +1,230 @@
+{
+  "site": {
+    "title": "Arcade Patches",
+    "tagline": "Translation and restoration patches for arcade fighting games.",
+    "intro": [
+      "Fan-made patches for arcade games, mostly Japan-only CPS-2 and NAOMI releases. Everything is distributed as a patch against your own dump of the original game — binary diffs (IPS), MiSTer MRA overlays, or data-free GD-ROM patches; no game data is hosted here.",
+      "Everything on this site was built and verified against real MAME sets, with automated acceptance runs and human review of every change."
+    ],
+    "repo_url": null,
+    "contact_note": "For questions, corrections, or takedown requests, open an issue on the GitHub repository."
+  },
+  "patches": [
+    {
+      "slug": "vhunt2-english",
+      "title": "Night Warriors 2",
+      "subtitle": "Vampire Hunter 2 — English translation",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-07-10",
+      "game": "Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)",
+      "set": "vhunt2",
+      "hardware": "Capcom CPS-2",
+      "summary": "A complete English translation of the Japan-only Vampire Hunter 2, presented as the Night Warriors 2 that never shipped outside Japan.",
+      "description": [
+        "Vampire Hunter 2 is a 1997 Capcom fighter that only ever reached Japanese arcades. Its predecessor came to the West as Night Warriors: Darkstalkers' Revenge, but this sequel never made the trip. This patch translates the whole game into English and gives it the Western name it should have had: Night Warriors 2.",
+        "The Night Warriors 2 title screen isn't a fan mock-up. An unused Western title was already tucked away inside the original game — the patch finishes it and switches it on, leaving the gameplay exactly as it was.",
+        "Where Capcom's own English wording exists in the Western Darkstalkers games, the patch reuses it so the writing matches the official localization. Everything else — the victory taunts, the boss exchanges, and every character's ending — is freshly translated and checked in the actual game."
+      ],
+      "changes": [
+        "Arcade-native Night Warriors 2 title screen, built from the ROM's unused Western title path",
+        "USA region presentation (warning screen and region byte)",
+        "Western character names on character select, route map labels, and the fight HUD: Zabel → L.Raptor, Gallon → J.Talbain, Lei-Lei → Hsien-Ko, Phobos → Huitzil, Aulbath → Rikuo",
+        "English route/stage titles",
+        "All 225 post-fight quotes in English",
+        "All boss dialog and every character ending translated (44 records, verified on natural routes)",
+        "English staff roll under the Night Warriors 2 name"
+      ],
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/vhunt2.zip",
+        "patched_zip": "../capcom/extraction/darkstalkers_translation/out/vhunt2_combined_english/vhunt2.zip"
+      },
+      "mra": {
+        "base": "data/mra/vhunt2.mra",
+        "name": "Night Warriors 2 (English)",
+        "setname": "nwarr2en",
+        "filename": "Night Warriors 2 (English Translation).mra"
+      },
+      "screenshots": [
+        {
+          "before": "../capcom/extraction/darkstalkers_translation/work/surface_trace_vhunt2/vhunt2_3000_title.png",
+          "after": "../capcom/extraction/darkstalkers_translation/work/vhunt2_combined_title_narrative_acceptance/vhunt2_3100_night_warriors_2_title.png",
+          "caption": "Title screen. The arcade-native Night Warriors 2 logo, completed from the unused Western title path in the original ROM."
+        },
+        {
+          "before": "../capcom/extraction/darkstalkers_translation/work/name_label_baseline_branch_vhunt2/vhunt2_4021_phobos_f4021.png",
+          "after": "../capcom/extraction/darkstalkers_translation/work/vhunt2_combined_title_narrative_acceptance/vhunt2_4300_huitzil_selected.png",
+          "caption": "Character select. Phobos becomes Huitzil, his official Western name."
+        },
+        {
+          "single": "../capcom/extraction/darkstalkers_translation/work/vhunt2_live_anakaris_quote_no_power_review_harness/vhunt2_6000_quote_candidate.png",
+          "caption": "Post-fight quotes — all 225 messages are in English (Anakaris shown)."
+        },
+        {
+          "single": "../capcom/extraction/darkstalkers_translation/work/vhunt2_combined_title_narrative_acceptance/vhunt2_20000_ending_text_1.png",
+          "caption": "Ending narration in English, captured on a natural playthrough route."
+        },
+        {
+          "single": "../capcom/extraction/darkstalkers_translation/work/vhunt2_combined_title_narrative_acceptance/vhunt2_20250_staff_title.png",
+          "caption": "Staff roll under the Night Warriors 2 name."
+        }
+      ],
+      "notes": [
+        "MAME reports checksum warnings for the three patched program ROMs. This is expected; the game boots and plays normally.",
+        "Official English donor text comes from the Western Night Warriors and Vampire Savior arcade sets and is only used where the Japanese source record was demonstrably equivalent."
+      ]
+    },
+    {
+      "slug": "vsav2-english",
+      "title": "Vampire Savior 2",
+      "subtitle": "English translation",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-07-10",
+      "game": "Vampire Savior 2: The Lord of Vampire (Japan 970913)",
+      "set": "vsav2",
+      "hardware": "Capcom CPS-2",
+      "summary": "English translation of the Japan-only Vampire Savior 2: Western character names, all 241 post-fight quotes, and every ending and final-boss dialog page.",
+      "description": [
+        "Vampire Savior 2 is a Japan-only update of Vampire Savior with a shuffled roster — Donovan, Huitzil, and Pyron join the fight, while Gallon, Aulbath, and Sasquatch sit this one out — plus its own set of endings. It never came out in English. This patch translates the entire game.",
+        "Where the dialogue matches the Western release of Vampire Savior, the patch reuses Capcom's own English so it reads like the official localization. The lines unique to this version — the quotes for Huitzil, Pyron, and Donovan, along with every ending and the final confrontation with Jedah — are newly translated to read naturally while staying true to the original.",
+        "The title screen keeps the Vampire Savior 2 name, which is how the game appeared in arcades. 'Darkstalkers 3' was a later name used only for the home versions."
+      ],
+      "changes": [
+        "USA region presentation",
+        "Western character names on character select, route map, and fight HUD: Bulleta → Baby Bonnie Hood, Zabel → L.Raptor, Lei-Lei → Hsien-Ko, Phobos → Huitzil",
+        "All 241 post-fight quotes in English (192 official arcade records reused verbatim, 48 VS2-only records newly translated)",
+        "All 29 ending pages and both 4-page Jedah final-boss dialogs translated and relocated into verified free ROM space",
+        "Route stage names and option labels verified byte-identical to the official U.S. arcade records"
+      ],
+      "artifact": {
+        "stock_zip": "~/Downloads/Capcom Fighting Collection-PRU/collections/Capcom Fighting Collection/roms/vsav2.zip",
+        "patched_zip": "../capcom/extraction/darkstalkers_translation/vsav2/out/narrative_english/vsav2.zip"
+      },
+      "mra": {
+        "base": "data/mra/vsav2.mra",
+        "name": "Vampire Savior 2 (English)",
+        "setname": "vsav2en",
+        "filename": "Vampire Savior 2 (English Translation).mra"
+      },
+      "screenshots": [
+        {
+          "before": "../capcom/extraction/darkstalkers_translation/vsav2/work/select_left_sweep/vsav2_3695_left_04.png",
+          "after": "../capcom/extraction/darkstalkers_translation/vsav2/work/name_acceptance/lei_lei/vsav2_3695_select.png",
+          "caption": "Character select. Lei-Lei becomes Hsien-Ko."
+        },
+        {
+          "single": "../capcom/extraction/darkstalkers_translation/vsav2/work/name_acceptance/bulleta/vsav2_3495_select.png",
+          "caption": "Bulleta under her Western name, Baby Bonnie Hood."
+        },
+        {
+          "single": "../capcom/extraction/darkstalkers_translation/vsav2/work/post_fight_quote_acceptance/bulleta_natural/vsav2_6000_quote.png",
+          "caption": "Post-fight quotes in English (B.B. Hood shown, natural route capture)."
+        },
+        {
+          "before": "../capcom/extraction/darkstalkers_translation/vsav2/work/narrative_review_sweep/vs2_narrative_0a0a8e_0004_00/vsav2_6000_narrative_page.png",
+          "after": "../capcom/extraction/darkstalkers_translation/vsav2/work/narrative_patch_acceptance/standard_ending_p00/vsav2_6000_english_page.png",
+          "caption": "The same ending page before and after: the Japanese source and its relocated English translation."
+        },
+        {
+          "single": "../capcom/extraction/darkstalkers_translation/vsav2/work/baseline_surface_sweep/vsav2_3100_coin_title.png",
+          "caption": "The title art is intentionally unchanged — the official U.S. arcade release of the previous game also used Vampire Savior branding."
+        }
+      ],
+      "notes": [
+        "Release candidate: the translation is complete and every changed surface has passed automated acceptance, but wording review is still open. Report anything that reads badly.",
+        "MAME reports checksum warnings for the three patched program ROMs. This is expected; the game boots and plays normally."
+      ]
+    },
+    {
+      "slug": "sfz3ugd-multiregion",
+      "title": "Street Fighter Alpha 3 Upper",
+      "subtitle": "NAOMI GD-ROM multi-region patch",
+      "status": "released",
+      "version": "1.0",
+      "date": "2026-07-10",
+      "game": "Street Fighter Zero 3 Upper (Japan, GDL-0002)",
+      "set": "sfz3ugd",
+      "hardware": "Sega NAOMI GD-ROM",
+      "summary": "Removes the Japan-only region lock from the Zero 3 Upper GD-ROM so it boots on Japanese, USA, and Export NAOMI systems. One byte in the game header, properly re-encrypted.",
+      "description": [
+        "Street Fighter Zero 3 Upper is an enhanced version of Street Fighter Alpha 3 that only came to arcades in Japan, on Sega's NAOMI hardware. Because it's flagged as a Japanese release, a US or Export machine rejects the disc on sight with \"THIS GAME IS NOT ACCEPTABLE BY MAIN BOARD.\"",
+        "This patch flips that region flag so the very same disc boots on Japanese, US, and Export systems. Nothing about the game itself changes — but on a US or Export machine it now shows its Western Street Fighter Alpha 3 branding instead of the Japanese Street Fighter Zero 3, exactly as an overseas release would have.",
+        "It's the smallest change possible: only the region flag is touched, and the game, its language, and its settings are left just as Capcom shipped them. Booting was confirmed on all three region setups."
+      ],
+      "changes": [
+        "NAOMI header region mask: Japan → Japan + USA + Export (one byte in the game header, eight encrypted bytes on disc)",
+        "Nothing else — this is a region unlock only; it does not translate or otherwise modify the game"
+      ],
+      "chd_patch": {
+        "stock_chd": "../capcom/arc/sfz3ugd/gdl-0002.chd",
+        "patched_chd": "../capcom/arc/chd_build/jp_us_export_mask/sfz3ugd/gdl-0002.chd",
+        "chd": "gdl-0002.chd"
+      },
+      "screenshots": [
+        {
+          "before": "data/screenshots/sfz3ugd/title_japan_zero3.png",
+          "after": "data/screenshots/sfz3ugd/title_usa_alpha3.png",
+          "before_label": "Japan region",
+          "after_label": "USA region",
+          "caption": "The same patched disc on two BIOS regions. The game's own region-dependent title art shows Street Fighter Zero 3 on a Japanese board and Street Fighter Alpha 3 on a USA board — note the U.S. copyright line under the American title."
+        },
+        {
+          "before": "data/screenshots/sfz3ugd/usa_bios_stock_refused.png",
+          "after": "data/screenshots/sfz3ugd/usa_bios_patched_loading.png",
+          "caption": "A USA-region NAOMI BIOS: the original Japanese GD-ROM is refused; the patched image is accepted and loads."
+        }
+      ],
+      "notes": [
+        "Applying the patch requires chdman (bundled with every MAME release) and about 2.5 GB of temporary disk space.",
+        "MAME reports a checksum warning for the patched CHD. This is expected; the game boots and plays normally.",
+        "For optical drive emulators on real hardware, the patched CHD can be unpacked to GDI with chdman extractcd.",
+        "You still need the unchanged sfz3ugd.zip (security PIC) alongside the CHD."
+      ]
+    },
+    {
+      "slug": "sfz3-upper-gdrom",
+      "hidden": true,
+      "title": "Street Fighter Alpha 3 Upper",
+      "subtitle": "NAOMI GD-ROM rebuild",
+      "status": "in-development",
+      "version": null,
+      "date": null,
+      "game": "Street Fighter Zero 3 Upper (Japan, NAOMI GD-ROM, sfz3ugd)",
+      "set": "sfz3ugd",
+      "hardware": "Sega NAOMI GD-ROM",
+      "summary": "Conversion tooling that rebuilds the Japan-only NAOMI GD-ROM release of Zero 3 Upper from your own copy of Capcom Fighting Collection 2, targeting multi-region Alpha 3 Upper builds.",
+      "description": [
+        "Street Fighter Zero 3 Upper shipped on NAOMI GD-ROM only in Japan. Capcom Fighting Collection 2 on PC contains both the Japanese and the region-free Upper data. This project builds tooling that extracts that data from your own CFC2 installation and rebuilds a working NAOMI GD-ROM image, including converted character portraits for multi-region builds.",
+        "In development. The container format work (Capcom ARC v7, IBIS payloads) and GD-ROM DES tooling are done; build and verification automation is in progress."
+      ],
+      "changes": [],
+      "artifact": null,
+      "screenshots": [],
+      "notes": [
+        "This will ship as a conversion tool, not a binary patch: it reads game data from a Capcom Fighting Collection 2 installation you own."
+      ]
+    },
+    {
+      "slug": "sfa2-gold-cps2",
+      "hidden": true,
+      "title": "Street Fighter Alpha 2 Gold",
+      "subtitle": "Zero 2 Dash — native CPS-2 reconstruction",
+      "status": "research",
+      "version": null,
+      "date": null,
+      "game": "Street Fighter Alpha 2 Gold / Street Fighter Zero 2 Dash (PS2 anthology revision, 2006)",
+      "set": "—",
+      "hardware": "Capcom CPS-2 (target)",
+      "summary": "Recovering the revised 2006 PlayStation 2 edition of Alpha 2 Gold as a native CPS-2 game, by differential restoration from the released Zero 2 Alpha arcade program.",
+      "description": [
+        "The 2006 PlayStation 2 anthology contains a revised edition of Street Fighter Alpha 2 Gold / Zero 2 Dash that never existed on arcade hardware. The goal here is a native CPS-2 68K game — not a PS2 emulator wrapper and not a newly designed remix — recovered by starting from the released CPS-2 Zero 2 Alpha program and restoring the bounded anthology changes one at a time.",
+        "Research stage. Boot, title, character-select presentation, and the restored Cammy path are being validated with deterministic MAME automation; there is no release yet, and there may never be one if the restoration cannot be proven faithful."
+      ],
+      "changes": [],
+      "artifact": null,
+      "screenshots": [],
+      "notes": []
+    }
+  ]
+}
