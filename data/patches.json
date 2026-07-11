@@ -49,7 +49,7 @@
       },
       "screenshots": [
         {
-          "before": "../capcom/translations/vhunt2/work/surface_trace_vhunt2/vhunt2_3000_title.png",
+          "before": "data/screenshots/vhunt2/title_stock.png",
           "after": "../capcom/translations/vhunt2/work/vhunt2_combined_title_narrative_acceptance/vhunt2_3100_night_warriors_2_title.png",
           "caption": "Title screen. The arcade-native Night Warriors 2 logo, completed from the unused Western title path in the original ROM."
         },
