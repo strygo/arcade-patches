@@ -39,7 +39,7 @@
       ],
       "artifact": {
         "stock_zip": "../capcom/roms/mame0260/vhunt2.zip",
-        "patched_zip": "../capcom/extraction/darkstalkers_translation/out/vhunt2_combined_english/vhunt2.zip"
+        "patched_zip": "../capcom/translations/vhunt2/out/vhunt2_combined_english/vhunt2.zip"
       },
       "mra": {
         "base": "data/mra/vhunt2.mra",
@@ -49,21 +49,21 @@
       },
       "screenshots": [
         {
-          "before": "../capcom/extraction/darkstalkers_translation/work/surface_trace_vhunt2/vhunt2_3000_title.png",
-          "after": "../capcom/extraction/darkstalkers_translation/work/vhunt2_combined_title_narrative_acceptance/vhunt2_3100_night_warriors_2_title.png",
+          "before": "../capcom/translations/vhunt2/work/surface_trace_vhunt2/vhunt2_3000_title.png",
+          "after": "../capcom/translations/vhunt2/work/vhunt2_combined_title_narrative_acceptance/vhunt2_3100_night_warriors_2_title.png",
           "caption": "Title screen. The arcade-native Night Warriors 2 logo, completed from the unused Western title path in the original ROM."
         },
         {
-          "before": "../capcom/extraction/darkstalkers_translation/work/name_label_baseline_branch_vhunt2/vhunt2_4021_phobos_f4021.png",
-          "after": "../capcom/extraction/darkstalkers_translation/work/vhunt2_combined_title_narrative_acceptance/vhunt2_4300_huitzil_selected.png",
+          "before": "../capcom/translations/vhunt2/work/name_label_baseline_branch_vhunt2/vhunt2_4021_phobos_f4021.png",
+          "after": "../capcom/translations/vhunt2/work/vhunt2_combined_title_narrative_acceptance/vhunt2_4300_huitzil_selected.png",
           "caption": "Character select. Phobos becomes Huitzil, his official Western name."
         },
         {
-          "single": "../capcom/extraction/darkstalkers_translation/work/vhunt2_live_anakaris_quote_no_power_review_harness/vhunt2_6000_quote_candidate.png",
+          "single": "../capcom/translations/vhunt2/work/vhunt2_live_anakaris_quote_no_power_review_harness/vhunt2_6000_quote_candidate.png",
           "caption": "Post-fight quotes — all 225 messages are in English (Anakaris shown)."
         },
         {
-          "single": "../capcom/extraction/darkstalkers_translation/work/vhunt2_combined_title_narrative_acceptance/vhunt2_20000_ending_text_1.png",
+          "single": "../capcom/translations/vhunt2/work/vhunt2_combined_title_narrative_acceptance/vhunt2_20000_ending_text_1.png",
           "caption": "Ending narration in English, captured on a natural playthrough route."
         }
       ],
@@ -96,8 +96,8 @@
         "Route stage names and option labels verified byte-identical to the official U.S. arcade records"
       ],
       "artifact": {
-        "stock_zip": "~/Downloads/Capcom Fighting Collection-PRU/collections/Capcom Fighting Collection/roms/vsav2.zip",
-        "patched_zip": "../capcom/extraction/darkstalkers_translation/vsav2/out/narrative_english/vsav2.zip"
+        "stock_zip": "../capcom/roms/mame0260/vsav2.zip",
+        "patched_zip": "../capcom/translations/vsav2/out/narrative_english/vsav2.zip"
       },
       "mra": {
         "base": "data/mra/vsav2.mra",
@@ -107,25 +107,25 @@
       },
       "screenshots": [
         {
-          "before": "../capcom/extraction/darkstalkers_translation/vsav2/work/select_left_sweep/vsav2_3695_left_04.png",
-          "after": "../capcom/extraction/darkstalkers_translation/vsav2/work/name_acceptance/lei_lei/vsav2_3695_select.png",
+          "before": "../capcom/translations/vsav2/work/select_left_sweep/vsav2_3695_left_04.png",
+          "after": "../capcom/translations/vsav2/work/name_acceptance/lei_lei/vsav2_3695_select.png",
           "caption": "Character select. Lei-Lei becomes Hsien-Ko."
         },
         {
-          "single": "../capcom/extraction/darkstalkers_translation/vsav2/work/name_acceptance/bulleta/vsav2_3495_select.png",
+          "single": "../capcom/translations/vsav2/work/name_acceptance/bulleta/vsav2_3495_select.png",
           "caption": "Bulleta under her Western name, Baby Bonnie Hood."
         },
         {
-          "single": "../capcom/extraction/darkstalkers_translation/vsav2/work/post_fight_quote_acceptance/bulleta_natural/vsav2_6000_quote.png",
+          "single": "../capcom/translations/vsav2/work/post_fight_quote_acceptance/bulleta_natural/vsav2_6000_quote.png",
           "caption": "Post-fight quotes in English (B.B. Hood shown, natural route capture)."
         },
         {
-          "before": "../capcom/extraction/darkstalkers_translation/vsav2/work/narrative_review_sweep/vs2_narrative_0a0a8e_0004_00/vsav2_6000_narrative_page.png",
-          "after": "../capcom/extraction/darkstalkers_translation/vsav2/work/narrative_patch_acceptance/standard_ending_p00/vsav2_6000_english_page.png",
+          "before": "../capcom/translations/vsav2/work/narrative_review_sweep/vs2_narrative_0a0a8e_0004_00/vsav2_6000_narrative_page.png",
+          "after": "../capcom/translations/vsav2/work/narrative_patch_acceptance/standard_ending_p00/vsav2_6000_english_page.png",
           "caption": "The same ending page before and after: the Japanese source and its relocated English translation."
         },
         {
-          "single": "../capcom/extraction/darkstalkers_translation/vsav2/work/baseline_surface_sweep/vsav2_3100_coin_title.png",
+          "single": "../capcom/translations/vsav2/work/baseline_surface_sweep/vsav2_3100_coin_title.png",
           "caption": "The title art is intentionally unchanged — the official U.S. arcade release of the previous game also used Vampire Savior branding."
         }
       ],
@@ -191,16 +191,16 @@
       "game": "Street Fighter Zero 3 Upper (Japan, NAOMI GD-ROM, sfz3ugd)",
       "set": "sfz3ugd",
       "hardware": "Sega NAOMI GD-ROM",
-      "summary": "Conversion tooling that rebuilds the Japan-only NAOMI GD-ROM release of Zero 3 Upper from your own copy of Capcom Fighting Collection 2, targeting multi-region Alpha 3 Upper builds.",
+      "summary": "Conversion tooling that turns a GD-ROM image from your own copy of the Japan-only Zero 3 Upper arcade game into multi-region Alpha 3 Upper builds.",
       "description": [
-        "Street Fighter Zero 3 Upper shipped on NAOMI GD-ROM only in Japan. Capcom Fighting Collection 2 on PC contains both the Japanese and the region-free Upper data. This project builds tooling that extracts that data from your own CFC2 installation and rebuilds a working NAOMI GD-ROM image, including converted character portraits for multi-region builds.",
+        "Street Fighter Zero 3 Upper shipped on NAOMI GD-ROM only in Japan. This project builds tooling that takes a GD-ROM image from your own copy of the arcade game and rebuilds it into a working multi-region image, including the converted character portraits the Western versions need.",
         "In development. The container format work (Capcom ARC v7, IBIS payloads) and GD-ROM DES tooling are done; build and verification automation is in progress."
       ],
       "changes": [],
       "artifact": null,
       "screenshots": [],
       "notes": [
-        "This will ship as a conversion tool, not a binary patch: it reads game data from a Capcom Fighting Collection 2 installation you own."
+        "This will ship as a conversion tool, not a binary patch: it works from a GD-ROM image of the arcade game you own."
       ]
     },
     {
