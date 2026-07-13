@@ -173,6 +173,29 @@ Patched zip: `../capcom/translations/vsav2/out/narrative_english/vsav2.zip`
 
 Description: `"Vampire Savior 2: The Lord of Vampire (970913J, English, <date>)"`.
 
+## Scope: NAOMI / disc-based patches (settled 2026-07-13)
+
+The pipeline above covers platforms the hbmame target already builds (CPS-2
+today). The SFZ3U NAOMI patch does not fit as-is: HBMAME cannot run any
+NAOMI/Atomiswave/Dreamcast game (0 of its 9,601 machines; no SH4/AICA/
+PowerVR/GD-ROM devices in `scripts/target/hbmame/hbmame.lua`; no CHD-based
+set has ever existed in HBMAME). The NAOMI *source* is present and current —
+the fork merges mainline MAME continuously — so inclusion is a moderate
+target expansion (enable the devices, wire in the naomi driver family, add
+the `naomi` BIOS + stock `sfz3ugd` parent + our clone), not a port.
+
+Why bother: HBMAME inclusion drives distribution — collectors mirror
+dat-complete HBMAME sets, so listed sets propagate without anyone visiting
+the patch site. That is the main reason the CPS-2 translations are there.
+
+Plan: after the CPS-2 PRs merge (track record first), ask Robbbert directly
+(issue or 1emulation forum) whether he'd take NAOMI hack sets, offering to do
+all the wiring to his conventions with sfz3ugd multiregion as the pilot.
+Note the ask honestly: first disc-era platform ever, and the dat would pull
+the NAOMI BIOS + ~1GB stock parent CHD into collections as new dependencies.
+If declined: publish our own clrmamepro-style dat for the patched sets as
+the fallback distribution channel.
+
 ## Site follow-ups (per merged game)
 
 - Add the HBMAME setname to the patch's `data/patches.json` entry (new field,
