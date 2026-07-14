@@ -59,14 +59,15 @@ Repos involved:
 2. Keep `master` a clean mirror of upstream; never commit to it directly:
    `git fetch upstream && git checkout master && git merge --ff-only upstream/master && git push origin master`
 3. One full build to prime the toolchain (slow; later incremental builds are
-   fast): `make TARGET=hbmame SYMBOLS=0 NO_SYMBOLS=1 DEPRECATED=0 NOWERROR=1 -j<cores>`
+   fast): `make TARGET=hbmame SYMBOLS=0 NO_SYMBOLS=1 DEPRECATED=0 -j<cores>`
 
-   `NOWERROR=1` is required on current Apple clang (verified 2026-07-13):
-   upstream carries stale warnings (e.g. unused private field in hbmame's
-   `galaxian.cpp:1017`) that `-Werror` turns into hard errors. NOWERROR is a
-   genie parameter — add `REGENIE=1` the first time you set it (or after
-   changing any make option), otherwise the cached project files keep the
-   old flags.
+   `NOWERROR=1` is no longer required as of 2026-07-14 — our upstream PR #39
+   ("Fix build with Clang 21") removed the stale warnings that `-Werror`
+   turned into hard errors on current Apple clang. Keep the flag in mind if
+   a future upstream merge introduces new warnings. Note for any make-option
+   change: options like NOWERROR are genie parameters — add `REGENIE=1` the
+   first time you set or change one, otherwise the cached project files keep
+   the old flags.
 
 ## Per-game checklist
 
@@ -145,7 +146,7 @@ whenever a patch version bumps.
 
 ### vhunt2s01 — Night Warriors 2 (vhunt2-english rc1)
 
-Submitted 2026-07-13: https://github.com/Robbbert/hbmame/pull/40
+Merged 2026-07-14: https://github.com/Robbbert/hbmame/pull/40
 
 Parent `vhunt2`, chip label `c75`, key `vhunt2.key` (verbatim from parent).
 Patched zip: `../capcom/translations/vhunt2/out/vhunt2_combined_english/vhunt2.zip`
@@ -160,7 +161,7 @@ Description: `"Night Warriors 2: Darkstalkers Revenge (970929J, English, <date>)
 
 ### vsav2s04 — Vampire Savior 2 English (vsav2-english rc1)
 
-Submitted 2026-07-13: https://github.com/Robbbert/hbmame/pull/41
+Merged 2026-07-14: https://github.com/Robbbert/hbmame/pull/41
 
 Parent `vsav2`, chip label `c76`, key `vsav2.key` (verbatim from parent).
 Patched zip: `../capcom/translations/vsav2/out/narrative_english/vsav2.zip`
