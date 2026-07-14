@@ -41,13 +41,13 @@
   <div class="kind">ROM patch (IPS) — MAME, emulators, original hardware</div>
   <div class="file"><a href="../downloads/vsav2-english-rc1-ips.zip">vsav2-english-rc1-ips.zip</a>
   (15 KB)</div>
-  <div class="hash">SHA-256: 7dc28ba6aebedcf80b471d94489f63bedb9fed2a02b0df620003f07491a36bf9</div>
+  <div class="hash">SHA-256: 72d990c9117396cd294584adca2f93fc6f1094924f7582359062e0b655160fb9</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer (MRA patch overlay)</div>
   <div class="file"><a href="../downloads/vsav2-english-rc1-mra.zip">vsav2-english-rc1-mra.zip</a>
   (19 KB)</div>
-  <div class="hash">SHA-256: 55b7a29f20819d25806818c4db597d753a2e2bab6888198476c5baf965a05072</div>
+  <div class="hash">SHA-256: 5217b87e11ade6ea140e2854a52c8ae55dd1ba36cfc442ed0b7233b3d1c09373</div>
 </div>
 <p>Neither download contains ROM data: you need your own dump of
 <strong>Vampire Savior 2: The Lord of Vampire (Japan 970913)</strong> as the MAME set <code>vsav2.zip</code>.
@@ -72,6 +72,19 @@ You need Jotego's <code>jtcps2</code> core, which the standard MiSTer downloader
 <p>The MRA references your original romset and applies the translation in memory
 while the game loads — nothing on your SD card is modified. The translation keeps
 its own settings and saves under the setname <code>vsav2en</code>.</p>
+<h2>HBMAME</h2>
+<p>This translation is an official <a href="https://github.com/Robbbert/hbmame">HBMAME</a>
+set, <code>vsav2s04</code>
+(<a href="https://github.com/Robbbert/hbmame/pull/41">merged upstream</a>). HBMAME releases carry it going
+forward, so if you use full HBMAME romset collections you may already have it —
+look for <code>vsav2s04</code> in the game list.</p>
+<p>To build the set from your own dump, run the IPS download's apply script with
+<code>--hbmame</code>:</p>
+<pre><code>python3 apply.py /path/to/vsav2.zip --hbmame</code></pre>
+<p>This writes <code>vsav2s04.zip</code>; put it in HBMAME's
+<code>roms/</code> folder next to your stock <code>vsav2.zip</code>. Unlike the
+MAME route above, the set loads with no checksum warnings — HBMAME's set definition
+carries the patched checksums.</p>
 <h3>Changed ROMs</h3>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>

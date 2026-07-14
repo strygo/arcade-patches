@@ -4,6 +4,7 @@
 Usage:
     python3 apply.py <stock zip>              writes <set>_patched.zip next to it
     python3 apply.py <stock zip> -o out.zip   writes to the given path
+    python3 apply.py <stock zip> --hbmame     writes the HBMAME clone set zip
     python3 apply.py <rom directory>          patches extracted files in place-adjacent copies
 
 The stock zip is your own MAME-format romset (see manifest.json for the exact
@@ -114,6 +115,42 @@ def patch_zip(manifest, patches, in_path, out_path):
     print("That is expected; the game runs normally.")
 
 
+def patch_zip_hbmame(manifest, patches, in_path, out_path):
+    hb = manifest.get("hbmame")
+    if not hb:
+        fail("this bundle has no HBMAME set mapping (--hbmame not supported here)")
+    expected = {m["name"]: m for m in manifest["members"] if m["action"] == "patch"}
+    with zipfile.ZipFile(in_path) as zin:
+        names = set(zin.namelist())
+        missing = sorted(set(expected) - names)
+        if missing:
+            fail(
+                f"{in_path} does not look like a {manifest['set']} set; "
+                f"missing: {', '.join(missing)}"
+            )
+        with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as zout:
+            for name in sorted(expected):
+                m = expected[name]
+                data = zin.read(name)
+                if crc32(data) != m["stock_crc32"]:
+                    fail(
+                        f"{name}: CRC32 {crc32(data)} does not match the expected "
+                        f"original {m['stock_crc32']}. Wrong or already-patched set; "
+                        f"this patch targets MAME set '{manifest['set']}' "
+                        f"({manifest['game']})."
+                    )
+                data = apply_ips(patches[name], data)
+                if crc32(data) != m["patched_crc32"]:
+                    fail(f"{name}: patched output checksum mismatch (bad patch file?)")
+                new_name = hb["renames"][name]
+                print(f"  {name} -> {new_name}: patched, CRC32 {m['patched_crc32']}")
+                zout.writestr(new_name, data)
+    print(f"\nWrote {out_path}")
+    print(f"Put it in HBMAME's roms/ folder next to your stock {manifest['set']}.zip;")
+    print(f"the game appears as '{hb['setname']}'. The set loads with no checksum")
+    print("warnings: HBMAME's set definition carries the patched checksums.")
+
+
 def patch_dir(manifest, patches, in_dir):
     ok = True
     for m in manifest["members"]:
@@ -145,6 +182,11 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("target", help="stock romset zip, or a directory of extracted ROM files")
     ap.add_argument("-o", "--output", help="output zip path (zip input only)")
+    ap.add_argument(
+        "--hbmame",
+        action="store_true",
+        help="write the HBMAME clone set zip (patched ROMs only, HBMAME names)",
+    )
     args = ap.parse_args()
 
     manifest, patches = load_bundle()
@@ -152,15 +194,26 @@ def main():
     print(f"Target: MAME set '{manifest['set']}' - {manifest['game']}\n")
 
     if os.path.isdir(args.target):
+        if args.hbmame:
+            fail("--hbmame needs the stock zip as input, not a directory")
         patch_dir(manifest, patches, args.target)
     else:
         out = args.output
         if not out:
-            base, ext = os.path.splitext(args.target)
-            out = base + "_patched" + (ext or ".zip")
+            if args.hbmame:
+                setname = manifest.get("hbmame", {}).get("setname")
+                if not setname:
+                    fail("this bundle has no HBMAME set mapping (--hbmame not supported here)")
+                out = os.path.join(os.path.dirname(os.path.abspath(args.target)), setname + ".zip")
+            else:
+                base, ext = os.path.splitext(args.target)
+                out = base + "_patched" + (ext or ".zip")
         if os.path.abspath(out) == os.path.abspath(args.target):
             fail("output path must differ from input path")
-        patch_zip(manifest, patches, args.target, out)
+        if args.hbmame:
+            patch_zip_hbmame(manifest, patches, args.target, out)
+        else:
+            patch_zip(manifest, patches, args.target, out)
 
 
 if __name__ == "__main__":

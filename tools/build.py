@@ -95,6 +95,8 @@ def make_readme(patch: dict, members: list, fmt: str) -> str:
     ]
     if author_line():
         lines.append(f"Patch by: {author_line()}")
+    if SITE.get("site_url"):
+        lines.append(f"Website:  {SITE['site_url']}")
     lines += [
         "",
         "ABOUT THIS PROJECT",
@@ -165,6 +167,24 @@ def make_readme(patch: dict, members: list, fmt: str) -> str:
                     f"CRC32 {m['stock_crc32']} -> {m['patched_crc32']}"
                 )
         lines += ["", "All other files in the set are unmodified."]
+        if patch.get("hbmame"):
+            hb = patch["hbmame"]
+            lines += [
+                "",
+                "HBMAME",
+                "",
+                f"This translation is also an official HBMAME set, '{hb['setname']}'.",
+                "HBMAME releases carry it going forward, so full-set collections",
+                "include it automatically. To build the set zip from your own dump:",
+                "",
+                f"    python3 apply.py /path/to/{setname}.zip --hbmame",
+                "",
+                f"This writes {hb['setname']}.zip (the patched ROMs under their HBMAME",
+                f"names). Put it in HBMAME's roms/ folder next to your stock",
+                f"{setname}.zip. Unlike the MAME route above, the set loads with no",
+                "checksum warnings: HBMAME's set definition carries the patched",
+                "checksums.",
+            ]
     else:
         mra_cfg = patch["mra"]
         lines += [
@@ -414,6 +434,22 @@ def build_rom_downloads(patch: dict) -> dict | None:
             "hardware": patch["hardware"],
             "members": members,
         }
+        if patch.get("hbmame"):
+            hb = patch["hbmame"]
+            # The rename map must cover exactly the patched members, and the
+            # HBMAME names must be distinct — this is what --hbmame will emit.
+            patched_names = {m["name"] for m in members if m["action"] == "patch"}
+            if set(hb["renames"]) != patched_names:
+                raise SystemExit(
+                    f"{slug}: hbmame.renames keys {sorted(hb['renames'])} do not match "
+                    f"patched members {sorted(patched_names)}"
+                )
+            if len(set(hb["renames"].values())) != len(hb["renames"]):
+                raise SystemExit(f"{slug}: hbmame.renames has duplicate target names")
+            hbmame_out = {hb["renames"][n]: crc32(patched[n]) for n in patched_names}
+            print(f"{slug}: HBMAME set '{hb['setname']}' verified: " +
+                  ", ".join(f"{n}={c}" for n, c in sorted(hbmame_out.items())))
+            manifest["hbmame"] = {"setname": hb["setname"], "renames": hb["renames"]}
         ips_path.parent.mkdir(parents=True, exist_ok=True)
         stamp = tuple(int(x) for x in patch["date"].split("-")) + (0, 0, 0)
 
@@ -682,6 +718,21 @@ You need Jotego's <code>jtcps2</code> core, which the standard MiSTer downloader
 <p>The MRA references your original romset and applies the translation in memory
 while the game loads — nothing on your SD card is modified. The translation keeps
 its own settings and saves under the setname <code>{esc(mra_cfg['setname'])}</code>.</p>""")
+    hb = patch.get("hbmame")
+    if hb:
+        parts.append(f"""<h2>HBMAME</h2>
+<p>This translation is an official <a href="https://github.com/Robbbert/hbmame">HBMAME</a>
+set, <code>{esc(hb['setname'])}</code>
+(<a href="{esc(hb['pr_url'])}">merged upstream</a>). HBMAME releases carry it going
+forward, so if you use full HBMAME romset collections you may already have it —
+look for <code>{esc(hb['setname'])}</code> in the game list.</p>
+<p>To build the set from your own dump, run the IPS download's apply script with
+<code>--hbmame</code>:</p>
+<pre><code>python3 apply.py /path/to/{setname}.zip --hbmame</code></pre>
+<p>This writes <code>{esc(hb['setname'])}.zip</code>; put it in HBMAME's
+<code>roms/</code> folder next to your stock <code>{setname}.zip</code>. Unlike the
+MAME route above, the set loads with no checksum warnings — HBMAME's set definition
+carries the patched checksums.</p>""")
     parts.append(f"""<h3>Changed ROMs</h3>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>

@@ -7,6 +7,7 @@
       "Everything on this site was built and verified against real MAME sets, with automated acceptance runs and human review of every change."
     ],
     "repo_url": null,
+    "site_url": "https://strygo.github.io/arcade-patches/",
     "contact_note": "For questions, corrections, or takedown requests, open an issue on the GitHub repository.",
     "author": "Steve Gordon",
     "author_url": "https://x.com/strygo"
@@ -46,6 +47,15 @@
         "name": "Night Warriors 2 (English)",
         "setname": "nwarr2en",
         "filename": "Night Warriors 2 (English Translation).mra"
+      },
+      "hbmame": {
+        "setname": "vhunt2s01",
+        "pr_url": "https://github.com/Robbbert/hbmame/pull/40",
+        "renames": {
+          "vh2j.03a": "c75s01.p1",
+          "vh2j.04a": "c75s01.p2",
+          "vh2j.08": "c75s01.p6"
+        }
       },
       "screenshots": [
         {
@@ -104,6 +114,15 @@
         "name": "Vampire Savior 2 (English)",
         "setname": "vsav2en",
         "filename": "Vampire Savior 2 (English Translation).mra"
+      },
+      "hbmame": {
+        "setname": "vsav2s04",
+        "pr_url": "https://github.com/Robbbert/hbmame/pull/41",
+        "renames": {
+          "vs2j.03": "c76s04.p1",
+          "vs2j.04": "c76s04.p2",
+          "vs2j.08": "c76s04.p6"
+        }
       },
       "screenshots": [
         {
