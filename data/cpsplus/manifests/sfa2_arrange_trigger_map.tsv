@@ -1,0 +1,106 @@
+# SFA2 (arcade sfa2) ARRANGE trigger map: arcade command -> Saturn SFZ2 MUS song.
+#
+# Covers all 57 cues.  A map of only 0x01..0x13 would leave 40 of the pack's
+# 59 arranged tracks unreachable -- two thirds of the arranged music unable
+# to play.
+#
+# Verified first: a service-mode sweep of 0x01-0xff on the real board (each
+# command injected on an idle machine so it plays in isolation, clips cut at the
+# true 59.637405 Hz) found 54 songs, and all 19 original rows were ear-confirmed
+# to play the right tune. Only then was the map extended.
+#
+# The extension is mechanical, not guessed: sfz2_saturn_zero6_map.tsv already
+# carries a duration-matched zero6_cmd for every song, and the pack's track order
+# is track = saturn_song - 1 -- a rule that reproduces all 19 confirmed rows
+# exactly (19/19). Four short jingles (0x16 0x18 0x19 0x1a) are included: they
+# fall under the sustain bar but their arcade and arranged durations agree to
+# within a second (5.0/6.0, 2/3.5, 5/4.4, 5/5.5 s).
+#
+# Result: 57 commands mapped, 57 of 59 tracks reachable. Unmapped: arcade song
+# 0x3e (no arranged counterpart) and tracks t19/t29 (S14 has no command in the
+# manifest, S1E's command 0x34 is silent on the real board).
+# Source of truth: manifests/sfz2_saturn_zero6_map.tsv (zero6_cmd column = arcade sound command,
+#   validated via the A2-Gold zero6 comp2 dispatch table; sfz2-disc stage themes only).
+# Join rule: cmd = zero6_cmd, song = saturn_song, for zero6_cmd in 0x01..0x13 (FAQ CPS2 order).
+# Character labels (FAQ CPS2 order) mirror manifests/sfa2_snes_trigger_map.tsv.
+# Consumed by build_pack.py saturn-mus --trigger-map (cols: cmd, song[hex]).
+#
+# cmd   song  character (stage)
+#   0x01  S01   Ryu
+#   0x02  S02   Ken
+#   0x03  S05   ChunLi
+#   0x04  S0C   Sagat
+#   0x05  S07   Sodom
+#   0x06  S06   Adon
+#   0x07  S09   Birdie
+#   0x08  S08   Guy
+#   0x09  S04   Nash
+#   0x0a  S0A   Rose
+#   0x0b  S03   Gouki
+#   0x0c  S0B   Vega
+#   0x0d  S0D   Dan
+#   0x0e  S10   Dhalsim
+#   0x0f  S11   Zangief
+#   0x10  S12   Gen
+#   0x11  S0F   Rolento
+#   0x12  S0E   Sakura
+#   0x13  S15   Australia
+#
+cmd	song
+0x01	01
+0x02	02
+0x03	05
+0x04	0C
+0x05	07
+0x06	06
+0x07	09
+0x08	08
+0x09	04
+0x0a	0A
+0x0b	03
+0x0c	0B
+0x0d	0D
+0x0e	10
+0x0f	11
+0x10	12
+0x11	0F
+0x12	0E
+0x13	15
+0x14	16
+0x15	17
+0x16	18
+0x17	1A
+0x18	19
+0x19	1B
+0x1a	1C
+0x1b	1D
+0x1c	20
+0x1d	21
+0x1e	22
+0x1f	27
+0x20	2F
+0x21	2A
+0x22	28
+0x23	29
+0x24	2C
+0x25	2B
+0x26	25
+0x27	2D
+0x28	23
+0x29	2E
+0x2a	30
+0x2b	34
+0x2c	35
+0x2d	37
+0x2e	38
+0x2f	33
+0x30	31
+0x31	32
+0x32	39
+0x33	3A
+0x35	13
+0x36	26
+0x37	24
+0x38	36
+0x39	3B
+0x3a	1F

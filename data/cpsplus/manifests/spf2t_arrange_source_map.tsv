@@ -1,0 +1,28 @@
+# EAR-CONFIRMED (user): auditioned the full 23-pair arcade-vs-arrange
+#   set in the internal listening archive — every pair matches, all arrange tracks
+#   sound good and line up. This confirms BOTH the mapping (incl. the 10 permuted
+#   jingle rows the +0x19 stage rule would have mis-keyed) AND pack-worthiness.
+saturn_song	role	saturn_intro_s	saturn_loop_s	dc_file	dc_loop_s	dc_wf_p50	ant_soundtest_entry	ant_wf_p50	ant_ingame_entry	ant_ingame_loop_s	ing_wf_p50	arcade_cmd	saturn_render	arc_ren_p50	dc_q_file	ren_q_p50	arcade_evidence
+0x1A	Morrigan stage	8.127	45.836	R21_SMOR	45.856	+0.989	e230	+0.929	e534	45.854	+0.94	0x01	0x03	+0.555	Q01_SMOR	-0.751	grounded
+0x1B	Chun-Li stage	4.063	64.745	R22_SCHU	64.739	+0.996	e231	+0.991	e532	64.720	+1.00	0x02	0x04	+0.619	Q02_SCHU	-0.739	grounded
+0x1C	Ryu stage	1.950	59.219	R23_SRYU	59.225	+0.989	e232	+0.957	e530	59.225	+1.00	0x03	0x05	+0.603	Q03_SRYU	-0.768	grounded
+0x1D	Ken stage	1.517	54.397	R24_SKEN	54.387	+0.993	e233	+0.823	e531	54.393	+0.98	0x04	0x06	+0.683	Q04_SKEN	-0.681	grounded
+0x1E	Hsien-Ko (Lei-Lei) stage	3.847	41.989	R25_SLEI	42.014	+0.899	e234	+0.994	e535	42.010	+0.97	0x05	0x07	+0.584	Q05_SLEI	-0.732	grounded
+0x1F	Donovan stage	5.743	37.601	R26_SDON	37.606	+0.868	e235	+0.600	-	-	-	0x06	0x08	+0.634	Q06_SDON	-0.771	grounded
+0x20	Felicia stage	4.389	44.644	R27_SFEL	44.652	+0.951	e236	+0.759	e536	44.651	+0.94	0x07	0x09	+0.638	Q07_SFEL	-0.702	grounded
+0x21	Sakura stage	3.847	47.299	R28_SSAK	47.380	+0.739	e237	+0.738	e533	47.378	+0.74	0x08	0x0A	+0.633	Q08_SSAK	-0.587	grounded
+0x22	Devilot stage	3.738	46.270	R29_SDEV	46.281	+0.930	e238	+0.954	-	-	-	0x09	0x0B	+0.727	Q09_SDEV	-0.288	measured_weak
+0x23	Gouki stage	1.734	54.559	R2A_SGOU	54.578	+0.987	e239	+0.965	e541	54.573	+0.96	0x0A	0x0C	+0.731	Q0A_SGOU	-0.722	measured
+0x24	Dan stage	3.305	74.606	R2B_DANT	74.598	+0.802	e240	+0.991	e540	74.593	+0.98	0x0B	0x0D	+0.731	Q0B_DANT	-0.662	measured
+0x25	HERE (cue)	3.142	0.000	R33_HERE	0.000	+0.971	-	-	-	-	-	0x13	0x0E	+0.517	Q13_HERE	-0.703	grounded
+0x26	VERSUS	5.472	0.000	R2F_VERS	0.000	+0.999	-	-	-	-	-	0x0F	0x0F	+0.574	Q0F_VERS	-0.841	grounded
+0x27	WINNER	5.255	0.000	R30_WINN	0.000	+0.989	-	-	-	-	-	0x10	0x10	+0.755	Q10_WINN	-0.760	grounded
+0x28	RANKING 1	3.522	0.000	R35_RAN1	0.000	+0.649	-	-	-	-	-	0x15	0x11	-0.560	Q15_RAN1	-0.838	grounded
+0x29	RANKING 2	6.447	0.000	R36_RAN2	0.000	+0.902	-	-	-	-	-	0x16	0x12	+0.520	Q16_RAN2	-0.764	grounded
+0x2A	SDEM (demo cue)	0.596	9.102	R31_SDEM	9.097	+0.979	-	-	-	-	-	0x11	0x13	+0.816	Q11_SDEM	-0.614	measured
+0x2B	PLAY (training)	1.517	36.246	R2D_PLAY	36.436	+0.464	e241	+0.512	-	-	-	0x0D	0x14	+0.485	Q0D_PLAY	-0.523	grounded
+0x2C	OPENING	22.701	0.000	R2C_OPEN	0.000	+0.999	-	-	-	-	-	0x0C	0x15	+0.668	Q0C_OPEN	-0.810	grounded
+0x2D	SELECT	1.246	26.331	R2E_SELE	13.173	+0.997	-	-	-	-	-	0x0E	0x16	+0.641	Q0E_SELE	-0.819	grounded
+0x2E	GAME OVER	4.118	0.000	R34_OVER	0.000	+0.992	-	-	-	-	-	0x14	0x17	+0.566	Q14_OVER	-0.859	grounded
+0x2F	CONTINUE	1.896	9.861	R32_CONT	9.877	+0.955	-	-	-	-	-	0x12	0x18	+0.581	Q12_CONT	-0.631	grounded
+0x30	ENDING/credits	7.477	63.390	R37_ENDN	63.407	+0.995	e242	+0.995	-	-	-	0x17	0x19	+0.556	Q17_ENDN	-0.843	measured

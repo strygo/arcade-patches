@@ -1,0 +1,73 @@
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores" />
+    <rotation>horizontal</rotation>
+    <name>Super Puzzle Fighter II Turbo (Arrange)</name>
+    <setname>spf2tu</setname>
+    <mameversion>0282</mameversion>
+    <year>1996</year>
+    <manufacturer>Capcom</manufacturer>
+    <players>2</players>
+    <rbf>jtcps2-cpsplus</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="spf2tu.zip|spf2t.zip|qsound.zip" address="0x30000000">
+        
+        <part>
+            00 04 00 05 00 15 00 45
+            FF FF FF FF FF FF FF FF
+            32 FF 00 02 04 06 26 28
+            2A 2C 2E 00 00 30 02 04
+            08 30 FF FF FF FF FF FF
+            FF FF FF FF </part>
+        
+        <part name="spf2tu.key" crc="5d7b15e8" />
+        
+        <part name="pzfu.03a" crc="346e62ef" />
+        <part name="pzf.04" crc="b80649e2" />
+        
+        <part name="pzf.01" crc="600fb2a3" />
+        <part name="pzf.02" crc="496076e0" />
+        
+        <interleave output="16">
+            <part name="pzf.11m" crc="78442743" map="12" />
+        </interleave>
+        <interleave output="16">
+            <part name="pzf.12m" crc="399d2c7b" map="12" />
+        </interleave>
+        
+        <part repeat="0x800000"> FF</part>
+        <interleave output="64">
+            <part name="pzf.14m" crc="2d4881cb" map="00000021" />
+            <part name="pzf.16m" crc="4b0fd1be" map="00002100" />
+            <part name="pzf.18m" crc="e43aac33" map="00210000" />
+            <part name="pzf.20m" crc="7f536ff1" map="21000000" />
+        </interleave>
+        
+        <part name="dl-1425.bin" crc="d6cf5ef5" length="0x2000" />
+        
+    <part repeat="960">00</part><part name="spf2t_arrange.cpk" zip="/CPS+/spf2t_arrange.zip" />
+    <patch offset="8">09 45 c0 03</patch>
+  </rom>
+    <rom index="2">
+        <part>
+01 00 01 00 00 01 02 00 00 00 00 00 00 00 00 00
+01 03 01 01 02 01 01 01 00 00 00 00 00 00 00 00
+05 96 0A 30 12 88 FF 44 75 73 65 70 20 72 20 20
+01 00 01 00 00 01 02 00 00 00 00 00 00 00 00 00
+01 03 01 01 02 01 01 01 00 00 00 00 00 00 00 00
+05 96 0A 30 12 88 FF 44 75 73 65 70 20 72 20 20
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</part>
+    </rom>
+    <nvram index="2" size="128" />
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff">
+        <DSWA />
+        <DSWB />
+        <DSWC />
+    </switches>
+    <buttons names="Rotate Left,Rotate Right,-,-,-,-,Start,Coin,Core credits" default="A,B,Start,Select,-" count="2" />
+</misterromdescription>

@@ -1,0 +1,530 @@
+{
+  "set": "hsf2",
+  "driver_version": "1.06b",
+  "z80_banner": "version 1.06b /CPS2 1996 / APR.",
+  "latch_page": "0x618000",
+  "field_offsets": {
+    "cmd_hi": "0x01",
+    "cmd_lo": "0x03",
+    "observed_record_offsets": [
+      "0x01",
+      "0x03",
+      "0x07",
+      "0x09",
+      "0x0d",
+      "0x0f",
+      "0x11",
+      "0x13",
+      "0x15",
+      "0x17",
+      "0x19"
+    ],
+    "typical_write_order": [
+      "0x07",
+      "0x09",
+      "0x01",
+      "0x03",
+      "0x0d",
+      "0x0f",
+      "0x11",
+      "0x17",
+      "0x19",
+      "0x13",
+      "0x15"
+    ]
+  },
+  "handshake": {
+    "offset": "0x1f",
+    "post_value": "0x00",
+    "post_values_seen": {
+      "0x00": 330
+    },
+    "post_values_incl_init": {
+      "0x00": 331,
+      "0x55": 1,
+      "0xff": 1
+    },
+    "z80_ack_values_seen": {
+      "0xff": 330
+    },
+    "handshake_values_read_by_68k": {
+      "0x00": 1,
+      "0x55": 1,
+      "0xff": 1
+    },
+    "note": "68K write taps cannot see the Z80-side 0xff ack; it is captured here via a Z80 write tap on 0xc00f and via the coalesced 68K read tap on 0x61801f."
+  },
+  "record_then_handshake": true,
+  "records_total": 333,
+  "records_init_artifacts": 3,
+  "records_complete": 330,
+  "records_without_fresh_cmd": 0,
+  "even_lane_writes": 0,
+  "stray_writes": 0,
+  "z80_writes_to_record_bytes": {},
+  "writer_pcs": {
+    "record_bytes": {
+      "0x6e52": 330,
+      "0x6e5a": 330,
+      "0x6e62": 330,
+      "0x6e6a": 330,
+      "0x6e72": 330,
+      "0x6e7a": 330,
+      "0x6e82": 330,
+      "0x6e8a": 330
+    },
+    "handshake": {
+      "0x6eac": 330,
+      "0x530": 2,
+      "0x554": 1
+    }
+  },
+  "command_inventory": [
+    {
+      "cmd": "0x0002",
+      "count": 1,
+      "first_frame": 10640
+    },
+    {
+      "cmd": "0x000f",
+      "count": 1,
+      "first_frame": 3951
+    },
+    {
+      "cmd": "0x001f",
+      "count": 1,
+      "first_frame": 5546
+    },
+    {
+      "cmd": "0x0033",
+      "count": 3,
+      "first_frame": 1207
+    },
+    {
+      "cmd": "0x0034",
+      "count": 1,
+      "first_frame": 2322
+    },
+    {
+      "cmd": "0x0035",
+      "count": 1,
+      "first_frame": 3766
+    },
+    {
+      "cmd": "0x0036",
+      "count": 1,
+      "first_frame": 6154
+    },
+    {
+      "cmd": "0x0037",
+      "count": 1,
+      "first_frame": 6494
+    },
+    {
+      "cmd": "0x0039",
+      "count": 1,
+      "first_frame": 7429
+    },
+    {
+      "cmd": "0x003a",
+      "count": 1,
+      "first_frame": 11640
+    },
+    {
+      "cmd": "0x003d",
+      "count": 2,
+      "first_frame": 10331
+    },
+    {
+      "cmd": "0x0040",
+      "count": 2,
+      "first_frame": 1823
+    },
+    {
+      "cmd": "0x0043",
+      "count": 3,
+      "first_frame": 2701
+    },
+    {
+      "cmd": "0x0048",
+      "count": 5,
+      "first_frame": 10948
+    },
+    {
+      "cmd": "0x004b",
+      "count": 2,
+      "first_frame": 11011
+    },
+    {
+      "cmd": "0x004e",
+      "count": 1,
+      "first_frame": 11284
+    },
+    {
+      "cmd": "0x004f",
+      "count": 4,
+      "first_frame": 4712
+    },
+    {
+      "cmd": "0x0051",
+      "count": 4,
+      "first_frame": 4663
+    },
+    {
+      "cmd": "0x0058",
+      "count": 2,
+      "first_frame": 10848
+    },
+    {
+      "cmd": "0x005e",
+      "count": 1,
+      "first_frame": 3573
+    },
+    {
+      "cmd": "0x0061",
+      "count": 9,
+      "first_frame": 10777
+    },
+    {
+      "cmd": "0x0064",
+      "count": 2,
+      "first_frame": 4700
+    },
+    {
+      "cmd": "0x0094",
+      "count": 1,
+      "first_frame": 11642
+    },
+    {
+      "cmd": "0x00ab",
+      "count": 3,
+      "first_frame": 3959
+    },
+    {
+      "cmd": "0x00ac",
+      "count": 3,
+      "first_frame": 4031
+    },
+    {
+      "cmd": "0x00ae",
+      "count": 2,
+      "first_frame": 4882
+    },
+    {
+      "cmd": "0x00b0",
+      "count": 2,
+      "first_frame": 4900
+    },
+    {
+      "cmd": "0x00ba",
+      "count": 1,
+      "first_frame": 3700
+    },
+    {
+      "cmd": "0x00c2",
+      "count": 11,
+      "first_frame": 1433
+    },
+    {
+      "cmd": "0x00c3",
+      "count": 53,
+      "first_frame": 9225
+    },
+    {
+      "cmd": "0x00c4",
+      "count": 55,
+      "first_frame": 9223
+    },
+    {
+      "cmd": "0x00cc",
+      "count": 1,
+      "first_frame": 3829
+    },
+    {
+      "cmd": "0x00d1",
+      "count": 2,
+      "first_frame": 10332
+    },
+    {
+      "cmd": "0x0102",
+      "count": 2,
+      "first_frame": 5410
+    },
+    {
+      "cmd": "0x0103",
+      "count": 15,
+      "first_frame": 4106
+    },
+    {
+      "cmd": "0x0104",
+      "count": 14,
+      "first_frame": 4152
+    },
+    {
+      "cmd": "0x0105",
+      "count": 1,
+      "first_frame": 5412
+    },
+    {
+      "cmd": "0x010b",
+      "count": 1,
+      "first_frame": 5731
+    },
+    {
+      "cmd": "0x0111",
+      "count": 12,
+      "first_frame": 4115
+    },
+    {
+      "cmd": "0x0114",
+      "count": 9,
+      "first_frame": 4165
+    },
+    {
+      "cmd": "0x0119",
+      "count": 18,
+      "first_frame": 4131
+    },
+    {
+      "cmd": "0x0124",
+      "count": 2,
+      "first_frame": 11578
+    },
+    {
+      "cmd": "0x013a",
+      "count": 1,
+      "first_frame": 7415
+    },
+    {
+      "cmd": "0x013b",
+      "count": 1,
+      "first_frame": 11436
+    },
+    {
+      "cmd": "0x013c",
+      "count": 4,
+      "first_frame": 10810
+    },
+    {
+      "cmd": "0x013d",
+      "count": 1,
+      "first_frame": 11399
+    },
+    {
+      "cmd": "0x0172",
+      "count": 4,
+      "first_frame": 4493
+    },
+    {
+      "cmd": "0x0181",
+      "count": 9,
+      "first_frame": 10778
+    },
+    {
+      "cmd": "0x0184",
+      "count": 4,
+      "first_frame": 10811
+    },
+    {
+      "cmd": "0x019e",
+      "count": 2,
+      "first_frame": 8790
+    },
+    {
+      "cmd": "0x019f",
+      "count": 2,
+      "first_frame": 8945
+    },
+    {
+      "cmd": "0x01a0",
+      "count": 2,
+      "first_frame": 9409
+    },
+    {
+      "cmd": "0x01a1",
+      "count": 2,
+      "first_frame": 4878
+    },
+    {
+      "cmd": "0x01c6",
+      "count": 1,
+      "first_frame": 7325
+    },
+    {
+      "cmd": "0x01c7",
+      "count": 3,
+      "first_frame": 3989
+    },
+    {
+      "cmd": "0x01c8",
+      "count": 2,
+      "first_frame": 5071
+    },
+    {
+      "cmd": "0x01c9",
+      "count": 1,
+      "first_frame": 7055
+    },
+    {
+      "cmd": "0x01ca",
+      "count": 1,
+      "first_frame": 6965
+    },
+    {
+      "cmd": "0x01cb",
+      "count": 1,
+      "first_frame": 6875
+    },
+    {
+      "cmd": "0x01cc",
+      "count": 1,
+      "first_frame": 6785
+    },
+    {
+      "cmd": "0x01cd",
+      "count": 1,
+      "first_frame": 6695
+    },
+    {
+      "cmd": "0x01ce",
+      "count": 1,
+      "first_frame": 6605
+    },
+    {
+      "cmd": "0x01cf",
+      "count": 1,
+      "first_frame": 6515
+    },
+    {
+      "cmd": "0xff00",
+      "count": 9,
+      "first_frame": 863
+    },
+    {
+      "cmd": "0xff01",
+      "count": 1,
+      "first_frame": 5024
+    },
+    {
+      "cmd": "0xff02",
+      "count": 3,
+      "first_frame": 4479
+    },
+    {
+      "cmd": "0xff03",
+      "count": 3,
+      "first_frame": 1825
+    },
+    {
+      "cmd": "0xff05",
+      "count": 2,
+      "first_frame": 1824
+    },
+    {
+      "cmd": "0xff07",
+      "count": 1,
+      "first_frame": 6007
+    },
+    {
+      "cmd": "0xff0b",
+      "count": 9,
+      "first_frame": 864
+    }
+  ],
+  "music_range_observed": [
+    "0x0002",
+    "0x01cf"
+  ],
+  "control_cmds_observed": [
+    "0xff00",
+    "0xff01",
+    "0xff02",
+    "0xff03",
+    "0xff05",
+    "0xff07",
+    "0xff0b"
+  ],
+  "known_table_crosscheck": {
+    "table": "manifests/hsf2_bgm_command_map.tsv in_game=yes rows",
+    "table_size": 68,
+    "observed_in_table": [
+      "0x0002",
+      "0x000f",
+      "0x001f",
+      "0x0033",
+      "0x0034",
+      "0x0035",
+      "0x0036",
+      "0x0037",
+      "0x0039",
+      "0x003a"
+    ],
+    "observed_outside_table_non_control": [
+      "0x003d",
+      "0x0040",
+      "0x0043",
+      "0x0048",
+      "0x004b",
+      "0x004e",
+      "0x004f",
+      "0x0051",
+      "0x0058",
+      "0x005e",
+      "0x0061",
+      "0x0064",
+      "0x0094",
+      "0x00ab",
+      "0x00ac",
+      "0x00ae",
+      "0x00b0",
+      "0x00ba",
+      "0x00c2",
+      "0x00c3",
+      "0x00c4",
+      "0x00cc",
+      "0x00d1",
+      "0x0102",
+      "0x0103",
+      "0x0104",
+      "0x0105",
+      "0x010b",
+      "0x0111",
+      "0x0114",
+      "0x0119",
+      "0x0124",
+      "0x013a",
+      "0x013b",
+      "0x013c",
+      "0x013d",
+      "0x0172",
+      "0x0181",
+      "0x0184",
+      "0x019e",
+      "0x019f",
+      "0x01a0",
+      "0x01a1",
+      "0x01c6",
+      "0x01c7",
+      "0x01c8",
+      "0x01c9",
+      "0x01ca",
+      "0x01cb",
+      "0x01cc",
+      "0x01cd",
+      "0x01ce",
+      "0x01cf"
+    ],
+    "table_hit_count": 10
+  },
+  "trace": {
+    "frames": 15000,
+    "rows": 4341,
+    "writes_68k": 4008,
+    "reads_68k_logged": 3,
+    "writes_z80": 330,
+    "handshake_reads_total": 332,
+    "handshake_reads_suppressed": 329,
+    "z80_banner": "version 1.06b /CPS2 1996 / APR.",
+    "clean_exit": true
+  }
+}

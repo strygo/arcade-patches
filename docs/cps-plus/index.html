@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPS+ · Arcade Patches</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="home" href="../">Arcade Patches</a>
+    <div class="tagline">Translations, restorations and arranged soundtracks for classic arcade games.</div>
+  </div>
+</header>
+<main>
+<a class="back" href="../">&larr; All patches</a>
+<h1>CPS+</h1>
+<p class="subtitle">Arranged CD-era soundtracks for CPS-1 &amp; CPS-2 arcade games on MiSTer</p>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">v1.0</span><span class="badge plain">MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)</span></div>
+<dl class="meta"><dt>Hardware</dt><dd>MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)</dd><dt>Version</dt><dd>1.0</dd><dt>Updated</dt><dd>2026-08-25</dd></dl>
+<p>From Final Fight CD onward, Capcom kept sending its arcade soundtracks back to the studio. Every CD-based home port got a full re-recording of the music, the &#x27;arrange&#x27; versions, produced by the original composers&#x27; teams. For thirty years those recordings stayed locked to the home versions. CPS+ puts them where they always belonged, under the arcade games themselves.</p>
+<p>On a MiSTer, the real CPS-1 or CPS-2 hardware logic runs the game while the CD-era soundtrack plays the music, started, looped and faded by the game itself, exactly the way Capcom&#x27;s own console releases timed it. Hit sounds, voices and the announcer stay pure arcade. It sounds like the arcade board grew a CD drive.</p>
+<ul class="highlights">
+<li>18 audio packs covering 14 arcade games, every arranged soundtrack Capcom recorded for the CPS line</li>
+<li>52 ready-to-play MRAs, so you pick the game from the CPS+ folder and the music is just there</li>
+<li>Runs on a stock MiSTer, with no firmware changes and nothing to configure</li>
+<li>Only tools in the download. Packs build from the discs you already own, in one command</li>
+</ul>
+
+<h2>Get started</h2>
+<div class="download">
+  <div class="kind">CPS+ MiSTer kit: cores, MRAs and the pack builder</div>
+  <div class="file"><a href="../downloads/cpsplus-kit-1.0.zip">cpsplus-kit-1.0.zip</a>
+  (4.4 MB)</div>
+  <div class="hash">SHA-256: 947d67db49f19204c6cea6fa9040ec7b6ac74c238edfd2ebcbc4afd197a623eb</div>
+</div>
+<ol>
+<li>Download and unzip the kit.</li>
+<li>Edit builder/discs.toml and point it at the disc rips you own (each entry is optional), or pass them on the command line with --disc mtwins_pce_disc=/discs/chiki.7z. make_packs.py --list shows every pack and the disc it wants.</li>
+<li>Run python3 builder/make_packs.py (Python 3.11+, numpy, ffmpeg). It builds out/mister/, laid out like your SD card.</li>
+<li>Copy the contents of out/mister/ to your MiSTer SD card, merging with what&#x27;s there. Arcade ROM zips go where they always do.</li>
+</ol>
+<p>The download is tools: the MRAs, the three CPS+ cores with their GPL-3.0 source, and the pack builder. It makes the packs on your machine from discs you own, naming anything it skips for want of a disc. It also assembles out/mister/ for you, holding the cores, your packs, and only the MRAs those packs can load, so nothing on the card fails to start.</p>
+<p>Two MRA groups pair CPS+ audio with sets from companion projects on this site: the Alpha 2 Gold MRAs load the SFA2 Gold reconstructed sets, and ‘Final Fight (Arrange + CD Cutscenes)’ loads the Final Fight CD backport set. Build those with their own kits first (links below).</p>
+<h2>Game coverage</h2>
+<p>Every soundtrack is built from one disc you own. Where a disc came out in several regions, the ones listed below all produce the same pack.</p>
+<table class="coverage"><thead><tr><th>Arcade game</th><th>Soundtrack</th><th>Built from</th></tr></thead><tbody>
+<tr class="group">
+<th scope="rowgroup" rowspan="4">Final Fight<span class="sets mono">ffightu, ffightj</span></th>
+<td>Sega CD arrange</td><td>Final Fight CD <span class="on">(Sega CD)</span></td></tr>
+<tr>
+<td>SNES soundtrack</td><td>Final Fight OST box <span class="on">(CD audio)</span></td></tr>
+<tr>
+<td>X68000 FM soundtrack</td><td>Final Fight OST box <span class="on">(CD audio)</span></td></tr>
+<tr>
+<td>X68000 MIDI soundtrack</td><td>Final Fight OST box <span class="on">(CD audio)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Forgotten Worlds<span class="alt">Lost Worlds in Japan</span><span class="sets mono">forgottn, lostwrld</span></th>
+<td>PC Engine CD arrange</td><td>Forgotten Worlds <span class="on">(PC Engine CD)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="2">Hyper Street Fighter II<span class="sets mono">hsf2, hsf2j, hsf2a</span></th>
+<td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
+<tr>
+<td>CPS-1 soundtrack</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Mega Twins<span class="alt">Chiki Chiki Boys in Japan</span><span class="sets mono">mtwins, chikij</span></th>
+<td>PC Engine CD arrange</td><td>Chiki Chiki Boys <span class="on">(PC Engine CD)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Saturday Night Slam Masters<span class="alt">Muscle Bomber in Japan</span><span class="sets mono">slammastu, mbomberj</span></th>
+<td>FM Towns arrange</td><td>Muscle Bomber <span class="on">(FM Towns)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Street Fighter Alpha<span class="alt">Street Fighter Zero in Japan and Asia</span><span class="sets mono">sfau, sfzj, sfza</span></th>
+<td>Saturn arrange</td><td>Street Fighter Alpha: Warriors&#x27; Dreams <span class="on">(Saturn)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="2">Street Fighter Alpha 2<span class="alt">Street Fighter Zero 2 in Japan and Asia</span><span class="sets mono">sfa2u, sfz2j, sfz2a</span></th>
+<td>Saturn arrange</td><td>Street Fighter Zero 2 / Alpha 2 <span class="on">(Saturn)</span></td></tr>
+<tr>
+<td>SNES soundtrack</td><td>Street Fighter Alpha Anthology <span class="on">(PlayStation 2)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Street Fighter Alpha 2 Gold<span class="alt">Zero 2 Alpha and Zero 2 Dash</span><span class="sets mono">sfa2g, sfz2al, sfz2alj, sfz2d, sfz2da, sfa2d</span></th>
+<td>Saturn extended arrange</td><td>Street Fighter Zero 2′ or SF Collection Disc 2 <span class="on">(Saturn)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Street Fighter II: The World Warrior<span class="sets mono">sf2uk, sf2jl</span></th>
+<td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Street Fighter II&#x27;: Champion Edition<span class="sets mono">sf2ceuc, sf2cejc</span></th>
+<td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Street Fighter II&#x27;: Hyper Fighting<span class="sets mono">sf2hfu, sf2hfj</span></th>
+<td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Super Puzzle Fighter II Turbo<span class="alt">Super Puzzle Fighter II X in Japan</span><span class="sets mono">spf2tu, spf2ta, spf2xj</span></th>
+<td>Saturn arrange</td><td>Super Puzzle Fighter II Turbo <span class="on">(Saturn)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Super Street Fighter II<span class="sets mono">ssf2u, ssf2j, ssf2a</span></th>
+<td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Super Street Fighter II Turbo<span class="alt">Super Street Fighter II X in Japan</span><span class="sets mono">ssf2tu, ssf2ta, ssf2xj</span></th>
+<td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
+</tbody></table>
+<h3>Which disc you need</h3>
+<div class="sources">
+<div class="source"><div class="src-disc"><strong>Chiki Chiki Boys</strong><span class="platform">PC Engine CD</span><span class="variants">Japan</span></div></div>
+<div class="source"><div class="src-disc"><strong>Final Fight CD</strong><span class="platform">Sega CD</span><span class="variants">USA and/or Japan, and each region builds its own pack</span></div></div>
+<div class="source"><div class="src-disc"><strong>Final Fight OST box</strong><span class="platform">CD audio</span><span class="variants">discs 1–2, ripped to FLAC or WAV</span></div></div>
+<div class="source"><div class="src-disc"><strong>Forgotten Worlds</strong><span class="platform">PC Engine CD</span><span class="variants">USA or Japan</span></div></div>
+<div class="source"><div class="src-disc"><strong>Hyper Street Fighter II: The Anniversary Edition</strong><span class="platform">PlayStation 2</span><span class="variants">Japan or Europe, or the USA Street Fighter Anniversary Collection; all three carry identical audio data</span></div></div>
+<div class="source"><div class="src-disc"><strong>Muscle Bomber</strong><span class="platform">FM Towns</span><span class="variants">Japan</span></div></div>
+<div class="source"><div class="src-disc"><strong>Street Fighter Alpha Anthology</strong><span class="platform">PlayStation 2</span><span class="variants">USA</span></div></div>
+<div class="source"><div class="src-disc"><strong>Street Fighter Alpha: Warriors&#x27; Dreams</strong><span class="platform">Saturn</span><span class="variants">USA, or Street Fighter Zero (Japan); the European release is not supported</span></div></div>
+<div class="source"><div class="src-disc"><strong>Street Fighter Zero 2 / Alpha 2</strong><span class="platform">Saturn</span><span class="variants">SF Zero 2 (Japan), SF Alpha 2 (USA or Europe), SF Zero 2′ (Japan) or SF Collection Disc 2; the songs are the same on all five</span></div></div>
+<div class="source"><div class="src-disc"><strong>Street Fighter Zero 2′ or SF Collection Disc 2</strong><span class="platform">Saturn</span><span class="variants">the same on both, any SF Collection region</span></div></div>
+<div class="source"><div class="src-disc"><strong>Super Puzzle Fighter II Turbo</strong><span class="platform">Saturn</span><span class="variants">USA, Europe, or Super Puzzle Fighter II X (Japan)</span></div></div>
+</div>
+<h2>Under the hood</h2>
+<p>Nothing in the game is modified. CPS-1 and CPS-2 games post sound commands to their audio hardware, and the CPS+ core watches for them. When one matches the loaded pack, it streams that arranged track and holds the command back from the sound chip. Everything else plays as it always did: hit sounds, voices, the announcer, and the jingles a pack deliberately leaves alone.</p>
+<p>The trigger tables were reverse-engineered from Capcom&#x27;s own console releases and checked against the arcade programs, down to the loop points and fades.</p>
+<p>A pack carries the arranged tracks and the table that says which sound command starts each one. The MRA points at the pack, and MiSTer loads it into memory alongside the ROM. A stock MiSTer runs all of this as it comes.</p>
+<p>A given disc always produces the same pack, and the builder checks yours against a published hash.</p>
+<h2>Making your own packs</h2>
+<p>Community packs are a first-class goal, so the format is documented and the tools ship in the kit. build_pack.py init &lt;game&gt; starts a project; you supply the tracks and say which sound command triggers each one; build_pack.py build produces the pack, which you can listen through, check, and point an MRA at.</p>
+<p>Any QSound CPS-2 title is a potential target, and CPS-1 and CPS-1.5 games work too. PACK_FORMAT.md in the kit covers the trigger contract, the pack layout, and how to author one.</p>
+<h2>FAQ</h2>
+<details class="faq"><summary>What do I need installed to build the packs?</summary><p>Python 3.11 or newer, numpy, and ffmpeg on your PATH. On a Mac: brew install python ffmpeg, then pip3 install numpy. On Linux, use your package manager. 7-Zip is only needed if your rips are .7z archives.</p><p>Nothing is installed on the MiSTer itself. The kit is plain files copied to the SD card, and a stock MiSTer runs them as-is.</p></details>
+<details class="faq"><summary>What disc rip formats does the builder accept?</summary><p>A .cue sheet with its .bin files beside it, a .mds/.mdf pair, or a .zip/.7z archive containing exactly one cue sheet. For the PlayStation 2 sources, point it at the .iso (or a zip containing it). The Final Fight OST is a folder of .flac or .wav files instead of a disc image.</p><p>CHD rips need converting back first with chdman extractcd, since the builder doesn&#x27;t read CHD directly.</p></details>
+<details class="faq"><summary>A pack failed hash verification. What now?</summary><p>It almost always means the disc isn&#x27;t one of the supported releases listed above, or the rip is damaged. Check which release you have, re-rip if in doubt, and run make_packs.py again. A nonstandard ffmpeg build can also encode slightly differently; the stock Homebrew or distro ffmpeg matches the published hashes.</p><p>The builder won&#x27;t stage a pack that fails, so a bad rip can&#x27;t reach your SD card. There&#x27;s a --no-verify flag if you want one anyway.</p></details>
+<details class="faq"><summary>Will this touch my existing MiSTer setup?</summary><p>No. The CPS+ cores have their own names and the MRAs live in their own folder, so your existing cores, MRAs and ROMs are untouched. To remove it, delete the _CPS+ folder, the three cores and games/CPS+.</p></details>
+<details class="faq"><summary>Is any of the music in the download?</summary><p>No, the kit is tools only. Every pack is made on your machine from a disc you own.</p></details>
+<details class="faq"><summary>Do the packs work in MAME or on a real arcade board?</summary><p>No. CPS+ is a MiSTer feature: the streaming player lives in the FPGA cores and the pack loads into the MiSTer&#x27;s DDR memory. Everywhere else the games just play their stock music.</p><p>The companion projects do cover other targets: SFA2 Gold and the Final Fight CD cutscene backport both ship HBMAME sets. See their pages, linked below.</p></details>
+<h2>Source &amp; related projects</h2><ul>
+<li><a href="https://github.com/strygo/jtcores/tree/cpsplus">strygo/jtcores (cpsplus branch)</a>, the CPS+ core fork: RTL, integration patches, pack format spec, and full GPL-3.0 source for the shipped RBFs</li>
+<li><a href="https://github.com/jotego/jtcores">jotego/jtcores</a>, the upstream CPS core project CPS+ builds on</li>
+<li><a href="../sfa2-gold/">Street Fighter Alpha 2 Gold</a>, companion project: the reconstructed Gold sets that the Gold Arrange MRAs load</li>
+<li><a href="../final-fight-cd/">Final Fight — CD Cutscenes</a>, companion project: the cutscene backport set that pairs with the Arrange + CD Cutscenes MRA</li>
+</ul>
+<h2>Notes</h2><ul class="notes">
+<li>The arranged recordings remain © Capcom and are never distributed here. Every pack is built from your own disc.</li>
+<li>Sound effects, voices and the announcer always play live through the original arcade audio path; packs substitute music only, and a few cues deliberately pass through to the arcade board&#x27;s own music.</li>
+</ul>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
+    by Capcom. All game titles, characters, and artwork remain the property of their
+    respective owners. No ROMs or other copyrighted game data are hosted here.</p>
+    <p><a href="../legal.html">Legal &amp; disclaimers</a></p>
+  </div>
+</footer>
+</body>
+</html>

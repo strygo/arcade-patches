@@ -1,0 +1,23 @@
+# CONFIRMED arcade sfa2 stage command -> SNES Y_DATA entry.
+# arcade cmd = FAQ CPS2 order position 0x01-0x13; anchored by in-game
+# validated 0x07=Birdie; 4 clips (0x01/07/12/13) human ear-confirmed.
+# SNES entry from the +1-corrected human-verified map.
+0x0001	440	Ryu	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0002	441	Ken	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0003	444	ChunLi	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0004	451	Sagat	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0005	446	Sodom	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0006	445	Adon	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0007	448	Birdie	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0008	447	Guy	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0009	443	Nash	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x000a	449	Rose	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x000b	442	Gouki	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x000c	450	Vega	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x000d	452	Dan	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x000e	455	Dhalsim	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x000f	456	Zangief	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0010	457	Gen	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0011	454	Rolento	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0012	453	Sakura	HIGH	stage theme; FAQ-order+anchor, ear-confirmed
+0x0013	458	Australia	HIGH	stage theme; FAQ-order+anchor, ear-confirmed

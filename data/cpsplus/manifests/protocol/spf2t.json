@@ -1,0 +1,500 @@
+{
+  "set": "spf2t",
+  "dialect": "cps2_qsound",
+  "driver_version": "2.01b",
+  "z80_banner": "2.01b /CPS2 1996 /APRIL",
+  "latch_page": "0x618000",
+  "field_offsets": {
+    "cmd_hi": "0x01",
+    "cmd_lo": "0x03",
+    "observed_record_offsets": [
+      "0x01",
+      "0x03",
+      "0x05",
+      "0x07",
+      "0x09",
+      "0x0d",
+      "0x0f",
+      "0x11",
+      "0x13",
+      "0x15",
+      "0x17",
+      "0x19"
+    ],
+    "typical_write_order": [
+      "0x07",
+      "0x09",
+      "0x01",
+      "0x03",
+      "0x05",
+      "0x0d",
+      "0x0f",
+      "0x11",
+      "0x17",
+      "0x19",
+      "0x13",
+      "0x15"
+    ]
+  },
+  "handshake": {
+    "offset": "0x1f",
+    "post_value": "0x00",
+    "post_values_seen": {
+      "0x00": 545
+    },
+    "post_values_incl_init": {
+      "0x00": 546,
+      "0x55": 1,
+      "0xff": 1
+    },
+    "z80_ack_values_seen": {
+      "0xff": 545
+    },
+    "handshake_values_read_by_68k": {
+      "0x00": 1,
+      "0x55": 1,
+      "0xff": 1
+    },
+    "note": "68K write taps cannot see the Z80-side 0xff ack; it is captured here via a Z80 write tap on 0xc00f and via the coalesced 68K read tap on 0x61801f."
+  },
+  "record_then_handshake": true,
+  "records_total": 548,
+  "records_init_artifacts": 3,
+  "records_complete": 545,
+  "records_without_fresh_cmd": 0,
+  "even_lane_writes": 48,
+  "stray_writes": 0,
+  "z80_writes_to_record_bytes": {
+    "0xc005=0x00": 2,
+    "0xc005=0x01": 8,
+    "0xc005=0x02": 8,
+    "0xc005=0x03": 8,
+    "0xc005=0x04": 8,
+    "0xc005=0x05": 8,
+    "0xc005=0x06": 8,
+    "0xc005=0x07": 8,
+    "0xc005=0x08": 22,
+    "0xc005=0x09": 8,
+    "0xc005=0x0a": 8,
+    "0xc005=0x0b": 8,
+    "0xc005=0x0c": 209,
+    "0xc005=0x0d": 8,
+    "0xc005=0x0e": 8,
+    "0xc005=0x0f": 10,
+    "0xc005=0x10": 313,
+    "0xc005=0x11": 16,
+    "0xc005=0x12": 39,
+    "0xc005=0x13": 69,
+    "0xc005=0x14": 52,
+    "0xc005=0x15": 24,
+    "0xc005=0x16": 16,
+    "0xc005=0x17": 16,
+    "0xc005=0x18": 29,
+    "0xc005=0x19": 16,
+    "0xc005=0x1a": 16,
+    "0xc005=0x1b": 16,
+    "0xc005=0x1c": 16,
+    "0xc005=0x1d": 16,
+    "0xc005=0x1e": 16,
+    "0xc005=0x1f": 16,
+    "0xc005=0x20": 12
+  },
+  "writer_pcs": {
+    "record_bytes": {
+      "0x2b0e8": 545,
+      "0x2b0f0": 545,
+      "0x2b0f8": 545,
+      "0x2b100": 545,
+      "0x2b108": 545,
+      "0x2b110": 545,
+      "0x2b118": 545,
+      "0x2b120": 545
+    },
+    "handshake": {
+      "0x2b14a": 545,
+      "0xcec": 2,
+      "0xe10": 1
+    }
+  },
+  "command_inventory": [
+    {
+      "cmd": "0x0001",
+      "count": 2,
+      "first_frame": 2232
+    },
+    {
+      "cmd": "0x0005",
+      "count": 1,
+      "first_frame": 18612
+    },
+    {
+      "cmd": "0x000e",
+      "count": 3,
+      "first_frame": 793
+    },
+    {
+      "cmd": "0x000f",
+      "count": 3,
+      "first_frame": 1775
+    },
+    {
+      "cmd": "0x0010",
+      "count": 3,
+      "first_frame": 6548
+    },
+    {
+      "cmd": "0x0012",
+      "count": 3,
+      "first_frame": 6644
+    },
+    {
+      "cmd": "0x0014",
+      "count": 2,
+      "first_frame": 14924
+    },
+    {
+      "cmd": "0x0015",
+      "count": 1,
+      "first_frame": 15425
+    },
+    {
+      "cmd": "0x0016",
+      "count": 1,
+      "first_frame": 15689
+    },
+    {
+      "cmd": "0x001e",
+      "count": 1,
+      "first_frame": 532
+    },
+    {
+      "cmd": "0x001f",
+      "count": 1,
+      "first_frame": 533
+    },
+    {
+      "cmd": "0x0090",
+      "count": 3,
+      "first_frame": 719
+    },
+    {
+      "cmd": "0x0096",
+      "count": 3,
+      "first_frame": 2097
+    },
+    {
+      "cmd": "0x0097",
+      "count": 3,
+      "first_frame": 2169
+    },
+    {
+      "cmd": "0x0099",
+      "count": 3,
+      "first_frame": 6428
+    },
+    {
+      "cmd": "0x009b",
+      "count": 3,
+      "first_frame": 6481
+    },
+    {
+      "cmd": "0x009c",
+      "count": 2,
+      "first_frame": 14955
+    },
+    {
+      "cmd": "0x009d",
+      "count": 3,
+      "first_frame": 6642
+    },
+    {
+      "cmd": "0x00a0",
+      "count": 2,
+      "first_frame": 811
+    },
+    {
+      "cmd": "0x00a1",
+      "count": 3,
+      "first_frame": 1513
+    },
+    {
+      "cmd": "0x00a2",
+      "count": 2,
+      "first_frame": 1086
+    },
+    {
+      "cmd": "0x00a3",
+      "count": 2,
+      "first_frame": 1022
+    },
+    {
+      "cmd": "0x00a6",
+      "count": 2,
+      "first_frame": 1362
+    },
+    {
+      "cmd": "0x00b2",
+      "count": 3,
+      "first_frame": 1542
+    },
+    {
+      "cmd": "0x00d0",
+      "count": 2,
+      "first_frame": 14862
+    },
+    {
+      "cmd": "0x00d1",
+      "count": 2,
+      "first_frame": 14837
+    },
+    {
+      "cmd": "0x00d2",
+      "count": 2,
+      "first_frame": 14742
+    },
+    {
+      "cmd": "0x00d3",
+      "count": 2,
+      "first_frame": 14682
+    },
+    {
+      "cmd": "0x00d4",
+      "count": 3,
+      "first_frame": 7002
+    },
+    {
+      "cmd": "0x00d5",
+      "count": 3,
+      "first_frame": 6942
+    },
+    {
+      "cmd": "0x00d6",
+      "count": 3,
+      "first_frame": 6917
+    },
+    {
+      "cmd": "0x00d7",
+      "count": 3,
+      "first_frame": 6822
+    },
+    {
+      "cmd": "0x00d8",
+      "count": 3,
+      "first_frame": 6762
+    },
+    {
+      "cmd": "0x00d9",
+      "count": 4,
+      "first_frame": 6645
+    },
+    {
+      "cmd": "0x00e1",
+      "count": 7,
+      "first_frame": 715
+    },
+    {
+      "cmd": "0x00e2",
+      "count": 27,
+      "first_frame": 1688
+    },
+    {
+      "cmd": "0x00e4",
+      "count": 10,
+      "first_frame": 1021
+    },
+    {
+      "cmd": "0x00e6",
+      "count": 3,
+      "first_frame": 6429
+    },
+    {
+      "cmd": "0x00ea",
+      "count": 27,
+      "first_frame": 6646
+    },
+    {
+      "cmd": "0x00f1",
+      "count": 3,
+      "first_frame": 1858
+    },
+    {
+      "cmd": "0x0100",
+      "count": 157,
+      "first_frame": 2261
+    },
+    {
+      "cmd": "0x0103",
+      "count": 39,
+      "first_frame": 3014
+    },
+    {
+      "cmd": "0x0106",
+      "count": 5,
+      "first_frame": 5638
+    },
+    {
+      "cmd": "0x0162",
+      "count": 1,
+      "first_frame": 10664
+    },
+    {
+      "cmd": "0x0163",
+      "count": 3,
+      "first_frame": 2055
+    },
+    {
+      "cmd": "0x0167",
+      "count": 1,
+      "first_frame": 5632
+    },
+    {
+      "cmd": "0x016a",
+      "count": 1,
+      "first_frame": 10737
+    },
+    {
+      "cmd": "0x0178",
+      "count": 2,
+      "first_frame": 14172
+    },
+    {
+      "cmd": "0x0179",
+      "count": 1,
+      "first_frame": 6452
+    },
+    {
+      "cmd": "0x027b",
+      "count": 1,
+      "first_frame": 5790
+    },
+    {
+      "cmd": "0x027c",
+      "count": 2,
+      "first_frame": 10580
+    },
+    {
+      "cmd": "0x027d",
+      "count": 2,
+      "first_frame": 3609
+    },
+    {
+      "cmd": "0x0300",
+      "count": 35,
+      "first_frame": 4308
+    },
+    {
+      "cmd": "0x0301",
+      "count": 56,
+      "first_frame": 2264
+    },
+    {
+      "cmd": "0x0303",
+      "count": 28,
+      "first_frame": 3015
+    },
+    {
+      "cmd": "0x0305",
+      "count": 1,
+      "first_frame": 13233
+    },
+    {
+      "cmd": "0x0309",
+      "count": 1,
+      "first_frame": 5792
+    },
+    {
+      "cmd": "0x030a",
+      "count": 1,
+      "first_frame": 10902
+    },
+    {
+      "cmd": "0x031e",
+      "count": 1,
+      "first_frame": 18411
+    },
+    {
+      "cmd": "0x0322",
+      "count": 2,
+      "first_frame": 2034
+    },
+    {
+      "cmd": "0x0332",
+      "count": 1,
+      "first_frame": 14181
+    },
+    {
+      "cmd": "0x0333",
+      "count": 1,
+      "first_frame": 6461
+    },
+    {
+      "cmd": "0x0337",
+      "count": 4,
+      "first_frame": 3608
+    },
+    {
+      "cmd": "0x0338",
+      "count": 1,
+      "first_frame": 10602
+    },
+    {
+      "cmd": "0x03b6",
+      "count": 1,
+      "first_frame": 22713
+    },
+    {
+      "cmd": "0x03ba",
+      "count": 1,
+      "first_frame": 18412
+    },
+    {
+      "cmd": "0x03bc",
+      "count": 1,
+      "first_frame": 21102
+    },
+    {
+      "cmd": "0xff00",
+      "count": 4,
+      "first_frame": 92
+    },
+    {
+      "cmd": "0xff05",
+      "count": 23,
+      "first_frame": 531
+    },
+    {
+      "cmd": "0xff07",
+      "count": 6,
+      "first_frame": 6427
+    },
+    {
+      "cmd": "0xff08",
+      "count": 3,
+      "first_frame": 1988
+    }
+  ],
+  "music_range_observed": [
+    "0x0001",
+    "0x03bc"
+  ],
+  "control_cmds_observed": [
+    "0xff00",
+    "0xff05",
+    "0xff07",
+    "0xff08"
+  ],
+  "known_table_crosscheck": null,
+  "trace": {
+    "dialect": "cps2",
+    "frames": 24000,
+    "rows": 8766,
+    "writes_68k": 7181,
+    "reads_68k_logged": 3,
+    "writes_z80": 1582,
+    "reads_z80_logged": 0,
+    "handshake_reads_total": 547,
+    "handshake_reads_suppressed": 544,
+    "z80_banner": "2.01b /CPS2 1996 /APRIL",
+    "clean_exit": true
+  }
+}

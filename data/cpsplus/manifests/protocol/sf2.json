@@ -1,0 +1,558 @@
+{
+  "set": "sf2",
+  "dialect": "cps1_latch",
+  "driver_version": "4.25",
+  "z80_banner": "version 4.25 .",
+  "latch_page": "0x800180",
+  "fade_latch_page": "0x800188",
+  "protocol": {
+    "type": "fire_and_forget_byte_latch",
+    "handshake": null,
+    "readback_68k": "none: 0x800180-0x80018f is write-only on the 68K side (PAL LWIO; MAME maps only cps1_soundlatch_w/cps1_soundlatch2_w there), so no 68K read can be disturbed",
+    "z80_consume": {
+      "cmd_read_addr": "0xf008",
+      "fade_read_addr": "0xf00a"
+    },
+    "suppression": "gating = swallow the 68K byte write to 0x800180-0x800187 (or substitute the driver's idle byte); no handshake or ack to synthesize. The fade latch 0x800188-0x80018f is a separate channel and can be forwarded or mapped to an MSU fade."
+  },
+  "records_total": 419,
+  "stray_writes": 0,
+  "writes_latch0": 419,
+  "writes_latch1": 418,
+  "z80_latch_reads": {
+    "total": 37889,
+    "coalesced_logged": 423,
+    "cmd_values_seen": {
+      "0x05": 1,
+      "0x08": 1,
+      "0x0e": 2,
+      "0x14": 2,
+      "0x16": 2,
+      "0x21": 27,
+      "0x22": 4,
+      "0x25": 15,
+      "0x26": 11,
+      "0x27": 29,
+      "0x28": 2,
+      "0x2a": 11,
+      "0x2b": 1,
+      "0x2d": 11,
+      "0x2e": 9,
+      "0x2f": 23,
+      "0x32": 1,
+      "0x37": 1,
+      "0x39": 9,
+      "0x3c": 4,
+      "0x3d": 1,
+      "0x43": 1,
+      "0x47": 2,
+      "0x56": 2,
+      "0x59": 1,
+      "0x5f": 2,
+      "0x60": 2,
+      "0x6f": 1,
+      "0x70": 7,
+      "0x72": 4,
+      "0x7c": 1,
+      "0x80": 1,
+      "0x85": 1,
+      "0x87": 8,
+      "0xf0": 5,
+      "0xf7": 5,
+      "0xff": 208
+    },
+    "fade_values_seen": {
+      "0x00": 3,
+      "0x2b": 2
+    },
+    "note": "coalesced per address: a row is logged only when the polled value changes, so counts here are transition counts, not poll counts"
+  },
+  "writer_pcs": {
+    "cmd_latch": {
+      "0x6284": 418,
+      "0x436": 1
+    },
+    "fade_latch": {
+      "0x627c": 418
+    }
+  },
+  "command_inventory": [
+    {
+      "cmd": "0x05",
+      "count": 1,
+      "first_frame": 3083
+    },
+    {
+      "cmd": "0x08",
+      "count": 1,
+      "first_frame": 7487
+    },
+    {
+      "cmd": "0x0e",
+      "count": 2,
+      "first_frame": 2445
+    },
+    {
+      "cmd": "0x14",
+      "count": 2,
+      "first_frame": 5094
+    },
+    {
+      "cmd": "0x16",
+      "count": 2,
+      "first_frame": 891
+    },
+    {
+      "cmd": "0x21",
+      "count": 27,
+      "first_frame": 2521
+    },
+    {
+      "cmd": "0x22",
+      "count": 4,
+      "first_frame": 2800
+    },
+    {
+      "cmd": "0x25",
+      "count": 15,
+      "first_frame": 3319
+    },
+    {
+      "cmd": "0x26",
+      "count": 11,
+      "first_frame": 3316
+    },
+    {
+      "cmd": "0x27",
+      "count": 29,
+      "first_frame": 3417
+    },
+    {
+      "cmd": "0x28",
+      "count": 2,
+      "first_frame": 3324
+    },
+    {
+      "cmd": "0x2a",
+      "count": 11,
+      "first_frame": 1140
+    },
+    {
+      "cmd": "0x2b",
+      "count": 1,
+      "first_frame": 3456
+    },
+    {
+      "cmd": "0x2d",
+      "count": 11,
+      "first_frame": 3641
+    },
+    {
+      "cmd": "0x2e",
+      "count": 9,
+      "first_frame": 3701
+    },
+    {
+      "cmd": "0x2f",
+      "count": 23,
+      "first_frame": 3387
+    },
+    {
+      "cmd": "0x32",
+      "count": 1,
+      "first_frame": 3378
+    },
+    {
+      "cmd": "0x37",
+      "count": 1,
+      "first_frame": 4831
+    },
+    {
+      "cmd": "0x39",
+      "count": 9,
+      "first_frame": 7610
+    },
+    {
+      "cmd": "0x3c",
+      "count": 4,
+      "first_frame": 8341
+    },
+    {
+      "cmd": "0x3d",
+      "count": 1,
+      "first_frame": 2937
+    },
+    {
+      "cmd": "0x43",
+      "count": 1,
+      "first_frame": 4998
+    },
+    {
+      "cmd": "0x47",
+      "count": 2,
+      "first_frame": 8339
+    },
+    {
+      "cmd": "0x56",
+      "count": 2,
+      "first_frame": 3189
+    },
+    {
+      "cmd": "0x59",
+      "count": 1,
+      "first_frame": 3001
+    },
+    {
+      "cmd": "0x5f",
+      "count": 2,
+      "first_frame": 3094
+    },
+    {
+      "cmd": "0x60",
+      "count": 2,
+      "first_frame": 3134
+    },
+    {
+      "cmd": "0x6f",
+      "count": 1,
+      "first_frame": 8303
+    },
+    {
+      "cmd": "0x70",
+      "count": 7,
+      "first_frame": 3504
+    },
+    {
+      "cmd": "0x72",
+      "count": 4,
+      "first_frame": 4238
+    },
+    {
+      "cmd": "0x7c",
+      "count": 1,
+      "first_frame": 4041
+    },
+    {
+      "cmd": "0x80",
+      "count": 1,
+      "first_frame": 8073
+    },
+    {
+      "cmd": "0x85",
+      "count": 1,
+      "first_frame": 8288
+    },
+    {
+      "cmd": "0x87",
+      "count": 8,
+      "first_frame": 4833
+    },
+    {
+      "cmd": "0xf0",
+      "count": 6,
+      "first_frame": 1
+    },
+    {
+      "cmd": "0xf7",
+      "count": 5,
+      "first_frame": 889
+    },
+    {
+      "cmd": "0xff",
+      "count": 208,
+      "first_frame": 888
+    }
+  ],
+  "fade_inventory": [
+    {
+      "value": "0x00",
+      "count": 416,
+      "first_frame": 887
+    },
+    {
+      "value": "0x2b",
+      "count": 2,
+      "first_frame": 3635
+    }
+  ],
+  "control_bytes_observed": [
+    "0xf0",
+    "0xf7",
+    "0xff"
+  ],
+  "cmd_range_observed_nonzero": [
+    "0x05",
+    "0x87"
+  ],
+  "command_events_first_64": [
+    {
+      "frame": 1,
+      "value": 240
+    },
+    {
+      "frame": 887,
+      "value": 240
+    },
+    {
+      "frame": 888,
+      "value": 255
+    },
+    {
+      "frame": 889,
+      "value": 247
+    },
+    {
+      "frame": 890,
+      "value": 255
+    },
+    {
+      "frame": 891,
+      "value": 22
+    },
+    {
+      "frame": 892,
+      "value": 255
+    },
+    {
+      "frame": 1140,
+      "value": 42
+    },
+    {
+      "frame": 1141,
+      "value": 255
+    },
+    {
+      "frame": 2441,
+      "value": 240
+    },
+    {
+      "frame": 2442,
+      "value": 255
+    },
+    {
+      "frame": 2443,
+      "value": 247
+    },
+    {
+      "frame": 2444,
+      "value": 255
+    },
+    {
+      "frame": 2445,
+      "value": 14
+    },
+    {
+      "frame": 2446,
+      "value": 255
+    },
+    {
+      "frame": 2521,
+      "value": 33
+    },
+    {
+      "frame": 2522,
+      "value": 255
+    },
+    {
+      "frame": 2539,
+      "value": 33
+    },
+    {
+      "frame": 2540,
+      "value": 255
+    },
+    {
+      "frame": 2542,
+      "value": 33
+    },
+    {
+      "frame": 2543,
+      "value": 255
+    },
+    {
+      "frame": 2564,
+      "value": 33
+    },
+    {
+      "frame": 2565,
+      "value": 255
+    },
+    {
+      "frame": 2569,
+      "value": 33
+    },
+    {
+      "frame": 2570,
+      "value": 255
+    },
+    {
+      "frame": 2602,
+      "value": 33
+    },
+    {
+      "frame": 2603,
+      "value": 255
+    },
+    {
+      "frame": 2609,
+      "value": 33
+    },
+    {
+      "frame": 2610,
+      "value": 255
+    },
+    {
+      "frame": 2650,
+      "value": 33
+    },
+    {
+      "frame": 2651,
+      "value": 255
+    },
+    {
+      "frame": 2679,
+      "value": 33
+    },
+    {
+      "frame": 2680,
+      "value": 255
+    },
+    {
+      "frame": 2700,
+      "value": 33
+    },
+    {
+      "frame": 2701,
+      "value": 255
+    },
+    {
+      "frame": 2716,
+      "value": 33
+    },
+    {
+      "frame": 2717,
+      "value": 255
+    },
+    {
+      "frame": 2731,
+      "value": 33
+    },
+    {
+      "frame": 2732,
+      "value": 255
+    },
+    {
+      "frame": 2755,
+      "value": 33
+    },
+    {
+      "frame": 2756,
+      "value": 255
+    },
+    {
+      "frame": 2800,
+      "value": 34
+    },
+    {
+      "frame": 2801,
+      "value": 255
+    },
+    {
+      "frame": 2840,
+      "value": 34
+    },
+    {
+      "frame": 2841,
+      "value": 255
+    },
+    {
+      "frame": 2937,
+      "value": 61
+    },
+    {
+      "frame": 2938,
+      "value": 255
+    },
+    {
+      "frame": 3001,
+      "value": 89
+    },
+    {
+      "frame": 3002,
+      "value": 255
+    },
+    {
+      "frame": 3083,
+      "value": 5
+    },
+    {
+      "frame": 3094,
+      "value": 95
+    },
+    {
+      "frame": 3095,
+      "value": 255
+    },
+    {
+      "frame": 3134,
+      "value": 96
+    },
+    {
+      "frame": 3135,
+      "value": 255
+    },
+    {
+      "frame": 3189,
+      "value": 86
+    },
+    {
+      "frame": 3190,
+      "value": 255
+    },
+    {
+      "frame": 3316,
+      "value": 38
+    },
+    {
+      "frame": 3317,
+      "value": 255
+    },
+    {
+      "frame": 3319,
+      "value": 37
+    },
+    {
+      "frame": 3320,
+      "value": 255
+    },
+    {
+      "frame": 3322,
+      "value": 37
+    },
+    {
+      "frame": 3323,
+      "value": 255
+    },
+    {
+      "frame": 3324,
+      "value": 40
+    },
+    {
+      "frame": 3325,
+      "value": 255
+    }
+  ],
+  "trace": {
+    "dialect": "cps1",
+    "frames": 9000,
+    "rows": 1260,
+    "writes_68k": 837,
+    "reads_68k_logged": 0,
+    "writes_z80": 0,
+    "reads_z80_logged": 423,
+    "handshake_reads_total": 37889,
+    "handshake_reads_suppressed": 37466,
+    "z80_banner": "version 4.25 .",
+    "clean_exit": true
+  }
+}

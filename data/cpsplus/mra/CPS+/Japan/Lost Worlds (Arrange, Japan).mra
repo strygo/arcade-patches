@@ -1,0 +1,72 @@
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores" />
+    <rotation>horizontal</rotation>
+    <name>Lost Worlds (Arrange, Japan)</name>
+    <setname>lostwrld</setname>
+    <mameversion>0282</mameversion>
+    <year>1988</year>
+    <manufacturer>Capcom</manufacturer>
+    <players>2</players>
+    <rbf>jtcps1-cpsplus</rbf>
+    <joystick>8</joystick>
+    <region>World</region>
+    <rom index="0" zip="lostwrld.zip|forgottn.zip" address="0x30000000">
+        
+        <part>
+            00 04 40 04 40 05 FF FF
+            FF FF FF FF FF FF FF FF
+            FF 00 FF FF FF FF 26 28
+            2A 2C 2E 00 00 30 02 04
+            08 30 0F 40 88 73 FF 00
+            FF FF FF FF FF FF FF FF
+            FF FF FF FF FF FF FF FF
+            FF FF FF FF FF FF FF FF
+        </part>
+        
+        <interleave output="16">
+            <part name="lw_15c.14g" crc="402e2a46" map="01" />
+            <part name="lw_11c.14f" crc="67e42546" map="10" />
+        </interleave>
+        <interleave output="16">
+            <part name="lw_14c.13g" crc="97670f4a" map="01" />
+            <part name="lw_10c.13f" crc="c46479d7" map="10" />
+        </interleave>
+        <part name="lw-07.13e" crc="fd252a26" />
+        
+        <part name="lw_00b.14a" crc="59df2a63" />
+        
+        <part name="lw-03.14c" crc="ce2159e7" />
+        <part name="lw-04.13c" crc="39305536" />
+        
+        <interleave output="64">
+            <part name="lw-01.9d" crc="0318f298" map="00000021" />
+            <part name="lw-08.9f" crc="25a8e43c" map="00002100" />
+            <part name="lw-05.9e" crc="e4552fd7" map="00210000" />
+            <part name="lw-12.9g" crc="8e6a832b" map="21000000" />
+        </interleave>
+        <interleave output="64">
+            <part name="lw-02.12d" crc="43e6c5c8" map="00000021" />
+            <part name="lw-09.12f" crc="899cb4ad" map="00002100" />
+            <part name="lw-06.12e" crc="5b9edffc" map="00210000" />
+            <part name="lw-13.12g" crc="8e058ef5" map="21000000" />
+        </interleave>
+        
+    <part repeat="960">00</part><part name="forgottn_arrange.cpk" zip="/CPS+/forgottn_arrange.zip" />
+    <patch offset="8">41 15 c0 03</patch>
+  </rom>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,fc,ff">
+        <DSWA />
+        <dip name="Demo Sounds" bits="6" ids="Off,On" />
+        <dip name="Flip Screen" bits="7" ids="On,Off" />
+        <DSWB />
+        <dip name="Difficulty" bits="8,10" ids="7,6,5,4,3,2,1,0" />
+        <dip name="Service Mode" bits="14" ids="On,Off" />
+        <dip name="Freeze" bits="15" ids="On,Off" />
+        <DSWC />
+        <dip name="PCB type" ids="88617A,89626A" bits="24" />
+    </switches>
+    <buttons names="Shoot,Rotate left,Rotate right,-,-,-,Start,Coin,Core credits" default="A,B,X,Start,Select,-" count="3" />
+</misterromdescription>

@@ -1,0 +1,53 @@
+# Forgotten Worlds (CPS1 `forgottn`) ARRANGE trigger map -> PC Engine CD-ROM2
+# CD-DA (Japan disc), the internal listening archive
+#
+# THE JOIN IS MACHINE-NAMED AT BOTH ENDS, no ordinal guessing:
+#  * arcade side: 95 commands isolated per-boot (svc_isolate + PIN_CFG -- the
+#    service DIP round-trips through cfg and a Lua field write flips it, so the
+#    batched sweep had 71/94 windows contaminated).  Every sustained command
+#    NCC-named against the reference arcade gamerip (SAME carrier), r 0.16-0.97
+#    with clean margins; in-game anchors: attract=0x01 (r 0.608 vs its own
+#    isolated clip), stage-1 start fires 0x02 (latch + audio agree).
+#  * PCE side: every CD track named by DURATION against the reference PCE rip
+#    (err <= 0.5 s on all 23 named tracks), consistent with the cue table
+#    recovered from the disc driver (forgottn_pce_bgm_cues.tsv).
+#  * the two fail-open jingle groups are CONFIRMED missing from the CD by the
+#    rip itself: its curator titled them "Not on CD 1" / "Not on CD 2".
+#
+# LOOPING: PCE plays BGM with CD_PLAY mode 1 (drive-side infinite whole-track
+# repeat) -> whole-track loops, no crossfade (internal PCE CD loop research).
+# Jingles (opening / round clear / game over) are one-shot.
+# 0x0e is the two-phase last boss: PCE plays tr06 (Bios intro, 22.7 s) then
+# tr07 (main, 180.7 s); the pack track is the CONCATENATION with the loop over
+# the tr07 portion, so the intro plays once and the main theme repeats.
+# Ending: tr21 (voiced, IDENTICAL on both region discs -- measured,
+# 21 of 23 tracks bit-identical, only tr01 warning + tr22 narration differ).
+# User choice over the instrumental tr24 and over tr22, whose English
+# narration was rejected by ear.  The ffight desync caution was weighed and
+# accepted: tr21's narration is not region-gated, so it never mismatches.
+#
+# cmd	verb	suppress	track	label	evidence
+0x01	play	1	tr18	Opening	EAR-CONFIRMED (full A/B gate); NCC 0.181 vs arcade rip + attract anchor 0.608; one-shot
+0x02	play	1	tr09	Round 1	EAR-CONFIRMED (full A/B gate); NCC 0.483; in-game stage-1 anchor (latch 0x02 at start)
+0x03	play	1	tr10	Round 2	EAR-CONFIRMED (full A/B gate); NCC 0.686
+0x04	play	1	tr11	Round 3	EAR-CONFIRMED (full A/B gate); NCC 0.729
+0x05	play	1	tr12	Round 4	EAR-CONFIRMED (full A/B gate); NCC 0.318
+0x06	play	1	tr13	Round 5	EAR-CONFIRMED (full A/B gate); NCC 0.252
+0x07	play	1	tr14	Round 6	EAR-CONFIRMED (full A/B gate); NCC 0.968
+0x08	play	1	tr15	Round 7	EAR-CONFIRMED (full A/B gate); NCC 0.156 (3rd-vs-2nd margin 2.2x; ordinal-consistent)
+0x09	play	1	tr16	Round 8	EAR-CONFIRMED (full A/B gate); NCC 0.590
+0x0a	play	1	tr17	Round 9	EAR-CONFIRMED (full A/B gate); NCC 0.278
+0x0b	play	1	tr03	Mid Boss A	EAR-CONFIRMED (full A/B gate); NCC 0.393
+0x0c	play	1	tr05	Mid Boss B	EAR-CONFIRMED (full A/B gate); NCC 0.385
+0x0d	play	1	tr04	Boss	EAR-CONFIRMED (full A/B gate); NCC 0.734
+0x0e	play	1	tr06+tr07	Last Round Boss (Bios)	EAR-CONFIRMED (full A/B gate); NCC 0.568; concat, loop over tr07
+0x0f	play	1	tr08	Round Clear	EAR-CONFIRMED (full A/B gate); NCC 0.168 short-probe; one-shot 8.7s
+0x10	play	1	tr23	Credits Roll	EAR-CONFIRMED (full A/B gate); NCC 0.312; alias pair with 0x11 (byte-identical arcade audio)
+0x11	play	1	tr23	Credits Roll	EAR-CONFIRMED (full A/B gate); alias of 0x10
+0x12	play	1	tr20	Shoppin'	EAR-CONFIRMED (full A/B gate); NCC 0.232
+0x13	play	1	tr19	Game Over	EAR-CONFIRMED (full A/B gate); NCC 0.500 short-probe; one-shot 8.4s
+0x14	play	1	tr21	Ending	EAR-CONFIRMED (full A/B gate); NCC 0.820 (vs the shared ending music); USER CHOICE tr21 voiced ending, identical on both region discs. tr22 is the region-specific variant (English narration rejected by ear); tr24 is the instrumental alternative
+0x15	none	0	-	arcade jingle "Not on CD 1" - FAIL OPEN	EAR-CONFIRMED short jingle; rip-confirmed absent from CD (NCC 0.316)
+0x16	none	0	-	arcade jingle "Not on CD 2" - FAIL OPEN	EAR-CONFIRMED short jingle; rip-confirmed absent; byte-identical across 0x16-0x1b
+0x3c	none	0	-	garbage audio - FAIL OPEN	EAR garbage, not music (the flat 'sustained' envelope was noise -- same classifier blind spot as SSF2's 0xc0)
+0x42	none	0	-	repeating sound effect - FAIL OPEN	EAR repeating SFX loop, not music

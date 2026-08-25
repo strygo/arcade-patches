@@ -1,0 +1,52 @@
+# Muscle Bomber / Saturday Night Slam Masters (CPS1.5 `slammast`) ARRANGE LOOPS
+#   FM Towns "Muscle Bomber: The Body Explosion" CD-DA, all 29 audio tracks.
+#   A `one_shot` row has loop_start/loop_end = 0 and is stored whole, unlooped.
+#
+# Companion to manifests/mbomber_arrange_trigger_map.tsv.  Samples are in
+# 44100 Hz stereo frame units, indexing cd_full/trNN.wav as extracted (pregap
+# already trimmed).  Playback semantics: play from sample 0, and on reaching
+# loop_end return to loop_start.
+#
+# WHY ALMOST EVERYTHING IS A ONE-SHOT.  Only the nine arena/stage themes loop.
+# Every other cue is a one-shot because the ARCADE's own cue is one: held in
+# the service-mode sound test, the board's title theme plays ~19 s and then
+# falls to silence (RMS 0.5) for the remaining 70 s of a 90 s hold, even
+# though the title screen itself lasts 41-68 s.  The same is true of the short
+# cues (ranking 5.9 s audible against a 6.5 s track).  So a one-shot does not
+# fall short of the board -- it reproduces it.  Storing each track WHOLE also
+# means no cue can outrun its audio regardless of context.
+#
+# The `arcade_window_s` column is the longest the GAME was measured holding
+# that cue, across pure attract, a driven tournament to the ending, and a
+# no-input route.  It is documentation, not a build input.
+
+track	cmd	loop_start_sample	loop_end_sample	loop_len_s	mode	rationale	confidence
+tr15	0x0021	2338560	4670592	52.881	crossfade	pass-2 loop; pass-1 wrap thinned (lvl 0.82). Seam step 1.13 -> crossfade.	medium
+tr16	0x0022	2429952	4854528	54.979	crossfade	pass-2 loop; spectral continuity 0.885 just under the hard-cut bar -> crossfade.	medium
+tr17	0x0023	3189888	6373248	72.185	crossfade	pass-2 loop ESSENTIAL: pass-1 start is dry (lvl 0.120 vs 0.997). Seam step 0.886 -> crossfade.	high
+tr18	0x0024	6016	3175936	71.880	hard_cut	pass-1 loop; cleanest seam in the set (cont 0.903, lvl 0.973, step 0.184) -> hard cut.	high
+tr19	0x0025	2184960	4364544	49.424	crossfade	pass-2 loop ESSENTIAL: pass-1 start is dry (lvl 0.091 vs 1.181). Weakest period fit (r 0.657) -> crossfade.	low
+tr20	0x0026	3025536	6045184	68.473	crossfade	pass-2 loop; largest seam step in the set (1.64) -> crossfade.	medium
+tr21	0x0027	5376	2889088	65.390	hard_cut	pass-1 loop; cont 0.937, lvl 0.980, step 0.172 -> hard cut.	high
+tr22	0x0028	1779840	3553152	40.211	crossfade	pass-2 loop; shortest period (40.2 s). Seam step 0.450 -> crossfade.	medium
+tr23	0x0029	2686336	5366144	60.767	hard_cut	pass-2 loop; cont 0.967, lvl 1.042, step 0.115 -> hard cut.	high
+tr27	0x0039	0	0	6.533	one_shot	CWA OFFICIAL RATINGS cue. ONE-SHOT, no loop: ends in a smooth monotonic 65.8 dB decay to silence over the final ~1.5 s (fade/ringout, not a hard cut) and has no internal repeat (envelope self-similarity peaks at only +0.32, vs 0.79-0.92 on the arena themes). The arcade cue likewise fires once per attract cycle (f4751/9658/14532/19401/24245/29152 are separate cycles) and stops. Whole track stored; loop_end_byte=0, no crossfade bit.	confirmed
+tr02	0x0020	0	0	20.133	one_shot	Title. arcade window 19.0 s vs 20.1 s track. the board's own title cue runs ~19 s then goes SILENT for the rest of the 41-68 s screen (sound-test hold, 90 s: RMS 0.5 from +20 s). A one-shot is therefore faithful, not short.	confirmed
+tr03	0x0034	0	0	40.000	one_shot	Player Select. arcade window 30.5 s vs 40.0 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr04	0x0036	0	0	5.733	one_shot	Vs.. arcade window 4.9 s vs 5.7 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr05	0x002a	0	0	66.960	one_shot	Theme of Zalazof. arcade window 8.9 s vs 67.0 s track. Vs.-screen stinger: 4.9 s then the game's own 4.0 s fade (0xff07/0xff06 arg 0x0111).	confirmed
+tr06	0x002b	0	0	67.040	one_shot	Theme of Colt. arcade window 8.9 s vs 67.0 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr07	0x002e	0	0	67.027	one_shot	Theme of Budo. arcade window 8.9 s vs 67.0 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr08	0x002d	0	0	66.973	one_shot	Theme of Titan. arcade window 8.9 s vs 67.0 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr09	0x002c	0	0	67.200	one_shot	Theme of Stinger. arcade window 8.9 s vs 67.2 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr10	0x002f	0	0	67.000	one_shot	Theme of Haggar. arcade window 8.9 s vs 67.0 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr11	0x0031	0	0	67.000	one_shot	Theme of Sheep. arcade window 8.9 s vs 67.0 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr12	0x0030	0	0	67.000	one_shot	Theme of Gomes. arcade window 8.9 s vs 67.0 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr13	0x0032	0	0	66.960	one_shot	Theme of Kimala. arcade window 8.9 s vs 67.0 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr14	0x0033	0	0	66.973	one_shot	Theme of Astro. arcade window 8.9 s vs 67.0 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr24	0x003c	0	0	4.600	one_shot	Victory or Defeat. arcade window 2.8 s vs 4.6 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr25	0x003a	0	0	56.533	one_shot	Continue. arcade window 18.6 s vs 56.5 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr26	0x003b	0	0	5.067	one_shot	Game Over. arcade window 4.8 s vs 5.1 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr28	0x003e	0	0	56.933	one_shot	Ending (1st Time). arcade window 28.2 s vs 56.9 s track. One-shot: the board's own cue ends on its own; whole track stored.	confirmed
+tr29	0x003f	0	0	85.600	one_shot	Ending (2nd Time). arcade window - s vs 85.6 s track. not reached in a driven run; the track is 85.6 s and the cue is an ending, so a one-shot cannot fall short of anything observed.	confirmed
+tr30	0x001b	0	0	114.960	one_shot	Staff Roll. arcade window - s vs 115.0 s track. not reached in a driven run; 115.0 s track.	confirmed

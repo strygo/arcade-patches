@@ -1,0 +1,134 @@
+# SSF2T (arcade `ssf2t`) ARRANGE trigger map: standalone arcade stage command
+#   -> HSF2 AE ARRANGE-bank ADX entry (the console-arranged SF2 soundtrack).
+#
+# SOURCE IDENTITY (internal research notes): the HSF2 AE arrange
+#   bank IS the SSF2/SSF2T arrangement.  This is a RE-KEY of the HSF2 arrange
+#   ADX (manifests/hsf2_bgm_command_map.tsv, set=ARRANGE) to the STANDALONE
+#   ssf2t arcade QSound stage commands.  ADX audio + Capcom header loop points
+#   reused byte-exact.
+#
+# GROUND TRUTH (not chroma):
+#   * Standalone `ssf2t` QSound sound-test sweep (latch-poke harness; trace/
+#     sweep.lua) -> per-command clips in the internal listening archive, each
+#     cross-correlated (log-RMS envelope NCC) against the LABELLED HSF2 CPS2-bank
+#     recordings (entry 71=Ken .. 86=Dee-Jay = same QSound masters ssf2t emits):
+#     cmd 0x01..0x10 identify as the 16 SF2 characters in EXACT HSF2 order,
+#     NCC 0.79-0.98.  ssf2 and ssf2t give byte-for-byte-identical id results
+#     (same 1.04 driver).  Commands 0x11..0x40 are noise-grade vs every stage
+#     ref (menu/vs/select/continue/ending music -> pass through to QSound);
+#     0x41..0x80 is the SFX/voice block.
+#   * IN-GAME ANCHOR: drove `ssf2t` into a real match (Ryu vs Zangief on
+#     Zangief's stage, on-screen snapshot); kind=0 stage BGM cmd 0x06 issued at
+#     stage start — matching the sound-test id 0x06=Zangief.  Confirms
+#     sound-test command == in-game command.
+#
+# GOUKI / AKUMA (flagged): the HSF2 arrange bank has a "STAGE GOUKI" theme
+#   (arrange entry 67, cmd 0xd5 in HSF2's unified numbering; CPS2-bank twin =
+#   entry 137).  NO standalone-ssf2t command in the swept range 0x01..0x80 plays
+#   a theme matching that recording (best NCC vs the Gouki ref anywhere = 0.36,
+#   noise-grade).  Consistent with the known history that original SSF2T has no
+#   dedicated Akuma stage BGM (HSF2 AE ADDED the arranged Gouki theme).  Akuma is
+#   a hidden boss who ambushes on M. Bison's FINAL stage, so the arcade emits
+#   M. Bison's stage command 0x09 during the Akuma fight -> the pack plays
+#   M. Bison's arrange (e9) there, matching the arcade (human-confirmed by
+#   gameplay video, 2026-07).  Already covered by row 0x09; no cmd->entry pair is
+#   invented for Gouki, and no Akuma-specific command exists to add.
+#
+# JOIN: cmd 0xNN -> HSF2 arrange entry NN for the 16 SF2 stages (Ken-first).
+# Consumed by pack/build_ssf2_arrange.py (cols: cmd, arrange_entry, character,
+#   confidence, note).
+#
+cmd	arrange_entry	character	confidence	note
+0x01	1	Ken	high	NCC 0.94
+0x02	2	Ryu	high	NCC 0.92
+0x03	3	E.Honda	high	NCC 0.98
+0x04	4	Chun-Li	high	NCC 0.96
+0x05	5	Blanka	high	NCC 0.96
+0x06	6	Zangief	high	NCC 0.98 (in-game anchor: Zangief stage)
+0x07	7	Guile	high	NCC 0.97
+0x08	8	Dhalsim	high	NCC 0.96
+0x09	9	M.Bison	high	NCC 0.98
+0x0a	10	Balrog	high	NCC 0.92
+0x0b	11	Sagat	high	NCC 0.97
+0x0c	12	Vega	high	NCC 0.94
+0x0d	13	Fei-Long	high	NCC 0.97
+0x0e	14	Cammy	high	NCC 0.93
+0x0f	15	T.Hawk	high	NCC 0.79
+0x10	16	Dee-Jay	high	NCC 0.93
+# ---------------------------------------------------------------------------
+# Extends coverage to the hurry-ups, endings and UI music (0x11-0x3f).
+#
+# The standalone driver's command space is HSF2's unified layout VERBATIM:
+# arrange_entry == cmd for the whole range (0x11=17 STAGE KEN(2) ... 0x3f=63
+# TOURNAMENT).  Identified per-clip with tools/align_ncc.py against the
+# album's CPS2 bank (the same QSound masters this board plays); control on
+# the 16 stages: 16/16.  45 of 48 picks land exactly on cmd+70, and the
+# remaining floors are carried by that bijection -- see per-row notes.
+# 0x40 exists in the sound test (1 s jingle) but the album has no row for
+# it; unmapped, fails open to QSound.
+#
+# SSF2T NOTE 1: the 0x11-0x40 clips in ssf2t_arcade_id/ were
+# COPIES of the ssf2 files (byte-identical), not captures; this extension is
+# from a genuine re-sweep (scratchpad ssf2t_resweep, MAME 0.288 ssf2t).
+# NOTE 2: at 0x35/0x36/0x38/0x39/0x3a/0x3f Turbo plays 1-4 s STINGERS where
+# SSF2 plays full tracks; mapped to the full arranged tracks anyway -- the
+# next PLAY command replaces them, so the screen length rules, not the row.
+# cmd	arrange_entry	character	confidence	note
+0x11	17	STAGE KEN(2)	high	NCC r=0.478 (2nd 0.051)
+0x12	18	STAGE RYU(2)	high	NCC r=0.594 (2nd 0.125)
+0x13	19	STAGE E.HONDA(2)	high	NCC r=0.502 (2nd 0.060)
+0x14	20	STAGE CHUN LI(2)	high	NCC r=0.354 (2nd 0.098)
+0x15	21	STAGE BLANKA(2)	high	NCC r=0.650 (2nd 0.082)
+0x16	22	STAGE ZANGIEF(2)	high	NCC r=0.585 (2nd 0.071)
+0x17	23	STAGE GUILE(2)	high	NCC r=0.567 (2nd 0.135)
+0x18	24	STAGE DHALSIM(2)	high	NCC r=0.410 (2nd 0.089)
+0x19	25	STAGE M.BISON(2)	high	NCC r=0.194 (2nd 0.063)
+0x1a	26	STAGE BALROG(2)	high	NCC r=0.452 (2nd 0.080)
+0x1b	27	STAGE SAGAT(2)	high	NCC r=0.606 (2nd 0.066)
+0x1c	28	STAGE VEGA(2)	high	NCC r=0.477 (2nd 0.140)
+0x1d	29	STAGE FEI LONG(2)	high	NCC r=0.458 (2nd 0.099)
+0x1e	30	STAGE CAMMY(2)	high	NCC r=0.359 (2nd 0.105)
+0x1f	31	STAGE T.HAWK(2)	high	EAR-CONFIRMED; layout-carried; matcher r=0.121 (2nd 0.050); ssf2/ssf2t audio identical here (cross-game r=0.959) so both rows are one question
+0x20	32	STAGE DEE JAY(2)	high	NCC r=0.453 (2nd 0.146)
+0x21	33	ENDING KEN(2)	high	matcher floors (r=0.116) but ssf2/ssf2t play IDENTICAL audio here (cross-game r=0.949); assigned by the 45/48 layout bijection
+0x22	34	ENDING KEN	high	NCC r=0.318 (2nd 0.056)
+0x23	35	ENDING RYU	high	NCC r=0.277 (2nd 0.048)
+0x24	36	ENDING E.HONDA	high	NCC r=0.364 (2nd 0.061)
+0x25	37	ENDING CHUN LI	high	NCC r=0.185 (2nd 0.072)
+0x26	38	ENDING CHUN LI(2)	high	NCC r=0.305 (2nd 0.054)
+0x27	39	ENDING BLANKA	high	NCC r=0.368 (2nd 0.055)
+0x28	40	ENDING ZANGIEF	high	NCC r=0.242 (2nd 0.066)
+0x29	41	ENDING GUILE	high	EAR-CONFIRMED; layout-carried; matcher r=0.093 (2nd 0.064); ssf2/ssf2t audio identical here (cross-game r=0.986) so both rows are one question
+0x2a	42	ENDING DHALSIM	high	NCC r=0.407 (2nd 0.062)
+0x2b	43	ENDING M.BISON	high	NCC r=0.329 (2nd 0.051)
+0x2c	44	ENDING BALROG	high	EAR-CONFIRMED; layout-carried; matcher r=0.099 (2nd 0.046); ssf2/ssf2t audio identical here (cross-game r=0.978) so both rows are one question
+0x2d	45	ENDING SAGAT	high	NCC r=0.375 (2nd 0.059)
+0x2e	46	ENDING VEGA	high	matcher floors (r=0.083) but ssf2/ssf2t play IDENTICAL audio here (cross-game r=0.910); assigned by the 45/48 layout bijection
+0x2f	47	ENDING FEI LONG	high	NCC r=0.198 (2nd 0.046)
+0x30	48	ENDING CAMMY	high	NCC r=0.327 (2nd 0.064)
+0x31	49	ENDING T.HAWK	high	matcher floors (r=0.066) but ssf2/ssf2t play IDENTICAL audio here (cross-game r=0.854); assigned by the 45/48 layout bijection
+0x32	50	ENDING DEE JAY	high	NCC r=0.426 (2nd 0.070)
+0x33	51	OPENING DEMO	high	NCC r=0.449 (2nd 0.066)
+0x34	52	PLAYER SELECT	high	NCC r=0.459 (2nd 0.090)
+0x35	53	VS.	high	EAR-CONFIRMED; Turbo stinger (1-4 s in-game); assigned by layout position alone (pick was noise: 088_STAGE_RYU_2 r=0.048)
+0x36	54	STAGE-END	high	EAR-CONFIRMED; Turbo stinger (1-4 s in-game); assigned by layout position alone (pick was noise: 072_STAGE_RYU r=0.048)
+0x37	55	CONTINUE	high	NCC r=0.468 (2nd 0.114)
+0x38	56	HERE COMES ...	high	EAR-CONFIRMED; Turbo stinger (1-4 s in-game); assigned by layout position alone (pick was noise: 107_ENDING_CHUN_LI r=0.057)
+0x39	57	GAME OVER	high	EAR-CONFIRMED; Turbo stinger (1-4 s in-game); assigned by layout position alone (pick was noise: 098_STAGE_VEGA_2 r=0.056)
+0x3a	58	RANKING	high	EAR-CONFIRMED; Turbo stinger (1-4 s in-game); assigned by layout position alone (pick was noise: 082_STAGE_VEGA r=0.046)
+0x3b	59	BONUS STAGE	high	NCC r=0.322 (2nd 0.063)
+0x3c	60	STAFF ROLL	high	r=0.17 'tie' is STAFF ROLL vs STAFF ROLL(X) -- the SAME afs entry 130 decoded under two manifest names; vs the true runner-up the margin is 3x
+0x3d	61	(unlisted; dead in-game)	high	NCC r=0.361 (2nd 0.072)
+0x3e	62	ENDING CHUN LI(3)	high	NCC r=0.283 (2nd 0.063)
+0x3f	63	TOURNAMENT	high	EAR-CONFIRMED; Turbo stinger (1-4 s in-game); assigned by layout position alone (pick was noise: 131_unlisted__dead_in_game r=0.057)
+# High range (0x41-0xff sweep): the unified layout holds all the
+# way up -- every identified command equals its HSF2 counterpart.  Unresolved:
+# 0xc0 (both games) is STATIC NOISE (user ear), not music. 0xd2
+# (Turbo) is the ROM's 'Unused' track per the vgmrips SSF2 CPS2 listing --
+# music the game never plays, so the album never arranged it.  Both stay
+# unmapped and fail open; the maps are complete for the sound-test space.
+0xc1	64	CONGRATULATIONS!	high	NCC r=0.189 (2nd 0.050, 3.8x); identical audio in both games
+0xd3	65	PLAYER SELECT(X)	high	NCC r=0.484 (2nd 0.111) -- Turbo's own select theme
+0xd4	66	OPENING DEMO(X)	high	NCC r=0.362 (2nd 0.073) -- Turbo's own opening
+0xd5	67	STAGE GOUKI	high	NCC r=0.577 (2nd 0.094)
+0xd6	68	STAGE GOUKI(2)	high	NCC r=0.604 (2nd 0.077)

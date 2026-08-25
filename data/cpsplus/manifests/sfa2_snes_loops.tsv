@@ -1,0 +1,28 @@
+# SNES SFZ2 (Y_DATA e440-459) loop points for the sfa2_snes pack.
+# 19/20 entries (e440-e458) carry Capcom-authored ADX HEADER loops
+# (loop_flag=1) -> used byte-exact, like build_zero1's in-game path.
+# e459 (Australia) has NO header loop -> best-effort whole-track loop.
+# *** EVERY loop point still needs HUMAN EAR VERIFICATION (unconfirmed). ***
+# loop_*_sample are the ADX-header values; the builder uses the header's
+# frame-aligned BYTE offsets as the authoritative wrap points.
+entry	loop_start_sample	loop_end_sample	source	char	note
+440	87392	2818094	adx_header	Opening	Capcom ADX-header loop (game's own); ear-verify seam
+441	128	3097060	adx_header	Ryu	Capcom ADX-header loop (game's own); ear-verify seam
+442	96	2516457	adx_header	Ken	Capcom ADX-header loop (game's own); ear-verify seam
+443	160	2684854	adx_header	Gouki	Capcom ADX-header loop (game's own); ear-verify seam
+444	96	2696759	adx_header	Nash	Capcom ADX-header loop (game's own); ear-verify seam
+445	134208	3137697	adx_header	Chun-Li	Capcom ADX-header loop (game's own); ear-verify seam
+446	57376	3233501	adx_header	Adon	Capcom ADX-header loop (game's own); ear-verify seam
+447	544800	3812606	adx_header	Sodom	Capcom ADX-header loop (game's own); ear-verify seam
+448	372000	2469227	adx_header	Guy	Capcom ADX-header loop (game's own); ear-verify seam
+449	128	2154036	adx_header	Birdie	Capcom ADX-header loop (game's own); ear-verify seam
+450	128	2807556	adx_header	Rose	Capcom ADX-header loop (game's own); ear-verify seam
+451	26464	4186227	adx_header	Vega	Capcom ADX-header loop (game's own); ear-verify seam
+452	96	4194723	adx_header	Sagat	Capcom ADX-header loop (game's own); ear-verify seam
+453	10848	2370179	adx_header	Dan	Capcom ADX-header loop (game's own); ear-verify seam
+454	347648	3718094	adx_header	Sakura	Capcom ADX-header loop (game's own); ear-verify seam
+455	11968	2666177	adx_header	Rolento	Capcom ADX-header loop (game's own); ear-verify seam
+456	784928	4660999	adx_header	Dhalsim	Capcom ADX-header loop (game's own); ear-verify seam
+457	160	2453764	adx_header	Zangief	Capcom ADX-header loop (game's own); ear-verify seam
+458	737312	3592259	adx_header	Gen	Capcom ADX-header loop (game's own); ear-verify seam
+459	0	0	whole_track	Australia	no header loop; best-effort WHOLE-TRACK loop; no tail fade (tail/mid~0.96); NEEDS EAR VERIFICATION

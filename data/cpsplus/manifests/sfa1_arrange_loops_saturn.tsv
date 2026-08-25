@@ -1,0 +1,29 @@
+# SFA1 arranged stage loops -- SATURN CD-DA coordinates (44.1 kHz).
+#
+# DERIVED from the ear-adjudicated 48 kHz Anthology coordinates
+# in sfa1_arrange_loops.tsv (which remains the authoring provenance).  The
+# Saturn arranged stage tracks are the SAME RECORDING as the Anthology
+# arrange bank (waveform r >= +0.999 on all 13); per-track alignment
+# measured at -662..-673 samples @44.1k (Saturn leads by ~15 ms, uniform)
+# and level ratio 1.02-1.03 (trigger gain unchanged).  Transform per track:
+#   ls44 = round(ls48 * 44100/48000) + offset, floored to the 32-sample ADX
+#   frame grid (max grid loss < 0.8 ms).
+# Seam equivalence vs the shipped 48k pack VERIFIED: each seam's
+# pre- and post-halves render-match the shipped pack at r >= +0.979 (most
+# +0.99x) with joint shift <= 0.98 ms -- sub-audible, so the original ear
+# approvals carry over without a re-listen.
+#
+# char	saturn_track	anthology_entry	loop_start_sample	loop_end_sample	method	quality
+ryu	tr23	e141	87520	2635104	natural	0.894
+ken	tr24	e142	109440	2958752	natural	0.957
+gouki	tr25	e143	65472	2485728	crossfade	0.749
+nash	tr26	e144	3442304	6072096	crossfade	0.620
+chunli	tr27	e145	3152480	5351296	natural	0.759
+adon	tr28	e146	348608	3083328	natural	0.704
+sodom	tr29	e147	749024	3627872	natural	0.868
+guy	tr30	e148	925408	4870176	natural	0.622
+birdie	tr31	e149	462272	5401472	crossfade	0.853
+rose	tr32	e150	1709056	3549216	crossfade	0.776
+vega	tr33	e151	3196576	5596896	natural	0.614
+sagat	tr34	e152	153664	4032896	natural	0.626
+dan	tr35	e153	219872	4084352	natural	0.865

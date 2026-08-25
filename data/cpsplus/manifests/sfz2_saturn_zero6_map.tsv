@@ -1,0 +1,64 @@
+# Saturn SFZ2/SFZ2-dash MUS song <-> Anthology zero6 Y_DATA ADX entry identity map (followup_a)
+# Rule: adx_entry = 169 + saturn_song_id (holds for ALL 60 songs). zero6_cmd = arcade sound command that starts this entry (comp2 type-1 table, US +0x17fa0); NOT equal to saturn_song_id (permuted).
+# saturn times: file sizes / 128000 B/s (s16be stereo 32000Hz blk4096). adx times: v4 header loop points / 48000.
+saturn_song	source_disc	adx_entry	zero6_cmd	sat_intro_s	sat_loop_s	adx_intro_s	adx_loop_s	adx_loopflag	match_method	wave_ncc	confidence	notes
+01	sfz2	170	0x01	3.648	57.152	3.648	57.148	1	duration+audio	0.997	high	
+02	sfz2	171	0x02	3.328	61.120	3.332	61.114	1	duration	-	high	
+03	sfz2	172	0x0b	5.056	55.168	5.056	55.163	1	duration	-	high	
+04	sfz2	173	0x09	6.784	57.728	6.783	57.725	1	duration	-	high	
+05	sfz2	174	0x03	1.856	59.456	1.858	59.447	1	duration	-	high	
+06	sfz2	175	0x06	2.752	64.960	2.753	64.959	1	duration	-	high	
+07	sfz2	176	0x05	1.728	65.536	1.732	65.531	1	duration	-	high	
+08	sfz2	177	0x08	15.552	69.696	15.552	69.695	1	duration+audio	0.953	high	
+09	sfz2	178	0x07	8.384	46.720	8.354	46.750	1	duration	-	high	
+0A	sfz2	179	0x0a	0.704	43.712	0.705	43.711	1	duration	-	high	
+0B	sfz2	180	0x0c	0.064	59.328	0.070	59.322	1	duration+audio	0.971	high(identity)/by-sequence(pairing)	S0B*/S14* md5-identical (same recording twice); adx180~adx189 (xcorr 0.971 both ways); pairing 0B->180,14->189 by sequence only
+0C	sfz2	181	0x04	1.984	89.728	1.985	89.728	1	duration+audio	0.945	high	
+0D	sfz2	182	0x0d	3.136	87.936	3.137	87.935	1	duration	-	high	
+0E	sfz2	183	0x12	3.840	51.584	3.841	51.582	1	duration	-	high	
+0F	sfz2	184	0x11	7.680	74.304	7.692	74.292	1	duration	-	high	
+10	sfz2	185	0x0e	2.496	58.880	2.495	58.882	1	duration	-	high	
+11	sfz2	186	0x0f	15.424	85.440	15.436	85.426	1	duration+audio	0.994	high	
+12	sfz2	187	0x10	4.608	51.968	4.614	51.949	1	duration	-	high	
+13	sfz2	188	0x35	13.888	60.864	13.883	60.866	1	duration	-	high	
+14	sfz2	189	-	0.064	59.328	0.069	59.323	1	duration	-	high(identity)/by-sequence(pairing)	S0B*/S14* md5-identical (same recording twice); adx180~adx189 (xcorr 0.971 both ways); pairing 0B->180,14->189 by sequence only
+15	sfz2	190	0x13	0.000	51.008	0.000	48.426	0	audio	0.990	high	total-duration delta = Saturn trailing silence trimmed in ADX encode; adx190 loop-less minimal header; addendum(c) matched adx190 to the ARCADE track 0.74 -> sat15 is likely an arcade-render slot on both carriers
+16	sfz2	191	0x14	14.912	14.016	14.914	14.009	1	duration	-	high	
+17	sfz2	192	0x15	0.000	7.040	0.000	5.989	0	audio	0.995	high	total-duration delta = Saturn trailing silence trimmed in ADX encode
+18	sfz2	193	0x16	0.000	5.952	0.000	5.944	0	duration	-	high	one-shot on both carriers (0.BIN 00/00; ADX loop-less)
+19	sfz2	194	0x18	0.000	3.520	0.000	3.446	0	duration	-	high	one-shot on both carriers (0.BIN 00/00; ADX loop-less)
+1A	sfz2	195	0x17	2.048	9.664	2.014	9.663	1	duration	-	high	
+1B	sfz2	196	0x19	0.000	4.352	0.000	4.271	0	duration	-	high	one-shot on both carriers (0.BIN 00/00; ADX loop-less)
+1C	sfz2	197	0x1a	0.000	5.504	0.000	5.410	0	duration	-	high	one-shot on both carriers (0.BIN 00/00; ADX loop-less)
+1D	sfz2	198	0x1b	0.000	14.080	0.000	13.997	0	duration	-	high	one-shot on both carriers (0.BIN 00/00; ADX loop-less)
+1E	sfz2	199	0x34	0.704	3.456	0.653	3.451	1	duration	-	high	
+1F	sfz2	200	0x3a	1.280	2.752	1.248	2.750	1	duration	-	high	
+20	sfz2	201	0x1c	0.000	30.016	0.000	27.392	0	audio	0.982	high	total-duration delta = Saturn trailing silence trimmed in ADX encode
+21	sfz2	202	0x1d	0.768	24.000	0.749	24.003	1	duration	-	high	
+22	sfz2	203	0x1e	63.232	14.848	63.185	14.848	1	duration	-	high	
+23	sfz2	204	0x28	2.944	15.104	2.898	15.104	1	duration	-	high	
+24	sfz2	205	0x37	3.072	41.408	3.020	41.406	1	duration	-	high	
+25	sfz2	206	0x26	0.256	8.000	0.251	8.000	1	duration	-	high	
+26	sfz2	207	0x36	2.816	12.864	2.805	12.863	1	duration	-	high	
+27	sfz2	208	0x1f	43.456	10.752	43.451	10.752	1	duration	-	high	
+28	sfz2	209	0x22	4.352	3.840	4.355	3.833	1	duration	-	high	
+29	sfz2	210	0x23	0.000	60.032	0.000	59.963	0	duration+audio	0.991	high	one-shot on both carriers (0.BIN 00/00; ADX loop-less)
+2A	sfz2	211	0x21	35.136	35.136	35.109	35.134	1	duration	-	high	
+2B	sfz2	212	0x25	0.000	50.880	0.000	50.823	0	duration	-	high	one-shot on both carriers (0.BIN 00/00; ADX loop-less)
+2C	sfz2	213	0x24	18.688	35.136	18.633	35.139	1	duration	-	high	
+2D	sfz2	214	0x27	0.000	60.032	0.000	56.048	0	audio	0.998	high	total-duration delta = Saturn trailing silence trimmed in ADX encode
+2E	sfz2	215	0x29	0.000	33.344	0.003	33.308	1	duration	-	high	
+2F	sfz2	216	0x20	0.000	60.032	0.000	54.272	0	audio	0.993	high	total-duration delta = Saturn trailing silence trimmed in ADX encode
+30	sfz2	217	0x2a	0.000	74.048	0.000	73.999	0	duration	-	high	one-shot on both carriers (0.BIN 00/00; ADX loop-less)
+31	sfz2	218	0x30	26.304	44.672	26.247	44.672	1	duration	-	high	
+32	sfz2	219	0x31	0.704	7.040	0.663	7.032	1	duration	-	high	
+33	sfz2	220	0x2f	15.296	13.248	15.293	13.247	1	duration	-	high	
+34	sfz2	221	0x2b	1.664	35.136	1.642	35.135	1	duration	-	high	
+35	sfz2	222	0x2c	0.256	8.064	0.233	8.056	1	duration	-	high	
+36	sfz2	223	0x38	0.512	16.128	0.490	16.117	1	duration	-	high	
+37	sfz2	224	0x2d	3.136	12.480	3.109	12.479	1	duration	-	high	
+38	sfz2	225	0x2e	0.000	30.016	0.000	29.915	0	duration	-	high	one-shot on both carriers (0.BIN 00/00; ADX loop-less)
+39	sfz2	226	0x32	75.648	8.384	75.593	8.384	1	duration	-	high	
+3A	sfz2	227	0x33	23.232	108.544	23.034	108.537	1	duration+audio	0.964	high	ADX loop_start 0.198s earlier than Saturn file boundary; loop length matches to 7ms
+3B	sfz2	228	0x39	13.376	42.880	13.360	42.880	1	duration	-	high	
+3C	sfz2_dash	229	0x3d	4.480	70.976	4.453	70.976	1	duration+audio	0.995	high	Cammy song, SFZ2-dash disc only (S3C0/S3C1); zero6=A2 Gold so it carries it

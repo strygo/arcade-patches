@@ -1,0 +1,54 @@
+# SFA1 FULL-COVERAGE map -- arcade command -> Saturn SFA1 CD-DA arranged
+# track, for the non-stage cues. STATUS: EAR-CONFIRMED rev 4 
+# -- all pairs ear-approved; the credit rolls are SWAPPED vs the naive
+# alignment (arcade Credit Roll 1 = Saturn Staff Roll B track tr50).
+#
+# SOURCES.  Audio: the 1996 Saturn port's arranged CD-DA (the listening gate
+# rejected the Anthology in-game bank; the Anthology ARRANGE bank the
+# shipped stages use is the SAME RECORDING as the Saturn arranged stages,
+# r=+0.999 -- one master family).  Command grounding: every row matched by
+# rate-corrected waveform NCC against the reference CPS2 gamerip (which is
+# 48 kHz audio mislabelled 44.1 kHz -- stretch factor 48000/44100=1.0885;
+# uncorrected it matches NOTHING, measured r 0.06 on known-identical Ryu).
+# Board renders via service-mode injection (MAME sfa; attract-mode
+# injection is swamped by the 68K's own latch writes).  The board's own
+# SOUND & VOICE test confirms code == raw latch command.
+#
+# STRUCTURE.  Endings are TWELVE consecutive commands 0x15-0x20 in CPS2
+# character order, then CREDIT ROLL 1 at 0x21; Dan (the add-on character)
+# has his ending OUTSIDE the block at 0x33, mirroring his stage at 0x32.
+# 0x25 is a DUPLICATE command for Sodom's ending (audio == 0x19, r=0.989).
+# Credit Roll 1/2 (arcade) == Staff Roll A/B (Saturn) ear-adjudicated.
+# Saturn disc layout: tr02-09 utilities, tr10-22 "(arcade)" stage renders
+# (render-excluded), tr23-35 arranged stages (shipped audio), tr36-48
+# arranged endings (arrange char order), tr49/50 staff rolls.
+#
+# cmd	saturn_track	role	character	evidence	status
+0x0d	tr02	opening_demo	-	album_ncc_0.81	ear_confirmed
+0x0e	tr03	select	-	album_ncc_0.67	ear_confirmed
+0x0f	tr04	vs_screen	-	album_ncc_0.46	ear_confirmed
+0x10	tr05	victory_stage_end	-	album_ncc_0.68	ear_confirmed
+0x11	tr06	continue	-	album_ncc_0.65	ear_confirmed
+0x12	-	new_challenger	-	album_ncc_0.70; ear-verified; no Saturn counterpart	fail_open
+0x13	tr07	game_over	-	album_ncc_0.39	ear_confirmed
+0x14	tr08	ranking_1	-	album_ncc(close pair w/0x24)	ear_confirmed
+0x24	tr09	ranking_2	-	album_ncc_0.48	ear_confirmed
+0x22	-	qsound_logo_1	-	album_ncc_0.69; boot logo	fail_open
+0x23	-	qsound_logo_2	-	album_ncc_0.61; boot logo	fail_open
+0x34	-	dramatic_battle	-	album_ncc(Itoshisa...); no Saturn arranged counterpart	fail_open
+0x15	tr36	ending	ryu	album_ncc_0.60+seqchroma	ear_confirmed
+0x16	tr37	ending	ken	album_ncc_0.62+seqchroma	ear_confirmed
+0x17	tr40	ending	chunli	album_ncc_0.62@18s (0x18 excluded 0.14)	ear_confirmed
+0x18	tr47	ending	sagat	album_ncc_0.42@18s (0x17 excluded 0.09)	ear_confirmed
+0x19	tr42	ending	sodom	album_ncc_0.82	ear_confirmed
+0x25	tr42	ending_dup	sodom	audio==0x19 (r=0.989)	ear_confirmed
+0x1a	tr41	ending	adon	album_ncc_0.62	ear_confirmed
+0x1b	tr44	ending	birdie	album_ncc_0.93	ear_confirmed
+0x1c	tr43	ending	guy	album_ncc_0.65	ear_confirmed
+0x1d	tr39	ending	nash	album_ncc_0.52	ear_confirmed
+0x1e	tr45	ending	rose	album_ncc_0.67	ear_confirmed
+0x1f	tr38	ending	gouki	album_ncc_0.31(best)	ear_confirmed
+0x20	tr46	ending	vega	album_ncc_0.55	ear_confirmed
+0x33	tr48	ending	dan	album_ncc_0.81 (NOT 0x21)	ear_confirmed
+0x21	tr50	credit_roll_1	-	album_ncc + ear-verified: Saturn A/B labels are swapped vs arcade 1/2	ear_confirmed
+0x31	tr49	credit_roll_2	-	album_ncc + ear-verified: swapped	ear_confirmed

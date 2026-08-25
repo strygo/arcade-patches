@@ -1,0 +1,245 @@
+# Final Fight (CPS1 `ffight`) ARRANGE trigger map -> Final Fight CD (USA) CD-DA.
+# CD side: SETTLED and user ear-confirmed (internal campaign notes).
+# Arcade side: FULLY ENUMERATED 127 commands (0x01-0x7f), one MAME
+# boot each, 0 contaminated windows: 21 sustained music, 84 short, 22 silent.
+# Six commands read as sustained but are NOT in this map.  EAR-RESOLVED
+# only two are music:
+#   0x1a  crowd cheering (looping SFX)      not music -- fail open
+#   0x7a  crowd cheering (looping SFX)      not music -- fail open
+#   0x31  static                            not music -- fail open
+#   0x37  static                            not music -- fail open
+#   0x42  A SONG (listener: "I think the subway")  no CD counterpart -- fails open
+#   0x44  A SONG (listener: reads as Round 3 / West Side) -- fails open
+# TESTED AND REJECTED for 0x44: the West Side is the only area with a single
+# mapped cue, and tr06 (its track) had been assigned over tr22 "Unused 1" by
+# BGM-table membership alone -- the two are 194.3 s vs 194.0 s, a coin-flip
+# tie.  The obvious hypothesis was that tr22 is a second West Side track that
+# looked unused only because 0x44 had never been enumerated.  User ear
+# tr06/tr22 match neither arcade cue that way -- they do not
+# match.  tr22 stays unused, 0x44 stays arcade-only.
+# 0x42 is NOT either mapped subway cue (vs 0x34 r=0.024, vs 0x43 r=0.053) and
+# 0x44 is distinct from every mapped stage theme (best 0.152): both are third
+# pieces the Sega CD arrangement never covered.  The user's recollection that
+# the four unused CD tracks (tr19-tr22) match nothing in the arcade agrees with
+# the measurements, so there is nothing to map them to.  Both correctly play
+# the arcade FM original, which is what ships today -- no pack change.
+# Unmapped rows fail open to the arcade original,
+#   which is an acceptable outcome; a GUESSED row is not, so none are guessed here.
+#
+# EVIDENCE: trace = observed on the 68K sound-command latch (proven harness
+#   scripts/run_latch_trace.py, dialect cps1); label = arcade cue name <-> CD cue name.
+#
+# === OPENING SEQUENCE CONSTRUCTION ===
+# The three opening cues are not "sequence start" plus two
+# mid-sequence silences -- they are three DIFFERENT sounds, and only one of them
+# is music:
+#   0x35 = the phone RINGING     (a sound effect, no music content)
+#   0x52 = the opening SONG      (the only music cue)
+#   0x36 = the phone being ANSWERED, the click; it also stops the ring
+# Ear-confirmed by the user across four disc variants, and confirmed by the cue
+# ORDER differing per region (US rings first, Japan starts the song first) --
+# which no single-sequence reading survives.
+#
+# So the pack gates exactly ONE cue -- the song -- and leaves the other two
+# alone.  Written against the US cue order; apply_region() moves only the PLAY
+# onto whichever cue Japan issues first, never the suppress bits:
+#   0x35 -> VERB_PLAY(1) opening, suppress=0  (US enters here; ring still rings)
+#   0x52 -> VERB_NONE(0),         suppress=1  (the board's song, gated)
+#   0x36 -> VERB_NONE(0),         suppress=0  (board plays the click, stops the ring)
+# suppress is per CUE ROLE, not per row position: gate 0x52 in both regions,
+# never gate 0x35 or 0x36.  In Japan the PLAY lands on 0x52, so there the play
+# row is also the gated row -- that is correct, it is the song cue.
+# format.py supports this: VERB_NONE = 0 and `suppress` is an independent bit, and
+# so is the reverse -- a PLAY row with suppress=0 streams our track WITHOUT gating
+# the board (cpsplus_cps1_tap.v raises evt on cls_verb != 0 regardless of cls_sup).
+#
+# The previous build gated all three, which silenced the ring and the click.  It
+# also forced the play onto 0x35 (the ring) -- 6.2 s before the song cue -- and
+# then LOOPED the opening track to cover the gap that created, which is what made
+# the US opening overrun its title screen.  See REGIONS in build_ffight.py.
+#
+# *** MEASURED TIMING - this decided the variant choice ***
+# Attract story block: f1602 (0x35, 26.9s) .. f5294 (0xf0, 88.8s) = **61.9 s**,
+#   measured identically in two independent runs.
+# COIN-UP path: there is NO story block at all - credit(0x5f) -> 0x55 -> 0x50 ->
+#   0x28 (Round 1) in ~9 s. Verified by snapshot (real gameplay, live HUD).
+# => NO 136 s arcade window exists ANYWHERE. tr23 (2:16) would truncate at ~45%.
+#   The mismatch is structural: the Sega CD ADDED longer animated cutscenes with
+#   dialogue, which is why tr23/tr24 are 2:16 / 1:53.
+# DECISION (user, on this evidence): use the NO-DIALOGUE cuts -> Opening = tr25
+#   (0:48), Ending = tr26 (0:38). tr23 / tr24 are the ALTERNATES - still used,
+#   cutscene-driven tracks, just not what this pack triggers.
+#
+# US tr24 is NOT used for the ending, though it is a longer candidate
+# (115 s vs tr26's 38.7 s, which the pack loops ~3x): **US tr24 carries
+# English speech**.  Narrated
+# audio is wanted for the SEPARATE an internal backport project cutscene port, NOT for
+# this arrangement.  tr25/tr26 stand; no pack change.
+#
+# TWO AUTOMATED NARRATION DETECTORS FAILED HERE -- recorded so neither is
+# trusted again on this material.  A mid/side centre-dominance test scored
+# US tr24 at 1.8% (reported as "near-pure music" -- wrong), and a 300-3400 Hz
+# speech-band test scored tr24 (0.507) and tr26 (0.498) identically.  Speech
+# mixed wide, or sitting under music, defeats both.  Narration presence on this
+# disc is an EAR question.
+#
+# CROSS-REGION FACTS (same-carrier NCC, reliable): JP disc has 28 audio tracks
+# to the US disc's 25, but tr02-tr22 -- the whole in-game score -- is the same
+# recording in both (r 0.926-1.000).  The cutscene family is renumbered, not
+# replaced: US tr25 == JP tr28 (r 0.999), US tr26 == JP tr29 (r 0.967).  Both
+# tracks this pack ships are therefore region-identical, so the pack is
+# region-neutral.  JP tr25/26/27 (~23 s each) have no US counterpart (r<0.09).
+#
+# *** 0x35 FIRES ONLY IN ATTRACT *** The coin-up path never issues it, so the
+#   Opening substitution is an ATTRACT-ONLY effect. It does NOT play on coin-up.
+#
+# cols: cmd  verb  suppress  cd_track  cue                                   evidence
+0x35	play	0	tr25	Opening entry (US) - phone RINGING, ATTRACT ONLY	US trace f1602 (26.9 s), JP f1264 (21.2 s).  Ungated -- gating it silences the ring; it is also the EARLIEST cue the board offers, so the US pack enters here (see OPENING ENTRY in build_ffight.py)
+0x52	none	1	-	Opening SONG -- the board's music, and the only cue we gate	US trace f1970 (33.1 s), JP f757 (12.7 s).  Japan issues it FIRST, so the JP pack enters here instead (apply_region)
+0x36	none	0	-	Phone ANSWERED, the click; also stops the ring	US trace f2074 (34.8 s), JP f1598 (26.8 s); ungated -- gating it leaves the phone ringing forever
+# 0x3c REMOVED it is a Belger SOUND EFFECT (his laugh/voice), not
+#   music. Evidence: fires 3x in 88 frames (f3348/f3396/f3436) -- a BGM is issued
+#   once and sustains, an SE repeats; and the snapshot 7 frames after the first
+#   fire shows the TV switching on to Belger's laughing face. It fires again in
+#   the Belger room as he is engaged. It was wrongly included as an Opening
+#   mid-sequence row with suppress=1, which would have MUTED Belger's laugh in
+#   both places. Unmapped = passes through = the arcade plays it. This is the
+#   same music/SE misclassification that hit mbomber 0x0058 ('FIGHT' voice):
+#   one latch carries music, SE AND voice, so 'fires during a music sequence'
+#   is not evidence that a command IS music.
+0x28	none	0	-	Damnd's laugh (SE) - FAIL OPEN	EAR not music. Was mapped to tr02 and SUPPRESSED, muting the laugh and playing a stage theme over it. Old evidence: trace (attract f4102 + slum demo) + label; CD side trace-anchored
+0x34	none	0	-	train sound effects (SE) - FAIL OPEN	EAR not music. Was mapped to tr04 and SUPPRESSED. Old evidence: trace + label; CD side trace-anchored
+0x40	play	1	tr02	R1 Slum (stage 1; tr02 also serves R3/R6)	EAR-CONFIRMED (full A/B gate); EAR this is the STAGE 1 song, not West Side. Old evidence: trace + label; CD side table-resolved
+0x48	play	1	tr10	R4 Industrial Area 1	EAR-CONFIRMED (full A/B gate); trace + label; CD side trace-anchored
+0x55	play	1	tr17	Character Select	EAR-CONFIRMED (full A/B gate); trace f1956 + SNAPSHOT 'SELECT PLAYER' (Guy/Cody/Haggar) at f2180
+0x50	play	1	tr13	Round Start (area-map screen)	EAR-CONFIRMED (full A/B gate); trace f2238 + SNAPSHOT area-map/route screen at f2295, just before 0x28
+0x53	play	1	tr18	Continue (countdown)	EAR-CONFIRMED (full A/B gate); trace f22168 (fires on player death) + SNAPSHOT 'CONTINUE 4'
+0x51	play	1	tr14	Game Over	EAR-CONFIRMED (full A/B gate); trace f22920 + SNAPSHOT 'GAME OVER INSERT COIN'
+0x41	play	1	tr03	R1 Slum 2 (Basement)	EAR-CONFIRMED (full A/B gate); trace f8142 (0xf0 then 0x41 at the R1 section 0->1 change) + SNAPSHOT f9000 = Round 1 INDOOR basement/warehouse (crates, barrels, enemy BRED/JAKE). See PREP_NOTES s18.
+0x42	play	1	tr04	R2 Subway	EAR-CONFIRMED (full A/B gate); EAR the real subway song (0x34, the adjacent code, is train SFX). Fills the 0x40+n -> tr(02+n) law at n=2
+0x44	play	1	tr06	R3 West Side (Cage Match)	EAR-CONFIRMED (full A/B gate); EAR fills the law at n=4; also settles tr06, whose 194.3s-vs-194.0s tie with tr22 had been broken by BGM-table membership alone
+0x43	play	1	tr05	R2 Subway Park 2 (Sodom Fight)	EAR-CONFIRMED (full A/B gate); trace f52072 (r1s3) + SNAPSHOT f54000 = SODOM boss-name bar, wrestling-ring set. Also issued at r1s2 (subway tunnel) - same cue both sections.
+0x57	play	1	tr16	Round Clear	EAR-CONFIRMED (full A/B gate); trace: issued (after 0xf4) at EVERY round clear - f10198/f23184/f39218 in one natural run + SNAPSHOTS f10260 'ROUND1 CLEAR!', f23240 'ROUND2 CLEAR!', f39280 'ROUND3 CLEAR!' banners on screen.
+0x4c	play	1	tr12	Bonus Stage	EAR-CONFIRMED (full A/B gate); trace f23508, issued the moment the game enters the bonus stage after Round 2 + SNAPSHOT = bonus car with the 'BREAK POINT' arrows. Reproduced in a forced-stage run.
+0x45	play	1	tr07	R5 Bay Area 1	EAR-CONFIRMED (full A/B gate); trace f2238 at Bay Area entry + SNAPSHOT f2400/f3000 = Bay Area opening waterfront (night skyline, railing, benches). Re-observed at f70846 in the legitimate playthrough as the Round 5 entry cue.
+0x49	play	1	tr11	R4 Industrial Area 2 (Rolento Fight)	EAR-CONFIRMED (full A/B gate); LEGITIMATE playthrough: 0xf0 then 0x49 at f47214 at the Round 4 section 0->1 change; SNAPSHOT f66000 shows the ROLENTO boss-name bar; nothing else issued until Round Clear 0x57 at f68458, whose banner snapshot reads 'ROUND4 CLEAR!'. Corroborated: 0x49 fires again in Round 6 (f113172), matching the documented R6-replays-Industrial-2 reuse.
+0x46	play	1	tr08	R5 Bay Area 2 (Restroom)	EAR-CONFIRMED (full A/B gate); LEGITIMATE playthrough: 0x46 at f83544; SNAPSHOT f84000 = player at the restroom entrance, f86000 = fully inside the restroom ('SEXY' graffiti, stalls). f82000 (before onset) is the outdoor promenade, so the onset coincides with entering the restroom.
+0x47	play	1	tr09	R5 Bay Area 3 (Abigail Fight; also Round 6)	EAR-CONFIRMED (full A/B gate); LEGITIMATE playthrough: 0x47 at f88626, live until Round Clear 0x57 at f104440 ('ROUND5 CLEAR!' banner at f104522); SNAPSHOTS f90000/f102000/f104000 = the final Bay Area stretch (Statue of Liberty waterfront). Corroborated by the CD label's DUAL ROLE: tr09 is '#15 Round 5 Abigail / R6', and 0x47 indeed fires again in Round 6 at f137862 (snapshot f138000 = Up Town). CAVEAT: the 2000-frame snapshot cadence did not catch the ABIGAIL boss bar itself.
+#
+# NOTE on 0x28: it fires BOTH as the final opening-story cue (f4102) and as the R1
+#   stage theme. Mapping it to PLAY tr02 means the opening's last segment switches
+#   from tr25 to tr02 - which mirrors what the arcade itself does. Intentional.
+#
+# === DELIBERATELY UNMAPPED (correct, not gaps) ===
+# arcade "Credit" (0:01)  = cmd 0x5f (observed: fires 18 frames after COIN1). It is a
+#   coin blip, not music, and has no CD counterpart. Left unmapped.
+# CD tr20 "Time Attack"   = no arcade counterpart (the arcade has no Time Attack).
+#   Never triggered. NOT forced onto any command.
+# CD tr19/tr21/tr22       = the three Unused cues. Excluded.
+#
+# === STILL UNKNOWN - 2 cues remain (was 10; see PREP_NOTES sections 18-22) ===
+# Traversal is SOLVED: capping every non-player object-array vitality slot at 1
+#   (base 0xFF8580, stride 0xC0, vitality at +0x01 with a duplicate at +0x03)
+#   lets the engine's OWN kill/wave/stage-clear logic run, so cues fire in real
+#   game flow. That pinned 0x41 / 0x43 / 0x57 / 0x4c / 0x45 above.
+# CLOSED (rows above): the Round 4 catwalk wedge turned out to be a
+#   LANE CHANGE, not a wave gate. A sustained-vertical route (64-frame DOWN/UP
+#   holds, applied only in Round 4) clears it, and the resulting LEGITIMATE
+#   playthrough - Rounds 1-6 through the engine's own progression, no stage
+#   forcing - passed through and grounded 0x49 (tr11), 0x46 (tr08), 0x47 (tr09).
+#   NOTE on method: the Bay Area's three cues ALL fire inside section 0, so the
+#   section index did NOT separate them. What separated them was that in the
+#   legitimate run each onset lands on a set change (restroom entrance for 0x46),
+#   whereas in the earlier FORCED-stage runs those boundaries were smeared - the
+#   forced entry, not the cue, was what made them look unattributable.
+# All Rounds Clear -> tr15 and Ending -> tr26: NOT REACHED. The final boss room
+#   (Belger's penthouse: ANDORE JT. -> WHEELCHAIR -> BELGER) was reached and its
+#   cues 0x3c/0x3d/0x3e recorded, but Belger was not defeated (his bar is still
+#   full at the fade-out) so no ending cue exists yet.
+#   *** 0x3c CONFLICT - RESOLVED: it is a BELGER SOUND EFFECT (his laugh/voice),
+#   NOT a music cue, so it is genuinely reused and neither occurrence is musical.
+#   Proof: in attract it fires THREE times in 88 frames (f3348/f3396/f3436) - a
+#   BGM is issued once and sustains - and the snapshot 7 frames after the first
+#   fire shows the TV switching on to BELGER'S LAUGHING FACE; in the final boss
+#   room it fires once as Belger himself is engaged. See PREP_NOTES section 19.1.
+#   DECIDED (user): the 0x3c ROW WAS REMOVED - an SE must not be
+#   suppressed at all. Unmapped = passes through = the arcade plays it, in both
+#   the attract opening and the boss fight. See the removal note near the top.
+#   0x3d / 0x3e remain unattributed - do not use them.  RESOLVED 
+#   the full enumeration classifies BOTH as SHORT, not sustained -- same class
+#   as 0x3c itself.  They are effects, not missing songs. ***
+# SIBLING AUDIT (0x52 / 0x36, PREP_NOTES section 20): both were attributed the
+#   same "fires during the opening sequence" way and both keep suppress=1.
+#   Re-tested from a -wavwrite attract capture. The sub-200 Hz music-vs-voice
+#   test DOES NOT WORK on this game (confirmed BGM 0x28 = 0.176 below 200 Hz vs
+#   confirmed SE 0x3c = 0.114 - overlapping), so the overlay-and-return test was
+#   used instead: an SE rides over the music and the old texture RETURNS (0x3c
+#   does, at f3540), a music cue REPLACES it permanently.
+#   0x36 = MUSIC: at f2090 the texture switches (rms 5100->1400) and never
+#     returns; fires once; snapshot f2100 shows the cut to the phone scene. KEEP.
+#   0x52 = music-side but the WEAKEST row here: one-window transient at f1970,
+#     then the previous texture resumes at full strength; fires once (0x3c fired
+#     3x in 88 frames); snapshot f1980 shows the cut to the "Sometime in the
+#     1990's..." title card, the same alignment 0x36 has. Neither SE test fires,
+#     so it is kept - but revisit this row first if the opening is reworked.
+#   No other suppress=1 row shows SE-style repetition; the stage themes are all
+#   snapshot-grounded.
+# 0x42 is NOT Round Clear, despite firing alone under the round-clear map after
+#   the R1->R2 clear: the R2 and R3 clears emit no 0x42, while 0x42 sustains as
+#   the section cue for the R2 train interior and Up Town section 1. The cue that
+#   fires at ALL round clears is 0x57 (mapped above, three banner snapshots).
+# Unattributed commands still seen on the latch, NOT assigned without evidence:
+#   0x3a, 0x37, 0x38, 0x57, 0x58, 0x42, 0x15, 0x22.
+# CORRECTION #2: 0x50 was guessed above as "Character Select" from its position
+#   right after START. It is ROUND START (area-map screen); CHARACTER SELECT is
+#   0x55. Both were settled by snapshot. Second time positional/call-site inference
+#   pointed the wrong way - keep using on-screen evidence.
+# 0x51 is GAME OVER (proven by snapshot).  Its code sites read like a
+#   "game-start/continue" cue, which is misleading -- on-screen verification
+#   is the discriminator, not code-site context.
+# The ending sequence was never reached, so its cue set is unknown; if it is split
+#   like the opening it will need the same play-once-then-suppress construction.
+#   Ending target is **tr26** (No Dialogue, 0:38); tr24 (1:53, Dialogue) is the
+#   alternate. Arcade ending cue is 1:31, so tr26 is SHORTER than the arcade cue
+#   and will end early - the opposite failure to tr23's truncation. Flagged, not
+#   yet measured (the ending was never reached).
+0x58	play	1	tr15	All Rounds Clear (ROUND6 CLEAR! area map)	EAR-CONFIRMED (full A/B gate); SNAPSHOT-GROUNDED f179190 shows 'ROUND6 CLEAR!' over the area map; fires f178984 after the Belger clear (prog 7->8), window 22.6s vs tr15's 11s. User playthrough.
+0x54	play	1	tr26	Ending (cutscene)	EAR-CONFIRMED (full A/B gate); SNAPSHOT-GROUNDED f180855 shows the Haggar/Jessica ending cutscene. Window f180334-f187408 = 7074 frames = 118.6s. DECIDED keep tr26 (No Dialogue) and LOOP it (~3 passes fills 118.6s). tr24 (With Dialogue, 113s) fits the window on length but its dialogue is timed to the SEGA CD cutscene, so voiced lines would land on the wrong arcade frames - out of sync with the on-screen text and scene changes. Looping the instrumental avoids that entirely. User playthrough.
+#
+# === BACKPORT CUTSCENE ALIASES (0x74-0x78) ===
+# The ffightcd backport ROMs play the Sega CD cutscenes with their own voiced
+# audio, but they keep firing the stock story-block cues underneath the
+# cutscene -- and to a stock ROM those bytes ARE the opening/ending sounds,
+# while to the backport they arrive mid-cutscene, on top of a CD master that
+# already carries the same laugh, ring, song, click and ending music.  The
+# trigger table is keyed on the command byte alone and cannot tell the two ROM
+# families apart, so the backport emits an ALIAS for each such cue while its
+# cutscene owns the audio, and the rows below gate the aliases (verb none,
+# suppress) so the arcade sample does not double or restart the voiced track:
+#
+#   0x74 <- Damnd laugh (0x28)       0x77 <- phone-answer click (0x36)
+#   0x75 <- phone ring   (0x35)      0x78 <- ending music        (0x54)
+#   0x76 <- opening song (0x52)
+#
+# Deliberately NOT the stock bytes themselves: 0x28 is the live gameplay laugh
+# (slum demo), and 0x35/0x52/0x36/0x54 are the opening entry, song, click and
+# ending music every stock ROM and the plain Arrange MRA still need -- each
+# keeps its own PLAY/fail-open row.  Stock ROMs never emit 0x74-0x78 (phase-0
+# census: cues stop at 0x58, controls 0xf0-0xf9), so these rows are inert for
+# them; the backport's Z80 fallback stub maps each alias back to its stock
+# handler, so a stock core (or no pack) plays the original sound unchanged.
+# All five ship in BOTH region packs.  Contract: the backport's AUDIO_CONTRACT.
+0x74	none	1	-	Damnd laugh ALIAS (backport cutscene) - gate under voiced audio	The CD master carries its own laugh; the alias gates the arcade 0x28 sample without muting the live gameplay laugh (stub maps 0x74 -> 0x28)
+0x75	none	1	-	Phone RING alias (backport cutscene) - gate under voiced audio	The backport fires 0x35 mid-cutscene (US restart at 56.3 s over the voiced opening); the alias gates the arcade ring the CD master already carries (stub maps 0x75 -> 0x35)
+0x76	none	1	-	Opening SONG alias (backport cutscene) - gate under voiced audio	The backport fires 0x52 once at the opening's start (the m1 restructures the song to span the scene); the alias gates the arcade song under the CD master (stub maps 0x76 -> 0x52)
+0x77	none	1	-	Phone ANSWER click ALIAS (backport cutscene) - gate under voiced audio	The voiced CD master already carries the receiver pickup; the board's own 0x36 click doubled it. The alias gates it; the stub maps 0x77 -> 0x36 so stock hardware is unchanged
+#
+# 0x78 is the ending-music alias.  The ending engine (ENGINE2) fires the voiced
+# ending key (0x71 US / 0x73 JP) at INIT, but the stock code still fires the
+# ending-music cue 0x54 shortly after (JP at INIT+2 f, US at INIT+901 f), and
+# 0x54 is this map's PLAY row for tr26, the arranged INSTRUMENTAL ending -- so
+# without a gate the instrumental replaces the voiced track.  Both stock 0x54
+# sites emit 0x78 instead; the row below gates it, while 0x54 keeps its tr26
+# PLAY row for stock ROMs and the plain Arrange MRA.  The stub maps 0x78 -> 0x54
+# so stock hardware plays the FM ending unchanged (YM key-on census identical).
+0x78	none	1	-	Ending MUSIC alias (backport cutscene) - gate under voiced audio	Stock 0x54 (arranged instrumental ending) would replace the voiced ending the engine fires at INIT; the alias gates it, stub maps 0x78 -> 0x54 (same pattern as 0x74-0x77)
