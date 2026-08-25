@@ -14,6 +14,8 @@ reused, so the site can be rebuilt from this repository alone.
 
 import hashlib
 import json
+import os
+import re
 import shutil
 import subprocess
 import sys
@@ -49,12 +51,26 @@ STATUS_LABELS = {
     "released": "Released",
     "release-candidate": "Release candidate",
     "beta": "Beta",
+    "coming-soon": "Coming soon",
     "in-development": "In development",
     "research": "Research",
 }
 
 
 def resolve(path: str) -> Path:
+    """Repo-relative, ~-relative, or $-prefixed.
+
+    A leading $VAR is expanded from the environment, so build-time inputs
+    that live OUTSIDE this repo -- the CPS+ kit zip is built in the private
+    tree -- can be named without an absolute path to one machine.
+    """
+    # ${VAR:-fallback} first: os.path.expandvars leaves it untouched, so a
+    # path written that way never resolved and the caller quietly used
+    # whatever stale copy was already in place.
+    def _default(m):
+        return os.environ.get(m.group(1)) or m.group(2)
+    path = re.sub(r"\$\{(\w+):-([^}]*)\}", _default, path)
+    path = os.path.expandvars(path)
     p = Path(path).expanduser()
     return p if p.is_absolute() else (ROOT / p).resolve()
 
@@ -84,13 +100,13 @@ def human_size(n: int) -> str:
 
 def make_readme(patch: dict, members: list, fmt: str) -> str:
     """Project readme.txt shipped inside every download (fmt: 'ips' or 'mra')."""
-    title = f"{patch['title']} — {patch['subtitle']}"
+    title = f"{patch['title']} · {patch['subtitle']}"
     lines = [
         title,
         "=" * len(title),
         "",
         f"Version:  {patch['version']} ({patch['date']})",
-        f"Target:   MAME set '{patch['set']}' — {patch['game']}",
+        f"Target:   MAME set '{patch['set']}' ({patch['game']})",
         f"Hardware: {patch['hardware']}",
     ]
     if author_line():
@@ -228,7 +244,7 @@ def zip_writer(out_path: Path, stamp: tuple):
 def mra_header_note(patch: dict) -> str:
     mra_cfg = patch["mra"]
     credit = f"\n    Patch by {author_line()}.\n" if author_line() else ""
-    return f"""    {patch['title']} — English translation patch ({patch['version']})
+    return f"""    {patch['title']}, English translation patch ({patch['version']})
     An unofficial fan translation of {patch['game']}.
 {credit}
     This is a patch-overlay MRA: it references the ORIGINAL, unmodified
@@ -335,7 +351,7 @@ def build_chd_downloads(patch: dict) -> dict | None:
             print(f"{slug}: generating CHD patch manifest (extracting both dumps)...")
             technical = chdpatch.generate(stock_path, patched_path)
             manifest = {
-                "title": f"{patch['title']} — {patch['subtitle']}",
+                "title": f"{patch['title']} · {patch['subtitle']}",
                 "version": patch["version"],
                 "game": patch["game"],
                 "set": patch["set"],
@@ -357,7 +373,7 @@ def build_chd_downloads(patch: dict) -> dict | None:
         return None
 
     manifest = {
-        "title": f"{patch['title']} — {patch['subtitle']}",
+        "title": f"{patch['title']} · {patch['subtitle']}",
         "version": patch["version"],
         "game": patch["game"],
         "set": patch["set"],
@@ -427,7 +443,7 @@ def build_rom_downloads(patch: dict) -> dict | None:
             raise SystemExit(f"{slug}: stock and patched zips are identical")
 
         manifest = {
-            "title": f"{patch['title']} — {patch['subtitle']}",
+            "title": f"{patch['title']} · {patch['subtitle']}",
             "version": patch["version"],
             "game": patch["game"],
             "set": patch["set"],
@@ -533,7 +549,7 @@ def page(site: dict, title: str, body: str, depth: int = 0) -> str:
 <body>
 <header class="site">
   <div class="inner">
-    <a class="home" href="{rel}index.html">{esc(site['title'])}</a>
+    <a class="home" href="{rel or './'}">{esc(site['title'])}</a>
     <div class="tagline">{esc(site['tagline'])}</div>
   </div>
 </header>
@@ -582,8 +598,27 @@ def badges(patch: dict) -> str:
     return f'<div class="badges">{"".join(out)}</div>'
 
 
-def render_index(site: dict, patches: list, thumbs: dict) -> str:
+def render_index(site: dict, patches: list, thumbs: dict,
+                 projects: list = (), project_thumbs: dict = {}) -> str:
     intro = "\n".join(f"<p>{esc(p)}</p>" for p in site["intro"])
+    featured = []
+    for proj in projects:
+        thumb = project_thumbs.get(proj["slug"])
+        thumb_html = (
+            f'<img class="thumb" src="{esc(thumb)}" '
+            f'alt="{esc(proj["title"])} screenshot">' if thumb else ""
+        )
+        stats = proj.get("featured_stats", "")
+        stats_html = f'<div class="stats">{esc(stats)}</div>' if stats else ""
+        featured.append(f"""<a class="card featured" href="{esc(proj['slug'])}/">
+  <div>
+    <h2>{esc(proj["title"])}</h2>
+    <div class="sub">{esc(proj['subtitle'])}</div>
+    <p class="summary">{esc(proj['summary'])}</p>
+    {stats_html}
+  </div>
+  {thumb_html}
+</a>""")
     cards = []
     for patch in patches:
         thumb = thumbs.get(patch["slug"])
@@ -592,24 +627,22 @@ def render_index(site: dict, patches: list, thumbs: dict) -> str:
             if thumb
             else ""
         )
-        pill = status_pill(patch)
-        heading = esc(patch["title"]) + (f" {pill}" if pill else "")
-        cards.append(f"""<a class="card" href="{esc(patch['slug'])}/index.html">
+        cards.append(f"""<a class="card" href="{esc(patch['slug'])}/">
   <div>
-    <h2>{heading}</h2>
+    <h2>{esc(patch["title"])}</h2>
     <div class="sub">{esc(patch['subtitle'])} · {esc(patch['game'])}</div>
     <p class="summary">{esc(patch['summary'])}</p>
   </div>
   {thumb_html}
 </a>""")
-    body = f"{intro}\n{''.join(cards)}"
+    body = f"{intro}\n{''.join(featured)}{''.join(cards)}"
     return page(site, site["title"], body)
 
 
-def render_shots(shots: list) -> str:
+def render_shots(shots: list, heading: str = "Screenshots") -> str:
     if not shots:
         return ""
-    out = ["<h2>Screenshots</h2>"]
+    out = [f"<h2>{esc(heading)}</h2>"]
     for shot in shots:
         cap = f"<figcaption>{esc(shot['caption'])}</figcaption>" if shot["caption"] else ""
         if "single" in shot:
@@ -647,10 +680,10 @@ def render_chd_download(patch: dict, bundle: dict) -> str:
     info = bundle["chd"]
     changed = len(m["patch"]["new"]) // 2
     return f"""<h2>Download</h2>
-{download_box("NAOMI GD-ROM patch — data-free, drives your own chdman", info)}
-<p>The download contains <strong>no game data at all</strong> — just a description of
-the change ({changed} bytes in track {m['patch']['track']}) and an apply script. You
-need your own dump of <strong>{esc(patch['game'])}</strong>: the MAME set
+{download_box("NAOMI GD-ROM patch, applied to your own disc image", info)}
+<p>The download is a description of the change ({changed} bytes in track
+{m['patch']['track']}) and a script that applies it. You need your own dump of
+<strong>{esc(patch['game'])}</strong>: the MAME set
 <code>{setname}.zip</code> plus <code>{setname}/{chd}</code>.</p>
 <h2>How to apply</h2>
 <pre><code>unzip {esc(info['zipname'])} -d {setname}-patch
@@ -659,11 +692,11 @@ python3 apply.py /path/to/{setname}/{chd}</code></pre>
 <p>Requirements: Python 3, <code>chdman</code> (it ships with every MAME
 distribution), and about 2.5&nbsp;GB of temporary disk space. The script verifies
 your dump, unpacks it with chdman, patches {changed} bytes, rebuilds the CHD, and
-verifies the result against the checksum below — if anything does not match,
+verifies the result against the checksum below. If anything does not match,
 nothing is kept.</p>
 <p>Rename the verified output to <code>{chd}</code> inside an
 <code>{setname}/</code> folder placed ahead of the stock set in your MAME rompath.
-MAME reports a checksum warning for the patched CHD — that is expected, and the
+MAME reports a checksum warning for the patched CHD. That is expected, and the
 game boots on Japanese, USA, and Export BIOS regions.</p>
 <h3>CHD checksums</h3>
 <table>
@@ -680,6 +713,8 @@ def render_download(patch: dict, bundle: dict | None) -> str:
         return ""
     if bundle["kind"] == "chd":
         return render_chd_download(patch, bundle)
+    if bundle["kind"] == "kit":
+        return render_kit_download(patch, bundle)
     rows = "\n".join(
         f'<tr><td class="mono">{esc(m["name"])}</td><td>{human_size(m["size"])}</td>'
         f'<td class="mono">{esc(m["stock_crc32"])}</td><td class="mono">{esc(m["patched_crc32"])}</td></tr>'
@@ -689,24 +724,24 @@ def render_download(patch: dict, bundle: dict | None) -> str:
     setname = esc(patch["set"])
     ips = bundle["ips"]
     parts = ["<h2>Downloads</h2>"]
-    parts.append(download_box("ROM patch (IPS) — MAME, emulators, original hardware", ips))
+    parts.append(download_box("ROM patch (IPS) for MAME, emulators and original hardware", ips))
     mra_info = bundle.get("mra")
     if mra_info:
         parts.append(download_box("MiSTer (MRA patch overlay)", mra_info))
-    parts.append(f"""<p>Neither download contains ROM data: you need your own dump of
-<strong>{esc(patch['game'])}</strong> as the MAME set <code>{setname}.zip</code>.
-Each zip includes a <code>readme.txt</code> with full instructions.</p>
+    parts.append(f"""<p>You need your own dump of <strong>{esc(patch['game'])}</strong> as the MAME
+set <code>{setname}.zip</code>. Each zip includes a <code>readme.txt</code> with
+full instructions.</p>
 <h2>How to apply (ROM patch)</h2>
 <pre><code>unzip {esc(ips['zipname'])} -d {setname}-patch
 cd {setname}-patch
 python3 apply.py /path/to/{setname}.zip</code></pre>
-<p>This verifies every file against the checksums below before and after patching,
-then writes <code>{setname}_patched.zip</code>. Rename it to <code>{setname}.zip</code>
+<p>This checks every file against the checksums below, then writes
+<code>{setname}_patched.zip</code>. Rename it to <code>{setname}.zip</code>
 and put it ahead of the stock set in your MAME rompath. Alternatively, apply each
 file in <code>ips/</code> with any IPS patcher (Flips, Lunar IPS, …) to the ROM file
 of the same name and re-zip the set yourself.</p>
-<p>MAME reports checksum warnings for the patched program ROMs when loading —
-that is expected, and the game runs normally.</p>""")
+<p>MAME reports checksum warnings for the patched program ROMs when loading.
+That is expected, and the game runs normally.</p>""")
     if mra_info:
         mra_cfg = patch["mra"]
         parts.append(f"""<h2>MiSTer</h2>
@@ -716,7 +751,7 @@ that is expected, and the game runs normally.</p>""")
 You need Jotego's <code>jtcps2</code> core, which the standard MiSTer downloader
 (update_all) installs automatically.</p>
 <p>The MRA references your original romset and applies the translation in memory
-while the game loads — nothing on your SD card is modified. The translation keeps
+while the game loads, so nothing on your SD card is modified. The translation keeps
 its own settings and saves under the setname <code>{esc(mra_cfg['setname'])}</code>.</p>""")
     hb = patch.get("hbmame")
     if hb:
@@ -724,14 +759,14 @@ its own settings and saves under the setname <code>{esc(mra_cfg['setname'])}</co
 <p>This translation is an official <a href="https://github.com/Robbbert/hbmame">HBMAME</a>
 set, <code>{esc(hb['setname'])}</code>
 (<a href="{esc(hb['pr_url'])}">merged upstream</a>). HBMAME releases carry it going
-forward, so if you use full HBMAME romset collections you may already have it —
-look for <code>{esc(hb['setname'])}</code> in the game list.</p>
+forward, so if you use full HBMAME romset collections you may already have it.
+Look for <code>{esc(hb['setname'])}</code> in the game list.</p>
 <p>To build the set from your own dump, run the IPS download's apply script with
 <code>--hbmame</code>:</p>
 <pre><code>python3 apply.py /path/to/{setname}.zip --hbmame</code></pre>
 <p>This writes <code>{esc(hb['setname'])}.zip</code>; put it in HBMAME's
 <code>roms/</code> folder next to your stock <code>{setname}.zip</code>. Unlike the
-MAME route above, the set loads with no checksum warnings — HBMAME's set definition
+MAME route above, the set loads with no checksum warnings, because HBMAME's set definition
 carries the patched checksums.</p>""")
     parts.append(f"""<h3>Changed ROMs</h3>
 <table>
@@ -741,8 +776,217 @@ carries the patched checksums.</p>""")
     return "\n".join(parts)
 
 
+# ------------------------------------------------ multi-build pages (SFA2 Gold)
+
+
+def copy_build_titles(patch: dict) -> list:
+    """Copy each build's title screen into docs/img/<slug>/ and return render info."""
+    slug = patch["slug"]
+    img_dir = DOCS / "img" / slug
+    out = []
+    for b in patch["builds"]:
+        target = img_dir / f"title_{b['key']}.png"
+        src = resolve(b["title_screen"])
+        if src.exists():
+            img_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(src, target)
+        elif not target.exists():
+            print(f"{slug}: WARNING: build title missing: {b['title_screen']}")
+            continue
+        out.append({**b, "img": f"../img/{slug}/{target.name}"})
+    return out
+
+
+def render_builds_gallery(builds: list) -> str:
+    cells = []
+    for b in builds:
+        cells.append(
+            f'<figure class="build">'
+            f'<img src="{esc(b["img"])}" alt="{esc(b["title"])} ({esc(b["region"])}) title screen">'
+            f'<figcaption><strong>{esc(b["title"])}</strong><br>'
+            f'{esc(b["region"])} · <code>{esc(b["hbmame_set"])}</code></figcaption>'
+            f'</figure>'
+        )
+    return f'<h2>The four builds</h2>\n<div class="build-gallery">{"".join(cells)}</div>'
+
+
+# The default kit shape (SFA2 Gold's): a handful of modules beside a
+# recipes/ directory.  A patch whose reconstruction is a PIPELINE rather
+# than a recipe -- Final Fight CD runs a 68000 interpreter over the disc --
+# names its own contents with reconstruction.kit_include instead.
+KIT_MODULES = ("apply.py", "extract.py", "recipe.py", "gfx.py", "assemble.py",
+               "bizlz.py", "README.txt")
+
+
+def build_reconstruction_kit(patch: dict) -> dict | None:
+    """Package the reconstruction tool + per-region recipes into a
+    download zip."""
+    rec = patch.get("reconstruction") or {}
+    kit_dir = rec.get("kit_dir")
+    if not kit_dir:
+        return None
+    src = ROOT / kit_dir
+    recipe_files = sorted((src / "recipes").glob("*.json")) if (src / "recipes").exists() else []
+    zipname = f"{patch['slug']}-{patch['version']}-kit.zip"
+    out_path = DOCS / "downloads" / zipname
+    include = rec.get("kit_include")
+    if include:
+        # Glob-listed kit.  Every path is stated, so nothing a build leaves
+        # behind -- work trees, generated ROMs -- can be swept in by accident.
+        files = []
+        for pat in include:
+            files += sorted(q for q in src.glob(pat) if q.is_file())
+        if not files:
+            print(f"{patch['slug']}: WARNING: kit_include matched nothing; "
+                  f"download omitted")
+            return None
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        stamp = tuple(int(x) for x in patch["date"].split("-")) + (0, 0, 0)
+        write = zip_writer(out_path, stamp)
+        with zipfile.ZipFile(out_path, "w") as z:
+            for q in files:
+                write(z, str(q.relative_to(src)), q.read_bytes())
+        print(f"{patch['slug']}: reconstruction kit packaged "
+              f"({len(files)} files) -> {zipname}")
+        return {"kind": "kit", "zipname": zipname,
+                "size": out_path.stat().st_size,
+                "sha256": sha256_file(out_path), "regions": []}
+    if not recipe_files:
+        if out_path.exists():
+            print(f"{patch['slug']}: recipes absent, reusing existing kit")
+            return {"kind": "kit", "zipname": zipname, "size": out_path.stat().st_size,
+                    "sha256": sha256_file(out_path), "regions": []}
+        print(f"{patch['slug']}: WARNING: no recipes and no existing kit; download omitted")
+        return None
+    mra_files = sorted((src / "mras").glob("*.mra")) if (src / "mras").exists() else []
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    stamp = tuple(int(x) for x in patch["date"].split("-")) + (0, 0, 0)
+    write = zip_writer(out_path, stamp)
+    with zipfile.ZipFile(out_path, "w") as z:
+        for m in KIT_MODULES:
+            write(z, m, (src / m).read_bytes())
+        for rf in recipe_files:
+            write(z, f"recipes/{rf.name}", rf.read_bytes())
+        for mf in mra_files:
+            write(z, f"mras/{mf.name}", mf.read_bytes())
+    print(f"{patch['slug']}: reconstruction kit packaged "
+          f"({len(recipe_files)} regions) -> {zipname}")
+    return {"kind": "kit", "zipname": zipname, "size": out_path.stat().st_size,
+            "sha256": sha256_file(out_path), "regions": [f.stem for f in recipe_files]}
+
+
+def render_kit_download(patch: dict, kit: dict) -> str:
+    """The kit download box.
+
+    Everything specific to a patch comes from its reconstruction block --
+    what the user must supply, and the command that builds it.  This used
+    to be SFA2 Gold's text hardcoded, which would have told Final Fight CD
+    readers to supply a PlayStation 2 disc.
+    """
+    rec = patch.get("reconstruction") or {}
+    slug = patch["slug"]
+    needs = "".join(f"<li>{esc(x)}</li>" for x in rec.get("requires", []))
+    cmd = rec.get("kit_command") or (
+        f"python3 apply.py --help")
+    return f"""<h2>Download</h2>
+{download_box("Reconstruction kit, rebuilds from your own disc + romset", kit)}
+<p>The kit is our reconstruction code and a short list of byte patches.
+Everything else is rebuilt on your machine from files you already own.</p>
+<h3>What you supply</h3>
+<ul>{needs}</ul>
+<h2>How to build</h2>
+<pre><code>unzip {esc(kit['zipname'])} -d {esc(slug)}
+cd {esc(slug)}
+{esc(cmd)}</code></pre>
+"""
+
+def render_reconstruction(patch: dict, builds: list, bundle: dict | None) -> str:
+    rec = patch.get("reconstruction", {})
+    reqs = "".join(f"<li>{esc(r)}</li>" for r in rec.get("requires", []))
+    rows = "".join(
+        f'<tr><td>{esc(b["region"])}</td>'
+        f'<td>{esc(b["title"])} ({esc(b["datecode"])})</td>'
+        f'<td class="mono">{esc(b["hbmame_set"])}</td>'
+        f'<td class="mono">{esc(b["mame_set"])}</td></tr>'
+        for b in builds
+    )
+    parts = ["""<h2>How it's distributed</h2>
+<p>Each build is put together on your own machine from files you already own.
+You need:</p>"""]
+    parts.append(f"<ul>{reqs}</ul>")
+    parts.append("""<p>A small tool reads the revised game from your PlayStation 2 disc image,
+combines it with your arcade Zero 2 Alpha romset, and writes out the finished
+CPS-2 build.</p>
+<p>Two sizes of each build are produced. A <strong>4&nbsp;MB</strong> set stays within
+original CPS-2 limits and runs on real hardware and stock MAME. An <strong>8&nbsp;MB</strong>
+set carries Cammy's complete voice and sound-effect audio, more than an original board
+could hold, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>""")
+    parts.append(f"""<h3>The builds</h3>
+<table>
+<tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer (8&nbsp;MB)</th><th>Hardware / MAME (4&nbsp;MB)</th></tr>
+{rows}
+</table>""")
+    if bundle and bundle.get("kind") == "kit":
+        parts.append(render_kit_download(patch, bundle))
+    elif bundle:
+        parts.append(render_download(patch, bundle))
+    else:
+        parts.append('<p class="notes">The reconstruction tool is published with this'
+                     " page; download and step-by-step instructions appear here once built.</p>")
+    return "\n".join(parts)
+
+
+def render_builds_page(site: dict, patch: dict, builds: list, bundle: dict | None,
+                       shots: list | None = None) -> str:
+    parts = ['<a class="back" href="../">&larr; All patches</a>']
+    parts.append(f"<h1>{esc(patch['title'])}</h1>")
+    parts.append(f'<p class="subtitle">{esc(patch["subtitle"])}</p>')
+    parts.append(badges(patch))
+
+    meta = [("Game", patch["game"]), ("Hardware", patch["hardware"])]
+    if patch.get("version"):
+        meta.append(("Version", patch["version"]))
+    if patch.get("date"):
+        meta.append(("Updated", patch["date"]))
+    parts.append(
+        '<dl class="meta">'
+        + "".join(f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in meta)
+        + "</dl>"
+    )
+
+    parts.append(render_builds_gallery(builds))
+    parts.append("<h2>About</h2>")
+    parts.extend(f"<p>{esc(p)}</p>" for p in patch["description"])
+    if patch.get("changes"):
+        parts.append("<h2>What's included</h2><ul>")
+        parts.extend(f"<li>{esc(c)}</li>" for c in patch["changes"])
+        parts.append("</ul>")
+    if shots:
+        parts.append(render_shots(shots, heading="Cammy in action"))
+    parts.append(render_reconstruction(patch, builds, bundle))
+    parts.append(render_related(patch))
+    if patch.get("notes"):
+        parts.append('<h2>Notes</h2><ul class="notes">')
+        parts.extend(f"<li>{esc(n)}</li>" for n in patch["notes"])
+        parts.append("</ul>")
+
+    return page(site, f"{patch['title']} · {site['title']}", "\n".join(parts), depth=1)
+
+
+
+def render_related(patch: dict) -> str:
+    """Optional cross-links to companion projects/pages."""
+    rel = patch.get("related")
+    if not rel:
+        return ""
+    items = "".join(
+        f'<li><a href="{esc(r["url"])}">{esc(r["label"])}</a>, {esc(r["note"])}</li>'
+        for r in rel)
+    return f"<h2>Related projects</h2><ul>{items}</ul>"
+
+
 def render_patch_page(site: dict, patch: dict, bundle: dict | None, shots: list) -> str:
-    parts = ['<a class="back" href="../index.html">&larr; All patches</a>']
+    parts = ['<a class="back" href="../">&larr; All patches</a>']
     parts.append(f"<h1>{esc(patch['title'])}</h1>")
     parts.append(f'<p class="subtitle">{esc(patch["subtitle"])}</p>')
     parts.append(badges(patch))
@@ -769,14 +1013,150 @@ def render_patch_page(site: dict, patch: dict, bundle: dict | None, shots: list)
         parts.extend(f"<li>{esc(c)}</li>" for c in patch["changes"])
         parts.append("</ul>")
 
-    parts.append(render_download(patch, bundle))
+    dl = render_download(patch, bundle)
+    if not dl and patch.get("download_note"):
+        dl = ('<h2>Download</h2>\n<div class="download soon">'
+              f'<div class="kind">Coming soon</div>'
+              f'<p>{esc(patch["download_note"])}</p></div>')
+    parts.append(dl)
 
+    parts.append(render_related(patch))
     if patch.get("notes"):
         parts.append('<h2>Notes</h2><ul class="notes">')
         parts.extend(f"<li>{esc(n)}</li>" for n in patch["notes"])
         parts.append("</ul>")
 
-    title = f"{patch['title']} — {site['title']}"
+    title = f"{patch['title']} · {site['title']}"
+    return page(site, title, "\n".join(parts), depth=1)
+
+
+
+def copy_project_kit(project: dict) -> dict | None:
+    """Copy a prebuilt project kit zip into docs/downloads and describe it."""
+    kit = project.get("kit")
+    if not kit:
+        return None
+    src = resolve(kit["source"])
+    zipname = kit["zipname"]
+    dest = DOCS / "downloads" / zipname
+    if src.exists():
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(src, dest)
+    elif dest.exists():
+        print(f"{project['slug']}: WARNING: kit source not found ({src}); "
+              f"REUSING the existing {zipname}, which may be stale")
+    else:
+        print(f"{project['slug']}: WARNING: kit missing: {src}")
+        return None
+    return download_info(zipname)
+
+
+def render_project_page(site: dict, project: dict, kit: dict | None,
+                        shots: list) -> str:
+    parts = ['<a class="back" href="../">&larr; All patches</a>']
+    parts.append(f"<h1>{esc(project['title'])}</h1>")
+    parts.append(f'<p class="subtitle">{esc(project["subtitle"])}</p>')
+    parts.append(badges(project))
+
+    meta = [(k, v) for k, v in (
+        ("Hardware", project.get("hardware")),
+        ("Version", project.get("version")),
+        ("Updated", project.get("date")),
+    ) if v]
+    if meta:
+        parts.append('<dl class="meta">' + "".join(
+            f"<dt>{esc(k)}</dt><dd>{esc(v)}</dd>" for k, v in meta) + "</dl>")
+
+    parts.extend(f"<p>{esc(t)}</p>" for t in project["description"])
+
+    if project.get("highlights"):
+        parts.append('<ul class="highlights">')
+        parts.extend(f"<li>{esc(t)}</li>" for t in project["highlights"])
+        parts.append("</ul>")
+
+    parts.append(render_shots(shots))
+
+    if kit:
+        parts.append("<h2>Get started</h2>")
+        parts.append(download_box(project["kit"].get(
+            "label", "MiSTer kit: cores, MRAs and the pack builder"), kit))
+    if project.get("quickstart"):
+        parts.append("<ol>")
+        parts.extend(f"<li>{esc(t)}</li>" for t in project["quickstart"])
+        parts.append("</ol>")
+    for t in project.get("download_notes", []):
+        parts.append(f"<p>{esc(t)}</p>")
+
+    if project.get("coverage"):
+        # The platform is written once, on the disc list, and looked up here --
+        # so a disc cannot end up labelled on one row and bare on the next.
+        platform_of = {s["disc"]: s["platform"] for s in project.get("sources", [])}
+        parts.append("<h2>Game coverage</h2>")
+        if project.get("coverage_intro"):
+            parts.append(f"<p>{esc(project['coverage_intro'])}</p>")
+        parts.append('<table class="coverage"><thead><tr>'
+                     "<th>Arcade game</th><th>Soundtrack</th>"
+                     "<th>Built from</th></tr></thead><tbody>")
+        for game in project["coverage"]:
+            packs = game["packs"]
+            for i, pack in enumerate(packs):
+                cls = ' class="group"' if i == 0 else ""
+                parts.append(f"<tr{cls}>")
+                if i == 0:
+                    alt = (f'<span class="alt">{esc(game["also"])}</span>'
+                           if game.get("also") else "")
+                    sets = (f'<span class="sets mono">{esc(game["sets"])}</span>'
+                            if game.get("sets") else "")
+                    parts.append(f'<th scope="rowgroup" rowspan="{len(packs)}">'
+                                 f'{esc(game["game"])}{alt}{sets}</th>')
+                disc = pack["disc"]
+                plat = platform_of.get(disc)
+                disc_html = (f'{esc(disc)} <span class="on">({esc(plat)})</span>'
+                             if plat else esc(disc))
+                parts.append(f'<td>{esc(pack["soundtrack"])}</td>'
+                             f'<td>{disc_html}</td></tr>')
+        parts.append("</tbody></table>")
+
+    if project.get("sources"):
+        parts.append("<h3>Which disc you need</h3>")
+        parts.append('<div class="sources">')
+        for row in sorted(project["sources"], key=lambda r: r["disc"].lower()):
+            parts.append(
+                '<div class="source"><div class="src-disc">'
+                f'<strong>{esc(row["disc"])}</strong>'
+                f'<span class="platform">{esc(row["platform"])}</span>'
+                f'<span class="variants">{esc(row["variants"])}</span></div>'
+                "</div>")
+        parts.append("</div>")
+
+    if project.get("how_it_works"):
+        parts.append("<h2>Under the hood</h2>")
+        parts.extend(f"<p>{esc(t)}</p>" for t in project["how_it_works"])
+
+    if project.get("tech_spec"):
+        parts.append("<h2>Making your own packs</h2>")
+        parts.extend(f"<p>{esc(t)}</p>" for t in project["tech_spec"])
+
+    if project.get("faq"):
+        parts.append("<h2>FAQ</h2>")
+        for item in project["faq"]:
+            body = "".join(f"<p>{esc(t)}</p>" for t in item["a"])
+            parts.append(f'<details class="faq"><summary>{esc(item["q"])}'
+                         f"</summary>{body}</details>")
+
+    if project.get("links"):
+        parts.append("<h2>Source &amp; related projects</h2><ul>")
+        for link in project["links"]:
+            parts.append(f'<li><a href="{esc(link["url"])}">'
+                         f'{esc(link["label"])}</a>, {esc(link["note"])}</li>')
+        parts.append("</ul>")
+
+    if project.get("notes"):
+        parts.append('<h2>Notes</h2><ul class="notes">')
+        parts.extend(f"<li>{esc(n)}</li>" for n in project["notes"])
+        parts.append("</ul>")
+
+    title = f"{project['title']} · {site['title']}"
     return page(site, title, "\n".join(parts), depth=1)
 
 
@@ -794,11 +1174,12 @@ respective owners.</p>
 <h2>What is (and is not) distributed here</h2>
 <p>No ROM images, disc images, or other copies of any game are hosted on this
 site, and none will be provided on request. Downloads consist of binary
-difference patches (IPS), MiSTer MRA patch overlays, and open-source tooling
-only: they describe the changes made to a game and are useless without your
+difference patches (IPS), MiSTer MRA patch overlays, FPGA core builds with
+their corresponding source, and open-source tooling (including audio-pack
+builders that run against discs you own) only: they describe the changes made to a game and are useless without your
 own copy of that game.</p>
-<p>To use a patch you must own the game in question — an original board,
-cartridge, or GD-ROM, or a lawfully obtained copy — and produce your own dump
+<p>To use a patch you must own the game in question (an original board,
+cartridge, or GD-ROM, or a lawfully obtained copy) and produce your own dump
 of it. Where a patch reuses official English text, that text is only ever
 reconstructed against a copy of the game you already own.</p>
 
@@ -817,8 +1198,8 @@ original hardware, is entirely at your own risk.</p>
 fan-work practice, please get in touch and it will be addressed promptly.
 {contact}</p>
 
-<a class="back" href="index.html">&larr; Back</a>"""
-    return page(site, f"Legal — {site['title']}", body)
+<a class="back" href="./">&larr; Back</a>"""
+    return page(site, f"Legal · {site['title']}", body)
 
 
 # ------------------------------------------------------------------ main
@@ -827,6 +1208,7 @@ fan-work practice, please get in touch and it will be addressed promptly.
 def main() -> None:
     config = json.loads((ROOT / "data" / "patches.json").read_text())
     site, patches = config["site"], config["patches"]
+    projects = [p for p in config.get("projects", []) if not p.get("hidden")]
     global SITE
     SITE = site
 
@@ -842,7 +1224,25 @@ def main() -> None:
     thumbs = {}
     for patch in patches:
         slug = patch["slug"]
-        bundle = build_downloads(patch)
+        if patch.get("builds"):
+            builds = copy_build_titles(patch)
+            shots = copy_screenshots(patch)
+            bundle = build_reconstruction_kit(patch) or build_downloads(patch)
+            if builds and slug not in thumbs:
+                key = patch.get("thumbnail_build")
+                chosen = next((b for b in builds if b["key"] == key), builds[0])
+                thumbs[slug] = chosen["img"].replace("../", "")
+            out_dir = DOCS / slug
+            out_dir.mkdir(parents=True, exist_ok=True)
+            (out_dir / "index.html").write_text(
+                render_builds_page(site, patch, builds, bundle, shots))
+            print(f"{slug}: builds page rendered ({len(builds)} builds, "
+                  f"{len(shots)} screenshots)")
+            continue
+        # A single-build patch can still ship a reconstruction kit: Final
+        # Fight CD has one set per region, not a build matrix, but its
+        # download IS the kit.
+        bundle = build_reconstruction_kit(patch) or build_downloads(patch)
         shots = copy_screenshots(patch)
         for shot in shots:
             if patch.get("thumbnail") is False:
@@ -855,7 +1255,23 @@ def main() -> None:
         (out_dir / "index.html").write_text(render_patch_page(site, patch, bundle, shots))
         print(f"{slug}: page rendered ({len(shots)} screenshot blocks)")
 
-    (DOCS / "index.html").write_text(render_index(site, patches, thumbs))
+    project_thumbs = {}
+    for project in projects:
+        slug = project["slug"]
+        kit = copy_project_kit(project)
+        shots = copy_screenshots(project)
+        for shot in shots:
+            candidate = shot.get("after") or shot.get("single")
+            if candidate and slug not in project_thumbs:
+                project_thumbs[slug] = candidate.replace("../", "")
+        out_dir = DOCS / slug
+        out_dir.mkdir(parents=True, exist_ok=True)
+        (out_dir / "index.html").write_text(
+            render_project_page(site, project, kit, shots))
+        print(f"{slug}: project page rendered ({len(shots)} screenshot blocks)")
+
+    (DOCS / "index.html").write_text(
+        render_index(site, patches, thumbs, projects, project_thumbs))
     (DOCS / "legal.html").write_text(render_legal(site))
     print(f"\nSite built into {DOCS}")
 

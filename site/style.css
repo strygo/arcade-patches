@@ -11,6 +11,7 @@
   --badge-teal: #2b6e6e;
   --badge-amber: #8a6a1f;
   --badge-blue: #33587f;
+  --badge-violet: #5a4a8a;
   --badge-gray: #4a4a55;
   --badge-text: #eef2ee;
 }
@@ -29,6 +30,7 @@
     --badge-teal: #cde6e6;
     --badge-amber: #f0e4c0;
     --badge-blue: #d4e2f2;
+    --badge-violet: #ddd4f0;
     --badge-gray: #e2e2dc;
     --badge-text: #2b2b33;
   }
@@ -93,6 +95,7 @@ header.site .tagline {
 .badge.release-candidate { background: var(--badge-teal); }
 .badge.released { background: var(--badge-green); }
 .badge.beta { background: var(--badge-amber); }
+.badge.coming-soon { background: var(--badge-violet); }
 .badge.in-development { background: var(--badge-blue); }
 .badge.research { background: var(--badge-gray); }
 .badge.plain { background: var(--badge-gray); text-transform: none; letter-spacing: 0; }
@@ -170,6 +173,30 @@ figure.shot figcaption {
   text-align: center;
 }
 
+/* multi-build title gallery */
+.build-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+figure.build { margin: 0; }
+figure.build img {
+  width: 100%;
+  image-rendering: pixelated;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  display: block;
+}
+figure.build figcaption {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-top: 8px;
+  text-align: center;
+  line-height: 1.4;
+}
+figure.build figcaption strong { color: var(--heading); }
+
 /* download box */
 .download {
   border: 1px solid var(--border);
@@ -187,6 +214,9 @@ figure.shot figcaption {
   margin-bottom: 4px;
 }
 .download .file { font-size: 1.05rem; font-weight: 600; }
+.download.soon { border-style: dashed; }
+.download.soon .kind { color: var(--badge-violet); }
+.download.soon p { margin: 0; }
 .download .hash {
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.78rem;
@@ -243,3 +273,81 @@ footer.site .inner {
   padding: 20px;
 }
 footer.site p { margin: 6px 0; }
+
+/* featured project band (index) */
+.card.featured {
+  border-color: var(--accent);
+  background: linear-gradient(135deg,
+              color-mix(in srgb, var(--accent) 8%, var(--bg-card, transparent)),
+              transparent 60%);
+}
+.card.featured .kicker {
+  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 2px;
+}
+.card.featured .stats { color: var(--text-dim); font-size: 0.85rem; margin-top: 8px; }
+
+/* project page highlight bullets */
+ul.highlights {
+  list-style: none; padding: 0; margin: 18px 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+ul.highlights li {
+  padding: 10px 14px; border: 1px solid var(--border, #333); border-radius: 8px;
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+  font-size: 0.93rem;
+}
+
+/* project page coverage table: one row group per arcade game */
+table.coverage th[scope="rowgroup"] {
+  color: var(--text); font-weight: 600; vertical-align: top;
+  border-right: 1px solid var(--border); padding-right: 16px;
+}
+table.coverage tr.group > * { border-top: 1px solid var(--border); }
+table.coverage tr:not(.group) td { border-bottom: none; }
+table.coverage tr.group td { border-bottom: none; }
+table.coverage tbody tr:last-child > * { border-bottom: 1px solid var(--border); }
+table.coverage .on { color: var(--text-dim); }
+table.coverage .alt, table.coverage .sets {
+  display: block; font-weight: 400; color: var(--text-dim);
+  font-size: 0.82rem; margin-top: 2px;
+}
+
+/* project page disc-source rows */
+.sources { margin: 14px 0; }
+.source {
+  padding: 12px 0; border-bottom: 1px solid var(--border, #333);
+}
+.source:first-child { border-top: 1px solid var(--border, #333); }
+.src-disc { font-size: 0.95rem; }
+.src-disc .platform {
+  display: inline-block; font-size: 0.68rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim);
+  border: 1px solid var(--border, #333); border-radius: 999px;
+  padding: 1px 8px; margin-left: 8px; vertical-align: 1px;
+  white-space: nowrap;
+}
+.src-disc .variants {
+  display: block; color: var(--text-dim); font-size: 0.85rem; margin-top: 2px;
+}
+.src-unlocks { font-size: 0.9rem; margin-top: 6px; }
+.src-unlocks::before { content: "→ "; color: var(--accent); }
+
+/* project page FAQ */
+details.faq {
+  border-bottom: 1px solid var(--border, #333); padding: 2px 0;
+}
+details.faq:first-of-type { border-top: 1px solid var(--border, #333); }
+/* the FAQ heading already draws a rule; do not stack a second one.  Needs the
+   :first-of-type in the selector too, or it loses on specificity. */
+h2 + details.faq:first-of-type { border-top: none; }
+details.faq summary {
+  cursor: pointer; padding: 10px 0; font-weight: 600; font-size: 0.95rem;
+  list-style-position: inside;
+}
+details.faq summary:hover { color: var(--accent); }
+details.faq p {
+  margin: 6px 0 12px; padding-left: 18px;
+  color: var(--text-dim); font-size: 0.92rem;
+}

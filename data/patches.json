@@ -1,10 +1,10 @@
 {
   "site": {
     "title": "Arcade Patches",
-    "tagline": "Translation and restoration patches for arcade fighting games.",
+    "tagline": "Translations, restorations and arranged soundtracks for classic arcade games.",
     "intro": [
-      "Fan-made patches for arcade games, mostly Japan-only CPS-2 and NAOMI releases. Everything is distributed as a patch against your own dump of the original game — binary diffs (IPS), MiSTer MRA overlays, or data-free GD-ROM patches; no game data is hosted here.",
-      "Everything on this site was built and verified against real MAME sets, with automated acceptance runs and human review of every change."
+      "A lot of great arcade games never made it out of Japan, and plenty of others had their best material added later, on the home ports. Re-recorded soundtracks, cutscenes the arcade version never had, characters that turned up years afterward. The patches here put that work back onto the arcade hardware it belongs on.",
+      "Each one runs against your own copy of the game, on a real board, on a MiSTer, or in MAME. No game data is hosted here, and nothing goes out until it has been tested on the real thing."
     ],
     "repo_url": null,
     "site_url": "https://strygo.github.io/arcade-patches/",
@@ -12,22 +12,366 @@
     "author": "Steve Gordon",
     "author_url": "https://x.com/strygo"
   },
+  "projects": [
+    {
+      "slug": "cps-plus",
+      "title": "CPS+",
+      "subtitle": "Arranged CD-era soundtracks for CPS-1 & CPS-2 arcade games on MiSTer",
+      "status": "release-candidate",
+      "version": "1.0",
+      "date": "2026-08-25",
+      "hardware": "MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)",
+      "summary": "When Capcom brought its arcade games home on CD, it sent the music back to the studio and re-recorded it. Those versions never made it back to the arcade. CPS+ puts them there. Pick a game on your MiSTer and the arranged soundtrack is just playing, while every punch, voice and jingle still comes from the arcade board itself.",
+      "featured_stats": "18 audio packs · 52 MRAs · 3 cores · every pack built from your own discs",
+      "description": [
+        "From Final Fight CD onward, Capcom kept sending its arcade soundtracks back to the studio. Every CD-based home port got a full re-recording of the music, the 'arrange' versions, produced by the original composers' teams. For thirty years those recordings stayed locked to the home versions. CPS+ puts them where they always belonged, under the arcade games themselves.",
+        "On a MiSTer, the real CPS-1 or CPS-2 hardware logic runs the game while the CD-era soundtrack plays the music, started, looped and faded by the game itself, exactly the way Capcom's own console releases timed it. Hit sounds, voices and the announcer stay pure arcade. It sounds like the arcade board grew a CD drive."
+      ],
+      "how_it_works": [
+        "Nothing in the game is modified. CPS-1 and CPS-2 games post sound commands to their audio hardware, and the CPS+ core watches for them. When one matches the loaded pack, it streams that arranged track and holds the command back from the sound chip. Everything else plays as it always did: hit sounds, voices, the announcer, and the jingles a pack deliberately leaves alone.",
+        "The trigger tables were reverse-engineered from Capcom's own console releases and checked against the arcade programs, down to the loop points and fades.",
+        "A pack carries the arranged tracks and the table that says which sound command starts each one. The MRA points at the pack, and MiSTer loads it into memory alongside the ROM. A stock MiSTer runs all of this as it comes.",
+        "A given disc always produces the same pack, and the builder checks yours against a published hash."
+      ],
+      "download_notes": [
+        "The download is tools: the MRAs, the three CPS+ cores with their GPL-3.0 source, and the pack builder. It makes the packs on your machine from discs you own, naming anything it skips for want of a disc. It also assembles out/mister/ for you, holding the cores, your packs, and only the MRAs those packs can load, so nothing on the card fails to start.",
+        "Two MRA groups pair CPS+ audio with sets from companion projects on this site: the Alpha 2 Gold MRAs load the SFA2 Gold reconstructed sets, and ‘Final Fight (Arrange + CD Cutscenes)’ loads the Final Fight CD backport set. Build those with their own kits first (links below)."
+      ],
+      "quickstart": [
+        "Download and unzip the kit.",
+        "Edit builder/discs.toml and point it at the disc rips you own (each entry is optional), or pass them on the command line with --disc mtwins_pce_disc=/discs/chiki.7z. make_packs.py --list shows every pack and the disc it wants.",
+        "Run python3 builder/make_packs.py (Python 3.11+, numpy, ffmpeg). It builds out/mister/, laid out like your SD card.",
+        "Copy the contents of out/mister/ to your MiSTer SD card, merging with what's there. Arcade ROM zips go where they always do."
+      ],
+      "tech_spec": [
+        "Community packs are a first-class goal, so the format is documented and the tools ship in the kit. build_pack.py init <game> starts a project; you supply the tracks and say which sound command triggers each one; build_pack.py build produces the pack, which you can listen through, check, and point an MRA at.",
+        "Any QSound CPS-2 title is a potential target, and CPS-1 and CPS-1.5 games work too. PACK_FORMAT.md in the kit covers the trigger contract, the pack layout, and how to author one."
+      ],
+      "links": [
+        {
+          "label": "strygo/jtcores (cpsplus branch)",
+          "url": "https://github.com/strygo/jtcores/tree/cpsplus",
+          "note": "the CPS+ core fork: RTL, integration patches, pack format spec, and full GPL-3.0 source for the shipped RBFs"
+        },
+        {
+          "label": "jotego/jtcores",
+          "url": "https://github.com/jotego/jtcores",
+          "note": "the upstream CPS core project CPS+ builds on"
+        },
+        {
+          "label": "Street Fighter Alpha 2 Gold",
+          "url": "../sfa2-gold/",
+          "note": "companion project: the reconstructed Gold sets that the Gold Arrange MRAs load"
+        },
+        {
+          "label": "Final Fight — CD Cutscenes",
+          "url": "../final-fight-cd/",
+          "note": "companion project: the cutscene backport set that pairs with the Arrange + CD Cutscenes MRA"
+        }
+      ],
+      "notes": [
+        "The arranged recordings remain © Capcom and are never distributed here. Every pack is built from your own disc.",
+        "Sound effects, voices and the announcer always play live through the original arcade audio path; packs substitute music only, and a few cues deliberately pass through to the arcade board's own music."
+      ],
+      "kit": {
+        "source": "${CPSPLUS_TREE:-../capcom/cpsplus}/dist/cpsplus-kit-1.0.zip",
+        "zipname": "cpsplus-kit-1.0.zip",
+        "label": "CPS+ MiSTer kit: cores, MRAs and the pack builder"
+      },
+      "highlights": [
+        "18 audio packs covering 14 arcade games, every arranged soundtrack Capcom recorded for the CPS line",
+        "52 ready-to-play MRAs, so you pick the game from the CPS+ folder and the music is just there",
+        "Runs on a stock MiSTer, with no firmware changes and nothing to configure",
+        "Only tools in the download. Packs build from the discs you already own, in one command"
+      ],
+      "sources": [
+        {
+          "platform": "Sega CD",
+          "disc": "Final Fight CD",
+          "variants": "USA and/or Japan, and each region builds its own pack"
+        },
+        {
+          "platform": "CD audio",
+          "disc": "Final Fight OST box",
+          "variants": "discs 1–2, ripped to FLAC or WAV"
+        },
+        {
+          "platform": "PlayStation 2",
+          "disc": "Hyper Street Fighter II: The Anniversary Edition",
+          "variants": "Japan or Europe, or the USA Street Fighter Anniversary Collection; all three carry identical audio data"
+        },
+        {
+          "platform": "PlayStation 2",
+          "disc": "Street Fighter Alpha Anthology",
+          "variants": "USA"
+        },
+        {
+          "platform": "Saturn",
+          "disc": "Street Fighter Alpha: Warriors' Dreams",
+          "variants": "USA, or Street Fighter Zero (Japan); the European release is not supported"
+        },
+        {
+          "platform": "Saturn",
+          "disc": "Street Fighter Zero 2 / Alpha 2",
+          "variants": "SF Zero 2 (Japan), SF Alpha 2 (USA or Europe), SF Zero 2′ (Japan) or SF Collection Disc 2; the songs are the same on all five"
+        },
+        {
+          "platform": "Saturn",
+          "disc": "Street Fighter Zero 2′ or SF Collection Disc 2",
+          "variants": "the same on both, any SF Collection region"
+        },
+        {
+          "platform": "Saturn",
+          "disc": "Super Puzzle Fighter II Turbo",
+          "variants": "USA, Europe, or Super Puzzle Fighter II X (Japan)"
+        },
+        {
+          "platform": "PC Engine CD",
+          "disc": "Chiki Chiki Boys",
+          "variants": "Japan"
+        },
+        {
+          "platform": "PC Engine CD",
+          "disc": "Forgotten Worlds",
+          "variants": "USA or Japan"
+        },
+        {
+          "platform": "FM Towns",
+          "disc": "Muscle Bomber",
+          "variants": "Japan"
+        }
+      ],
+      "coverage_intro": "Every soundtrack is built from one disc you own. Where a disc came out in several regions, the ones listed below all produce the same pack.",
+      "faq": [
+        {
+          "q": "What do I need installed to build the packs?",
+          "a": [
+            "Python 3.11 or newer, numpy, and ffmpeg on your PATH. On a Mac: brew install python ffmpeg, then pip3 install numpy. On Linux, use your package manager. 7-Zip is only needed if your rips are .7z archives.",
+            "Nothing is installed on the MiSTer itself. The kit is plain files copied to the SD card, and a stock MiSTer runs them as-is."
+          ]
+        },
+        {
+          "q": "What disc rip formats does the builder accept?",
+          "a": [
+            "A .cue sheet with its .bin files beside it, a .mds/.mdf pair, or a .zip/.7z archive containing exactly one cue sheet. For the PlayStation 2 sources, point it at the .iso (or a zip containing it). The Final Fight OST is a folder of .flac or .wav files instead of a disc image.",
+            "CHD rips need converting back first with chdman extractcd, since the builder doesn't read CHD directly."
+          ]
+        },
+        {
+          "q": "A pack failed hash verification. What now?",
+          "a": [
+            "It almost always means the disc isn't one of the supported releases listed above, or the rip is damaged. Check which release you have, re-rip if in doubt, and run make_packs.py again. A nonstandard ffmpeg build can also encode slightly differently; the stock Homebrew or distro ffmpeg matches the published hashes.",
+            "The builder won't stage a pack that fails, so a bad rip can't reach your SD card. There's a --no-verify flag if you want one anyway."
+          ]
+        },
+        {
+          "q": "Will this touch my existing MiSTer setup?",
+          "a": [
+            "No. The CPS+ cores have their own names and the MRAs live in their own folder, so your existing cores, MRAs and ROMs are untouched. To remove it, delete the _CPS+ folder, the three cores and games/CPS+."
+          ]
+        },
+        {
+          "q": "Is any of the music in the download?",
+          "a": [
+            "No, the kit is tools only. Every pack is made on your machine from a disc you own."
+          ]
+        },
+        {
+          "q": "Do the packs work in MAME or on a real arcade board?",
+          "a": [
+            "No. CPS+ is a MiSTer feature: the streaming player lives in the FPGA cores and the pack loads into the MiSTer's DDR memory. Everywhere else the games just play their stock music.",
+            "The companion projects do cover other targets: SFA2 Gold and the Final Fight CD cutscene backport both ship HBMAME sets. See their pages, linked below."
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "game": "Final Fight",
+          "sets": "ffightu, ffightj",
+          "packs": [
+            {
+              "soundtrack": "Sega CD arrange",
+              "disc": "Final Fight CD"
+            },
+            {
+              "soundtrack": "SNES soundtrack",
+              "disc": "Final Fight OST box"
+            },
+            {
+              "soundtrack": "X68000 FM soundtrack",
+              "disc": "Final Fight OST box"
+            },
+            {
+              "soundtrack": "X68000 MIDI soundtrack",
+              "disc": "Final Fight OST box"
+            }
+          ]
+        },
+        {
+          "game": "Forgotten Worlds",
+          "also": "Lost Worlds in Japan",
+          "sets": "forgottn, lostwrld",
+          "packs": [
+            {
+              "soundtrack": "PC Engine CD arrange",
+              "disc": "Forgotten Worlds"
+            }
+          ]
+        },
+        {
+          "game": "Hyper Street Fighter II",
+          "sets": "hsf2, hsf2j, hsf2a",
+          "packs": [
+            {
+              "soundtrack": "Anniversary Edition arrange",
+              "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            },
+            {
+              "soundtrack": "CPS-1 soundtrack",
+              "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            }
+          ]
+        },
+        {
+          "game": "Mega Twins",
+          "also": "Chiki Chiki Boys in Japan",
+          "sets": "mtwins, chikij",
+          "packs": [
+            {
+              "soundtrack": "PC Engine CD arrange",
+              "disc": "Chiki Chiki Boys"
+            }
+          ]
+        },
+        {
+          "game": "Saturday Night Slam Masters",
+          "also": "Muscle Bomber in Japan",
+          "sets": "slammastu, mbomberj",
+          "packs": [
+            {
+              "soundtrack": "FM Towns arrange",
+              "disc": "Muscle Bomber"
+            }
+          ]
+        },
+        {
+          "game": "Street Fighter Alpha",
+          "also": "Street Fighter Zero in Japan and Asia",
+          "sets": "sfau, sfzj, sfza",
+          "packs": [
+            {
+              "soundtrack": "Saturn arrange",
+              "disc": "Street Fighter Alpha: Warriors' Dreams"
+            }
+          ]
+        },
+        {
+          "game": "Street Fighter Alpha 2",
+          "also": "Street Fighter Zero 2 in Japan and Asia",
+          "sets": "sfa2u, sfz2j, sfz2a",
+          "packs": [
+            {
+              "soundtrack": "Saturn arrange",
+              "disc": "Street Fighter Zero 2 / Alpha 2"
+            },
+            {
+              "soundtrack": "SNES soundtrack",
+              "disc": "Street Fighter Alpha Anthology"
+            }
+          ]
+        },
+        {
+          "game": "Street Fighter Alpha 2 Gold",
+          "also": "Zero 2 Alpha and Zero 2 Dash",
+          "sets": "sfa2g, sfz2al, sfz2alj, sfz2d, sfz2da, sfa2d",
+          "packs": [
+            {
+              "soundtrack": "Saturn extended arrange",
+              "disc": "Street Fighter Zero 2′ or SF Collection Disc 2"
+            }
+          ]
+        },
+        {
+          "game": "Street Fighter II: The World Warrior",
+          "sets": "sf2uk, sf2jl",
+          "packs": [
+            {
+              "soundtrack": "Anniversary Edition arrange",
+              "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            }
+          ]
+        },
+        {
+          "game": "Street Fighter II': Champion Edition",
+          "sets": "sf2ceuc, sf2cejc",
+          "packs": [
+            {
+              "soundtrack": "Anniversary Edition arrange",
+              "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            }
+          ]
+        },
+        {
+          "game": "Street Fighter II': Hyper Fighting",
+          "sets": "sf2hfu, sf2hfj",
+          "packs": [
+            {
+              "soundtrack": "Anniversary Edition arrange",
+              "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            }
+          ]
+        },
+        {
+          "game": "Super Puzzle Fighter II Turbo",
+          "also": "Super Puzzle Fighter II X in Japan",
+          "sets": "spf2tu, spf2ta, spf2xj",
+          "packs": [
+            {
+              "soundtrack": "Saturn arrange",
+              "disc": "Super Puzzle Fighter II Turbo"
+            }
+          ]
+        },
+        {
+          "game": "Super Street Fighter II",
+          "sets": "ssf2u, ssf2j, ssf2a",
+          "packs": [
+            {
+              "soundtrack": "Anniversary Edition arrange",
+              "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            }
+          ]
+        },
+        {
+          "game": "Super Street Fighter II Turbo",
+          "also": "Super Street Fighter II X in Japan",
+          "sets": "ssf2tu, ssf2ta, ssf2xj",
+          "packs": [
+            {
+              "soundtrack": "Anniversary Edition arrange",
+              "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "patches": [
     {
       "slug": "vhunt2-english",
       "title": "Night Warriors 2",
-      "subtitle": "Vampire Hunter 2 — English translation",
+      "subtitle": "Vampire Hunter 2, translated to English",
       "status": "release-candidate",
       "version": "rc1",
       "date": "2026-07-10",
       "game": "Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)",
       "set": "vhunt2",
       "hardware": "Capcom CPS-2",
-      "summary": "A complete English translation of the Japan-only Vampire Hunter 2, presented as the Night Warriors 2 that never shipped outside Japan.",
+      "summary": "The game before it came west as Night Warriors. This one stayed in Japanese arcades and never got an English release. Now it has one, under the name it should have had.",
       "description": [
-        "Vampire Hunter 2 is a 1997 Capcom fighter that only ever reached Japanese arcades. Its predecessor came to the West as Night Warriors: Darkstalkers' Revenge, but this sequel never made the trip. This patch translates the whole game into English and gives it the Western name it should have had: Night Warriors 2.",
-        "The Night Warriors 2 title screen isn't a fan mock-up. An unused Western title was already tucked away inside the original game — the patch finishes it and switches it on, leaving the gameplay exactly as it was.",
-        "Where Capcom's own English wording exists in the Western Darkstalkers games, the patch reuses it so the writing matches the official localization. Everything else — the victory taunts, the boss exchanges, and every character's ending — is freshly translated and checked in the actual game."
+        "Vampire Hunter 2 is a 1997 Capcom fighter that only ever reached Japanese arcades. Its predecessor came to the West as Night Warriors: Darkstalkers' Revenge, but this sequel never made the trip. The patch translates the whole game into English and gives it the Western name it should have had, Night Warriors 2.",
+        "That title screen isn't a fan mock-up. An unused Western title was already sitting inside the original game, and the patch finishes it and switches it on. Nothing about the gameplay changes.",
+        "Where Capcom's own English wording exists in the Western Darkstalkers games, the patch reuses it, so the writing matches the official localization. Everything else gets a fresh translation, checked in the actual game: the victory taunts, the boss exchanges, and every character's ending."
       ],
       "changes": [
         "Arcade-native Night Warriors 2 title screen, built from the ROM's unused Western title path",
@@ -35,7 +379,7 @@
         "Western character names on character select, route map labels, and the fight HUD: Zabel → L.Raptor, Gallon → J.Talbain, Lei-Lei → Hsien-Ko, Phobos → Huitzil, Aulbath → Rikuo",
         "English route/stage titles",
         "All 225 post-fight quotes in English",
-        "All boss dialog and every character ending translated (44 records, verified on natural routes)",
+        "All boss dialog and every character ending translated",
         "English staff roll under the Night Warriors 2 name"
       ],
       "artifact": {
@@ -70,16 +414,16 @@
         },
         {
           "single": "../capcom/translations/vhunt2/work/vhunt2_live_anakaris_quote_no_power_review_harness/vhunt2_6000_quote_candidate.png",
-          "caption": "Post-fight quotes — all 225 messages are in English (Anakaris shown)."
+          "caption": "Post-fight quotes in English (Anakaris shown)."
         },
         {
           "single": "../capcom/translations/vhunt2/work/vhunt2_narrative_acceptance/pyron/vhunt2_17300_ending_08.png",
-          "caption": "Ending narration in English, captured on a natural playthrough route (Pyron's ending shown)."
+          "caption": "Ending narration in English (Pyron's ending shown)."
         }
       ],
       "notes": [
         "MAME reports checksum warnings for the three patched program ROMs. This is expected; the game boots and plays normally.",
-        "Official English donor text comes from the Western Night Warriors and Vampire Savior arcade sets and is only used where the Japanese source record was demonstrably equivalent."
+        "Where a line matches the Western Night Warriors or Vampire Savior arcade sets, the patch reuses Capcom's own English, but only where the Japanese text says the same thing."
       ]
     },
     {
@@ -92,18 +436,18 @@
       "game": "Vampire Savior 2: The Lord of Vampire (Japan 970913)",
       "set": "vsav2",
       "hardware": "Capcom CPS-2",
-      "summary": "English translation of the Japan-only Vampire Savior 2: Western character names, all 241 post-fight quotes, and every ending and final-boss dialog page.",
+      "summary": "Vampire Savior 2 never left Japan. This translates all of it: Western character names, all 241 post-fight quotes, every ending, and the final showdown with Jedah.",
       "description": [
-        "Vampire Savior 2 is a Japan-only update of Vampire Savior with a shuffled roster — Donovan, Huitzil, and Pyron join the fight, while Gallon, Aulbath, and Sasquatch sit this one out — plus its own set of endings. It never came out in English. This patch translates the entire game.",
-        "Where the dialogue matches the Western release of Vampire Savior, the patch reuses Capcom's own English so it reads like the official localization. The lines unique to this version — the quotes for Huitzil, Pyron, and Donovan, along with every ending and the final confrontation with Jedah — are newly translated to read naturally while staying true to the original.",
+        "Vampire Savior 2 is a Japan-only update of Vampire Savior with a shuffled roster. Donovan, Huitzil, and Pyron join the fight, while Gallon, Aulbath, and Sasquatch sit this one out, and it carries its own set of endings. It never came out in English. This patch translates the entire game.",
+        "Where the dialogue matches the Western release of Vampire Savior, the patch reuses Capcom's own English so it reads like the official localization. The lines unique to this version get a fresh translation, written to read naturally while staying true to the original: the quotes for Huitzil, Pyron, and Donovan, plus every ending and the final confrontation with Jedah.",
         "The title screen keeps the Vampire Savior 2 name, which is how the game appeared in arcades. 'Darkstalkers 3' was a later name used only for the home versions."
       ],
       "changes": [
         "USA region presentation",
         "Western character names on character select, route map, and fight HUD: Bulleta → Baby Bonnie Hood, Zabel → L.Raptor, Lei-Lei → Hsien-Ko, Phobos → Huitzil",
-        "All 241 post-fight quotes in English (192 official arcade records reused verbatim, 48 VS2-only records newly translated)",
-        "All 29 ending pages and both 4-page Jedah final-boss dialogs translated and relocated into verified free ROM space",
-        "Route stage names and option labels verified byte-identical to the official U.S. arcade records"
+        "All 241 post-fight quotes in English, reusing Capcom's own wording where it exists",
+        "All 29 ending pages and both four-page Jedah final-boss dialogs translated",
+        "Route stage names and option labels match the official U.S. arcade wording"
       ],
       "artifact": {
         "stock_zip": "../capcom/roms/mame0260/vsav2.zip",
@@ -136,20 +480,20 @@
         },
         {
           "single": "../capcom/translations/vsav2/work/post_fight_quote_acceptance/bulleta_natural/vsav2_6000_quote.png",
-          "caption": "Post-fight quotes in English (B.B. Hood shown, natural route capture)."
+          "caption": "Post-fight quotes in English (B.B. Hood shown)."
         },
         {
           "before": "../capcom/translations/vsav2/work/narrative_review_sweep/vs2_narrative_0a0a8e_0004_00/vsav2_6000_narrative_page.png",
           "after": "../capcom/translations/vsav2/work/narrative_patch_acceptance/standard_ending_p00/vsav2_6000_english_page.png",
-          "caption": "The same ending page before and after: the Japanese source and its relocated English translation."
+          "caption": "The same ending page before and after."
         },
         {
           "single": "../capcom/translations/vsav2/work/baseline_surface_sweep/vsav2_3100_coin_title.png",
-          "caption": "The title art is intentionally unchanged — the official U.S. arcade release of the previous game also used Vampire Savior branding."
+          "caption": "The title art is intentionally unchanged. The official U.S. arcade release of the previous game also used Vampire Savior branding."
         }
       ],
       "notes": [
-        "Release candidate: the translation is complete and every changed surface has passed automated acceptance, but wording review is still open. Report anything that reads badly.",
+        "Release candidate: the translation is complete and tested, but the wording review is still open. Report anything that reads badly.",
         "MAME reports checksum warnings for the three patched program ROMs. This is expected; the game boots and plays normally."
       ]
     },
@@ -163,15 +507,15 @@
       "game": "Street Fighter Zero 3 Upper (Japan, GDL-0002)",
       "set": "sfz3ugd",
       "hardware": "Sega NAOMI GD-ROM",
-      "summary": "Removes the Japan-only region lock from the Zero 3 Upper GD-ROM so it boots on Japanese, USA, and Export NAOMI systems. One byte in the game header, properly re-encrypted.",
+      "summary": "Zero 3 Upper shipped locked to Japanese cabinets. One byte in the disc header says so. Change it, re-encrypt it, and the same disc boots on a USA or Export NAOMI.",
       "description": [
         "Street Fighter Zero 3 Upper is an enhanced version of Street Fighter Alpha 3 that only came to arcades in Japan, on Sega's NAOMI hardware. Because it's flagged as a Japanese release, a US or Export machine rejects the disc on sight with \"THIS GAME IS NOT ACCEPTABLE BY MAIN BOARD.\"",
-        "This patch flips that region flag so the very same disc boots on Japanese, US, and Export systems. Nothing about the game itself changes — but on a US or Export machine it now shows its Western Street Fighter Alpha 3 branding instead of the Japanese Street Fighter Zero 3, exactly as an overseas release would have.",
-        "It's the smallest change possible: only the region flag is touched, and the game, its language, and its settings are left just as Capcom shipped them. Booting was confirmed on all three region setups."
+        "This patch flips that region flag so the very same disc boots on Japanese, US, and Export systems. Nothing about the game itself changes. On a US or Export machine it now comes up with its Western Street Fighter Alpha 3 branding instead of the Japanese Street Fighter Zero 3, exactly as an overseas release would have.",
+        "It is the smallest change possible. Only the region flag is touched, and the game, its language and its settings are left just as Capcom shipped them."
       ],
       "changes": [
         "NAOMI header region mask: Japan → Japan + USA + Export (one byte in the game header, eight encrypted bytes on disc)",
-        "Nothing else — this is a region unlock only; it does not translate or otherwise modify the game"
+        "Nothing else. This is a region unlock only, and it does not translate or otherwise modify the game"
       ],
       "chd_patch": {
         "stock_chd": "../capcom/arc/sfz3ugd/gdl-0002.chd",
@@ -184,7 +528,7 @@
           "after": "data/screenshots/sfz3ugd/title_usa_alpha3.png",
           "before_label": "Japan region",
           "after_label": "USA region",
-          "caption": "The same patched disc on two BIOS regions. The game's own region-dependent title art shows Street Fighter Zero 3 on a Japanese board and Street Fighter Alpha 3 on a USA board — note the U.S. copyright line under the American title."
+          "caption": "The same patched disc on two BIOS regions. The game's own region-dependent title art shows Street Fighter Zero 3 on a Japanese board and Street Fighter Alpha 3 on a USA board. Note the U.S. copyright line under the American title."
         },
         {
           "before": "data/screenshots/sfz3ugd/usa_bios_stock_refused.png",
@@ -210,10 +554,10 @@
       "game": "Street Fighter Zero 3 Upper (Japan, NAOMI GD-ROM, sfz3ugd)",
       "set": "sfz3ugd",
       "hardware": "Sega NAOMI GD-ROM",
-      "summary": "Conversion tooling that turns a GD-ROM image from your own copy of the Japan-only Zero 3 Upper arcade game into multi-region Alpha 3 Upper builds.",
+      "summary": "Tooling that takes a GD-ROM image from your own copy of the Japan-only Zero 3 Upper and rebuilds it into multi-region Alpha 3 Upper builds.",
       "description": [
         "Street Fighter Zero 3 Upper shipped on NAOMI GD-ROM only in Japan. This project builds tooling that takes a GD-ROM image from your own copy of the arcade game and rebuilds it into a working multi-region image, including the converted character portraits the Western versions need.",
-        "In development. The container format work (Capcom ARC v7, IBIS payloads) and GD-ROM DES tooling are done; build and verification automation is in progress."
+        "In development. The container format work (Capcom ARC v7, IBIS payloads) and the GD-ROM DES tooling are done, and build and verification automation is in progress."
       ],
       "changes": [],
       "artifact": null,
@@ -223,25 +567,171 @@
       ]
     },
     {
-      "slug": "sfa2-gold-cps2",
-      "hidden": true,
+      "slug": "sfa2-gold",
       "title": "Street Fighter Alpha 2 Gold",
-      "subtitle": "Zero 2 Dash — native CPS-2 reconstruction",
-      "status": "research",
-      "version": null,
-      "date": null,
-      "game": "Street Fighter Alpha 2 Gold / Street Fighter Zero 2 Dash (PS2 anthology revision, 2006)",
-      "set": "—",
-      "hardware": "Capcom CPS-2 (target)",
-      "summary": "Recovering the revised 2006 PlayStation 2 edition of Alpha 2 Gold as a native CPS-2 game, by differential restoration from the released Zero 2 Alpha arcade program.",
+      "subtitle": "Zero 2 Dash, rebuilt for CPS-2 hardware",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-08-25",
+      "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
+      "hardware": "Capcom CPS-2",
+      "thumbnail_build": "us",
+      "summary": "Capcom's 2006 PlayStation 2 anthology carried a revised Alpha 2 Gold that added Cammy, and it only ever ran inside that anthology's own emulator. This rebuilds it as a real CPS-2 game, in four regional builds, for emulators, MiSTer, and real hardware.",
       "description": [
-        "The 2006 PlayStation 2 anthology contains a revised edition of Street Fighter Alpha 2 Gold / Zero 2 Dash that never existed on arcade hardware. The goal here is a native CPS-2 68K game — not a PS2 emulator wrapper and not a newly designed remix — recovered by starting from the released CPS-2 Zero 2 Alpha program and restoring the bounded anthology changes one at a time.",
-        "Research stage. Boot, title, character-select presentation, and the restored Cammy path are being validated with deterministic MAME automation; there is no release yet, and there may never be one if the restoration cannot be proven faithful."
+        "Street Fighter Alpha 2 Gold, known as Zero 2 Dash in Japan, was given a revised edition in Capcom's 2006 PlayStation 2 anthology, most notably adding Cammy as a playable fighter. That edition only ever ran inside the anthology's own emulator. It was never released on arcade hardware. This project rebuilds it as a real CPS-2 game.",
+        "It is a faithful reconstruction, not a remix. It starts from the original arcade Zero 2 Alpha program and restores the anthology's changes piece by piece: Cammy, her graphics, the audio, and the endings, each one checked against the PlayStation 2 original. Four regional builds are provided, shown below.",
+        "This is a release candidate. All four builds are complete and verified against the reference. The 4 MB builds have been run and accepted in MAME, and the 8 MB builds are verified by content and checksum."
       ],
-      "changes": [],
-      "artifact": null,
-      "screenshots": [],
-      "notes": []
+      "changes": [
+        "Cammy restored as a playable fighter, with her graphics, palettes, voice, sound effects, win poses, and ending",
+        "The revised title, presentation, and staff-credit screens for each region",
+        "Four regional builds: USA (Alpha 2 Gold), Europe (Alpha 2 Dash), Japan (Zero 2 Dash), and an English Asia (Zero 2 Dash)",
+        "4 MB builds for real hardware and stock MAME, plus 8 MB builds carrying Cammy's full audio for HBMAME and MiSTer"
+      ],
+      "builds": [
+        {
+          "key": "us",
+          "region": "USA",
+          "title": "Street Fighter Alpha 2 Gold",
+          "datecode": "060613",
+          "hbmame_set": "sfa2g",
+          "mame_set": "sfz2al",
+          "title_screen": "data/screenshots/sfa2-gold/title_us_sfa2g.png"
+        },
+        {
+          "key": "eu",
+          "region": "Europe",
+          "title": "Street Fighter Alpha 2 Dash",
+          "datecode": "060707",
+          "hbmame_set": "sfa2d",
+          "mame_set": "sfz2al",
+          "title_screen": "data/screenshots/sfa2-gold/title_eu_sfa2d.png"
+        },
+        {
+          "key": "jp",
+          "region": "Japan",
+          "title": "Street Fighter Zero 2 Dash",
+          "datecode": "060525",
+          "hbmame_set": "sfz2d",
+          "mame_set": "sfz2alj",
+          "title_screen": "data/screenshots/sfa2-gold/title_jp_sfz2d.png"
+        },
+        {
+          "key": "asia",
+          "region": "Asia (English)",
+          "title": "Street Fighter Zero 2 Dash",
+          "datecode": "060525",
+          "hbmame_set": "sfz2da",
+          "mame_set": "sfz2al",
+          "title_screen": "data/screenshots/sfa2-gold/title_asia_sfz2da.png"
+        }
+      ],
+      "screenshots": [
+        {
+          "single": "data/screenshots/sfa2-gold/cammy_select.png",
+          "caption": "Cammy joins the roster on the character-select screen."
+        },
+        {
+          "single": "data/screenshots/sfa2-gold/cammy_fight.png",
+          "caption": "Cammy in action, landing a jumping kick on Guy."
+        }
+      ],
+      "reconstruction": {
+        "requires": [
+          "your own PlayStation 2 anthology disc image: Street Fighter Alpha Anthology, or Street Fighter Zero — Fighter's Generation for the Japan set",
+          "your own arcade Street Fighter Zero 2 Alpha romset: sfz2al, plus sfz2alj for the Japan set"
+        ],
+        "kit_dir": "tools/sfa2gold_builder",
+        "kit_command": "python3 apply.py --iso \"Street Fighter Alpha Anthology.iso\" \\\n                 --romset sfz2al.zip --region us --out-dir out"
+      },
+      "notes": [
+        "The 8 MB builds hold more QSound audio than an original CPS-2 board supports, so they run only on HBMAME and MiSTer, not real hardware.",
+        "This is a fan reconstruction, unaffiliated with Capcom. It is not derived from and does not include the anthology's PlayStation 2 emulator."
+      ],
+      "related": [
+        {
+          "label": "CPS+",
+          "url": "../cps-plus/",
+          "note": "pair these sets with the arranged Saturn soundtrack on MiSTer, using the Gold Arrange MRAs in the CPS+ kit, which load them directly"
+        }
+      ]
+    },
+    {
+      "slug": "final-fight-cd",
+      "title": "Final Fight — CD Cutscenes",
+      "subtitle": "Sega CD cutscenes on the CPS-1 arcade board",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-08-25",
+      "game": "Final Fight (arcade, Capcom CPS-1)",
+      "set": "—",
+      "hardware": "Capcom CPS-1",
+      "summary": "The Sega CD version of Final Fight opened with a proper animated cutscene. This puts it back on the arcade game, running as native CPS-1 graphics, for HBMAME and MiSTer.",
+      "description": [
+        "The 1993 Sega CD port replaced the arcade's brief story block with a fully animated opening and a soundtrack with spoken dialogue. This project reproduces that cutscene as native CPS-1 presentation on the arcade Final Fight, driven by a new 68K cutscene engine added to the game's program ROM. The stock game, its timing, and its gameplay are left intact.",
+        "The cutscene art needs far more room than a stock Final Fight board has, so the graphics region is grown from 2 MB to 6 MB. An original CPS-1 board and stock MAME cannot address that extra ROM, so this runs only on HBMAME and on MiSTer's jtcps1 core.",
+        "There are two regional builds, USA (ffightus01) and Japan (ffightjs01), each matched to its own disc. You supply the arcade Final Fight romset and your own Final Fight CD, and the build is put together on your machine.",
+        "This is the visual half. The cutscenes play over the arcade game's own music and effects. The Sega CD's soundtrack and spoken dialogue are a separate release, the CPS+ arrange packs, which ship their own MiSTer MRA combining the two. Install this on its own and you get the cutscenes with arcade audio."
+      ],
+      "changes": [
+        "The Sega CD opening cutscene rebuilt as native CPS-1 graphics: the Metro City map, the Mad Gear line-up, Damnd's sketch and the knife, Haggar's phone call, and the Cody & Guy montage",
+        "A new 68K cutscene engine, leaving the stock story, timing, and gameplay unchanged",
+        "USA (ffightus01) and Japan (ffightjs01) builds, each matched to its region's disc dialogue and artwork",
+        "Delivered as an HBMAME set and a MiSTer jtcps1 MRA that sit alongside the stock game"
+      ],
+      "screenshots": [
+        {
+          "single": "data/screenshots/final-fight-cd/scene_map.png",
+          "caption": "The opening cutscene sets the scene in Metro City, with the added English narration rendered natively on CPS-1."
+        },
+        {
+          "single": "data/screenshots/final-fight-cd/scene_sketch.png",
+          "caption": "Damnd's sketch of his victims, the knife driven in, over the opening's English caption."
+        },
+        {
+          "single": "data/screenshots/final-fight-cd/scene_phone.png",
+          "caption": "Haggar takes the kidnappers' call, their threat shown as an English caption."
+        },
+        {
+          "single": "data/screenshots/final-fight-cd/scene_codyguy.png",
+          "caption": "Cody and Guy resolve to take on Mad Gear, English dialogue captions and all."
+        },
+        {
+          "single": "data/screenshots/final-fight-cd/scene_ending.png",
+          "caption": "The ending's new scene: Haggar and Jessica's reunion, redrawn from the Sega CD, with the English dialogue as a caption."
+        }
+      ],
+      "notes": [
+        "Because it grows the graphics ROM, this runs only on HBMAME and MiSTer (jtcps1), not stock MAME or an original CPS-1 board.",
+        "The cutscene art and audio derive from Capcom's Final Fight CD. This is an unofficial fan project, unaffiliated with Capcom or Sega."
+      ],
+      "related": [
+        {
+          "label": "CPS+",
+          "url": "../cps-plus/",
+          "note": "the ‘Final Fight (Arrange + CD Cutscenes)’ MRA in the CPS+ kit pairs this set with the Sega CD arranged soundtrack on MiSTer"
+        }
+      ],
+      "reconstruction": {
+        "requires": [
+          "your own Final Fight CD disc image for each region you build: the USA disc for ffightus01, the Japan disc for ffightjs01",
+          "your own arcade Final Fight romset: ffight, ffightu and ffightj, MAME 0.260-era"
+        ],
+        "kit_dir": "tools/ffightcd_builder",
+        "kit_include": [
+          "apply.py",
+          "README.txt",
+          "ffcd/*.py",
+          "build/*.py",
+          "data/ending/*",
+          "data/captions/*",
+          "data/audio/*",
+          "data/stage0/*/retime_patches.mra.xml",
+          "control/*.key",
+          "mras/*.mra"
+        ],
+        "kit_command": "python3 apply.py --disc-jp \"Final Fight CD (JP).img\" \\\n                 --disc-us \"Final Fight CD (USA) (Track 01).bin\" \\\n                 --romset /path/to/roms --out-dir out"
+      }
     }
   ]
 }

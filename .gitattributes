@@ -2,3 +2,10 @@
 * text=auto
 *.png -text
 *.zip -text
+
+# The CPS+ export is a byte-faithful copy of the inputs that produced the
+# hash-pinned packs in PACK_HASHES.sha256.  Some manifests carry CR-only line
+# endings from their original tooling; `text=auto` above would rewrite them on
+# checkout, handing users inputs that differ from the ones the blessed packs
+# were built from.
+data/cpsplus/** -text

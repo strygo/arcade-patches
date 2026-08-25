@@ -197,6 +197,36 @@ the NAOMI BIOS + ~1GB stock parent CHD into collections as new dependencies.
 If declined: publish our own clrmamepro-style dat for the patched sets as
 the fallback distribution channel.
 
+## SFA2 Gold / SFZ2 Dash backport sets (local RC1, 2026-08-25)
+
+Four sets on hbmame branch `add/sfa2gold` (commit local ONLY — no push,
+no PR, per Steve; ROM hashes may still change during testing):
+
+| Set | Region | Description |
+|---|---|---|
+| `sfa2d` | Europe | Street Fighter Alpha 2 Dash (960826, PS2 Backport, 2026-08-25) |
+| `sfa2g` | USA | Street Fighter Alpha 2 Gold (960826, PS2 Backport, 2026-08-25) |
+| `sfz2d` | Japan | Street Fighter Zero 2 Dash (960805J, PS2 Backport, 2026-08-25) |
+| `sfz2da` | English Asia | Street Fighter Zero 2 Dash (960826, English, PS2 Backport, 2026-08-25) |
+
+Differences from the translation-clone pattern: registry vanity setnames
+(sf2prime/sfz3mix precedent for named projects) instead of `sNN`; each zip
+is a **self-contained full set** (modified program + Z80 audio + gfx, plus
+8MB expanded QSound — declared as a `0x800000` qsound region; no driver code
+changes needed); member names are kept exactly as shipped in the
+registry-pinned archives. All four are clones of `sfz2al`, encrypted with
+stock keys, machine `cps2`. Only the 8MiB archives are integrated (the 4MiB
+compat sets target stock MAME and stay out of HBMAME).
+
+Source of truth: `../capcom/backports/sfa2gold/manifests/`
+`release_artifact_registry.json` (`regions.*.shipping.8mb`). When hashes
+change: re-run `python3 backports/sfa2gold/scripts/build_all_regions.py
+--verify-only` in ../capcom, then `python3 tools/gen_hbmame_sfa2gold.py`
+here (verifies registry MD5s, regenerates the ROM_START blocks from the
+zips), replace the four blocks in `cps2mis.cpp`, rebuild, re-verify, amend
+the branch commit. Verified this round: `-validate` clean, all four
+`-verifyroms` good, all four boot to their distinct regional title screens.
+
 ## Site follow-ups (per merged game)
 
 - Add the HBMAME setname to the patch's `data/patches.json` entry (new field,
