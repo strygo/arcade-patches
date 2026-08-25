@@ -1,0 +1,89 @@
+# CD ending voice-over, US (en) -- word-level.
+# track: cd_us_tr24_ending.wav, 117.00 s
+# arcade ending window: 7074 f = 118.62 s  (overflow -1.62 s)
+# frame = round(t_seconds * 59.637), relative to cue 0x54.
+#
+seg	w_start	w_end	f_start	f_end	word
+0	6.360	6.880	379	410	Oh,
+0	6.880	7.400	410	441	Father.
+0	7.820	8.340	466	497	I
+0	8.340	8.600	497	513	was
+0	8.600	8.920	513	532	so
+0	8.920	9.480	532	565	scared.
+1	10.620	11.140	633	664	I'm
+1	11.140	11.340	664	676	so
+1	11.340	11.780	676	703	glad
+1	11.780	12.060	703	719	to
+1	12.060	12.340	719	736	see
+1	12.340	12.540	736	748	they
+1	12.540	12.820	748	765	didn't
+1	12.820	12.960	765	773	hurt
+1	12.960	13.240	773	790	you.
+2	14.220	14.740	848	879	I'm
+2	14.740	14.920	879	890	so
+2	14.920	15.420	890	920	sorry,
+2	15.520	15.720	926	937	Jessie.
+2	16.260	16.780	970	1001	I
+2	16.780	17.000	1001	1014	thought
+2	17.000	17.160	1014	1023	I'd
+2	17.160	17.440	1023	1040	lost
+2	17.440	17.640	1040	1052	you
+2	17.640	17.900	1052	1068	like
+2	17.900	18.040	1068	1076	I
+2	18.040	18.260	1076	1089	lost
+2	18.260	18.520	1089	1104	your
+2	18.520	18.780	1104	1120	mother.
+3	19.440	19.960	1159	1190	I'll
+3	19.960	20.160	1190	1202	never
+3	20.160	20.400	1202	1217	let
+3	20.400	20.640	1217	1231	anything
+3	20.640	21.060	1231	1256	bad
+3	21.060	21.480	1256	1281	happen
+3	21.480	21.680	1281	1293	to
+3	21.680	21.780	1293	1299	you
+3	21.780	22.140	1299	1320	again.
+4	23.140	23.660	1380	1411	I
+4	23.660	24.180	1411	1442	love
+4	24.180	24.400	1442	1455	you,
+4	24.500	24.900	1461	1485	Father.
+# last voiced moment: 24.90 s = frame 1485 of 7074
+# ---- CD-6 FAREWELL (Cody/Jessica).
+# Same method as the rows above (transcribe_ending_vo.py -- faster-whisper
+# large-v3, word timestamps) run over the farewell window of the PADDED
+# track cd_us_tr24_ending.wav.  w_start/w_end stay on the padded track;
+# f_start/f_end are POSITIONS IN THE SHIPPED WAV, which lifts 20.5604 s
+# out of the credits loop (117.000 -> 96.440):
+#   f = round((padded_t - 20.5604) * 59.637405)
+# They are audio coordinates, NOT caption-clock frames: this scene's
+# clock-to-audio mapping is measured against the video (rom.py
+# FAREWELL_CAPTIONS_US), and the onsets here corroborate it -- seg 5's
+# start matches the centre-channel spectrogram onset to 1 f, the anchor
+# of caption line 2.
+seg	w_start	w_end	f_start	f_end	word
+5	99.060	99.220	4682	4691	How
+5	99.220	99.400	4691	4702	can
+5	99.400	99.580	4702	4713	you
+5	99.580	99.860	4713	4729	just
+5	99.860	100.360	4729	4759	walk
+5	100.360	100.740	4759	4782	away
+5	100.740	101.100	4782	4803	now?
+6	102.440	103.000	4883	4916	I
+6	103.000	103.240	4916	4931	want
+6	103.240	103.360	4931	4938	to
+6	103.360	103.540	4938	4949	stay
+6	103.540	103.740	4949	4961	here
+6	103.740	103.940	4961	4973	with
+6	103.940	104.140	4973	4984	you,
+6	104.140	104.600	4984	5012	Jessica.
+6	104.600	105.100	5012	5042	But
+6	105.100	105.240	5042	5050	I
+6	105.240	105.800	5050	5083	can't.
+7	106.040	106.600	5098	5131	Not
+7	106.600	106.820	5131	5144	while
+7	106.820	107.220	5144	5168	evil
+7	107.220	107.540	5168	5187	still
+7	107.540	108.200	5187	5227	stalks
+7	108.200	108.800	5227	5262	the street.
+8	109.460	110.020	5302	5335	Oh,
+8	110.020	110.600	5335	5370	Cody.
+# farewell last voiced moment: padded 110.60 s = shipped wav 90.04 s = wav frame 5370

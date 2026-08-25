@@ -1,0 +1,9 @@
+# FFCD_V2 (task #19) reunion shot row for the VM-direct jp esnap
+# (scripts/make_esnaps_v2.py).  The modeled sweep's reunion body runs
+# local 0-1557 (last full-bright frame before the exit fade at sweep
+# f1787; first-full-bright = sweep f229) -- 45 frames longer than the v1
+# capture-domain 1513, because the e6 capture compressed the true pacing.
+# The US v2 esnap keeps the v1 cd1_shots.tsv (window 0-1512 with its
+# native fade inside).
+# shot	f_start	f_end	seconds	still	cross	distinct	colours
+0	0	1557	26.1	0	0	0	0

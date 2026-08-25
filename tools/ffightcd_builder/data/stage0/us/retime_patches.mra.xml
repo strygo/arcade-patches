@@ -1,0 +1,27 @@
+<!-- Stage 0 retime: apply inside <rom index="0"> after the parts.
+     Offsets are maincpu image addresses (ff_36/ff_42 16-bit
+     interleave, identical across ffight/ffightu/ffightj). -->
+        <patch offset="0x01718e">01 28</patch>
+        <patch offset="0x017220">01 28</patch>
+        <patch offset="0x01724c">01 28</patch>
+        <patch offset="0x017274">01 28</patch>
+        <patch offset="0x0172c0">02 C6</patch>
+        <patch offset="0x017377">A4</patch>
+        <patch offset="0x01739f">A4</patch>
+        <patch offset="0x0173c9">A4</patch>
+        <patch offset="0x017445">A4</patch>
+        <patch offset="0x01746d">A4</patch>
+        <patch offset="0x017495">A4</patch>
+        <patch offset="0x0174bc">01 F0</patch>
+        <patch offset="0x0175c5">18</patch>
+        <patch offset="0x01767f">5C</patch>
+        <patch offset="0x0176a7">5C</patch>
+        <patch offset="0x0176d1">5C</patch>
+        <patch offset="0x01772d">5C</patch>
+        <patch offset="0x017755">5C</patch>
+        <patch offset="0x017787">5C</patch>
+        <patch offset="0x0177a4">01 15</patch>
+        <patch offset="0x0177e0">01 15</patch>
+        <patch offset="0x017847">72</patch>
+        <patch offset="0x0178d1">72</patch>
+        <patch offset="0x0178fb">8E</patch>

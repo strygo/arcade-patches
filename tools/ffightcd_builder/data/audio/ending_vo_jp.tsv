@@ -1,0 +1,75 @@
+# CD ending voice-over, JP (ja) -- word-level.
+# track: cd_jp_tr24_ending.wav, 140.55 s
+# arcade ending window: 7074 f = 118.62 s  (overflow +21.93 s)
+# frame = round(t_seconds * 59.637), relative to cue 0x54.
+#
+seg	w_start	w_end	f_start	f_end	word
+0	13.100	13.320	781	794	ジ
+0	13.320	13.380	794	798	ェ
+0	13.380	13.480	798	804	シ
+0	13.480	13.680	804	816	カ、
+0	13.760	14.720	821	878	よ
+0	14.720	15.020	878	896	く
+0	15.020	15.180	896	905	無
+0	15.180	15.440	905	921	事
+0	15.440	15.560	921	928	で
+0	15.560	15.740	928	939	いて
+0	15.740	15.900	939	948	く
+0	15.900	16.120	948	961	れた
+1	17.440	17.820	1040	1063	妻
+1	17.820	17.960	1063	1071	に
+1	17.960	18.160	1071	1083	死
+1	18.160	18.360	1083	1095	な
+1	18.360	18.520	1095	1104	れ、
+1	18.540	19.300	1106	1151	今
+1	19.300	19.660	1151	1172	また
+1	19.660	19.880	1172	1186	お
+1	19.880	20.060	1186	1196	前
+1	20.060	20.220	1196	1206	を
+1	20.220	20.460	1206	1220	失
+1	20.460	20.680	1220	1233	って
+1	20.680	20.940	1233	1249	しま
+1	20.940	21.200	1249	1264	った
+1	21.200	21.320	1264	1271	ら
+2	21.740	22.120	1297	1319	私
+2	22.120	22.460	1319	1339	は
+2	22.460	22.660	1339	1351	もう
+3	22.660	23.260	1351	1387	俺
+3	41.060	41.260	2449	2461	の
+3	41.260	41.440	2461	2471	ため
+3	41.440	41.560	2471	2479	に
+3	41.560	41.700	2479	2487	も、
+3	41.780	42.320	2492	2524	ジ
+3	42.320	42.400	2524	2529	ェ
+3	42.400	42.440	2529	2531	シ
+3	42.440	42.540	2531	2537	カ
+3	42.540	42.620	2537	2542	の
+3	42.620	42.840	2542	2555	ため
+3	42.840	42.940	2555	2561	に
+3	42.940	43.080	2561	2569	も
+# last voiced moment: 43.08 s = frame 2569 of 7074
+# ---- CD-6 FAREWELL (Cody/Jessica).
+# transcribe_ending_vo.py method (faster-whisper large-v3, ja) over the
+# farewell window of the padded track cd_jp_tr24_ending.wav.  w_start/w_end
+# stay on the padded track; f_start/f_end are POSITIONS IN THE SHIPPED
+# WAV, which lifts 23.480 s out of the credits loop (140.560 -> 117.080):
+#   f = round((padded_t - 23.480) * 59.637405)
+# The caption schedule (rom.py FAREWELL_CAPTIONS_JP) agrees with these
+# positions: its first line fires 17 f ahead of seg 5's onset -- the
+# scene's caption lead.  Only the two dialogue blocks whisper resolved
+# are listed; the JP take is sparser than the US one and the gap at
+# 122-130 s is music, not speech.
+seg	w_start	w_end	f_start	f_end	word
+5	121.220	121.360	5829	5837	な
+5	121.360	121.500	5837	5846	ぜ
+5	121.500	121.820	5846	5865	逃
+5	121.820	121.880	5865	5868	げ
+5	121.880	122.000	5868	5875	る
+6	130.400	130.500	6376	6382	何
+6	130.500	130.680	6382	6393	も
+6	130.680	130.820	6393	6401	でき
+6	130.820	130.900	6401	6406	ん
+6	130.900	131.020	6406	6413	生
+6	131.020	131.140	6413	6421	き
+6	131.140	131.360	6421	6434	方
+# farewell last voiced moment: padded 131.36 s = shipped wav 107.88 s = wav frame 6434
