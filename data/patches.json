@@ -576,9 +576,9 @@
       "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "us",
-      "summary": "Capcom's 2006 PlayStation 2 anthology carried a revised Alpha 2 Gold that added Cammy, and it only ever ran inside that anthology's own emulator. This rebuilds it as a real CPS-2 game, in four regional builds, for emulators, MiSTer, and real hardware.",
+      "summary": "Capcom's 2006 PlayStation 2 anthology carried the final revision of Alpha 2 Gold, the console edition of Alpha 2 that brought Cammy into the roster. It was never released on arcade hardware. This rebuilds it as a real CPS-2 game, in four regional builds, for emulators, MiSTer, and real hardware.",
       "description": [
-        "Street Fighter Alpha 2 Gold, known as Zero 2 Dash in Japan, was given a revised edition in Capcom's 2006 PlayStation 2 anthology, most notably adding Cammy as a playable fighter. That edition only ever ran inside the anthology's own emulator. It was never released on arcade hardware. This project rebuilds it as a real CPS-2 game.",
+        "Street Fighter Alpha 2 Gold, known as Zero 2 Dash in Japan, was the console revision of Alpha 2 that added Cammy as a playable fighter, first on PlayStation and Saturn and in final form in Capcom's 2006 PlayStation 2 anthology. It was never released on arcade hardware. This project rebuilds the anthology's edition as a real CPS-2 game.",
         "It is a faithful reconstruction, not a remix. It starts from the original arcade Zero 2 Alpha program and restores the anthology's changes piece by piece: Cammy, her graphics, the audio, and the endings, each one checked against the PlayStation 2 original. Four regional builds are provided, shown below.",
         "This is a release candidate. All four builds are complete and verified against the reference. The 4 MB builds have been run and accepted in MAME, and the 8 MB builds are verified by content and checksum."
       ],
