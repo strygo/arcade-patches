@@ -964,6 +964,7 @@ def render_builds_page(site: dict, patch: dict, builds: list, bundle: dict | Non
     if shots:
         parts.append(render_shots(shots, heading="Cammy in action"))
     parts.append(render_reconstruction(patch, builds, bundle))
+    parts.append(render_release_history(patch))
     parts.append(render_related(patch))
     if patch.get("notes"):
         parts.append('<h2>Notes</h2><ul class="notes">')
@@ -972,6 +973,21 @@ def render_builds_page(site: dict, patch: dict, builds: list, bundle: dict | Non
 
     return page(site, f"{patch['title']} · {site['title']}", "\n".join(parts), depth=1)
 
+
+
+def render_release_history(patch: dict) -> str:
+    """Optional per-version changelog section."""
+    hist = patch.get("release_history")
+    if not hist:
+        return ""
+    parts = ["<h2>Release history</h2>"]
+    for rel in hist:
+        parts.append(
+            f'<h3>{esc(rel["version"])} ({esc(rel["date"])})</h3><ul>'
+        )
+        parts.extend(f"<li>{esc(i)}</li>" for i in rel["items"])
+        parts.append("</ul>")
+    return "\n".join(parts)
 
 
 def render_related(patch: dict) -> str:

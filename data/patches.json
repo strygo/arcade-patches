@@ -22,7 +22,7 @@
       "date": "2026-08-25",
       "hardware": "MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)",
       "summary": "When Capcom brought its arcade games home on CD, it sent the music back to the studio and re-recorded it. Those versions never made it back to the arcade. CPS+ puts them there. Pick a game on your MiSTer and the arranged soundtrack is just playing, while every punch, voice and jingle still comes from the arcade board itself.",
-      "featured_stats": "18 audio packs · 52 MRAs · 3 cores · every pack built from your own discs",
+      "featured_stats": "18 audio packs \u00b7 52 MRAs \u00b7 3 cores \u00b7 every pack built from your own discs",
       "description": [
         "From Final Fight CD onward, Capcom kept sending its arcade soundtracks back to the studio. Every CD-based home port got a full re-recording of the music, the 'arrange' versions, produced by the original composers' teams. For thirty years those recordings stayed locked to the home versions. CPS+ puts them where they always belonged, under the arcade games themselves.",
         "On a MiSTer, the real CPS-1 or CPS-2 hardware logic runs the game while the CD-era soundtrack plays the music, started, looped and faded by the game itself, exactly the way Capcom's own console releases timed it. Hit sounds, voices and the announcer stay pure arcade. It sounds like the arcade board grew a CD drive."
@@ -35,7 +35,7 @@
       ],
       "download_notes": [
         "The download is tools: the MRAs, the three CPS+ cores with their GPL-3.0 source, and the pack builder. It makes the packs on your machine from discs you own, naming anything it skips for want of a disc. It also assembles out/mister/ for you, holding the cores, your packs, and only the MRAs those packs can load, so nothing on the card fails to start.",
-        "Two MRA groups pair CPS+ audio with sets from companion projects on this site: the Alpha 2 Gold MRAs load the SFA2 Gold reconstructed sets, and ‘Final Fight (Arrange + CD Cutscenes)’ loads the Final Fight CD backport set. Build those with their own kits first (links below)."
+        "Two MRA groups pair CPS+ audio with sets from companion projects on this site: the Alpha 2 Gold MRAs load the SFA2 Gold reconstructed sets, and \u2018Final Fight (Arrange + CD Cutscenes)\u2019 loads the Final Fight CD backport set. Build those with their own kits first (links below)."
       ],
       "quickstart": [
         "Download and unzip the kit.",
@@ -64,13 +64,13 @@
           "note": "companion project: the reconstructed Gold sets that the Gold Arrange MRAs load"
         },
         {
-          "label": "Final Fight — CD Cutscenes",
+          "label": "Final Fight \u2014 CD Cutscenes",
           "url": "../final-fight-cd/",
           "note": "companion project: the cutscene backport set that pairs with the Arrange + CD Cutscenes MRA"
         }
       ],
       "notes": [
-        "The arranged recordings remain © Capcom and are never distributed here. Every pack is built from your own disc.",
+        "The arranged recordings remain \u00a9 Capcom and are never distributed here. Every pack is built from your own disc.",
         "Sound effects, voices and the announcer always play live through the original arcade audio path; packs substitute music only, and a few cues deliberately pass through to the arcade board's own music."
       ],
       "kit": {
@@ -93,7 +93,7 @@
         {
           "platform": "CD audio",
           "disc": "Final Fight OST box",
-          "variants": "discs 1–2, ripped to FLAC or WAV"
+          "variants": "discs 1\u20132, ripped to FLAC or WAV"
         },
         {
           "platform": "PlayStation 2",
@@ -113,11 +113,11 @@
         {
           "platform": "Saturn",
           "disc": "Street Fighter Zero 2 / Alpha 2",
-          "variants": "SF Zero 2 (Japan), SF Alpha 2 (USA or Europe), SF Zero 2′ (Japan) or SF Collection Disc 2; the songs are the same on all five"
+          "variants": "SF Zero 2 (Japan), SF Alpha 2 (USA or Europe), SF Zero 2\u2032 (Japan) or SF Collection Disc 2; the songs are the same on all five"
         },
         {
           "platform": "Saturn",
-          "disc": "Street Fighter Zero 2′ or SF Collection Disc 2",
+          "disc": "Street Fighter Zero 2\u2032 or SF Collection Disc 2",
           "variants": "the same on both, any SF Collection region"
         },
         {
@@ -287,7 +287,7 @@
           "packs": [
             {
               "soundtrack": "Saturn extended arrange",
-              "disc": "Street Fighter Zero 2′ or SF Collection Disc 2"
+              "disc": "Street Fighter Zero 2\u2032 or SF Collection Disc 2"
             }
           ]
         },
@@ -376,7 +376,7 @@
       "changes": [
         "Arcade-native Night Warriors 2 title screen, built from the ROM's unused Western title path",
         "USA region presentation (warning screen and region byte)",
-        "Western character names on character select, route map labels, and the fight HUD: Zabel → L.Raptor, Gallon → J.Talbain, Lei-Lei → Hsien-Ko, Phobos → Huitzil, Aulbath → Rikuo",
+        "Western character names on character select, route map labels, and the fight HUD: Zabel \u2192 L.Raptor, Gallon \u2192 J.Talbain, Lei-Lei \u2192 Hsien-Ko, Phobos \u2192 Huitzil, Aulbath \u2192 Rikuo",
         "English route/stage titles",
         "All 225 post-fight quotes in English",
         "All boss dialog and every character ending translated",
@@ -444,7 +444,7 @@
       ],
       "changes": [
         "USA region presentation",
-        "Western character names on character select, route map, and fight HUD: Bulleta → Baby Bonnie Hood, Zabel → L.Raptor, Lei-Lei → Hsien-Ko, Phobos → Huitzil",
+        "Western character names on character select, route map, and fight HUD: Bulleta \u2192 Baby Bonnie Hood, Zabel \u2192 L.Raptor, Lei-Lei \u2192 Hsien-Ko, Phobos \u2192 Huitzil",
         "All 241 post-fight quotes in English, reusing Capcom's own wording where it exists",
         "All 29 ending pages and both four-page Jedah final-boss dialogs translated",
         "Route stage names and option labels match the official U.S. arcade wording"
@@ -514,7 +514,7 @@
         "It is the smallest change possible. Only the region flag is touched, and the game, its language and its settings are left just as Capcom shipped them."
       ],
       "changes": [
-        "NAOMI header region mask: Japan → Japan + USA + Export (one byte in the game header, eight encrypted bytes on disc)",
+        "NAOMI header region mask: Japan \u2192 Japan + USA + Export (one byte in the game header, eight encrypted bytes on disc)",
         "Nothing else. This is a region unlock only, and it does not translate or otherwise modify the game"
       ],
       "chd_patch": {
@@ -571,8 +571,8 @@
       "title": "Street Fighter Alpha 2 Gold",
       "subtitle": "Zero 2 Dash, rebuilt for CPS-2 hardware",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-08-25",
+      "version": "rc2",
+      "date": "2026-08-27",
       "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "us",
@@ -638,7 +638,7 @@
       ],
       "reconstruction": {
         "requires": [
-          "your own PlayStation 2 anthology disc image: Street Fighter Alpha Anthology, or Street Fighter Zero — Fighter's Generation for the Japan set",
+          "your own PlayStation 2 anthology disc image: Street Fighter Alpha Anthology, or Street Fighter Zero \u2014 Fighter's Generation for the Japan set",
           "your own arcade Street Fighter Zero 2 Alpha romset: sfz2al, plus sfz2alj for the Japan set"
         ],
         "kit_dir": "tools/sfa2gold_builder",
@@ -654,17 +654,35 @@
           "url": "../cps-plus/",
           "note": "pair these sets with the arranged Saturn soundtrack on MiSTer, using the Gold Arrange MRAs in the CPS+ kit, which load them directly"
         }
+      ],
+      "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-08-27",
+          "items": [
+            "Fixed a sprite corruption that appeared during the attract sequence.",
+            "Polish improvements to the title screens across all four regions.",
+            "All four builds are rebuilt and set checksums have changed, so rebuild your sets with the rc2 kit."
+          ]
+        },
+        {
+          "version": "rc1",
+          "date": "2026-08-25",
+          "items": [
+            "First public release."
+          ]
+        }
       ]
     },
     {
       "slug": "final-fight-cd",
-      "title": "Final Fight — CD Cutscenes",
+      "title": "Final Fight \u2014 CD Cutscenes",
       "subtitle": "Sega CD cutscenes on the CPS-1 arcade board",
       "status": "release-candidate",
       "version": "rc1",
       "date": "2026-08-25",
       "game": "Final Fight (arcade, Capcom CPS-1)",
-      "set": "—",
+      "set": "\u2014",
       "hardware": "Capcom CPS-1",
       "summary": "The Sega CD version of Final Fight opened with a proper animated cutscene. This puts it back on the arcade game, running as native CPS-1 graphics, for HBMAME and MiSTer.",
       "description": [
@@ -709,7 +727,7 @@
         {
           "label": "CPS+",
           "url": "../cps-plus/",
-          "note": "the ‘Final Fight (Arrange + CD Cutscenes)’ MRA in the CPS+ kit pairs this set with the Sega CD arranged soundtrack on MiSTer"
+          "note": "the \u2018Final Fight (Arrange + CD Cutscenes)\u2019 MRA in the CPS+ kit pairs this set with the Sega CD arranged soundtrack on MiSTer"
         }
       ],
       "reconstruction": {

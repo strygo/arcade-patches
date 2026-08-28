@@ -17,8 +17,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 2 Gold</h1>
 <p class="subtitle">Zero 2 Dash, rebuilt for CPS-2 hardware</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-08-25</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-08-27</dd></dl>
 <h2>The four builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/sfa2-gold/title_us.png" alt="Street Fighter Alpha 2 Gold (USA) title screen"><figcaption><strong>Street Fighter Alpha 2 Gold</strong><br>USA · <code>sfa2g</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_eu.png" alt="Street Fighter Alpha 2 Dash (Europe) title screen"><figcaption><strong>Street Fighter Alpha 2 Dash</strong><br>Europe · <code>sfa2d</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_jp.png" alt="Street Fighter Zero 2 Dash (Japan) title screen"><figcaption><strong>Street Fighter Zero 2 Dash</strong><br>Japan · <code>sfz2d</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_asia.png" alt="Street Fighter Zero 2 Dash (Asia (English)) title screen"><figcaption><strong>Street Fighter Zero 2 Dash</strong><br>Asia (English) · <code>sfz2da</code></figcaption></figure></div>
 <h2>About</h2>
@@ -53,20 +53,29 @@ could hold, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>
 <h2>Download</h2>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/sfa2-gold-rc1-kit.zip">sfa2-gold-rc1-kit.zip</a>
+  <div class="file"><a href="../downloads/sfa2-gold-rc2-kit.zip">sfa2-gold-rc2-kit.zip</a>
   (997 KB)</div>
-  <div class="hash">SHA-256: ce2435a190fccf9baab718b47343fdaf291a30fcc59088ff7439ad65cef2a099</div>
+  <div class="hash">SHA-256: 762ddfb6bfd648ae60e13e6e316aafb16815c3684f8549dec5f8bf9b1ac03325</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
 <ul><li>your own PlayStation 2 anthology disc image: Street Fighter Alpha Anthology, or Street Fighter Zero — Fighter&#x27;s Generation for the Japan set</li><li>your own arcade Street Fighter Zero 2 Alpha romset: sfz2al, plus sfz2alj for the Japan set</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip sfa2-gold-rc1-kit.zip -d sfa2-gold
+<pre><code>unzip sfa2-gold-rc2-kit.zip -d sfa2-gold
 cd sfa2-gold
 python3 apply.py --iso &quot;Street Fighter Alpha Anthology.iso&quot; \
                  --romset sfz2al.zip --region us --out-dir out</code></pre>
 
+<h2>Release history</h2>
+<h3>rc2 (2026-08-27)</h3><ul>
+<li>Fixed a sprite corruption that appeared during the attract sequence.</li>
+<li>Polish improvements to the title screens across all four regions.</li>
+<li>All four builds are rebuilt and set checksums have changed, so rebuild your sets with the rc2 kit.</li>
+</ul>
+<h3>rc1 (2026-08-25)</h3><ul>
+<li>First public release.</li>
+</ul>
 <h2>Related projects</h2><ul><li><a href="../cps-plus/">CPS+</a>, pair these sets with the arranged Saturn soundtrack on MiSTer, using the Gold Arrange MRAs in the CPS+ kit, which load them directly</li></ul>
 <h2>Notes</h2><ul class="notes">
 <li>The 8 MB builds hold more QSound audio than an original CPS-2 board supports, so they run only on HBMAME and MiSTer, not real hardware.</li>
