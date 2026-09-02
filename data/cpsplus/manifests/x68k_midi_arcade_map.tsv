@@ -1,0 +1,164 @@
+# Evidence-first X68000 external-MIDI -> arcade music mapping.
+# Audio similarity may rank unresolved candidates but must never promote them.
+# X68000 music-test labels were cross-checked against these review references:
+# https://streetfighter.fandom.com/wiki/User_blog:S617519/"Street_Fighter_II%27:_Champion_Edition"_(X68000)_Music_test
+# https://streetfighter.fandom.com/wiki/User_blog:S617519/"Super_Street_Fighter_II:_The_New_Challengers"_(X68000)_Music_test
+# Arcade-side authority is the traced MAME sweep evidence named per row.
+# Daimakaimura evidence: clean 256-command ghoulsu MAME 0.288 sweep, same-board reference identity, service-mode long ending renders, and a complete A/B listening approval on 2026-08-31.
+game	song	x68k_select	arcade_set	arcade_cmd	role	match_status	in_game	evidence	arcade_aliases
+daimakaimura	song00	0x01	ghoulsu	0x00	Opening	verified	yes	MAME 0x00 render matches arcade Opening; X68000 audio/order diagonal	0x80
+daimakaimura	song01	0x02	ghoulsu	0x01	Game Over	verified	yes	MAME 0x01 duration/reference identity is Game Over; X68000 song01 follows the same command diagonal	0x81
+daimakaimura	song02	0x03	ghoulsu	0x02	Stage Clear	verified	yes	MAME 0x02 duration/reference identity is Stage Clear; X68000 song02 follows the same command diagonal	0x82
+daimakaimura	song03	0x04	ghoulsu	0x03	Name Register (1st Place)	verified	yes	MAME 0x03 same-board identity plus X68000 audio diagonal	0x83
+daimakaimura	song04	0x05	ghoulsu	0x04	Name Register (2nd Place or Below)	verified	yes	MAME 0x04 same-board identity plus X68000 audio diagonal	0x84
+daimakaimura	song05	0x06	ghoulsu	0x05	Name Register Finished (1st Place)	verified	yes	MAME 0x05 same-board identity plus X68000 duration/order	0x85
+daimakaimura	song06	0x07	ghoulsu	0x06	Name Register Finished (2nd Place or Below)	verified	yes	MAME 0x06 same-board identity plus X68000 audio/order	0x86
+daimakaimura	song07	0x08	ghoulsu	0x07	Credit	verified	yes	MAME 0x07 same-board Credit identity plus X68000 duration/order	0x87
+daimakaimura	song08	0x09	ghoulsu	0x08	Player Out	verified	yes	MAME 0x08 duration/reference identity is Player Out; X68000 duration agrees	0x88
+daimakaimura	song09	0x0a	ghoulsu	0x09	Time-Out Warning	verified	yes	MAME 0x09 same-board identity plus strong X68000 audio diagonal	0x89
+daimakaimura	song0a	0x0b	ghoulsu	0x0a	The Map	verified	yes	MAME 0x0a same-board Map identity plus X68000 duration/order	0x8a
+daimakaimura	song0b	0x0c	ghoulsu	0x0b	Continue	verified	yes	MAME 0x0b same-board identity plus strong X68000 audio diagonal	0x8b
+daimakaimura	song0c	0x0d	ghoulsu	0x0c	Stage 1: The Haunted Graveyard	verified	yes	MAME 0x0c same-board identity plus X68000 audio diagonal	0x8c
+daimakaimura	song0d	0x0e	ghoulsu	0x0d	Stage 1 Boss: Shielder	verified	yes	MAME 0x0d same-board identity plus X68000 audio diagonal	0x8d
+daimakaimura	song0e	0x0f	ghoulsu	0x0e	Stage 2: The Village of Decay	verified	yes	MAME 0x0e same-board identity plus strong X68000 audio diagonal	0x8e
+daimakaimura	song0f	0x10	ghoulsu	0x0f	Stage 2 Boss: Cerberus	verified	yes	MAME 0x0f same-board identity plus strong X68000 audio diagonal	0x8f
+daimakaimura	song10	0x11	ghoulsu	0x10	Stage 3: Baron Rankle's Tower	verified	yes	MAME 0x10 same-board identity plus strong X68000 audio diagonal	0x90
+daimakaimura	song11	0x12	ghoulsu	0x11	Stage 3 Boss: Gassuto	verified	yes	MAME 0x11 same-board identity plus X68000 audio diagonal	0x91
+daimakaimura	song12	0x13	ghoulsu	0x12	Stage 4: The Crystal Forest	verified	yes	MAME 0x12 same-board identity plus strong X68000 audio diagonal	0x92
+daimakaimura	song13	0x14	ghoulsu	0x13	Stage 4 Boss: Ohma	verified	yes	listening-gate-approved X68000/arcade A/B; contiguous arcade stage/boss bank and audio diagonal	0x93
+daimakaimura	song14	0x15	ghoulsu	0x14	Stage 5: Lucifer's Castle	verified	yes	MAME 0x14 same-board identity plus X68000 audio diagonal	0x94
+daimakaimura	song15	0x16	ghoulsu	0x15	Stage 5 Boss: Beelzebub	verified	yes	MAME 0x15 same-board identity plus X68000 audio diagonal	0x95
+daimakaimura	song16	0x17	ghoulsu	0x16	Final Boss: Lucifer	verified	yes	MAME 0x16 same-board identity plus X68000 audio diagonal	0x96
+daimakaimura	song17	0x18	ghoulsu	0x17	Ending (1st Round)	verified	yes	MAME 0x17 same-board identity plus X68000 audio diagonal	0x97
+daimakaimura	song18	0x19	ghoulsu	0x18	Zap	verified	yes	MAME 0x18 same-board identity plus strong X68000 audio diagonal	0x98
+daimakaimura	song19	0x1a	ghoulsu	0x19	Ending sequence variant A	verified	yes	listening-gate-approved full-length X68000/arcade A/B; service-mode odd ending family	0x1b,0x1d,0x1f,0x99,0x9b,0x9d,0x9f
+daimakaimura	song1a	0x1b	ghoulsu	0x1a	Ending sequence variant B	verified	yes	listening-gate-approved full-length X68000/arcade A/B; service-mode even ending family	0x1c,0x1e,0x9a,0x9c,0x9e
+ffight	song00	0x01	ffight	0x40	R1 SLUM1	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song01	0x02	ffight	0x41	R1 SLUM2	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song02	0x03	ffight	0x42	R2 SUBWAY1	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song03	0x04	ffight	0x43	R2 SUBWAY2	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song04	0x05	ffight	0x44	R3 WEST SIDE1	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song05	0x06	ffight	0x45	BAY AREA1	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song06	0x07	ffight	0x46	BAY AREA2	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song07	0x08	ffight	0x47	BAY AREA3	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song08	0x09	ffight	0x48	R4 INDUSTRIAL1	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song09	0x0a	ffight	0x49	R4 INDUSTRIAL2	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song0a	0x0b	ffight	0x4c	BONUS STAGE	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song0d	0x0e	ffight	0x50	ROUND START	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song11	0x12	ffight	0x51	GAME OVER	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song12	0x13	ffight	0x35	OPENING	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song13	0x14	ffight	0x53	CONTINUE	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song14	0x15	ffight	0x54	ENDING	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song15	0x16	ffight	0x55	CHARACTER SELECT	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song16	0x17	ffight	0x57	ROUND CLEAR	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song18	0x19	ffight	0x58	ALL ROUND CLEAR	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song19	0x1a	ffight		CREDIT	no-counterpart	yes	X68000 has a music cue; arcade 0x5f is a coin SFX, not counterpart music
+sf2ce	song00	0x01	sf2ce	0x01	Ryu Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song01	0x02	sf2ce	0x02	E.Honda Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song02	0x03	sf2ce	0x03	Blanka Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song03	0x04	sf2ce	0x04	Ken Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song04	0x05	sf2ce	0x05	Guile Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song05	0x06	sf2ce	0x06	Chun-Li Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song06	0x07	sf2ce	0x07	Zangief Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song07	0x08	sf2ce	0x08	Dhalsim Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song08	0x09	sf2ce	0x09	Balrog (boxer) Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song09	0x0a	sf2ce	0x0a	Vega (claw) Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song0a	0x0b	sf2ce	0x0b	Sagat Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song0b	0x0c	sf2ce	0x0c	M.Bison (dictator) Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song0c	0x0d	sf2ce	0x0d	Bonus Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song0d	0x0e	sf2ce	0x0e	Player Select	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song0e	0x0f	sf2ce	0x0f	VS.	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song0f	0x10	sf2ce	0x10	Match-End	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song10	0x11	sf2ce	0x11	Continue	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song11	0x12	sf2ce	0x12	Unused	verified	no	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song12	0x13	sf2ce	0x13	Game Over	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song13	0x14	sf2ce	0x14	Ranking Display	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song14	0x15	sf2ce	0x15	Here Comes a New Challenger!	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song15	0x16	sf2ce	0x16	Intro	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song16	0x17	sf2ce	0x18	Ryu Ending	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song17	0x18	sf2ce	0x19	E.Honda Ending	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song18	0x19	sf2ce	0x1a	Blanka Ending	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song19	0x1a	sf2ce	0x1b	Guile Ending	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song1a	0x1b	sf2ce	0x1c	Ken Ending (Part 1)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song1b	0x1c	sf2ce	0x1d	Chun-Li Ending (Part 1)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song1c	0x1d	sf2ce	0x1e	Zangief Ending	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song1d	0x1e	sf2ce	0x1f	Dhalsim Ending	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song1e	0x1f	sf2ce	0x34	Ken Ending (Part 2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song1f	0x20	sf2ce	0x35	Chun-Li Ending (Part 2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song20	0x21	sf2ce	0x79	Ryu Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song21	0x22	sf2ce	0x7a	E.Honda Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song22	0x23	sf2ce	0x7b	Blanka Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song23	0x24	sf2ce	0x7c	Guile Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song24	0x25	sf2ce	0x7d	Ken Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song25	0x26	sf2ce	0x7e	Chun-Li Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song26	0x27	sf2ce	0x7f	Zangief Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song27	0x28	sf2ce	0x80	Dhalsim Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song28	0x29	sf2ce	0x81	Balrog (boxer) Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song29	0x2a	sf2ce	0x82	Vega (claw) Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song2a	0x2b	sf2ce	0x83	Sagat Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song2b	0x2c	sf2ce	0x84	M.Bison (dictator) Stage (Critical)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song2c	0x2d	sf2ce	0x8c	Shadaloo Ending	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+sf2ce	song2d	0x2e	sf2ce	0x8d	Staff Credits	verified	yes	listening-gate-approved X68000/arcade two-file A/B; real stateful credits capture at 0x8d
+ssf2	song00	0x01	ssf2	0x01	Ken	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song01	0x02	ssf2	0x02	Ryu	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song02	0x03	ssf2	0x03	E.Honda	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song03	0x04	ssf2	0x04	Chun-Li	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song04	0x05	ssf2	0x05	Blanka	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song05	0x06	ssf2	0x06	Zangief	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song06	0x07	ssf2	0x07	Guile	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song07	0x08	ssf2	0x08	Dhalsim	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song08	0x09	ssf2	0x09	M.Bison	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song09	0x0a	ssf2	0x0a	Balrog	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song0a	0x0b	ssf2	0x0b	Sagat	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song0b	0x0c	ssf2	0x0c	Vega	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song0c	0x0d	ssf2	0x0d	Fei-Long	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song0d	0x0e	ssf2	0x0e	Cammy	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song0e	0x0f	ssf2	0x0f	T.Hawk	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song0f	0x10	ssf2	0x10	Dee-Jay	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song10	0x11	ssf2	0x11	STAGE KEN(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song11	0x12	ssf2	0x12	STAGE RYU(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song12	0x13	ssf2	0x13	STAGE E.HONDA(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song13	0x14	ssf2	0x14	STAGE CHUN LI(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song14	0x15	ssf2	0x15	STAGE BLANKA(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song15	0x16	ssf2	0x16	STAGE ZANGIEF(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song16	0x17	ssf2	0x17	STAGE GUILE(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song17	0x18	ssf2	0x18	STAGE DHALSIM(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song18	0x19	ssf2	0x19	STAGE M.BISON(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song19	0x1a	ssf2	0x1a	STAGE BALROG(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song1a	0x1b	ssf2	0x1b	STAGE SAGAT(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song1b	0x1c	ssf2	0x1c	STAGE VEGA(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song1c	0x1d	ssf2	0x1d	STAGE FEI LONG(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song1d	0x1e	ssf2	0x1e	STAGE CAMMY(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song1e	0x1f	ssf2	0x1f	STAGE T.HAWK(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song1f	0x20	ssf2	0x20	STAGE DEE JAY(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song20	0x21	ssf2	0x21	ENDING KEN(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song21	0x22	ssf2	0x22	ENDING KEN	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song22	0x23	ssf2	0x23	ENDING RYU	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song23	0x24	ssf2	0x24	ENDING E.HONDA	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song24	0x25	ssf2	0x25	ENDING CHUN LI	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song25	0x26	ssf2	0x26	ENDING CHUN LI(2)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song26	0x27	ssf2	0x27	ENDING BLANKA	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song27	0x28	ssf2	0x28	ENDING ZANGIEF	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song28	0x29	ssf2	0x29	ENDING GUILE	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song29	0x2a	ssf2	0x2a	ENDING DHALSIM	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song2a	0x2b	ssf2	0x2b	ENDING M.BISON	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song2b	0x2c	ssf2	0x2c	ENDING BALROG	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song2c	0x2d	ssf2	0x2d	ENDING SAGAT	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song2d	0x2e	ssf2	0x2e	ENDING VEGA	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song2e	0x2f	ssf2	0x2f	ENDING FEI LONG	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song2f	0x30	ssf2	0x30	ENDING CAMMY	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song30	0x31	ssf2	0x31	ENDING T.HAWK	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song31	0x32	ssf2	0x32	ENDING DEE JAY	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song32	0x33	ssf2	0x33	OPENING DEMO	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song33	0x34	ssf2	0x34	PLAYER SELECT	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song34	0x35	ssf2	0x35	VS.	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song35	0x36	ssf2	0x36	STAGE-END	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song36	0x37	ssf2	0x37	CONTINUE	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song37	0x38	ssf2	0x38	HERE COMES ...	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song38	0x39	ssf2	0x39	GAME OVER	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song39	0x3a	ssf2	0x3a	RANKING	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song3a	0x3b	ssf2	0x3b	BONUS STAGE	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song3b	0x3c	ssf2	0x3c	STAFF ROLL	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song3c	0x3d	ssf2	0x3d	(unlisted; dead in-game)	verified	no	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song3d	0x3e	ssf2	0x3e	ENDING CHUN LI(3)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song3e	0x3f	ssf2	0x3f	TOURNAMENT	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree

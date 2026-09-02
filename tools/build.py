@@ -1160,6 +1160,8 @@ def render_project_page(site: dict, project: dict, kit: dict | None,
             parts.append(f'<details class="faq"><summary>{esc(item["q"])}'
                          f"</summary>{body}</details>")
 
+    parts.append(render_release_history(project))
+
     if project.get("links"):
         parts.append("<h2>Source &amp; related projects</h2><ul>")
         for link in project["links"]:

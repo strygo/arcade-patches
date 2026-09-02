@@ -1,0 +1,50 @@
+# Street Fighter II' Champion Edition X68000 MIDI pack loop points.
+# Source coordinates are the 48 kHz LOOPSTART/LOOPEND tags written by
+# tools/export_x68k_midi_flac.py from the extracted MIDI's global loop.
+#
+# The source renders contain two complete passes and end at source_le.  A
+# one-second CPS+ crossfade needs real continuation audio after pack_le, so the
+# pack phase is shifted one second earlier: pack_ls/le = source_ls/le - 48000,
+# rounded DOWN to the 32-sample ADX grid.  This preserves the measured period;
+# the retained second-pass final second is blended against the corresponding
+# first-pass final second.  Songs absent from this table are one-shots.
+#
+# song  source_ls  source_le  pack_ls  pack_le  evidence
+song	source_ls	source_le	pack_ls	pack_le	evidence
+song00	2587822	4841732	2539808	4793728	embedded global MIDI loop; Ryu Stage
+song01	3251606	6038698	3203584	5990688	embedded global MIDI loop; E.Honda Stage
+song02	2783352	5257442	2735328	5209440	embedded global MIDI loop; Blanka Stage
+song03	3188015	5898598	3140000	5850592	embedded global MIDI loop; Ken Stage
+song04	3437412	6596116	3389408	6548096	embedded global MIDI loop; Guile Stage
+song05	2671301	5175645	2623296	5127616	embedded global MIDI loop; Chun-Li Stage
+song06	2598492	4850518	2550464	4802496	embedded global MIDI loop; Zangief Stage
+song07	2474090	4329658	2426080	4281632	embedded global MIDI loop; Dhalsim Stage
+song08	2577900	4994680	2529888	4946656	embedded global MIDI loop; Balrog (boxer) Stage
+song09	2488886	4906662	2440864	4858656	embedded global MIDI loop; Vega (claw) Stage
+song0a	1888299	3776599	1840288	3728576	embedded global MIDI loop; Sagat Stage
+song0b	3005213	6010426	2957184	5962400	embedded global MIDI loop; M.Bison (dictator) Stage
+song0c	2420574	4225107	2372544	4177088	embedded global MIDI loop; Bonus Stage
+song0d	834781	1502607	786752	1454592	embedded global MIDI loop; Player Select
+song10	616559	1078487	568544	1030464	embedded global MIDI loop; Continue
+song17	1440000	2400000	1392000	2352000	embedded global MIDI loop; E.Honda Ending
+song18	886153	1476922	838144	1428896	embedded global MIDI loop; Blanka Ending
+song19	1335650	2337388	1287648	2289376	embedded global MIDI loop; Guile Ending
+song1a	1339534	2411161	1291520	2363136	embedded global MIDI loop; Ken Ending (Part 1)
+song1b	500869	834781	452864	786752	embedded global MIDI loop; Chun-Li Ending (Part 1)
+song1c	542117	1084235	494112	1036224	embedded global MIDI loop; Zangief Ending
+song1e	3484504	4860026	3436480	4812000	embedded global MIDI loop; Ken Ending (Part 2)
+song1f	2907960	4473784	2859936	4425760	embedded global MIDI loop; Chun-Li Ending (Part 2)
+song20	1181537	2363075	1133536	2315072	embedded global MIDI loop; Ryu Stage (Critical)
+song21	1288950	2577900	1240928	2529888	embedded global MIDI loop; E.Honda Stage (Critical)
+song22	1084235	2168470	1036224	2120448	embedded global MIDI loop; Blanka Stage (Critical)
+song23	2363075	4726149	2315072	4678144	embedded global MIDI loop; Guile Stage (Critical)
+song24	1675635	3351269	1627616	3303264	embedded global MIDI loop; Ken Stage (Critical)
+song25	1181537	2363075	1133536	2315072	embedded global MIDI loop; Chun-Li Stage (Critical)
+song26	1181537	2363075	1133536	2315072	embedded global MIDI loop; Zangief Stage (Critical)
+song27	2168470	4336939	2120448	4288928	embedded global MIDI loop; Dhalsim Stage (Critical)
+song28	1137777	2275553	1089760	2227552	embedded global MIDI loop; Balrog (boxer) Stage (Critical)
+song29	2071007	4142014	2022976	4093984	embedded global MIDI loop; Vega (claw) Stage (Critical)
+song2a	1021933	2043867	973920	1995840	embedded global MIDI loop; Sagat Stage (Critical)
+song2b	2363075	4726149	2315072	4678144	embedded global MIDI loop; M.Bison (dictator) Stage (Critical)
+song2c	1502607	2504344	1454592	2456320	embedded global MIDI loop; Shadaloo Ending
+song2d	3080208	5605979	3032192	5557952	embedded global MIDI loop; Staff Credits

@@ -1,0 +1,27 @@
+# Ghouls'n Ghosts / Daimakaimura X68000 MIDI pack loop points.
+# Source coordinates are the 48 kHz LOOPSTART/LOOPEND tags written by
+# tools/export_x68k_midi_flac.py from the extracted MIDI's global loop.
+#
+# The source renders contain two complete passes and end at source_le.  A
+# one-second CPS+ crossfade needs real continuation audio after pack_le, so the
+# pack phase is shifted one second earlier: pack_ls/le = source_ls/le - 48000,
+# rounded DOWN to the 32-sample ADX grid.  This preserves the measured period;
+# the retained second-pass final second is blended against the corresponding
+# first-pass final second.  Songs absent from this table are one-shots.
+#
+# song  source_ls  source_le  pack_ls  pack_le  evidence
+song	source_ls	source_le	pack_ls	pack_le	evidence
+song09	1001738	2003475	953728	1955456	embedded global MIDI loop; Time-Out Warning
+song0c	3955447	7368777	3907424	7320768	embedded global MIDI loop; Stage 1
+song0d	1396022	2533799	1348000	2485792	embedded global MIDI loop; Stage 1 Boss
+song0e	2618179	5236358	2570176	5188352	embedded global MIDI loop; Stage 2
+song0f	1035504	2071007	987488	2022976	embedded global MIDI loop; Stage 2 Boss
+song10	3797821	7595642	3749792	7547616	embedded global MIDI loop; Stage 3
+song11	2010199	4020397	1962176	3972384	embedded global MIDI loop; Stage 3 Boss
+song12	3692071	7292112	3644064	7244096	embedded global MIDI loop; Stage 4
+song13	2559996	3839994	2511968	3791968	embedded global MIDI loop; Stage 4 Boss
+song14	2838257	4925210	2790240	4877184	embedded global MIDI loop; Stage 5
+song15	1137777	2275553	1089760	2227552	embedded global MIDI loop; Stage 5 Boss
+song16	3741535	7483069	3693504	7435040	embedded global MIDI loop; Final Boss
+song19	7289978	10950535	7241952	10902528	embedded global MIDI loop; Ending variant A
+song1a	7289978	10950535	7241952	10902528	embedded global MIDI loop; Ending variant B

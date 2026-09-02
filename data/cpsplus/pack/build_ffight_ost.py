@@ -9,9 +9,8 @@ WHERE THE SOURCES LIVE.  roms/soundtracks/final_fight_ost (override with
     SNES           disc 2 tracks 17-37   (21)
 
 THE JOIN IS BY DISC + TRACK NUMBER, NOT BY NAME.  Track titles vary with
-whoever ripped the discs; the disc layout does not.  Every .flac under the
-OST root holds the album as .flac or .wav, indexed by (disc, track)
-read from its tags (ffprobe; any of
+whoever ripped the discs; the disc layout does not.  Every .flac or .wav
+under the OST root is indexed by (disc, track) read from its tags (ffprobe; any of
 track/TRACKNUMBER + disc/DISCNUMBER, "3/67" forms accepted), falling back to
 a leading number in the filename and a CD/Disc number in a parent folder
 name.  Duplicate (disc, track) claims are an error, never a guess.  The
@@ -176,13 +175,16 @@ def _disc_from_parents(path: Path, root: Path) -> int | None:
     return None
 
 
-def index_ost(root: Path) -> dict[tuple[int, int], Path]:
-    """(disc, track) -> flac path for every .flac under root.
+def index_ost(root: Path, default_disc: int | None = None
+              ) -> dict[tuple[int, int], Path]:
+    """(disc, track) -> audio path for every .flac/.wav under root.
 
     Tags win (track/tracknumber, disc/discnumber; "3/67" forms accepted);
     fallbacks are a leading number in the filename and a CD/Disc number in a
     parent folder name.  A file with no resolvable track number, or two files
     claiming the same (disc, track), is an ERROR: the join must never guess.
+    A single-disc album may pass default_disc so a flat rip with no disc tag
+    and no "Disc N" folder still indexes; multi-disc callers leave it None.
     """
     if not root.is_dir():
         raise FileNotFoundError(f"OST root not found: {root} (use --ost)")
@@ -198,7 +200,7 @@ def index_ost(root: Path) -> dict[tuple[int, int], Path]:
         track = _first_int(tags.get("track") or tags.get("tracknumber")) \
             or _first_int(f.stem)
         disc = _first_int(tags.get("disc") or tags.get("discnumber")) \
-            or _disc_from_parents(f, root)
+            or _disc_from_parents(f, root) or default_disc
         if track is None:
             raise ValueError(f"cannot determine a track number for {f} "
                              "(no track tag, no leading number in the name)")

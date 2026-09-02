@@ -43,12 +43,17 @@ from pack import build_sf2_arrange                          # noqa: E402
 # its remaining argv to the builder module's own CLI (see pack/README.md)
 PASSTHROUGH = {
     "ffight":     ("build_ffight_arrange",     "Final Fight arrange (Sega CD US+JP discs)"),
+    "ffightae-cps2": ("build_ffightae_cps2_arrange", "Final Fight 30th Anniversary CPS2 Edition arrange (Sega CD US disc)"),
     "ffight-ost": ("build_ffight_ost", "Final Fight OST editions (snes/x68k)"),
     "sfa2-snes":  ("build_sfa2_snes",  "SFA2 with the SNES SFZ2 soundtrack"),
     "spf2t":      ("build_spf2t_arrange",      "Super Puzzle Fighter II Turbo arrange (Saturn)"),
     "mtwins":     ("build_mtwins_arrange",     "Mega Twins arrange (PCE CD)"),
     "forgottn":   ("build_forgottn_arrange",   "Forgotten Worlds arrange (PCE CD)"),
     "mbomber":    ("build_mbomber_arrange",    "Muscle Bomber arrange (FM Towns)"),
+    "unsquad-snes": ("build_unsquad_snes",     "UN Squadron / Area 88 with the SNES soundtrack (CMG album)"),
+    "ghouls-x68k-midi": ("build_ghouls_x68k_midi", "Ghouls'n Ghosts with the X68000 MIDI soundtrack"),
+    "sf2ce-x68k-midi": ("build_sf2ce_x68k_midi", "SF2CE with the X68000 MIDI soundtrack"),
+    "ssf2-x68k-midi": ("build_ssf2_x68k_midi", "SSF2 with the X68000 MIDI soundtrack"),
 }
 
 

@@ -3,7 +3,7 @@
 One file per game version, consumed FPGA-side with no ARM
 involvement. Delivery: appended to the MRA ROM image (DDR-resident at
 0x30000000 via the existing CPS fast-load); alternative `F`-load path later.
-Companion: `ASSESSMENT.md` §6.3; worked example = HSF2 AE
+Worked example = HSF2 AE
 (`manifests/hsf2_bgm_command_map.tsv`).
 
 ## Layout

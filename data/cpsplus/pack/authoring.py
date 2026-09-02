@@ -96,7 +96,7 @@ def init(game: str, dest: str | None = None) -> Path:
     else:
         lines.append(f"# (no Phase-0 command inventory for {game!r} yet — "
                      "trace the game in MAME to enumerate its music "
-                     "commands; see ASSESSMENT.md Phase 0)")
+                     "commands; see PACK_FORMAT.md)")
     toml_path = d / "pack.toml"
     if toml_path.exists():
         raise FileExistsError(f"{toml_path} already exists")

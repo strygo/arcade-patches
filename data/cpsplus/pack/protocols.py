@@ -7,7 +7,7 @@ driver 1.06b in internal research notes Q4; Phase 0 owns revisions
 from 0x618005, and the handshake byte lives at +0x1f (game writes 0x00 =
 pending, sound side writes 0xff = ready).
 
-Fade laws (per-game, ASSESSMENT §5 / research):
+Fade laws (per-game, measured):
   * HSF2 AE:          steps = (0x444 / arg) * 60      (internal research, HSF2 Q5)
   * Anthology family: steps =  0xffff / arg, per frame (internal research, Q4)
 
@@ -296,6 +296,57 @@ PROTOCOLS["ssf2t"].off_arg_byte = 0
 PROTOCOLS["forgottn"] = dataclasses.replace(
     PROTOCOLS["sf2"], game_id="forgottn",
     control_verbs={0xf0: VERB_STOP, 0xf1: VERB_STOP})
+
+# UN Squadron / Area 88 (unsquad, area88 -- sweeps byte-identical across all
+# 256 commands, so one descriptor and one pack serve both sets).  Everything
+# below MEASURED 2026-08-28 (MAME 0.288, one boot per probe; see
+# manifests/unsquad_snes_trigger_map.tsv header for the full census):
+#   * Stop probe (play 0x04, then each 0xf0-0xff five seconds later, read the
+#     level): 0xf0 0xf1 0xf2 0xfa each silence the driver from ONE write;
+#     sf2's 0xf7 does NOT stop music here (forgottn lesson repeated), so
+#     handshake_ready is replaced, not inherited -- 0xf0 both stops current
+#     music and starts nothing, exactly what the suppression substitute needs.
+#   * The 68K itself was seen sending 0xf0 (hard stop before stage music) and
+#     0xf4/0xf7/0xfb, which do not stop music (unmapped: they pass through to
+#     the Z80 untouched).  0xfa pause-mute concern RETIRED: the arcade game
+#     has no pause (hardware pass 2026-08-31).
+PROTOCOLS["unsquad"] = dataclasses.replace(
+    PROTOCOLS["sf2"], game_id="unsquad", handshake_ready=0xf0,
+    control_verbs={0xf0: VERB_STOP, 0xf1: VERB_STOP, 0xf2: VERB_STOP,
+                   0xfa: VERB_STOP})
+
+# Ghouls'n Ghosts USA (ghoulsu; pack game id follows the parent `ghouls`).
+# Measured 2026-08-31 with MAME 0.288, one clean boot per candidate: play the
+# sustained Stage 1 cue 0x0c, then issue one byte from 0xf0..0xff five seconds
+# later.  0xf0/0xf1/0xf2 immediately produce digital silence; 0xf3..0xf9 and
+# 0xfb..0xff leave the music unchanged.  0xfa performs a gradual native fade,
+# but no 68K caller was observed and the CPS1 byte-latch pack protocol has no
+# fade argument, so it remains pass-through pending a driven gameplay trace.
+# A follow-up 0x0c -> 0xf0 -> 0x0c run proved that 0xf0 also starts nothing and
+# leaves the driver able to start a later song.  It is therefore both the safe
+# suppression substitute and an arranged-player STOP command.
+PROTOCOLS["ghouls"] = dataclasses.replace(
+    PROTOCOLS["sf2"], game_id="ghouls", handshake_ready=0xf0,
+    control_verbs={0xf0: VERB_STOP, 0xf1: VERB_STOP, 0xf2: VERB_STOP})
+
+
+# Final Fight 30th Anniversary CPS2 Edition (MiSTer set ffightae_cps2, hbmame
+# ffightaec2) -- grego2d's CPS2 conversion, sound rebuilt on the SFA3 (sz3)
+# QSound driver 1.71 (modified sz3.01 + sz3.11m).  Record layout measured
+# (manifests/protocol/ffightaec2.json): the sfa3ud shape verbatim -- cmd at
+# +0x01/+0x03, arg word +0x07/+0x09, +0x05 arg byte PRESENT, handshake +0x1f,
+# record-then-handshake.  Controls MEASURED on this driver (ctrl_probe,
+# 2026-09-01): 0xff00 stops the BGM and the driver survives it; 0xff05 does
+# NOT stop music (coin-in SFX-slot release -- the sfz2al lesson, do not map);
+# 0xff07 argb=0x00 fades the BGM out and 0xff06 argb=0xff holds unity, i.e.
+# the fade target rides the record's own arg byte -> VERB_FADE_KEEP for both,
+# the CONTROL_ALPHA2_ARCADE semantics.  Neither fade has been observed emitted
+# by this 68K yet (attract/coin/gameplay traces show only ff00/ff05); the rows
+# are correct if it ever does.  Fade LAW: family default FADE_ANTHOLOGY
+# (0xffff/arg) -- not disassembled for 1.71, revisable if a fade trace ever
+# warrants it.
+PROTOCOLS["ffightae_cps2"] = _proto("ffightae_cps2", FADE_ANTHOLOGY, 0xffff, 0,
+                                    CONTROL_ALPHA2_ARCADE, VERB_NONE)
 
 
 # The only control code confirmed to mean the same thing on every QSound

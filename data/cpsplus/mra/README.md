@@ -21,7 +21,11 @@ cover all 52, and the tree rebuilds from empty.  Generating the root tier
 
 All MRAs are derived from jotego's official base MRAs (jtbin and its
 `_alternatives` collection, GPLv2, attribution preserved) by embedding the
-pack part and pointer patch.
+pack part and pointer patch.  One exception tier: `base_offset/` vendors a
+base from the Arcade_Offset project instead (hack sets that never existed in
+jtbin — currently the Final Fight 30th Anniversary CPS2 Edition, which
+carries its own ffightae_cps2_arrange pack; see `base_offset/README.md` for
+provenance).
 
 **`<region>` is inherited verbatim and must not be rewritten.**  Every one of
 the 40 bases states `World` -- jtbin, `_alternatives` and the Gold collection

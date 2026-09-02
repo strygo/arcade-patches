@@ -17,6 +17,19 @@ python3 build_pack.py hsf2 --iso ... --bank cps1
 # SFA1 from the Saturn disc
 python3 build_pack.py sfa1-arrange --disc "roms/saturn/Street Fighter Alpha - Warriors' Dreams (USA).zip"
 
+# Ghouls'n Ghosts / SF2CE / SSF2 from the X68000 external-MIDI renders
+# (the FLAC set tools/export_x68k_midi_flac.py produces from your disks;
+# the MiSTer kit's make_x68k_flac.py drives the whole chain)
+python3 build_pack.py ghouls-x68k-midi --flac-dir <daimakaimura flac dir>
+python3 build_pack.py sf2ce-x68k-midi --flac-dir <sf2ce flac dir>
+python3 build_pack.py ssf2-x68k-midi --flac-dir <ssf2 flac dir>
+
+# UN Squadron / Area 88 from the Capcom Music Generation Area 88 album rip
+python3 build_pack.py unsquad-snes --ost "path/to/area_88_ost/"
+
+# Final Fight 30th Anniversary CPS2 Edition from the US Final Fight CD rip
+python3 build_pack.py ffightae-cps2 --us-disc "path/to/Final Fight CD (USA).cue"
+
 # SFZ2 Saturn MUS -> sfz2al pack (both discs => includes the Cammy song)
 python3 build_pack.py sfa2-arrange \
     --iso "roms/saturn/Street Fighter Zero 2 (Japan).zip" \

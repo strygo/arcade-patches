@@ -1,8 +1,8 @@
 # Rebuilding the packs
 
 Every shipped pack rebuilds **byte-identically** from (a) this repository and
-(b) disc images you own.  Builders never search for or name-match disc files —
-you pass each source path explicitly.  Keep a small wrapper script with
+(b) disc images or source renders you own.  Builders never search for or
+name-match disc files — you pass each source path explicitly.  Keep a small wrapper script with
 your local disc paths; this table is the reference.  Every pack builds through the ONE entry
 point `cpsplus/build_pack.py` (the per-module CLIs still exist and take the
 same flags).  Where a region column says **or**, the interchangeability was
@@ -18,8 +18,13 @@ a 7-Zip binary (`brew install sevenzip`).
 | Pack (dist zip) | Command (`python3 cpsplus/build_pack.py …`) | Source disc(s) you need |
 |---|---|---|
 | ffight_arrange | `ffight --variant adx --region us --us-disc <US rip>` | Final Fight CD (Sega CD) — USA only |
+| ffightae_cps2_arrange | `ffightae-cps2` (same US disc / shared extraction cache) | Final Fight CD (Sega CD) — the 30th Anniversary CPS2 Edition re-key (`ffightae_cps2`, jtcps2): same 19 tracks and imported loop authoring, CPS2 0x1200-row table keyed at the hack's 0x01xx commands, JP-wrap opening on the song cue, measured gain 0x2d.  Deliberately its OWN pack (a shared CPS1+CPS2 pack was built and reverted — build_ffightae_cps2_arrange.py docstring).  MAME oracle: hbmame `ffightaec2` — built by renaming the MiSTer `ffightae_cps2.zip` parts per hbmame's ROM_START (p1←ff-23m.8h, p2←ff-22m.7h, c1..c4←ff-5m/7m/1m/3m, m1←sz3.01, q1←sz3.11m) plus stock `sz3.12m`→c78.q2, `sz3.02`→c78.m2 and `dl-1425.bin` from sfa3.zip |
 | ffight_arrange_jp | `ffight --variant adx --region jp --jp-disc <JP rip>` | Final Fight CD (Sega CD) — Japan only.  One pack per region: each carries only the voiced-cutscene pair its own ROM emits (0x70/0x71 US, 0x72/0x73 JP).  Both gate only 0x52, the board's song — the phone ringing (0x35) and the click that answers it (0x36) pass through and are heard.  Each enters on the first cue its own ROM issues (US 0x35 at 26.9 s, Japan 0x52 at 12.7 s) and wraps the groove by however much lands the master's own outro on that ROM's title screen (US 10.24 s, Japan 2.88 s).  The two discs carry the same masters — measured r=1.0000 per music cue at a constant 2.7 ms offset, the JP rip simply trimming 1.99 s of trailing digital silence — so the packs differ in language and opening entry, not in the arrangement |
 | ffight_snes / ffight_x68k_fm / ffight_x68k_midi | `ffight-ost --ost <dir>` | Final Fight OST box rip (.flac, discs 1–2) |
+| ghouls_x68k_midi | `ghouls-x68k-midi --flac-dir <dir>` | The 27 stereo 48 kHz Daimakaimura FLACs produced by `tools/export_x68k_midi_flac.py`; embedded MIDI loop tags are checked against the tracked loop manifest |
+| sf2ce_x68k_midi | `sf2ce-x68k-midi --flac-dir <dir>` | The 46 stereo 48 kHz SF2CE FLACs produced by `tools/export_x68k_midi_flac.py`; all command joins passed the two-file A/B gate, the measured SC-55 DC pedestal is validated and removed without changing timing, and embedded MIDI loop tags are checked against the tracked 37-loop manifest |
+| ssf2_x68k_midi | `ssf2-x68k-midi --flac-dir <dir>` | The 63 stereo 48 kHz SSF2 FLACs produced by `tools/export_x68k_midi_flac.py`; all command joins passed the two-file A/B gate, the SC-55 DC/pre-roll cleanup is pinned, and embedded MIDI loop tags are checked against the tracked 46-loop manifest |
+| unsquad_snes | `unsquad-snes --ost <dir>` | Capcom Music Generation Area 88 OST rip (.flac, 1 disc; the SFC score is tracks 28-49) — loop points come from the tracked `manifests/unsquad_snes_loops.tsv` (structure-first) |
 | hsf2_arrange | `hsf2 --iso <AE disc>` | Hyper Street Fighter II AE (PS2) — Japan, Europe **or** the US *Street Fighter Anniversary Collection* (HSF2.AFS byte-identical on all three; the dispatch table is auto-located by signature — on the US collection it sits in the launcher ELF, with HSF2.AFS nested under /HYPER/ — and cross-checked; each builds the identical pack, measured) |
 | hsf2_cps1 | `hsf2 --iso <AE disc> --bank cps1` | 〃 |
 | sf2_arrange (+ sf2ce/sf2hf copies) | `sf2-arrange --iso <AE disc>` | 〃 |

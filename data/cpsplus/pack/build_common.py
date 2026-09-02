@@ -65,7 +65,7 @@ def adx_entry_to_track(raw: bytes, *, name: str, source: str,
 
 def crosscheck_pack(pack_path: Path, afs, track_sources: dict[int, int],
                     decode_checks: int = 3) -> dict:
-    """Byte-exactness acceptance (ASSESSMENT §7 Phase 1).
+    """Byte-exactness acceptance (byte-gate acceptance).
 
     1. Every pack track's data must equal the corresponding byte range of
        its source AFS entry (header stripped, loop-end truncation applied) —

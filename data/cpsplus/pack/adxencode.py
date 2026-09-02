@@ -50,6 +50,45 @@ def snr_db(ref: bytes, test: bytes) -> float:
     return 10.0 * math.log10(sig / err)
 
 
+def subtract_s16_dc(pcm: bytes, channels: int, baseline: tuple[int, ...],
+                    *, evidence_frames: int = 0, name: str = "audio") -> bytes:
+    """Subtract a known per-channel DC pedestal without changing timing.
+
+    FFmpeg's ADX encoder handles ordinary zero-centered material well, but a
+    constant non-zero input is pathological for its integer frame-scale
+    choice: predictor decay can exceed a scale-1 nibble, producing periodic
+    recovery frames that sound like a quiet note.  Do not estimate DC from
+    music.  Callers must provide a measured renderer-specific baseline and
+    may require an exact constant run at the head as source evidence.
+
+    Raises instead of clipping if centering would exceed signed 16-bit range.
+    """
+    import numpy as np
+
+    if channels <= 0 or len(baseline) != channels:
+        raise ValueError(f"{name}: baseline does not match channel count")
+    samples = np.frombuffer(pcm, dtype="<i2")
+    if samples.size % channels:
+        raise ValueError(f"{name}: PCM ends mid-frame")
+    frames = samples.reshape(-1, channels)
+    if not len(frames):
+        raise ValueError(f"{name}: empty PCM")
+    dc = np.asarray(baseline, dtype=np.int32)
+    if evidence_frames:
+        if len(frames) < evidence_frames:
+            raise ValueError(f"{name}: too short for DC evidence window")
+        if not np.all(frames[:evidence_frames] == dc):
+            raise ValueError(
+                f"{name}: first {evidence_frames} frames do not carry the "
+                f"expected DC pedestal {tuple(baseline)}")
+    centered = frames.astype(np.int32) - dc
+    lo, hi = int(centered.min()), int(centered.max())
+    if lo < -32768 or hi > 32767:
+        raise ValueError(
+            f"{name}: DC subtraction would clip ({lo}..{hi})")
+    return centered.astype("<i2").tobytes()
+
+
 def encode_adx_track(pcm: bytes, rate: int, ch: int, n: int, name: str,
                      measure: bool) -> tuple[bytes, int, int, float | None]:
     """PCM -> (adx frame stream, coef1, coef2, snr_db or None).

@@ -13,6 +13,7 @@ import shutil
 from pathlib import Path
 
 from . import adxcodec, protocols, xfade
+from .adxencode import subtract_s16_dc
 from .audition import render, verify
 from .format import (PackReader, PackWriter, TrackMeta, TriggerRow,
                      CODEC_ADX, CODEC_PCM, VERB_PLAY, VERB_STOP)
@@ -119,6 +120,25 @@ def run() -> bool:
         sbb += y * y
     ncc = sab / math.sqrt(saa * sbb)
     check(f"ADX encode/decode fidelity (NCC={ncc:.4f})", ncc > 0.95)
+
+    # A measured non-zero silence pedestal must be removed before ADX.  The
+    # FFmpeg encoder's integer scale choice turns constant DC into periodic
+    # predictor-recovery error; centering preserves timing and encodes as real
+    # digital silence.
+    dc = array.array("h", [1298] * (rate * ch // 4)).tobytes()
+    centered = subtract_s16_dc(
+        dc, ch, (1298, 1298), evidence_frames=256, name="selftest DC")
+    dirty_dec = array.array("h")
+    dirty_dec.frombytes(adxcodec.decode(
+        adxcodec.encode(dc, ch, rate), ch, rate, total_samples=rate // 4))
+    clean_dec = array.array("h")
+    clean_dec.frombytes(adxcodec.decode(
+        adxcodec.encode(centered, ch, rate), ch, rate,
+        total_samples=rate // 4))
+    dirty_rms = math.sqrt(sum((v - 1298) ** 2 for v in dirty_dec) /
+                          len(dirty_dec))
+    check(f"DC cleanup removes ADX predictor tone (dirty RMS={dirty_rms:.1f})",
+          dirty_rms > 100 and not any(clean_dec))
 
     # audition loop assembly: intro + 2 loop passes
     out, _ = render(rd, 0, loops=2)

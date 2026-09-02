@@ -1,0 +1,111 @@
+# unsquad / area88 -- trigger map for the SNES/SFC-soundtrack pack
+# (unsquad_snes).  STATUS: SHIPPED-QUALITY -- HARDWARE PASS OK
+# (2026-08-31): mapping ear-closed over four review passes + the full-album
+# SFC pairing, seams ear-passed after the structure-first loop rework, and
+# the staged SD kit tested on the cab.  All 25 in-scope album tracks placed
+# (tr27 excluded by decision).
+#
+# FINAL LAYOUT (ear-measured).  The driver groups by type, unordered
+# within a group; one unused slot sits mid-block:
+#   0x00-0x03  CREDIT, SELECT, SHOP, GAME OVER
+#   0x04-0x0d  ROUND block: tr04 tr07 tr09 tr26(unused-slot) tr13 tr11
+#              tr17 tr18 tr21 tr22   (R1 R2 R3 - R5 R4 R7 R8 R9 R10)
+#   0x0e-0x12  BOSS block:  tr08 tr05 tr19 tr12 tr10  (B2 B1 B5 B4 B3)
+#   0x13 0x15  ROUND CLEAR, LAST ROUND CLEAR jingles
+#   0x14       tr25 LAST RANKING (EAR p4)
+#   0x16 0x17  ENDING, SPECIAL ROUND
+#   0x18(,1a-1f)  tr16 Cave R6 (EAR p4; identical renders)
+#   0x19       tr14 EMERGENCY (confirmed via the 3c_B file)
+#   0x20 0x22 0x3a 0x3c  garbage (not music) -- fail open
+#
+# BOARD DIALECT (all measured 2026-08-28, MAME 0.288, one boot per probe):
+#   * Test mode (DIP "Game Mode", :DSWC mask 128) HALTS the sound driver --
+#     injections render digital silence (ffight dialect, NOT sf2/forgottn).
+#     Sweeps therefore ran as attract injection with Demo Sounds off
+#     (scripted attract injection); silence + positive controls passed at 27 s.
+#     Demo SFX are NOT gated by Demo Sounds past ~64 s of attract, so long
+#     renders are clean only to ~49 s past injection.
+#   * Latch 0x800180, byte duplicated across the word.  Command space:
+#     0x00-0x41 base bank; 0x42-0x83 mirrors base (+0x42; proven p50 0.99
+#     identical renders); 0x80+ is a separate SFX bank repeating with period
+#     0x14; 0xf0-0xff controls.
+#   * STOP bytes: 0xf0 0xf1 0xf2 0xfa each kill music from ONE write.
+#     sf2's 0xf7 does NOT stop music here (forgottn lesson repeated).  The
+#     game itself was seen sending 0xf0 (hard stop before stage music),
+#     plus 0xf4/0xf7/0xfb whose effect is not a music stop (unknown control;
+#     candidates: sample-channel/duck controls).  Suppression byte for the
+#     pack header: 0xf0.
+#   * area88 (JP) sweep classifications are IDENTICAL to unsquad (US) for
+#     all 256 commands -- one shared pack serves both MRAs.
+#
+# EVIDENCE MODEL.  The CMG album's arcade range (tr01-26) is a STUDIO
+# RE-RECORDING of the arcade score, not a board line-out: waveform identity
+# (tools/xcorr_id.py) fails on certain-true pairs while onset-rhythm periods
+# match exactly.  Only the short jingles still correlate.  Every closed row
+# below is EAR-CONFIRMED at the listening gate (passes 1-3); ANCHOR/WAVE/RHYTHM notes
+# record the pre-ear evidence for the recipe's benefit.
+# The snes column composes the cue->arcade-track map with
+# manifests/unsquad_album_map.tsv (arcade tr -> SFC tr28-49).  Cues whose
+# arcade track has no SFC counterpart FAIL OPEN (verb none, suppress 0).
+# tr27 (arrange) is out of scope by decision (2026-08-28).
+#
+# SFC-SIDE STATUS: MAPPING FINAL (the full-album pairing pass,
+# 2026-08-28).  After the identity passes closed 11 rows, the owner paired the
+# remaining arcade tunes to SFC tracks across the whole album -- a mix of
+# heard identity and curated role fit (the SFC score is largely original
+# mission music, so a strict-identity map would leave most stages on
+# arcade FM; the owner's pairing is the map).  SFC tracks may serve
+# multiple cues: tr33 BOSS covers both ground bosses (0x0f, 0x11), tr39
+# Aviation Division covers Thunder Cloud and Ascending (0x05, 0x0a), tr37
+# Ground Carrier/Cave covers Desert and Cave (0x09, 0x18).  0x0e uses
+# tr40 per the owner's note ("round 7 ascending boss should be 40") plus the
+# earlier tr08==tr40 ear match; the line "8 == 33" read as superseded.
+# Unused SFC tracks: tr28 Opening, tr29 Start (SFC-only cinematics).
+# Fail-opens (final): 0x00 CREDIT, 0x07 unused slot, 0x19 EMERGENCY,
+# and the garbage cues.
+#
+# cmd	verb	suppress	track	label	evidence
+0x00	none	0	-	CREDIT (arcade tr01)	EAR p1; FAIL OPEN FINAL (d4: SFC has no coin sound; tr29 is not this tune)
+0x01	play	1	tr30	PLAYER SELECT (tr02)	EAR p1 + SFC EAR-CONFIRMED (sfc_pairs)
+0x02	play	1	tr31	SHOP (tr03)	EAR p1 + SFC EAR-CONFIRMED (sfc_pairs)
+0x03	play	1	tr49	GAME OVER (tr20)	EAR p1 + SFC EAR-CONFIRMED (sfc_pairs)
+0x04	play	1	tr32	ROUND 1 Oil Field (tr04)	EAR p1 + SFC EAR-CONFIRMED (sfc_pairs)
+0x05	play	1	tr39	ROUND 2 Thunder Cloud (tr07)	EAR p1 (arcade); OWNER pairing 7==39: SFC tr39 Aviation Division
+0x06	play	1	tr35	ROUND 3 Forest Stronghold (tr09)	EAR p1 + SFC EAR-CONFIRMED (sfc_pairs)
+0x07	none	0	-	Unused Tune (tr26)	EAR p3; OWNER pairing 26==N/A -- FAIL OPEN (never triggered in-game)
+0x08	play	1	tr43	ROUND 5 Canyon (tr13)	EAR p2 (arcade); OWNER pairing 13==43 (kanji twin)
+0x09	play	1	tr37	ROUND 4 Desert (tr11)	EAR p2 (arcade); OWNER pairing 11==37
+0x0a	play	1	tr39	ROUND 7 Ascending (tr17)	EAR p3 (arcade); OWNER pairing 17==39 (tr39 shared with 0x05)
+0x0b	play	1	tr38	ROUND 8 Maritime (tr18)	EAR p3 (arcade); OWNER pairing 18==38 Battleship Minsk
+0x0c	play	1	tr44	ROUND 9 Armory (tr21)	EAR p3 (arcade); OWNER pairing 21==44 Project 4 Stronghold
+0x0d	play	1	tr45	ROUND 10 Last Battle (tr22)	EAR p3 (arcade); OWNER pairing 22==45 Last BOSS
+0x0e	play	1	tr40	BOSS 2 Dogfight (tr08)	EAR p3 + sfc_pairs tr08==tr40 match; OWNER note: ascending-round boss = tr40
+0x0f	play	1	tr33	BOSS 1 Land War (tr05)	EAR p3 + SFC EAR-CONFIRMED (sfc_pairs)
+0x10	play	1	tr42	BOSS 5 Battleship (tr19)	EAR p3 (arcade); OWNER pairing 19==42 Nuclear Sub Seavet
+0x11	play	1	tr33	BOSS 4 Ground Carrier (tr12)	EAR p2 (arcade); OWNER pairing 12==33 (tr33 shared with 0x0f)
+0x12	play	1	tr36	BOSS 3 Stronghold (tr10)	EAR p2 (arcade); OWNER pairing 10==36 Forest Stronghold BOSS
+0x13	play	1	tr34	ROUND CLEAR (tr06)	EAR p2 + SFC EAR-CONFIRMED (sfc_pairs)
+0x14	play	1	tr48	LAST RANKING (tr25)	EAR p4 + SFC EAR-CONFIRMED (sfc_pairs)
+0x15	play	1	tr46	LAST ROUND CLEAR (tr23)	EAR p2 + SFC EAR-CONFIRMED (sfc_pairs)
+0x16	play	1	tr47	ENDING & STAFF ROLL (tr24)	EAR p2 + SFC EAR-CONFIRMED (sfc_pairs)
+0x17	play	1	tr41	SPECIAL ROUND (tr15)	EAR p3 (arcade); OWNER pairing 15==41 Supply Force
+0x18	play	1	tr37	ROUND 6 Cave (tr16)	EAR p4 (arcade); OWNER pairing 16==37 (tr37 shared with 0x09)
+0x19	none	0	-	EMERGENCY (tr14)	EAR p3; OWNER pairing 14==none -- FAIL OPEN
+0x1a	play	1	tr37	= 0x18	identical render to 0x18
+0x1b	play	1	tr37	= 0x18	identical render to 0x18
+0x1c	play	1	tr37	= 0x18	identical render to 0x18
+0x1d	play	1	tr37	= 0x18	identical render to 0x18
+0x1e	play	1	tr37	= 0x18	identical render to 0x18
+0x1f	play	1	tr37	= 0x18	identical render to 0x18
+0x20	none	0	-	garbage (not music)	EAR p3: energy-test false positive -- FAIL OPEN
+0x22	none	0	-	garbage (not music)	EAR p3 -- FAIL OPEN
+0x3a	none	0	-	garbage (not music; 0x7c aliases here)	EAR p3 -- FAIL OPEN
+0x3c	none	0	-	garbage (not music; fired in attract flow)	EAR p3 -- FAIL OPEN (its B file identified 0x19=tr14)
+# control rows (measured stop bytes -- see header):
+0xf0	stop	0	-	music stop (game-issued)	measured: single write silences; seen from game before stage music
+0xf1	stop	0	-	music stop	measured: single write silences
+0xf2	stop	0	-	music stop	measured: single write silences
+0xfa	stop	0	-	music stop	measured: single write silences; pause-mute concern RETIRED (hardware pass 2026-08-31: the arcade game has no pause at all)
+# builder note: mapped play/suppress rows must ALSO cover their +0x42 alias
+# (0x01->0x43, ..., 0x22->0x64): aliases are proven identical and the game
+# could reach either bank.  The 0x80+ SFX bank stays unmapped by design.

@@ -17,34 +17,35 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>CPS+</h1>
 <p class="subtitle">Arranged CD-era soundtracks for CPS-1 &amp; CPS-2 arcade games on MiSTer</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">v1.0</span><span class="badge plain">MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)</span></div>
-<dl class="meta"><dt>Hardware</dt><dd>MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)</dd><dt>Version</dt><dd>1.0</dd><dt>Updated</dt><dd>2026-08-25</dd></dl>
+<div class="badges"><span class="badge plain">v1.1</span><span class="badge plain">MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)</span></div>
+<dl class="meta"><dt>Hardware</dt><dd>MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)</dd><dt>Version</dt><dd>1.1</dd><dt>Updated</dt><dd>2026-09-01</dd></dl>
 <p>From Final Fight CD onward, Capcom kept sending its arcade soundtracks back to the studio. Every CD-based home port got a full re-recording of the music, the &#x27;arrange&#x27; versions, produced by the original composers&#x27; teams. For thirty years those recordings stayed locked to the home versions. CPS+ puts them where they always belonged, under the arcade games themselves.</p>
 <p>On a MiSTer, the real CPS-1 or CPS-2 hardware logic runs the game while the CD-era soundtrack plays the music, started, looped and faded by the game itself, exactly the way Capcom&#x27;s own console releases timed it. Hit sounds, voices and the announcer stay pure arcade. It sounds like the arcade board grew a CD drive.</p>
+<p>Version 1.1 adds the Super Famicom score to Area 88 / UN Squadron, the Sharp X68000 MIDI soundtracks to Street Fighter II&#x27; Champion Edition, Super Street Fighter II and Ghouls&#x27;n Ghosts, and the Sega CD arrangement to the Final Fight 30th Anniversary CPS2 Edition conversion.</p>
 <ul class="highlights">
-<li>18 audio packs covering 14 arcade games, every arranged soundtrack Capcom recorded for the CPS line</li>
-<li>52 ready-to-play MRAs, so you pick the game from the CPS+ folder and the music is just there</li>
+<li>23 audio packs covering 16 arcade games: every arranged soundtrack Capcom recorded for the CPS line, plus the SNES and X68000 MIDI scores</li>
+<li>62 ready-to-play MRAs, so you pick the game from the CPS+ folder and the music is just there</li>
 <li>Runs on a stock MiSTer, with no firmware changes and nothing to configure</li>
-<li>Only tools in the download. Packs build from the discs you already own, in one command</li>
+<li>Only tools in the download. Packs build from the discs and disks you already own, in one command</li>
 </ul>
 
 <h2>Get started</h2>
 <div class="download">
   <div class="kind">CPS+ MiSTer kit: cores, MRAs and the pack builder</div>
-  <div class="file"><a href="../downloads/cpsplus-kit-1.0.zip">cpsplus-kit-1.0.zip</a>
-  (4.4 MB)</div>
-  <div class="hash">SHA-256: 947d67db49f19204c6cea6fa9040ec7b6ac74c238edfd2ebcbc4afd197a623eb</div>
+  <div class="file"><a href="../downloads/cpsplus-kit-1.1.zip">cpsplus-kit-1.1.zip</a>
+  (4.5 MB)</div>
+  <div class="hash">SHA-256: c6a45e8f61146a04d40d1a90ac5377c4fad2505c35e3726c7bde3982522ac8b7</div>
 </div>
 <ol>
 <li>Download and unzip the kit.</li>
 <li>Edit builder/discs.toml and point it at the disc rips you own (each entry is optional), or pass them on the command line with --disc mtwins_pce_disc=/discs/chiki.7z. make_packs.py --list shows every pack and the disc it wants.</li>
-<li>Run python3 builder/make_packs.py (Python 3.11+, numpy, ffmpeg). It builds out/mister/, laid out like your SD card.</li>
+<li>Run python3 builder/make_packs.py (Python 3.11+, numpy, ffmpeg). It builds out/mister/, laid out like your SD card. The three X68000 packs also need git, cmake and a C/C++ compiler, and take up to an hour each to render.</li>
 <li>Copy the contents of out/mister/ to your MiSTer SD card, merging with what&#x27;s there. Arcade ROM zips go where they always do.</li>
 </ol>
 <p>The download is tools: the MRAs, the three CPS+ cores with their GPL-3.0 source, and the pack builder. It makes the packs on your machine from discs you own, naming anything it skips for want of a disc. It also assembles out/mister/ for you, holding the cores, your packs, and only the MRAs those packs can load, so nothing on the card fails to start.</p>
-<p>Two MRA groups pair CPS+ audio with sets from companion projects on this site: the Alpha 2 Gold MRAs load the SFA2 Gold reconstructed sets, and ‘Final Fight (Arrange + CD Cutscenes)’ loads the Final Fight CD backport set. Build those with their own kits first (links below).</p>
+<p>Three MRA groups pair CPS+ audio with sets that are not stock: the Alpha 2 Gold MRAs load the SFA2 Gold reconstructed sets, ‘Final Fight (Arrange + CD Cutscenes)’ loads the Final Fight CD backport set, and ‘Final Fight 30th Anniversary CPS2 Edition (Arrange)’ loads the CPS2 conversion of Final Fight that the Arcade Offset project distributes. Build the first two with their own kits first (links below).</p>
 <h2>Game coverage</h2>
-<p>Every soundtrack is built from one disc you own. Where a disc came out in several regions, the ones listed below all produce the same pack.</p>
+<p>Every soundtrack is built from one disc, or one set of disks, you own. Where a disc came out in several regions, the ones listed below all produce the same pack.</p>
 <table class="coverage"><thead><tr><th>Arcade game</th><th>Soundtrack</th><th>Built from</th></tr></thead><tbody>
 <tr class="group">
 <th scope="rowgroup" rowspan="4">Final Fight<span class="sets mono">ffightu, ffightj</span></th>
@@ -56,8 +57,14 @@
 <tr>
 <td>X68000 MIDI soundtrack</td><td>Final Fight Original Sound Collection <span class="on">(CD audio)</span></td></tr>
 <tr class="group">
+<th scope="rowgroup" rowspan="1">Final Fight 30th Anniversary CPS2 Edition<span class="alt">a CPS2 conversion of Final Fight, distributed by Arcade Offset</span><span class="sets mono">ffightae_cps2</span></th>
+<td>Sega CD arrange</td><td>Final Fight CD (USA)</td></tr>
+<tr class="group">
 <th scope="rowgroup" rowspan="1">Forgotten Worlds<span class="alt">Lost Worlds in Japan</span><span class="sets mono">forgottn, lostwrld</span></th>
 <td>PC Engine CD arrange</td><td>Forgotten Worlds <span class="on">(PC Engine CD)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">Ghouls&#x27;n Ghosts<span class="alt">Daimakaimura in Japan</span><span class="sets mono">ghoulsu, daimakai</span></th>
+<td>X68000 MIDI soundtrack</td><td>Daimakaimura (X68000)</td></tr>
 <tr class="group">
 <th scope="rowgroup" rowspan="2">Hyper Street Fighter II<span class="sets mono">hsf2, hsf2j, hsf2a</span></th>
 <td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
@@ -84,8 +91,10 @@
 <th scope="rowgroup" rowspan="1">Street Fighter II: The World Warrior<span class="sets mono">sf2uk, sf2jl</span></th>
 <td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
 <tr class="group">
-<th scope="rowgroup" rowspan="1">Street Fighter II&#x27;: Champion Edition<span class="sets mono">sf2ceuc, sf2cejc</span></th>
+<th scope="rowgroup" rowspan="2">Street Fighter II&#x27;: Champion Edition<span class="sets mono">sf2ceuc, sf2cejc</span></th>
 <td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
+<tr>
+<td>X68000 MIDI soundtrack</td><td>Street Fighter II&#x27; Champion Edition (X68000)</td></tr>
 <tr class="group">
 <th scope="rowgroup" rowspan="1">Street Fighter II&#x27;: Hyper Fighting<span class="sets mono">sf2hfu, sf2hfj</span></th>
 <td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
@@ -93,15 +102,22 @@
 <th scope="rowgroup" rowspan="1">Super Puzzle Fighter II Turbo<span class="alt">Super Puzzle Fighter II X in Japan</span><span class="sets mono">spf2tu, spf2ta, spf2xj</span></th>
 <td>Saturn arrange</td><td>Super Puzzle Fighter II Turbo <span class="on">(Saturn)</span></td></tr>
 <tr class="group">
-<th scope="rowgroup" rowspan="1">Super Street Fighter II<span class="sets mono">ssf2u, ssf2j, ssf2a</span></th>
+<th scope="rowgroup" rowspan="2">Super Street Fighter II<span class="sets mono">ssf2u, ssf2j, ssf2a</span></th>
 <td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
+<tr>
+<td>X68000 MIDI soundtrack</td><td>Super Street Fighter II (X68000)</td></tr>
 <tr class="group">
 <th scope="rowgroup" rowspan="1">Super Street Fighter II Turbo<span class="alt">Super Street Fighter II X in Japan</span><span class="sets mono">ssf2tu, ssf2ta, ssf2xj</span></th>
 <td>Anniversary Edition arrange</td><td>Hyper Street Fighter II: The Anniversary Edition <span class="on">(PlayStation 2)</span></td></tr>
+<tr class="group">
+<th scope="rowgroup" rowspan="1">UN Squadron<span class="alt">Area 88 in Japan</span><span class="sets mono">unsquad, area88</span></th>
+<td>SNES soundtrack</td><td>Capcom Music Generation: Area 88 Original Soundtrack <span class="on">(CD audio)</span></td></tr>
 </tbody></table>
 <h3>Which disc you need</h3>
 <div class="sources">
+<div class="source"><div class="src-disc"><strong>Capcom Music Generation: Area 88 Original Soundtrack</strong><span class="platform">CD audio</span><span class="variants">one disc, ripped to FLAC or WAV</span></div></div>
 <div class="source"><div class="src-disc"><strong>Chiki Chiki Boys</strong><span class="platform">PC Engine CD</span><span class="variants">Japan</span></div></div>
+<div class="source"><div class="src-disc"><strong>Daimakaimura</strong><span class="platform">X68000</span><span class="variants">a zip of the game&#x27;s disk images, plus your own Roland SC-55 ROM set; the soundtrack is rendered on your machine</span></div></div>
 <div class="source"><div class="src-disc"><strong>Final Fight CD</strong><span class="platform">Sega CD</span><span class="variants">USA and/or Japan, and each region builds its own pack</span></div></div>
 <div class="source"><div class="src-disc"><strong>Final Fight Original Sound Collection</strong><span class="platform">CD audio</span><span class="variants">discs 1–2, ripped to FLAC or WAV</span></div></div>
 <div class="source"><div class="src-disc"><strong>Forgotten Worlds</strong><span class="platform">PC Engine CD</span><span class="variants">USA or Japan</span></div></div>
@@ -109,9 +125,11 @@
 <div class="source"><div class="src-disc"><strong>Muscle Bomber</strong><span class="platform">FM Towns</span><span class="variants">Japan</span></div></div>
 <div class="source"><div class="src-disc"><strong>Street Fighter Alpha Anthology</strong><span class="platform">PlayStation 2</span><span class="variants">USA</span></div></div>
 <div class="source"><div class="src-disc"><strong>Street Fighter Alpha: Warriors&#x27; Dreams</strong><span class="platform">Saturn</span><span class="variants">USA, or Street Fighter Zero (Japan); the European release is not supported</span></div></div>
+<div class="source"><div class="src-disc"><strong>Street Fighter II&#x27; Champion Edition</strong><span class="platform">X68000</span><span class="variants">a zip of the game&#x27;s disk images, plus your own Roland SC-55 ROM set; the soundtrack is rendered on your machine</span></div></div>
 <div class="source"><div class="src-disc"><strong>Street Fighter Zero 2 / Alpha 2</strong><span class="platform">Saturn</span><span class="variants">SF Zero 2 (Japan), SF Alpha 2 (USA or Europe), SF Zero 2′ (Japan) or SF Collection Disc 2; the songs are the same on all five</span></div></div>
 <div class="source"><div class="src-disc"><strong>Street Fighter Zero 2′ or SF Collection Disc 2</strong><span class="platform">Saturn</span><span class="variants">the same on both, any SF Collection region</span></div></div>
 <div class="source"><div class="src-disc"><strong>Super Puzzle Fighter II Turbo</strong><span class="platform">Saturn</span><span class="variants">USA, Europe, or Super Puzzle Fighter II X (Japan)</span></div></div>
+<div class="source"><div class="src-disc"><strong>Super Street Fighter II</strong><span class="platform">X68000</span><span class="variants">a zip of the game&#x27;s disk images, plus your own Roland SC-55 ROM set; the soundtrack is rendered on your machine</span></div></div>
 </div>
 <h2>Under the hood</h2>
 <p>Nothing in the game is modified. CPS-1 and CPS-2 games post sound commands to their audio hardware, and the CPS+ core watches for them. When one matches the loaded pack, it streams that arranged track and holds the command back from the sound chip. Everything else plays as it always did: hit sounds, voices, the announcer, and the jingles a pack deliberately leaves alone.</p>
@@ -122,20 +140,35 @@
 <p>Community packs are a first-class goal, so the format is documented and the tools ship in the kit. build_pack.py init &lt;game&gt; starts a project; you supply the tracks and say which sound command triggers each one; build_pack.py build produces the pack, which you can listen through, check, and point an MRA at.</p>
 <p>Any QSound CPS-2 title is a potential target, and CPS-1 and CPS-1.5 games work too. PACK_FORMAT.md in the kit covers the trigger contract, the pack layout, and how to author one.</p>
 <h2>FAQ</h2>
-<details class="faq"><summary>What do I need installed to build the packs?</summary><p>Python 3.11 or newer, numpy, and ffmpeg on your PATH. On a Mac: brew install python ffmpeg, then pip3 install numpy. On Linux, use your package manager. 7-Zip is only needed if your rips are .7z archives.</p><p>Nothing is installed on the MiSTer itself. The kit is plain files copied to the SD card, and a stock MiSTer runs them as-is.</p></details>
-<details class="faq"><summary>What disc rip formats does the builder accept?</summary><p>A .cue sheet with its .bin files beside it, a .mds/.mdf pair, or a .zip/.7z archive containing exactly one cue sheet. For the PlayStation 2 sources, point it at the .iso (or a zip containing it). The Final Fight OST is a folder of .flac or .wav files instead of a disc image.</p><p>CHD rips need converting back first with chdman extractcd, since the builder doesn&#x27;t read CHD directly.</p></details>
+<details class="faq"><summary>What do I need installed to build the packs?</summary><p>Python 3.11 or newer, numpy, and ffmpeg on your PATH. On a Mac: brew install python ffmpeg, then pip3 install numpy. On Linux, use your package manager. 7-Zip is only needed if your rips are .7z archives. The three X68000 packs additionally need git, cmake and a C/C++ compiler (see the X68000 question below).</p><p>Nothing is installed on the MiSTer itself. The kit is plain files copied to the SD card, and a stock MiSTer runs them as-is.</p></details>
+<details class="faq"><summary>What disc rip formats does the builder accept?</summary><p>A .cue sheet with its .bin files beside it, a .mds/.mdf pair, or a .zip/.7z archive containing exactly one cue sheet. For the PlayStation 2 sources, point it at the .iso (or a zip containing it). The two CD-audio sources (the Final Fight OST and the Area 88 soundtrack) are folders of .flac or .wav files instead of a disc image. The X68000 games are a zip of their .dim or .xdf floppy images.</p><p>CHD rips need converting back first with chdman extractcd, since the builder doesn&#x27;t read CHD directly.</p></details>
 <details class="faq"><summary>A pack failed hash verification. What now?</summary><p>It almost always means the disc isn&#x27;t one of the supported releases listed above, or the rip is damaged. Check which release you have, re-rip if in doubt, and run make_packs.py again. A nonstandard ffmpeg build can also encode slightly differently; the stock Homebrew or distro ffmpeg matches the published hashes.</p><p>The builder won&#x27;t stage a pack that fails, so a bad rip can&#x27;t reach your SD card. There&#x27;s a --no-verify flag if you want one anyway.</p></details>
+<details class="faq"><summary>What do the X68000 soundtracks need, and why are they different?</summary><p>The X68000 ports of Ghouls&#x27;n Ghosts, Street Fighter II&#x27; Champion Edition and Super Street Fighter II shipped their music as MIDI, meant for a Roland SC-55 on the desk next to the computer. There is no recording to copy, so the kit renders one on your machine, the same way the published packs were made: your disk images, your SC-55 ROM set, and a cycle-accurate SC-55 emulator built from source at a pinned revision.</p><p>That means git, cmake and a C/C++ compiler (Xcode&#x27;s command-line tools on a Mac, build-essential and cmake on Debian or Ubuntu), a one-time build of a few minutes, and then ten minutes to an hour of rendering per game. The result is hash-checked like every other pack. The kit&#x27;s X68000.md walks through it.</p><p>The published packs were rendered and rebuilt byte-for-byte on a Mac. Whether the emulator&#x27;s output is bit-identical on every CPU has not been proven; if it isn&#x27;t on yours, the builder stops at the hash check rather than staging different audio.</p></details>
 <details class="faq"><summary>Will this touch my existing MiSTer setup?</summary><p>No. The CPS+ cores have their own names and the MRAs live in their own folder, so your existing cores, MRAs and ROMs are untouched. To remove it, delete the _CPS+ folder, the three cores and games/CPS+.</p></details>
 <details class="faq"><summary>Is any of the music in the download?</summary><p>No, the kit is tools only. Every pack is made on your machine from a disc you own.</p></details>
 <details class="faq"><summary>Do the packs work in MAME or on a real arcade board?</summary><p>No. CPS+ is a MiSTer feature: the streaming player lives in the FPGA cores and the pack loads into the MiSTer&#x27;s DDR memory. Everywhere else the games just play their stock music.</p><p>The companion projects do cover other targets: SFA2 Gold and the Final Fight CD cutscene backport both ship HBMAME sets. See their pages, linked below.</p></details>
+<details class="faq"><summary>I built the 1.0 packs. Do I need to rebuild them for 1.1?</summary><p>No. The eighteen packs from 1.0 are unchanged, hash for hash, and so are their MRAs and the three cores. Drop the 1.1 kit over your old one, add the new sources to discs.toml, and make_packs.py builds only what is new.</p></details>
+<h2>Release history</h2>
+<h3>1.1 (2026-09-01)</h3><ul>
+<li>UN Squadron / Area 88 with the Super Famicom soundtrack, built from the Capcom Music Generation: Area 88 CD (FLAC or WAV).</li>
+<li>X68000 MIDI soundtracks for Street Fighter II&#x27; Champion Edition, Super Street Fighter II and Ghouls&#x27;n Ghosts / Daimakaimura, rendered on your machine from your own X68000 disk images and SC-55 ROMs.</li>
+<li>Final Fight 30th Anniversary CPS2 Edition with the Sega CD arrangement, from the same US Final Fight CD as the CPS-1 pack.</li>
+<li>Ten new MRAs (62 in all) and five new packs (23 in all). The eighteen 1.0 packs, their MRAs and the three cores are unchanged, so nothing needs rebuilding.</li>
+</ul>
+<h3>1.0 (2026-08-25)</h3><ul>
+<li>First public release.</li>
+</ul>
 <h2>Source &amp; related projects</h2><ul>
 <li><a href="https://github.com/strygo/jtcores/tree/cpsplus">strygo/jtcores (cpsplus branch)</a>, the CPS+ core fork: RTL, integration patches, pack format spec, and full GPL-3.0 source for the shipped RBFs</li>
 <li><a href="https://github.com/jotego/jtcores">jotego/jtcores</a>, the upstream CPS core project CPS+ builds on</li>
+<li><a href="https://github.com/Toryalai1/Arcade_Offset">Arcade Offset</a>, the MiSTer distribution of the Final Fight 30th Anniversary CPS2 Edition conversion that the 30th Anniversary Arrange MRA pairs with</li>
 <li><a href="../sfa2-gold/">Street Fighter Alpha 2 Gold</a>, companion project: the reconstructed Gold sets that the Gold Arrange MRAs load</li>
 <li><a href="../final-fight-cd/">Final Fight — CD Cutscenes</a>, companion project: the cutscene backport set that pairs with the Arrange + CD Cutscenes MRA</li>
+<li><a href="https://github.com/JohnMama12/Nuked-SC55-GUI-Float">Nuked-SC55 (float build)</a>, the SC-55 emulator the X68000 MIDI packs are rendered with, built from source at a pinned revision</li>
+<li><a href="https://github.com/ValleyBell/ExtractorsDecoders">ValleyBell/ExtractorsDecoders</a>, the X68000 music-bank decoders, built from source at a pinned revision</li>
 </ul>
 <h2>Notes</h2><ul class="notes">
-<li>The arranged recordings remain © Capcom and are never distributed here. Every pack is built from your own disc.</li>
+<li>The arranged recordings remain © Capcom and are never distributed here. Every pack is built from your own discs, disks and ROMs.</li>
 <li>Sound effects, voices and the announcer always play live through the original arcade audio path; packs substitute music only, and a few cues deliberately pass through to the arcade board&#x27;s own music.</li>
 </ul>
 </main>

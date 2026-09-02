@@ -1,0 +1,30 @@
+# unsquad_snes loop points -- STRUCTURE-FIRST (tools/find_repeat_loop.py,
+# 2026-08-30), replacing the fade-onset-only construction after the
+# listening gate rejected every seam.  The CMG SFC tracks split two ways:
+#   REPEAT  the track contains the same performance twice; ls sits after the
+#           intro, le = ls + measured repeat lag, so the wrap joins
+#           near-identical audio (content NCC at the exact lag is the seam
+#           column; the 32-sample ADX grid forces a <=16-sample wrap offset,
+#           which the pack's 1 s crossfade erases).
+#   SPLICE  single-pass-plus-fade master: le stays at the fade onset, ls is
+#           the content-matched splice point (lag-tolerant NCC over the
+#           blend regions) instead of the track head.  seam column = match
+#           score; these are the rows most worth re-auditioning.
+# Samples at 44100; ls/le 32-aligned.  EVERY row needs the ear gate.
+track	mode	ls	le	seam	flags
+30	splice	110272	1256832	0.4284
+31	splice	319744	1234784	0.2812
+32	repeat	2381408	4753056	0.9910
+33	splice	1312000	2579840	0.7433
+35	repeat	1764000	3503744	1.0000
+36	repeat	1808128	3349920	0.9988
+37	repeat	2337312	4388416	1.0000
+38	repeat	1146624	3631648	0.9776
+39	repeat	2293216	4601440	0.9914
+40	splice	55136	1455296	0.5430
+41	repeat	176416	3184896	1.0000
+42	splice	1124576	2227040	0.4602
+43	spc_loop	2604352	4652544	0.9806	defade
+44	repeat	2469600	4908320	0.9986
+45	repeat	2028608	4061600	0.9921
+47	repeat	2205024	4339488	1.0000
