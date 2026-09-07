@@ -7,6 +7,9 @@ Usage:
     python3 apply.py <stock zip> --hbmame     writes the HBMAME clone set zip
     python3 apply.py <rom directory>          patches extracted files in place-adjacent copies
 
+Bundles that carry several builds of one game (regional editions) take
+--variant <key> to choose one; --list-variants shows them.
+
 The stock zip is your own MAME-format romset (see manifest.json for the exact
 set this patch targets). Every file is checksum-verified before and after
 patching; nothing is written unless the source matches the expected original.
@@ -53,15 +56,32 @@ def crc32(data: bytes) -> str:
     return f"{zlib.crc32(data) & 0xFFFFFFFF:08x}"
 
 
-def load_bundle():
+def load_bundle(variant=None):
     here = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(here, "manifest.json"), "r", encoding="utf-8") as f:
         manifest = json.load(f)
+    ips_dir = os.path.join(here, "ips")
+    variants = manifest.get("variants")
+    if variants:
+        keys = ", ".join(v["key"] for v in variants)
+        if not variant:
+            fail(f"this bundle holds {len(variants)} builds; choose one with "
+                 f"--variant <key> (one of: {keys}), or --list-variants")
+        chosen = next((v for v in variants if v["key"] == variant), None)
+        if chosen is None:
+            fail(f"no build named '{variant}' (one of: {keys})")
+        manifest = dict(manifest)
+        manifest["members"] = chosen["members"]
+        manifest["hbmame"] = chosen.get("hbmame")
+        manifest["variant"] = {"key": chosen["key"], "label": chosen["label"]}
+        ips_dir = os.path.join(ips_dir, chosen["key"])
+    elif variant:
+        fail("this bundle has a single build; drop --variant")
     patches = {}
     for member in manifest["members"]:
         if member["action"] != "patch":
             continue
-        ips_path = os.path.join(here, "ips", member["name"] + ".ips")
+        ips_path = os.path.join(ips_dir, member["name"] + ".ips")
         with open(ips_path, "rb") as f:
             patches[member["name"]] = f.read()
     return manifest, patches
@@ -180,18 +200,36 @@ def patch_dir(manifest, patches, in_dir):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("target", help="stock romset zip, or a directory of extracted ROM files")
+    ap.add_argument("target", nargs="?", help="stock romset zip, or a directory of extracted ROM files")
     ap.add_argument("-o", "--output", help="output zip path (zip input only)")
     ap.add_argument(
         "--hbmame",
         action="store_true",
         help="write the HBMAME clone set zip (patched ROMs only, HBMAME names)",
     )
+    ap.add_argument("--variant", help="which build to apply, for bundles that hold several")
+    ap.add_argument("--list-variants", action="store_true",
+                    help="show the builds in this bundle and exit")
     args = ap.parse_args()
 
-    manifest, patches = load_bundle()
+    if args.list_variants:
+        here = os.path.dirname(os.path.abspath(__file__))
+        with open(os.path.join(here, "manifest.json"), "r", encoding="utf-8") as f:
+            m = json.load(f)
+        for v in m.get("variants", []):
+            print(f"  {v['key']:12} {v['label']}")
+        if not m.get("variants"):
+            print("  (single build; no --variant needed)")
+        return
+
+    if not args.target:
+        ap.error("the following arguments are required: target")
+    manifest, patches = load_bundle(args.variant)
     print(f"{manifest['title']} ({manifest['version']})")
-    print(f"Target: MAME set '{manifest['set']}' - {manifest['game']}\n")
+    print(f"Target: MAME set '{manifest['set']}' - {manifest['game']}")
+    if manifest.get("variant"):
+        print(f"Build:  {manifest['variant']['label']} (--variant {manifest['variant']['key']})")
+    print()
 
     if os.path.isdir(args.target):
         if args.hbmame:
@@ -207,7 +245,8 @@ def main():
                 out = os.path.join(os.path.dirname(os.path.abspath(args.target)), setname + ".zip")
             else:
                 base, ext = os.path.splitext(args.target)
-                out = base + "_patched" + (ext or ".zip")
+                tag = "_" + manifest["variant"]["key"] if manifest.get("variant") else ""
+                out = base + tag + "_patched" + (ext or ".zip")
         if os.path.abspath(out) == os.path.abspath(args.target):
             fail("output path must differ from input path")
         if args.hbmame:

@@ -949,6 +949,178 @@
         ],
         "kit_command": "python3 apply.py --disc-jp \"Final Fight CD (JP).img\" \\\n                 --disc-us \"Final Fight CD (USA) (Track 01).bin\" \\\n                 --romset /path/to/roms --out-dir out"
       }
+    },
+    {
+      "slug": "ssf2t-gmc",
+      "title": "Super Street Fighter II Turbo: Grand Master Challenge",
+      "subtitle": "Japan's Super Turbo, in English",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-09-10",
+      "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
+      "set": "ssf2xj",
+      "hardware": "Capcom CPS-2",
+      "patch_noun": "restoration",
+      "patch_kind": "English restoration patch",
+      "patch_intro": "An unofficial fan restoration of Super Street Fighter II X: Grand Master Challenge (Japan 940311): the Japanese game, in English, under a US identity.",
+      "summary": "Japan's Super Turbo is the one the pros play, and it never came west. Now it does: the same game, with every quote, tip and ending in English.",
+      "description": [
+        "Super Turbo came in two versions. Japan got Super Street Fighter II X, the one competitive players swear by. The rest of the world got a slightly different game: it plays differently, the continue screen is bare, most of the win quotes are gone, the endings are shorter, and Akuma's story is missing. Japan's version, of course, was in Japanese.",
+        "Grand Master Challenge is Japan's game in English. The fighting is untouched. Everything you read is new: all 136 win quotes, the strategy tips on the continue screen, the full endings, and Akuma's dialogue, translated fresh from the Japanese with Capcom's own English as the style guide.",
+        "It runs anywhere Super Turbo does: MAME, HBMAME, MiSTer, or a real CPS-2 board. The patch keeps the ROM's original sizes and key, so it drops in over the stock Japanese set."
+      ],
+      "changes": [
+        "Japan's game, exactly as it plays in Japan",
+        "The Grand Master Challenge title, and a US region",
+        "Balrog, Vega, M. Bison and Akuma, the names you know",
+        "All 136 win quotes in English",
+        "The continue screen's strategy tips in English",
+        "Every ending in full, in English, including Akuma's",
+        "Akuma's intro dialogue, cut from the export game"
+      ],
+      "comparison": {
+        "heading": "Compared with the US Super Turbo",
+        "intro": [
+          "How the three compare."
+        ],
+        "columns": [
+          "",
+          "US Super Turbo",
+          "Japan",
+          "Grand Master Challenge"
+        ],
+        "rows": [
+          [
+            "Gameplay",
+            "Export version",
+            "Japanese version",
+            "Japanese version"
+          ],
+          [
+            "Language",
+            "English",
+            "Japanese",
+            "English"
+          ],
+          [
+            "Title",
+            "Super Street Fighter II Turbo",
+            "Super Street Fighter II X: Grand Master Challenge",
+            "Super Street Fighter II Turbo: Grand Master Challenge"
+          ],
+          [
+            "Character names",
+            "Balrog, Vega, M. Bison, Akuma",
+            "M. Bison, Balrog, Vega, Gouki",
+            "Balrog, Vega, M. Bison, Akuma"
+          ],
+          [
+            "Win quotes",
+            "20",
+            "136",
+            "136"
+          ],
+          [
+            "Continue screen tips",
+            "None",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "Endings",
+            "Shortened",
+            "Full",
+            "Full"
+          ],
+          [
+            "Akuma's ending",
+            "Blank",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "Akuma's intro dialogue",
+            "Cut",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "Free Play",
+            "Yes",
+            "No",
+            "Yes"
+          ]
+        ]
+      },
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/ssf2xj.zip",
+        "patched_zip": "../capcom/translations/ssf2x/out/release/ssf2tgmc.zip"
+      },
+      "mra": {
+        "base": "data/mra/ssf2xj.mra",
+        "name": "Super Street Fighter II Turbo: Grand Master Challenge (English Restoration)",
+        "setname": "ssf2tgmc",
+        "filename": "Super Street Fighter II Turbo Grand Master Challenge (English Restoration).mra"
+      },
+      "hbmame": {
+        "setname": "ssf2tgmc",
+        "renames": {
+          "sfxj.03d": "sfxj.03d",
+          "sfxj.04a": "sfxj.04a",
+          "sfxj.08": "sfxj.08",
+          "sfx.13m": "sfx.13m",
+          "sfx.15m": "sfx.15m",
+          "sfx.17m": "sfx.17m",
+          "sfx.19m": "sfx.19m"
+        }
+      },
+      "screenshots": [
+        {
+          "single": "data/screenshots/ssf2t-gmc/title_gmc.png",
+          "caption": "Super Turbo, Grand Master Challenge: Japan's version of the game, under the US name."
+        },
+        {
+          "before": "data/screenshots/ssf2t-gmc/title_usa.png",
+          "after": "data/screenshots/ssf2t-gmc/title_jp.png",
+          "before_label": "US Super Turbo",
+          "after_label": "Japanese Super Turbo X",
+          "caption": "Where it comes from. The US board on the left, the Japanese board on the right."
+        },
+        {
+          "before": "data/screenshots/ssf2t-gmc/continue_usa.png",
+          "after": "data/screenshots/ssf2t-gmc/continue_gmc.png",
+          "before_label": "US Super Turbo",
+          "after_label": "Grand Master Challenge",
+          "caption": "Lost a round? The US game just counts down. Japan's game gives you a tip, now in English."
+        },
+        {
+          "before": "data/screenshots/ssf2t-gmc/quote_usa.png",
+          "after": "data/screenshots/ssf2t-gmc/quote_gmc.png",
+          "before_label": "US Super Turbo",
+          "after_label": "Grand Master Challenge",
+          "caption": "Every win quote from the Japanese game, in English. The US game only had twenty short ones."
+        },
+        {
+          "single": "data/screenshots/ssf2t-gmc/akuma_dialogue.png",
+          "caption": "Akuma's intro dialogue, cut from the export game, back in English."
+        }
+      ],
+      "related": [
+        {
+          "label": "arcade-projects request thread",
+          "url": "https://www.arcade-projects.com/threads/project-request-cps2-super-street-fighter-ii-x-japan-complete-english-restoration-patch.38233/",
+          "note": "the request this project set out to answer"
+        },
+        {
+          "label": "CPS+",
+          "url": "../cps-plus/",
+          "note": "companion project: the arranged Anniversary Edition and HD Remix soundtracks for Super Turbo on MiSTer"
+        }
+      ],
+      "notes": [
+        "MAME shows checksum warnings for the seven patched files. That's expected; the game plays normally. HBMAME with the ssf2tgmc set definition loads it without them.",
+        "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
+      ]
     }
   ]
 }

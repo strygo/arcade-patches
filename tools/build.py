@@ -98,8 +98,13 @@ def human_size(n: int) -> str:
 # ------------------------------------------------------------- downloads
 
 
-def make_readme(patch: dict, members: list, fmt: str) -> str:
-    """Project readme.txt shipped inside every download (fmt: 'ips' or 'mra')."""
+def make_readme(patch: dict, members: list, fmt: str,
+                variants: list | None = None) -> str:
+    """Project readme.txt shipped inside every download (fmt: 'ips' or 'mra').
+
+    `variants` (regional builds sharing one stock set) adds a --variant step
+    and lists each build's changed files."""
+    noun = patch_noun(patch)
     title = f"{patch['title']} · {patch['subtitle']}"
     lines = [
         title,
@@ -156,6 +161,65 @@ def make_readme(patch: dict, members: list, fmt: str) -> str:
             "CHD; that is expected and the game runs on Japanese, USA, and Export",
             "BIOS regions.",
         ]
+    elif fmt == "ips" and variants:
+        keys = ", ".join(v["key"] for v in variants)
+        lines += [
+            "BUILDS IN THIS DOWNLOAD",
+            "",
+        ]
+        for v in variants:
+            lines.append(f"    {v['key']:10} {v['label']}")
+        lines += [
+            "",
+            "HOW TO APPLY (recommended)",
+            "",
+            f"    python3 apply.py /path/to/{setname}.zip --variant {variants[0]['key']}",
+            "",
+            f"Pick the build with --variant ({keys}). This verifies every file,",
+            f"applies its IPS patches, and writes {setname}_<variant>_patched.zip.",
+            f"Rename it to {setname}.zip and place it ahead of the stock set in your",
+            "MAME rompath. MAME reports checksum warnings for the patched ROMs; that",
+            "is expected and the game runs normally.",
+            "",
+            "HOW TO APPLY (any IPS patcher)",
+            "",
+            f"Extract {setname}.zip, apply each file in ips/<variant>/ to the ROM file",
+            "of the same name (Flips, Lunar IPS, or any IPS tool), then re-zip",
+            f"everything as {setname}.zip.",
+            "",
+            "CHANGED FILES",
+            "",
+        ]
+        for v in variants:
+            lines.append(f"  {v['label']} (--variant {v['key']}):")
+            for m in v["members"]:
+                if m["action"] == "patch":
+                    lines.append(
+                        f"    {m['name']}  ({human_size(m['size'])})  "
+                        f"CRC32 {m['stock_crc32']} -> {m['patched_crc32']}"
+                    )
+            lines.append("")
+        lines += ["All other files in the set are unmodified."]
+        if any(v.get("hbmame") for v in variants):
+            lines += [
+                "",
+                "HBMAME",
+                "",
+                f"Each build also has an HBMAME set definition. To build a set zip",
+                "from your own dump:",
+                "",
+                f"    python3 apply.py /path/to/{setname}.zip --variant <variant> --hbmame",
+                "",
+            ]
+            for v in variants:
+                if v.get("hbmame"):
+                    lines.append(f"    {v['key']:10} -> {v['hbmame']['setname']}.zip")
+            lines += [
+                "",
+                f"Put the zip in HBMAME's roms/ folder next to your stock {setname}.zip.",
+                "With the matching set definition in HBMAME, it loads with no checksum",
+                "warnings.",
+            ]
     elif fmt == "ips":
         lines += [
             "HOW TO APPLY (recommended)",
@@ -185,13 +249,15 @@ def make_readme(patch: dict, members: list, fmt: str) -> str:
         lines += ["", "All other files in the set are unmodified."]
         if patch.get("hbmame"):
             hb = patch["hbmame"]
-            lines += [
-                "",
-                "HBMAME",
-                "",
-                f"This translation is also an official HBMAME set, '{hb['setname']}'.",
-                "HBMAME releases carry it going forward, so full-set collections",
-                "include it automatically. To build the set zip from your own dump:",
+            if hb.get("pr_url"):
+                first = [f"This {noun} is also an official HBMAME set, '{hb['setname']}'.",
+                         "HBMAME releases carry it going forward, so full-set collections",
+                         "include it automatically. To build the set zip from your own dump:"]
+            else:
+                first = [f"This {noun} also has an HBMAME set definition, '{hb['setname']}'",
+                         "(the definition ships with the project; an upstream HBMAME",
+                         "submission is pending). To build the set zip from your own dump:"]
+            lines += ["", "HBMAME", ""] + first + [
                 "",
                 f"    python3 apply.py /path/to/{setname}.zip --hbmame",
                 "",
@@ -201,20 +267,51 @@ def make_readme(patch: dict, members: list, fmt: str) -> str:
                 "checksum warnings: HBMAME's set definition carries the patched",
                 "checksums.",
             ]
-    else:
-        mra_cfg = patch["mra"]
+    elif variants:
+        lines += ["MISTER SETUP", ""]
+        zip_dir = (patch["mra"].get("zip_dir") or "").strip("/")
+        if zip_dir:
+            top = zip_dir.split("/")[0]
+            lines.append(f"1. Copy the {top}/ folder from this download to the root of your MiSTer SD")
+            lines.append(f"   card (the MRAs land in {zip_dir}/), or just the MRAs you want:")
+        else:
+            lines.append("1. Copy the MRA for the build you want anywhere under _Arcade/ on your MiSTer:")
+        for v in variants:
+            rel = "/".join(x for x in (v["mra"].get("subdir", ""), v["mra"]["filename"]) if x)
+            lines.append(f"       \"{rel}\"")
         lines += [
-            "MISTER SETUP",
-            "",
-            f"1. Copy \"{mra_cfg['filename']}\" anywhere under _Arcade/ on your MiSTer.",
             f"2. Have the stock, unmodified romset at games/mame/{setname}.zip",
             "   (split MAME sets also need qsound.zip next to it).",
             "3. You need Jotego's jtcps2 core; the standard MiSTer downloader /",
             "   update_all installs it automatically.",
             "",
-            "The MRA references your original romset and applies the translation in",
+            f"Each MRA references your original romset and applies the {noun} in",
+            "memory while the game loads. Nothing on your SD card is modified. Each",
+            "build keeps its own settings and saves under its own setname:",
+        ]
+        for v in variants:
+            lines.append(f"    {v['label']:16} {v['mra']['setname']}")
+    else:
+        mra_cfg = patch["mra"]
+        zip_dir = (mra_cfg.get("zip_dir") or "").strip("/")
+        lines += ["MISTER SETUP", ""]
+        if zip_dir:
+            lines += [
+                f"1. Copy the {zip_dir.split('/')[0]}/ folder from this download to the root of your",
+                f"   MiSTer SD card (the MRA lands in {zip_dir}/), or copy",
+                f"   \"{mra_cfg['filename']}\" anywhere under _Arcade/.",
+            ]
+        else:
+            lines.append(f"1. Copy \"{mra_cfg['filename']}\" anywhere under _Arcade/ on your MiSTer.")
+        lines += [
+            f"2. Have the stock, unmodified romset at games/mame/{setname}.zip",
+            "   (split MAME sets also need qsound.zip next to it).",
+            "3. You need Jotego's jtcps2 core; the standard MiSTer downloader /",
+            "   update_all installs it automatically.",
+            "",
+            f"The MRA references your original romset and applies the {noun} in",
             "memory while the game loads. Nothing on your SD card is modified. The",
-            "translation keeps its own settings and saves under the name",
+            f"{noun} keeps its own settings and saves under the name",
             f"'{mra_cfg['setname']}'.",
         ]
 
@@ -241,14 +338,22 @@ def zip_writer(out_path: Path, stamp: tuple):
     return write
 
 
-def mra_header_note(patch: dict) -> str:
-    mra_cfg = patch["mra"]
+def patch_noun(patch: dict) -> str:
+    """How the patch refers to itself in prose: 'translation' unless the
+    entry says otherwise (a restoration, an edition)."""
+    return patch.get("patch_noun", "translation")
+
+
+def mra_header_note(patch: dict, mra_cfg: dict | None = None) -> str:
+    mra_cfg = mra_cfg or patch["mra"]
+    kind = patch.get("patch_kind", "English translation patch")
+    intro = patch.get("patch_intro") or f"An unofficial fan translation of {patch['game']}."
     credit = f"\n    Patch by {author_line()}.\n" if author_line() else ""
-    return f"""    {patch['title']}, English translation patch ({patch['version']})
-    An unofficial fan translation of {patch['game']}.
+    return f"""    {patch['title']}, {kind} ({patch['version']})
+    {intro}
 {credit}
     This is a patch-overlay MRA: it references the ORIGINAL, unmodified
-    MAME romset ({patch['set']}.zip) and applies the translation in memory
+    MAME romset ({patch['set']}.zip) and applies the {patch_noun(patch)} in memory
     while the game loads. It contains no ROM data. Settings and saves use
     the name '{mra_cfg['setname']}'.
 
@@ -256,37 +361,54 @@ def mra_header_note(patch: dict) -> str:
     Not affiliated with or endorsed by Capcom. Free patch; do not sell."""
 
 
-def build_mra_zip(patch: dict, stock_path: Path, patched_path: Path,
-                  out_path: Path, stamp: tuple, members: list) -> None:
-    """Generate and verify the MiSTer patch-overlay MRA, packaged with readme."""
-    mra_cfg = patch["mra"]
-    base_text = resolve(mra_cfg["base"]).read_text()
+def mra_zip_path(patch: dict, mra_cfg: dict) -> str:
+    """Where an MRA sits inside its download: the SD-card folder the patch
+    names (e.g. _Arcade/_Translations), a per-build regional subfolder
+    (e.g. _Japan), then the file."""
+    parts = [(patch.get("mra") or {}).get("zip_dir", ""), mra_cfg.get("subdir", ""), mra_cfg["filename"]]
+    return "/".join(x.strip("/") for x in parts if x and x.strip("/"))
+
+
+def build_mra_zip(patch: dict, stock_path: Path, entries: list,
+                  out_path: Path, stamp: tuple, members: list,
+                  variants: list | None = None) -> None:
+    """Generate and verify the MiSTer patch-overlay MRAs, packaged with readme.
+
+    `entries` is a list of (mra_cfg, patched_path): one overlay per patched
+    set, all built on the base MRA named in patch["mra"]["base"]."""
+    base_text = resolve(patch["mra"]["base"]).read_text()
 
     stock_rom = mralib.assemble(base_text, mralib.ZipSource([stock_path]))
     declared = mralib.declared_asm_md5(base_text)
     if declared and hashlib.md5(stock_rom).hexdigest() != declared:
         raise SystemExit(f"{patch['slug']}: stock assembly does not match base MRA asm_md5")
 
-    patched_rom = mralib.assemble(base_text, mralib.ZipSource([patched_path], check_crc=False))
-    runs = mralib.diff_runs(stock_rom, patched_rom)
-    text = mralib.make_patch_mra(
-        base_text,
-        name=mra_cfg["name"],
-        setname=mra_cfg["setname"],
-        patched_rom=patched_rom,
-        runs=runs,
-        note=mra_header_note(patch),
-    )
-    # Round-trip proof: the overlay MRA over the stock set must assemble to
-    # exactly what the official MRA produces from the patched set.
-    if mralib.assemble(text, mralib.ZipSource([stock_path])) != patched_rom:
-        raise SystemExit(f"{patch['slug']}: MRA round-trip verification failed")
+    texts = []
+    for mra_cfg, patched_path in entries:
+        patched_rom = mralib.assemble(base_text, mralib.ZipSource([patched_path], check_crc=False))
+        runs = mralib.diff_runs(stock_rom, patched_rom)
+        text = mralib.make_patch_mra(
+            base_text,
+            name=mra_cfg["name"],
+            setname=mra_cfg["setname"],
+            patched_rom=patched_rom,
+            runs=runs,
+            note=mra_header_note(patch, mra_cfg),
+        )
+        # Round-trip proof: the overlay MRA over the stock set must assemble to
+        # exactly what the official MRA produces from the patched set.
+        if mralib.assemble(text, mralib.ZipSource([stock_path])) != patched_rom:
+            raise SystemExit(f"{patch['slug']}: MRA round-trip verification failed "
+                             f"({mra_cfg['filename']})")
+        texts.append((mra_zip_path(patch, mra_cfg), text, len(runs)))
 
     write = zip_writer(out_path, stamp)
     with zipfile.ZipFile(out_path, "w") as z:
-        write(z, mra_cfg["filename"], text.encode())
-        write(z, "readme.txt", make_readme(patch, members, "mra").encode())
-    print(f"{patch['slug']}: MRA rebuilt and verified ({len(runs)} patch runs) -> {out_path.name}")
+        for path, text, _ in texts:
+            write(z, path, text.encode())
+        write(z, "readme.txt", make_readme(patch, members, "mra", variants).encode())
+    runs_desc = ", ".join(str(n) for _, _, n in texts)
+    print(f"{patch['slug']}: MRA rebuilt and verified ({runs_desc} patch runs) -> {out_path.name}")
 
 
 def download_info(zipname: str) -> dict:
@@ -400,12 +522,134 @@ def build_downloads(patch: dict) -> dict | None:
     return build_rom_downloads(patch)
 
 
+def diff_members(slug: str, stock: dict, patched: dict) -> tuple[list, dict]:
+    """Per-member actions and IPS patches for one stock -> patched pair,
+    round-trip verified."""
+    if set(stock) != set(patched):
+        raise SystemExit(f"{slug}: stock and patched zips have different members")
+    members, ips_files = [], {}
+    for name in sorted(stock):
+        entry = {
+            "name": name,
+            "size": len(stock[name]),
+            "stock_crc32": crc32(stock[name]),
+            "action": "copy",
+        }
+        if stock[name] != patched[name]:
+            ips = ipsutil.make_ips(stock[name], patched[name])
+            # Round-trip proof: stock + patch must equal the verified build.
+            if ipsutil.apply_ips(ips, stock[name]) != patched[name]:
+                raise SystemExit(f"{slug}: round-trip verification failed for {name}")
+            entry.update(action="patch", patched_crc32=crc32(patched[name]))
+            ips_files[name] = ips
+        members.append(entry)
+    if not ips_files:
+        raise SystemExit(f"{slug}: stock and patched zips are identical")
+    return members, ips_files
+
+
+def check_hbmame(slug: str, hb: dict, members: list, patched: dict) -> dict:
+    """Validate an hbmame block against the patched members; returns the
+    manifest entry.  Renames may map a file to its own name when HBMAME keeps
+    the stock filenames and only the checksums change."""
+    patched_names = {m["name"] for m in members if m["action"] == "patch"}
+    if set(hb["renames"]) != patched_names:
+        raise SystemExit(
+            f"{slug}: hbmame.renames keys {sorted(hb['renames'])} do not match "
+            f"patched members {sorted(patched_names)}"
+        )
+    if len(set(hb["renames"].values())) != len(hb["renames"]):
+        raise SystemExit(f"{slug}: hbmame.renames has duplicate target names")
+    hbmame_out = {hb["renames"][n]: crc32(patched[n]) for n in patched_names}
+    print(f"{slug}: HBMAME set '{hb['setname']}' verified: " +
+          ", ".join(f"{n}={c}" for n, c in sorted(hbmame_out.items())))
+    return {"setname": hb["setname"], "renames": hb["renames"]}
+
+
+def read_zip(path: Path) -> dict:
+    with zipfile.ZipFile(path) as z:
+        return {i.filename: z.read(i.filename) for i in z.infolist()}
+
+
+def build_variant_downloads(patch: dict, art: dict) -> dict | None:
+    """IPS + MRA downloads for a patch with several builds on one stock set
+    (regional editions).  One IPS bundle carries ips/<variant>/, one MRA zip
+    carries every overlay; apply.py picks a build with --variant."""
+    slug = patch["slug"]
+    ips_zipname = f"{slug}-{patch['version']}-ips.zip"
+    mra_zipname = f"{slug}-{patch['version']}-mra.zip" if patch.get("mra") else None
+    ips_path = DOCS / "downloads" / ips_zipname
+    persist_path = GENERATED / f"{slug}.json"
+    stock_path = resolve(art["stock_zip"])
+    specs = art["variants"]
+    sources = stock_path.exists() and all(resolve(v["patched_zip"]).exists() for v in specs)
+
+    if sources:
+        stock = read_zip(stock_path)
+        variants, ips_by_variant, mra_entries = [], {}, []
+        for v in specs:
+            patched = read_zip(resolve(v["patched_zip"]))
+            members, ips_files = diff_members(f"{slug}/{v['key']}", stock, patched)
+            entry = {"key": v["key"], "label": v["label"], "members": members}
+            if v.get("mra"):
+                entry["mra"] = v["mra"]
+                mra_entries.append((v["mra"], resolve(v["patched_zip"])))
+            if v.get("hbmame"):
+                entry["hbmame"] = check_hbmame(f"{slug}/{v['key']}", v["hbmame"], members, patched)
+            variants.append(entry)
+            ips_by_variant[v["key"]] = ips_files
+        manifest = {
+            "title": f"{patch['title']} · {patch['subtitle']}",
+            "version": patch["version"],
+            "game": patch["game"],
+            "set": patch["set"],
+            "hardware": patch["hardware"],
+            "variants": [{k: v[k] for k in v if k != "mra"} | (
+                {"mra_setname": v["mra"]["setname"]} if v.get("mra") else {})
+                for v in variants],
+        }
+        ips_path.parent.mkdir(parents=True, exist_ok=True)
+        stamp = tuple(int(x) for x in patch["date"].split("-")) + (0, 0, 0)
+        write = zip_writer(ips_path, stamp)
+        with zipfile.ZipFile(ips_path, "w") as z:
+            write(z, "readme.txt", make_readme(patch, [], "ips", variants).encode())
+            write(z, "manifest.json", json.dumps(manifest, indent=2).encode())
+            write(z, "apply.py", (ROOT / "tools" / "bundle_apply.py").read_bytes())
+            for key, ips_files in ips_by_variant.items():
+                for name, ips in sorted(ips_files.items()):
+                    write(z, f"ips/{key}/{name}.ips", ips)
+        n_patched = sum(len(f) for f in ips_by_variant.values())
+        print(f"{slug}: IPS bundle rebuilt from sources ({len(variants)} builds, "
+              f"{n_patched} patched ROMs) -> {ips_zipname}")
+        if mra_zipname and mra_entries:
+            build_mra_zip(patch, stock_path, mra_entries, DOCS / "downloads" / mra_zipname,
+                          stamp, [], variants)
+        GENERATED.mkdir(parents=True, exist_ok=True)
+        persist_path.write_text(json.dumps(
+            {"ips_zipname": ips_zipname, "mra_zipname": mra_zipname,
+             "variants": variants}, indent=2) + "\n")
+    elif persist_path.exists() and ips_path.exists():
+        variants = json.loads(persist_path.read_text())["variants"]
+        print(f"{slug}: sources unavailable, reusing existing downloads")
+    else:
+        print(f"{slug}: WARNING: no sources and no existing downloads; downloads omitted")
+        return None
+
+    result = {"kind": "rom", "variants": variants, "members": variants[0]["members"],
+              "ips": download_info(ips_zipname)}
+    if mra_zipname and (DOCS / "downloads" / mra_zipname).exists():
+        result["mra"] = download_info(mra_zipname)
+    return result
+
+
 def build_rom_downloads(patch: dict) -> dict | None:
     """Build (or reuse) the IPS and MRA downloads. Returns render info or None."""
     slug = patch["slug"]
     art = patch.get("artifact")
     if not art:
         return None
+    if art.get("variants"):
+        return build_variant_downloads(patch, art)
 
     ips_zipname = f"{slug}-{patch['version']}-ips.zip"
     mra_zipname = f"{slug}-{patch['version']}-mra.zip" if patch.get("mra") else None
@@ -479,7 +723,7 @@ def build_rom_downloads(patch: dict) -> dict | None:
         print(f"{slug}: IPS bundle rebuilt from sources ({len(ips_files)} patched ROMs) -> {ips_zipname}")
 
         if mra_zipname:
-            build_mra_zip(patch, stock_path, patched_path,
+            build_mra_zip(patch, stock_path, [(patch["mra"], patched_path)],
                           DOCS / "downloads" / mra_zipname, stamp, members)
 
         GENERATED.mkdir(parents=True, exist_ok=True)
@@ -715,6 +959,9 @@ def render_download(patch: dict, bundle: dict | None) -> str:
         return render_chd_download(patch, bundle)
     if bundle["kind"] == "kit":
         return render_kit_download(patch, bundle)
+    if bundle.get("variants"):
+        return render_variant_download(patch, bundle)
+    noun = patch_noun(patch)
     rows = "\n".join(
         f'<tr><td class="mono">{esc(m["name"])}</td><td>{human_size(m["size"])}</td>'
         f'<td class="mono">{esc(m["stock_crc32"])}</td><td class="mono">{esc(m["patched_crc32"])}</td></tr>'
@@ -744,35 +991,201 @@ of the same name and re-zip the set yourself.</p>
 That is expected, and the game runs normally.</p>""")
     if mra_info:
         mra_cfg = patch["mra"]
+        zip_dir = (mra_cfg.get("zip_dir") or "").strip("/")
+        if zip_dir:
+            where = (f"Copy the <code>{esc(zip_dir.split('/')[0])}/</code> folder from the MRA download "
+                     f"to the root of your MiSTer SD card (the MRA lands in <code>{esc(zip_dir)}/</code>), "
+                     f"or copy <code>{esc(mra_cfg['filename'])}</code> anywhere under <code>_Arcade/</code>,")
+        else:
+            where = (f"Copy <code>{esc(mra_cfg['filename'])}</code> from the MRA download anywhere under "
+                     f"<code>_Arcade/</code> on your MiSTer,")
         parts.append(f"""<h2>MiSTer</h2>
-<p>Copy <code>{esc(mra_cfg['filename'])}</code> from the MRA download anywhere under
-<code>_Arcade/</code> on your MiSTer, and have the stock, unmodified romset at
+<p>{where} and have the stock, unmodified romset at
 <code>games/mame/{setname}.zip</code> (split MAME sets also need <code>qsound.zip</code>).
 You need Jotego's <code>jtcps2</code> core, which the standard MiSTer downloader
 (update_all) installs automatically.</p>
-<p>The MRA references your original romset and applies the translation in memory
-while the game loads, so nothing on your SD card is modified. The translation keeps
+<p>The MRA references your original romset and applies the {noun} in memory
+while the game loads, so nothing on your SD card is modified. The {noun} keeps
 its own settings and saves under the setname <code>{esc(mra_cfg['setname'])}</code>.</p>""")
     hb = patch.get("hbmame")
     if hb:
-        parts.append(f"""<h2>HBMAME</h2>
-<p>This translation is an official <a href="https://github.com/Robbbert/hbmame">HBMAME</a>
-set, <code>{esc(hb['setname'])}</code>
-(<a href="{esc(hb['pr_url'])}">merged upstream</a>). HBMAME releases carry it going
-forward, so if you use full HBMAME romset collections you may already have it.
-Look for <code>{esc(hb['setname'])}</code> in the game list.</p>
-<p>To build the set from your own dump, run the IPS download's apply script with
-<code>--hbmame</code>:</p>
-<pre><code>python3 apply.py /path/to/{setname}.zip --hbmame</code></pre>
-<p>This writes <code>{esc(hb['setname'])}.zip</code>; put it in HBMAME's
-<code>roms/</code> folder next to your stock <code>{setname}.zip</code>. Unlike the
-MAME route above, the set loads with no checksum warnings, because HBMAME's set definition
-carries the patched checksums.</p>""")
+        parts.append(render_hbmame_section(patch, hb, setname))
     parts.append(f"""<h3>Changed ROMs</h3>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
 {rows}
 </table>""")
+    return "\n".join(parts)
+
+
+def render_hbmame_section(patch: dict, hb: dict, setname: str,
+                          apply_extra: str = "") -> str:
+    """The HBMAME paragraph: merged-upstream wording when a PR is on record,
+    otherwise the definition ships with the project and the submission is
+    pending."""
+    noun = patch_noun(patch)
+    if hb.get("pr_url"):
+        status = (f"""<p>This {noun} is an official <a href="https://github.com/Robbbert/hbmame">HBMAME</a>
+set, <code>{esc(hb['setname'])}</code>
+(<a href="{esc(hb['pr_url'])}">merged upstream</a>). HBMAME releases carry it going
+forward, so if you use full HBMAME romset collections you may already have it.
+Look for <code>{esc(hb['setname'])}</code> in the game list.</p>""")
+    else:
+        status = (f"""<p>This {noun} also has an <a href="https://github.com/Robbbert/hbmame">HBMAME</a>
+set definition, <code>{esc(hb['setname'])}</code>. The definition is generated with the
+{noun}; an upstream HBMAME submission is pending, so for now you add it to your own
+HBMAME build.</p>""")
+    return f"""<h2>HBMAME</h2>
+{status}
+<p>To build the set from your own dump, run the IPS download's apply script with
+<code>--hbmame</code>:</p>
+<pre><code>python3 apply.py /path/to/{setname}.zip{apply_extra} --hbmame</code></pre>
+<p>This writes <code>{esc(hb['setname'])}.zip</code>; put it in HBMAME's
+<code>roms/</code> folder next to your stock <code>{setname}.zip</code>. Unlike the
+MAME route above, the set loads with no checksum warnings, because HBMAME's set definition
+carries the patched checksums.</p>"""
+
+
+def render_variant_download(patch: dict, bundle: dict) -> str:
+    """Downloads for a patch with several builds on one stock set."""
+    noun = patch_noun(patch)
+    variants = bundle["variants"]
+    setname = esc(patch["set"])
+    ips = bundle["ips"]
+    first = variants[0]["key"]
+    parts = ["<h2>Downloads</h2>"]
+    parts.append(download_box(
+        f"ROM patches (IPS) for MAME, emulators and original hardware, all {len(variants)} builds", ips))
+    mra_info = bundle.get("mra")
+    if mra_info:
+        parts.append(download_box(f"MiSTer (MRA patch overlays, all {len(variants)} builds)", mra_info))
+    has_hb = any(v.get("hbmame") for v in variants)
+    head = "<tr><th>Build</th><th><code>--variant</code></th>"
+    if mra_info:
+        head += "<th>MiSTer setname</th>"
+    if has_hb:
+        head += "<th>HBMAME set</th>"
+    head += "</tr>"
+    rows = []
+    for v in variants:
+        row = f'<tr><td>{esc(v["label"])}</td><td class="mono">{esc(v["key"])}</td>'
+        if mra_info:
+            row += f'<td class="mono">{esc(v["mra"]["setname"]) if v.get("mra") else "—"}</td>'
+        if has_hb:
+            row += f'<td class="mono">{esc(v["hbmame"]["setname"]) if v.get("hbmame") else "—"}</td>'
+        rows.append(row + "</tr>")
+    parts.append(f"""<p>You need your own dump of <strong>{esc(patch['game'])}</strong> as the MAME
+set <code>{setname}.zip</code>. Every build is made from that one set. Each zip includes a
+<code>readme.txt</code> with full instructions.</p>
+<h3>The builds</h3>
+<table>
+{head}
+{"".join(rows)}
+</table>
+<h2>How to apply (ROM patch)</h2>
+<pre><code>unzip {esc(ips['zipname'])} -d {setname}-patch
+cd {setname}-patch
+python3 apply.py /path/to/{setname}.zip --variant {esc(first)}</code></pre>
+<p>Pick a build with <code>--variant</code>. The script checks every file against the
+checksums below, then writes <code>{setname}_{esc(first)}_patched.zip</code>. Rename it to
+<code>{setname}.zip</code> and put it ahead of the stock set in your MAME rompath.
+Alternatively, apply each file in <code>ips/&lt;variant&gt;/</code> with any IPS patcher
+(Flips, Lunar IPS, …) to the ROM file of the same name and re-zip the set yourself.</p>
+<p>MAME reports checksum warnings for the patched ROMs when loading.
+That is expected, and the game runs normally.</p>""")
+    if mra_info:
+        files = "".join(
+            "<li><code>" + esc("/".join(x for x in (v["mra"].get("subdir", ""), v["mra"]["filename"]) if x))
+            + "</code></li>" for v in variants if v.get("mra"))
+        zip_dir = (patch["mra"].get("zip_dir") or "").strip("/")
+        if zip_dir:
+            where = (f"Copy the <code>{esc(zip_dir.split('/')[0])}/</code> folder from the MRA download to the "
+                     f"root of your MiSTer SD card (the MRAs land in <code>{esc(zip_dir)}/</code>), "
+                     f"or just the MRAs you want,")
+        else:
+            where = ("Copy the MRA for the build you want from the MRA download anywhere under "
+                     "<code>_Arcade/</code> on your MiSTer,")
+        parts.append(f"""<h2>MiSTer</h2>
+<p>{where} and have the stock, unmodified romset at
+<code>games/mame/{setname}.zip</code> (split MAME sets also need <code>qsound.zip</code>).
+You need Jotego's <code>jtcps2</code> core, which the standard MiSTer downloader
+(update_all) installs automatically.</p>
+<ul>{files}</ul>
+<p>Each MRA references your original romset and applies the {noun} in memory
+while the game loads, so nothing on your SD card is modified. Each build keeps
+its own settings and saves under its own setname, listed above.</p>""")
+    if has_hb:
+        hb = next(v["hbmame"] for v in variants if v.get("hbmame"))
+        sets = ", ".join(f"<code>{esc(v['hbmame']['setname'])}</code>"
+                         for v in variants if v.get("hbmame"))
+        section = render_hbmame_section(patch, hb, setname, f" --variant {esc(first)}")
+        section = section.replace(
+            f"<p>This writes <code>{esc(hb['setname'])}.zip</code>;",
+            f"<p>This writes the chosen build's set zip ({sets});")
+        section = section.replace(
+            f"set definition, <code>{esc(hb['setname'])}</code>.",
+            f"set definition per build ({sets}).")
+        parts.append(section)
+    # Changed ROMs: members that patch identically in every build once, the
+    # build-specific ones per build.
+    names = []
+    for v in variants:
+        for m in v["members"]:
+            if m["action"] == "patch" and m["name"] not in names:
+                names.append(m["name"])
+    by_name = {n: [next((m for m in v["members"] if m["name"] == n), None) for v in variants]
+               for n in names}
+    shared, per_build = [], []
+    for n in names:
+        entries = by_name[n]
+        crcs = {(m or {}).get("patched_crc32") for m in entries}
+        if len(crcs) == 1 and None not in crcs:
+            shared.append((n, entries[0]))
+        else:
+            per_build.append((n, entries))
+    parts.append("<h3>Changed ROMs</h3>")
+    if shared:
+        rows = "\n".join(
+            f'<tr><td class="mono">{esc(n)}</td><td>{human_size(m["size"])}</td>'
+            f'<td class="mono">{esc(m["stock_crc32"])}</td><td class="mono">{esc(m["patched_crc32"])}</td></tr>'
+            for n, m in shared)
+        parts.append(f"""<p>Shared by every build:</p>
+<table>
+<tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
+{rows}
+</table>""")
+    for n, entries in per_build:
+        stock = next(m for m in entries if m)
+        rows = "\n".join(
+            f'<tr><td>{esc(v["label"])}</td><td class="mono">'
+            f'{esc(m["patched_crc32"]) if m and m["action"] == "patch" else "unchanged"}</td></tr>'
+            for v, m in zip(variants, entries))
+        parts.append(f"""<p><code>{esc(n)}</code> ({human_size(stock["size"])}, original CRC32
+<code>{esc(stock["stock_crc32"])}</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+{rows}
+</table>""")
+    return "\n".join(parts)
+
+
+def render_comparison(patch: dict) -> str:
+    """Optional side-by-side table against a reference release."""
+    cmp = patch.get("comparison")
+    if not cmp:
+        return ""
+    parts = [f"<h2>{esc(cmp.get('heading', 'Compared with'))}</h2>"]
+    for t in cmp.get("intro", []):
+        parts.append(f"<p>{esc(t)}</p>")
+    head = "".join(f"<th>{esc(c)}</th>" for c in cmp["columns"])
+    rows = "".join(
+        "<tr>" + "".join(
+            (f"<th scope=\"row\">{esc(cell)}</th>" if i == 0 else f"<td>{esc(cell)}</td>")
+            for i, cell in enumerate(row)) + "</tr>"
+        for row in cmp["rows"])
+    parts.append(f'<table class="compare"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table>')
+    for t in cmp.get("outro", []):
+        parts.append(f"<p>{esc(t)}</p>")
     return "\n".join(parts)
 
 
@@ -1028,6 +1441,8 @@ def render_patch_page(site: dict, patch: dict, bundle: dict | None, shots: list)
         parts.append("<h2>What's changed</h2><ul>")
         parts.extend(f"<li>{esc(c)}</li>" for c in patch["changes"])
         parts.append("</ul>")
+    if patch.get("comparison"):
+        parts.append(render_comparison(patch))
 
     dl = render_download(patch, bundle)
     if not dl and patch.get("download_note"):
