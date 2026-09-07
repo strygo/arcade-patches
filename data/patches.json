@@ -1124,6 +1124,246 @@
         "MAME shows checksum warnings for the seven patched files. That's expected; the game plays normally. HBMAME with the ssf2tgmc set definition loads it without them.",
         "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
       ]
+    },
+    {
+      "slug": "mshvsf-ex",
+      "title": "Marvel Super Heroes vs. Street Fighter EX",
+      "subtitle": "Norimaro, the bosses and more, in every region",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-09-17",
+      "game": "Marvel Super Heroes vs. Street Fighter (Japan 970707)",
+      "set": "mshvsfj",
+      "hardware": "Capcom CPS-2",
+      "patch_noun": "patch",
+      "patch_kind": "EX edition patch",
+      "patch_intro": "An unofficial fan edition of Marvel Super Heroes vs. Street Fighter (Japan 970707): the regional restoration plus the EX extensions, in USA and Japan builds.",
+      "summary": "The arcade game with everything it held back: Norimaro in the US game, Cyber-Akuma and Apocalypse on your side, extra colors and eight speeds. USA and Japan builds.",
+      "description": [
+        "Marvel Super Heroes vs. Street Fighter kept a lot from you. Outside Japan there was no Norimaro. Nowhere could you play as Cyber-Akuma or Apocalypse, or put the same fighter on a team twice. The console ports later added extra colors and more speeds, but only at home.",
+        "EX gives the arcade game all of it. Norimaro is on the select screen in both builds, with his own ending. Hold Start on any fighter for two seconds and their hidden version appears, no codes needed, though the old codes still work. Any two fighters make a team. Cyber-Akuma and Apocalypse are playable too: hold Start on Akuma for one, on Norimaro for the other. Every fighter gets the Saturn version's two extra colors, on the HP and HK buttons, and the service menu goes from three speeds to eight.",
+        "The fighting itself is untouched: no changes to moves, damage, hitboxes or the computer. The USA build also gets a new translation, straight from the Japanese: sixteen win quotes per fighter instead of eight, and every ending retold. It comes in two builds, USA and Japan, both with Free Play, and runs in MAME, HBMAME and on MiSTer.",
+        "This is a release candidate. Everything builds and boots; longer play testing and a MiSTer hardware pass are still to come."
+      ],
+      "changes": [
+        "Norimaro in both builds, with his own ending",
+        "Cyber-Akuma and Apocalypse playable: hold Start on Akuma, or on Norimaro. Their special moves work on the Easy control setting too",
+        "Hidden characters with a two-second Start hold; the old codes still work",
+        "Any team, including the same fighter twice, in a different color (one Apocalypse per match, so his stage stays intact)",
+        "Every ending in both languages, including Mech-Zangief's, Shadow's and Dark Sakura's",
+        "A new English translation from the Japanese: sixteen win quotes per fighter instead of eight, and all seventeen standard endings",
+        "U.S. Agent, Mephisto and Shadow get their names in the fight HUD, which the boards leave blank",
+        "M. Bison's Hyper Combo is Knee Press Nightmare in every region, the name Capcom has used since Alpha 3",
+        "Two extra colors per fighter from the Saturn version: pick your fighter with HP or HK",
+        "Eight game speeds instead of three",
+        "USA and Japan builds, both with Free Play",
+        "Gameplay untouched"
+      ],
+      "comparison": {
+        "heading": "Compared with the boards",
+        "intro": [
+          "How EX compares with the Japanese and US boards."
+        ],
+        "columns": [
+          "",
+          "Japan",
+          "USA",
+          "EX"
+        ],
+        "rows": [
+          [
+            "Norimaro",
+            "Yes",
+            "No",
+            "Yes"
+          ],
+          [
+            "Norimaro's ending",
+            "His own",
+            "None",
+            "His own"
+          ],
+          [
+            "Mech-Zangief, Shadow, Dark Sakura endings",
+            "Yes, Japanese",
+            "Generic",
+            "Yes, in both languages"
+          ],
+          [
+            "English win quotes per fighter",
+            "None",
+            "8",
+            "16, translated from the Japanese"
+          ],
+          [
+            "Hidden characters",
+            "Codes",
+            "Codes",
+            "Two-second hold, or codes"
+          ],
+          [
+            "Cyber-Akuma",
+            "Boss only",
+            "Boss only",
+            "Playable, hold Start on Akuma"
+          ],
+          [
+            "Apocalypse",
+            "Boss only",
+            "Boss only",
+            "Playable, hold Start on Norimaro"
+          ],
+          [
+            "Same fighter twice",
+            "No",
+            "No",
+            "Yes"
+          ],
+          [
+            "Colors per fighter",
+            "2",
+            "2",
+            "4"
+          ],
+          [
+            "HUD names for U.S. Agent, Mephisto, Shadow",
+            "Blank",
+            "Blank",
+            "Yes"
+          ],
+          [
+            "Game speeds",
+            "3",
+            "3",
+            "8"
+          ],
+          [
+            "Free Play",
+            "Yes",
+            "Some regions",
+            "Yes"
+          ],
+          [
+            "Gameplay",
+            "Original",
+            "Original",
+            "Original"
+          ]
+        ]
+      },
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/mshvsfj.zip",
+        "variants": [
+          {
+            "key": "usa",
+            "label": "USA",
+            "patched_zip": "../capcom/backports/mshvsf/out/ex_edition/hbmame/mshvsfex.zip",
+            "mra": {
+              "name": "Marvel Super Heroes Vs. Street Fighter EX (USA)",
+              "setname": "mshvsfex",
+              "filename": "Marvel Super Heroes Vs. Street Fighter EX (USA).mra",
+              "region": "USA"
+            },
+            "hbmame": {
+              "setname": "mshvsfex",
+              "renames": {
+                "mvsj.03i": "mvsj.03i",
+                "mvsj.04i": "mvsj.04i",
+                "mvs.05h": "mvs.05h",
+                "mvs.06a": "mvs.06a",
+                "mvs.07b": "mvs.07b",
+                "mvs.10b": "mvs.10b",
+                "mvs.13m": "mvs.13m",
+                "mvs.15m": "mvs.15m",
+                "mvs.17m": "mvs.17m",
+                "mvs.19m": "mvs.19m"
+              }
+            }
+          },
+          {
+            "key": "japan",
+            "label": "Japan",
+            "patched_zip": "../capcom/backports/mshvsf/out/ex_edition/hbmame/mshvsfej.zip",
+            "mra": {
+              "name": "Marvel Super Heroes Vs. Street Fighter EX (Japan)",
+              "setname": "mshvsfej",
+              "filename": "Marvel Super Heroes Vs. Street Fighter EX (Japan).mra",
+              "subdir": "_Japan",
+              "region": "Japan"
+            },
+            "hbmame": {
+              "setname": "mshvsfej",
+              "renames": {
+                "mvsj.03i": "mvsj.03i",
+                "mvsj.04i": "mvsj.04i",
+                "mvs.05h": "mvs.05h",
+                "mvs.06a": "mvs.06a",
+                "mvs.07b": "mvs.07b",
+                "mvs.10b": "mvs.10b",
+                "mvs.13m": "mvs.13m",
+                "mvs.15m": "mvs.15m",
+                "mvs.17m": "mvs.17m",
+                "mvs.19m": "mvs.19m"
+              }
+            }
+          }
+        ]
+      },
+      "mra": {
+        "base": "data/mra/mshvsfj.mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Enhanced Versions",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo"
+      },
+      "screenshots": [
+        {
+          "single": "data/screenshots/mshvsf-ex/title_ex_usa.png",
+          "caption": "The EX title screen."
+        },
+        {
+          "single": "data/screenshots/mshvsf-ex/select_usa.png",
+          "caption": "Norimaro is now selectable."
+        },
+        {
+          "before": "data/screenshots/mshvsf-ex/reveal_before.png",
+          "after": "data/screenshots/mshvsf-ex/reveal_after.png",
+          "before_label": "Cursor on Zangief",
+          "after_label": "After a two-second Start hold",
+          "caption": "Hold Start for two seconds and the hidden version appears before you pick."
+        },
+        {
+          "single": "data/screenshots/mshvsf-ex/cyber_akuma_reveal_japan.png",
+          "caption": "Cyber-Akuma, from a two-second Start hold on Akuma. Japanese build, where he's Mech-Gouki."
+        }
+      ],
+      "related": [
+        {
+          "label": "Marvel Super Heroes vs. Street Fighter",
+          "url": "../mshvsf-restoration/",
+          "note": "the restoration on its own, without the EX additions"
+        },
+        {
+          "label": "RQ87: Norimaro",
+          "url": "https://rq87.flyingomelette.com/RQ/Marvel/MSHSF/nor.html",
+          "note": "the Norimaro localization inventory this project credits"
+        },
+        {
+          "label": "Arcade Offset",
+          "url": "https://github.com/Toryalai1/Arcade_Offset",
+          "note": "himanito's earlier Unlocked MRAs covered some of this ground; this is an independent implementation"
+        },
+        {
+          "label": "CPS+",
+          "url": "../cps-plus/",
+          "note": "companion project: arranged soundtracks for CPS-2 games on MiSTer"
+        }
+      ],
+      "notes": [
+        "MAME shows checksum warnings for the ten patched files. That's expected; the game plays normally. HBMAME with the matching set definitions loads them without them.",
+        "Fan work, unaffiliated with Capcom or Marvel. The patch contains no ROM data; you need your own dump of the Japanese set."
+      ]
     }
   ]
 }
