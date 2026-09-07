@@ -589,7 +589,8 @@
         "base": "data/mra/vhunt2.mra",
         "name": "Night Warriors 2 (English)",
         "setname": "nwarr2en",
-        "filename": "Night Warriors 2 (English Translation).mra"
+        "filename": "Night Warriors 2 (English Translation).mra",
+        "zip_dir": "_Arcade/_Translations"
       },
       "hbmame": {
         "setname": "vhunt2s01",
@@ -656,7 +657,8 @@
         "base": "data/mra/vsav2.mra",
         "name": "Vampire Savior 2 (English)",
         "setname": "vsav2en",
-        "filename": "Vampire Savior 2 (English Translation).mra"
+        "filename": "Vampire Savior 2 (English Translation).mra",
+        "zip_dir": "_Arcade/_Translations"
       },
       "hbmame": {
         "setname": "vsav2s04",
@@ -1060,7 +1062,8 @@
         "base": "data/mra/ssf2xj.mra",
         "name": "Super Street Fighter II Turbo: Grand Master Challenge (English Restoration)",
         "setname": "ssf2tgmc",
-        "filename": "Super Street Fighter II Turbo Grand Master Challenge (English Restoration).mra"
+        "filename": "Super Street Fighter II Turbo Grand Master Challenge (English Restoration).mra",
+        "zip_dir": "_Arcade/_Translations"
       },
       "hbmame": {
         "setname": "ssf2tgmc",
