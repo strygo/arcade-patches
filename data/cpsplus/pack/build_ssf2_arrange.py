@@ -38,7 +38,7 @@ from . import protocols
 from .afs import AfsArchive
 from .build_common import (adx_entry_to_track, crosscheck_pack, MANIFESTS,
                            PACKS_DIR)
-from .format import PackWriter, TriggerRow, VERB_PLAY
+from .format import PackReader, PackWriter, TriggerRow, VERB_NONE, VERB_PLAY
 from .isofs import IsoFS
 from .sources import resolve_image
 
@@ -50,6 +50,7 @@ TRIG_GAIN = 0x1d   # same measured value for ssf2 / ssf2t
 
 HSF2_AFS_NAME = protocols.HSF2_AFS_NAME
 HSF2_MAP = MANIFESTS / "hsf2_bgm_command_map.tsv"
+NATIVE_QSOUND_LOGO_CMD = 0x3D
 
 
 def _read_trigger_map(path: Path):
@@ -93,6 +94,11 @@ def build(game: str, iso_path: str, map_path: str | None = None,
     map_file = Path(map_path) if map_path else \
         MANIFESTS / f"{game}_arrange_trigger_map.tsv"
     trig = _read_trigger_map(map_file)
+    mapped_commands = {cmd for cmd, *_ in trig}
+    if NATIVE_QSOUND_LOGO_CMD in mapped_commands:
+        raise ValueError(
+            f"{map_file}: command 0x{NATIVE_QSOUND_LOGO_CMD:02x} is the "
+            "native QSound-logo cue and must fail open")
     vols = _arrange_vols()
 
     img = resolve_image(iso_path, member_hint=".iso")
@@ -126,6 +132,20 @@ def build(game: str, iso_path: str, map_path: str | None = None,
 
     out_path = Path(out) if out else PACKS_DIR / f"{game}_arrange.cpk"
     w.write(out_path)
+
+    # The standalone games issue 0x3d followed by 0xd1 for the natural
+    # QSound-logo sequence.  HSF2's Arrange-bank entry 61 is one second of
+    # silence, not an arranged logo.  Pin the fail-open row in the serialized
+    # pack so a future ordinal-map expansion cannot mute/distort the logo.
+    rd = PackReader(out_path)
+    try:
+        logo = rd.triggers[NATIVE_QSOUND_LOGO_CMD]
+        if logo.verb != VERB_NONE or logo.suppress:
+            raise ValueError(
+                "readback: command 0x3d must pass through to native QSound")
+    finally:
+        rd.close()
+
     size = out_path.stat().st_size
     print(f"[{game}-arrange] {out_path}  {size / 1e6:.1f} MB, "
           f"{len(w.tracks)} tracks, {len(built)} play triggers "

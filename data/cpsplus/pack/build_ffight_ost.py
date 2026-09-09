@@ -46,7 +46,7 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from pack import adxcodec, protocols                                  # noqa: E402
+from pack import adxcodec, protocols, xfade                           # noqa: E402
 from pack.build_common import PACKS_DIR                               # noqa: E402
 from pack.format import (PackWriter, PackReader, TrackMeta, TriggerRow,  # noqa: E402
                          CODEC_ADX, VERB_NONE, VERB_PLAY)
@@ -56,15 +56,19 @@ from pack.format import (PackWriter, PackReader, TrackMeta, TriggerRow,  # noqa:
 # from the ear-confirmed ffight map; 0x28/0x34 are SFX there and appear nowhere.
 ROLES: list[tuple[int, str, bool]] = [
     # OPENING is ONE-SHOT, not a loop: the arcade's opening is a piece that
-    # plays once and resolves as the title screen appears.  Measured on the
-    # USA set (which this pack is authored against): the board's own music
-    # runs 26.8 -> 84.0 s unbroken and the title comes up at 85.5 s, so it
-    # finishes 1.5 s ahead of the title having never repeated.  Looping it
-    # would talk straight over the title.  The album cuts are the right
-    # length for that window played whole, fade and all -- X68000 MIDI 57.2 s
-    # against the board's 57.2 s; FM 54.3 s and SNES 49.1 s fall 2.9 s and
-    # 8.1 s short, which reads as an early finish rather than a wrong one.
-    (0x35, "OPENING",            True),
+    # plays once and resolves as the title screen appears.  It enters on
+    # 0x52, the SONG cue, in both regions: the board's own song runs from
+    # that cue to the title (USA 33.1 -> 84.0 s, title 83.6 s; Japan
+    # 12.7 -> 63.0 s, title 62.8 s), and the X68000 port plays the same
+    # 51 s score over a 51 s story.  Every one of these album cuts is built
+    # around that cue: the FM and MIDI transcriptions and the Double Impact
+    # remix cross-correlate against the board's audio at a start of 32.7 to
+    # 32.9 s in the USA attract, i.e. the song cue, never the ring (26.9 s).
+    # Entering on the ring, as this builder once did, ran the whole piece
+    # 6.2 s early and left 4 to 10 s of dead air before the title.
+    # Audible lengths: FM 51.5 s, MIDI 52.3 s against the board's 50.9 s;
+    # the SNES cut is 46.8 s and gets a baked one-wrap below (OPENING_WRAP).
+    (0x52, "OPENING",            True),
     (0x55, "CHARACTER SELECT",   False),
     (0x50, "ROUND START",        True),
     (0x40, "R1 SLUM1",           False),
@@ -85,24 +89,28 @@ ROLES: list[tuple[int, str, bool]] = [
     (0x51, "GAME OVER",          True),
 ]
 
-# Opening mid-sequence cues: silence the arcade WITHOUT issuing a play.
+# The three opening cues are three different sounds (see the arrange pack's
+# map): 0x35 is the phone RINGING, 0x52 is the SONG, 0x36 is the phone being
+# ANSWERED.  Only 0x52 is music, so it is the only cue that plays and gates;
+# 0x35 and 0x36 are left unmapped in every edition and the board's own ring
+# and click come through.  Cue order differs per region (latch traces):
+# ffightu rings first (0x35 f1602, 0x52 f1970, 0x36 f2074); ffightj sings
+# first (0x52 f758, 0x35 f1266, 0x36 f1598).  Playing on 0x52 therefore
+# enters at 33.1 s in the USA and 12.7 s in Japan, exactly where the board's
+# song enters, and the one-shot resolves on the title in both regions.
 #
-# The arcade splits its opening across several cues, but every edition's album
-# carries the whole opening as ONE track (disc 1 tr29 / tr49 is CREDIT, not a
-# second opening segment), so only the first cue can play it -- a second play
-# verb restarts the track from zero.  VERB_NONE + suppress=1 gates the arcade
-# FM for these cues while the album opening keeps running underneath, the same
-# construction the Sega CD pack uses.
-#
-# Region note (latch traces, both measured): ffightu issues 0x35 at f1602 THEN
-# 0x52 at f1970 and 0x36 at f2074; ffightj issues 0x52 FIRST at f758, then 0x35
-# at f1266 and 0x36 at f1598.  With these rows absent the arcade original leaks
-# back in mid-opening on USA and plays the whole head of the opening on Japan.
-# Because Japan's first opening cue is 0x52 and it only suppresses, Japan's
-# attract opens with ~8.5 s of silence before the album track starts at 0x35;
-# fixing that too needs a play-if-idle verb the player does not have (its start
-# pulse always restarts).
-SUPPRESS_ONLY = [0x52, 0x36]
+# The SNES cut is 3.8 s short of that window, so it gets ONE wrap baked into
+# the audio (the FPGA player has no runtime crossfade for this), built the
+# way the arrange pack wraps its opening: a phrase in the groove that the
+# arrangement itself repeats, so the jump back is a repeat the ear already
+# expects.  (loop_start, loop_end, blend) in samples at 44.1 kHz: 16.16 s ->
+# 19.99 s is the first two bars of the phrase after the intro (8 beats at
+# 125 bpm), loop_end nudged 3 ms so the waveform before the seam best matches
+# the landing point; blend 7200 samples = 163 ms, the arrange pack's.  Chosen
+# by ear from previews: the full four-bar wrap ran the music to the last
+# second of the title screen, this one ends it as the title appears, which is
+# what the board's own song does (USA 84.0 s, Japan 63.7 s after the cues).
+OPENING_WRAP = {"snes": (712640, 881536, 7200)}
 
 # role -> disc track number, per edition.  Explicit because the ports renumber
 # stages; a fuzzy title match would silently pair the wrong round.  Numbers are
@@ -234,6 +242,31 @@ def fade_onset(pcm: np.ndarray, rate: int) -> int:
     return min((i + 1) * blk, len(mono))
 
 
+def bake_wrap(pcm: np.ndarray, ls: int, le: int, n: int) -> np.ndarray:
+    """One extra pass of [ls, le) baked into interleaved stereo PCM: play to
+    le, blend the n samples past le against the n samples from ls, resume at
+    ls+n.  Lengthens the track by le - ls; the outro is untouched."""
+    st = pcm.reshape(-1, 2)
+    if n % 32 or ls % 32 or le % 32 or le - ls <= n or len(st) < le + n:
+        raise ValueError("wrap needs frame-aligned, nonoverlapping head and tail")
+    lut = np.array(xfade.make_lut(n), dtype=np.int64)[:, None]
+    blend = np.clip((st[le:le+n].astype(np.int64)*lut + st[ls:ls+n].astype(np.int64)*lut[::-1]
+                     + 16384) >> 15, -32768, 32767).astype(st.dtype)
+    return np.concatenate((st[:le], blend, st[ls+n:])).reshape(-1)
+
+
+def configure_opening(w, key):
+    """The opening plays and gates on the song cue only; the ring (0x35) and
+    the answer click (0x36) stay unmapped so the board's own effects pass."""
+    if w.triggers[0x52].verb != VERB_PLAY or w.triggers[0x52].suppress != 1:
+        raise ValueError("opening must PLAY and gate on 0x52")
+    for cmd in (0x35, 0x36):
+        if w.triggers[cmd] != TriggerRow():
+            raise ValueError(f"0x{cmd:02x} must stay unmapped (native phone effect)")
+    print("[ffost] 0x52 OPENING plays on the song cue; 0x35 ring and 0x36 click pass through")
+    return []
+
+
 def build_edition(key: str, out_dir: Path, ost_index: dict[tuple[int, int], Path],
                   disc_label: str = "CD", measure_snr: bool = False) -> dict:
     title, disc, table, trig_gain = EDITIONS[key]
@@ -264,6 +297,12 @@ def build_edition(key: str, out_dir: Path, ost_index: dict[tuple[int, int], Path
         frames = len(pcm) // 2
 
         if one_shot:
+            wrap = OPENING_WRAP.get(key) if role == "OPENING" else None
+            if wrap:
+                pcm = bake_wrap(pcm, *wrap)
+                frames = len(pcm) // 2
+                print(f"[ffost] OPENING wrap baked: +{(wrap[1]-wrap[0])/rate:.2f}s "
+                      f"-> {frames/rate:.2f}s")
             keep, ls, le, xf = frames, 0, 0, 0
         else:
             onset = fade_onset(pcm, rate)
@@ -297,9 +336,7 @@ def build_edition(key: str, out_dir: Path, ost_index: dict[tuple[int, int], Path
         kind = "one-shot" if one_shot else ("xfade" if xf else "whole ")
         print(f"[ffost] 0x{cmd:02x} {role:<18} {frames/rate:6.1f}s  loop_end "
               f"{le/rate:6.1f}s  {kind}  {len(data)/1e6:5.2f} MB")
-    for cmd in SUPPRESS_ONLY:
-        w.set_trigger(cmd, TriggerRow(verb=VERB_NONE, track=0, suppress=1))
-        print(f"[ffost] 0x{cmd:02x} {'OPENING (mid-seq)':<18} suppress only, no play")
+    suppress_only = configure_opening(w, key)
     for cmd, role in skipped:
         print(f"[ffost] 0x{cmd:02x} {role:<18} NO SOURCE IN THIS EDITION -> fails open")
 
@@ -309,14 +346,18 @@ def build_edition(key: str, out_dir: Path, ost_index: dict[tuple[int, int], Path
     for cmd, _ in rows:
         if rd.triggers[cmd].verb != VERB_PLAY:
             raise ValueError(f"readback: 0x{cmd:02x} missing")
-    for cmd in SUPPRESS_ONLY:
+    for cmd in suppress_only:
         r = rd.triggers[cmd]
         if r.verb != VERB_NONE or r.suppress != 1:
             raise ValueError(f"readback: 0x{cmd:02x} must be suppress-only")
+    assert rd.triggers[0x35] == TriggerRow()
+    assert rd.triggers[0x36] == TriggerRow()
+    assert rd.triggers[0x52].verb == VERB_PLAY and rd.triggers[0x52].suppress == 1
     for cmd, _ in skipped:
         if rd.triggers[cmd].verb != 0 or rd.triggers[cmd].suppress != 0:
             raise ValueError(f"readback: 0x{cmd:02x} should be unmapped")
     size = out_path.stat().st_size
+    rd.close()
     print(f"[ffost] {out_path.name}: {len(rows)} rows, {size/1e6:.1f} MB\n")
     return {"path": str(out_path), "rows": len(rows), "size": size,
             "skipped": [f"0x{c:02x}" for c, _ in skipped]}
@@ -332,15 +373,40 @@ def _encode(pcm: np.ndarray, rate: int, ch: int, frames: int,
     return stream, c1, c2, None
 
 
+def self_test():
+    for key in EDITIONS:
+        w = PackWriter(protocols.PROTOCOLS["sf2"], trigger_rows=256)
+        opening = TriggerRow(verb=VERB_PLAY, track=7, gain=80, suppress=1)
+        w.set_trigger(0x52, opening)
+        assert configure_opening(w, key) == []
+        assert w.triggers[0x52] == opening
+        assert w.triggers[0x35] == TriggerRow() and w.triggers[0x36] == TriggerRow()
+    assert next(c for c, r, _ in ROLES if r == "OPENING") == 0x52
+    # a wrap lengthens by exactly le - ls and leaves the head and outro intact
+    pcm = np.arange(4000, dtype=np.int16).reshape(-1, 2).repeat(1, axis=1).reshape(-1)
+    out = bake_wrap(pcm, 640, 1280, 64)
+    assert len(out) == len(pcm) + 2*(1280-640)
+    assert np.array_equal(out[:2*1280], pcm[:2*1280]) and np.array_equal(out[-100:], pcm[-100:])
+    ls, le, n = OPENING_WRAP["snes"]
+    assert ls % 32 == 0 and le % 32 == 0 and n % 32 == 0 and le - ls == 168896
+    print("Final Fight OST opening routing self-test passed")
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--edition", choices=sorted(EDITIONS) + ["all"], default="all")
     ap.add_argument("--out-dir", type=Path, default=PACKS_DIR)
-    ap.add_argument("--ost", type=Path, required=True,
+    ap.add_argument("--ost", type=Path,
                     help="root of the OST rip (scanned recursively for "
                          ".flac); see your wrapper script")
+    ap.add_argument("--self-test", action="store_true")
     a = ap.parse_args(argv)
+    if a.self_test:
+        self_test()
+        return 0
+    if a.ost is None:
+        ap.error("--ost is required unless --self-test is used")
     keys = sorted(EDITIONS) if a.edition == "all" else [a.edition]
     a.out_dir.mkdir(parents=True, exist_ok=True)
     index = index_ost(a.ost)

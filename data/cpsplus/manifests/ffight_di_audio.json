@@ -1,0 +1,922 @@
+{
+  "schema": 1,
+  "pack": "ffight_di",
+  "review_status": "hardware_fix_listening_pending",
+  "provenance": {
+    "album": "Capcom Double Impact Remixed Soundtrack (2010)",
+    "url": "http://finalfightgame.com/remix",
+    "download": "https://static.capcom.com/finalfight/Final%20Fight-Double%20Impact%20Remixed%20Soundtrack.zip",
+    "fetch_date": "2026-09-04",
+    "zip_sha1": "f69e3430113825263ea3c079adeb7cfb3af9db40",
+    "arrangers": "Simon Viklund"
+  },
+  "sample_rate": 48000,
+  "trigger_gain": 40,
+  "xfade_samples": 4800,
+  "fail_open": [
+    40,
+    52,
+    93,
+    94,
+    95
+  ],
+  "tracks": [
+    {
+      "cmd": 64,
+      "title": "Level 1-1&Main Menu",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_Level 1-1&Main Menu.mp3",
+      "source_sha256": "ffd79d3f7fdf130a6decb07f2d28f51ccd011feb6c4ede587db98faaf3e57abd",
+      "reference": "ff_event_0040_music_loop_enh.msf",
+      "reference_sha256": "96f0b7c30d4542955345fa7c52d2a5cadc962d77544a8dfabb569b5ac712fa8b",
+      "disc": {
+        "rate": 48000,
+        "samples": 2018304,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2018304,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.98995
+        },
+        {
+          "at": 18.9216,
+          "offset": 1040,
+          "score": 0.98826
+        },
+        {
+          "at": 37.048,
+          "offset": 1025,
+          "score": 0.99082
+        }
+      ],
+      "witness": "ff_event_0040_music_loop_enh.xma2",
+      "witness_sha256": "e55143b47112ae6539edda5e61021e25228b02b371ca0955f493427690dfd4e2",
+      "trim_start": 1040,
+      "keep_samples": 2018304,
+      "loop_start": 0,
+      "loop_end": 2018304,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 65,
+      "title": "Level 1-2",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_Level 1-2.mp3",
+      "source_sha256": "97acd071e928bcf522ce07b062b207a71f660ff7b471d87fe9503670a1c6e809",
+      "reference": "ff_event_0041_music_loop_enh.msf",
+      "reference_sha256": "c6465e7bda4760363f4b891b56677c6981e998fba4d9a7c25fc311e1e846fa0f",
+      "disc": {
+        "rate": 48000,
+        "samples": 1843200,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1843200,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.98944
+        },
+        {
+          "at": 17.28,
+          "offset": 1057,
+          "score": 0.99007
+        },
+        {
+          "at": 33.4,
+          "offset": 1056,
+          "score": 0.98729
+        }
+      ],
+      "witness": "ff_event_0041_music_loop_enh.xma2",
+      "witness_sha256": "c08f1c3443c31a9a340c505ec56af80eda2706428d4c0d3671a833b49c7444be",
+      "trim_start": 1057,
+      "keep_samples": 1843200,
+      "loop_start": 0,
+      "loop_end": 1843200,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 66,
+      "title": "Level 2-1",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_Level 2-1.mp3",
+      "source_sha256": "f86655c7c488b75db4cc5e5405688adfc2b708d87aefbb47839b51a452402e77",
+      "reference": "ff_event_0042_music_loop_enh.msf",
+      "reference_sha256": "f2e2e39acf42c560aa9b02bf433c58e9bc4603c3bc7735c35128a4b8326f8c59",
+      "disc": {
+        "rate": 48000,
+        "samples": 3016704,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 3016704,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.97454
+        },
+        {
+          "at": 28.2816,
+          "offset": 1041,
+          "score": 0.98665
+        },
+        {
+          "at": 57.848,
+          "offset": 1026,
+          "score": 0.98677
+        }
+      ],
+      "witness": "ff_event_0042_music_loop_enh.xma2",
+      "witness_sha256": "669881de2a59ce3d900eb61492f29d153b1e79ed6f2549e8c380c33b162ea420",
+      "trim_start": 1041,
+      "keep_samples": 3016704,
+      "loop_start": 0,
+      "loop_end": 3016704,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 67,
+      "title": "Level 2-2",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_Level 2-2.mp3",
+      "source_sha256": "c975c3627c52a190babd1df64b006a6d492d73a0248357896c6cbbff1369aeb6",
+      "reference": "ff_event_0043_music_loop_enh.msf",
+      "reference_sha256": "b10f056173973dae6e9fed1831d891d7a869fc62d1165c8e082659d6ec130cfa",
+      "disc": {
+        "rate": 48000,
+        "samples": 2236416,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2236416,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.99234
+        },
+        {
+          "at": 20.9664,
+          "offset": 1051,
+          "score": 0.99423
+        },
+        {
+          "at": 41.592,
+          "offset": 1045,
+          "score": 0.99051
+        }
+      ],
+      "witness": "ff_event_0043_music_loop_enh.xma2",
+      "witness_sha256": "c7245f947119bb50bf4bb665fd8998aa238a76301b2b86f9d0f32fb5207428bd",
+      "trim_start": 1051,
+      "keep_samples": 2236416,
+      "loop_start": 0,
+      "loop_end": 2236416,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 68,
+      "title": "z_Andore Wrestling Ring",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_z_Andore Wrestling Ring.mp3",
+      "source_sha256": "1584227d540b735ed602dafbdd693f8bab3f90a69d465a954dbed838693fca90",
+      "reference": "ff_event_0044_music_loop_enh.msf",
+      "reference_sha256": "1f4b7d99494ab800cee1ab278e72817d8fc534c55e18b7b53658f7974cef4502",
+      "disc": {
+        "rate": 48000,
+        "samples": 1326080,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1326080,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.99201
+        },
+        {
+          "at": 12.432,
+          "offset": 1056,
+          "score": 0.98734
+        },
+        {
+          "at": 22.626666666666665,
+          "offset": 1056,
+          "score": 0.99183
+        }
+      ],
+      "witness": "ff_event_0044_music_loop_enh.xma2",
+      "witness_sha256": "5de69024c2e5b6eb3c8fb429c7c68b4b937fbc9d8591d52ee421ae0ae9b4127c",
+      "trim_start": 1056,
+      "keep_samples": 1326080,
+      "loop_start": 0,
+      "loop_end": 1326080,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 69,
+      "title": "z_Bonus Track",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_z_Bonus Track.mp3",
+      "source_sha256": "e7cc84f4e7c4a50a8eb46bed9a020b015caeb93f63c2977dc5542d0e7a6ebaa2",
+      "reference": "ff_event_0045_music_loop_enh.msf",
+      "reference_sha256": "24646c9f52f0eef5b1eb0aecd64e6bda3aa5fa5f06ae4e17d67fae06e83e5ce4",
+      "disc": {
+        "rate": 48000,
+        "samples": 2983936,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2983936,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.98613
+        },
+        {
+          "at": 27.974400000000003,
+          "offset": 1036,
+          "score": 0.98479
+        },
+        {
+          "at": 57.165333333333336,
+          "offset": 1015,
+          "score": 0.97964
+        }
+      ],
+      "witness": "ff_event_0045_music_loop_enh.xma2",
+      "witness_sha256": "0745ca2404cdb39e06ce9b4664143d127ea0254c9bf92d0594c02240a902cfc7",
+      "trim_start": 1036,
+      "keep_samples": 2983936,
+      "loop_start": 0,
+      "loop_end": 2983936,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 70,
+      "title": "Level 5-1b",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_Level 5-1b.mp3",
+      "source_sha256": "d5490a5dbf0a2cd9e76d2d80f3e74be7fa96605b12c1176ddf9388beaf27b97d",
+      "reference": "ff_event_0046_music_loop_enh.msf",
+      "reference_sha256": "da413168721d51e9b78c63cff0d028318b15a6dee7bd8de5692759bd94dba4f9",
+      "disc": {
+        "rate": 48000,
+        "samples": 1553408,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1553408,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.98508
+        },
+        {
+          "at": 14.563200000000002,
+          "offset": 1053,
+          "score": 0.98993
+        },
+        {
+          "at": 27.36266666666667,
+          "offset": 1050,
+          "score": 0.98734
+        }
+      ],
+      "witness": "ff_event_0046_music_loop_enh.xma2",
+      "witness_sha256": "c19bd907110dbeb5749143072706e8d8bdd7acb22cd3180ad243570e694cd847",
+      "trim_start": 1053,
+      "keep_samples": 1553408,
+      "loop_start": 0,
+      "loop_end": 1553408,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 71,
+      "title": "Level 5-1c",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_Level 5-1c.mp3",
+      "source_sha256": "5a1aeafa78826cce199ae07fd8fd79513be8a3ff2bb5294c421a540d77bf062e",
+      "reference": "ff_event_0047_music_loop_enh.msf",
+      "reference_sha256": "896f6bf196c073d497207a5a4b9feab7704055227c5085f84413956be919eafd",
+      "disc": {
+        "rate": 48000,
+        "samples": 1920000,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1920000,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.98235
+        },
+        {
+          "at": 18.0,
+          "offset": 1053,
+          "score": 0.9868
+        },
+        {
+          "at": 35.0,
+          "offset": 1050,
+          "score": 0.98508
+        }
+      ],
+      "witness": "ff_event_0047_music_loop_enh.xma2",
+      "witness_sha256": "07c420610d93101796a2898f9f5dd732575a330aa048f4d95a44875e006927af",
+      "trim_start": 1053,
+      "keep_samples": 1920000,
+      "loop_start": 0,
+      "loop_end": 1920000,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 72,
+      "title": "Level 4-1",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_Level 4-1.mp3",
+      "source_sha256": "b44a69e789817df0da29bc7007129aec0701bdf2dc1cc608628f2c6c857a614d",
+      "reference": "ff_event_0048_music_loop_enh.msf",
+      "reference_sha256": "afa91fae276307f2441fd24f2e5842866969b6b488a0067f08d629fedd2d51db",
+      "disc": {
+        "rate": 48000,
+        "samples": 3710976,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 3710976,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.95014
+        },
+        {
+          "at": 34.7904,
+          "offset": 1042,
+          "score": 0.9599
+        },
+        {
+          "at": 72.312,
+          "offset": 1026,
+          "score": 0.95847
+        }
+      ],
+      "witness": "ff_event_0048_music_loop_enh.xma2",
+      "witness_sha256": "45e511de3e7da6a77e94919fcd5776827859a23ec01792b9d79589b07968b557",
+      "trim_start": 1042,
+      "keep_samples": 3710976,
+      "loop_start": 0,
+      "loop_end": 3710976,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 73,
+      "title": "Level 4-2",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_Level 4-2.mp3",
+      "source_sha256": "76e67e4e51773251559e5ba82d2e46f7580e6565d0554e4243dfe60f32933021",
+      "reference": "ff_event_0049_music_loop_enh.msf",
+      "reference_sha256": "63f2b4b59fb7abecc343aa4112a7deb62ae79171f312967c5d8324e8369dc280",
+      "disc": {
+        "rate": 48000,
+        "samples": 2956288,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2956288,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.99056
+        },
+        {
+          "at": 27.715200000000003,
+          "offset": 1045,
+          "score": 0.9898
+        },
+        {
+          "at": 56.589333333333336,
+          "offset": 1034,
+          "score": 0.99153
+        }
+      ],
+      "witness": "ff_event_0049_music_loop_enh.xma2",
+      "witness_sha256": "dc16cd430e25ed8124dba3c2e1aecd1e645b70bfecdd224a6457c3b32038da94",
+      "trim_start": 1045,
+      "keep_samples": 2956288,
+      "loop_start": 0,
+      "loop_end": 2956288,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 76,
+      "title": "z_Bonus Stage",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_z_Bonus Stage.mp3",
+      "source_sha256": "d2d8fad4a9f7e10080e615e7989fd2fda348e8fb1d8ffa3734e58783463b42a2",
+      "reference": "ff_event_004c_music_enh.msf",
+      "reference_sha256": "aff18ba5c50e4cca8699e847d9f462bcc8578d95df7652aec788a27703f9a231",
+      "disc": {
+        "rate": 48000,
+        "samples": 1536000,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1536000,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.98724
+        },
+        {
+          "at": 14.4,
+          "offset": 1049,
+          "score": 0.98592
+        },
+        {
+          "at": 27.0,
+          "offset": 1043,
+          "score": 0.99264
+        }
+      ],
+      "witness": "ff_event_004c_music_enh.xma2",
+      "witness_sha256": "a324ee1b6f2cad4405cc4e98979b7fb182799afb34ea2e9e6f8dff277f6fae4b",
+      "trim_start": 1049,
+      "keep_samples": 1536000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "review_note": "2026-09-05: the whole-file wrap was rejected; the 32-second one-shot was approved in the complete pack listening sign-off. Hardware review pending."
+    },
+    {
+      "cmd": 80,
+      "title": "z_Game Start",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_z_Game Start.mp3",
+      "source_sha256": "e3298177735e86302ccd04c485d72656913164824c52676c4ebbdc7f4a7ef973",
+      "reference": "ff_event_0050_music_enh.msf",
+      "reference_sha256": "3bb98fec4fdf4f2989cfcc28790b1ae09219c7714eed1e981e7f949956c58ba6",
+      "disc": {
+        "rate": 48000,
+        "samples": 415744,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 415744,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.99284
+        },
+        {
+          "at": 3.8976,
+          "offset": 1057,
+          "score": 0.99637
+        },
+        {
+          "at": 3.6613333333333333,
+          "offset": 1057,
+          "score": 0.99568
+        }
+      ],
+      "witness": "ff_event_0050_music_enh.xma2",
+      "witness_sha256": "b3d5fc9277f07bef98af9380fc949052725a25ed168c94fc4e88cbeb9c35e890",
+      "trim_start": 1057,
+      "keep_samples": 415744,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 81,
+      "title": "z_Game Over",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_z_Game Over.mp3",
+      "source_sha256": "b9cdd0e128138701ade8903274d2bb56be89e6e831ed7f4b16651318f89a8527",
+      "reference": "ff_event_0051_music_enh.msf",
+      "reference_sha256": "85a5c2a19e4f6974fe0d28d0550d07939e24ae872c33d73eef47c303e944c89c",
+      "disc": {
+        "rate": 48000,
+        "samples": 446464,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 446464,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.98777
+        },
+        {
+          "at": 4.1856,
+          "offset": 1053,
+          "score": 0.9922
+        },
+        {
+          "at": 4.301333333333334,
+          "offset": 1053,
+          "score": 0.99248
+        }
+      ],
+      "witness": "ff_event_0051_music_enh.xma2",
+      "witness_sha256": "a84d3f258e65a207a60c491697a142084bc81ca0a063bcf39064401ad744c805",
+      "trim_start": 1053,
+      "keep_samples": 446464,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 82,
+      "title": "Opening / intro",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_Level 5-1a.mp3",
+      "source_sha256": "24b172505f9855766f266995d714267dfb4ee692e843a73afa0bb96c54dbcf16",
+      "reference": "ff_event_0052_music_enh.msf",
+      "reference_sha256": "51a5eb4ce07af11f82d525276c64bd4034e050f6ce28a23d8f1702d562498dac",
+      "disc": {
+        "rate": 48000,
+        "samples": 2736128,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2736128,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1054,
+          "score": 0.99289
+        },
+        {
+          "at": 25.651200000000003,
+          "offset": 1045,
+          "score": 0.9888
+        },
+        {
+          "at": 52.00266666666667,
+          "offset": 1034,
+          "score": 0.99078
+        }
+      ],
+      "witness": "ff_event_0052_music_enh.xma2",
+      "witness_sha256": "eabfe171a116b8c867f29efc5d6219b521fd46de1d302485a34a3d60e47df647",
+      "trim_start": 1045,
+      "keep_samples": 2736128,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "album_title": "Level 5-1a",
+      "fade_in_samples": 96000,
+      "review_note": "2026-09-08: plays on the song cue (0x52) in both regions like Double Impact itself; a 2 s raised-cosine fade-in is baked so the remix does not slam in under Haggar's phone call, where the board's own song stays quiet."
+    },
+    {
+      "cmd": 83,
+      "title": "z_Continue On",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_z_Continue On.mp3",
+      "source_sha256": "aedf6badfebe1a86c9c07ca7d3b155225127ad07eec649d54eb3dac4887a3274",
+      "reference": "ff_event_0053_music_enh.msf",
+      "reference_sha256": "97c1e01fdd4e6c059a2779d740fe40b14e986c4108f07dca7e81cc32be6ccb0a",
+      "disc": {
+        "rate": 48000,
+        "samples": 652288,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 652288,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.98913
+        },
+        {
+          "at": 6.115200000000001,
+          "offset": 1055,
+          "score": 0.98864
+        },
+        {
+          "at": 8.589333333333334,
+          "offset": 1054,
+          "score": 0.99017
+        }
+      ],
+      "witness": "ff_event_0053_music_enh.xma2",
+      "witness_sha256": "2cf30e2ebb3d113c05c692e16ad95269e4c63e53f03168d6adbd86c4dd645dfb",
+      "trim_start": 1055,
+      "keep_samples": 652288,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 84,
+      "title": "z_End Credits",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_z_End Credits.mp3",
+      "source_sha256": "60925a26caf43ded5bfdd8fb0d8fd954d16db9c4ffc2fcd67069b3c872bbb96c",
+      "reference": "ff_event_0054_music_enh.msf",
+      "reference_sha256": "14b8aef8f58eb041603dbdc99e3289495818e9e966f095a4dc0477c41ea76f57",
+      "disc": {
+        "rate": 48000,
+        "samples": 4679680,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 4679680,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.99748
+        },
+        {
+          "at": 43.87200000000001,
+          "offset": 1057,
+          "score": 0.99439
+        },
+        {
+          "at": 92.49333333333334,
+          "offset": 1057,
+          "score": 0.99217
+        }
+      ],
+      "witness": "ff_event_0054_music_enh.xma2",
+      "witness_sha256": "e44e523bc688d72a84c17dbe26db0677348d5847d51c89f6d5c01847fa19eecd",
+      "trim_start": 1057,
+      "keep_samples": 4679680,
+      "loop_start": 1687104,
+      "loop_end": 2703616,
+      "loop_count": 1,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "structure": {
+        "method": "finite splice near ten bars; audition required",
+        "ncc": 0.49906072017661507,
+        "added_samples": 1016512,
+        "target_window_seconds": 118.6
+      }
+    },
+    {
+      "cmd": 85,
+      "title": "z_Character Select",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_z_Character Select.mp3",
+      "source_sha256": "da2728de4134c15cd2cf8d565bd523edec4d7f8b3d782cc82acef77f7263f4e5",
+      "reference": "ff_event_0055_music_loop_enh.msf",
+      "reference_sha256": "7dbbfc52cf0069f5c9e14d449d9c8a008679565d025fd8005937a41dfcee5c4e",
+      "disc": {
+        "rate": 48000,
+        "samples": 688128,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 688128,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.98306
+        },
+        {
+          "at": 6.4512,
+          "offset": 1051,
+          "score": 0.98333
+        },
+        {
+          "at": 9.336,
+          "offset": 1050,
+          "score": 0.98881
+        }
+      ],
+      "witness": "ff_event_0055_music_loop_enh.xma2",
+      "witness_sha256": "ec51c517927370dbc73b233872221f1869d32cbeae572908e6c25ed212dd123e",
+      "trim_start": 1051,
+      "keep_samples": 514816,
+      "loop_start": 166176,
+      "loop_end": 510016,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "loop_repair": {
+        "date": "2026-09-05",
+        "reason": "Repeat the matching four-bar passage before the separate closing section. Keep the original opening through the ordinary 10.329-second selection window; the first wrap at 10.625333 seconds covers extended selection after a late second-player join.",
+        "period_seconds": 7.163333333333333,
+        "measured_waveform_period_seconds": 7.163354166666666,
+        "tail_head_waveform_ncc": 0.99544,
+        "preceding_two_second_chroma_ncc": 0.945973,
+        "tail_head_rms_delta_db": -0.000254,
+        "continuation": "100 ms of original album samples beyond loop_end; fixed-point equal-power overlap, no time stretching.",
+        "rejected_loop_seconds": [
+          0,
+          14.336
+        ]
+      }
+    },
+    {
+      "cmd": 87,
+      "title": "Stage Clear",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_Stage Clear.mp3",
+      "source_sha256": "39722de10022b5eed023f57e0cc1f6b21c5fd724a8c498661067064b1fc7bbbd",
+      "reference": "ff_event_0057_music_enh.msf",
+      "reference_sha256": "744490f7822d642bd5e32b7941dc74ed7929ce4ee7a9d68cdf5f9cc91a53d868",
+      "disc": {
+        "rate": 48000,
+        "samples": 312320,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 312320,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.97081
+        },
+        {
+          "at": 2.928,
+          "offset": 1056,
+          "score": 0.9612
+        },
+        {
+          "at": 1.5066666666666668,
+          "offset": 1056,
+          "score": 0.96214
+        }
+      ],
+      "witness": "ff_event_0057_music_enh.xma2",
+      "witness_sha256": "c3a7b8500c5890c3cedebbbf698854c49a2d86e9ab9a5b449c6a46275f2d8b12",
+      "trim_start": 1056,
+      "keep_samples": 312320,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 88,
+      "title": "z_Game Clear",
+      "source": "Final Fight-Double Impact Remixed Soundtrack/ff_z_Game Clear.mp3",
+      "source_sha256": "6588cb002c4da189065a2ef487b6c49fbe1aed4a62e82711fda43153396ab665",
+      "reference": "ff_event_0058_music_enh.msf",
+      "reference_sha256": "e186df5cfcc776068316d676532ddac9f5c7bd39498977780270acdbbe8c64e9",
+      "disc": {
+        "rate": 48000,
+        "samples": 458752,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 458752,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.9897
+        },
+        {
+          "at": 4.300800000000001,
+          "offset": 1052,
+          "score": 0.97283
+        },
+        {
+          "at": 4.557333333333334,
+          "offset": 1052,
+          "score": 0.97335
+        }
+      ],
+      "witness": "ff_event_0058_music_enh.xma2",
+      "witness_sha256": "f8437887a8e86d9c83da3bbf6115f7a4e8ab32b97caceb791ac7882d0eea4908",
+      "trim_start": 1052,
+      "keep_samples": 458752,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    }
+  ],
+  "loudness": {
+    "n": 10,
+    "median_lu": 10.049999999999999,
+    "gain": 40,
+    "detail": [
+      [
+        64,
+        -21.4,
+        -11.8,
+        9.599999999999998
+      ],
+      [
+        65,
+        -20.3,
+        -13.1,
+        7.200000000000001
+      ],
+      [
+        66,
+        -22.8,
+        -15.8,
+        7.0
+      ],
+      [
+        67,
+        -23.3,
+        -12.3,
+        11.0
+      ],
+      [
+        68,
+        -22.8,
+        -10.4,
+        12.4
+      ],
+      [
+        69,
+        -21.0,
+        -12.0,
+        9.0
+      ],
+      [
+        70,
+        -24.4,
+        -12.6,
+        11.799999999999999
+      ],
+      [
+        71,
+        -21.8,
+        -13.2,
+        8.600000000000001
+      ],
+      [
+        72,
+        -24.3,
+        -13.8,
+        10.5
+      ],
+      [
+        73,
+        -23.3,
+        -12.2,
+        11.100000000000001
+      ]
+    ],
+    "spread_lu": 2.375
+  },
+  "listening_approval": {
+    "date": "2026-09-05",
+    "scope": "Entire ffight_di pack: all 19 tracks and 20 PLAY commands, including the revised Character Select loop (0x55), Bonus Stage one-shot (0x4c), shared opening (0x35 / 0x52), and finite ending splice (0x54).",
+    "pack_sha256": "c1189be9c93cfd5fc3cd542ddca02f49f4658c052baf216393cc2f4e08288901",
+    "pack_bytes": 39737984,
+    "audio_revision": "7c936ba1"
+  }
+}

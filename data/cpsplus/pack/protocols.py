@@ -315,6 +315,22 @@ PROTOCOLS["unsquad"] = dataclasses.replace(
     control_verbs={0xf0: VERB_STOP, 0xf1: VERB_STOP, 0xf2: VERB_STOP,
                    0xfa: VERB_STOP})
 
+# Magic Sword, Z80 3.50: a service-hold census (22 boots on each of msword,
+# mswordj and mswordu). 0x00 and 0x01 are music; only
+# f0 and f7 stop the positive-control cue, both singly and when held.
+PROTOCOLS["msword"] = dataclasses.replace(
+    PROTOCOLS["sf2"], game_id="msword", handshake_ready=0xf7,
+    control_verbs={0xf0: VERB_STOP, 0xf7: VERB_STOP})
+
+# Strider USA complete-music revision / Japan Resale. Driver 0x0304 clears
+# the saved music bank and stops current music, preserving FM/OKI effects.
+# Paired 0xf1 controls and substituted-gameplay runs established the
+# behaviour below.
+# ff is harmless idle but cannot silence an already-playing fallback cue.
+PROTOCOLS["strider"] = dataclasses.replace(
+    PROTOCOLS["sf2"], game_id="strider", handshake_ready=0xf1,
+    control_verbs={0xf0: VERB_STOP, 0xf1: VERB_STOP})
+
 # Ghouls'n Ghosts USA (ghoulsu; pack game id follows the parent `ghouls`).
 # Measured 2026-08-31 with MAME 0.288, one clean boot per candidate: play the
 # sustained Stage 1 cue 0x0c, then issue one byte from 0xf0..0xff five seconds

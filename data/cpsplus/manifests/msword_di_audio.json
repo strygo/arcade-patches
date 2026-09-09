@@ -1,0 +1,1281 @@
+{
+  "schema": 1,
+  "pack": "msword_di",
+  "review_status": "hardware_fix_listening_pending",
+  "provenance": {
+    "album": "Capcom Double Impact Remixed Soundtrack (2010)",
+    "url": "http://finalfightgame.com/remix",
+    "download": "https://static.capcom.com/finalfight/Final%20Fight-Double%20Impact%20Remixed%20Soundtrack.zip",
+    "fetch_date": "2026-09-04",
+    "zip_sha1": "f69e3430113825263ea3c079adeb7cfb3af9db40",
+    "arrangers": "Melssen and Thunberg"
+  },
+  "sample_rate": 48000,
+  "trigger_gain": 126,
+  "xfade_samples": 4800,
+  "fail_open": [
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    39,
+    40,
+    46,
+    54
+  ],
+  "tracks": [
+    {
+      "cmd": 0,
+      "title": "Priestly Charge",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Priestly Charge.mp3",
+      "source_sha256": "252fbd71263bbec9fde9b01ee2db1b22c419722cc886f091d2109aaa1f905975",
+      "reference": "ms_event_0000_music_enh.msf",
+      "reference_sha256": "4f3fa84b368374fc51bc3a42166544fef94c53f465c044bcfda6ae7655d9ac30",
+      "disc": {
+        "rate": 48000,
+        "samples": 913408,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 913408,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.99842
+        },
+        {
+          "at": 8.5632,
+          "offset": 1057,
+          "score": 0.99871
+        },
+        {
+          "at": 14.029333333333334,
+          "offset": 1057,
+          "score": 0.99901
+        }
+      ],
+      "witness": "ms_event_0000_music_enh.xma2",
+      "witness_sha256": "1ea089eac08d349970631a522b8883c3248e9045bdce7be00209666e1eef90c2",
+      "trim_start": 1057,
+      "keep_samples": 913408,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 1,
+      "title": "Release the Hounds",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Release the Hounds.mp3",
+      "source_sha256": "1c2475244380aa3ff0ee0fb0487c367e3c06fd6ad9b127451cae4c63f5a24c62",
+      "reference": "ms_event_0001_music_enh.msf",
+      "reference_sha256": "480ad2222ba496b89f0ac0d435535361be0f074a9ee5773b14e6b23facd999e0",
+      "disc": {
+        "rate": 48000,
+        "samples": 463872,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 463872,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.99445
+        },
+        {
+          "at": 4.3488,
+          "offset": 1054,
+          "score": 0.97708
+        },
+        {
+          "at": 4.664,
+          "offset": 1054,
+          "score": 0.9734
+        }
+      ],
+      "witness": "ms_event_0001_music_enh.xma2",
+      "witness_sha256": "6435bae035b6c039b37f3a62d15b348899806439fdc2b09c0c63ef00da8ef508",
+      "trim_start": 1054,
+      "keep_samples": 463872,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 2,
+      "title": "Play It Again Big Man",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Play It Again Big Man.mp3",
+      "source_sha256": "c7b5a27ceee3133adc9a86edcd5255d4c7cdc114579ad39dc2a2d76c6361f4e9",
+      "reference": "ms_event_0002_music_loop_enh.msf",
+      "reference_sha256": "6224feb6ad4bb467ebb9519fbaf73b71a6603aab9199a25941b928dc9f6b1304",
+      "disc": {
+        "rate": 48000,
+        "samples": 3452928,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 3452928,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.97806
+        },
+        {
+          "at": 32.3712,
+          "offset": 1034,
+          "score": 0.98039
+        },
+        {
+          "at": 66.936,
+          "offset": 1012,
+          "score": 0.99486
+        }
+      ],
+      "witness": "ms_event_0002_music_loop_enh.xma2",
+      "witness_sha256": "2e20f2d916e73d39f0faea710450d7c3eb63ea7ba58db8a085aa3d0c28e472c5",
+      "trim_start": 1034,
+      "keep_samples": 2769984,
+      "loop_start": 2381184,
+      "loop_end": 2765184,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "loop_repair": {
+        "date": "2026-09-05",
+        "reason": "Repeat the stable eight-second late phrase before the album fade; retain the opening once.",
+        "period_seconds": 8,
+        "tail_head_rms_delta_db": -0.039,
+        "tail_head_waveform_ncc": 0.2352,
+        "continuation": "100 ms of original album samples beyond loop_end; fixed-point equal-power overlap, no time stretching."
+      }
+    },
+    {
+      "cmd": 3,
+      "title": "Renewed Hope",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Renewed Hope.mp3",
+      "source_sha256": "51297b2a8fdc7887a8d6f1ebdc8b1d72f54ed72034667be5426b55dafad60c95",
+      "reference": "ms_event_0003_music_loop_enh.msf",
+      "reference_sha256": "490fb9022ee98b2014bf9058cfb8a1f6b2804086050baf8cb753c8e72cc1ee4d",
+      "disc": {
+        "rate": 48000,
+        "samples": 2126848,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2126848,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.98968
+        },
+        {
+          "at": 19.9392,
+          "offset": 1057,
+          "score": 0.99371
+        },
+        {
+          "at": 39.309333333333335,
+          "offset": 1057,
+          "score": 0.99675
+        }
+      ],
+      "witness": "ms_event_0003_music_loop_enh.xma2",
+      "witness_sha256": "b782f105b15fbabdd0ff59fb62977f59b70416969d294bd372c1cde15560463c",
+      "trim_start": 1057,
+      "keep_samples": 1902848,
+      "loop_start": 1543584,
+      "loop_end": 1898048,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "loop_repair": {
+        "date": "2026-09-05",
+        "reason": "Repeat the stable four-bar phrase at approximately 130 BPM before the ending transition.",
+        "period_seconds": 7.384666666666667,
+        "tail_head_rms_delta_db": 0.003,
+        "tail_head_waveform_ncc": 0.3017,
+        "continuation": "100 ms of original album samples beyond loop_end; fixed-point equal-power overlap, no time stretching."
+      }
+    },
+    {
+      "cmd": 4,
+      "title": "Thieves Guild",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Thieves Guild.mp3",
+      "source_sha256": "72bfa814b60b7991c8df70e6c77df7112214b8a26359e9886d04ee2ede3a0e05",
+      "reference": "ms_event_0004_music_loop_enh.msf",
+      "reference_sha256": "0b46909cf8e0057f1c49696926592ca9ec36f0f891ba633a0a99906f5defa447",
+      "disc": {
+        "rate": 48000,
+        "samples": 3314688,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 3314688,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.99289
+        },
+        {
+          "at": 31.0752,
+          "offset": 1042,
+          "score": 0.99567
+        },
+        {
+          "at": 64.056,
+          "offset": 1027,
+          "score": 0.99549
+        }
+      ],
+      "witness": "ms_event_0004_music_loop_enh.xma2",
+      "witness_sha256": "22b511949bfeb3271413a5a4cbc6e81bfb911e1e7da39a6b0f63d34ee1f87c1d",
+      "trim_start": 1042,
+      "keep_samples": 3314688,
+      "loop_start": 0,
+      "loop_end": 3314688,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 5,
+      "title": "The Lizardman Cometh",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_The Lizardman Cometh.mp3",
+      "source_sha256": "dd13e4050a18812466f8d8f9e107b0cce55df1dcc273177a5510a581a4fa83dc",
+      "reference": "ms_event_0005_music_loop_enh.msf",
+      "reference_sha256": "7c408acd59406f5ab4e8afa6c4009ace38a0d0833d7324b8f49c460e59a524c5",
+      "disc": {
+        "rate": 48000,
+        "samples": 2879488,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2879488,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.99084
+        },
+        {
+          "at": 26.9952,
+          "offset": 1057,
+          "score": 0.99126
+        },
+        {
+          "at": 54.989333333333335,
+          "offset": 1057,
+          "score": 0.98266
+        }
+      ],
+      "witness": "ms_event_0005_music_loop_enh.xma2",
+      "witness_sha256": "6464a46db1a48fe117ad1d84a57e42b6f0333ce03ad674df4dc3c6227eca2b3b",
+      "trim_start": 1057,
+      "keep_samples": 1416576,
+      "loop_start": 1027776,
+      "loop_end": 1411776,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "loop_repair": {
+        "date": "2026-09-05",
+        "reason": "Replace the rejected final-section loop with the earlier repeated four-bar phrase at 120 BPM. The two source passes at 16\u201324 and 24\u201332 seconds match harmonically; retain the opening once and join corresponding points inside that phrase.",
+        "period_seconds": 8,
+        "tail_head_rms_delta_db": 0.00265,
+        "tail_head_waveform_ncc": 0.19209,
+        "four_second_chroma_ncc": 0.78711,
+        "full_eight_second_phrase_chroma_ncc": 0.77381,
+        "continuation": "100 ms of original album samples beyond loop_end; fixed-point equal-power overlap, no time stretching.",
+        "rejected_loop_seconds": [
+          51.798,
+          59.798
+        ],
+        "reviewer_feedback": "0x05 doesn't sound good"
+      }
+    },
+    {
+      "cmd": 6,
+      "title": "No Escape",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_No Escape.mp3",
+      "source_sha256": "f36bfc6e547807f199ad9b46f54421253b92391a9ff96404bedb97049bf18aa8",
+      "reference": "ms_event_0006_music_loop_enh.msf",
+      "reference_sha256": "a03efcf976d4ff0f98897d1e66782e58b544030afe07d0ae5d765b40a41d7f83",
+      "disc": {
+        "rate": 48000,
+        "samples": 1130496,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1130496,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.99315
+        },
+        {
+          "at": 10.5984,
+          "offset": 1053,
+          "score": 0.98098
+        },
+        {
+          "at": 18.552,
+          "offset": 1050,
+          "score": 0.97902
+        }
+      ],
+      "witness": "ms_event_0006_music_loop_enh.xma2",
+      "witness_sha256": "6f903ba47f5868982ba6ccbd3d8ad272a412d4bf82a62d0c1e74772c40a40605",
+      "trim_start": 1053,
+      "keep_samples": 1130496,
+      "loop_start": 0,
+      "loop_end": 1130496,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 7,
+      "title": "Knights March",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Knights March.mp3",
+      "source_sha256": "c907af2c1559a085ffac89923b2228bae23097e8afe45a11d1b57bb06d8d59b3",
+      "reference": "ms_event_0007_music_loop_enh.msf",
+      "reference_sha256": "a38a353d4efd48359c48e1f8de877860ad1e1206d2f07cc483040b7f52f0dc8c",
+      "disc": {
+        "rate": 48000,
+        "samples": 1969152,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1969152,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.98725
+        },
+        {
+          "at": 18.460800000000003,
+          "offset": 1040,
+          "score": 0.98184
+        },
+        {
+          "at": 36.024,
+          "offset": 1026,
+          "score": 0.98065
+        }
+      ],
+      "witness": "ms_event_0007_music_loop_enh.xma2",
+      "witness_sha256": "1f15f9437fb4a1bd6434800d11e6549eb7cfbdc046c0a1ba8dd8af43f864a833",
+      "trim_start": 1040,
+      "keep_samples": 1969152,
+      "loop_start": 0,
+      "loop_end": 1969152,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 8,
+      "title": "Raise the Gate",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Raise the Gate.mp3",
+      "source_sha256": "f77e5fe47dc62cd99d8b2a794ecf0379a544ac3194be7c34432d5c2a67e795f9",
+      "reference": "ms_event_0008_music_loop_enh.msf",
+      "reference_sha256": "f0102f70962dba2c9064ff0b55da26c0f0511451266a61240469159e33c02a5f",
+      "disc": {
+        "rate": 48000,
+        "samples": 640000,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 640000,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.9902
+        },
+        {
+          "at": 6.0,
+          "offset": 1057,
+          "score": 0.99123
+        },
+        {
+          "at": 8.333333333333334,
+          "offset": 1057,
+          "score": 0.98956
+        }
+      ],
+      "witness": "ms_event_0008_music_loop_enh.xma2",
+      "witness_sha256": "8ce6a23ed5af23223f44713c3e6e5cefc9dbdc993cfe62b6ee18171fc901c6af",
+      "trim_start": 1057,
+      "keep_samples": 640000,
+      "loop_start": 0,
+      "loop_end": 640000,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 9,
+      "title": "The Scryer",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_The Scryer.mp3",
+      "source_sha256": "1566ff7548470fe00722d57008f77f64fa0979349632b74b9609097792c2877d",
+      "reference": "ms_event_0009_music_loop_enh.msf",
+      "reference_sha256": "d0db61d70321e4811b53c8a52e6eb051fa549cc3003142539fc9726ec3a95b31",
+      "disc": {
+        "rate": 48000,
+        "samples": 4057088,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 4057088,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.98671
+        },
+        {
+          "at": 38.0352,
+          "offset": 1032,
+          "score": 0.98017
+        },
+        {
+          "at": 79.52266666666667,
+          "offset": 1007,
+          "score": 0.98383
+        }
+      ],
+      "witness": "ms_event_0009_music_loop_enh.xma2",
+      "witness_sha256": "9c4cf09d1c64707e5b6f213c4be8f5deb6e77831e53769feb6e139a833df3f96",
+      "trim_start": 1032,
+      "keep_samples": 4057088,
+      "loop_start": 0,
+      "loop_end": 4057088,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 10,
+      "title": "Main_Menu",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Main_Menu.mp3",
+      "source_sha256": "1437335014c20121ef4e805aafd50982678f927c8d14ad034fcab9ea19b90fe9",
+      "reference": "ms_event_000a_music_loop_enh.msf",
+      "reference_sha256": "88f0c9c67acd8dc7b6c2ba8c72825ba345025c3511aa303f1949835b233d8977",
+      "disc": {
+        "rate": 48000,
+        "samples": 1910784,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1910784,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.99096
+        },
+        {
+          "at": 17.9136,
+          "offset": 1057,
+          "score": 0.99193
+        },
+        {
+          "at": 34.808,
+          "offset": 1057,
+          "score": 0.99525
+        }
+      ],
+      "witness": "ms_event_000a_music_loop_enh.xma2",
+      "witness_sha256": "d564547cfe8ec9de1f9c675a7a4fadef300f1c5caaa0cc37256cf04e8254a0ef",
+      "trim_start": 1057,
+      "keep_samples": 1910784,
+      "loop_start": 0,
+      "loop_end": 1910784,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 11,
+      "title": "Trouble From Afar",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Trouble From Afar.mp3",
+      "source_sha256": "b1cf300463e49162e8e67de2df32a8738f805b47037d9cd33447c54465edb976",
+      "reference": "ms_event_000b_music_loop_enh.msf",
+      "reference_sha256": "2d16f5626c69cad5ec6c2807099822cca10af97a98b5e91c260e1d475b7fffee",
+      "disc": {
+        "rate": 48000,
+        "samples": 423936,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 423936,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.98435
+        },
+        {
+          "at": 3.9744000000000006,
+          "offset": 1053,
+          "score": 0.97872
+        },
+        {
+          "at": 3.8320000000000007,
+          "offset": 1053,
+          "score": 0.9792
+        }
+      ],
+      "witness": "ms_event_000b_music_loop_enh.xma2",
+      "witness_sha256": "c128801cd4e746aa9b58f0237925651588277aeb247687b0e627105d6d4f5500",
+      "trim_start": 1053,
+      "keep_samples": 423936,
+      "loop_start": 0,
+      "loop_end": 423936,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 12,
+      "title": "Battle Charge",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Battle Charge.mp3",
+      "source_sha256": "aaa14ddd53fb074867120b737f1e05cd22a3a374ae7eb13753a0833725113f29",
+      "reference": "ms_event_000c_music_loop_enh.msf",
+      "reference_sha256": "b9aeccb5945e66df83f0af45d0794d55fb01bbb1b1a0d99edbe8aba3d31e62d8",
+      "disc": {
+        "rate": 48000,
+        "samples": 294912,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 294912,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.98434
+        },
+        {
+          "at": 2.7648,
+          "offset": 1054,
+          "score": 0.98549
+        },
+        {
+          "at": 1.1440000000000001,
+          "offset": 1055,
+          "score": 0.98528
+        }
+      ],
+      "witness": "ms_event_000c_music_loop_enh.xma2",
+      "witness_sha256": "32902cce30a25075cf3caf3cc0423c4d9fa615935c0533e67ee6bfc5208a783f",
+      "trim_start": 1055,
+      "keep_samples": 294912,
+      "loop_start": 0,
+      "loop_end": 294912,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 13,
+      "title": "Tears for Alan",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Tears for Alan.mp3",
+      "source_sha256": "4c00cf2968ec63a6587e46b6f42610d0dd3c04271adc5f40dc9608dde94c2b82",
+      "reference": "ms_event_000d_music_loop_enh.msf",
+      "reference_sha256": "7b8a5827be9d313c14a3cc2577a015baf9962687a873746ed88c4ebf2c3c774c",
+      "disc": {
+        "rate": 48000,
+        "samples": 667648,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 667648,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.99246
+        },
+        {
+          "at": 6.2592,
+          "offset": 1056,
+          "score": 0.99271
+        },
+        {
+          "at": 8.909333333333333,
+          "offset": 1055,
+          "score": 0.99115
+        }
+      ],
+      "witness": "ms_event_000d_music_loop_enh.xma2",
+      "witness_sha256": "f5a813845f7b946bb9b96dd9c896a5373f8aa8368c4ed290ad7b23e72ad9f769",
+      "trim_start": 1056,
+      "keep_samples": 667648,
+      "loop_start": 0,
+      "loop_end": 667648,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 14,
+      "title": "Amazonian Goddesses",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Amazonian Goddesses.mp3",
+      "source_sha256": "af26738b93a0d2ee48272230536e32a0063d20ea9cabd44f91ad54b75d697961",
+      "reference": "ms_event_000e_music_loop_enh.msf",
+      "reference_sha256": "72791be348c2ed03f897a045ac04212d0ed75eba65a3f445c8b9e1876720aad3",
+      "disc": {
+        "rate": 48000,
+        "samples": 959488,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 959488,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.96726
+        },
+        {
+          "at": 8.9952,
+          "offset": 1057,
+          "score": 0.96951
+        },
+        {
+          "at": 14.989333333333335,
+          "offset": 1057,
+          "score": 0.97308
+        }
+      ],
+      "witness": "ms_event_000e_music_loop_enh.xma2",
+      "witness_sha256": "1999f5e372ed74202e58f8f31b6af88d2b15bca3ad4bf577e6015af944526358",
+      "trim_start": 1057,
+      "keep_samples": 959488,
+      "loop_start": 0,
+      "loop_end": 959488,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 15,
+      "title": "Onwards and Upwards",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Onwards and Upwards.mp3",
+      "source_sha256": "6cc06a239e479504e0cf65c6679c32cbb3f4b33ac7b85c343e5d7e799cda6881",
+      "reference": "ms_event_000f_music_loop_enh.msf",
+      "reference_sha256": "28af3de36c2039d6075163e9878d5773cdbc39fd0c2d65dfd1dd26e4940a9139",
+      "disc": {
+        "rate": 48000,
+        "samples": 1473536,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1473536,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.98919
+        },
+        {
+          "at": 13.814400000000001,
+          "offset": 1048,
+          "score": 0.98876
+        },
+        {
+          "at": 25.698666666666668,
+          "offset": 1042,
+          "score": 0.9829
+        }
+      ],
+      "witness": "ms_event_000f_music_loop_enh.xma2",
+      "witness_sha256": "0e6d7d968d57070ba1f864c99267220035d263f5529746f58a893fe1b19efcf6",
+      "trim_start": 1048,
+      "keep_samples": 1418112,
+      "loop_start": 1044672,
+      "loop_end": 1413312,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "loop_repair": {
+        "date": "2026-09-05",
+        "reason": "Repeat the stable four-bar phrase at approximately 125 BPM; retain the opening once.",
+        "period_seconds": 7.68,
+        "tail_head_rms_delta_db": 0.01,
+        "tail_head_waveform_ncc": 0.4312,
+        "continuation": "100 ms of original album samples beyond loop_end; fixed-point equal-power overlap, no time stretching."
+      }
+    },
+    {
+      "cmd": 16,
+      "title": "Drokmars Revenge",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Drokmars Revenge.mp3",
+      "source_sha256": "a450b6ab27c010e5c771fe9f8adfd85da5b24f5cef5bf83b222adfad5fdb74dc",
+      "reference": "ms_event_0010_music_loop_enh.msf",
+      "reference_sha256": "094512067b5f72c87268084b58061387c05d3f74d081b962a9c52bb5f3993398",
+      "disc": {
+        "rate": 48000,
+        "samples": 1564672,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1564672,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.99231
+        },
+        {
+          "at": 14.6688,
+          "offset": 1048,
+          "score": 0.99246
+        },
+        {
+          "at": 27.59733333333333,
+          "offset": 1041,
+          "score": 0.9936
+        }
+      ],
+      "witness": "ms_event_0010_music_loop_enh.xma2",
+      "witness_sha256": "44b86ca409bb5accc69a571957f2bdcf312b88f3174f9b0973376816b4182b31",
+      "trim_start": 1048,
+      "keep_samples": 1564672,
+      "loop_start": 0,
+      "loop_end": 1564672,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 17,
+      "title": "Eternal Struggle",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Eternal Struggle.mp3",
+      "source_sha256": "93b1a3c9ea3c8fe265ad01133a1e6e03406dfe83f29b628e1a7bc6f113733317",
+      "reference": "ms_event_0011_music_enh.msf",
+      "reference_sha256": "afb1c37d845ff95276a62c13beae064e5a9797ad803dd3df124415716c0aa38a",
+      "disc": {
+        "rate": 48000,
+        "samples": 828416,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 828416,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.99353
+        },
+        {
+          "at": 7.7664,
+          "offset": 1055,
+          "score": 0.993
+        },
+        {
+          "at": 12.258666666666667,
+          "offset": 1053,
+          "score": 0.99068
+        }
+      ],
+      "witness": "ms_event_0011_music_enh.xma2",
+      "witness_sha256": "e8ee8fd9ae7d81a3b549d32007bf7f82c1463219ca772e9c7c3f3ae389c2542e",
+      "trim_start": 1055,
+      "keep_samples": 828416,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 18,
+      "title": "Sanctuary",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Sanctuary.mp3",
+      "source_sha256": "1026423b3051df48666269a55ee2479358a12a20f806b774554db95a0d5fbfbd",
+      "reference": "ms_event_0012_music_enh.msf",
+      "reference_sha256": "1d457f3736d27e22cde322355c797ca0e2eaba375916ed5b672d1dc24d6048bc",
+      "disc": {
+        "rate": 48000,
+        "samples": 2918400,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2918400,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.996
+        },
+        {
+          "at": 27.36,
+          "offset": 1034,
+          "score": 0.9964
+        },
+        {
+          "at": 55.8,
+          "offset": 1012,
+          "score": 0.99609
+        }
+      ],
+      "witness": "ms_event_0012_music_enh.xma2",
+      "witness_sha256": "b2c9bd1c8ac7b9d069e22dce6c3d03e0a7887f6cfd01d9f7a6c8b980202fd7f8",
+      "trim_start": 1034,
+      "keep_samples": 2918400,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 19,
+      "title": "Refuge",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Refuge.mp3",
+      "source_sha256": "d1b7e35bac6b5964c6c30673aa2c4b0bd2c85f12e11cfa64cd3f2e6b2742c4f1",
+      "reference": "ms_event_0013_music_loop_enh.msf",
+      "reference_sha256": "359255c4a23b655dcd0d41e9488debce2f2060dc57e883a075ae83a38f8fbd2b",
+      "disc": {
+        "rate": 48000,
+        "samples": 400384,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 400384,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.99558
+        },
+        {
+          "at": 3.7536,
+          "offset": 1053,
+          "score": 0.99395
+        },
+        {
+          "at": 3.341333333333333,
+          "offset": 1054,
+          "score": 0.99421
+        }
+      ],
+      "witness": "ms_event_0013_music_loop_enh.xma2",
+      "witness_sha256": "82df776d9ae6dda3f54a0b8bb1002a77a7003c7b3e7bca0e430d12b6028d1f02",
+      "trim_start": 1054,
+      "keep_samples": 400384,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "playback_evidence": "Fresh native 0x13 stops after 4.2 s without a host stop/fade; retain the full 8.341-second remix fade as a one-shot. The DI _loop filename is misleading."
+    },
+    {
+      "cmd": 20,
+      "title": "Trust No One",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Trust No One.mp3",
+      "source_sha256": "f529a9e453d60f8028fc42d5fdf8817d3d9a896dc975edc929a89c6d404470e1",
+      "reference": "ms_event_0014_music_enh.msf",
+      "reference_sha256": "f66b4069f75934efd910bb9cc3d0fbcac9cf5ae220b64f4f0df3892b9b364742",
+      "disc": {
+        "rate": 48000,
+        "samples": 297984,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 297984,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.99048
+        },
+        {
+          "at": 2.7936,
+          "offset": 1055,
+          "score": 0.99319
+        },
+        {
+          "at": 1.2080000000000002,
+          "offset": 1056,
+          "score": 0.99022
+        }
+      ],
+      "witness": "ms_event_0014_music_enh.xma2",
+      "witness_sha256": "bb6eaf5537ac4dd57ac4bc67e77659c663e0746158bf60534fabcc49e8d24d4e",
+      "trim_start": 1056,
+      "keep_samples": 297984,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 21,
+      "title": "Sword of Magic",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Sword of Magic.mp3",
+      "source_sha256": "dd7d51bae043ee7359fbc6bd8fad9f45b34c798410a7ea54a0c855a996c5dafb",
+      "reference": "ms_event_0015_music_enh.msf",
+      "reference_sha256": "9ec2d5defa70604936cb179f13e91220570c558e8018d9e52a45670792092275",
+      "disc": {
+        "rate": 48000,
+        "samples": 1824768,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1824768,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.98542
+        },
+        {
+          "at": 17.1072,
+          "offset": 1049,
+          "score": 0.98679
+        },
+        {
+          "at": 33.016,
+          "offset": 1042,
+          "score": 0.98125
+        }
+      ],
+      "witness": "ms_event_0015_music_enh.xma2",
+      "witness_sha256": "fb0bbdc45191ad3f9dc84453baa5bc8efb0e5835c6bba1b7ac187d3585e9be03",
+      "trim_start": 1049,
+      "keep_samples": 1648992,
+      "loop_start": 731712,
+      "loop_end": 1644192,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "loop_repair": {
+        "date": "2026-09-05",
+        "reason": "The native cue repeats despite the DI filename lacking _loop. Repeat an eight-bar passage at approximately 101 BPM before the album ending.",
+        "period_seconds": 19.01,
+        "tail_head_rms_delta_db": -0.437,
+        "tail_head_waveform_ncc": 0.8332,
+        "continuation": "100 ms of original album samples beyond loop_end; fixed-point equal-power overlap, no time stretching."
+      }
+    },
+    {
+      "cmd": 22,
+      "title": "The Black Orb",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_The Black Orb.mp3",
+      "source_sha256": "18af7a46cda11228d386cc6a62cafa563fc7a502d1a487545894a44844ba51e6",
+      "reference": "ms_event_0016_music_enh.msf",
+      "reference_sha256": "9b39c58660fa7ff72fa42a8975cfec8e0b8a339471159aee9c409b3a545b12a8",
+      "disc": {
+        "rate": 48000,
+        "samples": 768000,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 768000,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1057,
+          "score": 0.99594
+        },
+        {
+          "at": 7.2,
+          "offset": 1057,
+          "score": 0.99585
+        },
+        {
+          "at": 11.0,
+          "offset": 1057,
+          "score": 0.99697
+        }
+      ],
+      "witness": "ms_event_0016_music_enh.xma2",
+      "witness_sha256": "e1a1e8d31721f52294bedf3e195beaa8494872b564716d29650c42e35f34ce2e",
+      "trim_start": 1057,
+      "keep_samples": 768000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 23,
+      "title": "Level Clear",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Level Clear.mp3",
+      "source_sha256": "ae9636d8b96fdb77265d4bd58c66ef03a36da768c50b6991d1c42517ed2e88b0",
+      "reference": "ms_event_0017_music_enh.msf",
+      "reference_sha256": "909434ae919467f5ce6c236b9fb69c0e6648f97194821fb42fa105de752e5fea",
+      "disc": {
+        "rate": 48000,
+        "samples": 286720,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 286720,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.99189
+        },
+        {
+          "at": 2.688,
+          "offset": 1055,
+          "score": 0.99363
+        },
+        {
+          "at": 1.0,
+          "offset": 1055,
+          "score": 0.99189
+        }
+      ],
+      "witness": "ms_event_0017_music_enh.xma2",
+      "witness_sha256": "15b433b16479cfb4e4312bf7f828283716733d692e30bb75c8f217428458ed12",
+      "trim_start": 1055,
+      "keep_samples": 286720,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 27,
+      "title": "Triumph",
+      "source": "Magic Sword-Double Impact Remixed Soundtrack/ms_Triumph.mp3",
+      "source_sha256": "2a5e292643dea5faa6bb07f43356ac1ddbc095f3eaeec0aadacc0fc25bbbd802",
+      "reference": "ms_event_001b_music_enh.msf",
+      "reference_sha256": "1d5d2ed9a3a67bba6d4113113dd5fb7fececc87158c7b6a987817c7942628c80",
+      "disc": {
+        "rate": 48000,
+        "samples": 688128,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 688128,
+        "flags": 16
+      },
+      "alignment": [
+        {
+          "at": 1.0,
+          "offset": 1056,
+          "score": 0.97784
+        },
+        {
+          "at": 6.4512,
+          "offset": 1055,
+          "score": 0.98173
+        },
+        {
+          "at": 9.336,
+          "offset": 1054,
+          "score": 0.98449
+        }
+      ],
+      "witness": "ms_event_001b_music_enh.xma2",
+      "witness_sha256": "b75a4da681a259a73983ae90ff5d6c2e723ce48c88122128f1e0892688d6abcd",
+      "trim_start": 1055,
+      "keep_samples": 688128,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    }
+  ],
+  "loudness": {
+    "n": 15,
+    "median_lu": 0.10000000000000142,
+    "gain": 126,
+    "detail": [
+      [
+        2,
+        -22.0,
+        -28.8,
+        -6.800000000000001
+      ],
+      [
+        3,
+        -21.3,
+        -23.4,
+        -2.099999999999998
+      ],
+      [
+        4,
+        -20.3,
+        -21.6,
+        -1.3000000000000007
+      ],
+      [
+        5,
+        -20.4,
+        -15.6,
+        4.799999999999999
+      ],
+      [
+        6,
+        -19.4,
+        -21.0,
+        -1.6000000000000014
+      ],
+      [
+        7,
+        -18.7,
+        -19.6,
+        -0.9000000000000021
+      ],
+      [
+        8,
+        -19.5,
+        -17.6,
+        1.8999999999999986
+      ],
+      [
+        9,
+        -19.7,
+        -21.7,
+        -2.0
+      ],
+      [
+        16,
+        -20.1,
+        -16.8,
+        3.3000000000000007
+      ],
+      [
+        17,
+        -20.2,
+        -17.2,
+        3.0
+      ],
+      [
+        18,
+        -21.0,
+        -16.7,
+        4.300000000000001
+      ],
+      [
+        19,
+        -20.6,
+        -16.8,
+        3.8000000000000007
+      ],
+      [
+        20,
+        -20.8,
+        -21.0,
+        -0.1999999999999993
+      ],
+      [
+        21,
+        -20.2,
+        -19.3,
+        0.8999999999999986
+      ],
+      [
+        22,
+        -19.0,
+        -18.9,
+        0.10000000000000142
+      ]
+    ],
+    "spread_lu": 4.600000000000001
+  },
+  "mapping_evidence": {
+    "date": "2026-09-05",
+    "manifest": "msword_music_census.json",
+    "correction": "Native command equals the literal hexadecimal DI event ID. The former BCD conversion mis-keyed every arrangement from event 0x0a onward. All 25 original DI cues match fresh native audio at their literal IDs; 0x19 is silent."
+  },
+  "listening_approval": {
+    "date": "2026-09-05",
+    "scope": "Entire msword_di pack: all 25 tracks and 25 PLAY commands, including the revised The Lizardman Cometh loop (0x05).",
+    "pack_sha256": "2fa33011b0bcc44159c1c0a44d193ff86135fe805823db015c1385eca9a6f8c6",
+    "pack_bytes": 37867648,
+    "audio_revision": "51df3a41",
+    "context": "Approval of the revised 0x05 completes the previous approval of the other 24 tracks.",
+    "prior_partial_approval": {
+      "date": "2026-09-05",
+      "scope": "24 of 25 Magic Sword tracks; every command except 0x05 (The Lizardman Cometh).",
+      "approved_commands": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        27
+      ],
+      "excluded_commands": [
+        5
+      ],
+      "reviewed_pack_sha256": "70dc6d29c4c7757adedd24d940e6827e926625818c47bf291ecddc847383ff2b",
+      "reviewed_pack_bytes": 39508480,
+      "audio_revision": "403cffff"
+    }
+  }
+}

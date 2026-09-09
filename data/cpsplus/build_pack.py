@@ -42,6 +42,8 @@ from pack import build_sf2_arrange                          # noqa: E402
 # pass-through subcommands: one uniform entry point per pack; each delegates
 # its remaining argv to the builder module's own CLI (see pack/README.md)
 PASSTHROUGH = {
+    "strider-psx": ("build_strider_psx", "Strider PSX Sound Remix recordings"),
+    "remix": ("build_remix", "Double Impact and OC ReMix HD Remix album packs"),
     "ffight":     ("build_ffight_arrange",     "Final Fight arrange (Sega CD US+JP discs)"),
     "ffightae-cps2": ("build_ffightae_cps2_arrange", "Final Fight 30th Anniversary CPS2 Edition arrange (Sega CD US disc)"),
     "ffight-ost": ("build_ffight_ost", "Final Fight OST editions (snes/x68k)"),

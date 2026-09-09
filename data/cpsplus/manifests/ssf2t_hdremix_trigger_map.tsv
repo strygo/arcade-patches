@@ -1,0 +1,74 @@
+# Pack listening approved 2026-09-05; hardware review pending. Audio recipe: ssf2t_hdremix_audio.json
+# cmd	verb	suppress	track	cue	evidence
+0x01	play	1	9	09 Made in U.S.A. (Ken Stage)	listening_approved_hardware_pending
+0x02	play	1	6	06 Reinterpretation (Ryu Stage)	listening_approved_hardware_pending
+0x03	play	1	13	13 Dosu-Koi (E. Honda Stage)	listening_approved_hardware_pending
+0x04	play	1	16	16 Street Market (Chun-Li Stage)	listening_approved_hardware_pending
+0x05	play	1	21	21 Docks Day (Blanka Stage)	listening_approved_hardware_pending
+0x06	play	1	24	24 Red Cyclone (Zangief Stage)	listening_approved_hardware_pending
+0x07	play	1	27	27 Combat and Service (Guile Stage)	listening_approved_hardware_pending
+0x08	play	1	30	30 Reaching for Nirudha (Dhalsim Stage)	listening_approved_hardware_pending
+0x09	play	1	58	58 Tribute to the Master (M. Bison Stage)	listening_approved_hardware_pending
+0x0a	play	1	49	49 Sexy Trunks (Balrog Stage)	listening_approved_hardware_pending
+0x0b	play	1	55	55 Sagat's Moonbike (Sagat Stage)	listening_approved_hardware_pending
+0x0c	play	1	52	52 Spittin' Narcissism (Vega Stage)	listening_approved_hardware_pending
+0x0d	play	1	37	37 Flying Heaven (Fei Long Stage)	listening_approved_hardware_pending
+0x0e	play	1	43	43 Army Girl (Cammy Stage)	listening_approved_hardware_pending
+0x0f	play	1	34	34 New Mexican Thunderbird (T. Hawk Stage)	listening_approved_hardware_pending
+0x10	play	1	40	40 Thank You, Dee Jay (Dee Jay Stage)	listening_approved_hardware_pending
+0x11	play	1	10	10 Made in U.S.A. HD (Ken Stage - Heavy Damage)	listening_approved_hardware_pending
+0x12	play	1	7	07 Reinterpretation HD (Ryu Stage - Heavy Damage)	listening_approved_hardware_pending
+0x13	play	1	14	14 Dosu-Koi HD (E. Honda Stage - Heavy Damage)	listening_approved_hardware_pending
+0x14	play	1	17	17 Street Market HD (Chun-Li Stage - Heavy Damage)	listening_approved_hardware_pending
+0x15	play	1	22	22 Docks Day HD (Blanka Stage - Heavy Damage)	listening_approved_hardware_pending
+0x16	play	1	25	25 Red Cyclone HD (Zangief Stage - Heavy Damage)	listening_approved_hardware_pending
+0x17	play	1	28	28 Combat and Service HD (Guile Stage - Heavy Damage)	listening_approved_hardware_pending
+0x18	play	1	31	31 Reaching for Nirudha HD (Dhalsim Stage - Heavy Damage)	listening_approved_hardware_pending
+0x19	play	1	59	59 Tribute to the Master HD (M. Bison Stage - Heavy Damage)	listening_approved_hardware_pending
+0x1a	play	1	50	50 Sexy Trunks HD (Balrog Stage - Heavy Damage)	listening_approved_hardware_pending
+0x1b	play	1	56	56 Sagat's Moonbike HD (Sagat Stage - Heavy Damage)	listening_approved_hardware_pending
+0x1c	play	1	53	53 Spittin' Narcissism HD (Vega Stage - Heavy Damage)	listening_approved_hardware_pending
+0x1d	play	1	38	38 Flying Heaven HD (Fei Long Stage - Heavy Damage)	listening_approved_hardware_pending
+0x1e	play	1	44	44 Army Girl HD (Cammy Stage - Heavy Damage)	listening_approved_hardware_pending
+0x1f	play	1	35	35 New Mexican Thunderbird HD (T. Hawk Stage - Heavy Damage)	listening_approved_hardware_pending
+0x20	play	1	41	41 Thank You, Dee Jay HD (Dee Jay Stage - Heavy Damage)	listening_approved_hardware_pending
+0x21	play	1	12	12 Wedding March (Ken Ending 2)	listening_approved_hardware_pending
+0x22	play	1	11	11 Commitment Shodan (Ken Ending 1)	listening_approved_hardware_pending
+0x23	play	1	8	08 Nomadic (Ryu Ending)	listening_approved_hardware_pending
+0x24	play	1	15	15 Fight and Feast (E. Honda Ending)	listening_approved_hardware_pending
+0x25	play	1	18	18 So Am I Reveng'd (Chun-Li Ending 1)	listening_approved_hardware_pending
+0x26	play	1	19	19 Single Ladies, Clap Your Hands (Chun-Li Ending 2)	listening_approved_hardware_pending
+0x27	play	1	23	23 Long Lost (Blanka Ending)	listening_approved_hardware_pending
+0x28	play	1	26	26 Viktory Tastes You (Zangief Ending)	listening_approved_hardware_pending
+0x29	play	1	29	29 Blood on the Asphalt (Guile Ending)	listening_approved_hardware_pending
+0x2a	play	1	32	32 Home at Last (Dhalsim Ending)	listening_approved_hardware_pending
+0x2b	play	1	60	60 Call Him Dictator (M. Bison Ending)	listening_approved_hardware_pending
+0x2c	play	1	51	51 How I'm Livin' (Balrog Ending)	listening_approved_hardware_pending
+0x2d	play	1	57	57 Hollow Glory (Sagat Ending)	listening_approved_hardware_pending
+0x2e	play	1	54	54 The Beauteous (Vega Ending)	listening_approved_hardware_pending
+0x2f	play	1	39	39 The Dragon, The Hero (Fei Long Ending)	listening_approved_hardware_pending
+0x30	play	1	45	45 PTSD (Cammy Ending)	listening_approved_hardware_pending
+0x31	play	1	36	36 Brand New Mexico (T. Hawk Ending)	listening_approved_hardware_pending
+0x32	play	1	42	42 Hot Club Joint (Dee Jay Ending)	listening_approved_hardware_pending
+0x33	play	1	1	01 Rock the Asphalt (Opening Demo)	listening_approved_hardware_pending
+0x34	play	1	3	03 The Select Few (Character Select)	listening_approved_hardware_pending
+0x35	play	1	5	05 Fisticuffs (VS)	listening_approved_hardware_pending
+0x36	play	1	46	46 Ready for the Next Sucka (Match End)	listening_approved_hardware_pending
+0x37	play	1	47	47 Just One More... (Continue)	listening_approved_hardware_pending
+0x38	play	1	48	48 New Blood (Here Comes a New Challenger)	listening_approved_hardware_pending
+0x39	play	1	65	65 See Ya! (Game Over)	listening_approved_hardware_pending
+0x3a	play	1	66	66 Grand Masters (Ranking Display)	listening_approved_hardware_pending
+0x3c	play	1	64	64 The World Warriors (Credits)	listening_approved_hardware_pending
+0x3e	play	1	20	20 Long Leg of the Law (Chun-Li Ending 3)	listening_approved_hardware_pending
+0xd3	play	1	3	03 The Select Few (Character Select)	listening_approved_hardware_pending
+0xd4	play	1	1	01 Rock the Asphalt (Opening Demo)	listening_approved_hardware_pending
+0x3b	none	0	-	Original arcade audio	No corresponding arrangement or excluded by spec
+0x3d	none	0	-	Original arcade audio	No corresponding arrangement or excluded by spec
+0x3f	none	0	-	Original arcade audio	No corresponding arrangement or excluded by spec
+0x40	none	0	-	Original arcade audio	No corresponding arrangement or excluded by spec
+0xc0	none	0	-	Original arcade audio	No corresponding arrangement or excluded by spec
+0xc1	none	0	-	Original arcade audio	No corresponding arrangement or excluded by spec
+0xd1	none	0	-	Original arcade audio	No corresponding arrangement or excluded by spec
+0xd2	none	0	-	Original arcade audio	No corresponding arrangement or excluded by spec
+0xd5	none	0	-	Original arcade audio	No corresponding arrangement or excluded by spec
+0xd6	none	0	-	Original arcade audio	No corresponding arrangement or excluded by spec

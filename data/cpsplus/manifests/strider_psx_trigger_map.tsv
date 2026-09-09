@@ -1,0 +1,39 @@
+# Strider PSX: reviewed Sound Remix tracks; one shared USA/Japan pack.
+# Native music fallback stops the arranged player, without suppressing native audio.
+# Credit and all effect/voice commands remain transparent. 0xf0/0xf1 stop via protocol.
+cmd	verb	suppress	track	cue
+0x00	play	1	psx_01	St. Petersburg 1 ~ Step into it!
+0x01	play	1	psx_01	St. Petersburg 2 ~ Heartless Cathedral (Mosque)
+0x02	play	1	psx_01	St. Petersburg 3 ~ Wild Beast
+0x03	stop	0	-	St. Petersburg 4 (Unused) ~ Bullet Corridor
+0x04	play	1	psx_01	St. Petersburg Mid Boss ~ Blow
+0x05	play	1	psx_02	St. Petersburg Boss ~ Ouroboros (Iron Reign)
+0x06	play	1	psx_03	Siberian Wilderness Mid Boss ~ Siberian Mine Shaft (Kong)
+0x07	play	1	psx_03	Siberian Wilderness 1 ~ Drive Wheel
+0x08	play	1	psx_03	Siberian Wilderness 2 ~ Long Dash
+0x09	play	1	psx_03	Siberian Wilderness 3 ~ Cloud Sea
+0x0a	play	1	psx_07	Adventure in Amazon Opening 1 ~ Echo
+0x0b	play	1	psx_07	Adventure in Amazon 1 ~ Valley and River
+0x0c	play	1	psx_07	Adventure in Amazon 2 ~ Howling
+0x0d	play	1	psx_08	Adventure in Amazon Boss ~ Devil in Africa
+0x0e	stop	0	-	Game Over
+0x0f	stop	0	-	Stage Clear
+0x10	play	1	psx_04	Siberian Wilderness Boss ~ Wind Formation
+0x11	play	1	psx_01	St. Petersburg Intro ~ Line of Defense
+0x12	stop	0	-	Siberian Wilderness Intro
+0x13	stop	0	-	Adventure in Amazon Intro
+0x14	none	0	-	Credit
+0x15	stop	0	-	Continue
+0x16	play	1	psx_07	Adventure in Amazon Opening 2 ~ Seige
+0x17	stop	0	-	Adventure in Amazon Opening 3 (Unused) ~ Echo
+0x18	play	1	psx_05	The Aerial Battleship 1 ~ Short Spin
+0x19	play	1	psx_05	The Aerial Battleship 2 ~ G Minor Reverse
+0x1a	play	1	psx_06	The Aerial Battleship Boss ~ Takeover!
+0x1b	play	1	psx_09	The Third Moon 1 ~ Flying Dragon (Hiryu)
+0x1c	play	1	psx_09	The Third Moon 2 ~ Swift Counterattack (Theme)
+0x1d	play	1	psx_10	The Third Moon Boss ~ Dark Lord Grandmaster
+0x1e	stop	0	-	The Aerial Battleship Intro
+0x1f	stop	0	-	The Third Moon Intro
+0x20	stop	0	-	Game Clear
+0x21	stop	0	-	Ending
+0x22	stop	0	-	Ranking

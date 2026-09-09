@@ -21,6 +21,10 @@ MANIFESTS = Path(__file__).resolve().parent.parent / "manifests"
 
 # manifest -> (cmd column, label column) for the human-readable cue names
 LABELS = {
+    "strider_psx": ("strider_psx_trigger_map.tsv", 0, 4),
+    "ffight_di": ("ffight_di_trigger_map.tsv", 0, 4),
+    "msword_di": ("msword_di_trigger_map.tsv", 0, 4),
+    "ssf2t_hdremix": ("ssf2t_hdremix_trigger_map.tsv", 0, 4),
     "sf2_arrange":   ("sf2_arrange_trigger_map.tsv", 0, 3),
     "ffight_arrange": ("ffight_arrange_trigger_map.tsv", 0, 4),
     # the region packs share one trigger map -- both play the opening on 0x52

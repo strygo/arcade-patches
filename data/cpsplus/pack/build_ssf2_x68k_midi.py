@@ -3,7 +3,9 @@
 The inputs are the 63 stereo 48 kHz SC-55 FLAC renders produced by
 ``tools/export_x68k_midi_flac.py``.  Every command join must have passed the
 two-file X68000/arcade listening gate in
-``manifests/x68k_midi_arcade_map.tsv``.
+``manifests/x68k_midi_arcade_map.tsv``.  The sole source-only row, song3c,
+must not claim arcade command 0x3d: that command is the native QSound-logo
+sequence and deliberately fails open.
 
 These particular Nuked-SC55 renders carry a stable DC pedestal followed by
 capture pre-roll.  ``manifests/ssf2_x68k_midi_audio.tsv`` pins both the source
@@ -43,12 +45,13 @@ CHANNELS = 2
 TRIGGER_ROWS = 0x1200
 XFADE_SAMPLES = RATE
 
-# Measured (EBU R128 loudness match) against the 63 isolated native ssf2
+# Measured (EBU R128 loudness match) against the isolated native ssf2
 # QSound renders, 2026-08-31.  The canonical equal mono-downmix comparison
 # puts the encoded pack a median 12.9 LU above the board (IQR 2.2 LU), giving
 # 0x1d under the CPS+ linear gain law.  It independently agrees with the
 # existing HSF2-based ssf2_arrange pack's measured gain.
 TRIG_GAIN = 0x1d
+NATIVE_QSOUND_LOGO_CMD = 0x3D
 
 
 @dataclass(frozen=True)
@@ -315,6 +318,8 @@ def build(*, out: Path | None = None, flac_dir: Path = SOURCE_DIR,
               f"{kind:<11} {len(data) / 1e6:6.2f} MB  {music_row.role}")
 
     for row in music:
+        if not row.in_game:
+            continue
         writer.set_trigger(
             row.command,
             TriggerRow(verb=VERB_PLAY, track=track_of[row.song],
@@ -333,8 +338,10 @@ def build(*, out: Path | None = None, flac_dir: Path = SOURCE_DIR,
             raise ValueError("readback: wrong QSound record layout")
         if reader.header.proto.control_verbs != proto.control_verbs:
             raise ValueError("readback: wrong control-verb map")
-        mapped = {row.command for row in music}
+        mapped = {row.command for row in music if row.in_game}
         for row in music:
+            if not row.in_game:
+                continue
             got = reader.triggers[row.command]
             if (got.verb, got.track, got.gain, got.suppress) != (
                     VERB_PLAY, track_of[row.song], TRIG_GAIN, 1):
@@ -347,6 +354,10 @@ def build(*, out: Path | None = None, flac_dir: Path = SOURCE_DIR,
             if got.verb != VERB_NONE or got.suppress:
                 raise ValueError(
                     f"readback: unmapped command 0x{command:04x} does not fail open")
+        logo = reader.triggers[NATIVE_QSOUND_LOGO_CMD]
+        if logo.verb != VERB_NONE or logo.suppress:
+            raise ValueError(
+                "readback: command 0x3d must pass through to native QSound")
     finally:
         reader.close()
 
@@ -356,11 +367,12 @@ def build(*, out: Path | None = None, flac_dir: Path = SOURCE_DIR,
         worst = min(snrs, key=lambda value: value[1])
         print(f"[ssf2] ADX SNR mean {mean:.2f} dB, worst "
               f"{worst[0]} {worst[1]:.2f} dB")
-    print(f"[ssf2] {out_path}: {len(music)} tracks, {len(music)} play "
+    play_count = sum(row.in_game for row in music)
+    print(f"[ssf2] {out_path}: {len(music)} tracks, {play_count} play "
           f"commands, {sum(row.loops for row in audio.values())} loops, "
           f"{size / 1e6:.1f} MB")
     return {"path": out_path, "size": size, "tracks": len(music),
-            "commands": len(music), "loops": 46, "snrs": snrs}
+            "commands": play_count, "loops": 46, "snrs": snrs}
 
 
 def main(argv=None) -> int:

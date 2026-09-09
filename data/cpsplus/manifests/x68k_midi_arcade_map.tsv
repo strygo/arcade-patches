@@ -159,6 +159,6 @@ ssf2	song38	0x39	ssf2	0x39	GAME OVER	verified	yes	listening-gate-approved X68000
 ssf2	song39	0x3a	ssf2	0x3a	RANKING	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
 ssf2	song3a	0x3b	ssf2	0x3b	BONUS STAGE	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
 ssf2	song3b	0x3c	ssf2	0x3c	STAFF ROLL	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
-ssf2	song3c	0x3d	ssf2	0x3d	(unlisted; dead in-game)	verified	no	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
+ssf2	song3c	0x3d	ssf2	0x3d	QSOUND LOGO (native pass-through)	verified	no	natural attract trace proves 0x3d then 0xd1 is the native QSound-logo sequence; X68000 song3c is source-only and must not claim the arcade command
 ssf2	song3d	0x3e	ssf2	0x3e	ENDING CHUN LI(3)	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
 ssf2	song3e	0x3f	ssf2	0x3f	TOURNAMENT	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree

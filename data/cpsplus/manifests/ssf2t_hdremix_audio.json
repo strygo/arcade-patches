@@ -1,0 +1,5857 @@
+{
+  "schema": 1,
+  "pack": "ssf2t_hdremix",
+  "review_status": "hardware_fix_listening_pending",
+  "listening_approval": {
+    "date": "2026-09-05",
+    "scope": "Entire ssf2t_hdremix pack: 60 tracks and 62 PLAY commands, including the repaired Vega ending loop.",
+    "pack_sha256": "9eaa3355cb36d7f551560132a679250e41ef22414793e84445b6bea3a83391dc",
+    "pack_bytes": 161620640,
+    "audio_revision": "319b83c6"
+  },
+  "provenance": {
+    "album": "OCRA-0012 SSF2T HD Remix Official Soundtrack",
+    "url": "https://ocremix.org/album/12",
+    "torrent_url": "https://bt.ocremix.org/torrents/OC_ReMix_-_Super_Street_Fighter_II_Turbo_HD_Remix_Official_Soundtrack.torrent",
+    "infohash": "45a90db0943cbb53b7266e928a6a6c51a9d07d60",
+    "fetch_date": "2026-09-04",
+    "attribution": "ReMixer names in original FLAC tags; OverClocked ReMix (https://ocremix.org)"
+  },
+  "sample_rate": 48000,
+  "trigger_gain": 25,
+  "xfade_samples": 4800,
+  "fail_open": [
+    59,
+    61,
+    63,
+    64,
+    192,
+    193,
+    209,
+    210,
+    213,
+    214
+  ],
+  "tracks": [
+    {
+      "cmd": 1,
+      "album_track": 9,
+      "title": "09 Made in U.S.A. (Ken Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/09 Made in U.S.A. (Ken Stage).flac",
+      "source_sha256": "b2ec0fe11346fa1942ba8e40d5c7b7cadacab40015d742be876f68f8467c2b3a",
+      "trim_start": 0,
+      "keep_samples": 3356480,
+      "loop_start": 535808,
+      "loop_end": 3351680,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5339,
+      "x360_index": 5358,
+      "ps3": {
+        "rate": 48000,
+        "samples": 3340288,
+        "loop": true,
+        "loop_start": 533504,
+        "loop_end": 3340288,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 4884608,
+        "loop": true,
+        "loop_start": 533504,
+        "loop_end": 3340160,
+        "skip_start": 512,
+        "loop_start_bits": 2216665,
+        "loop_end_bits": 13196539,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.95927
+        },
+        {
+          "reference_sample": 781440,
+          "album_sample": 784896,
+          "offset": 3456,
+          "score": 0.97784
+        },
+        {
+          "reference_sample": 1563264,
+          "album_sample": 1569408,
+          "offset": 6144,
+          "score": 0.96869
+        },
+        {
+          "reference_sample": 2344704,
+          "album_sample": 2353152,
+          "offset": 8448,
+          "score": 0.96186
+        },
+        {
+          "reference_sample": 3126528,
+          "album_sample": 3137664,
+          "offset": 11136,
+          "score": 0.98086
+        },
+        {
+          "reference_sample": 3907968,
+          "album_sample": 3919488,
+          "offset": 11520,
+          "score": 0.96442
+        },
+        {
+          "reference_sample": 4689792,
+          "album_sample": 4701312,
+          "offset": 11520,
+          "score": 0.97434
+        }
+      ],
+      "reference_sha256": "7c49d2e35554cb559717a6b62a0b8764cd1fd6c66566404b646755788ced2d4b",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 8448,
+      "boundary_alignment": [
+        {
+          "reference_sample": 485376,
+          "album_sample": 487680,
+          "offset": 2304,
+          "score": 0.95038
+        },
+        {
+          "reference_sample": 3292032,
+          "album_sample": 3303552,
+          "offset": 11520,
+          "score": 0.9674
+        }
+      ]
+    },
+    {
+      "cmd": 2,
+      "album_track": 6,
+      "title": "06 Reinterpretation (Ryu Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/06 Reinterpretation (Ryu Stage).flac",
+      "source_sha256": "fc9ac98c74fb5b0b04d5fd470982df2326fb1ef5441b0aad94b5a2eeca785c27",
+      "trim_start": 0,
+      "keep_samples": 5050048,
+      "loop_start": 336384,
+      "loop_end": 5045248,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5341,
+      "x360_index": 5360,
+      "ps3": {
+        "rate": 48000,
+        "samples": 5028864,
+        "loop": true,
+        "loop_start": 334848,
+        "loop_end": 5028864,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 5278848,
+        "loop": true,
+        "loop_start": 334848,
+        "loop_end": 5028736,
+        "skip_start": 512,
+        "loop_start_bits": 1513188,
+        "loop_end_bits": 22301556,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.97137
+        },
+        {
+          "reference_sample": 847104,
+          "album_sample": 850560,
+          "offset": 3456,
+          "score": 0.98772
+        },
+        {
+          "reference_sample": 1694592,
+          "album_sample": 1700736,
+          "offset": 6144,
+          "score": 0.986
+        },
+        {
+          "reference_sample": 2542080,
+          "album_sample": 2550912,
+          "offset": 8832,
+          "score": 0.9834
+        },
+        {
+          "reference_sample": 3389184,
+          "album_sample": 3400704,
+          "offset": 11520,
+          "score": 0.98574
+        },
+        {
+          "reference_sample": 4236672,
+          "album_sample": 4250880,
+          "offset": 14208,
+          "score": 0.97828
+        },
+        {
+          "reference_sample": 5084160,
+          "album_sample": 5100672,
+          "offset": 16512,
+          "score": 0.98232
+        }
+      ],
+      "reference_sha256": "34b69473597720098e00cea5e06c138b95c4ce162bbbdcb62f87778e843234e0",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 8832,
+      "boundary_alignment": [
+        {
+          "reference_sample": 286848,
+          "album_sample": 288384,
+          "offset": 1536,
+          "score": 0.97277
+        },
+        {
+          "reference_sample": 4980480,
+          "album_sample": 4996992,
+          "offset": 16512,
+          "score": 0.9791
+        }
+      ]
+    },
+    {
+      "cmd": 3,
+      "album_track": 13,
+      "title": "13 Dosu-Koi (E. Honda Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/13 Dosu-Koi (E. Honda Stage).flac",
+      "source_sha256": "0e62748a931d75d605b92bcb925098408f6040be80f827190b8142bcd3ee04c1",
+      "trim_start": 0,
+      "keep_samples": 5538240,
+      "loop_start": 1179392,
+      "loop_end": 5533440,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5343,
+      "x360_index": 5362,
+      "ps3": {
+        "rate": 48000,
+        "samples": 5516288,
+        "loop": true,
+        "loop_start": 1175552,
+        "loop_end": 5516288,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 5898880,
+        "loop": true,
+        "loop_start": 1175552,
+        "loop_end": 5516160,
+        "skip_start": 512,
+        "loop_start_bits": 4962644,
+        "loop_end_bits": 25106184,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98885
+        },
+        {
+          "reference_sample": 950400,
+          "album_sample": 953856,
+          "offset": 3456,
+          "score": 0.97047
+        },
+        {
+          "reference_sample": 1901184,
+          "album_sample": 1907712,
+          "offset": 6528,
+          "score": 0.97092
+        },
+        {
+          "reference_sample": 2851968,
+          "album_sample": 2861184,
+          "offset": 9216,
+          "score": 0.97884
+        },
+        {
+          "reference_sample": 3802752,
+          "album_sample": 3815040,
+          "offset": 12288,
+          "score": 0.95895
+        },
+        {
+          "reference_sample": 4753536,
+          "album_sample": 4768512,
+          "offset": 14976,
+          "score": 0.97435
+        },
+        {
+          "reference_sample": 5704320,
+          "album_sample": 5721600,
+          "offset": 17280,
+          "score": 0.99404
+        }
+      ],
+      "reference_sha256": "b8711e0623d12c8eeaa45c86decd963cc293cdd4620a3b427814e7b8b16af4cf",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 9216,
+      "boundary_alignment": [
+        {
+          "reference_sample": 1127424,
+          "album_sample": 1131264,
+          "offset": 3840,
+          "score": 0.97283
+        },
+        {
+          "reference_sample": 5468160,
+          "album_sample": 5485440,
+          "offset": 17280,
+          "score": 0.98672
+        }
+      ]
+    },
+    {
+      "cmd": 4,
+      "album_track": 16,
+      "title": "16 Street Market (Chun-Li Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/16 Street Market (Chun-Li Stage).flac",
+      "source_sha256": "dfaea87b91eed1325b563bdc0b05bdca93cd1e32c97d3ceb7af3156b1eba73a0",
+      "trim_start": 0,
+      "keep_samples": 4682688,
+      "loop_start": 347008,
+      "loop_end": 4677888,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5345,
+      "x360_index": 5364,
+      "ps3": {
+        "rate": 48000,
+        "samples": 4662272,
+        "loop": true,
+        "loop_start": 345088,
+        "loop_end": 4662272,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 5181568,
+        "loop": true,
+        "loop_start": 345088,
+        "loop_end": 4662144,
+        "skip_start": 512,
+        "loop_start_bits": 1097861,
+        "loop_end_bits": 15762014,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.94377
+        },
+        {
+          "reference_sample": 830976,
+          "album_sample": 834432,
+          "offset": 3456,
+          "score": 0.95896
+        },
+        {
+          "reference_sample": 1662336,
+          "album_sample": 1668480,
+          "offset": 6144,
+          "score": 0.96791
+        },
+        {
+          "reference_sample": 2493312,
+          "album_sample": 2502144,
+          "offset": 8832,
+          "score": 0.97997
+        },
+        {
+          "reference_sample": 3324672,
+          "album_sample": 3336192,
+          "offset": 11520,
+          "score": 0.98547
+        },
+        {
+          "reference_sample": 4155648,
+          "album_sample": 4169856,
+          "offset": 14208,
+          "score": 0.97998
+        },
+        {
+          "reference_sample": 4987008,
+          "album_sample": 5002752,
+          "offset": 15744,
+          "score": 0.9822
+        }
+      ],
+      "reference_sha256": "fe2298d3e4817247c2a3a6a96557af7bb067edc9f47a5e363d1100aa883c2e27",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 8832,
+      "boundary_alignment": [
+        {
+          "reference_sample": 296832,
+          "album_sample": 298752,
+          "offset": 1920,
+          "score": 0.98158
+        },
+        {
+          "reference_sample": 4614144,
+          "album_sample": 4629888,
+          "offset": 15744,
+          "score": 0.97375
+        }
+      ]
+    },
+    {
+      "cmd": 5,
+      "album_track": 21,
+      "title": "21 Docks Day (Blanka Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/21 Docks Day (Blanka Stage).flac",
+      "source_sha256": "26c58ed6561de9c3ace9b0c7d735b1a1827fa3ac4f8f7ae301734d059e706df0",
+      "trim_start": 0,
+      "keep_samples": 3273408,
+      "loop_start": 980992,
+      "loop_end": 3268608,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5347,
+      "x360_index": 5366,
+      "ps3": {
+        "rate": 48000,
+        "samples": 3258368,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 3258368,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 3892352,
+        "loop": true,
+        "loop_start": 977920,
+        "loop_end": 3258240,
+        "skip_start": 512,
+        "loop_start_bits": 5082072,
+        "loop_end_bits": 16480431,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.9801
+        },
+        {
+          "reference_sample": 616320,
+          "album_sample": 618240,
+          "offset": 1920,
+          "score": 0.98545
+        },
+        {
+          "reference_sample": 1232640,
+          "album_sample": 1236480,
+          "offset": 3840,
+          "score": 0.98293
+        },
+        {
+          "reference_sample": 1848960,
+          "album_sample": 1854720,
+          "offset": 5760,
+          "score": 0.96795
+        },
+        {
+          "reference_sample": 2465280,
+          "album_sample": 2473344,
+          "offset": 8064,
+          "score": 0.97965
+        },
+        {
+          "reference_sample": 3081600,
+          "album_sample": 3091584,
+          "offset": 9984,
+          "score": 0.98878
+        },
+        {
+          "reference_sample": 3697920,
+          "album_sample": 3708288,
+          "offset": 10368,
+          "score": 0.99761
+        }
+      ],
+      "reference_sha256": "ca7a24caeaf23114120ba9cc69f556a1be60d109eaa2bda642405bf11af7fdb7",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 5760,
+      "boundary_alignment": [
+        {
+          "reference_sample": 929664,
+          "album_sample": 932736,
+          "offset": 3072,
+          "score": 0.98129
+        },
+        {
+          "reference_sample": 3210240,
+          "album_sample": 3220608,
+          "offset": 10368,
+          "score": 0.99325
+        }
+      ]
+    },
+    {
+      "cmd": 6,
+      "album_track": 24,
+      "title": "24 Red Cyclone (Zangief Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/24 Red Cyclone (Zangief Stage).flac",
+      "source_sha256": "431ea1a399e8bf050bd7a566da3ee2f7838269e6f715eb79ed93e54bdf029562",
+      "trim_start": 0,
+      "keep_samples": 5499712,
+      "loop_start": 886784,
+      "loop_end": 5494912,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5349,
+      "x360_index": 5368,
+      "ps3": {
+        "rate": 48000,
+        "samples": 5477376,
+        "loop": true,
+        "loop_start": 883712,
+        "loop_end": 5477376,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 5652608,
+        "loop": true,
+        "loop_start": 883712,
+        "loop_end": 5477248,
+        "skip_start": 512,
+        "loop_start_bits": 3087282,
+        "loop_end_bits": 19436031,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.97524
+        },
+        {
+          "reference_sample": 909696,
+          "album_sample": 913152,
+          "offset": 3456,
+          "score": 0.98116
+        },
+        {
+          "reference_sample": 1819392,
+          "album_sample": 1825536,
+          "offset": 6144,
+          "score": 0.98279
+        },
+        {
+          "reference_sample": 2729088,
+          "album_sample": 2738304,
+          "offset": 9216,
+          "score": 0.95874
+        },
+        {
+          "reference_sample": 3638784,
+          "album_sample": 3650688,
+          "offset": 11904,
+          "score": 0.98567
+        },
+        {
+          "reference_sample": 4548480,
+          "album_sample": 4563072,
+          "offset": 14592,
+          "score": 0.94743
+        },
+        {
+          "reference_sample": 5458176,
+          "album_sample": 5475840,
+          "offset": 17664,
+          "score": 0.9696
+        }
+      ],
+      "reference_sha256": "50e3f2e383cd004275cff9952f33f6f677267fb8dc0bcdf907a78b59061df973",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 9216,
+      "boundary_alignment": [
+        {
+          "reference_sample": 835584,
+          "album_sample": 838656,
+          "offset": 3072,
+          "score": 0.98296
+        },
+        {
+          "reference_sample": 5428992,
+          "album_sample": 5446656,
+          "offset": 17664,
+          "score": 0.94735
+        }
+      ]
+    },
+    {
+      "cmd": 7,
+      "album_track": 27,
+      "title": "27 Combat and Service (Guile Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/27 Combat and Service (Guile Stage).flac",
+      "source_sha256": "a0380ca0c57c0fc8434521a949a7e2f54deb219f64ac8a896bc8c465132ce925",
+      "trim_start": 0,
+      "keep_samples": 4048576,
+      "loop_start": 684032,
+      "loop_end": 4043776,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5351,
+      "x360_index": 5370,
+      "ps3": {
+        "rate": 48000,
+        "samples": 4030464,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 4030464,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 5173376,
+        "loop": true,
+        "loop_start": 680960,
+        "loop_end": 4030336,
+        "skip_start": 512,
+        "loop_start_bits": 2269521,
+        "loop_end_bits": 14314036,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99322
+        },
+        {
+          "reference_sample": 829824,
+          "album_sample": 833664,
+          "offset": 3840,
+          "score": 0.95477
+        },
+        {
+          "reference_sample": 1659648,
+          "album_sample": 1665792,
+          "offset": 6144,
+          "score": 0.96447
+        },
+        {
+          "reference_sample": 2489472,
+          "album_sample": 2498304,
+          "offset": 8832,
+          "score": 0.97853
+        },
+        {
+          "reference_sample": 3319296,
+          "album_sample": 3330816,
+          "offset": 11520,
+          "score": 0.97931
+        },
+        {
+          "reference_sample": 4149120,
+          "album_sample": 4162560,
+          "offset": 13440,
+          "score": 0.98409
+        },
+        {
+          "reference_sample": 4978944,
+          "album_sample": 4992384,
+          "offset": 13440,
+          "score": 0.98195
+        }
+      ],
+      "reference_sha256": "0a33210feb82bf20143b1989f76bb5c93b908cdc737c41c181af0edd796e3ae1",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 8832,
+      "boundary_alignment": [
+        {
+          "reference_sample": 632832,
+          "album_sample": 635904,
+          "offset": 3072,
+          "score": 0.98105
+        },
+        {
+          "reference_sample": 3982080,
+          "album_sample": 3995520,
+          "offset": 13440,
+          "score": 0.98392
+        }
+      ]
+    },
+    {
+      "cmd": 8,
+      "album_track": 30,
+      "title": "30 Reaching for Nirudha (Dhalsim Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/30 Reaching for Nirudha (Dhalsim Stage).flac",
+      "source_sha256": "5c6cf366a5676409ea1396cd4b7f09b735674bd1980c5ec1e010bb35385b6494",
+      "trim_start": 0,
+      "keep_samples": 5502784,
+      "loop_start": 418688,
+      "loop_end": 5497984,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5353,
+      "x360_index": 5372,
+      "ps3": {
+        "rate": 48000,
+        "samples": 5480448,
+        "loop": true,
+        "loop_start": 416768,
+        "loop_end": 5480448,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 5689984,
+        "loop": true,
+        "loop_start": 416768,
+        "loop_end": 5480320,
+        "skip_start": 512,
+        "loop_start_bits": 1953777,
+        "loop_end_bits": 23178624,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.95737
+        },
+        {
+          "reference_sample": 915840,
+          "album_sample": 919680,
+          "offset": 3840,
+          "score": 0.98433
+        },
+        {
+          "reference_sample": 1831680,
+          "album_sample": 1838208,
+          "offset": 6528,
+          "score": 0.981
+        },
+        {
+          "reference_sample": 2747520,
+          "album_sample": 2757120,
+          "offset": 9600,
+          "score": 0.97249
+        },
+        {
+          "reference_sample": 3663360,
+          "album_sample": 3675648,
+          "offset": 12288,
+          "score": 0.98258
+        },
+        {
+          "reference_sample": 4579200,
+          "album_sample": 4594176,
+          "offset": 14976,
+          "score": 0.96861
+        },
+        {
+          "reference_sample": 5495424,
+          "album_sample": 5513088,
+          "offset": 17664,
+          "score": 0.98686
+        }
+      ],
+      "reference_sha256": "e5bafebdb62db47004d9cfa33addfe80d42a640d9397e2547ead683c78deb0c7",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 9600,
+      "boundary_alignment": [
+        {
+          "reference_sample": 368640,
+          "album_sample": 370560,
+          "offset": 1920,
+          "score": 0.9736
+        },
+        {
+          "reference_sample": 5432064,
+          "album_sample": 5449728,
+          "offset": 17664,
+          "score": 0.99245
+        }
+      ]
+    },
+    {
+      "cmd": 9,
+      "album_track": 58,
+      "title": "58 Tribute to the Master (M. Bison Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/58 Tribute to the Master (M. Bison Stage).flac",
+      "source_sha256": "a3ac01a21fa8bf3769f60e3fb55807b565ac4c3b98680dbda1c86752ebd8f12b",
+      "trim_start": 0,
+      "keep_samples": 3974720,
+      "loop_start": 20480,
+      "loop_end": 3969920,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5361,
+      "x360_index": 5380,
+      "ps3": {
+        "rate": 48000,
+        "samples": 3957760,
+        "loop": true,
+        "loop_start": 20480,
+        "loop_end": 3957760,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 4116608,
+        "loop": true,
+        "loop_start": 20480,
+        "loop_end": 3957632,
+        "skip_start": 512,
+        "loop_start_bits": 80564,
+        "loop_end_bits": 15656477,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99129
+        },
+        {
+          "reference_sample": 653568,
+          "album_sample": 655872,
+          "offset": 2304,
+          "score": 0.9808
+        },
+        {
+          "reference_sample": 1307136,
+          "album_sample": 1311360,
+          "offset": 4224,
+          "score": 0.98412
+        },
+        {
+          "reference_sample": 1960704,
+          "album_sample": 1966848,
+          "offset": 6144,
+          "score": 0.95809
+        },
+        {
+          "reference_sample": 2614272,
+          "album_sample": 2622720,
+          "offset": 8448,
+          "score": 0.98216
+        },
+        {
+          "reference_sample": 3267840,
+          "album_sample": 3278208,
+          "offset": 10368,
+          "score": 0.98174
+        },
+        {
+          "reference_sample": 3921792,
+          "album_sample": 3934080,
+          "offset": 12288,
+          "score": 0.97556
+        }
+      ],
+      "reference_sha256": "e3159e71bd1ed951e86651a91008ed4f470f19e01a4a651d1be80f3dfa7c28ae",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 6144,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99129
+        },
+        {
+          "reference_sample": 3909504,
+          "album_sample": 3921792,
+          "offset": 12288,
+          "score": 0.97717
+        }
+      ]
+    },
+    {
+      "cmd": 10,
+      "album_track": 49,
+      "title": "49 Sexy Trunks (Balrog Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/49 Sexy Trunks (Balrog Stage).flac",
+      "source_sha256": "6af26f07d17862fee2db9562114d4a1661ba0671828b2e5d0ebeb2ae18cc5ee3",
+      "trim_start": 0,
+      "keep_samples": 5454400,
+      "loop_start": 0,
+      "loop_end": 5449600,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5355,
+      "x360_index": 5374,
+      "ps3": {
+        "rate": 48000,
+        "samples": 5449728,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 5449728,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 5449856,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 5449600,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 20129413,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.9906
+        },
+        {
+          "reference_sample": 875904,
+          "album_sample": 875904,
+          "offset": 0,
+          "score": 0.99237
+        },
+        {
+          "reference_sample": 1751808,
+          "album_sample": 1751808,
+          "offset": 0,
+          "score": 0.99515
+        },
+        {
+          "reference_sample": 2627712,
+          "album_sample": 2627712,
+          "offset": 0,
+          "score": 0.99152
+        },
+        {
+          "reference_sample": 3503616,
+          "album_sample": 3503616,
+          "offset": 0,
+          "score": 0.99358
+        },
+        {
+          "reference_sample": 4379520,
+          "album_sample": 4379520,
+          "offset": 0,
+          "score": 0.9926
+        },
+        {
+          "reference_sample": 5255424,
+          "album_sample": 5255424,
+          "offset": 0,
+          "score": 0.99373
+        }
+      ],
+      "reference_sha256": "2fa6f126ef275169fe13e02b48f55bbb7245e7c0365a0867bdcae8c088d39f6c",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99922
+        },
+        {
+          "offset": 0,
+          "score": 0.99867
+        },
+        {
+          "offset": 0,
+          "score": 0.99677
+        },
+        {
+          "offset": 0,
+          "score": 0.99318
+        },
+        {
+          "offset": -1,
+          "score": 0.99732
+        },
+        {
+          "offset": -1,
+          "score": 0.99817
+        },
+        {
+          "offset": -1,
+          "score": 0.99909
+        }
+      ],
+      "offset": 0,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.9906
+        },
+        {
+          "reference_sample": 5351424,
+          "album_sample": 5351424,
+          "offset": 0,
+          "score": 0.99599
+        }
+      ]
+    },
+    {
+      "cmd": 11,
+      "album_track": 55,
+      "title": "55 Sagat's Moonbike (Sagat Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/55 Sagat's Moonbike (Sagat Stage).flac",
+      "source_sha256": "45aab56b2f3973bed58d2e43630580c86aa262d15d065ba4dcbb0054b36c230a",
+      "trim_start": 0,
+      "keep_samples": 4731072,
+      "loop_start": 6912,
+      "loop_end": 4726272,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5359,
+      "x360_index": 5378,
+      "ps3": {
+        "rate": 48000,
+        "samples": 4706304,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 4706304,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 4705408,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 4705152,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 15661058,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 6912,
+          "offset": 6912,
+          "score": 0.98917
+        },
+        {
+          "reference_sample": 751488,
+          "album_sample": 761088,
+          "offset": 9600,
+          "score": 0.97013
+        },
+        {
+          "reference_sample": 1503360,
+          "album_sample": 1515264,
+          "offset": 11904,
+          "score": 0.96824
+        },
+        {
+          "reference_sample": 2255232,
+          "album_sample": 2269440,
+          "offset": 14208,
+          "score": 0.96752
+        },
+        {
+          "reference_sample": 3007104,
+          "album_sample": 3023616,
+          "offset": 16512,
+          "score": 0.96301
+        },
+        {
+          "reference_sample": 3758976,
+          "album_sample": 3777792,
+          "offset": 18816,
+          "score": 0.97483
+        },
+        {
+          "reference_sample": 4510848,
+          "album_sample": 4531968,
+          "offset": 21120,
+          "score": 0.98174
+        }
+      ],
+      "reference_sha256": "90a768042d7c810b08b23eadf7be1b2d82292ee288b5fefcfb01ea7398b968dc",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 14208,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 6912,
+          "offset": 6912,
+          "score": 0.98917
+        },
+        {
+          "reference_sample": 4606848,
+          "album_sample": 4627968,
+          "offset": 21120,
+          "score": 0.99352
+        }
+      ]
+    },
+    {
+      "cmd": 12,
+      "album_track": 52,
+      "title": "52 Spittin' Narcissism (Vega Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/52 Spittin' Narcissism (Vega Stage).flac",
+      "source_sha256": "2eb0667b98f6dbf41754185de673c9b46b2acf1c99d84adfb5a1d1fecbd05ac2",
+      "trim_start": 0,
+      "keep_samples": 5240000,
+      "loop_start": 115200,
+      "loop_end": 5235200,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5357,
+      "x360_index": 5376,
+      "ps3": {
+        "rate": 48000,
+        "samples": 5217280,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 5217280,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 5482112,
+        "loop": true,
+        "loop_start": 112640,
+        "loop_end": 5217152,
+        "skip_start": 512,
+        "loop_start_bits": 383569,
+        "loop_end_bits": 16518801,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 2688,
+          "offset": 2688,
+          "score": 0.99184
+        },
+        {
+          "reference_sample": 880896,
+          "album_sample": 886272,
+          "offset": 5376,
+          "score": 0.62743
+        },
+        {
+          "reference_sample": 1762176,
+          "album_sample": 1770240,
+          "offset": 8064,
+          "score": 0.5231
+        },
+        {
+          "reference_sample": 2643456,
+          "album_sample": 2654208,
+          "offset": 10752,
+          "score": 0.46324
+        },
+        {
+          "reference_sample": 3524736,
+          "album_sample": 3537792,
+          "offset": 13056,
+          "score": 0.29899
+        },
+        {
+          "reference_sample": 4406016,
+          "album_sample": 4422144,
+          "offset": 16128,
+          "score": 0.33381
+        },
+        {
+          "reference_sample": 5287296,
+          "album_sample": 5305728,
+          "offset": 18432,
+          "score": 0.75444
+        }
+      ],
+      "reference_sha256": "b0ca03320bc8685a741cafb3b6347cab27671575c7471dc0146980ff0373ad71",
+      "alignment_stable": false,
+      "fine_alignment": [],
+      "offset": 10752,
+      "structure": {
+        "method": "album self-alignment near Xbox loop hint",
+        "period_samples": 5120000,
+        "ncc_2s": 0.61065
+      }
+    },
+    {
+      "cmd": 13,
+      "album_track": 37,
+      "title": "37 Flying Heaven (Fei Long Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/37 Flying Heaven (Fei Long Stage).flac",
+      "source_sha256": "f53540671c1583c53c022c0d2172ce3d03f777a147e72859a4c656eae6350141",
+      "trim_start": 0,
+      "keep_samples": 5149376,
+      "loop_start": 1470336,
+      "loop_end": 5144576,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5363,
+      "x360_index": 5382,
+      "ps3": {
+        "rate": 48000,
+        "samples": 5128192,
+        "loop": true,
+        "loop_start": 1465344,
+        "loop_end": 5128192,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 5510784,
+        "loop": true,
+        "loop_start": 1465344,
+        "loop_end": 5128064,
+        "skip_start": 512,
+        "loop_start_bits": 5751953,
+        "loop_end_bits": 19982744,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.97363
+        },
+        {
+          "reference_sample": 885888,
+          "album_sample": 888960,
+          "offset": 3072,
+          "score": 0.9663
+        },
+        {
+          "reference_sample": 1771776,
+          "album_sample": 1777920,
+          "offset": 6144,
+          "score": 0.97469
+        },
+        {
+          "reference_sample": 2658048,
+          "album_sample": 2666880,
+          "offset": 8832,
+          "score": 0.9532
+        },
+        {
+          "reference_sample": 3543936,
+          "album_sample": 3555840,
+          "offset": 11904,
+          "score": 0.95875
+        },
+        {
+          "reference_sample": 4429824,
+          "album_sample": 4444416,
+          "offset": 14592,
+          "score": 0.97461
+        },
+        {
+          "reference_sample": 5316096,
+          "album_sample": 5332608,
+          "offset": 16512,
+          "score": 0.99059
+        }
+      ],
+      "reference_sha256": "27a97fa7d4eec45d3342d1e6f55e8bd8f1d289865f518b826029e27641ea229e",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 8832,
+      "boundary_alignment": [
+        {
+          "reference_sample": 1417344,
+          "album_sample": 1422336,
+          "offset": 4992,
+          "score": 0.96972
+        },
+        {
+          "reference_sample": 5079936,
+          "album_sample": 5096448,
+          "offset": 16512,
+          "score": 0.98629
+        }
+      ]
+    },
+    {
+      "cmd": 14,
+      "album_track": 43,
+      "title": "43 Army Girl (Cammy Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/43 Army Girl (Cammy Stage).flac",
+      "source_sha256": "a979da4ddd40824edd8538b1feaf6a634ee7521041527a28deca8c5858bebda4",
+      "trim_start": 0,
+      "keep_samples": 4453824,
+      "loop_start": 635520,
+      "loop_end": 4449024,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5365,
+      "x360_index": 5384,
+      "ps3": {
+        "rate": 48000,
+        "samples": 4434944,
+        "loop": true,
+        "loop_start": 632832,
+        "loop_end": 4434944,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 4596352,
+        "loop": true,
+        "loop_start": 632832,
+        "loop_end": 4434816,
+        "skip_start": 512,
+        "loop_start_bits": 2651712,
+        "loop_end_bits": 18292057,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.96091
+        },
+        {
+          "reference_sample": 733440,
+          "album_sample": 736512,
+          "offset": 3072,
+          "score": 0.97956
+        },
+        {
+          "reference_sample": 1466880,
+          "album_sample": 1472256,
+          "offset": 5376,
+          "score": 0.98633
+        },
+        {
+          "reference_sample": 2200704,
+          "album_sample": 2208384,
+          "offset": 7680,
+          "score": 0.99275
+        },
+        {
+          "reference_sample": 2934144,
+          "album_sample": 2944128,
+          "offset": 9984,
+          "score": 0.97615
+        },
+        {
+          "reference_sample": 3667584,
+          "album_sample": 3679488,
+          "offset": 11904,
+          "score": 0.98566
+        },
+        {
+          "reference_sample": 4401408,
+          "album_sample": 4415616,
+          "offset": 14208,
+          "score": 0.99366
+        }
+      ],
+      "reference_sha256": "7b28a8973ecaf43385f6a142ef422bc0ea7e4dae9145aac901c43306e6cc0931",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 7680,
+      "boundary_alignment": [
+        {
+          "reference_sample": 584832,
+          "album_sample": 587520,
+          "offset": 2688,
+          "score": 0.98321
+        },
+        {
+          "reference_sample": 4386816,
+          "album_sample": 4401024,
+          "offset": 14208,
+          "score": 0.99224
+        }
+      ]
+    },
+    {
+      "cmd": 15,
+      "album_track": 34,
+      "title": "34 New Mexican Thunderbird (T. Hawk Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/34 New Mexican Thunderbird (T. Hawk Stage).flac",
+      "source_sha256": "5dc4a8815e805bbe454f24a95aba68eb7c20dbd67dc975d4ff706e1553ba894b",
+      "trim_start": 0,
+      "keep_samples": 6052800,
+      "loop_start": 645376,
+      "loop_end": 6048000,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5367,
+      "x360_index": 5386,
+      "ps3": {
+        "rate": 48000,
+        "samples": 6029312,
+        "loop": true,
+        "loop_start": 643072,
+        "loop_end": 6029312,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 6243968,
+        "loop": true,
+        "loop_start": 643072,
+        "loop_end": 6029184,
+        "skip_start": 512,
+        "loop_start_bits": 2532184,
+        "loop_end_bits": 22596884,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.95843
+        },
+        {
+          "reference_sample": 1008000,
+          "album_sample": 1011840,
+          "offset": 3840,
+          "score": 0.97005
+        },
+        {
+          "reference_sample": 2016384,
+          "album_sample": 2023296,
+          "offset": 6912,
+          "score": 0.96006
+        },
+        {
+          "reference_sample": 3024768,
+          "album_sample": 3034752,
+          "offset": 9984,
+          "score": 0.97104
+        },
+        {
+          "reference_sample": 4032768,
+          "album_sample": 4045824,
+          "offset": 13056,
+          "score": 0.94718
+        },
+        {
+          "reference_sample": 5041152,
+          "album_sample": 5057280,
+          "offset": 16128,
+          "score": 0.93962
+        },
+        {
+          "reference_sample": 6049536,
+          "album_sample": 6068352,
+          "offset": 18816,
+          "score": 0.99379
+        }
+      ],
+      "reference_sha256": "29e2d5530352a5e1e947fad3c3ca723fc1501924b96ce2dccc91464355423c1b",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 9984,
+      "boundary_alignment": [
+        {
+          "reference_sample": 594816,
+          "album_sample": 597120,
+          "offset": 2304,
+          "score": 0.94989
+        },
+        {
+          "reference_sample": 5981184,
+          "album_sample": 6000000,
+          "offset": 18816,
+          "score": 0.96824
+        }
+      ]
+    },
+    {
+      "cmd": 16,
+      "album_track": 40,
+      "title": "40 Thank You, Dee Jay (Dee Jay Stage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/40 Thank You, Dee Jay (Dee Jay Stage).flac",
+      "source_sha256": "56b1a610fc153d6b59f475c9e18a6a41a23195a4b63206156a457523ef576449",
+      "trim_start": 0,
+      "keep_samples": 4524480,
+      "loop_start": 337408,
+      "loop_end": 4519680,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5369,
+      "x360_index": 5388,
+      "ps3": {
+        "rate": 48000,
+        "samples": 4505600,
+        "loop": true,
+        "loop_start": 335872,
+        "loop_end": 4505600,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 4809856,
+        "loop": true,
+        "loop_start": 335872,
+        "loop_end": 4505472,
+        "skip_start": 512,
+        "loop_start_bits": 1087156,
+        "loop_end_bits": 14636348,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.95969
+        },
+        {
+          "reference_sample": 769152,
+          "album_sample": 772224,
+          "offset": 3072,
+          "score": 0.97757
+        },
+        {
+          "reference_sample": 1538304,
+          "album_sample": 1543680,
+          "offset": 5376,
+          "score": 0.98605
+        },
+        {
+          "reference_sample": 2307456,
+          "album_sample": 2315136,
+          "offset": 7680,
+          "score": 0.98555
+        },
+        {
+          "reference_sample": 3076608,
+          "album_sample": 3086592,
+          "offset": 9984,
+          "score": 0.97762
+        },
+        {
+          "reference_sample": 3845760,
+          "album_sample": 3858048,
+          "offset": 12288,
+          "score": 0.9722
+        },
+        {
+          "reference_sample": 4614912,
+          "album_sample": 4629120,
+          "offset": 14208,
+          "score": 0.99293
+        }
+      ],
+      "reference_sha256": "816739b16cc404abc2c544b3a52264704cccbe6830e65544cb9a19ac7af8ab13",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 7680,
+      "boundary_alignment": [
+        {
+          "reference_sample": 287616,
+          "album_sample": 289152,
+          "offset": 1536,
+          "score": 0.97104
+        },
+        {
+          "reference_sample": 4457472,
+          "album_sample": 4471680,
+          "offset": 14208,
+          "score": 0.98526
+        }
+      ]
+    },
+    {
+      "cmd": 17,
+      "album_track": 10,
+      "title": "10 Made in U.S.A. HD (Ken Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/10 Made in U.S.A. HD (Ken Stage - Heavy Damage).flac",
+      "source_sha256": "5512fc6f6e39098e0de3c63435da8a5cfb7401bf6802e9133deb767e83173c44",
+      "trim_start": 0,
+      "keep_samples": 1866304,
+      "loop_start": 0,
+      "loop_end": 1861504,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5371,
+      "x360_index": 5390,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1855488,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1855488,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1855616,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1855360,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 7786772,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.95246
+        },
+        {
+          "reference_sample": 276864,
+          "album_sample": 278016,
+          "offset": 1152,
+          "score": 0.9801
+        },
+        {
+          "reference_sample": 553728,
+          "album_sample": 555648,
+          "offset": 1920,
+          "score": 0.96457
+        },
+        {
+          "reference_sample": 830592,
+          "album_sample": 833664,
+          "offset": 3072,
+          "score": 0.97683
+        },
+        {
+          "reference_sample": 1107456,
+          "album_sample": 1111296,
+          "offset": 3840,
+          "score": 0.9695
+        },
+        {
+          "reference_sample": 1384320,
+          "album_sample": 1389312,
+          "offset": 4992,
+          "score": 0.96375
+        },
+        {
+          "reference_sample": 1661184,
+          "album_sample": 1666944,
+          "offset": 5760,
+          "score": 0.97518
+        }
+      ],
+      "reference_sha256": "327e546525e5586bfa5c931e488d1175544a18415af31f999042fd3ab4fef00f",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 3072,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.95246
+        },
+        {
+          "reference_sample": 1757184,
+          "album_sample": 1763328,
+          "offset": 6144,
+          "score": 0.97946
+        }
+      ]
+    },
+    {
+      "cmd": 18,
+      "album_track": 7,
+      "title": "07 Reinterpretation HD (Ryu Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/07 Reinterpretation HD (Ryu Stage - Heavy Damage).flac",
+      "source_sha256": "1ca709d2565a87a9234226ad0d3531dac3656783302710556c3c5a579fa039c9",
+      "trim_start": 0,
+      "keep_samples": 591808,
+      "loop_start": 293760,
+      "loop_end": 587008,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5373,
+      "x360_index": 5392,
+      "ps3": {
+        "rate": 48000,
+        "samples": 583680,
+        "loop": true,
+        "loop_start": 291840,
+        "loop_end": 583680,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 698496,
+        "loop": true,
+        "loop_start": 291840,
+        "loop_end": 583552,
+        "skip_start": 512,
+        "loop_start_bits": 1239293,
+        "loop_end_bits": 2481024,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.96337
+        },
+        {
+          "reference_sample": 83712,
+          "album_sample": 84480,
+          "offset": 768,
+          "score": 0.96008
+        },
+        {
+          "reference_sample": 167808,
+          "album_sample": 169344,
+          "offset": 1536,
+          "score": 0.95275
+        },
+        {
+          "reference_sample": 251904,
+          "album_sample": 253824,
+          "offset": 1920,
+          "score": 0.96618
+        },
+        {
+          "reference_sample": 335616,
+          "album_sample": 337920,
+          "offset": 2304,
+          "score": 0.95952
+        },
+        {
+          "reference_sample": 419712,
+          "album_sample": 422784,
+          "offset": 3072,
+          "score": 0.9534
+        },
+        {
+          "reference_sample": 503808,
+          "album_sample": 507264,
+          "offset": 3456,
+          "score": 0.92351
+        }
+      ],
+      "reference_sha256": "b47982771baef76efa9423f673d7275267d4131486c1961638ca5c4a80bdefdc",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 1920,
+      "boundary_alignment": [
+        {
+          "reference_sample": 243840,
+          "album_sample": 245760,
+          "offset": 1920,
+          "score": 0.9614
+        },
+        {
+          "reference_sample": 535296,
+          "album_sample": 538752,
+          "offset": 3456,
+          "score": 0.88424
+        }
+      ]
+    },
+    {
+      "cmd": 19,
+      "album_track": 14,
+      "title": "14 Dosu-Koi HD (E. Honda Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/14 Dosu-Koi HD (E. Honda Stage - Heavy Damage).flac",
+      "source_sha256": "70cf8ebca7f791bd80aa7592642a64d4dd7ee6e69bf5d62012f94d0dd6f0cbbb",
+      "trim_start": 0,
+      "keep_samples": 2383776,
+      "loop_start": 1690848,
+      "loop_end": 2378976,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5375,
+      "x360_index": 5394,
+      "ps3": {
+        "rate": 48000,
+        "samples": 2742272,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2742272,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 2742400,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2742144,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 12278208,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.96556
+        },
+        {
+          "reference_sample": 424320,
+          "album_sample": 425856,
+          "offset": 1536,
+          "score": 0.97619
+        },
+        {
+          "reference_sample": 849024,
+          "album_sample": 851712,
+          "offset": 2688,
+          "score": 0.95851
+        },
+        {
+          "reference_sample": 1273728,
+          "album_sample": 1277952,
+          "offset": 4224,
+          "score": 0.9811
+        },
+        {
+          "reference_sample": 1698432,
+          "album_sample": 1704192,
+          "offset": 5760,
+          "score": 0.9659
+        },
+        {
+          "reference_sample": 2123136,
+          "album_sample": 2130048,
+          "offset": 6912,
+          "score": 0.97779
+        },
+        {
+          "reference_sample": 2547840,
+          "album_sample": 2556288,
+          "offset": 8448,
+          "score": 0.94179
+        }
+      ],
+      "reference_sha256": "e3f4a4cda92af3f9526e84e5dafbb9e7788dd0ae7396281e87c84cce3e4b0f58",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 4224,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.96556
+        },
+        {
+          "reference_sample": 2643840,
+          "album_sample": 2652288,
+          "offset": 8448,
+          "score": 0.7111
+        }
+      ],
+      "structure": {
+        "method": "Loop an unfaded repeated passage after the original intro; retain 100 ms of real continuation for the ADX-grid crossfade.",
+        "revision_date": "2026-09-05",
+        "previous_loop_start": 0,
+        "previous_loop_end": 2750592,
+        "exact_repeat_samples": 688112,
+        "exact_repeat_ncc_2s": 0.987706,
+        "grid_error_samples": 16,
+        "crossfade_ncc": 0.964621
+      }
+    },
+    {
+      "cmd": 20,
+      "album_track": 17,
+      "title": "17 Street Market HD (Chun-Li Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/17 Street Market HD (Chun-Li Stage - Heavy Damage).flac",
+      "source_sha256": "21e74e09bc08522a207c03cf1d4ce60301917038b2295420045ff71bf48c9a30",
+      "trim_start": 0,
+      "keep_samples": 2692544,
+      "loop_start": 307328,
+      "loop_end": 2687744,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5377,
+      "x360_index": 5396,
+      "ps3": {
+        "rate": 48000,
+        "samples": 2679808,
+        "loop": true,
+        "loop_start": 306176,
+        "loop_end": 2679808,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 3985536,
+        "loop": true,
+        "loop_start": 306176,
+        "loop_end": 2679680,
+        "skip_start": 512,
+        "loop_start_bits": 1115073,
+        "loop_end_bits": 9704111,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.95317
+        },
+        {
+          "reference_sample": 631680,
+          "album_sample": 633984,
+          "offset": 2304,
+          "score": 0.96578
+        },
+        {
+          "reference_sample": 1263360,
+          "album_sample": 1267584,
+          "offset": 4224,
+          "score": 0.9616
+        },
+        {
+          "reference_sample": 1895424,
+          "album_sample": 1901568,
+          "offset": 6144,
+          "score": 0.96581
+        },
+        {
+          "reference_sample": 2527104,
+          "album_sample": 2535168,
+          "offset": 8064,
+          "score": 0.95992
+        },
+        {
+          "reference_sample": 3158784,
+          "album_sample": 3166848,
+          "offset": 8064,
+          "score": 0.97445
+        },
+        {
+          "reference_sample": 3790848,
+          "album_sample": 3798912,
+          "offset": 8064,
+          "score": 0.97952
+        }
+      ],
+      "reference_sha256": "c23240fe36673477c26a0623fd96fc7c8e5c34616776d1c8292164dd6c081876",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 6144,
+      "boundary_alignment": [
+        {
+          "reference_sample": 258048,
+          "album_sample": 259200,
+          "offset": 1152,
+          "score": 0.97231
+        },
+        {
+          "reference_sample": 2631552,
+          "album_sample": 2639616,
+          "offset": 8064,
+          "score": 0.97846
+        }
+      ]
+    },
+    {
+      "cmd": 21,
+      "album_track": 22,
+      "title": "22 Docks Day HD (Blanka Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/22 Docks Day HD (Blanka Stage - Heavy Damage).flac",
+      "source_sha256": "6cabab7e55a8404ef88adaf3e5287c8e295b95b8a71c2a9734f2c2d2e72a67fb",
+      "trim_start": 0,
+      "keep_samples": 2681792,
+      "loop_start": 298496,
+      "loop_end": 2676992,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5379,
+      "x360_index": 5398,
+      "ps3": {
+        "rate": 48000,
+        "samples": 2667520,
+        "loop": true,
+        "loop_start": 296960,
+        "loop_end": 2667520,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 2964608,
+        "loop": true,
+        "loop_start": 296960,
+        "loop_end": 2667392,
+        "skip_start": 512,
+        "loop_start_bits": 1299311,
+        "loop_end_bits": 11172931,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.96392
+        },
+        {
+          "reference_sample": 461568,
+          "album_sample": 463872,
+          "offset": 2304,
+          "score": 0.96784
+        },
+        {
+          "reference_sample": 923136,
+          "album_sample": 926976,
+          "offset": 3840,
+          "score": 0.96294
+        },
+        {
+          "reference_sample": 1384704,
+          "album_sample": 1390080,
+          "offset": 5376,
+          "score": 0.96181
+        },
+        {
+          "reference_sample": 1846272,
+          "album_sample": 1853184,
+          "offset": 6912,
+          "score": 0.96069
+        },
+        {
+          "reference_sample": 2307840,
+          "album_sample": 2316288,
+          "offset": 8448,
+          "score": 0.96285
+        },
+        {
+          "reference_sample": 2769792,
+          "album_sample": 2779392,
+          "offset": 9600,
+          "score": 0.99371
+        }
+      ],
+      "reference_sha256": "c6fc260b12b9d547cd74d5f35f291a156321040d7792c447189fe55067f212cd",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 5376,
+      "boundary_alignment": [
+        {
+          "reference_sample": 248832,
+          "album_sample": 250368,
+          "offset": 1536,
+          "score": 0.95157
+        },
+        {
+          "reference_sample": 2619264,
+          "album_sample": 2628864,
+          "offset": 9600,
+          "score": 0.98979
+        }
+      ]
+    },
+    {
+      "cmd": 22,
+      "album_track": 25,
+      "title": "25 Red Cyclone HD (Zangief Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/25 Red Cyclone HD (Zangief Stage - Heavy Damage).flac",
+      "source_sha256": "edd2c1c79ac8848de10d64ab9ed57fe1a25be50de13935a098c9e2021c837b03",
+      "trim_start": 0,
+      "keep_samples": 662720,
+      "loop_start": 0,
+      "loop_end": 657920,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5381,
+      "x360_index": 5400,
+      "ps3": {
+        "rate": 48000,
+        "samples": 655360,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 655360,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 655488,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 655232,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 2317318,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.94056
+        },
+        {
+          "reference_sample": 76800,
+          "album_sample": 77184,
+          "offset": 384,
+          "score": 0.94568
+        },
+        {
+          "reference_sample": 153600,
+          "album_sample": 154368,
+          "offset": 768,
+          "score": 0.95189
+        },
+        {
+          "reference_sample": 230400,
+          "album_sample": 231552,
+          "offset": 1152,
+          "score": 0.96053
+        },
+        {
+          "reference_sample": 307200,
+          "album_sample": 308736,
+          "offset": 1536,
+          "score": 0.96489
+        },
+        {
+          "reference_sample": 384000,
+          "album_sample": 385920,
+          "offset": 1920,
+          "score": 0.9669
+        },
+        {
+          "reference_sample": 460800,
+          "album_sample": 463104,
+          "offset": 2304,
+          "score": 0.97339
+        }
+      ],
+      "reference_sha256": "68844735796fe84acf3d86600771994ea6e333030186609680448eb8ffa33ded",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 1152,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.94056
+        },
+        {
+          "reference_sample": 556800,
+          "album_sample": 559488,
+          "offset": 2688,
+          "score": 0.96689
+        }
+      ]
+    },
+    {
+      "cmd": 23,
+      "album_track": 28,
+      "title": "28 Combat and Service HD (Guile Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/28 Combat and Service HD (Guile Stage - Heavy Damage).flac",
+      "source_sha256": "1f8648d130df56465224df4c76f7cd4b671a16c7e2d55dcb1b57855daa4402f7",
+      "trim_start": 0,
+      "keep_samples": 2626368,
+      "loop_start": 79232,
+      "loop_end": 2621568,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5383,
+      "x360_index": 5402,
+      "ps3": {
+        "rate": 48000,
+        "samples": 2613248,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2613248,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 5195904,
+        "loop": true,
+        "loop_start": 78848,
+        "loop_end": 2613120,
+        "skip_start": 512,
+        "loop_start_bits": 291211,
+        "loop_end_bits": 9824791,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.979
+        },
+        {
+          "reference_sample": 833280,
+          "album_sample": 836352,
+          "offset": 3072,
+          "score": 0.98664
+        },
+        {
+          "reference_sample": 1666944,
+          "album_sample": 1672704,
+          "offset": 5760,
+          "score": 0.98353
+        },
+        {
+          "reference_sample": 2500608,
+          "album_sample": 2509056,
+          "offset": 8448,
+          "score": 0.98007
+        },
+        {
+          "reference_sample": 3333888,
+          "album_sample": 3342336,
+          "offset": 8448,
+          "score": 0.98781
+        },
+        {
+          "reference_sample": 4167552,
+          "album_sample": 4176000,
+          "offset": 8448,
+          "score": 0.98425
+        },
+        {
+          "reference_sample": 5001216,
+          "album_sample": 5009664,
+          "offset": 8448,
+          "score": 0.99123
+        }
+      ],
+      "reference_sha256": "b28e3779491e6f51f28cd19bd9fcfcfa9497f195f3b82cde6740a918bfd978fb",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 8448,
+      "boundary_alignment": [
+        {
+          "reference_sample": 30720,
+          "album_sample": 31104,
+          "offset": 384,
+          "score": 0.97345
+        },
+        {
+          "reference_sample": 2565120,
+          "album_sample": 2573568,
+          "offset": 8448,
+          "score": 0.98828
+        }
+      ]
+    },
+    {
+      "cmd": 24,
+      "album_track": 31,
+      "title": "31 Reaching for Nirudha HD (Dhalsim Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/31 Reaching for Nirudha HD (Dhalsim Stage - Heavy Damage).flac",
+      "source_sha256": "d4040aff7f837155cff9274e9de0047f4bfd40adcb5549491e0bd9083a92d668",
+      "trim_start": 0,
+      "keep_samples": 2131648,
+      "loop_start": 0,
+      "loop_end": 2126848,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5385,
+      "x360_index": 5404,
+      "ps3": {
+        "rate": 48000,
+        "samples": 2119680,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2119680,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 2119808,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2119552,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 8947106,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.96497
+        },
+        {
+          "reference_sample": 320640,
+          "album_sample": 321792,
+          "offset": 1152,
+          "score": 0.97098
+        },
+        {
+          "reference_sample": 641664,
+          "album_sample": 643968,
+          "offset": 2304,
+          "score": 0.98022
+        },
+        {
+          "reference_sample": 962688,
+          "album_sample": 966144,
+          "offset": 3456,
+          "score": 0.97563
+        },
+        {
+          "reference_sample": 1283328,
+          "album_sample": 1287936,
+          "offset": 4608,
+          "score": 0.98485
+        },
+        {
+          "reference_sample": 1604352,
+          "album_sample": 1610112,
+          "offset": 5760,
+          "score": 0.98382
+        },
+        {
+          "reference_sample": 1925376,
+          "album_sample": 1932288,
+          "offset": 6912,
+          "score": 0.97818
+        }
+      ],
+      "reference_sha256": "74e32a1b2b63c194c6dfad434f840d45a2971cddffde1e87fbbda055683f4218",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 3456,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.96497
+        },
+        {
+          "reference_sample": 2021376,
+          "album_sample": 2028672,
+          "offset": 7296,
+          "score": 0.96944
+        }
+      ]
+    },
+    {
+      "cmd": 25,
+      "album_track": 59,
+      "title": "59 Tribute to the Master HD (M. Bison Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/59 Tribute to the Master HD (M. Bison Stage - Heavy Damage).flac",
+      "source_sha256": "c6c2cb258d570ab14efcbf6e8d400da7ce428ebbc1a50aa39fc511209d554163",
+      "trim_start": 0,
+      "keep_samples": 2189632,
+      "loop_start": 16768,
+      "loop_end": 2184832,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5393,
+      "x360_index": 5412,
+      "ps3": {
+        "rate": 48000,
+        "samples": 2178048,
+        "loop": true,
+        "loop_start": 16384,
+        "loop_end": 2178048,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 2381952,
+        "loop": true,
+        "loop_start": 16384,
+        "loop_end": 2177920,
+        "skip_start": 512,
+        "loop_start_bits": 63891,
+        "loop_end_bits": 8542487,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.97871
+        },
+        {
+          "reference_sample": 364416,
+          "album_sample": 365952,
+          "offset": 1536,
+          "score": 0.98509
+        },
+        {
+          "reference_sample": 728832,
+          "album_sample": 731520,
+          "offset": 2688,
+          "score": 0.98501
+        },
+        {
+          "reference_sample": 1093632,
+          "album_sample": 1097472,
+          "offset": 3840,
+          "score": 0.98333
+        },
+        {
+          "reference_sample": 1458048,
+          "album_sample": 1463040,
+          "offset": 4992,
+          "score": 0.9863
+        },
+        {
+          "reference_sample": 1822464,
+          "album_sample": 1828608,
+          "offset": 6144,
+          "score": 0.98592
+        },
+        {
+          "reference_sample": 2187264,
+          "album_sample": 2194176,
+          "offset": 6912,
+          "score": 0.96203
+        }
+      ],
+      "reference_sha256": "99b7f6d04abdf6f1c21e9eeb96fc404adaaae569e7d0cb6980de1b2d7b42e6a9",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 3840,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.97871
+        },
+        {
+          "reference_sample": 2129664,
+          "album_sample": 2136576,
+          "offset": 6912,
+          "score": 0.96291
+        }
+      ]
+    },
+    {
+      "cmd": 26,
+      "album_track": 50,
+      "title": "50 Sexy Trunks HD (Balrog Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/50 Sexy Trunks HD (Balrog Stage - Heavy Damage).flac",
+      "source_sha256": "59a3528437fedfb67fd166d43ae3b7489ef1664a7ca2bab4d4f1425ea07cde58",
+      "trim_start": 0,
+      "keep_samples": 2221792,
+      "loop_start": 1572512,
+      "loop_end": 2216992,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5387,
+      "x360_index": 5406,
+      "ps3": {
+        "rate": 48000,
+        "samples": 2729984,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2729984,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 2730112,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2729856,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 9940792,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.94617
+        },
+        {
+          "reference_sample": 422400,
+          "album_sample": 423936,
+          "offset": 1536,
+          "score": 0.98841
+        },
+        {
+          "reference_sample": 845184,
+          "album_sample": 848256,
+          "offset": 3072,
+          "score": 0.9771
+        },
+        {
+          "reference_sample": 1267584,
+          "album_sample": 1271808,
+          "offset": 4224,
+          "score": 0.97691
+        },
+        {
+          "reference_sample": 1690368,
+          "album_sample": 1696128,
+          "offset": 5760,
+          "score": 0.98388
+        },
+        {
+          "reference_sample": 2112768,
+          "album_sample": 2120064,
+          "offset": 7296,
+          "score": 0.97988
+        },
+        {
+          "reference_sample": 2535552,
+          "album_sample": 2544000,
+          "offset": 8448,
+          "score": 0.96961
+        }
+      ],
+      "reference_sha256": "30879093b4b4f8dfc077e23ce43227d3cdbe7e12dbc26721a34eec8a8dd2d1eb",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 4224,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.94617
+        },
+        {
+          "reference_sample": 2631552,
+          "album_sample": 2640384,
+          "offset": 8832,
+          "score": 0.79874
+        }
+      ],
+      "structure": {
+        "method": "Loop an unfaded repeated passage after the original intro; retain 100 ms of real continuation for the ADX-grid crossfade.",
+        "revision_date": "2026-09-05",
+        "previous_loop_start": 0,
+        "previous_loop_end": 2738688,
+        "exact_repeat_samples": 644479,
+        "exact_repeat_ncc_2s": 0.818454,
+        "grid_error_samples": 1,
+        "crossfade_ncc": 0.826355
+      }
+    },
+    {
+      "cmd": 27,
+      "album_track": 56,
+      "title": "56 Sagat's Moonbike HD (Sagat Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/56 Sagat's Moonbike HD (Sagat Stage - Heavy Damage).flac",
+      "source_sha256": "1cf8bdd71840888609edbc15f51e9d516271dbd876ae51bbc71cf30b14286aa4",
+      "trim_start": 0,
+      "keep_samples": 1512128,
+      "loop_start": 0,
+      "loop_end": 1507328,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5391,
+      "x360_index": 5410,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1503232,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1503232,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1503360,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1503104,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 5691107,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.9685
+        },
+        {
+          "reference_sample": 218112,
+          "album_sample": 218880,
+          "offset": 768,
+          "score": 0.98177
+        },
+        {
+          "reference_sample": 436224,
+          "album_sample": 437760,
+          "offset": 1536,
+          "score": 0.97858
+        },
+        {
+          "reference_sample": 654336,
+          "album_sample": 656640,
+          "offset": 2304,
+          "score": 0.95633
+        },
+        {
+          "reference_sample": 872448,
+          "album_sample": 875136,
+          "offset": 2688,
+          "score": 0.96994
+        },
+        {
+          "reference_sample": 1090560,
+          "album_sample": 1094016,
+          "offset": 3456,
+          "score": 0.98293
+        },
+        {
+          "reference_sample": 1308672,
+          "album_sample": 1312896,
+          "offset": 4224,
+          "score": 0.9678
+        }
+      ],
+      "reference_sha256": "54c41bd41d59706222c84f4eaa8ad72b0eb77a2b0c78a8a29a6743936ddefbb4",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 2304,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.9685
+        },
+        {
+          "reference_sample": 1404672,
+          "album_sample": 1408896,
+          "offset": 4224,
+          "score": 0.95901
+        }
+      ]
+    },
+    {
+      "cmd": 28,
+      "album_track": 53,
+      "title": "53 Spittin' Narcissism HD (Vega Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/53 Spittin' Narcissism HD (Vega Stage - Heavy Damage).flac",
+      "source_sha256": "5a7fb707617da3fdcd9e28b1839943220b29b2bed8efcb033f447ba01492be69",
+      "trim_start": 0,
+      "keep_samples": 2743488,
+      "loop_start": 28416,
+      "loop_end": 2738688,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5389,
+      "x360_index": 5408,
+      "ps3": {
+        "rate": 48000,
+        "samples": 2729984,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 2729984,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 3118720,
+        "loop": true,
+        "loop_start": 27648,
+        "loop_end": 2729856,
+        "skip_start": 512,
+        "loop_start_bits": 82933,
+        "loop_end_bits": 8563610,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 768,
+          "offset": 768,
+          "score": 0.94692
+        },
+        {
+          "reference_sample": 487296,
+          "album_sample": 489600,
+          "offset": 2304,
+          "score": 0.9729
+        },
+        {
+          "reference_sample": 974592,
+          "album_sample": 978432,
+          "offset": 3840,
+          "score": 0.95716
+        },
+        {
+          "reference_sample": 1461888,
+          "album_sample": 1466880,
+          "offset": 4992,
+          "score": 0.96694
+        },
+        {
+          "reference_sample": 1949184,
+          "album_sample": 1955712,
+          "offset": 6528,
+          "score": 0.95813
+        },
+        {
+          "reference_sample": 2436480,
+          "album_sample": 2444544,
+          "offset": 8064,
+          "score": 0.93009
+        },
+        {
+          "reference_sample": 2924160,
+          "album_sample": 2932992,
+          "offset": 8832,
+          "score": 0.97747
+        }
+      ],
+      "reference_sha256": "a04fd5c09b23ea6d8ae8f17fa4c35bc51d0330a7910ed8da30edb9efd230fa34",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 4992,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 768,
+          "offset": 768,
+          "score": 0.94692
+        },
+        {
+          "reference_sample": 2681856,
+          "album_sample": 2690688,
+          "offset": 8832,
+          "score": 0.97945
+        }
+      ]
+    },
+    {
+      "cmd": 29,
+      "album_track": 38,
+      "title": "38 Flying Heaven HD (Fei Long Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/38 Flying Heaven HD (Fei Long Stage - Heavy Damage).flac",
+      "source_sha256": "14842f3d4ba9ff843ccc5cafc0c6d976922f720b178c49472b302fce80a6513a",
+      "trim_start": 0,
+      "keep_samples": 3440064,
+      "loop_start": 0,
+      "loop_end": 3435264,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5395,
+      "x360_index": 5414,
+      "ps3": {
+        "rate": 48000,
+        "samples": 3424256,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 3424256,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 3424384,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 3424128,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 13456766,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.94641
+        },
+        {
+          "reference_sample": 537984,
+          "album_sample": 539904,
+          "offset": 1920,
+          "score": 0.98216
+        },
+        {
+          "reference_sample": 1076352,
+          "album_sample": 1080192,
+          "offset": 3840,
+          "score": 0.95791
+        },
+        {
+          "reference_sample": 1614720,
+          "album_sample": 1620096,
+          "offset": 5376,
+          "score": 0.96894
+        },
+        {
+          "reference_sample": 2153088,
+          "album_sample": 2160384,
+          "offset": 7296,
+          "score": 0.9816
+        },
+        {
+          "reference_sample": 2691456,
+          "album_sample": 2700672,
+          "offset": 9216,
+          "score": 0.94401
+        },
+        {
+          "reference_sample": 3229824,
+          "album_sample": 3240576,
+          "offset": 10752,
+          "score": 0.97773
+        }
+      ],
+      "reference_sha256": "616b6de87f128bbebc88b7ad1a075831cd08a6f5d331748cc1dbe9d137b1beaa",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 5376,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.94641
+        },
+        {
+          "reference_sample": 3325824,
+          "album_sample": 3336960,
+          "offset": 11136,
+          "score": 0.98173
+        }
+      ]
+    },
+    {
+      "cmd": 30,
+      "album_track": 44,
+      "title": "44 Army Girl HD (Cammy Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/44 Army Girl HD (Cammy Stage - Heavy Damage).flac",
+      "source_sha256": "bf5e8c86458062718fbbb401f845ab24d618f5bf510020bbcd54b0c729596277",
+      "trim_start": 0,
+      "keep_samples": 580672,
+      "loop_start": 0,
+      "loop_end": 575872,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5397,
+      "x360_index": 5416,
+      "ps3": {
+        "rate": 48000,
+        "samples": 574464,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 574464,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 574592,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 574336,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 2417379,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.97101
+        },
+        {
+          "reference_sample": 63360,
+          "album_sample": 63744,
+          "offset": 384,
+          "score": 0.98878
+        },
+        {
+          "reference_sample": 126720,
+          "album_sample": 127104,
+          "offset": 384,
+          "score": 0.9701
+        },
+        {
+          "reference_sample": 190080,
+          "album_sample": 190848,
+          "offset": 768,
+          "score": 0.98736
+        },
+        {
+          "reference_sample": 253440,
+          "album_sample": 254592,
+          "offset": 1152,
+          "score": 0.95978
+        },
+        {
+          "reference_sample": 316800,
+          "album_sample": 317952,
+          "offset": 1152,
+          "score": 0.98746
+        },
+        {
+          "reference_sample": 380160,
+          "album_sample": 381696,
+          "offset": 1536,
+          "score": 0.96488
+        }
+      ],
+      "reference_sha256": "f5ad248444e5e8f1b042df79288d669026ce7d8db33f983fdf6b521ee9b1a22b",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 768,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.97101
+        },
+        {
+          "reference_sample": 476160,
+          "album_sample": 477696,
+          "offset": 1536,
+          "score": 0.96876
+        }
+      ]
+    },
+    {
+      "cmd": 31,
+      "album_track": 35,
+      "title": "35 New Mexican Thunderbird HD (T. Hawk Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/35 New Mexican Thunderbird HD (T. Hawk Stage - Heavy Damage).flac",
+      "source_sha256": "5ca7e0a6d3b5ea32893e060a892b7e7d4a69bb62d4cc1e42b5e50337ccff6899",
+      "trim_start": 0,
+      "keep_samples": 2398656,
+      "loop_start": 610560,
+      "loop_end": 2393856,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5399,
+      "x360_index": 5418,
+      "ps3": {
+        "rate": 48000,
+        "samples": 2385920,
+        "loop": true,
+        "loop_start": 608256,
+        "loop_end": 2385920,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 2706560,
+        "loop": true,
+        "loop_start": 608256,
+        "loop_end": 2385792,
+        "skip_start": 512,
+        "loop_start_bits": 2332104,
+        "loop_end_bits": 9161000,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.94394
+        },
+        {
+          "reference_sample": 418560,
+          "album_sample": 420480,
+          "offset": 1920,
+          "score": 0.96103
+        },
+        {
+          "reference_sample": 837120,
+          "album_sample": 840576,
+          "offset": 3456,
+          "score": 0.96521
+        },
+        {
+          "reference_sample": 1255680,
+          "album_sample": 1260288,
+          "offset": 4608,
+          "score": 0.9645
+        },
+        {
+          "reference_sample": 1674240,
+          "album_sample": 1680384,
+          "offset": 6144,
+          "score": 0.95595
+        },
+        {
+          "reference_sample": 2092800,
+          "album_sample": 2100096,
+          "offset": 7296,
+          "score": 0.97424
+        },
+        {
+          "reference_sample": 2511744,
+          "album_sample": 2519808,
+          "offset": 8064,
+          "score": 0.99017
+        }
+      ],
+      "reference_sha256": "fdfb568da501004cd4701646b6f129967cfd3f3be68411a676e01835ca3bf4a2",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 4608,
+      "boundary_alignment": [
+        {
+          "reference_sample": 560256,
+          "album_sample": 562560,
+          "offset": 2304,
+          "score": 0.9262
+        },
+        {
+          "reference_sample": 2337792,
+          "album_sample": 2345856,
+          "offset": 8064,
+          "score": 0.97416
+        }
+      ]
+    },
+    {
+      "cmd": 32,
+      "album_track": 41,
+      "title": "41 Thank You, Dee Jay HD (Dee Jay Stage - Heavy Damage)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/41 Thank You, Dee Jay HD (Dee Jay Stage - Heavy Damage).flac",
+      "source_sha256": "0079cfb0aafce5b2a249155be588fc872af4411a2237b56cb3504bbac1a019d3",
+      "trim_start": 0,
+      "keep_samples": 1421888,
+      "loop_start": 198144,
+      "loop_end": 1417088,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5401,
+      "x360_index": 5420,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1411072,
+        "loop": true,
+        "loop_start": 196608,
+        "loop_end": 1411072,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1675392,
+        "loop": true,
+        "loop_start": 196608,
+        "loop_end": 1410944,
+        "skip_start": 512,
+        "loop_start_bits": 614462,
+        "loop_end_bits": 4696346,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.96954
+        },
+        {
+          "reference_sample": 246528,
+          "album_sample": 248448,
+          "offset": 1920,
+          "score": 0.97645
+        },
+        {
+          "reference_sample": 493440,
+          "album_sample": 496128,
+          "offset": 2688,
+          "score": 0.97132
+        },
+        {
+          "reference_sample": 740352,
+          "album_sample": 744192,
+          "offset": 3840,
+          "score": 0.97007
+        },
+        {
+          "reference_sample": 986880,
+          "album_sample": 991488,
+          "offset": 4608,
+          "score": 0.9765
+        },
+        {
+          "reference_sample": 1233792,
+          "album_sample": 1239552,
+          "offset": 5760,
+          "score": 0.96063
+        },
+        {
+          "reference_sample": 1480704,
+          "album_sample": 1486848,
+          "offset": 6144,
+          "score": 0.99346
+        }
+      ],
+      "reference_sha256": "f44b3f2dd7122485f326c774bb413cd3cff5ed784e6757f64792d09a17bb2738",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 3840,
+      "boundary_alignment": [
+        {
+          "reference_sample": 148608,
+          "album_sample": 150144,
+          "offset": 1536,
+          "score": 0.96719
+        },
+        {
+          "reference_sample": 1362816,
+          "album_sample": 1368960,
+          "offset": 6144,
+          "score": 0.97864
+        }
+      ]
+    },
+    {
+      "cmd": 33,
+      "album_track": 12,
+      "title": "12 Wedding March (Ken Ending 2)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/12 Wedding March (Ken Ending 2).flac",
+      "source_sha256": "cd7888d6fb106d68314a71693b187d68911cfc130c391ac528a1e5e8bdb7223a",
+      "trim_start": 0,
+      "keep_samples": 1440000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 34,
+      "album_track": 11,
+      "title": "11 Commitment Shodan (Ken Ending 1)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/11 Commitment Shodan (Ken Ending 1).flac",
+      "source_sha256": "fc4e05771f825b55e52ed385e199ee5ef1ee5acfe2b22db240b61758f4e21c51",
+      "trim_start": 0,
+      "keep_samples": 1440000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5403,
+      "x360_index": 5422,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1924096,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 1924096,
+        "flags": 64
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1922176,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 0,
+        "skip_start": 512,
+        "loop_start_bits": 0,
+        "loop_end_bits": 0,
+        "subframes": 0
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99078
+        },
+        {
+          "reference_sample": 207360,
+          "album_sample": 207360,
+          "offset": 0,
+          "score": 0.99361
+        },
+        {
+          "reference_sample": 415104,
+          "album_sample": 415104,
+          "offset": 0,
+          "score": 0.98509
+        },
+        {
+          "reference_sample": 622464,
+          "album_sample": 622464,
+          "offset": 0,
+          "score": 0.98491
+        },
+        {
+          "reference_sample": 830208,
+          "album_sample": 830208,
+          "offset": 0,
+          "score": 0.84964
+        },
+        {
+          "reference_sample": 1037568,
+          "album_sample": 941568,
+          "offset": -96000,
+          "score": 0.15506
+        },
+        {
+          "reference_sample": 1245312,
+          "album_sample": 1231104,
+          "offset": -14208,
+          "score": 0.06964
+        }
+      ],
+      "reference_sha256": "0a46e412e08f3cd76e05e746b8c5a355c4bed16f548f5ed1f89d956beca3a422",
+      "alignment_stable": false,
+      "fine_alignment": [],
+      "offset": 0
+    },
+    {
+      "cmd": 35,
+      "album_track": 8,
+      "title": "08 Nomadic (Ryu Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/08 Nomadic (Ryu Ending).flac",
+      "source_sha256": "952251e0eda6e6b34706d7098c68431383cbcecbd06fd09147035a949234c78d",
+      "trim_start": 0,
+      "keep_samples": 1440000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5405,
+      "x360_index": 5424,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1419264,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1419264,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1419392,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1419136,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 5137476,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98857
+        },
+        {
+          "reference_sample": 203904,
+          "album_sample": 203904,
+          "offset": 0,
+          "score": 0.99388
+        },
+        {
+          "reference_sample": 408192,
+          "album_sample": 408192,
+          "offset": 0,
+          "score": 0.99286
+        },
+        {
+          "reference_sample": 612096,
+          "album_sample": 612096,
+          "offset": 0,
+          "score": 0.98109
+        },
+        {
+          "reference_sample": 816384,
+          "album_sample": 816384,
+          "offset": 0,
+          "score": 0.97852
+        },
+        {
+          "reference_sample": 1020288,
+          "album_sample": 1020288,
+          "offset": 0,
+          "score": 0.98381
+        },
+        {
+          "reference_sample": 1224576,
+          "album_sample": 1224576,
+          "offset": 0,
+          "score": 0.98458
+        }
+      ],
+      "reference_sha256": "2a8cefd80d3d0bd2621af99598d29e8b0a3ea1f907cc1907e9371fa3e7659555",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99966
+        },
+        {
+          "offset": 0,
+          "score": 0.99943
+        },
+        {
+          "offset": 0,
+          "score": 0.99914
+        },
+        {
+          "offset": 0,
+          "score": 0.99722
+        },
+        {
+          "offset": 0,
+          "score": 0.9977
+        },
+        {
+          "offset": 0,
+          "score": 0.9976
+        },
+        {
+          "offset": 0,
+          "score": 0.99758
+        }
+      ],
+      "offset": 0,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98857
+        },
+        {
+          "reference_sample": 1320576,
+          "album_sample": 1320576,
+          "offset": 0,
+          "score": 0.99387
+        }
+      ],
+      "structure": {
+        "method": "Play the full 30-second album ending once, preserving its natural fade; supersedes the game asset loop flag.",
+        "revision_date": "2026-09-05"
+      }
+    },
+    {
+      "cmd": 36,
+      "album_track": 15,
+      "title": "15 Fight and Feast (E. Honda Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/15 Fight and Feast (E. Honda Ending).flac",
+      "source_sha256": "cfa66ef269590c9de9a6958f6bb077d0a5df48717a09826430814bc68eee7414",
+      "trim_start": 0,
+      "keep_samples": 1440000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5407,
+      "x360_index": 5426,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1442816,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 1442816,
+        "flags": 64
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1440384,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 0,
+        "skip_start": 512,
+        "loop_start_bits": 0,
+        "loop_end_bits": 0,
+        "subframes": 0
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99885
+        },
+        {
+          "reference_sample": 207360,
+          "album_sample": 207360,
+          "offset": 0,
+          "score": 0.99405
+        },
+        {
+          "reference_sample": 415104,
+          "album_sample": 415104,
+          "offset": 0,
+          "score": 0.98861
+        },
+        {
+          "reference_sample": 622464,
+          "album_sample": 622464,
+          "offset": 0,
+          "score": 0.9917
+        },
+        {
+          "reference_sample": 830208,
+          "album_sample": 830208,
+          "offset": 0,
+          "score": 0.99079
+        },
+        {
+          "reference_sample": 1037568,
+          "album_sample": 1037568,
+          "offset": 0,
+          "score": 0.98832
+        },
+        {
+          "reference_sample": 1245312,
+          "album_sample": 1245312,
+          "offset": 0,
+          "score": 0.99278
+        }
+      ],
+      "reference_sha256": "101ff0cc1d6e3556485c57c4cf6837844a5399ab3818a475a0e99cda1409e0a0",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99775
+        },
+        {
+          "offset": 0,
+          "score": 0.99697
+        },
+        {
+          "offset": 0,
+          "score": 0.99501
+        },
+        {
+          "offset": 0,
+          "score": 0.99568
+        },
+        {
+          "offset": 0,
+          "score": 0.99656
+        },
+        {
+          "offset": 0,
+          "score": 0.99376
+        },
+        {
+          "offset": 0,
+          "score": 0.99503
+        }
+      ],
+      "offset": 0
+    },
+    {
+      "cmd": 37,
+      "album_track": 18,
+      "title": "18 So Am I Reveng'd (Chun-Li Ending 1)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/18 So Am I Reveng'd (Chun-Li Ending 1).flac",
+      "source_sha256": "bcf030545855fca4212ce505d615d1c5b9cad445c6139bab601961894a44dc0c",
+      "trim_start": 0,
+      "keep_samples": 1440000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5409,
+      "x360_index": 5428,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1442816,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 1442816,
+        "flags": 64
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1440384,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 0,
+        "skip_start": 512,
+        "loop_start_bits": 0,
+        "loop_end_bits": 0,
+        "subframes": 0
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98199
+        },
+        {
+          "reference_sample": 207360,
+          "album_sample": 207360,
+          "offset": 0,
+          "score": 0.9653
+        },
+        {
+          "reference_sample": 415104,
+          "album_sample": 415104,
+          "offset": 0,
+          "score": 0.95759
+        },
+        {
+          "reference_sample": 622464,
+          "album_sample": 622464,
+          "offset": 0,
+          "score": 0.96683
+        },
+        {
+          "reference_sample": 830208,
+          "album_sample": 830208,
+          "offset": 0,
+          "score": 0.96157
+        },
+        {
+          "reference_sample": 1037568,
+          "album_sample": 1037568,
+          "offset": 0,
+          "score": 0.96473
+        },
+        {
+          "reference_sample": 1245312,
+          "album_sample": 1245312,
+          "offset": 0,
+          "score": 0.98322
+        }
+      ],
+      "reference_sha256": "2b2e0d102843b57dd9775980f68ea765fb0c5961cd024aea5d1e6448b083a410",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99829
+        },
+        {
+          "offset": 0,
+          "score": 0.99157
+        },
+        {
+          "offset": 0,
+          "score": 0.99268
+        },
+        {
+          "offset": 0,
+          "score": 0.99325
+        },
+        {
+          "offset": 0,
+          "score": 0.99363
+        },
+        {
+          "offset": 0,
+          "score": 0.99498
+        },
+        {
+          "offset": 0,
+          "score": 0.99856
+        }
+      ],
+      "offset": 0
+    },
+    {
+      "cmd": 38,
+      "album_track": 19,
+      "title": "19 Single Ladies, Clap Your Hands (Chun-Li Ending 2)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/19 Single Ladies, Clap Your Hands (Chun-Li Ending 2).flac",
+      "source_sha256": "5ff5efc7dc03b483817e42dc32f20c8127733948df0d44ab311788532757062b",
+      "trim_start": 0,
+      "keep_samples": 1440000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5411,
+      "x360_index": 5430,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1442816,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 1442816,
+        "flags": 64
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1440384,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 0,
+        "skip_start": 512,
+        "loop_start_bits": 0,
+        "loop_end_bits": 0,
+        "subframes": 0
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99031
+        },
+        {
+          "reference_sample": 207360,
+          "album_sample": 207360,
+          "offset": 0,
+          "score": 0.99428
+        },
+        {
+          "reference_sample": 415104,
+          "album_sample": 415104,
+          "offset": 0,
+          "score": 0.99379
+        },
+        {
+          "reference_sample": 622464,
+          "album_sample": 622464,
+          "offset": 0,
+          "score": 0.9913
+        },
+        {
+          "reference_sample": 830208,
+          "album_sample": 830208,
+          "offset": 0,
+          "score": 0.99331
+        },
+        {
+          "reference_sample": 1037568,
+          "album_sample": 1037568,
+          "offset": 0,
+          "score": 0.9941
+        },
+        {
+          "reference_sample": 1245312,
+          "album_sample": 1245312,
+          "offset": 0,
+          "score": 0.99656
+        }
+      ],
+      "reference_sha256": "28ca82938698e7bfb387361d22db41c71757fee8534d54d6619e86839a72a6f6",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99795
+        },
+        {
+          "offset": 0,
+          "score": 0.99793
+        },
+        {
+          "offset": 0,
+          "score": 0.99748
+        },
+        {
+          "offset": 0,
+          "score": 0.99595
+        },
+        {
+          "offset": 0,
+          "score": 0.99764
+        },
+        {
+          "offset": 0,
+          "score": 0.99821
+        },
+        {
+          "offset": 0,
+          "score": 0.9988
+        }
+      ],
+      "offset": 0
+    },
+    {
+      "cmd": 39,
+      "album_track": 23,
+      "title": "23 Long Lost (Blanka Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/23 Long Lost (Blanka Ending).flac",
+      "source_sha256": "0bae18377c3b4c080bf703dd748ad644270b8184e1baf953d762788c0958f562",
+      "trim_start": 0,
+      "keep_samples": 1221184,
+      "loop_start": 0,
+      "loop_end": 1216384,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5413,
+      "x360_index": 5432,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1216512,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1216512,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1216640,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1216384,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 3682768,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98386
+        },
+        {
+          "reference_sample": 170112,
+          "album_sample": 170112,
+          "offset": 0,
+          "score": 0.97893
+        },
+        {
+          "reference_sample": 340608,
+          "album_sample": 340608,
+          "offset": 0,
+          "score": 0.97574
+        },
+        {
+          "reference_sample": 510720,
+          "album_sample": 510720,
+          "offset": 0,
+          "score": 0.97592
+        },
+        {
+          "reference_sample": 681216,
+          "album_sample": 681216,
+          "offset": 0,
+          "score": 0.98276
+        },
+        {
+          "reference_sample": 851328,
+          "album_sample": 851328,
+          "offset": 0,
+          "score": 0.97689
+        },
+        {
+          "reference_sample": 1021824,
+          "album_sample": 1021824,
+          "offset": 0,
+          "score": 0.97702
+        }
+      ],
+      "reference_sha256": "f85784e1986535638a28ed63e8209c0f11630d158f1dbc7841ea0bf9168496a9",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.98666
+        },
+        {
+          "offset": 0,
+          "score": 0.9876
+        },
+        {
+          "offset": 0,
+          "score": 0.98716
+        },
+        {
+          "offset": 0,
+          "score": 0.98849
+        },
+        {
+          "offset": 0,
+          "score": 0.98961
+        },
+        {
+          "offset": 0,
+          "score": 0.98838
+        },
+        {
+          "offset": 0,
+          "score": 0.98888
+        }
+      ],
+      "offset": 0,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98386
+        },
+        {
+          "reference_sample": 1117824,
+          "album_sample": 1117824,
+          "offset": 0,
+          "score": 0.97612
+        }
+      ]
+    },
+    {
+      "cmd": 40,
+      "album_track": 26,
+      "title": "26 Viktory Tastes You (Zangief Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/26 Viktory Tastes You (Zangief Ending).flac",
+      "source_sha256": "827ddc81876d8c96be0aa5abde1da4691b752f04ed390d685eb4fdabf5b13bf9",
+      "trim_start": 0,
+      "keep_samples": 1044032,
+      "loop_start": 53248,
+      "loop_end": 1039232,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5415,
+      "x360_index": 5434,
+      "ps3": {
+        "rate": 48000,
+        "samples": 986112,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 986112,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 986240,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 985984,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 2791908,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 53376,
+          "offset": 53376,
+          "score": 0.97679
+        },
+        {
+          "reference_sample": 131712,
+          "album_sample": 185088,
+          "offset": 53376,
+          "score": 0.97872
+        },
+        {
+          "reference_sample": 263808,
+          "album_sample": 317184,
+          "offset": 53376,
+          "score": 0.97809
+        },
+        {
+          "reference_sample": 395520,
+          "album_sample": 448896,
+          "offset": 53376,
+          "score": 0.974
+        },
+        {
+          "reference_sample": 527616,
+          "album_sample": 580992,
+          "offset": 53376,
+          "score": 0.98052
+        },
+        {
+          "reference_sample": 659328,
+          "album_sample": 712704,
+          "offset": 53376,
+          "score": 0.97908
+        },
+        {
+          "reference_sample": 791424,
+          "album_sample": 844800,
+          "offset": 53376,
+          "score": 0.97644
+        }
+      ],
+      "reference_sha256": "99753c46ea600d76f8e3c8d1e3572100074cb1b33b36b733f38a7c49685ddb67",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 53248,
+          "score": 0.99672
+        },
+        {
+          "offset": 53248,
+          "score": 0.99585
+        },
+        {
+          "offset": 53248,
+          "score": 0.99534
+        },
+        {
+          "offset": 53248,
+          "score": 0.99549
+        },
+        {
+          "offset": 53248,
+          "score": 0.99599
+        },
+        {
+          "offset": 53248,
+          "score": 0.99682
+        },
+        {
+          "offset": 53248,
+          "score": 0.99486
+        }
+      ],
+      "offset": 53248,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 53376,
+          "offset": 53376,
+          "score": 0.97679
+        },
+        {
+          "reference_sample": 887424,
+          "album_sample": 940800,
+          "offset": 53376,
+          "score": 0.97444
+        }
+      ]
+    },
+    {
+      "cmd": 41,
+      "album_track": 29,
+      "title": "29 Blood on the Asphalt (Guile Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/29 Blood on the Asphalt (Guile Ending).flac",
+      "source_sha256": "61f62e71f2cdd3f6048d1bb4c52bf17a35d564a7122668e76d6a56d0c4b9e420",
+      "trim_start": 0,
+      "keep_samples": 993856,
+      "loop_start": 0,
+      "loop_end": 989056,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5417,
+      "x360_index": 5436,
+      "ps3": {
+        "rate": 48000,
+        "samples": 989184,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 989184,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 989312,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 989056,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 2565486,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98812
+        },
+        {
+          "reference_sample": 132096,
+          "album_sample": 132096,
+          "offset": 0,
+          "score": 0.99249
+        },
+        {
+          "reference_sample": 264576,
+          "album_sample": 264576,
+          "offset": 0,
+          "score": 0.99609
+        },
+        {
+          "reference_sample": 397056,
+          "album_sample": 397056,
+          "offset": 0,
+          "score": 0.99585
+        },
+        {
+          "reference_sample": 529536,
+          "album_sample": 529536,
+          "offset": 0,
+          "score": 0.99181
+        },
+        {
+          "reference_sample": 662016,
+          "album_sample": 662016,
+          "offset": 0,
+          "score": 0.99418
+        },
+        {
+          "reference_sample": 794496,
+          "album_sample": 794496,
+          "offset": 0,
+          "score": 0.99496
+        }
+      ],
+      "reference_sha256": "54f019b8d9e6b785554a0612dfab1bfd3988b3f85fa73bbf5f6e529fa7c019af",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99929
+        },
+        {
+          "offset": 0,
+          "score": 0.99935
+        },
+        {
+          "offset": 0,
+          "score": 0.99914
+        },
+        {
+          "offset": 0,
+          "score": 0.99921
+        },
+        {
+          "offset": 0,
+          "score": 0.99926
+        },
+        {
+          "offset": 0,
+          "score": 0.99921
+        },
+        {
+          "offset": 0,
+          "score": 0.99914
+        }
+      ],
+      "offset": 0,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98812
+        },
+        {
+          "reference_sample": 890496,
+          "album_sample": 890496,
+          "offset": 0,
+          "score": 0.99691
+        }
+      ]
+    },
+    {
+      "cmd": 42,
+      "album_track": 32,
+      "title": "32 Home at Last (Dhalsim Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/32 Home at Last (Dhalsim Ending).flac",
+      "source_sha256": "9d8adfd2eb118d00d993d5ddc67dbba0d4e00ba38750ff083139439911c7b333",
+      "trim_start": 0,
+      "keep_samples": 1407552,
+      "loop_start": 0,
+      "loop_end": 1402752,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5419,
+      "x360_index": 5438,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1402880,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1402880,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1403008,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1402752,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 6512220,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99398
+        },
+        {
+          "reference_sample": 201216,
+          "album_sample": 201216,
+          "offset": 0,
+          "score": 0.99685
+        },
+        {
+          "reference_sample": 402816,
+          "album_sample": 402816,
+          "offset": 0,
+          "score": 0.99748
+        },
+        {
+          "reference_sample": 604032,
+          "album_sample": 604032,
+          "offset": 0,
+          "score": 0.99817
+        },
+        {
+          "reference_sample": 805632,
+          "album_sample": 805632,
+          "offset": 0,
+          "score": 0.9969
+        },
+        {
+          "reference_sample": 1006848,
+          "album_sample": 1006848,
+          "offset": 0,
+          "score": 0.99667
+        },
+        {
+          "reference_sample": 1208448,
+          "album_sample": 1208448,
+          "offset": 0,
+          "score": 0.99578
+        }
+      ],
+      "reference_sha256": "81605d8d95a1e2dff705c97b7b31731b8b1f38e5d7517b3f2230e77266939fb6",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.9983
+        },
+        {
+          "offset": 0,
+          "score": 0.99743
+        },
+        {
+          "offset": 0,
+          "score": 0.99832
+        },
+        {
+          "offset": 0,
+          "score": 0.99803
+        },
+        {
+          "offset": 0,
+          "score": 0.99782
+        },
+        {
+          "offset": 0,
+          "score": 0.99791
+        },
+        {
+          "offset": 0,
+          "score": 0.99827
+        }
+      ],
+      "offset": 0,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99398
+        },
+        {
+          "reference_sample": 1304448,
+          "album_sample": 1304448,
+          "offset": 0,
+          "score": 0.99456
+        }
+      ]
+    },
+    {
+      "cmd": 43,
+      "album_track": 60,
+      "title": "60 Call Him Dictator (M. Bison Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/60 Call Him Dictator (M. Bison Ending).flac",
+      "source_sha256": "d18c299c62884fc5d77e86f6b5f1b4f170a9dcde17fe453b2a46c30869ada42d",
+      "trim_start": 0,
+      "keep_samples": 1440000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5427,
+      "x360_index": 5446,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1442816,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 1442816,
+        "flags": 64
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1440384,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 0,
+        "skip_start": 512,
+        "loop_start_bits": 0,
+        "loop_end_bits": 0,
+        "subframes": 0
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98612
+        },
+        {
+          "reference_sample": 207360,
+          "album_sample": 207360,
+          "offset": 0,
+          "score": 0.99786
+        },
+        {
+          "reference_sample": 415104,
+          "album_sample": 415104,
+          "offset": 0,
+          "score": 0.97938
+        },
+        {
+          "reference_sample": 622464,
+          "album_sample": 622464,
+          "offset": 0,
+          "score": 0.96985
+        },
+        {
+          "reference_sample": 830208,
+          "album_sample": 830208,
+          "offset": 0,
+          "score": 0.98103
+        },
+        {
+          "reference_sample": 1037568,
+          "album_sample": 1037568,
+          "offset": 0,
+          "score": 0.98721
+        },
+        {
+          "reference_sample": 1245312,
+          "album_sample": 1245312,
+          "offset": 0,
+          "score": 0.96853
+        }
+      ],
+      "reference_sha256": "9102b688ea0b6d3108cb6e5f158bcc766e9ce62e03941009046f8a6c4536db3f",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99703
+        },
+        {
+          "offset": 0,
+          "score": 0.99823
+        },
+        {
+          "offset": 0,
+          "score": 0.99482
+        },
+        {
+          "offset": 0,
+          "score": 0.99555
+        },
+        {
+          "offset": 0,
+          "score": 0.99324
+        },
+        {
+          "offset": 0,
+          "score": 0.99226
+        },
+        {
+          "offset": 0,
+          "score": 0.99169
+        }
+      ],
+      "offset": 0
+    },
+    {
+      "cmd": 44,
+      "album_track": 51,
+      "title": "51 How I'm Livin' (Balrog Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/51 How I'm Livin' (Balrog Ending).flac",
+      "source_sha256": "03a6814410fbf2b6a2947083ec6530ffbb7a890af79bcfd80348bbe1e49372b7",
+      "trim_start": 0,
+      "keep_samples": 1440000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5421,
+      "x360_index": 5440,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1442816,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 1442816,
+        "flags": 64
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1440384,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 0,
+        "skip_start": 512,
+        "loop_start_bits": 0,
+        "loop_end_bits": 0,
+        "subframes": 0
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99315
+        },
+        {
+          "reference_sample": 207360,
+          "album_sample": 207360,
+          "offset": 0,
+          "score": 0.99443
+        },
+        {
+          "reference_sample": 415104,
+          "album_sample": 415104,
+          "offset": 0,
+          "score": 0.99015
+        },
+        {
+          "reference_sample": 622464,
+          "album_sample": 622464,
+          "offset": 0,
+          "score": 0.98299
+        },
+        {
+          "reference_sample": 830208,
+          "album_sample": 830208,
+          "offset": 0,
+          "score": 0.98932
+        },
+        {
+          "reference_sample": 1037568,
+          "album_sample": 1037568,
+          "offset": 0,
+          "score": 0.99473
+        },
+        {
+          "reference_sample": 1245312,
+          "album_sample": 1245312,
+          "offset": 0,
+          "score": 0.99513
+        }
+      ],
+      "reference_sha256": "7d9e2222676169d90225b477b80b495b4453396d6fff554676660fcbf3af1043",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99718
+        },
+        {
+          "offset": 0,
+          "score": 0.99775
+        },
+        {
+          "offset": 0,
+          "score": 0.99792
+        },
+        {
+          "offset": 0,
+          "score": 0.99549
+        },
+        {
+          "offset": 0,
+          "score": 0.99798
+        },
+        {
+          "offset": 0,
+          "score": 0.99724
+        },
+        {
+          "offset": 0,
+          "score": 0.99701
+        }
+      ],
+      "offset": 0
+    },
+    {
+      "cmd": 45,
+      "album_track": 57,
+      "title": "57 Hollow Glory (Sagat Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/57 Hollow Glory (Sagat Ending).flac",
+      "source_sha256": "377f0797aebb6768501c44f55099551678aaffb3e32a7fb1a148a1511a68e58c",
+      "trim_start": 0,
+      "keep_samples": 1182272,
+      "loop_start": 0,
+      "loop_end": 1177472,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5425,
+      "x360_index": 5444,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1177600,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1177600,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1177728,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1177472,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 4113987,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98716
+        },
+        {
+          "reference_sample": 163584,
+          "album_sample": 163584,
+          "offset": 0,
+          "score": 0.99374
+        },
+        {
+          "reference_sample": 327552,
+          "album_sample": 327552,
+          "offset": 0,
+          "score": 0.99193
+        },
+        {
+          "reference_sample": 491520,
+          "album_sample": 491520,
+          "offset": 0,
+          "score": 0.99533
+        },
+        {
+          "reference_sample": 655104,
+          "album_sample": 655104,
+          "offset": 0,
+          "score": 0.99293
+        },
+        {
+          "reference_sample": 819072,
+          "album_sample": 819072,
+          "offset": 0,
+          "score": 0.98952
+        },
+        {
+          "reference_sample": 983040,
+          "album_sample": 983040,
+          "offset": 0,
+          "score": 0.99083
+        }
+      ],
+      "reference_sha256": "0660e956a9648a90272af254fcf70366a9949c05042da451645af90651c7be47",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99712
+        },
+        {
+          "offset": 0,
+          "score": 0.99618
+        },
+        {
+          "offset": 0,
+          "score": 0.99699
+        },
+        {
+          "offset": 0,
+          "score": 0.99858
+        },
+        {
+          "offset": 0,
+          "score": 0.99692
+        },
+        {
+          "offset": 0,
+          "score": 0.99678
+        },
+        {
+          "offset": 0,
+          "score": 0.99574
+        }
+      ],
+      "offset": 0,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98716
+        },
+        {
+          "reference_sample": 1079040,
+          "album_sample": 1079040,
+          "offset": 0,
+          "score": 0.99185
+        }
+      ]
+    },
+    {
+      "cmd": 46,
+      "album_track": 54,
+      "title": "54 The Beauteous (Vega Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/54 The Beauteous (Vega Ending).flac",
+      "source_sha256": "fcd8412ce598a0c8d99d01c9dc004ead5ddff32d779e893a31e0a09180eb71f0",
+      "trim_start": 0,
+      "keep_samples": 1242208,
+      "loop_start": 178080,
+      "loop_end": 1237408,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5423,
+      "x360_index": 5442,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1243136,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1243136,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1243264,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1243008,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 4078221,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.95986
+        },
+        {
+          "reference_sample": 174720,
+          "album_sample": 174720,
+          "offset": 0,
+          "score": 0.95546
+        },
+        {
+          "reference_sample": 349440,
+          "album_sample": 349440,
+          "offset": 0,
+          "score": 0.94308
+        },
+        {
+          "reference_sample": 524160,
+          "album_sample": 524160,
+          "offset": 0,
+          "score": 0.96899
+        },
+        {
+          "reference_sample": 698880,
+          "album_sample": 698880,
+          "offset": 0,
+          "score": 0.95786
+        },
+        {
+          "reference_sample": 873600,
+          "album_sample": 873600,
+          "offset": 0,
+          "score": 0.97561
+        },
+        {
+          "reference_sample": 1048704,
+          "album_sample": 1048704,
+          "offset": 0,
+          "score": 0.96917
+        }
+      ],
+      "reference_sha256": "5c917256f0ccbe6297ef7b727334d44eb0750e7163270bdcea58dbec50c10b63",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99351
+        },
+        {
+          "offset": 0,
+          "score": 0.99527
+        },
+        {
+          "offset": 0,
+          "score": 0.99621
+        },
+        {
+          "offset": 0,
+          "score": 0.99831
+        },
+        {
+          "offset": 0,
+          "score": 0.99685
+        },
+        {
+          "offset": 0,
+          "score": 0.99796
+        },
+        {
+          "offset": 0,
+          "score": 0.99702
+        }
+      ],
+      "offset": 0,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.95986
+        },
+        {
+          "reference_sample": 1144704,
+          "album_sample": 1144704,
+          "offset": 0,
+          "score": 0.94981
+        }
+      ],
+      "structure": {
+        "method": "Play the opening once, then repeat the eight-bar phrase from 3.710000 to 25.779333 seconds. Join immediately before the matching A-minor returns, using 100 ms of real source continuation before the album fade.",
+        "revision_date": "2026-09-05",
+        "previous_loop_start": 0,
+        "previous_loop_end": 1243008,
+        "repeating_seconds": 22.069333333333333,
+        "phrase_bars": 8,
+        "tempo_bpm_approx": 87,
+        "head_tail_level_difference_db": 0.042,
+        "crossfade_25ms_level_span_db": 0.951,
+        "note": "replaces the provisional one-shot after the ending playback audit confirmed looping intent"
+      }
+    },
+    {
+      "cmd": 47,
+      "album_track": 39,
+      "title": "39 The Dragon, The Hero (Fei Long Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/39 The Dragon, The Hero (Fei Long Ending).flac",
+      "source_sha256": "d4f2ef858a1d24352f92971eb989d16d0b60eaf1aabdbc16517d4ec09e17344e",
+      "trim_start": 0,
+      "keep_samples": 1440000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5429,
+      "x360_index": 5448,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1057792,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1057792,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1057920,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1057664,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 3398947,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 11136,
+          "offset": 11136,
+          "score": 0.17797
+        },
+        {
+          "reference_sample": 143616,
+          "album_sample": 203904,
+          "offset": 60288,
+          "score": 0.22961
+        },
+        {
+          "reference_sample": 287616,
+          "album_sample": 286464,
+          "offset": -1152,
+          "score": 0.5716
+        },
+        {
+          "reference_sample": 431616,
+          "album_sample": 430464,
+          "offset": -1152,
+          "score": 0.34708
+        },
+        {
+          "reference_sample": 575232,
+          "album_sample": 574080,
+          "offset": -1152,
+          "score": 0.38583
+        },
+        {
+          "reference_sample": 719232,
+          "album_sample": 779520,
+          "offset": 60288,
+          "score": 0.23141
+        },
+        {
+          "reference_sample": 863232,
+          "album_sample": 812928,
+          "offset": -50304,
+          "score": 0.24112
+        }
+      ],
+      "reference_sha256": "4970d37419e1b21e42643c2df52e19b665e046d300dc5dea881ee31a91e85a62",
+      "alignment_stable": false,
+      "fine_alignment": [],
+      "offset": -1152,
+      "structure": {
+        "method": "full 30 s album ending; disc edit does not pass transfer gate, retain natural album resolution; accepted in pack listening sign-off 2026-09-05"
+      }
+    },
+    {
+      "cmd": 48,
+      "album_track": 45,
+      "title": "45 PTSD (Cammy Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/45 PTSD (Cammy Ending).flac",
+      "source_sha256": "476b4de782fcf286bc99b2d093cdb8078915022ac649b6272c2578e338d62ecf",
+      "trim_start": 0,
+      "keep_samples": 1313344,
+      "loop_start": 52224,
+      "loop_end": 1308544,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5431,
+      "x360_index": 5450,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1256448,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1256448,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1256576,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1256320,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 5277125,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 52224,
+          "offset": 52224,
+          "score": 0.9921
+        },
+        {
+          "reference_sample": 176640,
+          "album_sample": 228864,
+          "offset": 52224,
+          "score": 0.9934
+        },
+        {
+          "reference_sample": 353664,
+          "album_sample": 405888,
+          "offset": 52224,
+          "score": 0.99123
+        },
+        {
+          "reference_sample": 530688,
+          "album_sample": 582912,
+          "offset": 52224,
+          "score": 0.9921
+        },
+        {
+          "reference_sample": 707712,
+          "album_sample": 759936,
+          "offset": 52224,
+          "score": 0.99508
+        },
+        {
+          "reference_sample": 884736,
+          "album_sample": 936960,
+          "offset": 52224,
+          "score": 0.9939
+        },
+        {
+          "reference_sample": 1061760,
+          "album_sample": 1113984,
+          "offset": 52224,
+          "score": 0.99672
+        }
+      ],
+      "reference_sha256": "1291a90c9be4a2c81f28352f53c02077a99747feb5eb90dbd6ba0d6ffda5c7fd",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 52224,
+          "score": 0.99833
+        },
+        {
+          "offset": 52224,
+          "score": 0.99718
+        },
+        {
+          "offset": 52224,
+          "score": 0.99471
+        },
+        {
+          "offset": 52224,
+          "score": 0.99702
+        },
+        {
+          "offset": 52224,
+          "score": 0.99751
+        },
+        {
+          "offset": 52224,
+          "score": 0.99588
+        },
+        {
+          "offset": 52224,
+          "score": 0.99857
+        }
+      ],
+      "offset": 52224,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 52224,
+          "offset": 52224,
+          "score": 0.9921
+        },
+        {
+          "reference_sample": 1157760,
+          "album_sample": 1209984,
+          "offset": 52224,
+          "score": 0.99459
+        }
+      ]
+    },
+    {
+      "cmd": 49,
+      "album_track": 36,
+      "title": "36 Brand New Mexico (T. Hawk Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/36 Brand New Mexico (T. Hawk Ending).flac",
+      "source_sha256": "f18f99a9aca42c271c1ca7958b99bca0193848472df08f934eb228cc441a7c53",
+      "trim_start": 0,
+      "keep_samples": 1282336,
+      "loop_start": 0,
+      "loop_end": 1277536,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5433,
+      "x360_index": 5452,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1277952,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1277952,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1278080,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1277568,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 4433782,
+        "subframes": 3
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98264
+        },
+        {
+          "reference_sample": 180480,
+          "album_sample": 180480,
+          "offset": 0,
+          "score": 0.98315
+        },
+        {
+          "reference_sample": 360960,
+          "album_sample": 360960,
+          "offset": 0,
+          "score": 0.97264
+        },
+        {
+          "reference_sample": 541440,
+          "album_sample": 541440,
+          "offset": 0,
+          "score": 0.97335
+        },
+        {
+          "reference_sample": 721920,
+          "album_sample": 721920,
+          "offset": 0,
+          "score": 0.968
+        },
+        {
+          "reference_sample": 902400,
+          "album_sample": 902400,
+          "offset": 0,
+          "score": 0.97005
+        },
+        {
+          "reference_sample": 1083264,
+          "album_sample": 1083264,
+          "offset": 0,
+          "score": 0.96894
+        }
+      ],
+      "reference_sha256": "b4e57ee0f6921684c00f978beddddc16d8cf88447776d86309d28f2438b15f9f",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": -3,
+          "score": 0.98571
+        },
+        {
+          "offset": -8,
+          "score": 0.98523
+        },
+        {
+          "offset": -14,
+          "score": 0.98412
+        },
+        {
+          "offset": -19,
+          "score": 0.98332
+        },
+        {
+          "offset": -25,
+          "score": 0.9819
+        },
+        {
+          "offset": -30,
+          "score": 0.98445
+        },
+        {
+          "offset": -36,
+          "score": 0.98534
+        }
+      ],
+      "offset": -19,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.98264
+        },
+        {
+          "reference_sample": 1179264,
+          "album_sample": 1179264,
+          "offset": 0,
+          "score": 0.96404
+        }
+      ]
+    },
+    {
+      "cmd": 50,
+      "album_track": 42,
+      "title": "42 Hot Club Joint (Dee Jay Ending)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/42 Hot Club Joint (Dee Jay Ending).flac",
+      "source_sha256": "8761c1050a71cb6790206b4abd1246af2bfd6a968d4b46de5891fa7f2c952eab",
+      "trim_start": 0,
+      "keep_samples": 1382976,
+      "loop_start": 0,
+      "loop_end": 1378176,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5435,
+      "x360_index": 5454,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1378304,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1378304,
+        "flags": 81
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1378432,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1378176,
+        "skip_start": 512,
+        "loop_start_bits": 32,
+        "loop_end_bits": 4553084,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99612
+        },
+        {
+          "reference_sample": 196992,
+          "album_sample": 196992,
+          "offset": 0,
+          "score": 0.99019
+        },
+        {
+          "reference_sample": 394368,
+          "album_sample": 394368,
+          "offset": 0,
+          "score": 0.98724
+        },
+        {
+          "reference_sample": 591744,
+          "album_sample": 591744,
+          "offset": 0,
+          "score": 0.98642
+        },
+        {
+          "reference_sample": 789120,
+          "album_sample": 789120,
+          "offset": 0,
+          "score": 0.98809
+        },
+        {
+          "reference_sample": 986496,
+          "album_sample": 986496,
+          "offset": 0,
+          "score": 0.98249
+        },
+        {
+          "reference_sample": 1183872,
+          "album_sample": 1183872,
+          "offset": 0,
+          "score": 0.99194
+        }
+      ],
+      "reference_sha256": "2aef4c8d8fcee35488c50f8e2ef2099417eb6eee7c868a841d083be667933301",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99383
+        },
+        {
+          "offset": 0,
+          "score": 0.99399
+        },
+        {
+          "offset": 0,
+          "score": 0.99499
+        },
+        {
+          "offset": 0,
+          "score": 0.99588
+        },
+        {
+          "offset": 0,
+          "score": 0.99589
+        },
+        {
+          "offset": 0,
+          "score": 0.99545
+        },
+        {
+          "offset": 0,
+          "score": 0.99496
+        }
+      ],
+      "offset": 0,
+      "boundary_alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99612
+        },
+        {
+          "reference_sample": 1279872,
+          "album_sample": 1279872,
+          "offset": 0,
+          "score": 0.99093
+        }
+      ]
+    },
+    {
+      "cmd": 51,
+      "album_track": 1,
+      "title": "01 Rock the Asphalt (Opening Demo)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/01 Rock the Asphalt (Opening Demo).flac",
+      "source_sha256": "ea912055e59d9961991ef163e50039aac6dc29542cdf434b7ca51fdd1978a5f5",
+      "trim_start": 0,
+      "keep_samples": 1804138,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 52,
+      "album_track": 3,
+      "title": "03 The Select Few (Character Select)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/03 The Select Few (Character Select).flac",
+      "source_sha256": "716bf9e6031032c5c3543e6e57c28b948e9ad9d1ac050731c3881a293b8b8097",
+      "trim_start": 0,
+      "keep_samples": 1287488,
+      "loop_start": 258688,
+      "loop_end": 1282688,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 321,
+      "x360_index": 340,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1785856,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1785856,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1792128,
+        "loop": true,
+        "loop_start": 254976,
+        "loop_end": 1785728,
+        "skip_start": 512,
+        "loop_start_bits": 1094919,
+        "loop_end_bits": 7434887,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.96087
+        },
+        {
+          "reference_sample": 266112,
+          "album_sample": 267648,
+          "offset": 1536,
+          "score": 0.95634
+        },
+        {
+          "reference_sample": 532224,
+          "album_sample": 534528,
+          "offset": 2304,
+          "score": 0.97351
+        },
+        {
+          "reference_sample": 798336,
+          "album_sample": 801408,
+          "offset": 3072,
+          "score": 0.97209
+        },
+        {
+          "reference_sample": 1064448,
+          "album_sample": 1068288,
+          "offset": 3840,
+          "score": 0.96204
+        },
+        {
+          "reference_sample": 1330560,
+          "album_sample": 1335552,
+          "offset": 4992,
+          "score": 0.98414
+        },
+        {
+          "reference_sample": 1597056,
+          "album_sample": 1602816,
+          "offset": 5760,
+          "score": 0.97695
+        }
+      ],
+      "reference_sha256": "69862bf87a06a1e0195f7e0cee27d13f3a348af84045e770d52f94c860bbeef4",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 3072,
+      "boundary_alignment": [
+        {
+          "reference_sample": 206976,
+          "album_sample": 208128,
+          "offset": 1152,
+          "score": 0.97772
+        },
+        {
+          "reference_sample": 1693056,
+          "album_sample": 1691520,
+          "offset": -1536,
+          "score": 0.53991
+        }
+      ],
+      "structure": {
+        "method": "Loop an unfaded repeated passage after the original intro; retain 100 ms of real continuation for the ADX-grid crossfade.",
+        "revision_date": "2026-09-05",
+        "previous_loop_start": 256000,
+        "previous_loop_end": 1792000,
+        "exact_repeat_samples": 1024000,
+        "exact_repeat_ncc_2s": 0.73496,
+        "grid_error_samples": 0,
+        "crossfade_ncc": 0.935315
+      }
+    },
+    {
+      "cmd": 53,
+      "album_track": 5,
+      "title": "05 Fisticuffs (VS)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/05 Fisticuffs (VS).flac",
+      "source_sha256": "db7137276e31df0961d5261dfd9637b9e0cbee6a560749d96f18ed47f5709df1",
+      "trim_start": 0,
+      "keep_samples": 165756,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 54,
+      "album_track": 46,
+      "title": "46 Ready for the Next Sucka (Match End)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/46 Ready for the Next Sucka (Match End).flac",
+      "source_sha256": "fb1fb26eb390d022755370bb76255ad66ef5ab30a198ac6932f54f5fff7e8db6",
+      "trim_start": 0,
+      "keep_samples": 300586,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 55,
+      "album_track": 47,
+      "title": "47 Just One More... (Continue)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/47 Just One More... (Continue).flac",
+      "source_sha256": "92b5b4e29a49e8640273ee4672c76cbb46ff871a14d24df6c2d532cefae88c47",
+      "trim_start": 0,
+      "keep_samples": 537600,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 56,
+      "album_track": 48,
+      "title": "48 New Blood (Here Comes a New Challenger)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/48 New Blood (Here Comes a New Challenger).flac",
+      "source_sha256": "26c72a6e682da7978417bb47e1b603d10df1875a303ff120a46289218ed0b36b",
+      "trim_start": 0,
+      "keep_samples": 135001,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 57,
+      "album_track": 65,
+      "title": "65 See Ya! (Game Over)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/65 See Ya! (Game Over).flac",
+      "source_sha256": "92f18f6b8ab9b4a3e6c9c88ce87e36367ffa644ccc3ebd891d5856f5d19234b3",
+      "trim_start": 0,
+      "keep_samples": 108395,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 58,
+      "album_track": 66,
+      "title": "66 Grand Masters (Ranking Display)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/66 Grand Masters (Ranking Display).flac",
+      "source_sha256": "0efd01c1e5eb7b55c2626300624bac24c3bdbd35b829ad9d1d5a106f57f60b69",
+      "trim_start": 0,
+      "keep_samples": 192000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    },
+    {
+      "cmd": 60,
+      "album_track": 64,
+      "title": "64 The World Warriors (Credits)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/64 The World Warriors (Credits).flac",
+      "source_sha256": "a9691d7f3c128dbe6080dfb6efdb8d096c17d2f6b785fcb04170142e92898cb6",
+      "trim_start": 0,
+      "keep_samples": 4975240,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5447,
+      "x360_index": 5466,
+      "ps3": {
+        "rate": 48000,
+        "samples": 4975616,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 4975616,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 4975744,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 0,
+        "skip_start": 512,
+        "loop_start_bits": 0,
+        "loop_end_bits": 0,
+        "subframes": 0
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.95001
+        },
+        {
+          "reference_sample": 796800,
+          "album_sample": 796800,
+          "offset": 0,
+          "score": 0.98616
+        },
+        {
+          "reference_sample": 1593600,
+          "album_sample": 1593600,
+          "offset": 0,
+          "score": 0.98959
+        },
+        {
+          "reference_sample": 2390400,
+          "album_sample": 2390400,
+          "offset": 0,
+          "score": 0.98811
+        },
+        {
+          "reference_sample": 3187200,
+          "album_sample": 3187200,
+          "offset": 0,
+          "score": 0.98475
+        },
+        {
+          "reference_sample": 3984000,
+          "album_sample": 3984000,
+          "offset": 0,
+          "score": 0.98939
+        },
+        {
+          "reference_sample": 4780800,
+          "album_sample": 4780800,
+          "offset": 0,
+          "score": 0.99512
+        }
+      ],
+      "reference_sha256": "9cfa6e0573cc844bcac2088041be008926075b71705a46375400f91d1cd2a899",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.99837
+        },
+        {
+          "offset": 0,
+          "score": 0.99247
+        },
+        {
+          "offset": 0,
+          "score": 0.99657
+        },
+        {
+          "offset": 0,
+          "score": 0.99354
+        },
+        {
+          "offset": 0,
+          "score": 0.99261
+        },
+        {
+          "offset": 0,
+          "score": 0.9939
+        },
+        {
+          "offset": 0,
+          "score": 0.99496
+        }
+      ],
+      "offset": 0,
+      "structure": {
+        "method": "Xbox credits has loop_count 0; preserve complete album ending as one shot; PS3 whole-file flag is not transposed"
+      }
+    },
+    {
+      "cmd": 62,
+      "album_track": 20,
+      "title": "20 Long Leg of the Law (Chun-Li Ending 3)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/20 Long Leg of the Law (Chun-Li Ending 3).flac",
+      "source_sha256": "c145f8ddcbc0e53b76cf0b6c15978c8c342deca1a572a4033554d72b8c46cdaa",
+      "trim_start": 0,
+      "keep_samples": 1440000,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 5449,
+      "x360_index": 5468,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1442816,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 1442816,
+        "flags": 64
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1440384,
+        "loop": false,
+        "loop_start": 0,
+        "loop_end": 0,
+        "skip_start": 512,
+        "loop_start_bits": 0,
+        "loop_end_bits": 0,
+        "subframes": 0
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 0,
+          "offset": 0,
+          "score": 0.99191
+        },
+        {
+          "reference_sample": 207360,
+          "album_sample": 207360,
+          "offset": 0,
+          "score": 0.99388
+        },
+        {
+          "reference_sample": 415104,
+          "album_sample": 415104,
+          "offset": 0,
+          "score": 0.98739
+        },
+        {
+          "reference_sample": 622464,
+          "album_sample": 622464,
+          "offset": 0,
+          "score": 0.99324
+        },
+        {
+          "reference_sample": 830208,
+          "album_sample": 830208,
+          "offset": 0,
+          "score": 0.98882
+        },
+        {
+          "reference_sample": 1037568,
+          "album_sample": 1037568,
+          "offset": 0,
+          "score": 0.99258
+        },
+        {
+          "reference_sample": 1245312,
+          "album_sample": 1245312,
+          "offset": 0,
+          "score": 0.99913
+        }
+      ],
+      "reference_sha256": "96f1e545bc71584ce834bf83cabf1e4771c4d11b1e67696872f8eb192353388d",
+      "alignment_stable": true,
+      "fine_alignment": [
+        {
+          "offset": 0,
+          "score": 0.9964
+        },
+        {
+          "offset": 0,
+          "score": 0.99603
+        },
+        {
+          "offset": 0,
+          "score": 0.9928
+        },
+        {
+          "offset": 0,
+          "score": 0.99592
+        },
+        {
+          "offset": 0,
+          "score": 0.99508
+        },
+        {
+          "offset": 0,
+          "score": 0.99623
+        },
+        {
+          "offset": 0,
+          "score": 0.99976
+        }
+      ],
+      "offset": 0
+    },
+    {
+      "cmd": 211,
+      "album_track": 3,
+      "title": "03 The Select Few (Character Select)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/03 The Select Few (Character Select).flac",
+      "source_sha256": "716bf9e6031032c5c3543e6e57c28b948e9ad9d1ac050731c3881a293b8b8097",
+      "trim_start": 0,
+      "keep_samples": 1287488,
+      "loop_start": 258688,
+      "loop_end": 1282688,
+      "loop_count": 0,
+      "xfade_samples": 4800,
+      "status": "listening_approved_hardware_pending",
+      "ps3_index": 321,
+      "x360_index": 340,
+      "ps3": {
+        "rate": 48000,
+        "samples": 1785856,
+        "loop": true,
+        "loop_start": 0,
+        "loop_end": 1785856,
+        "flags": 80
+      },
+      "x360": {
+        "rate": 48000,
+        "samples": 1792128,
+        "loop": true,
+        "loop_start": 254976,
+        "loop_end": 1785728,
+        "skip_start": 512,
+        "loop_start_bits": 1094919,
+        "loop_end_bits": 7434887,
+        "subframes": 35
+      },
+      "alignment": [
+        {
+          "reference_sample": 0,
+          "album_sample": 384,
+          "offset": 384,
+          "score": 0.96087
+        },
+        {
+          "reference_sample": 266112,
+          "album_sample": 267648,
+          "offset": 1536,
+          "score": 0.95634
+        },
+        {
+          "reference_sample": 532224,
+          "album_sample": 534528,
+          "offset": 2304,
+          "score": 0.97351
+        },
+        {
+          "reference_sample": 798336,
+          "album_sample": 801408,
+          "offset": 3072,
+          "score": 0.97209
+        },
+        {
+          "reference_sample": 1064448,
+          "album_sample": 1068288,
+          "offset": 3840,
+          "score": 0.96204
+        },
+        {
+          "reference_sample": 1330560,
+          "album_sample": 1335552,
+          "offset": 4992,
+          "score": 0.98414
+        },
+        {
+          "reference_sample": 1597056,
+          "album_sample": 1602816,
+          "offset": 5760,
+          "score": 0.97695
+        }
+      ],
+      "reference_sha256": "69862bf87a06a1e0195f7e0cee27d13f3a348af84045e770d52f94c860bbeef4",
+      "alignment_stable": true,
+      "fine_alignment": [],
+      "offset": 3072,
+      "boundary_alignment": [
+        {
+          "reference_sample": 206976,
+          "album_sample": 208128,
+          "offset": 1152,
+          "score": 0.97772
+        },
+        {
+          "reference_sample": 1693056,
+          "album_sample": 1691520,
+          "offset": -1536,
+          "score": 0.53991
+        }
+      ],
+      "structure": {
+        "method": "Loop an unfaded repeated passage after the original intro; retain 100 ms of real continuation for the ADX-grid crossfade.",
+        "revision_date": "2026-09-05",
+        "previous_loop_start": 256000,
+        "previous_loop_end": 1792000,
+        "exact_repeat_samples": 1024000,
+        "exact_repeat_ncc_2s": 0.73496,
+        "grid_error_samples": 0,
+        "crossfade_ncc": 0.935315
+      }
+    },
+    {
+      "cmd": 212,
+      "album_track": 1,
+      "title": "01 Rock the Asphalt (Opening Demo)",
+      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/01 Rock the Asphalt (Opening Demo).flac",
+      "source_sha256": "ea912055e59d9961991ef163e50039aac6dc29542cdf434b7ca51fdd1978a5f5",
+      "trim_start": 0,
+      "keep_samples": 1804138,
+      "loop_start": 0,
+      "loop_end": 0,
+      "loop_count": 0,
+      "xfade_samples": 0,
+      "status": "listening_approved_hardware_pending"
+    }
+  ],
+  "loudness": {
+    "n": 16,
+    "median_lu": 14.000000000000002,
+    "gain": 25,
+    "detail": [
+      [
+        1,
+        -30.2,
+        -12.5,
+        17.7
+      ],
+      [
+        2,
+        -31.2,
+        -15.0,
+        16.2
+      ],
+      [
+        3,
+        -29.2,
+        -21.9,
+        7.300000000000001
+      ],
+      [
+        4,
+        -28.0,
+        -14.3,
+        13.7
+      ],
+      [
+        5,
+        -31.0,
+        -19.6,
+        11.399999999999999
+      ],
+      [
+        6,
+        -35.4,
+        -15.0,
+        20.4
+      ],
+      [
+        7,
+        -31.4,
+        -15.2,
+        16.2
+      ],
+      [
+        8,
+        -29.4,
+        -21.0,
+        8.399999999999999
+      ],
+      [
+        9,
+        -31.7,
+        -13.2,
+        18.5
+      ],
+      [
+        10,
+        -31.4,
+        -15.3,
+        16.099999999999998
+      ],
+      [
+        11,
+        -30.8,
+        -18.2,
+        12.600000000000001
+      ],
+      [
+        12,
+        -32.2,
+        -17.9,
+        14.300000000000004
+      ],
+      [
+        13,
+        -31.6,
+        -20.0,
+        11.600000000000001
+      ],
+      [
+        14,
+        -30.8,
+        -12.7,
+        18.1
+      ],
+      [
+        15,
+        -29.2,
+        -19.1,
+        10.099999999999998
+      ],
+      [
+        16,
+        -31.1,
+        -19.8,
+        11.3
+      ]
+    ],
+    "spread_lu": 5.199999999999999
+  }
+}

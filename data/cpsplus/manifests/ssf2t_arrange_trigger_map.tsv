@@ -58,14 +58,15 @@ cmd	arrange_entry	character	confidence	note
 # ---------------------------------------------------------------------------
 # Extends coverage to the hurry-ups, endings and UI music (0x11-0x3f).
 #
-# The standalone driver's command space is HSF2's unified layout VERBATIM:
-# arrange_entry == cmd for the whole range (0x11=17 STAGE KEN(2) ... 0x3f=63
-# TOURNAMENT).  Identified per-clip with tools/align_ncc.py against the
-# album's CPS2 bank (the same QSound masters this board plays); control on
-# the 16 stages: 16/16.  45 of 48 picks land exactly on cmd+70, and the
-# remaining floors are carried by that bijection -- see per-row notes.
-# 0x40 exists in the sound test (1 s jingle) but the album has no row for
-# it; unmapped, fails open to QSound.
+# The standalone driver's mapped music normally follows HSF2's unified layout:
+# arrange_entry == cmd (0x11=17 STAGE KEN(2) ... 0x3f=63 TOURNAMENT).
+# Identified per-clip with tools/align_ncc.py against the album's CPS2 bank
+# (the same QSound masters this board plays); control on the 16 stages: 16/16.
+# Command 0x3d is the exception: a natural attract trace proves that SSF2T
+# sends 0x3d followed by 0xd1 for the QSound-logo sequence.  HSF2 Arrange entry
+# 61 is one second of silence, so 0x3d must remain unmapped and fail open to
+# QSound.  Command 0x40 also remains unmapped because the album has no
+# corresponding arranged row.
 #
 # SSF2T NOTE 1: the 0x11-0x40 clips in ssf2t_arcade_id/ were
 # COPIES of the ssf2 files (byte-identical), not captures; this extension is
@@ -118,7 +119,6 @@ cmd	arrange_entry	character	confidence	note
 0x3a	58	RANKING	high	EAR-CONFIRMED; Turbo stinger (1-4 s in-game); assigned by layout position alone (pick was noise: 082_STAGE_VEGA r=0.046)
 0x3b	59	BONUS STAGE	high	NCC r=0.322 (2nd 0.063)
 0x3c	60	STAFF ROLL	high	r=0.17 'tie' is STAFF ROLL vs STAFF ROLL(X) -- the SAME afs entry 130 decoded under two manifest names; vs the true runner-up the margin is 3x
-0x3d	61	(unlisted; dead in-game)	high	NCC r=0.361 (2nd 0.072)
 0x3e	62	ENDING CHUN LI(3)	high	NCC r=0.283 (2nd 0.063)
 0x3f	63	TOURNAMENT	high	EAR-CONFIRMED; Turbo stinger (1-4 s in-game); assigned by layout position alone (pick was noise: 131_unlisted__dead_in_game r=0.057)
 # High range (0x41-0xff sweep): the unified layout holds all the

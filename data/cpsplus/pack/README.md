@@ -10,6 +10,15 @@ disc.
 ## Automatic builders
 
 ```sh
+# Strider (PSX Soundtrack): record the PlayStation port's sound test with MAME, then build
+python3 tools/capture_strider_psx.py --disc "Strider (USA).cue" --bios-dir <folder with psu.zip + psx_cd.zip>
+python3 build_pack.py strider-psx                 # reads work/strider_psx/audio.wav
+
+# Double Impact (Final Fight, Magic Sword) and SSF2T HD Remix from the album folders
+python3 build_pack.py remix --pack ffight_di --source-root <unpacked Double Impact Remixed Soundtrack download>
+python3 build_pack.py remix --pack msword_di --source-root <same folder>
+python3 build_pack.py remix --pack ssf2t_hdremix --source-root <OCRA-0012 FLAC set>
+
 # HSF2 AE (PS2 JP disc zip or extracted iso) -> Arrange / CPS2 / CPS1 bank
 python3 build_pack.py hsf2 --iso "roms/ps2/Hyper Street Fighter II - The Anniversary Edition (Japan).zip"
 python3 build_pack.py hsf2 --iso ... --bank cps1

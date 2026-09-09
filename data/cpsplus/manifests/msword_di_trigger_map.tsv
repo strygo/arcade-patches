@@ -1,0 +1,44 @@
+# All 25 music tracks listening-approved; hardware approval pending. Audio recipe: msword_di_audio.json
+# Native hexadecimal IDs verified by msword_music_census.json; no BCD conversion.
+# cmd	verb	suppress	track	cue	evidence
+0x00	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Priestly Charge.mp3	Priestly Charge	listening_approved_hardware_pending
+0x01	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Release the Hounds.mp3	Release the Hounds	listening_approved_hardware_pending
+0x02	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Play It Again Big Man.mp3	Play It Again Big Man	listening_approved_hardware_pending
+0x03	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Renewed Hope.mp3	Renewed Hope	listening_approved_hardware_pending
+0x04	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Thieves Guild.mp3	Thieves Guild	listening_approved_hardware_pending
+0x05	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_The Lizardman Cometh.mp3	The Lizardman Cometh	listening_approved_hardware_pending
+0x06	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_No Escape.mp3	No Escape	listening_approved_hardware_pending
+0x07	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Knights March.mp3	Knights March	listening_approved_hardware_pending
+0x08	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Raise the Gate.mp3	Raise the Gate	listening_approved_hardware_pending
+0x09	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_The Scryer.mp3	The Scryer	listening_approved_hardware_pending
+0x0a	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Main_Menu.mp3	Main_Menu	listening_approved_hardware_pending
+0x0b	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Trouble From Afar.mp3	Trouble From Afar	listening_approved_hardware_pending
+0x0c	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Battle Charge.mp3	Battle Charge	listening_approved_hardware_pending
+0x0d	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Tears for Alan.mp3	Tears for Alan	listening_approved_hardware_pending
+0x0e	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Amazonian Goddesses.mp3	Amazonian Goddesses	listening_approved_hardware_pending
+0x0f	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Onwards and Upwards.mp3	Onwards and Upwards	listening_approved_hardware_pending
+0x10	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Drokmars Revenge.mp3	Drokmars Revenge	listening_approved_hardware_pending
+0x11	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Eternal Struggle.mp3	Eternal Struggle	listening_approved_hardware_pending
+0x12	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Sanctuary.mp3	Sanctuary	listening_approved_hardware_pending
+0x13	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Refuge.mp3	Refuge	listening_approved_hardware_pending
+0x14	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Trust No One.mp3	Trust No One	listening_approved_hardware_pending
+0x15	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Sword of Magic.mp3	Sword of Magic	listening_approved_hardware_pending
+0x16	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_The Black Orb.mp3	The Black Orb	listening_approved_hardware_pending
+0x17	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Level Clear.mp3	Level Clear	listening_approved_hardware_pending
+0x1b	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Triumph.mp3	Triumph	listening_approved_hardware_pending
+0x18	none	0	-	Original arcade audio	No corresponding arrangement
+0x19	none	0	-	Original arcade audio	No corresponding arrangement
+0x1a	none	0	-	Original arcade audio	No corresponding arrangement
+0x1c	none	0	-	Original arcade audio	No corresponding arrangement
+0x1d	none	0	-	Original arcade audio	No corresponding arrangement
+0x1e	none	0	-	Original arcade audio	No corresponding arrangement
+0x1f	none	0	-	Original arcade audio	No corresponding arrangement
+0x20	none	0	-	Original arcade audio	No corresponding arrangement
+0x21	none	0	-	Original arcade audio	No corresponding arrangement
+0x22	none	0	-	Original arcade audio	No corresponding arrangement
+0x23	none	0	-	Original arcade audio	No corresponding arrangement
+0x24	none	0	-	Original arcade audio	No corresponding arrangement
+0x27	none	0	-	Original arcade audio	No corresponding arrangement
+0x28	none	0	-	Original arcade audio	No corresponding arrangement
+0x2e	none	0	-	Original arcade audio	No corresponding arrangement
+0x36	none	0	-	Original arcade audio	No corresponding arrangement

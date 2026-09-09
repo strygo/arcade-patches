@@ -149,7 +149,8 @@ def build(iso_path: str, out: str | None = None, bank: str = "arrange",
         if cmd in manifest and manifest[cmd][:2] != (entry, vol):
             mismatches.append((cmd, (entry, vol), manifest[cmd][:2]))
     # cmd 0x00 is deliberately skipped (no-op guard); manifest rows the ELF
-    # types as non-BGM (e.g. the dead 0x3d slot) are expected to be absent.
+    # types as non-BGM (e.g. native QSound-logo command 0x3d) are expected to
+    # be absent and therefore fail open to the arcade sound hardware.
     missing_ingame = [c for c, (_, _, ig) in manifest.items()
                       if c not in generated and c != 0 and ig == "yes"]
     missing_other = [c for c, (_, _, ig) in manifest.items()
@@ -160,7 +161,7 @@ def build(iso_path: str, out: str | None = None, bank: str = "arrange",
             f"mismatches={mismatches[:5]} missing={missing_ingame[:5]}")
     if missing_other:
         print(f"[hsf2:{bank}] note: manifest rows not typed BGM by the ELF "
-              f"(dead slots), skipped: "
+              f"(native/sound-test-only slots), skipped: "
               + " ".join(f"0x{c:02x}" for c in missing_other))
 
     out_path = Path(out) if out else PACKS_DIR / f"hsf2_{bank}.cpk"

@@ -18,15 +18,15 @@
       "title": "CPS+",
       "subtitle": "Arranged CD-era soundtracks for CPS-1 & CPS-2 arcade games on MiSTer",
       "status": "released",
-      "version": "1.1",
-      "date": "2026-09-01",
+      "version": "1.2",
+      "date": "2026-09-10",
       "hardware": "MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)",
       "summary": "When Capcom brought its arcade games home on CD, it sent the music back to the studio and re-recorded it. Those versions never made it back to the arcade. CPS+ puts them there. Pick a game on your MiSTer and the arranged soundtrack is just playing, while every punch, voice and jingle still comes from the arcade board itself.",
-      "featured_stats": "23 audio packs \u00b7 62 MRAs \u00b7 3 cores \u00b7 every pack built from your own discs",
+      "featured_stats": "27 audio packs \u00b7 74 MRAs \u00b7 3 cores \u00b7 every pack built from sources you own",
       "description": [
         "From Final Fight CD onward, Capcom kept sending its arcade soundtracks back to the studio. Every CD-based home port got a full re-recording of the music, the 'arrange' versions, produced by the original composers' teams. For thirty years those recordings stayed locked to the home versions. CPS+ puts them where they always belonged, under the arcade games themselves.",
         "On a MiSTer, the real CPS-1 or CPS-2 hardware logic runs the game while the CD-era soundtrack plays the music, started, looped and faded by the game itself, exactly the way Capcom's own console releases timed it. Hit sounds, voices and the announcer stay pure arcade. It sounds like the arcade board grew a CD drive.",
-        "Version 1.1 adds the Super Famicom score to Area 88 / UN Squadron, the Sharp X68000 MIDI soundtracks to Street Fighter II' Champion Edition, Super Street Fighter II and Ghouls'n Ghosts, and the Sega CD arrangement to the Final Fight 30th Anniversary CPS2 Edition conversion."
+        "Version 1.2 adds three arrangements and a new console source. Final Fight and Magic Sword get the remixed soundtracks from Final Fight: Double Impact, Super Street Fighter II and Super Turbo get the OC ReMix soundtrack from Super Street Fighter II Turbo HD Remix, and Strider gets the Sound Remix performances from its PlayStation port. It also fixes the opening timing of the Final Fight soundtrack packs and lets the QSound logo jingle play from the arcade board on the Super Street Fighter II packs."
       ],
       "how_it_works": [
         "Nothing in the game is modified. CPS-1 and CPS-2 games post sound commands to their audio hardware, and the CPS+ core watches for them. When one matches the loaded pack, it streams that arranged track and holds the command back from the sound chip. Everything else plays as it always did: hit sounds, voices, the announcer, and the jingles a pack deliberately leaves alone.",
@@ -35,13 +35,13 @@
         "A given disc always produces the same pack, and the builder checks yours against a published hash."
       ],
       "download_notes": [
-        "The download is tools: the MRAs, the three CPS+ cores with their GPL-3.0 source, and the pack builder. It makes the packs on your machine from discs you own, naming anything it skips for want of a disc. It also assembles out/mister/ for you, holding the cores, your packs, and only the MRAs those packs can load, so nothing on the card fails to start.",
+        "The download is tools: the MRAs, the three CPS+ cores with their GPL-3.0 source, and the pack builder. It makes the packs on your machine from discs, disks and albums you own, naming anything it skips for want of a disc. It also assembles out/mister/ for you, holding the cores, your packs, and only the MRAs those packs can load, so nothing on the card fails to start.",
         "Three MRA groups pair CPS+ audio with sets that are not stock: the Alpha 2 Gold MRAs load the SFA2 Gold reconstructed sets, \u2018Final Fight (Arrange + CD Cutscenes)\u2019 loads the Final Fight CD backport set, and \u2018Final Fight 30th Anniversary CPS2 Edition (Arrange)\u2019 loads the CPS2 conversion of Final Fight that the Arcade Offset project distributes. Build the first two with their own kits first (links below)."
       ],
       "quickstart": [
         "Download and unzip the kit.",
         "Edit builder/discs.toml and point it at the disc rips you own (each entry is optional), or pass them on the command line with --disc mtwins_pce_disc=/discs/chiki.7z. make_packs.py --list shows every pack and the disc it wants.",
-        "Run python3 builder/make_packs.py (Python 3.11+, numpy, ffmpeg). It builds out/mister/, laid out like your SD card. The three X68000 packs also need git, cmake and a C/C++ compiler, and take up to an hour each to render.",
+        "Run python3 builder/make_packs.py (Python 3.11+, numpy, ffmpeg). It builds out/mister/, laid out like your SD card. The three X68000 packs also need git, cmake and a C/C++ compiler, and take up to an hour each to render. The Strider pack needs MAME and your PlayStation BIOS set, and takes about five minutes to record.",
         "Copy the contents of out/mister/ to your MiSTer SD card, merging with what's there. Arcade ROM zips go where they always do."
       ],
       "tech_spec": [
@@ -65,6 +65,26 @@
           "note": "the MiSTer distribution of the Final Fight 30th Anniversary CPS2 Edition conversion that the 30th Anniversary Arrange MRA pairs with"
         },
         {
+          "label": "Final Fight: Double Impact remixed soundtrack",
+          "url": "http://www.finalfightgame.com/remix",
+          "note": "Capcom's free release of the Double Impact remixes the Final Fight and Magic Sword packs are built from; the direct download link is in the kit's discs.toml"
+        },
+        {
+          "label": "OC ReMix: Super Street Fighter II Turbo HD Remix Official Soundtrack",
+          "url": "https://ocremix.org/album/12",
+          "note": "the album the HD Remix packs are built from"
+        },
+        {
+          "label": "OCRA-0012 official torrent",
+          "url": "https://bt.ocremix.org/torrents/OC_ReMix_-_Super_Street_Fighter_II_Turbo_HD_Remix_Official_Soundtrack.torrent",
+          "note": "the FLAC set, from OC ReMix's own tracker"
+        },
+        {
+          "label": "MAME",
+          "url": "https://www.mamedev.org/",
+          "note": "records the Strider PlayStation sound test for its pack; verified with 0.288"
+        },
+        {
           "label": "Street Fighter Alpha 2 Gold",
           "url": "../sfa2-gold/",
           "note": "companion project: the reconstructed Gold sets that the Gold Arrange MRAs load"
@@ -86,19 +106,19 @@
         }
       ],
       "notes": [
-        "The arranged recordings remain \u00a9 Capcom and are never distributed here. Every pack is built from your own discs, disks and ROMs.",
+        "The arranged recordings remain \u00a9 Capcom and are never distributed here. Every pack is built from your own discs, disks, albums and ROMs.",
         "Sound effects, voices and the announcer always play live through the original arcade audio path; packs substitute music only, and a few cues deliberately pass through to the arcade board's own music."
       ],
       "kit": {
-        "source": "${CPSPLUS_TREE:-../capcom/cpsplus}/dist/cpsplus-kit-1.1.zip",
-        "zipname": "cpsplus-kit-1.1.zip",
+        "source": "${CPSPLUS_TREE:-../capcom/cpsplus}/dist/cpsplus-kit-1.2.zip",
+        "zipname": "cpsplus-kit-1.2.zip",
         "label": "CPS+ MiSTer kit: cores, MRAs and the pack builder"
       },
       "highlights": [
-        "23 audio packs covering 16 arcade games: every arranged soundtrack Capcom recorded for the CPS line, plus the SNES and X68000 MIDI scores",
-        "62 ready-to-play MRAs, so you pick the game from the CPS+ folder and the music is just there",
+        "27 audio packs covering 18 arcade games: every arranged soundtrack Capcom recorded for the CPS line, the SNES and X68000 MIDI scores, the Double Impact and HD Remix arrangements, and Strider's PlayStation remix",
+        "74 ready-to-play MRAs, so you pick the game from the CPS+ folder and the music is just there",
         "Runs on a stock MiSTer, with no firmware changes and nothing to configure",
-        "Only tools in the download. Packs build from the discs and disks you already own, in one command"
+        "Only tools in the download. Packs build from the discs, disks and albums you already own, in one command"
       ],
       "sources": [
         {
@@ -128,8 +148,8 @@
         },
         {
           "platform": "Saturn",
-          "disc": "Street Fighter Alpha: Warriors' Dreams",
-          "variants": "USA, or Street Fighter Zero (Japan); the European release is not supported"
+          "disc": "Street Fighter Alpha: Warriors' Dreams / Street Fighter Zero",
+          "variants": "SF Alpha (USA) or SF Zero (Japan); the European release is not supported"
         },
         {
           "platform": "Saturn",
@@ -175,21 +195,36 @@
           "platform": "X68000",
           "disc": "Super Street Fighter II",
           "variants": "a zip of the game's disk images, plus your own Roland SC-55 ROM set; the soundtrack is rendered on your machine"
+        },
+        {
+          "platform": "Download",
+          "disc": "Final Fight: Double Impact remixed soundtrack",
+          "variants": "Capcom's free 2010 release, still served at finalfightgame.com/remix; the zip as downloaded, or unpacked"
+        },
+        {
+          "platform": "Download",
+          "disc": "Super Street Fighter II Turbo HD Remix official soundtrack",
+          "variants": "OC ReMix's OCRA-0012 FLAC set, from ocremix.org/album/12 or its official torrent"
+        },
+        {
+          "platform": "PlayStation",
+          "disc": "Strider",
+          "variants": "USA, the disc bundled with Strider 2; the kit records the game's own sound test with MAME and your PlayStation BIOS set"
         }
       ],
-      "coverage_intro": "Every soundtrack is built from one disc, or one set of disks, you own. Where a disc came out in several regions, the ones listed below all produce the same pack.",
+      "coverage_intro": "Every soundtrack is built from one disc, one set of disks, or one album you own. Where a disc came out in several regions, the ones listed below all produce the same pack.",
       "faq": [
         {
           "q": "What do I need installed to build the packs?",
           "a": [
-            "Python 3.11 or newer, numpy, and ffmpeg on your PATH. On a Mac: brew install python ffmpeg, then pip3 install numpy. On Linux, use your package manager. 7-Zip is only needed if your rips are .7z archives. The three X68000 packs additionally need git, cmake and a C/C++ compiler (see the X68000 question below).",
+            "Python 3.11 or newer, numpy, and ffmpeg on your PATH. On a Mac: brew install python ffmpeg, then pip3 install numpy. On Linux, use your package manager. 7-Zip is only needed if your rips are .7z archives. The three X68000 packs additionally need git, cmake and a C/C++ compiler (see the X68000 question below). The Strider pack needs MAME as well (see the Strider question below).",
             "Nothing is installed on the MiSTer itself. The kit is plain files copied to the SD card, and a stock MiSTer runs them as-is."
           ]
         },
         {
           "q": "What disc rip formats does the builder accept?",
           "a": [
-            "A .cue sheet with its .bin files beside it, a .mds/.mdf pair, or a .zip/.7z archive containing exactly one cue sheet. For the PlayStation 2 sources, point it at the .iso (or a zip containing it). The two CD-audio sources (the Final Fight OST and the Area 88 soundtrack) are folders of .flac or .wav files instead of a disc image. The X68000 games are a zip of their .dim or .xdf floppy images.",
+            "A .cue sheet with its .bin files beside it, a .mds/.mdf pair, or a .zip/.7z archive containing exactly one cue sheet. For the PlayStation 2 sources, point it at the .iso (or a zip containing it). The two CD-audio sources (the Final Fight OST and the Area 88 soundtrack) are folders of .flac or .wav files instead of a disc image. The X68000 games are a zip of their .dim or .xdf floppy images. The two album sources are the downloads themselves: Capcom's Double Impact zip, as downloaded or unpacked, and the OC ReMix folder holding the FLACs. The Strider PlayStation disc can be .chd, or .cue with its bins.",
             "CHD rips need converting back first with chdman extractcd, since the builder doesn't read CHD directly."
           ]
         },
@@ -206,6 +241,14 @@
             "The X68000 ports of Ghouls'n Ghosts, Street Fighter II' Champion Edition and Super Street Fighter II shipped their music as MIDI, meant for a Roland SC-55 on the desk next to the computer. There is no recording to copy, so the kit renders one on your machine, the same way the published packs were made: your disk images, your SC-55 ROM set, and a cycle-accurate SC-55 emulator built from source at a pinned revision.",
             "That means git, cmake and a C/C++ compiler (Xcode's command-line tools on a Mac, build-essential and cmake on Debian or Ubuntu), a one-time build of a few minutes, and then ten minutes to an hour of rendering per game. The result is hash-checked like every other pack. The kit's X68000.md walks through it.",
             "The published packs were rendered and rebuilt byte-for-byte on a Mac. Whether the emulator's output is bit-identical on every CPU has not been proven; if it isn't on yours, the builder stops at the hash check rather than staging different audio."
+          ]
+        },
+        {
+          "q": "What does the Strider pack need, and why is it different?",
+          "a": [
+            "The PlayStation port's Sound Remix music is sequenced and played by the game's own sound driver through the console's sound chip, so there is no recording on the disc to copy. The kit makes one: MAME boots your disc, walks into the game's sound test, plays the ten performances and records the console's output. The builder then cuts the reviewed performances from that recording and checks each against its published hash.",
+            "That means MAME installed (brew install mame on a Mac, your package manager on Linux, the official build on Windows), your Strider (USA) disc as .chd or .cue, and MAME's PlayStation ROM sets, psu.zip and psx_cd.zip, in a folder you point discs.toml at. The recording takes about five minutes. The kit's PSX.md walks through it.",
+            "The published pack was recorded and rebuilt byte-for-byte with MAME 0.288 on a Mac. If your MAME build renders differently, the builder stops at the hash check rather than staging different audio."
           ]
         },
         {
@@ -228,9 +271,10 @@
           ]
         },
         {
-          "q": "I built the 1.0 packs. Do I need to rebuild them for 1.1?",
+          "q": "I built the 1.1 packs. Do I need to rebuild them for 1.2?",
           "a": [
-            "No. The eighteen packs from 1.0 are unchanged, hash for hash, and so are their MRAs and the three cores. Drop the 1.1 kit over your old one, add the new sources to discs.toml, and make_packs.py builds only what is new."
+            "Six packs changed. The three Final Fight soundtrack packs (SNES, X68000 FM and X68000 MIDI) now start their opening where the arcade's own song starts, in both regions, and leave the phone ring to the board. The three Super Street Fighter II packs (Arrange, Turbo Arrange and X68000 MIDI) now let the QSound logo jingle play from the arcade board. Ten SSF2-family MRAs also changed, carrying each region's factory EEPROM defaults.",
+            "Drop the 1.2 kit over your old one, add the new sources to discs.toml, and run make_packs.py again. Every pack it builds is checked against the published hashes, so the six changed ones come out corrected and the rest come out identical, and out/mister/ picks up the new MRAs. The other 17 packs and the three cores are unchanged, hash for hash."
           ]
         }
       ],
@@ -254,6 +298,10 @@
             {
               "soundtrack": "X68000 MIDI soundtrack",
               "disc": "Final Fight Original Sound Collection"
+            },
+            {
+              "soundtrack": "Double Impact remix",
+              "disc": "Final Fight: Double Impact remixed soundtrack"
             }
           ]
         },
@@ -263,8 +311,8 @@
           "sets": "ffightae_cps2",
           "packs": [
             {
-              "soundtrack": "Sega CD arrange",
-              "disc": "Final Fight CD (USA)"
+              "soundtrack": "Sega CD arrange (USA disc)",
+              "disc": "Final Fight CD"
             }
           ]
         },
@@ -286,7 +334,7 @@
           "packs": [
             {
               "soundtrack": "X68000 MIDI soundtrack",
-              "disc": "Daimakaimura (X68000)"
+              "disc": "Daimakaimura"
             }
           ]
         },
@@ -301,6 +349,17 @@
             {
               "soundtrack": "CPS-1 soundtrack",
               "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            }
+          ]
+        },
+        {
+          "game": "Magic Sword",
+          "also": "Magic Sword: Heroic Fantasy in Japan",
+          "sets": "mswordu, mswordj",
+          "packs": [
+            {
+              "soundtrack": "Double Impact remix",
+              "disc": "Final Fight: Double Impact remixed soundtrack"
             }
           ]
         },
@@ -333,7 +392,7 @@
           "packs": [
             {
               "soundtrack": "Saturn arrange",
-              "disc": "Street Fighter Alpha: Warriors' Dreams"
+              "disc": "Street Fighter Alpha: Warriors' Dreams / Street Fighter Zero"
             }
           ]
         },
@@ -364,16 +423,6 @@
           ]
         },
         {
-          "game": "Street Fighter II: The World Warrior",
-          "sets": "sf2uk, sf2jl",
-          "packs": [
-            {
-              "soundtrack": "Anniversary Edition arrange",
-              "disc": "Hyper Street Fighter II: The Anniversary Edition"
-            }
-          ]
-        },
-        {
           "game": "Street Fighter II': Champion Edition",
           "sets": "sf2ceuc, sf2cejc",
           "packs": [
@@ -383,7 +432,7 @@
             },
             {
               "soundtrack": "X68000 MIDI soundtrack",
-              "disc": "Street Fighter II' Champion Edition (X68000)"
+              "disc": "Street Fighter II' Champion Edition"
             }
           ]
         },
@@ -394,6 +443,27 @@
             {
               "soundtrack": "Anniversary Edition arrange",
               "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            }
+          ]
+        },
+        {
+          "game": "Street Fighter II: The World Warrior",
+          "sets": "sf2uk, sf2jl",
+          "packs": [
+            {
+              "soundtrack": "Anniversary Edition arrange",
+              "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            }
+          ]
+        },
+        {
+          "game": "Strider",
+          "also": "Strider Hiryu in Japan",
+          "sets": "striderua, striderjr",
+          "packs": [
+            {
+              "soundtrack": "PlayStation Sound Remix",
+              "disc": "Strider"
             }
           ]
         },
@@ -418,7 +488,11 @@
             },
             {
               "soundtrack": "X68000 MIDI soundtrack",
-              "disc": "Super Street Fighter II (X68000)"
+              "disc": "Super Street Fighter II"
+            },
+            {
+              "soundtrack": "HD Remix",
+              "disc": "Super Street Fighter II Turbo HD Remix official soundtrack"
             }
           ]
         },
@@ -430,6 +504,10 @@
             {
               "soundtrack": "Anniversary Edition arrange",
               "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            },
+            {
+              "soundtrack": "HD Remix",
+              "disc": "Super Street Fighter II Turbo HD Remix official soundtrack"
             }
           ]
         },
@@ -446,6 +524,17 @@
         }
       ],
       "release_history": [
+        {
+          "version": "1.2",
+          "date": "2026-09-10",
+          "items": [
+            "Final Fight and Magic Sword with the remixed soundtracks from Final Fight: Double Impact (Simon Viklund; Melssen and Thunberg), built from Capcom's free 2010 soundtrack download. Final Fight's is one pack for both regions.",
+            "Super Street Fighter II and Super Street Fighter II Turbo with the OC ReMix soundtrack from Super Street Fighter II Turbo HD Remix, built from OC ReMix's official FLAC release.",
+            "Strider with the Sound Remix performances from its PlayStation port, recorded from the game's own sound test with MAME on your machine.",
+            "Fixes: the three Final Fight soundtrack packs (SNES, X68000 FM and X68000 MIDI) now start their opening where the arcade's own song starts, in both regions, and leave the phone to the board; the Super Street Fighter II packs let the QSound logo jingle play from the arcade board; the SSF2-family MRAs carry each region's factory EEPROM defaults.",
+            "Twelve new MRAs (74 in all) and four new packs (27 in all). Six existing packs changed (see the FAQ); the other 17 packs, their MRAs and the three cores are unchanged."
+          ]
+        },
         {
           "version": "1.1",
           "date": "2026-09-01",

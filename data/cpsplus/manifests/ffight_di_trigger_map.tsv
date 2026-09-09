@@ -1,0 +1,33 @@
+# All 19 music tracks / 20 PLAY commands listening-approved; hardware approval pending. Audio recipe: ffight_di_audio.json
+# One shared US/World/Japan pack: the opening PLAYs on 0x52, the SONG cue, in both regions (USA 33.1 s, Japan 12.7 s), where the board's own song and Double Impact's remix both enter.
+# 0x35 (phone ringing) and 0x36 (the answer click) are the board's own sounds and fail open; only the song is gated.
+# Suppression belongs to the native cue: gate the song, preserve ringing and the answer click.
+# cmd	verb	suppress	track	cue	evidence
+0x35	none	0	-	Phone RINGING (US/World first cue) - FAIL OPEN	Not music: Double Impact files its remix opening under event 0x52 and has no stream for 0x35. Entering here ran the remix 6.2 s early in the USA and left 2.4 s of dead air before the title.
+0x52	play	1	0x52	Opening / intro (song cue, both regions; native song gated)	USA enters at 33.1 s, Japan at 12.7 s, matching the board's song and Double Impact's own event mapping; 2 s baked fade-in; listening_pending after the 2026-09-08 entry change
+0x36	none	0	-	Phone ANSWERED, the click; also stops the ring	Arcade trigger copied from ffight_arrange_trigger_map.tsv
+0x28	none	0	-	Damnd's laugh (SE) - FAIL OPEN	Arcade trigger copied from ffight_arrange_trigger_map.tsv
+0x34	none	0	-	train sound effects (SE) - FAIL OPEN	Arcade trigger copied from ffight_arrange_trigger_map.tsv
+0x40	play	1	0x40	R1 Slum (stage 1; tr02 also serves R3/R6)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x48	play	1	0x48	R4 Industrial Area 1	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x55	play	1	0x55	Character Select	Repaired four-bar loop covers late P2 selection without restarting the cue; listening_approved_hardware_pending
+0x50	play	1	0x50	Round Start (area-map screen)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x53	play	1	0x53	Continue (countdown)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x51	play	1	0x51	Game Over	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x41	play	1	0x41	R1 Slum 2 (Basement)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x42	play	1	0x42	R2 Subway	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x44	play	1	0x44	R3 West Side (Cage Match)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x43	play	1	0x43	R2 Subway Park 2 (Sodom Fight)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x57	play	1	0x57	Round Clear	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x4c	play	1	0x4c	Bonus Stage	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x45	play	1	0x45	R5 Bay Area 1	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x49	play	1	0x49	R4 Industrial Area 2 (Rolento Fight)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x46	play	1	0x46	R5 Bay Area 2 (Restroom)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x47	play	1	0x47	R5 Bay Area 3 (Abigail Fight; also Round 6)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x58	play	1	0x58	All Rounds Clear (ROUND6 CLEAR! area map)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x54	play	1	0x54	Ending (cutscene)	Arcade trigger copied from ffight_arrange_trigger_map.tsv; listening_approved_hardware_pending
+0x74	none	1	-	Damnd laugh ALIAS (backport cutscene) - gate under voiced audio	Arcade trigger copied from ffight_arrange_trigger_map.tsv
+0x75	none	1	-	Phone RING alias (backport cutscene) - gate under voiced audio	Arcade trigger copied from ffight_arrange_trigger_map.tsv
+0x76	none	1	-	Opening SONG alias (backport cutscene) - gate under voiced audio	Arcade trigger copied from ffight_arrange_trigger_map.tsv
+0x77	none	1	-	Phone ANSWER click ALIAS (backport cutscene) - gate under voiced audio	Arcade trigger copied from ffight_arrange_trigger_map.tsv
+0x78	none	1	-	Ending MUSIC alias (backport cutscene) - gate under voiced audio	Arcade trigger copied from ffight_arrange_trigger_map.tsv

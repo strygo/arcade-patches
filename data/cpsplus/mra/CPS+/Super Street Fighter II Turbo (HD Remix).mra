@@ -1,7 +1,7 @@
 <misterromdescription>
     <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores" />
     <rotation>horizontal</rotation>
-    <name>Super Street Fighter II Turbo (Arrange)</name>
+    <name>Super Street Fighter II Turbo (HD Remix)</name>
     <setname>ssf2tu</setname>
     <mameversion>0282</mameversion>
     <year>1994</year>
@@ -11,7 +11,7 @@
     <joystick>8</joystick>
     <region>World</region>
     <rom index="0" zip="ssf2tu.zip|ssf2t.zip|qsound.zip" address="0x30000000">
-        
+
         <part>
             00 0E 00 0F 00 1F 00 5F
             FF FF FF FF FF FF FF FF
@@ -19,9 +19,9 @@
             2A 2C 2E 00 00 30 02 04
             08 30 FF FF FF FF FF FF
             FC FF FF FF </part>
-        
+
         <part name="ssf2tu.key" crc="f7d62def" />
-        
+
         <part name="sfxu.03e" crc="d6ff689e" />
         <part name="sfxu.04a" crc="532b5ffd" />
         <part name="sfxu.05" crc="ffa3c6de" />
@@ -29,17 +29,17 @@
         <part name="sfxu.07a" crc="6ab673e8" />
         <part name="sfxu.08" crc="b3c71810" />
         <part name="sfx.09" crc="642fae3f" />
-        
+
         <part name="sfx.01" crc="b47b8835" />
         <part name="sfx.02" crc="0022633f" />
-        
+
         <interleave output="16">
             <part name="sfx.11m" crc="9bdbd476" map="12" />
         </interleave>
         <interleave output="16">
             <part name="sfx.12m" crc="a05e3aab" map="12" />
         </interleave>
-        
+
         <interleave output="64">
             <part name="sfx.13m" crc="cf94d275" map="00000021" />
             <part name="sfx.15m" crc="5eb703af" map="00002100" />
@@ -58,10 +58,10 @@
             <part name="sfx.25m" crc="1ee90208" map="00210000" />
             <part name="sfx.27m" crc="f814400f" map="21000000" />
         </interleave>
-        
+
         <part name="dl-1425.bin" crc="d6cf5ef5" length="0x2000" />
-        
-    <part repeat="960">00</part><part name="ssf2t_arrange.cpk" zip="/CPS+/ssf2t_arrange.zip" />
+
+    <part repeat="960">00</part><part name="ssf2t_hdremix.cpk" zip="/CPS+/ssf2t_hdremix.zip" />
     <patch offset="8">09 5f c0 03</patch>
   </rom>
     <rom index="2">

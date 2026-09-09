@@ -1,0 +1,502 @@
+{
+  "schema": 1,
+  "pack": "strider_psx",
+  "review_status": "encoded_listening_pending",
+  "source": {
+    "disc": "Strider (USA).chd",
+    "disc_sha256": "6b268854074f78e868fd96c08514dfd0b24e4314f0c712ea6900ab99ff7df029",
+    "capture": "tools/capture_strider_psx.py (MAME, the game's sound test)",
+    "capture_sha256": "7cd3835135e3090ac6d7cf1af191fe0529b93e47f5f7720d28deab88a13394a4"
+  },
+  "trigger_gain": 123,
+  "loudness": {
+    "method": "EBU R128 integrated loudness on source seconds 1..9, per mapped sustained arcade command; intro 0x11 excluded.",
+    "rows": [
+      {
+        "command": "0x00",
+        "track": "psx_01",
+        "native_lufs": -20.5,
+        "psx_lufs": -20.0,
+        "delta_lu": 0.5
+      },
+      {
+        "command": "0x01",
+        "track": "psx_01",
+        "native_lufs": -21.1,
+        "psx_lufs": -20.0,
+        "delta_lu": 1.1000000000000014
+      },
+      {
+        "command": "0x02",
+        "track": "psx_01",
+        "native_lufs": -19.9,
+        "psx_lufs": -20.0,
+        "delta_lu": -0.10000000000000142
+      },
+      {
+        "command": "0x04",
+        "track": "psx_01",
+        "native_lufs": -20.3,
+        "psx_lufs": -20.0,
+        "delta_lu": 0.3000000000000007
+      },
+      {
+        "command": "0x05",
+        "track": "psx_02",
+        "native_lufs": -18.5,
+        "psx_lufs": -19.9,
+        "delta_lu": -1.3999999999999986
+      },
+      {
+        "command": "0x06",
+        "track": "psx_03",
+        "native_lufs": -18.7,
+        "psx_lufs": -18.0,
+        "delta_lu": 0.6999999999999993
+      },
+      {
+        "command": "0x07",
+        "track": "psx_03",
+        "native_lufs": -21.1,
+        "psx_lufs": -18.0,
+        "delta_lu": 3.1000000000000014
+      },
+      {
+        "command": "0x08",
+        "track": "psx_03",
+        "native_lufs": -18.3,
+        "psx_lufs": -18.0,
+        "delta_lu": 0.3000000000000007
+      },
+      {
+        "command": "0x09",
+        "track": "psx_03",
+        "native_lufs": -20.1,
+        "psx_lufs": -18.0,
+        "delta_lu": 2.1000000000000014
+      },
+      {
+        "command": "0x0a",
+        "track": "psx_07",
+        "native_lufs": -22.5,
+        "psx_lufs": -16.0,
+        "delta_lu": 6.5
+      },
+      {
+        "command": "0x0b",
+        "track": "psx_07",
+        "native_lufs": -23.3,
+        "psx_lufs": -16.0,
+        "delta_lu": 7.300000000000001
+      },
+      {
+        "command": "0x0c",
+        "track": "psx_07",
+        "native_lufs": -21.1,
+        "psx_lufs": -16.0,
+        "delta_lu": 5.100000000000001
+      },
+      {
+        "command": "0x0d",
+        "track": "psx_08",
+        "native_lufs": -16.4,
+        "psx_lufs": -13.7,
+        "delta_lu": 2.6999999999999993
+      },
+      {
+        "command": "0x10",
+        "track": "psx_04",
+        "native_lufs": -19.8,
+        "psx_lufs": -21.3,
+        "delta_lu": -1.5
+      },
+      {
+        "command": "0x16",
+        "track": "psx_07",
+        "native_lufs": -19.8,
+        "psx_lufs": -16.0,
+        "delta_lu": 3.8000000000000007
+      },
+      {
+        "command": "0x18",
+        "track": "psx_05",
+        "native_lufs": -17.6,
+        "psx_lufs": -17.6,
+        "delta_lu": 0.0
+      },
+      {
+        "command": "0x19",
+        "track": "psx_05",
+        "native_lufs": -17.3,
+        "psx_lufs": -17.6,
+        "delta_lu": -0.3000000000000007
+      },
+      {
+        "command": "0x1a",
+        "track": "psx_06",
+        "native_lufs": -17.1,
+        "psx_lufs": -18.4,
+        "delta_lu": -1.2999999999999972
+      },
+      {
+        "command": "0x1b",
+        "track": "psx_09",
+        "native_lufs": -17.6,
+        "psx_lufs": -18.0,
+        "delta_lu": -0.3999999999999986
+      },
+      {
+        "command": "0x1c",
+        "track": "psx_09",
+        "native_lufs": -17.6,
+        "psx_lufs": -18.0,
+        "delta_lu": -0.3999999999999986
+      },
+      {
+        "command": "0x1d",
+        "track": "psx_10",
+        "native_lufs": -21.9,
+        "psx_lufs": -23.8,
+        "delta_lu": -1.9000000000000021
+      }
+    ],
+    "median_delta_lu": 0.3000000000000007,
+    "trigger_gain": 123,
+    "effective_gain_db": -0.27797219033117915
+  },
+  "loop_policy": "Preserve reviewed baked linear blends; hardware crossfade disabled.",
+  "tracks": [
+    {
+      "id": "psx_01",
+      "title": "St. Petersburg — main",
+      "capture_trim_sample": 3313195,
+      "loop_start": 1014272,
+      "loop_end": 3727744,
+      "crossfade_frames": 2880,
+      "reviewed_wav_sha256": "0a5f9bc88ba0fb3ae44cd6de9e3e805643f0fcaf8920aade42a7209908e16e4d",
+      "listening": "approved_research_pcm",
+      "bank": 1,
+      "sequence": 0
+    },
+    {
+      "id": "psx_02",
+      "title": "St. Petersburg — boss",
+      "capture_trim_sample": 10433000,
+      "loop_start": 336256,
+      "loop_end": 1437056,
+      "crossfade_frames": 5760,
+      "reviewed_wav_sha256": "3dee90c49ad69ed0d1390179650804958c4b70716263608d2285e11456a289c0",
+      "listening": "approved_research_pcm",
+      "bank": 1,
+      "sequence": 1
+    },
+    {
+      "id": "psx_03",
+      "title": "Siberia — main",
+      "capture_trim_sample": 17764683,
+      "loop_start": 264224,
+      "loop_end": 2944000,
+      "crossfade_frames": 5760,
+      "reviewed_wav_sha256": "5be1b65deb35204b472f319879236dc5a6f256d11eb3c9ebd9b6439a1f93cd0f",
+      "listening": "approved_research_pcm",
+      "bank": 2,
+      "sequence": 0
+    },
+    {
+      "id": "psx_04",
+      "title": "Siberia — boss",
+      "capture_trim_sample": 24874176,
+      "loop_start": 192256,
+      "loop_end": 1343584,
+      "crossfade_frames": 2880,
+      "reviewed_wav_sha256": "c479809b659af5ec03b94b1cfd807efc24ac016d88c657d125a458a97d2c9e70",
+      "listening": "approved_research_pcm",
+      "bank": 2,
+      "sequence": 1
+    },
+    {
+      "id": "psx_05",
+      "title": "Aerial Battleship — main",
+      "capture_trim_sample": 32173605,
+      "loop_start": 101952,
+      "loop_end": 3215776,
+      "crossfade_frames": 960,
+      "reviewed_wav_sha256": "1eacfe8151975da3aea0ec5446cf94ab197f74f191f527ea66f4464f5bd703da",
+      "listening": "approved_research_pcm",
+      "bank": 4,
+      "sequence": 0
+    },
+    {
+      "id": "psx_06",
+      "title": "Aerial Battleship — boss",
+      "capture_trim_sample": 39315935,
+      "loop_start": 203968,
+      "loop_end": 1072096,
+      "crossfade_frames": 5760,
+      "reviewed_wav_sha256": "3ec65d59cb7ddb167722b7ad08432b127755db3fab188b12c699a15ffcc7bee7",
+      "listening": "approved_research_pcm",
+      "bank": 4,
+      "sequence": 1
+    },
+    {
+      "id": "psx_07",
+      "title": "Amazon — main",
+      "capture_trim_sample": 46640349,
+      "loop_start": 257728,
+      "loop_end": 2788256,
+      "crossfade_frames": 960,
+      "reviewed_wav_sha256": "1f4a717a1ced5f50f5c26d8af8221672d5ef97f0c00617dd2e7d90e766dc0a10",
+      "listening": "approved_research_pcm",
+      "bank": 3,
+      "sequence": 0
+    },
+    {
+      "id": "psx_08",
+      "title": "Amazon — boss",
+      "capture_trim_sample": 53757764,
+      "loop_start": 1043808,
+      "loop_end": 1546048,
+      "crossfade_frames": 5760,
+      "reviewed_wav_sha256": "b1982f1270091dee6bc965774f0bde91196e2e625e67c5ca9b59161766d48cd7",
+      "listening": "approved_research_pcm",
+      "bank": 3,
+      "sequence": 1
+    },
+    {
+      "id": "psx_09",
+      "title": "Third Moon — main",
+      "capture_trim_sample": 61093437,
+      "loop_start": 3390144,
+      "loop_end": 5109536,
+      "crossfade_frames": 2880,
+      "reviewed_wav_sha256": "87983b6d3ef30cacbdcb73dc34ff03db851ea6275b9853ebb402822d825c4184",
+      "listening": "approved_research_pcm",
+      "bank": 5,
+      "sequence": 0
+    },
+    {
+      "id": "psx_10",
+      "title": "Grandmaster Meio",
+      "capture_trim_sample": 68200436,
+      "loop_start": 1299008,
+      "loop_end": 2523360,
+      "crossfade_frames": 2880,
+      "reviewed_wav_sha256": "da05cbbf27c2b96a00ac5511882636897db536f8ae3fad47e45c5564ef75d863",
+      "listening": "approved_research_pcm",
+      "bank": 5,
+      "sequence": 1
+    }
+  ],
+  "triggers": [
+    {
+      "command": "0x00",
+      "role": "St. Petersburg 1 ~ Step into it!",
+      "track": "psx_01",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x01",
+      "role": "St. Petersburg 2 ~ Heartless Cathedral (Mosque)",
+      "track": "psx_01",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x02",
+      "role": "St. Petersburg 3 ~ Wild Beast",
+      "track": "psx_01",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x03",
+      "role": "St. Petersburg 4 (Unused) ~ Bullet Corridor",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x04",
+      "role": "St. Petersburg Mid Boss ~ Blow",
+      "track": "psx_01",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x05",
+      "role": "St. Petersburg Boss ~ Ouroboros (Iron Reign)",
+      "track": "psx_02",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x06",
+      "role": "Siberian Wilderness Mid Boss ~ Siberian Mine Shaft (Kong)",
+      "track": "psx_03",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x07",
+      "role": "Siberian Wilderness 1 ~ Drive Wheel",
+      "track": "psx_03",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x08",
+      "role": "Siberian Wilderness 2 ~ Long Dash",
+      "track": "psx_03",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x09",
+      "role": "Siberian Wilderness 3 ~ Cloud Sea",
+      "track": "psx_03",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x0a",
+      "role": "Adventure in Amazon Opening 1 ~ Echo",
+      "track": "psx_07",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x0b",
+      "role": "Adventure in Amazon 1 ~ Valley and River",
+      "track": "psx_07",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x0c",
+      "role": "Adventure in Amazon 2 ~ Howling",
+      "track": "psx_07",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x0d",
+      "role": "Adventure in Amazon Boss ~ Devil in Africa",
+      "track": "psx_08",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x0e",
+      "role": "Game Over",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x0f",
+      "role": "Stage Clear",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x10",
+      "role": "Siberian Wilderness Boss ~ Wind Formation",
+      "track": "psx_04",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x11",
+      "role": "St. Petersburg Intro ~ Line of Defense",
+      "track": "psx_01",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x12",
+      "role": "Siberian Wilderness Intro",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x13",
+      "role": "Adventure in Amazon Intro",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x14",
+      "role": "Credit",
+      "track": null,
+      "stop_arranged": false
+    },
+    {
+      "command": "0x15",
+      "role": "Continue",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x16",
+      "role": "Adventure in Amazon Opening 2 ~ Seige",
+      "track": "psx_07",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x17",
+      "role": "Adventure in Amazon Opening 3 (Unused) ~ Echo",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x18",
+      "role": "The Aerial Battleship 1 ~ Short Spin",
+      "track": "psx_05",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x19",
+      "role": "The Aerial Battleship 2 ~ G Minor Reverse",
+      "track": "psx_05",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x1a",
+      "role": "The Aerial Battleship Boss ~ Takeover!",
+      "track": "psx_06",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x1b",
+      "role": "The Third Moon 1 ~ Flying Dragon (Hiryu)",
+      "track": "psx_09",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x1c",
+      "role": "The Third Moon 2 ~ Swift Counterattack (Theme)",
+      "track": "psx_09",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x1d",
+      "role": "The Third Moon Boss ~ Dark Lord Grandmaster",
+      "track": "psx_10",
+      "stop_arranged": false
+    },
+    {
+      "command": "0x1e",
+      "role": "The Aerial Battleship Intro",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x1f",
+      "role": "The Third Moon Intro",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x20",
+      "role": "Game Clear",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x21",
+      "role": "Ending",
+      "track": null,
+      "stop_arranged": true
+    },
+    {
+      "command": "0x22",
+      "role": "Ranking",
+      "track": null,
+      "stop_arranged": true
+    }
+  ]
+}

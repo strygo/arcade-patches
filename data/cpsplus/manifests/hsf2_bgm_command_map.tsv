@@ -181,9 +181,9 @@ cmd	name	in_game	set	afs_entry	afs_name	vol	size_bytes	dur_s	rate	ch	loop	loop_s
 0x3c	STAFF ROLL	yes	ARRANGE	60	arg_3c.adx	0x68	8845312	163.75	48000	2	1	4186112	7827389	7860156
 0x3c	STAFF ROLL	yes	CPS2	130	CPS2_3c.adx	0x58	5265408	97.48	48000	2	1	1213664	4678582	4679143
 0x3c	STAFF ROLL	yes	CPS1	199	fm_3c.adx	0x70	3715072	68.78	48000	2	1	708032	3231709	3301377
-0x3d	(unlisted; dead in-game)	sound-test-only	ARRANGE	61	___blank___.adx	0x68	54058	1.00	48000	2	0	0	0	48000
-0x3d	(unlisted; dead in-game)	sound-test-only	CPS2	131	CPS2_3d.adx	0x58	564322	10.45	48000	2	0	0	0	501551
-0x3d	(unlisted; dead in-game)	sound-test-only	CPS1	200	___blank___.adx	0x70	54058	1.00	48000	2	0	0	0	48000
+0x3d	QSOUND LOGO (native pass-through)	native-pass-through	ARRANGE	61	___blank___.adx	0x68	54058	1.00	48000	2	0	0	0	48000
+0x3d	QSOUND LOGO (native pass-through)	native-pass-through	CPS2	131	CPS2_3d.adx	0x58	564322	10.45	48000	2	0	0	0	501551
+0x3d	QSOUND LOGO (native pass-through)	native-pass-through	CPS1	200	___blank___.adx	0x70	54058	1.00	48000	2	0	0	0	48000
 0x3e	ENDING CHUN LI(3)	yes	ARRANGE	62	arg_3e.adx	0x70	3201024	59.27	48000	2	1	933440	2816045	2844820
 0x3e	ENDING CHUN LI(3)	yes	CPS2	132	CPS2_3e.adx	0x58	1110016	20.50	48000	2	1	160	983478	984182
 0x3e	ENDING CHUN LI(3)	yes	CPS1	201	fm_3e.adx	0x70	1087488	20.10	48000	2	1	19136	942097	964897
