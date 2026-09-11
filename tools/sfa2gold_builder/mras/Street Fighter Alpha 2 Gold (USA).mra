@@ -22,16 +22,20 @@
 <misterromdescription>
     <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
     <rotation>horizontal</rotation>
-    <name>Street Fighter Zero 2 Dash (Asia 060525, English)</name>
-    <setname>sfz2da</setname>
+    <name>Street Fighter Alpha 2 Gold (USA)</name>
+    <setname>sfa2g</setname>
     <mameversion>0282</mameversion>
     <year>2006</year>
     <manufacturer>Capcom</manufacturer>
     <players>2</players>
     <rbf>jtcps2</rbf>
     <joystick>8</joystick>
-    <region>World</region>
-    <rom index="0" zip="/hbmame/sfz2da.zip" md5="None" address="0x30000000" asm_md5="5366a91533048d3d90cae4dd5091373f">
+    <region>USA</region>
+    <platform>CPS-2</platform>
+    <category>Fighting</category>
+    <catver>Fighter / Versus</catver>
+    <mraauthor>jotego,strygo</mraauthor>
+    <rom index="0" zip="/hbmame/sfa2g.zip" md5="None" address="0x30000000" asm_md5="b28b6d708823c85dd97e84bffa7f8b34">
         <!--  -->
         <part>
             00 0C 00 0D 00 2D 00 7D
@@ -43,12 +47,12 @@
         <!-- key - starts at 0x0 - length 0x14 (5 bits) -->
         <part name="sfz2al.key" crc="2904963e"/>
         <!-- maincpu - starts at 0x14 - length 0x300000 (22 bits) -->
-        <part name="szaa.03" crc="a448180b"/>
-        <part name="szaa.04" crc="37cf7ba1"/>
-        <part name="szaa.05" crc="f053a55e"/>
+        <part name="szaa.03" crc="2dc23362"/>
+        <part name="szaa.04" crc="2fcbecdf"/>
+        <part name="szaa.05" crc="b1c15635"/>
         <part name="szaa.06" crc="cfc0e7a8"/>
-        <part name="szaa.07" crc="674755ae"/>
-        <part name="szaa.08" crc="c44a25d5"/>
+        <part name="szaa.07" crc="a64aa14c"/>
+        <part name="szaa.08" crc="23dd1621"/>
         <!-- audiocpu - starts at 0x300014 - length 0x40000 (18 bits) -->
         <part name="sza.01" crc="1588cdd2"/>
         <part name="sza.02" crc="82ec6d9f"/>
@@ -61,10 +65,10 @@
         </interleave>
         <!-- gfx - starts at 0xb40014 - length 0x1400000 (25 bits) -->
         <interleave output="64">
-            <part name="sza.13m" crc="4baa0449" map="00000021"/>
-            <part name="sza.15m" crc="e7e2a713" map="00002100"/>
-            <part name="sza.17m" crc="9ba519ea" map="00210000"/>
-            <part name="sza.19m" crc="a35a07fa" map="21000000"/>
+            <part name="sza.13m" crc="0be1771d" map="00000021"/>
+            <part name="sza.15m" crc="895cab31" map="00002100"/>
+            <part name="sza.17m" crc="118cba69" map="00210000"/>
+            <part name="sza.19m" crc="463758bc" map="21000000"/>
         </interleave>
         <interleave output="64">
             <part name="sza.14m" crc="0560c6aa" map="00000021"/>

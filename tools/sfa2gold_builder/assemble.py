@@ -38,7 +38,12 @@ def prepare_inputs(arc: dict, extracted: dict) -> dict:
 # --- fixed ordered source pools (identical in generator and applier) ---
 
 def program_pool(inp, member):
-    return [inp["arc"][member]] + [inp["arc"][m] for m in inp["prog"]] + [inp["comp2"]]
+    # comp2 twice: as stored, and word-swapped, because some tables the
+    # revision imports (the Gold quote-selector rows among them) sit in the
+    # program ROMs in the other byte order.  The swapped copy goes LAST so
+    # every existing source index stays put.
+    return ([inp["arc"][member]] + [inp["arc"][m] for m in inp["prog"]]
+            + [inp["comp2"], wordswap(inp["comp2"])])
 
 
 def gfx_pool(inp, bank):

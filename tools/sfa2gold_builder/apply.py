@@ -21,7 +21,9 @@ Usage (recommended — build everything for one region):
     hbmame/<set>.zip          8MB set for HBMAME
     mister/                   MiSTer (Jotego jtcps2), laid out like the SD card
                               so you can copy its contents to the card root:
-                                _Arcade/_Backports/<name>.mra
+                                _Arcade/_Arcade Patches/_Enhanced Versions/
+                                  <name>.mra               USA
+                                  _<Region>/<name>.mra     Europe, Asia, Japan
                                 games/hbmame/<set>.zip
 
 Usage (single file):
@@ -45,17 +47,22 @@ HERE = Path(__file__).resolve().parent
 PROFILES = {"jp": ex.JP, "us": ex.US, "eu": ex.EU, "asia": ex.ASIA}
 
 # region -> set names (4MB for MAME/hardware, 8MB for HBMAME/MiSTer) and the
-# friendly MiSTer MRA filename (dated with our assigned 2006 gold/dash date).
+# friendly MiSTer MRA filename (title and region; no date).
 SETS = {
     "us": {"4mb": "sfz2al", "8mb": "sfa2g",
-           "mra": "Street Fighter Alpha 2 Gold (USA 060613)"},
+           "mra": "Street Fighter Alpha 2 Gold (USA)"},
     "eu": {"4mb": "sfz2al", "8mb": "sfa2d",
-           "mra": "Street Fighter Alpha 2 Dash (Europe 060707)"},
+           "mra": "Street Fighter Alpha 2 Dash (Europe)"},
     "jp": {"4mb": "sfz2alj", "8mb": "sfz2d",
-           "mra": "Street Fighter Zero 2 Dash (Japan 060525)"},
+           "mra": "Street Fighter Zero 2 Dash (Japan)"},
     "asia": {"4mb": "sfz2al", "8mb": "sfz2da",
-             "mra": "Street Fighter Zero 2 Dash (Asia 060525, English)"},
+             "mra": "Street Fighter Zero 2 Dash (Asia)"},
 }
+# MiSTer folder: every project of ours lives under _Arcade/_Arcade Patches,
+# sorted the way the website is.  USA sits at the top of its section and every
+# other region in its own subfolder.
+MRA_ROOT = ("_Arcade", "_Arcade Patches", "_Enhanced Versions")
+MRA_DIR = {"us": "", "eu": "_Europe", "asia": "_Asia", "jp": "_Japan"}
 
 
 def fail(msg):
@@ -143,13 +150,14 @@ def main():
     write_set(m8, w8, out / "mister" / "games" / "hbmame" / f"{names['8mb']}.zip")
     mra = HERE / "mras" / f"{names['mra']}.mra"
     if mra.exists():
-        arcade = out / "mister" / "_Arcade" / "_Backports"
+        arcade = out.joinpath("mister", *MRA_ROOT, MRA_DIR[args.region])
         arcade.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(mra, arcade / mra.name)
     print(f"\nBuilt {args.region} into {out}/ — every set checksum-verified:")
     print(f"  mame/{args.region}/{names['4mb']}.zip   (stock MAME, real hardware)")
     print(f"  hbmame/{names['8mb']}.zip     (HBMAME)")
-    print(f"  mister/ -> copy to SD root: _Arcade/_Backports/{names['mra']}.mra "
+    mra_path = "/".join(filter(None, ("/".join(MRA_ROOT), MRA_DIR[args.region], names["mra"])))
+    print(f"  mister/ -> copy to SD root: {mra_path}.mra "
           f"+ games/hbmame/{names['8mb']}.zip   (MiSTer jtcps2)")
     print("Point other regions at the same out/ to collect all builds together.")
     print("\nMAME/HBMAME will warn about checksums (unofficial build); it runs normally.")

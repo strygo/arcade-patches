@@ -1,7 +1,7 @@
 Street Fighter Alpha 2 Gold / Zero 2 Dash — reconstruction kit
 ==============================================================
 
-Version:      rc1 (2026-08-25)
+Version:      rc3 (2026-09-17)
 Hardware:     Capcom CPS-2
 Target:       MAME and HBMAME sets, and MiSTer (jtcps2) — 4 regions
 Backport by:  Steve Gordon (https://x.com/strygo)
@@ -62,8 +62,14 @@ ON MISTER
 
 Copy the contents of out/mister/ to the root of the MiSTer SD card:
 
-    _Arcade/_Backports/<name>.mra   the MRA
-    games/hbmame/<set>.zip      the 8MB set
+    _Arcade/_Arcade Patches/_Enhanced Versions/<name>.mra          the USA MRA
+    _Arcade/_Arcade Patches/_Enhanced Versions/_Europe/<name>.mra  the other
+    _Arcade/_Arcade Patches/_Enhanced Versions/_Asia/<name>.mra    regions, each
+    _Arcade/_Arcade Patches/_Enhanced Versions/_Japan/<name>.mra   in its folder
+    games/hbmame/<set>.zip                                         the 8MB sets
+
+Earlier releases put these MRAs in _Arcade/_Backports; delete them from there
+when you copy the new ones over.
 
 The standard Jotego jtCPS2 core is required. No separate qsound.zip is needed.
 

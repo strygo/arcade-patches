@@ -22,16 +22,20 @@
 <misterromdescription>
     <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
     <rotation>horizontal</rotation>
-    <name>Street Fighter Alpha 2 Gold (USA 060613)</name>
-    <setname>sfa2g</setname>
+    <name>Street Fighter Zero 2 Dash (Japan)</name>
+    <setname>sfz2d</setname>
     <mameversion>0282</mameversion>
     <year>2006</year>
     <manufacturer>Capcom</manufacturer>
     <players>2</players>
     <rbf>jtcps2</rbf>
     <joystick>8</joystick>
-    <region>World</region>
-    <rom index="0" zip="/hbmame/sfa2g.zip" md5="None" address="0x30000000" asm_md5="e35d4a08fd383b68c3f5d399e2a12c7f">
+    <region>Japan</region>
+    <platform>CPS-2</platform>
+    <category>Fighting</category>
+    <catver>Fighter / Versus</catver>
+    <mraauthor>jotego,strygo</mraauthor>
+    <rom index="0" zip="/hbmame/sfz2d.zip" md5="None" address="0x30000000" asm_md5="27a22c15d93ab105778173f1230ae4e9">
         <!--  -->
         <part>
             00 0C 00 0D 00 2D 00 7D
@@ -41,14 +45,14 @@
             08 30 FF FF FF FF FF FF
             FC FF FF FF </part>
         <!-- key - starts at 0x0 - length 0x14 (5 bits) -->
-        <part name="sfz2al.key" crc="2904963e"/>
+        <part name="sfz2alj.key" crc="4c42320f"/>
         <!-- maincpu - starts at 0x14 - length 0x300000 (22 bits) -->
-        <part name="szaa.03" crc="185499c6"/>
-        <part name="szaa.04" crc="10c99edc"/>
-        <part name="szaa.05" crc="f053a55e"/>
-        <part name="szaa.06" crc="cfc0e7a8"/>
-        <part name="szaa.07" crc="17598382"/>
-        <part name="szaa.08" crc="e65b880f"/>
+        <part name="szaj.03a" crc="ef46dae9"/>
+        <part name="szaj.04a" crc="2b7532bf"/>
+        <part name="szaj.05a" crc="c88ebf88"/>
+        <part name="szaj.06a" crc="35ed5b7a"/>
+        <part name="szaj.07a" crc="e0e127ec"/>
+        <part name="szaj.08a" crc="efcc529b"/>
         <!-- audiocpu - starts at 0x300014 - length 0x40000 (18 bits) -->
         <part name="sza.01" crc="1588cdd2"/>
         <part name="sza.02" crc="82ec6d9f"/>
@@ -61,10 +65,10 @@
         </interleave>
         <!-- gfx - starts at 0xb40014 - length 0x1400000 (25 bits) -->
         <interleave output="64">
-            <part name="sza.13m" crc="a317c9fa" map="00000021"/>
-            <part name="sza.15m" crc="6ae01542" map="00002100"/>
-            <part name="sza.17m" crc="c8cccd7f" map="00210000"/>
-            <part name="sza.19m" crc="d71aff38" map="21000000"/>
+            <part name="sza.13m" crc="ae258b4a" map="00000021"/>
+            <part name="sza.15m" crc="6fd70f52" map="00002100"/>
+            <part name="sza.17m" crc="c6caea78" map="00210000"/>
+            <part name="sza.19m" crc="0956de4d" map="21000000"/>
         </interleave>
         <interleave output="64">
             <part name="sza.14m" crc="0560c6aa" map="00000021"/>

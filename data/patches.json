@@ -772,20 +772,22 @@
       "title": "Street Fighter Alpha 2 Gold",
       "subtitle": "Zero 2 Dash, rebuilt for CPS-2 hardware",
       "status": "release-candidate",
-      "version": "rc2",
-      "date": "2026-08-27",
+      "version": "rc3",
+      "date": "2026-09-17",
       "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "us",
       "summary": "Capcom's 2006 PlayStation 2 anthology carried the final revision of Alpha 2 Gold, the console edition of Alpha 2 that brought Cammy into the roster. It was never released on arcade hardware. This rebuilds it as a real CPS-2 game, in four regional builds, for emulators, MiSTer, and real hardware.",
       "description": [
         "Street Fighter Alpha 2 Gold, known as Zero 2 Dash in Japan, was the console revision of Alpha 2 that added Cammy as a playable fighter, first on PlayStation and Saturn and in final form in Capcom's 2006 PlayStation 2 anthology. It was never released on arcade hardware. This project rebuilds the anthology's edition as a real CPS-2 game.",
-        "It is a faithful reconstruction, not a remix. It starts from the original arcade Zero 2 Alpha program and restores the anthology's changes piece by piece: Cammy, her graphics, the audio, and the endings, each one checked against the PlayStation 2 original. Four regional builds are provided, shown below.",
+        "It is a faithful reconstruction, not a remix. It starts from the original arcade Zero 2 Alpha program and restores the anthology's changes piece by piece: Cammy, her graphics, the audio, and the endings, each one checked against the PlayStation 2 original. Four regional builds are provided, shown below. The English builds also carry the full Japanese script, newly translated: every story and ending page, Evil Ryu's own ending, and all 452 win quotes.",
         "This is a release candidate. All four builds are complete and verified against the reference. The 4 MB builds have been run and accepted in MAME, and the 8 MB builds are verified by content and checksum."
       ],
       "changes": [
         "Cammy restored as a playable fighter, with her graphics, palettes, voice, sound effects, win poses, and ending",
+        "Shin Akuma selectable: press Start five times on Akuma at player select",
         "The revised title, presentation, and staff-credit screens for each region",
+        "In the English builds, the full Japanese script in English: every story and ending page, Evil Ryu's own ending, and all 452 win quotes, plus red blood and Birdie's missing victory pose",
         "Four regional builds: USA (Alpha 2 Gold), Europe (Alpha 2 Dash), Japan (Zero 2 Dash), and an English Asia (Zero 2 Dash)",
         "4 MB builds for real hardware and stock MAME, plus 8 MB builds carrying Cammy's full audio for HBMAME and MiSTer"
       ],
@@ -827,6 +829,7 @@
           "title_screen": "data/screenshots/sfa2-gold/title_asia_sfz2da.png"
         }
       ],
+      "screenshots_heading": "New to the roster",
       "screenshots": [
         {
           "single": "data/screenshots/sfa2-gold/cammy_select.png",
@@ -835,6 +838,10 @@
         {
           "single": "data/screenshots/sfa2-gold/cammy_fight.png",
           "caption": "Cammy in action, landing a jumping kick on Guy."
+        },
+        {
+          "single": "data/screenshots/sfa2-gold/shin_akuma_select.png",
+          "caption": "Shin Akuma is selectable too: press Start five times on Akuma."
         }
       ],
       "reconstruction": {
@@ -851,12 +858,31 @@
       ],
       "related": [
         {
+          "label": "Street Fighter Zero 2 Alpha",
+          "url": "../sfz2al-restoration/",
+          "note": "the same English restoration on the arcade Zero 2 Alpha, without the Gold additions"
+        },
+        {
           "label": "CPS+",
           "url": "../cps-plus/",
           "note": "pair these sets with the arranged Saturn soundtrack on MiSTer, using the Gold Arrange MRAs in the CPS+ kit, which load them directly"
         }
       ],
       "release_history": [
+        {
+          "version": "rc3",
+          "date": "2026-09-17",
+          "items": [
+            "The English builds (USA, Europe and Asia) now carry the whole Japanese script in English. Every story and ending page is back, in the Japanese order, including scenes the English version cut short.",
+            "Evil Ryu has his own ending again, with his narration and his scene with Akuma, instead of borrowing Ryu's.",
+            "All 452 win quotes from the Japanese game, in English, picked by opponent and remaining health the way the Japanese game does it, and centered on screen. Cammy keeps her four Gold quotes.",
+            "Story, ending and quote text is translated from the Japanese. Where Capcom's English said the same thing, it's kept.",
+            "Red blood on hits in the English builds, as in Japan.",
+            "Birdie's third victory pose is back; the English builds showed another pose in its place.",
+            "The Manual guard panel on the select screen now explains itself. It appears when the operator turns on Auto Guard.",
+            "Every set has new checksums, so rebuild them with the rc3 kit."
+          ]
+        },
         {
           "version": "rc2",
           "date": "2026-08-27",

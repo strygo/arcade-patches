@@ -1253,7 +1253,7 @@ def render_reconstruction(patch: dict, builds: list, bundle: dict | None) -> str
     reqs = "".join(f"<li>{esc(r)}</li>" for r in rec.get("requires", []))
     rows = "".join(
         f'<tr><td>{esc(b["region"])}</td>'
-        f'<td>{esc(b["title"])} ({esc(b["datecode"])})</td>'
+        f'<td>{esc(b["title"])}</td>'
         f'<td class="mono">{esc(b["hbmame_set"])}</td>'
         f'<td class="mono">{esc(b["mame_set"])}</td></tr>'
         for b in builds
