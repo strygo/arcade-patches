@@ -559,27 +559,28 @@
     {
       "slug": "vhunt2-english",
       "title": "Night Warriors 2",
-      "subtitle": "Vampire Hunter 2, translated to English",
+      "subtitle": "English translation",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-07-10",
+      "version": "rc2",
+      "date": "2026-09-17",
       "game": "Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)",
       "set": "vhunt2",
       "hardware": "Capcom CPS-2",
-      "summary": "The game before it came west as Night Warriors. This one stayed in Japanese arcades and never got an English release. Now it has one, under the name it should have had.",
+      "summary": "Vampire Hunter 2 never left Japan. This translates all of it, under the Western name it should have had: Western character names, all 225 post-fight quotes, every boss exchange, and every ending.",
       "description": [
-        "Vampire Hunter 2 is a 1997 Capcom fighter that only ever reached Japanese arcades. Its predecessor came to the West as Night Warriors: Darkstalkers' Revenge, but this sequel never made the trip. The patch translates the whole game into English and gives it the Western name it should have had, Night Warriors 2.",
-        "That title screen isn't a fan mock-up. An unused Western title was already sitting inside the original game, and the patch finishes it and switches it on. Nothing about the gameplay changes.",
-        "Where Capcom's own English wording exists in the Western Darkstalkers games, the patch reuses it, so the writing matches the official localization. Everything else gets a fresh translation, checked in the actual game: the victory taunts, the boss exchanges, and every character's ending."
+        "Vampire Hunter 2 is a Japan-only follow-up to the game the West knew as Night Warriors: Darkstalkers' Revenge. It never came out in English. This patch translates the entire game and gives it the name it should have had, Night Warriors 2.",
+        "Where Capcom's own English exists, in the Western Night Warriors and Vampire Savior and the PlayStation Darkstalkers 3, the patch uses it, as long as it says what the Japanese says, so it reads like the official localization. The rest gets a fresh translation, written to read naturally while staying true to the original: the victory quotes, the boss exchanges, and every ending.",
+        "The Night Warriors 2 title screen isn't a fan mock-up. An unused Western title was already sitting inside the original game, and the patch finishes it and switches it on."
       ],
       "changes": [
-        "Arcade-native Night Warriors 2 title screen, built from the ROM's unused Western title path",
-        "USA region presentation (warning screen and region byte)",
-        "Western character names on character select, route map labels, and the fight HUD: Zabel \u2192 L.Raptor, Gallon \u2192 J.Talbain, Lei-Lei \u2192 Hsien-Ko, Phobos \u2192 Huitzil, Aulbath \u2192 Rikuo",
-        "English route/stage titles",
-        "All 225 post-fight quotes in English",
-        "All boss dialog and every character ending translated",
-        "English staff roll under the Night Warriors 2 name"
+        "Night Warriors 2 title screen, finished from the unused Western title inside the original game",
+        "USA region presentation",
+        "Western character names on character select, route map, and fight HUD: Zabel \u2192 L.Raptor, Gallon \u2192 J.Talbain, Lei-Lei \u2192 Hsien-Ko, Phobos \u2192 Huitzil, Aulbath \u2192 Rikuo",
+        "All 225 post-fight quotes in English, using Capcom's own wording where it matches the Japanese",
+        "All boss dialogs and every ending translated",
+        "Route stage names and the staff roll in English",
+        "Capcom's misspelled \"L.Rapter\" name art corrected to L.Raptor",
+        "Oboro Bishamon's win plays his own victory music, as intended"
       ],
       "artifact": {
         "stock_zip": "../capcom/roms/mame0260/vhunt2.zip",
@@ -587,10 +588,15 @@
       },
       "mra": {
         "base": "data/mra/vhunt2.mra",
-        "name": "Night Warriors 2 (English)",
+        "name": "Night Warriors 2 (USA) [English Translation]",
         "setname": "nwarr2en",
-        "filename": "Night Warriors 2 (English Translation).mra",
-        "zip_dir": "_Arcade/_Translations"
+        "filename": "Night Warriors 2 (USA) [English Translation].mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Translations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo",
+        "region": "USA"
       },
       "hbmame": {
         "setname": "vhunt2s01",
@@ -598,32 +604,60 @@
         "renames": {
           "vh2j.03a": "c75s01.p1",
           "vh2j.04a": "c75s01.p2",
-          "vh2j.08": "c75s01.p6"
+          "vh2j.08": "c75s01.p6",
+          "vh2.13m": "c75s01.c1",
+          "vh2.15m": "c75s01.c2",
+          "vh2.17m": "c75s01.c3",
+          "vh2.19m": "c75s01.c4"
         }
       },
       "screenshots": [
         {
           "before": "data/screenshots/vhunt2/title_stock.png",
-          "after": "../capcom/translations/vhunt2/work/vhunt2_combined_title_narrative_acceptance/vhunt2_3100_night_warriors_2_title.png",
+          "after": "data/screenshots/vhunt2/title_english.png",
           "caption": "Title screen. The arcade-native Night Warriors 2 logo, completed from the unused Western title path in the original ROM."
         },
         {
-          "before": "../capcom/translations/vhunt2/work/name_label_baseline_branch_vhunt2/vhunt2_4021_phobos_f4021.png",
-          "after": "../capcom/translations/vhunt2/work/vhunt2_combined_title_narrative_acceptance/vhunt2_4300_huitzil_selected.png",
+          "before": "data/screenshots/vhunt2/select_phobos_stock.png",
+          "after": "data/screenshots/vhunt2/select_huitzil_english.png",
           "caption": "Character select. Phobos becomes Huitzil, his official Western name."
         },
         {
-          "single": "../capcom/translations/vhunt2/work/vhunt2_live_anakaris_quote_no_power_review_harness/vhunt2_6000_quote_candidate.png",
+          "single": "data/screenshots/vhunt2/raptor_select.png",
+          "caption": "Capcom's hidden English name art spelled him \"L.Rapter\". It now reads L.Raptor everywhere it appears."
+        },
+        {
+          "single": "data/screenshots/vhunt2/quote_anakaris.png",
           "caption": "Post-fight quotes in English (Anakaris shown)."
         },
         {
-          "single": "../capcom/translations/vhunt2/work/vhunt2_narrative_acceptance/pyron/vhunt2_17300_ending_08.png",
+          "single": "data/screenshots/vhunt2/ending_pyron.png",
           "caption": "Ending narration in English (Pyron's ending shown)."
         }
       ],
       "notes": [
-        "MAME reports checksum warnings for the three patched program ROMs. This is expected; the game boots and plays normally.",
-        "Where a line matches the Western Night Warriors or Vampire Savior arcade sets, the patch reuses Capcom's own English, but only where the Japanese text says the same thing."
+        "Release candidate: the translation is complete and tested, but the wording review is still open. Report anything that reads badly.",
+        "MAME reports checksum warnings for the seven patched files. This is expected; the game boots and plays normally."
+      ],
+      "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-09-17",
+          "items": [
+            "The translation now uses Capcom's official Darkstalkers 3 English wherever it was accurate to the Japanese, and the rest has been refined to match Capcom's style.",
+            "Oboro Bishamon's win now plays his own victory theme instead of a stage theme.",
+            "Capcom's hidden name art spelled Lord Raptor \"L.Rapter\". It now reads L.Raptor everywhere it appears.",
+            "Oboro Bishamon's silent win quote now shows as a clean row of dots, instead of stray marks.",
+            "The set now also changes four graphics ROMs for the name art, so rebuild it with the rc2 kit."
+          ]
+        },
+        {
+          "version": "rc1",
+          "date": "2026-07-10",
+          "items": [
+            "First public release."
+          ]
+        }
       ]
     },
     {

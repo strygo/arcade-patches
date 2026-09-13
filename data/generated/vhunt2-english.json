@@ -1,6 +1,6 @@
 {
-  "ips_zipname": "vhunt2-english-rc1-ips.zip",
-  "mra_zipname": "vhunt2-english-rc1-mra.zip",
+  "ips_zipname": "vhunt2-english-rc2-ips.zip",
+  "mra_zipname": "vhunt2-english-rc2-mra.zip",
   "members": [
     {
       "name": "dl-1425.bin",
@@ -36,7 +36,8 @@
       "name": "vh2.13m",
       "size": 4194304,
       "stock_crc32": "3b02ddaa",
-      "action": "copy"
+      "action": "patch",
+      "patched_crc32": "3a56e2f4"
     },
     {
       "name": "vh2.14m",
@@ -48,7 +49,8 @@
       "name": "vh2.15m",
       "size": 4194304,
       "stock_crc32": "4e40de66",
-      "action": "copy"
+      "action": "patch",
+      "patched_crc32": "aa61e461"
     },
     {
       "name": "vh2.16m",
@@ -60,7 +62,8 @@
       "name": "vh2.17m",
       "size": 4194304,
       "stock_crc32": "b31d00c9",
-      "action": "copy"
+      "action": "patch",
+      "patched_crc32": "ccd2f7c4"
     },
     {
       "name": "vh2.18m",
@@ -72,7 +75,8 @@
       "name": "vh2.19m",
       "size": 4194304,
       "stock_crc32": "149be3ab",
-      "action": "copy"
+      "action": "patch",
+      "patched_crc32": "5df31cf6"
     },
     {
       "name": "vh2.20m",
@@ -85,14 +89,14 @@
       "size": 524288,
       "stock_crc32": "9ae8f186",
       "action": "patch",
-      "patched_crc32": "1ce8d926"
+      "patched_crc32": "10da5708"
     },
     {
       "name": "vh2j.04a",
       "size": 524288,
       "stock_crc32": "e2fabf53",
       "action": "patch",
-      "patched_crc32": "6b232eae"
+      "patched_crc32": "60cf3a23"
     },
     {
       "name": "vh2j.05",
