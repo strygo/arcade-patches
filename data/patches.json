@@ -6,6 +6,28 @@
       "A lot of great arcade games never made it out of Japan, and plenty of others had their best material added later, on the home ports. Re-recorded soundtracks, cutscenes the arcade version never had, characters that turned up years afterward. The patches here put that work back onto the arcade hardware it belongs on.",
       "Each one runs against your own copy of the game, on a real board, on a MiSTer, or in MAME. No game data is hosted here, and nothing goes out until it has been tested on the real thing."
     ],
+    "sections": [
+      {
+        "key": "arrangements",
+        "title": "Audio Arrangements",
+        "description": "When Capcom brought its arcade games home on CD, it re-recorded the music. These put those soundtracks back under the arcade games on MiSTer, while every punch, voice and jingle still comes from the board."
+      },
+      {
+        "key": "enhanced",
+        "title": "Enhanced Versions",
+        "description": "Arcade games with the best of their later versions built in: characters, modes, cutscenes and more from the home ports, running as real arcade games. The originals stay intact underneath."
+      },
+      {
+        "key": "restorations",
+        "title": "Restorations",
+        "description": "Some games lost things on the way out of Japan: quotes, endings, even characters, or the ability to run outside Japan at all. A restoration puts back what the Japanese version had and leaves the rest of the game as it was."
+      },
+      {
+        "key": "translations",
+        "title": "Translations",
+        "description": "Games that only ever came out in Japan, translated into English so everyone can play them."
+      }
+    ],
     "repo_url": null,
     "site_url": "https://strygo.github.io/arcade-patches/",
     "contact_note": "For questions, corrections, or takedown requests, open an issue on the GitHub repository.",
@@ -17,6 +39,7 @@
       "slug": "cps-plus",
       "title": "CPS+",
       "subtitle": "Arranged CD-era soundtracks for CPS-1 & CPS-2 arcade games on MiSTer",
+      "section": "arrangements",
       "status": "released",
       "version": "1.3",
       "date": "2026-09-17",
@@ -591,6 +614,7 @@
       "slug": "vhunt2-english",
       "title": "Night Warriors 2",
       "subtitle": "English translation",
+      "section": "translations",
       "status": "release-candidate",
       "version": "rc2",
       "date": "2026-09-17",
@@ -695,6 +719,7 @@
       "slug": "vsav2-english",
       "title": "Vampire Savior 2",
       "subtitle": "English translation",
+      "section": "translations",
       "status": "release-candidate",
       "version": "rc2",
       "date": "2026-09-17",
@@ -803,6 +828,7 @@
       "slug": "sfz3ugd-multiregion",
       "title": "Street Fighter Alpha 3 Upper",
       "subtitle": "NAOMI GD-ROM multi-region patch",
+      "section": "restorations",
       "status": "released",
       "version": "1.0",
       "date": "2026-07-10",
@@ -872,6 +898,7 @@
       "slug": "sfa2-gold",
       "title": "Street Fighter Alpha 2 Gold",
       "subtitle": "Zero 2 Dash, rebuilt for CPS-2 hardware",
+      "section": "enhanced",
       "status": "release-candidate",
       "version": "rc3",
       "date": "2026-09-17",
@@ -1006,6 +1033,7 @@
       "slug": "sfz2al-restoration",
       "title": "Street Fighter Zero 2 Alpha",
       "subtitle": "English restoration \u00b7 The Japanese script, all of it",
+      "section": "restorations",
       "status": "release-candidate",
       "version": "rc1",
       "date": "2026-09-17",
@@ -1173,6 +1201,7 @@
       "slug": "final-fight-ex",
       "title": "Final Fight EX",
       "subtitle": "The Sega CD cutscenes, on the arcade board",
+      "section": "enhanced",
       "status": "release-candidate",
       "version": "rc2",
       "date": "2026-09-17",
@@ -1281,6 +1310,7 @@
       "slug": "ssf2t-gmc",
       "title": "Super Street Fighter II Turbo: Grand Master Challenge",
       "subtitle": "English restoration \u00b7 Japan's Super Turbo",
+      "section": "restorations",
       "status": "release-candidate",
       "version": "rc2",
       "date": "2026-09-17",
@@ -1485,6 +1515,7 @@
       "slug": "ssf2-ex",
       "title": "Super Street Fighter II EX: The Ultimate Championship",
       "subtitle": "Japan's Super Turbo, with everything added back",
+      "section": "enhanced",
       "status": "release-candidate",
       "version": "rc1",
       "date": "2026-09-17",
@@ -1722,6 +1753,7 @@
       "slug": "mshvsf-restoration",
       "title": "Marvel Super Heroes vs. Street Fighter",
       "subtitle": "English restoration \u00b7 Everything the Japanese board has",
+      "section": "restorations",
       "status": "release-candidate",
       "version": "rc1",
       "date": "2026-09-17",
@@ -1945,6 +1977,7 @@
       "slug": "mshvsf-ex",
       "title": "Marvel Super Heroes vs. Street Fighter EX",
       "subtitle": "Norimaro, the bosses and more, in every region",
+      "section": "enhanced",
       "status": "release-candidate",
       "version": "rc1",
       "date": "2026-09-17",

@@ -100,6 +100,11 @@ header.site .tagline {
 .badge.research { background: var(--badge-gray); }
 .badge.plain { background: var(--badge-gray); text-transform: none; letter-spacing: 0; }
 
+/* index sections: one per kind of project */
+section.kind { margin-top: 2.4em; }
+section.kind h2.kind { margin-top: 0; margin-bottom: 0.2em; }
+section.kind .kind-intro { color: var(--text-dim); font-size: 0.95rem; margin: 0.4em 0 1em; }
+
 /* index cards */
 .card {
   display: flex;

@@ -829,9 +829,18 @@ def badges(patch: dict) -> str:
 
 def render_index(site: dict, patches: list, thumbs: dict,
                  projects: list = (), project_thumbs: dict = {}) -> str:
+    """The home page: the intro, then one section per kind of project (site
+    `sections`, in order), each with its description and its cards.  Every
+    patch and project names its section; an entry without one fails the
+    build rather than silently disappearing from the page."""
     intro = "\n".join(f"<p>{esc(p)}</p>" for p in site["intro"])
-    featured = []
-    for proj in projects:
+    keys = [sec["key"] for sec in site["sections"]]
+    for entry in list(projects) + list(patches):
+        if entry.get("section") not in keys:
+            raise SystemExit(f"{entry['slug']}: section {entry.get('section')!r} "
+                             f"is not one of {keys}")
+
+    def featured_card(proj: dict) -> str:
         thumb = project_thumbs.get(proj["slug"])
         thumb_html = (
             f'<img class="thumb" src="{esc(thumb)}" '
@@ -839,7 +848,7 @@ def render_index(site: dict, patches: list, thumbs: dict,
         )
         stats = proj.get("featured_stats", "")
         stats_html = f'<div class="stats">{esc(stats)}</div>' if stats else ""
-        featured.append(f"""<a class="card featured" href="{esc(proj['slug'])}/">
+        return f"""<a class="card featured" href="{esc(proj['slug'])}/">
   <div>
     <h2>{esc(proj["title"])}</h2>
     <div class="sub">{esc(proj['subtitle'])}</div>
@@ -847,24 +856,36 @@ def render_index(site: dict, patches: list, thumbs: dict,
     {stats_html}
   </div>
   {thumb_html}
-</a>""")
-    cards = []
-    for patch in patches:
+</a>"""
+
+    def patch_card(patch: dict) -> str:
         thumb = thumbs.get(patch["slug"])
         thumb_html = (
             f'<img class="thumb" src="{esc(thumb)}" alt="{esc(patch["title"])} screenshot">'
             if thumb
             else ""
         )
-        cards.append(f"""<a class="card" href="{esc(patch['slug'])}/">
+        return f"""<a class="card" href="{esc(patch['slug'])}/">
   <div>
     <h2>{esc(patch["title"])}</h2>
     <div class="sub">{esc(patch['subtitle'])} · {esc(patch['game'])}</div>
     <p class="summary">{esc(patch['summary'])}</p>
   </div>
   {thumb_html}
-</a>""")
-    body = f"{intro}\n{''.join(featured)}{''.join(cards)}"
+</a>"""
+
+    sections = []
+    for sec in site["sections"]:
+        cards = ([featured_card(p) for p in projects if p["section"] == sec["key"]]
+                 + [patch_card(p) for p in patches if p["section"] == sec["key"]])
+        if not cards:
+            continue
+        sections.append(f"""<section class="kind" id="{esc(sec['key'])}">
+<h2 class="kind">{esc(sec['title'])}</h2>
+<p class="kind-intro">{esc(sec['description'])}</p>
+{''.join(cards)}
+</section>""")
+    body = f"{intro}\n" + "\n".join(sections)
     return page(site, site["title"], body)
 
 
