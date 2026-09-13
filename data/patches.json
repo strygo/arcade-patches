@@ -902,6 +902,173 @@
       ]
     },
     {
+      "slug": "sfz2al-restoration",
+      "title": "Street Fighter Zero 2 Alpha",
+      "subtitle": "English restoration \u00b7 The Japanese script, all of it",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-09-17",
+      "game": "Street Fighter Zero 2 Alpha (Asia 960826)",
+      "set": "sfz2al",
+      "hardware": "Capcom CPS-2",
+      "patch_noun": "restoration",
+      "patch_kind": "English restoration patch",
+      "patch_intro": "An unofficial fan restoration of Street Fighter Zero 2 Alpha (Asia 960826): the Japanese game's full story, endings and win quotes, in English.",
+      "summary": "Zero 2 Alpha's English script was a cut-down one: shorter story scenes, a handful of random win quotes, and no ending of his own for Evil Ryu. This puts the whole Japanese script back, in English.",
+      "description": [
+        "Street Fighter Zero 2 Alpha is the updated Alpha 2, and its Asian board plays in English. But that English script was a shortened one. Story scenes lost pages, Evil Ryu borrowed Ryu's ending, and each fighter picked from four random win quotes instead of the hundreds the Japanese game has.",
+        "The English Restoration is the Japanese script, in English. Every story and ending page is back, in the Japanese order. Evil Ryu has his own ending again, and his scene with Akuma. All 452 win quotes are here, picked by who you beat and how much health you had left, just like in Japan. Where Capcom's English said the same thing as the Japanese it's kept; everything else is newly translated.",
+        "A few smaller things come along: red blood on hits, as in Japan; Birdie's third victory pose, which the export board swapped out; and the Manual guard panel on the select screen now explains itself.",
+        "The fighting is untouched, and the ROM sizes and key stay stock, so it drops in over the Asian set in MAME, HBMAME, on MiSTer or on a real CPS-2 board. The same restoration is in the English builds of Street Fighter Alpha 2 Gold.",
+        "This is a release candidate. It has been checked in MAME, route by route; a MiSTer hardware pass is still to come."
+      ],
+      "changes": [
+        "Every story page from the Japanese game, in the Japanese order, including the scenes the English script cut short",
+        "Evil Ryu's own ending, with his narration, instead of Ryu's",
+        "Evil Ryu's scene with Akuma, back in",
+        "All 452 win quotes from the Japanese game, in English, picked by opponent and remaining health, and centered on screen",
+        "Every ending in full, in English",
+        "Story, ending and quote text translated from the Japanese, keeping Capcom's English wherever it matched",
+        "Red blood on hits, as in Japan",
+        "Birdie's third victory pose, back",
+        "The Manual guard panel explains itself (it appears when the operator turns on Auto Guard)",
+        "Gameplay untouched"
+      ],
+      "comparison": {
+        "heading": "Compared with the boards",
+        "intro": [
+          "How the English Restoration compares with the Japanese and Asian boards."
+        ],
+        "columns": [
+          "",
+          "Japan",
+          "Asia (English)",
+          "English Restoration"
+        ],
+        "rows": [
+          [
+            "Language",
+            "Japanese",
+            "English",
+            "English"
+          ],
+          [
+            "Story and ending pages",
+            "All",
+            "Some cut",
+            "All"
+          ],
+          [
+            "Evil Ryu's ending",
+            "His own",
+            "Ryu's",
+            "His own"
+          ],
+          [
+            "Evil Ryu's scene with Akuma",
+            "Yes",
+            "Cut",
+            "Yes"
+          ],
+          [
+            "Win quotes",
+            "452, by opponent and health",
+            "Four per fighter, at random",
+            "452, by opponent and health"
+          ],
+          [
+            "Blood",
+            "Red",
+            "White",
+            "Red"
+          ],
+          [
+            "Birdie's third victory pose",
+            "Yes",
+            "Swapped",
+            "Yes"
+          ],
+          [
+            "Gameplay",
+            "Original",
+            "Original",
+            "Original"
+          ]
+        ]
+      },
+      "feedback": true,
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/sfz2al.zip",
+        "patched_zip": "../capcom/backports/sfa2gold/out/english_restoration/sfz2al.zip"
+      },
+      "mra": {
+        "base": "data/mra/sfz2al.mra",
+        "name": "Street Fighter Zero 2 Alpha (Asia) [English Restoration]",
+        "setname": "sfz2alr",
+        "filename": "Street Fighter Zero 2 Alpha (Asia) [English Restoration].mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+        "subdir": "_Asia",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo",
+        "region": "Asia"
+      },
+      "hbmame": {
+        "setname": "sfz2alr",
+        "renames": {
+          "szaa.03": "szaa.03",
+          "szaa.04": "szaa.04",
+          "szaa.05": "szaa.05",
+          "szaa.07": "szaa.07",
+          "sza.13m": "sza.13m",
+          "sza.15m": "sza.15m",
+          "sza.17m": "sza.17m",
+          "sza.19m": "sza.19m"
+        }
+      },
+      "screenshots": [
+        {
+          "single": "data/screenshots/sfz2al-restoration/ending_evil_ryu.png",
+          "caption": "Evil Ryu's own ending, back in English."
+        },
+        {
+          "single": "data/screenshots/sfz2al-restoration/story_ryu_akuma.png",
+          "caption": "Ryu faces Akuma, in the scene the English script cut."
+        },
+        {
+          "single": "data/screenshots/sfz2al-restoration/quote_evil_ryu.png",
+          "caption": "Evil Ryu has his own win quotes, like every fighter in the Japanese game."
+        },
+        {
+          "single": "data/screenshots/sfz2al-restoration/quote_ryu.png",
+          "caption": "All 452 Japanese win quotes, in English, picked by who you beat and how you did."
+        },
+        {
+          "before": "data/screenshots/sfz2al-restoration/blood_stock.png",
+          "after": "data/screenshots/sfz2al-restoration/blood_restoration.png",
+          "before_label": "Asian board",
+          "after_label": "English Restoration",
+          "caption": "Red blood on hits, as in Japan."
+        },
+        {
+          "single": "data/screenshots/sfz2al-restoration/select_manual.png",
+          "caption": "The Manual guard panel now tells you what it means."
+        }
+      ],
+      "related": [
+        {
+          "label": "Street Fighter Alpha 2 Gold",
+          "url": "../sfa2-gold/",
+          "note": "the PlayStation 2 edition rebuilt for CPS-2, whose English builds carry this restoration too"
+        }
+      ],
+      "notes": [
+        "MAME shows checksum warnings for the eight patched files. That's expected; the game plays normally. HBMAME with the sfz2alr set definition loads it without them.",
+        "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Asian set."
+      ]
+    },
+    {
       "slug": "final-fight-cd",
       "title": "Final Fight \u2014 CD Cutscenes",
       "subtitle": "Sega CD cutscenes on the CPS-1 arcade board",

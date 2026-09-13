@@ -1,0 +1,134 @@
+{
+  "ips_zipname": "sfz2al-restoration-rc1-ips.zip",
+  "mra_zipname": "sfz2al-restoration-rc1-mra.zip",
+  "members": [
+    {
+      "name": "dl-1425.bin",
+      "size": 24576,
+      "stock_crc32": "d6cf5ef5",
+      "action": "copy"
+    },
+    {
+      "name": "sfz2al.key",
+      "size": 20,
+      "stock_crc32": "2904963e",
+      "action": "copy"
+    },
+    {
+      "name": "sza.01",
+      "size": 131072,
+      "stock_crc32": "1bc323cf",
+      "action": "copy"
+    },
+    {
+      "name": "sza.02",
+      "size": 131072,
+      "stock_crc32": "ba6a5013",
+      "action": "copy"
+    },
+    {
+      "name": "sza.11m",
+      "size": 2097152,
+      "stock_crc32": "aa47a601",
+      "action": "copy"
+    },
+    {
+      "name": "sza.12m",
+      "size": 2097152,
+      "stock_crc32": "2237bc53",
+      "action": "copy"
+    },
+    {
+      "name": "sza.13m",
+      "size": 4194304,
+      "stock_crc32": "4d1f1f22",
+      "action": "patch",
+      "patched_crc32": "a669111c"
+    },
+    {
+      "name": "sza.14m",
+      "size": 1048576,
+      "stock_crc32": "0560c6aa",
+      "action": "copy"
+    },
+    {
+      "name": "sza.15m",
+      "size": 4194304,
+      "stock_crc32": "19cea680",
+      "action": "patch",
+      "patched_crc32": "5136f828"
+    },
+    {
+      "name": "sza.16m",
+      "size": 1048576,
+      "stock_crc32": "ae940f87",
+      "action": "copy"
+    },
+    {
+      "name": "sza.17m",
+      "size": 4194304,
+      "stock_crc32": "e01b4588",
+      "action": "patch",
+      "patched_crc32": "f52aadd7"
+    },
+    {
+      "name": "sza.18m",
+      "size": 1048576,
+      "stock_crc32": "4bc3c8bc",
+      "action": "copy"
+    },
+    {
+      "name": "sza.19m",
+      "size": 4194304,
+      "stock_crc32": "0feeda64",
+      "action": "patch",
+      "patched_crc32": "619cf4b2"
+    },
+    {
+      "name": "sza.20m",
+      "size": 1048576,
+      "stock_crc32": "39e674c0",
+      "action": "copy"
+    },
+    {
+      "name": "szaa.03",
+      "size": 524288,
+      "stock_crc32": "88e7023e",
+      "action": "patch",
+      "patched_crc32": "48891fd5"
+    },
+    {
+      "name": "szaa.04",
+      "size": 524288,
+      "stock_crc32": "ae8ec36e",
+      "action": "patch",
+      "patched_crc32": "45807976"
+    },
+    {
+      "name": "szaa.05",
+      "size": 524288,
+      "stock_crc32": "f053a55e",
+      "action": "patch",
+      "patched_crc32": "f132bb74"
+    },
+    {
+      "name": "szaa.06",
+      "size": 524288,
+      "stock_crc32": "cfc0e7a8",
+      "action": "copy"
+    },
+    {
+      "name": "szaa.07",
+      "size": 524288,
+      "stock_crc32": "5feb8b20",
+      "action": "patch",
+      "patched_crc32": "13733b2b"
+    },
+    {
+      "name": "szaa.08",
+      "size": 524288,
+      "stock_crc32": "6eb6d412",
+      "action": "copy"
+    }
+  ]
+}
