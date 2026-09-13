@@ -1152,6 +1152,229 @@
       ]
     },
     {
+      "slug": "mshvsf-restoration",
+      "title": "Marvel Super Heroes vs. Street Fighter",
+      "subtitle": "English restoration \u00b7 Everything the Japanese board has",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-09-17",
+      "game": "Marvel Super Heroes vs. Street Fighter (Japan 970707)",
+      "set": "mshvsfj",
+      "hardware": "Capcom CPS-2",
+      "patch_noun": "restoration",
+      "patch_kind": "English restoration patch",
+      "patch_intro": "An unofficial fan restoration of Marvel Super Heroes vs. Street Fighter (Japan 970707): the Japanese board's content, in English, in a USA build and a Japanese build.",
+      "summary": "The US board left things out: no Norimaro, generic endings for the secret fighters, and half the win quotes. This puts it all back, in English, and changes nothing else.",
+      "description": [
+        "Marvel Super Heroes vs. Street Fighter wasn't the same game everywhere. The Japanese board has Norimaro on the select screen with his own ending, real endings for Mech-Zangief, Shadow and Dark Sakura, and sixteen win quotes per fighter. The US board dropped Norimaro entirely, gave the secret fighters a generic ending, and cut the win quotes to eight.",
+        "The English Restoration is the Japanese game, in English. Norimaro is back, with his ending. The secret fighters get their own endings and art. All sixteen win quotes per fighter and all seventeen standard endings are translated fresh from the Japanese.",
+        "Nothing else changes. The title, the secret-character codes, the team rules and the bosses are exactly as they were, and the fighting is untouched. If you want more, like playable bosses, any team you like, extra colors and eight speeds, that's EX, which includes everything here.",
+        "There are two builds. The USA build is the English one. The Japan build keeps its Japanese text and gets the few fixes that apply to it. Both run in MAME, HBMAME and on MiSTer.",
+        "This is a release candidate. Both builds boot and have been checked in MAME; longer play testing and a MiSTer hardware pass are still to come."
+      ],
+      "changes": [
+        "Norimaro is back, on the select screen and as a computer opponent",
+        "Norimaro's own ending, in English",
+        "Mech-Zangief, Shadow and Dark Sakura get their own endings and art, instead of the generic one",
+        "Sixteen win quotes per fighter, translated from the Japanese (the US board has eight)",
+        "All seventeen standard endings, translated from the Japanese",
+        "Pick a secret fighter and the select screen shows their name (Mech-Zangief, not Zangief)",
+        "Japan build: the same fixes, with the Japanese text kept",
+        "Title, codes, team rules, bosses and gameplay untouched"
+      ],
+      "comparison": {
+        "heading": "Compared with the boards",
+        "intro": [
+          "How the English Restoration compares with the Japanese and US boards, and with EX."
+        ],
+        "columns": [
+          "",
+          "Japan",
+          "USA",
+          "English Restoration",
+          "EX"
+        ],
+        "rows": [
+          [
+            "Language",
+            "Japanese",
+            "English",
+            "English",
+            "English"
+          ],
+          [
+            "Norimaro",
+            "Yes",
+            "No",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "Norimaro's ending",
+            "His own",
+            "None",
+            "His own",
+            "His own"
+          ],
+          [
+            "Mech-Zangief, Shadow, Dark Sakura endings",
+            "Their own",
+            "Generic",
+            "Their own",
+            "Their own"
+          ],
+          [
+            "Win quotes per fighter",
+            "16",
+            "8",
+            "16, translated from the Japanese",
+            "16, translated from the Japanese"
+          ],
+          [
+            "Secret fighter's name on the select screen",
+            "Base fighter's",
+            "Base fighter's",
+            "Their own",
+            "Their own"
+          ],
+          [
+            "Hidden characters",
+            "Codes",
+            "Codes",
+            "Codes",
+            "Two-second hold, or codes"
+          ],
+          [
+            "Cyber-Akuma and Apocalypse",
+            "Boss only",
+            "Boss only",
+            "Boss only",
+            "Playable"
+          ],
+          [
+            "Same fighter twice",
+            "No",
+            "No",
+            "No",
+            "Yes"
+          ],
+          [
+            "Colors per fighter",
+            "2",
+            "2",
+            "2",
+            "4"
+          ],
+          [
+            "Game speeds",
+            "3",
+            "3",
+            "3",
+            "8"
+          ],
+          [
+            "Gameplay",
+            "Original",
+            "Original",
+            "Original",
+            "Original"
+          ]
+        ]
+      },
+      "feedback": true,
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/mshvsfj.zip",
+        "variants": [
+          {
+            "key": "usa",
+            "label": "USA (English)",
+            "patched_zip": "../capcom/backports/mshvsf/out/regional_restoration/hbmame/mshvsfru.zip",
+            "mra": {
+              "name": "Marvel Super Heroes Vs. Street Fighter (USA) [English Restoration]",
+              "setname": "mshvsfru",
+              "filename": "Marvel Super Heroes Vs. Street Fighter (USA) [English Restoration].mra",
+              "region": "USA"
+            },
+            "hbmame": {
+              "setname": "mshvsfru",
+              "renames": {
+                "mvsj.03i": "mvsj.03i",
+                "mvsj.04i": "mvsj.04i",
+                "mvs.05h": "mvs.05h",
+                "mvs.07b": "mvs.07b"
+              }
+            }
+          },
+          {
+            "key": "japan",
+            "label": "Japan (Japanese)",
+            "patched_zip": "../capcom/backports/mshvsf/out/regional_restoration/hbmame/mshvsfrj.zip",
+            "mra": {
+              "name": "Marvel Super Heroes Vs. Street Fighter (Japan) [Restoration]",
+              "setname": "mshvsfrj",
+              "filename": "Marvel Super Heroes Vs. Street Fighter (Japan) [Restoration].mra",
+              "subdir": "_Japan",
+              "region": "Japan"
+            },
+            "hbmame": {
+              "setname": "mshvsfrj",
+              "renames": {
+                "mvsj.03i": "mvsj.03i",
+                "mvsj.04i": "mvsj.04i",
+                "mvs.05h": "mvs.05h",
+                "mvs.07b": "mvs.07b"
+              }
+            }
+          }
+        ]
+      },
+      "mra": {
+        "base": "data/mra/mshvsfj.mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo"
+      },
+      "screenshots": [
+        {
+          "before": "data/screenshots/mshvsf-restoration/select_stock_usa.png",
+          "after": "data/screenshots/mshvsf-restoration/select_restoration_usa.png",
+          "before_label": "US board",
+          "after_label": "English Restoration",
+          "caption": "The US board puts the game's logo where Norimaro should be. He's back."
+        },
+        {
+          "single": "data/screenshots/mshvsf-restoration/ending_norimaro_usa.png",
+          "caption": "Norimaro's own ending, in English."
+        },
+        {
+          "single": "data/screenshots/mshvsf-restoration/ending_shadow_usa.png",
+          "caption": "Shadow gets his real ending, not the generic one."
+        },
+        {
+          "single": "data/screenshots/mshvsf-restoration/ending_ryu_translated.png",
+          "caption": "Every standard ending is translated fresh from the Japanese."
+        }
+      ],
+      "related": [
+        {
+          "label": "Marvel Super Heroes vs. Street Fighter EX",
+          "url": "../mshvsf-ex/",
+          "note": "everything here, plus playable bosses, free teams, extra colors and eight speeds"
+        },
+        {
+          "label": "RQ87: Norimaro",
+          "url": "https://rq87.flyingomelette.com/RQ/Marvel/MSHSF/nor.html",
+          "note": "the Norimaro localization inventory this project credits"
+        }
+      ],
+      "notes": [
+        "MAME shows checksum warnings for the four patched files. That's expected; the game plays normally. HBMAME with the matching set definitions loads them without them.",
+        "Fan work, unaffiliated with Capcom or Marvel. The patch contains no ROM data; you need your own dump of the Japanese set."
+      ]
+    },
+    {
       "slug": "mshvsf-ex",
       "title": "Marvel Super Heroes vs. Street Fighter EX",
       "subtitle": "Norimaro, the bosses and more, in every region",
