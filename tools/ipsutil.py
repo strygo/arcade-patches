@@ -52,6 +52,20 @@ def make_ips(src: bytes, dst: bytes) -> bytes:
     return b"".join(out)
 
 
+def make_ips_create(dst: bytes) -> bytes:
+    """An IPS patch that creates dst from an EMPTY file.
+
+    Patchers grow the file with zeros to reach each record, so only non-zero
+    runs need records -- plus the final byte, which fixes the length."""
+    patch = make_ips(bytes(len(dst)), dst)
+    if dst and dst[-1] == 0:
+        last = len(dst) - 1
+        if last == EOF_OFFSET:
+            last -= 1
+        patch = patch[:-3] + last.to_bytes(3, "big") + (len(dst) - last).to_bytes(2, "big") + dst[last:] + EOF
+    return patch
+
+
 def apply_ips(patch: bytes, src: bytes) -> bytes:
     """Apply an IPS patch (standard records + RLE) to src."""
     if patch[:5] != MAGIC:
