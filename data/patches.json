@@ -1381,6 +1381,243 @@
       ]
     },
     {
+      "slug": "ssf2-ex",
+      "title": "Super Street Fighter II EX: The Ultimate Championship",
+      "subtitle": "Japan's Super Turbo, with everything added back",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-09-17",
+      "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
+      "set": "ssf2xj",
+      "hardware": "Capcom CPS-2",
+      "patch_noun": "edition",
+      "patch_kind": "EX edition patch",
+      "patch_intro": "An unofficial fan edition of Super Street Fighter II X: Grand Master Challenge (Japan 940311): Shin and Ten Akuma, the bonus stages, Tournament Battle and more, in a USA build and a Japanese build.",
+      "summary": "Japan's Super Turbo with the extras it never had together: Shin Akuma and Ten Akuma on the select screen, the bonus stages back, Tournament Battle, two more colors and Free Play. In English or Japanese.",
+      "description": [
+        "Super Turbo is the version competitive players swear by, but it left things behind. The bonus stages from Super Street Fighter II were gone. Shin Akuma was a hidden boss you had to earn, and Ten Akuma only turned up years later at home. Tournament Battle, the eight-player linked-cabinet mode, stayed with the earlier Super Street Fighter II.",
+        "EX puts it together on the arcade game. Shin and Ten Akuma are playable from the start, picked from Ryu. The car, the falling barrels and the oil drums are back between fights. Link cabinets with the adapter and it runs Tournament Battle; without it, it plays as normal. Every fighter gets two more colors, the move names are the modern ones, and the new title reads The Ultimate Championship.",
+        "Nothing about the existing fighters changes: this is Japan's Super Turbo underneath. The USA build carries all of Grand Master Challenge's English text; the Japan build keeps the Japanese.",
+        "EX keeps the board's own ROM layout: the same files as the Japanese set, so it runs in MAME, HBMAME and on MiSTer, and on a real CPS-2 board.",
+        "This is a release candidate. It passes its checks in MAME and HBMAME; MiSTer and a real link cable are still to be tested."
+      ],
+      "changes": [
+        "Shin Akuma and Ten Akuma, playable from the start: on Ryu, hold Start and press three kicks for Shin, or MP, HP, MK and HK together for Ten (hold Start and three punches still gives Akuma)",
+        "Ten Akuma has his Super gauge and the Raging Demon, with the \u5929 pose",
+        "The three bonus stages from Super Street Fighter II, back in one-player games: the car after three fights, the barrels after six, the oil drums after nine",
+        "Tournament Battle: with the link adapter, eight players and three matches across linked cabinets; without it, the game plays normally",
+        "A new title screen: The Ultimate Championship, with an EX mark",
+        "Two more colors for every fighter: pick with two punches or two kicks, or hold Start as well for the Old version in those colors. The VS screen and the fight portrait show the color you picked",
+        "Free Play in the Japanese build too",
+        "Modern move names: Cammy's Spiral Arrow, Cannon Spike and Quick Spin Knuckle, and Dee Jay's Air Slasher, with the Japanese voice callouts in the USA build",
+        "USA build: all of Grand Master Challenge's English. Japan build: the original Japanese text, with Grand Master Challenge's backdrop fixes",
+        "The existing fighters play exactly as in Japan's Super Turbo"
+      ],
+      "comparison": {
+        "heading": "Compared with Super Turbo",
+        "intro": [
+          "How EX compares with the Japanese board and with Grand Master Challenge."
+        ],
+        "columns": [
+          "",
+          "Japan",
+          "Grand Master Challenge",
+          "EX"
+        ],
+        "rows": [
+          [
+            "Gameplay",
+            "Japanese version",
+            "Japanese version",
+            "Japanese version"
+          ],
+          [
+            "Language",
+            "Japanese",
+            "English",
+            "English (USA build) or Japanese (Japan build)"
+          ],
+          [
+            "Shin Akuma",
+            "Hidden boss",
+            "Hidden boss",
+            "Playable from the start"
+          ],
+          [
+            "Ten Akuma",
+            "No",
+            "No",
+            "Playable, with the Raging Demon"
+          ],
+          [
+            "Bonus stages",
+            "No",
+            "No",
+            "Car, barrels, oil drums"
+          ],
+          [
+            "Tournament Battle",
+            "No",
+            "No",
+            "Yes, with the link adapter"
+          ],
+          [
+            "Colors per fighter",
+            "8",
+            "8",
+            "10"
+          ],
+          [
+            "Free Play",
+            "No",
+            "Yes",
+            "Yes"
+          ],
+          [
+            "Title",
+            "Grand Master Challenge",
+            "Grand Master Challenge",
+            "The Ultimate Championship"
+          ],
+          [
+            "Runs in stock MAME",
+            "Yes",
+            "Yes",
+            "Yes"
+          ]
+        ]
+      },
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/ssf2xj.zip",
+        "variants": [
+          {
+            "key": "usa",
+            "label": "USA (English)",
+            "patched_zip": "../capcom/translations/ssf2x/out/enhanced/us/ssf2tuc.zip",
+            "mra": {
+              "name": "Super Street Fighter II EX: The Ultimate Championship (USA)",
+              "setname": "ssf2tuc",
+              "filename": "Super Street Fighter II EX The Ultimate Championship (USA).mra",
+              "region": "USA"
+            },
+            "hbmame": {
+              "setname": "ssf2tuc",
+              "renames": {
+                "sfx.13m": "sfx.13m",
+                "sfx.15m": "sfx.15m",
+                "sfx.17m": "sfx.17m",
+                "sfx.19m": "sfx.19m",
+                "sfx.21m": "sfx.21m",
+                "sfx.23m": "sfx.23m",
+                "sfx.25m": "sfx.25m",
+                "sfx.27m": "sfx.27m",
+                "sfxj.03d": "sfxj.03d",
+                "sfxj.04a": "sfxj.04a",
+                "sfxj.05": "sfxj.05",
+                "sfxj.06b": "sfxj.06b",
+                "sfxj.07a": "sfxj.07a",
+                "sfxj.08": "sfxj.08"
+              }
+            }
+          },
+          {
+            "key": "japan",
+            "label": "Japan (Japanese)",
+            "patched_zip": "../capcom/translations/ssf2x/out/enhanced/jp/ssf2xuc.zip",
+            "mra": {
+              "name": "Super Street Fighter II EX: The Ultimate Championship (Japan)",
+              "setname": "ssf2xuc",
+              "filename": "Super Street Fighter II EX The Ultimate Championship (Japan).mra",
+              "subdir": "_Japan",
+              "region": "Japan"
+            },
+            "hbmame": {
+              "setname": "ssf2xuc",
+              "renames": {
+                "sfx.21m": "sfx.21m",
+                "sfx.23m": "sfx.23m",
+                "sfx.25m": "sfx.25m",
+                "sfx.27m": "sfx.27m",
+                "sfxj.03d": "sfxj.03d",
+                "sfxj.04a": "sfxj.04a",
+                "sfxj.05": "sfxj.05",
+                "sfxj.06b": "sfxj.06b",
+                "sfxj.07a": "sfxj.07a",
+                "sfxj.08": "sfxj.08"
+              }
+            }
+          }
+        ]
+      },
+      "mra": {
+        "base": "data/mra/ssf2xj.mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Enhanced Versions",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo"
+      },
+      "screenshots": [
+        {
+          "single": "data/screenshots/ssf2-ex/title_usa.png",
+          "caption": "The Ultimate Championship, with the EX mark. USA build."
+        },
+        {
+          "single": "data/screenshots/ssf2-ex/title_japan.png",
+          "caption": "The Japan build keeps the big X."
+        },
+        {
+          "single": "data/screenshots/ssf2-ex/ten_raging_demon.png",
+          "caption": "Ten Akuma finishes with the Raging Demon and the \u5929 pose."
+        },
+        {
+          "before": "data/screenshots/ssf2-ex/portrait_vs_ryu.png",
+          "after": "data/screenshots/ssf2-ex/portrait_fight_ryu.png",
+          "before_label": "VS screen",
+          "after_label": "In the fight",
+          "caption": "Portraits follow the color you picked, including the two new ones. Ryu is shown in his tenth color."
+        },
+        {
+          "single": "data/screenshots/ssf2-ex/bonus_car.png",
+          "caption": "The car is back, along with the barrels and the oil drums."
+        },
+        {
+          "single": "data/screenshots/ssf2-ex/bonus_barrels.png",
+          "caption": "The falling barrels, at the original Super Street Fighter II speed."
+        },
+        {
+          "single": "data/screenshots/ssf2-ex/bonus_oil.png",
+          "caption": "The oil drums, after nine fights."
+        },
+        {
+          "single": "data/screenshots/ssf2-ex/title_tournament.png",
+          "caption": "Link cabinets and the title turns into The Tournament Battle."
+        }
+      ],
+      "related": [
+        {
+          "label": "Super Street Fighter II Turbo: Grand Master Challenge",
+          "url": "../ssf2t-gmc/",
+          "note": "the English restoration EX's USA build is built on"
+        },
+        {
+          "label": "originalgrego's SSF2X Tournament Battle restoration",
+          "url": "https://github.com/originalgrego/ssf2xjtb",
+          "note": "EX's Tournament Battle link code comes from this project"
+        },
+        {
+          "label": "CPS+",
+          "url": "../cps-plus/",
+          "note": "companion project: the Anniversary Edition and HD Remix soundtracks for EX on MiSTer, through its SSF2 EX MRAs"
+        }
+      ],
+      "notes": [
+        "Credits: the bonus stages are adapted from Capcom's Super Street Fighter II, the Tournament Battle link code comes from originalgrego's SSF2X Tournament Battle restoration, and Ten Akuma's move timing comes from the Dreamcast version.",
+        "MAME reports checksum warnings for the patched files. That's expected; the game plays normally. HBMAME with the ssf2tuc or ssf2xuc set definition loads it without them.",
+        "Fan work, unaffiliated with Capcom."
+      ]
+    },
+    {
       "slug": "mshvsf-restoration",
       "title": "Marvel Super Heroes vs. Street Fighter",
       "subtitle": "English restoration \u00b7 Everything the Japanese board has",

@@ -1,0 +1,389 @@
+{
+  "ips_zipname": "ssf2-ex-rc1-ips.zip",
+  "mra_zipname": "ssf2-ex-rc1-mra.zip",
+  "variants": [
+    {
+      "key": "usa",
+      "label": "USA (English)",
+      "members": [
+        {
+          "name": "dl-1425.bin",
+          "size": 24576,
+          "stock_crc32": "d6cf5ef5",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.01",
+          "size": 131072,
+          "stock_crc32": "b47b8835",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.02",
+          "size": 131072,
+          "stock_crc32": "0022633f",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.09",
+          "size": 524288,
+          "stock_crc32": "642fae3f",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.11m",
+          "size": 2097152,
+          "stock_crc32": "9bdbd476",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.12m",
+          "size": 2097152,
+          "stock_crc32": "a05e3aab",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.13m",
+          "size": 2097152,
+          "stock_crc32": "cf94d275",
+          "action": "patch",
+          "patched_crc32": "75dac0eb"
+        },
+        {
+          "name": "sfx.14m",
+          "size": 1048576,
+          "stock_crc32": "b7cc32e7",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.15m",
+          "size": 2097152,
+          "stock_crc32": "5eb703af",
+          "action": "patch",
+          "patched_crc32": "84dcc039"
+        },
+        {
+          "name": "sfx.16m",
+          "size": 1048576,
+          "stock_crc32": "8376ad18",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.17m",
+          "size": 2097152,
+          "stock_crc32": "ffa60e0f",
+          "action": "patch",
+          "patched_crc32": "bfcaf206"
+        },
+        {
+          "name": "sfx.18m",
+          "size": 1048576,
+          "stock_crc32": "f5b1b336",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.19m",
+          "size": 2097152,
+          "stock_crc32": "34e825c5",
+          "action": "patch",
+          "patched_crc32": "13a55fd3"
+        },
+        {
+          "name": "sfx.20m",
+          "size": 1048576,
+          "stock_crc32": "459d5c6b",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.21m",
+          "size": 1048576,
+          "stock_crc32": "e32854af",
+          "action": "patch",
+          "patched_crc32": "537c08de"
+        },
+        {
+          "name": "sfx.23m",
+          "size": 1048576,
+          "stock_crc32": "760f2927",
+          "action": "patch",
+          "patched_crc32": "d6f6a331"
+        },
+        {
+          "name": "sfx.25m",
+          "size": 1048576,
+          "stock_crc32": "1ee90208",
+          "action": "patch",
+          "patched_crc32": "df87c45d"
+        },
+        {
+          "name": "sfx.27m",
+          "size": 1048576,
+          "stock_crc32": "f814400f",
+          "action": "patch",
+          "patched_crc32": "ec70511e"
+        },
+        {
+          "name": "sfxj.03d",
+          "size": 524288,
+          "stock_crc32": "50b52b37",
+          "action": "patch",
+          "patched_crc32": "59a05dec"
+        },
+        {
+          "name": "sfxj.04a",
+          "size": 524288,
+          "stock_crc32": "af7767b4",
+          "action": "patch",
+          "patched_crc32": "ad1e9ae5"
+        },
+        {
+          "name": "sfxj.05",
+          "size": 524288,
+          "stock_crc32": "f4ff18f5",
+          "action": "patch",
+          "patched_crc32": "477b0a5e"
+        },
+        {
+          "name": "sfxj.06b",
+          "size": 524288,
+          "stock_crc32": "413477c2",
+          "action": "patch",
+          "patched_crc32": "e868b480"
+        },
+        {
+          "name": "sfxj.07a",
+          "size": 524288,
+          "stock_crc32": "a18b3d83",
+          "action": "patch",
+          "patched_crc32": "9655f0c5"
+        },
+        {
+          "name": "sfxj.08",
+          "size": 524288,
+          "stock_crc32": "2de76f10",
+          "action": "patch",
+          "patched_crc32": "ea0d1d90"
+        },
+        {
+          "name": "ssf2xj.key",
+          "size": 20,
+          "stock_crc32": "160d1424",
+          "action": "copy"
+        }
+      ],
+      "mra": {
+        "name": "Super Street Fighter II EX: The Ultimate Championship (USA)",
+        "setname": "ssf2tuc",
+        "filename": "Super Street Fighter II EX The Ultimate Championship (USA).mra",
+        "region": "USA"
+      },
+      "hbmame": {
+        "setname": "ssf2tuc",
+        "renames": {
+          "sfx.13m": "sfx.13m",
+          "sfx.15m": "sfx.15m",
+          "sfx.17m": "sfx.17m",
+          "sfx.19m": "sfx.19m",
+          "sfx.21m": "sfx.21m",
+          "sfx.23m": "sfx.23m",
+          "sfx.25m": "sfx.25m",
+          "sfx.27m": "sfx.27m",
+          "sfxj.03d": "sfxj.03d",
+          "sfxj.04a": "sfxj.04a",
+          "sfxj.05": "sfxj.05",
+          "sfxj.06b": "sfxj.06b",
+          "sfxj.07a": "sfxj.07a",
+          "sfxj.08": "sfxj.08"
+        }
+      }
+    },
+    {
+      "key": "japan",
+      "label": "Japan (Japanese)",
+      "members": [
+        {
+          "name": "dl-1425.bin",
+          "size": 24576,
+          "stock_crc32": "d6cf5ef5",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.01",
+          "size": 131072,
+          "stock_crc32": "b47b8835",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.02",
+          "size": 131072,
+          "stock_crc32": "0022633f",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.09",
+          "size": 524288,
+          "stock_crc32": "642fae3f",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.11m",
+          "size": 2097152,
+          "stock_crc32": "9bdbd476",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.12m",
+          "size": 2097152,
+          "stock_crc32": "a05e3aab",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.13m",
+          "size": 2097152,
+          "stock_crc32": "cf94d275",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.14m",
+          "size": 1048576,
+          "stock_crc32": "b7cc32e7",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.15m",
+          "size": 2097152,
+          "stock_crc32": "5eb703af",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.16m",
+          "size": 1048576,
+          "stock_crc32": "8376ad18",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.17m",
+          "size": 2097152,
+          "stock_crc32": "ffa60e0f",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.18m",
+          "size": 1048576,
+          "stock_crc32": "f5b1b336",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.19m",
+          "size": 2097152,
+          "stock_crc32": "34e825c5",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.20m",
+          "size": 1048576,
+          "stock_crc32": "459d5c6b",
+          "action": "copy"
+        },
+        {
+          "name": "sfx.21m",
+          "size": 1048576,
+          "stock_crc32": "e32854af",
+          "action": "patch",
+          "patched_crc32": "537c08de"
+        },
+        {
+          "name": "sfx.23m",
+          "size": 1048576,
+          "stock_crc32": "760f2927",
+          "action": "patch",
+          "patched_crc32": "d6f6a331"
+        },
+        {
+          "name": "sfx.25m",
+          "size": 1048576,
+          "stock_crc32": "1ee90208",
+          "action": "patch",
+          "patched_crc32": "df87c45d"
+        },
+        {
+          "name": "sfx.27m",
+          "size": 1048576,
+          "stock_crc32": "f814400f",
+          "action": "patch",
+          "patched_crc32": "ec70511e"
+        },
+        {
+          "name": "sfxj.03d",
+          "size": 524288,
+          "stock_crc32": "50b52b37",
+          "action": "patch",
+          "patched_crc32": "e6224e3f"
+        },
+        {
+          "name": "sfxj.04a",
+          "size": 524288,
+          "stock_crc32": "af7767b4",
+          "action": "patch",
+          "patched_crc32": "8479b16b"
+        },
+        {
+          "name": "sfxj.05",
+          "size": 524288,
+          "stock_crc32": "f4ff18f5",
+          "action": "patch",
+          "patched_crc32": "477b0a5e"
+        },
+        {
+          "name": "sfxj.06b",
+          "size": 524288,
+          "stock_crc32": "413477c2",
+          "action": "patch",
+          "patched_crc32": "ddb9cab8"
+        },
+        {
+          "name": "sfxj.07a",
+          "size": 524288,
+          "stock_crc32": "a18b3d83",
+          "action": "patch",
+          "patched_crc32": "9655f0c5"
+        },
+        {
+          "name": "sfxj.08",
+          "size": 524288,
+          "stock_crc32": "2de76f10",
+          "action": "patch",
+          "patched_crc32": "ea0d1d90"
+        },
+        {
+          "name": "ssf2xj.key",
+          "size": 20,
+          "stock_crc32": "160d1424",
+          "action": "copy"
+        }
+      ],
+      "mra": {
+        "name": "Super Street Fighter II EX: The Ultimate Championship (Japan)",
+        "setname": "ssf2xuc",
+        "filename": "Super Street Fighter II EX The Ultimate Championship (Japan).mra",
+        "subdir": "_Japan",
+        "region": "Japan"
+      },
+      "hbmame": {
+        "setname": "ssf2xuc",
+        "renames": {
+          "sfx.21m": "sfx.21m",
+          "sfx.23m": "sfx.23m",
+          "sfx.25m": "sfx.25m",
+          "sfx.27m": "sfx.27m",
+          "sfxj.03d": "sfxj.03d",
+          "sfxj.04a": "sfxj.04a",
+          "sfxj.05": "sfxj.05",
+          "sfxj.06b": "sfxj.06b",
+          "sfxj.07a": "sfxj.07a",
+          "sfxj.08": "sfxj.08"
+        }
+      }
+    }
+  ]
+}
