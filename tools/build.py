@@ -765,9 +765,30 @@ def copy_screenshots(patch: dict) -> list:
 # ------------------------------------------------------------------ html
 
 
+def versioned(html: str, depth: int) -> str:
+    """Append ?v=<content hash> to every local image, stylesheet and download
+    URL.  Screenshots are numbered by position (00_single.png, ...) and rc
+    kits are rebuilt under the same zip name, so without it a browser or the
+    Pages CDN keeps serving the old file under a page that now means a
+    different one.  Files that don't exist yet are left alone."""
+    here = DOCS if depth == 0 else DOCS / "_"
+
+    def sub(m):
+        attr, url = m.group(1), m.group(2)
+        if "://" in url or url.startswith(("#", "mailto:")) or "?" in url:
+            return m.group(0)
+        target = (here / url).resolve() if depth else (DOCS / url).resolve()
+        if not target.is_file() or DOCS.resolve() not in target.parents:
+            return m.group(0)
+        tag = hashlib.sha256(target.read_bytes()).hexdigest()[:10]
+        return f'{attr}="{url}?v={tag}"'
+
+    return re.sub(r'\b(src|href)="((?:\.\./)*(?:img/|downloads/|style\.css)[^"]*)"', sub, html)
+
+
 def page(site: dict, title: str, body: str, depth: int = 0) -> str:
     rel = "../" * depth
-    return f"""<!DOCTYPE html>
+    return versioned(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -795,7 +816,7 @@ def page(site: dict, title: str, body: str, depth: int = 0) -> str:
 </footer>
 </body>
 </html>
-"""
+""", depth)
 
 
 def repo_link(site: dict) -> str:
