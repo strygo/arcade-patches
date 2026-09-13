@@ -1,6 +1,6 @@
 {
-  "ips_zipname": "ssf2t-gmc-rc1-ips.zip",
-  "mra_zipname": "ssf2t-gmc-rc1-mra.zip",
+  "ips_zipname": "ssf2t-gmc-rc2-ips.zip",
+  "mra_zipname": "ssf2t-gmc-rc2-mra.zip",
   "members": [
     {
       "name": "dl-1425.bin",
@@ -119,7 +119,7 @@
       "size": 524288,
       "stock_crc32": "50b52b37",
       "action": "patch",
-      "patched_crc32": "deacc6a6"
+      "patched_crc32": "b8a10ee0"
     },
     {
       "name": "sfxj.04a",

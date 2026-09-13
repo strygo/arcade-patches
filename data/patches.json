@@ -1179,10 +1179,10 @@
     {
       "slug": "ssf2t-gmc",
       "title": "Super Street Fighter II Turbo: Grand Master Challenge",
-      "subtitle": "Japan's Super Turbo, in English",
+      "subtitle": "English restoration \u00b7 Japan's Super Turbo",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-09-10",
+      "version": "rc2",
+      "date": "2026-09-17",
       "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
       "set": "ssf2xj",
       "hardware": "Capcom CPS-2",
@@ -1278,16 +1278,22 @@
           ]
         ]
       },
+      "feedback": true,
       "artifact": {
         "stock_zip": "../capcom/roms/mame0260/ssf2xj.zip",
         "patched_zip": "../capcom/translations/ssf2x/out/release/ssf2tgmc.zip"
       },
       "mra": {
         "base": "data/mra/ssf2xj.mra",
-        "name": "Super Street Fighter II Turbo: Grand Master Challenge (English Restoration)",
+        "name": "Super Street Fighter II Turbo: Grand Master Challenge (USA) [English Restoration]",
         "setname": "ssf2tgmc",
-        "filename": "Super Street Fighter II Turbo Grand Master Challenge (English Restoration).mra",
-        "zip_dir": "_Arcade/_Translations"
+        "filename": "Super Street Fighter II Turbo Grand Master Challenge (USA) [English Restoration].mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo",
+        "region": "USA"
       },
       "hbmame": {
         "setname": "ssf2tgmc",
@@ -1330,6 +1336,10 @@
         {
           "single": "data/screenshots/ssf2t-gmc/akuma_dialogue.png",
           "caption": "Akuma's intro dialogue, cut from the export game, back in English."
+        },
+        {
+          "single": "data/screenshots/ssf2t-gmc/ending_guile_jane.png",
+          "caption": "The endings play out as they do in Japan: Jane and Amy arrive in Guile's ending, a scene the US game skips."
         }
       ],
       "related": [
@@ -1347,6 +1357,27 @@
       "notes": [
         "MAME shows checksum warnings for the seven patched files. That's expected; the game plays normally. HBMAME with the ssf2tgmc set definition loads it without them.",
         "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
+      ],
+      "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-09-17",
+          "items": [
+            "The English was checked line by line against Capcom's own US script. Wherever Capcom's wording kept the Japanese meaning, it's now used: 54 lines across the win quotes, the endings and the Tournament Battle rules. Chun-Li's \"Men are no challenge at all\", for one, is now \"You're no challenge at all\". The Japanese story points stay, like Shoryuken instead of Sheng Long, and Cammy's spy story.",
+            "Every ending now plays out exactly as it does in Japan. Some scenes were being skipped under the US region, like Jane and Amy arriving to stop Guile.",
+            "Ending text looks like the US game's again: the fighters' lines in blue, everyone else in pink, and every caption centered in its box.",
+            "Akuma's reply to M. Bison is complete: \"I am your shadow. Those possessed by the shadow must die. Your time is up!\"",
+            "Dhalsim's teleport tip now explains that your input decides where he reappears.",
+            "Only sfxj.03d changes, so rebuild your set with the rc2 kit."
+          ]
+        },
+        {
+          "version": "rc1",
+          "date": "2026-09-10",
+          "items": [
+            "First public release."
+          ]
+        }
       ]
     },
     {
