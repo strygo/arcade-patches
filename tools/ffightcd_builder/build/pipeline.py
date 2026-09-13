@@ -145,9 +145,18 @@ def cd6_tail(c6: dict) -> int:
 def run(cmd, env=None):
     print("+", " ".join(str(c) for c in cmd), flush=True)
     t0 = time.monotonic()
-    subprocess.run([str(c) for c in cmd], check=True,
-                   env=dict(os.environ, **(env or {})))
+    rc = subprocess.run([str(c) for c in cmd],
+                        env=dict(os.environ, **(env or {}))).returncode
+    if rc:
+        stage_failed(cmd, rc)
     print(f"  [{Path(cmd[1]).name} {time.monotonic() - t0:.1f}s]", flush=True)
+
+
+def stage_failed(cmd, rc):
+    """One readable line instead of a traceback stacked on the stage's own:
+    the stage has already printed what went wrong."""
+    raise SystemExit(f"stage {Path(str(cmd[1])).name} failed (exit {rc}); "
+                     f"its error is printed above")
 
 
 def spawn(cmd, log: Path, env=None):
@@ -177,7 +186,7 @@ def join(handle):
     print(f"  [{Path(cmd[1]).name} {el:.1f}s wall, overlapped]", flush=True)
     sys.stdout.flush()
     if rc:
-        raise subprocess.CalledProcessError(rc, [str(c) for c in cmd])
+        stage_failed(cmd, rc)
 
 
 def tiles(d: Path) -> int:

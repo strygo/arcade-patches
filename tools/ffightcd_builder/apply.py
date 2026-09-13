@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rebuild Final Fight CD's cutscene backport from your own disc and romset.
+"""Rebuild Final Fight EX, the Sega CD cutscene backport, from your own disc and romset.
 
 The sets are built on your machine, from your own files:
 
@@ -24,8 +24,10 @@ Produces, under out/ (point both regions at the same out/ -- nothing
 collides):
 
     hbmame/<set>.zip              for HBMAME
-    mister/_Arcade/_Backports/<name>.mra   MiSTer, laid out like the SD card
-    mister/games/hbmame/<set>.zip can copy mister/'s contents to the root
+    mister/_Arcade/_Arcade Patches/_Enhanced Versions/<name>.mra
+    mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/<name>.mra
+    mister/games/hbmame/<set>.zip     MiSTer, laid out like the SD card, so
+                                      you can copy mister/'s contents to the root
 
 Requires Python 3.9+, numpy, Pillow, and 7zz (or 7z) for the romset.
 The first build runs the scene player over both bundles and takes several
@@ -45,6 +47,8 @@ import zlib
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+from ffcd import romset as romset_reader  # noqa: E402
 SETS = {"us": "ffightus01", "jp": "ffightjs01"}
 
 # per-member SHA-256 of the published sets; a finished build must match
@@ -52,49 +56,49 @@ EXPECTED = {
     "ffightus01": {
         "c07.c01": "ad1062a24a47c8bc4f57db1d1ff7a1854811d306bf3aeb03823a1ef9b2235d6e",
         "c07.c03": "d7641b5679c32272b067a329a3a791e5116a103c46746c1241215a5993a1083c",
-        "c07.c05": "cd9793340805e7417de443ba77787a13a8712452d41361d1b8fcc168ddd1c643",
-        "c07.c07": "828ca6fb9d6c75e803f5551af23e2ceba31ba1a44120bc3a3d70895d5ff4c816",
+        "c07.c05": "4eb39c1429fd945049e7963615b3671faeba2f4b192bffa17913f7b7346a36e7",
+        "c07.c07": "0218daf0391c3ad0a51fcdb032a749bdd9e782525371cdf3b8562e8e0068f619",
         "c07.m1": "9ef9aa8c7d236046404003b8900826cc834450ccd7284145fd93660ed3b438a8",
-        "c07.p1": "d3e3952fb762996bc5b8192cb0ca48cbfb820791c6a39114525248cf8d928cea",
-        "c07.p2": "ccccce3e5b9a3fbe726e34a36f3d2d59cecef386c3f39e3797282c002f02ef30",
+        "c07.p1": "0c433764806d9f3f215d0caa3bde6f314482c1c8ea3a993b0d94bd2a4d470651",
+        "c07.p2": "7c84c882b23f509bda151e0a0743ac5eb510274338b90f7d801c526020fec830",
         "c07.p3": "fef402f58aa14f2dc138b05a44006f249b4ecc7ffaafa8309e35356c48b87f88",
-        "c07.p5": "b2b4c0060b4151635d185ae1cd7e93262f5eef6f15a77371a5ff6120883a676b",
+        "c07.p5": "958e76ffaaa86193906f9cff9e16b9758b5d3295c212f2e93052ea303851cc5c",
         "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
         "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
-        "c07u.p4": "4a43ad06011f101e557fb7f75a070a9c1255c8af735d1fb772abf559c7138f59",
+        "c07u.p4": "f88e48034116aced839073c0501c3110cc8b0b50c78d18d82954e3536839e877",
         "c07us01.c09": "00cbb3be3de2bc25a07649e677203534d3a8131722d84e4e718174373511397c",
         "c07us01.c11": "7454ed428575512c3614181a33c0fee8356db881a111cb89b0d61b9267ad2686",
         "c07us01.c13": "1c4b90de66d223b41ff26861bfcce7feb896df3c5db78938e97a6fe71009d637",
         "c07us01.c15": "52c51beb4b2f0123f2a38db718a84e001233d1ab010133e6f14ada644032f772",
-        "c07us01.c17": "c1c8ccdd325169cd7a119f2e01d86317051efc11c4d3f5fd5e677946816ad861",
-        "c07us01.c19": "645c79d16614c789690e40f6403f5febcefe30a00ee7c06bb5e033b0c2e1227c",
-        "c07us01.c21": "6073f3c6255a1fbb26d9b7a8d5764812be446054c89a0bca5a82d4849453fa4f",
-        "c07us01.c23": "d230b4ff4300d40f9db492fcf6e88ebbada379660980d7f2138a94f362293eb5",
-        "c07us01.p7": "81be80c9763a55de8f44d04f9e6a96821a6ded33dc82b99efe00e8d00b37c453",
+        "c07us01.c17": "58872c892d3970b7c9fbed81223ea0ff4a7fa5fafdeacdbb9f533ed74954bfde",
+        "c07us01.c19": "f19010c7ef703ff68d4df4023b2b6239b60c78cadf3e75b54f10dd0a72f366c3",
+        "c07us01.c21": "ae030f396a3559a2c4397b8477c6778c7680d59597c309c5e128c347f17b1706",
+        "c07us01.c23": "35c08195a089cbff7d65dc4eb11b2d1f3188ca14f638322c5476cefacbcfebe1",
+        "c07us01.p7": "cf5b6a1358aeac1cce20fd19b01ecd420ba1447e3925a03614e4b06d44cca387",
         "ffightus01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524",
     },
     "ffightjs01": {
         "c07.c01": "756585ed5f8f5ca1fa0b2526b5ad130bdb6104ef1c571654a0721842af5e29ed",
         "c07.c03": "7c38ea89761f80da8726c339231ea7b31391b8731ef982f49b86be3fffebcb43",
-        "c07.c05": "2def49e3c5cddf4fcf6936c1ccc29f27016855a91cd635673c43e3ed097fd5dd",
-        "c07.c07": "802d3a1d439063d2ae290c6b5c2068a22e234f3c9a5cff586e5c1a21605afeed",
+        "c07.c05": "318f8263e20b08065fa676988e61ff4f7634127dda00b03124539b8469083eb5",
+        "c07.c07": "7ad445b87020a0ac9c88386964305d283471cb563becbc41de12921bba8d91ca",
         "c07.m1": "f87cf6f645a41561f1ad190f0abd871272d90b9830694b18793d71844ee8cded",
-        "c07.p1": "27d16e9df0d4a718659a6cc7706687015ed0161575a15352b79029998894abde",
-        "c07.p2": "c1f60638a50684359955d9fe21fb2f9e4f2de7de9c480bfc96cd9a88796f73ff",
+        "c07.p1": "a614d535236af5370dd370c6e5640937367a0dca25bed61bf7b98419be7ba656",
+        "c07.p2": "4bdc2fd17a1c7c7d9dc5a545ad980887e21ed7135da634c4753550000ee1bdbe",
         "c07.p3": "fef402f58aa14f2dc138b05a44006f249b4ecc7ffaafa8309e35356c48b87f88",
-        "c07.p5": "0e6bd5ba0c5c967a7c7ac77bb9641f03a3c10ab0690729ead62fe667b3895799",
+        "c07.p5": "7a0bb34e2e5206b8b699e9b280451029d740ed115d72242929e49016898b2d23",
         "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
         "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
-        "c07j.p4": "e428ece731cd49e9605fce2cbd3d6254d9b4b63e66feb1c83d67b1ddbff31c39",
+        "c07j.p4": "00f1ca716a2cd06fb9c3c4e67a35d39e3fcf21fc94ef1ccd5185e22e888f3717",
         "c07js01.c09": "bf6c3f4f28d0b71d41a197ef8fb96458fdd20f169b71e720b48be38c82af3dbf",
         "c07js01.c11": "88483ec8e5ff9404e3ad87019bf9f5aba4937a8cef90013172a5036a4b5658b1",
         "c07js01.c13": "bf969e7cb7b7fd8d020cc1d63739d8dd8f090c69f3b5873668bcd25b783861db",
         "c07js01.c15": "45f39135d08e9c1135d48ef28db10fc1c96f74b04ee1c01089fc8c04129024cd",
-        "c07js01.c17": "859f2bf9822834581312800a3c33c1a42bf43ae24c910767d461275ec28887d7",
-        "c07js01.c19": "f3bb2fb0d6fbd04dec8addee0e6bc6dd2f0b614dc8776192e6c4bef160931306",
-        "c07js01.c21": "55b6d40c3f7c1fd023e81faceeb7ff2d0c004f4434d375228a4f79e807de176d",
-        "c07js01.c23": "61f2d5460db462fc66b8b7b26e4517fef76538fe1e4a3a3da0076725aeb3d22a",
-        "c07js01.p7": "6a0b0481b705c2b499da3ac187c212aac4a86eb319abf05b7e99f945082092b6",
+        "c07js01.c17": "4610f5d93c99bfad191f89b34effb9fdad31d7aca0bd3e5c08cc3493f3ba7d9b",
+        "c07js01.c19": "eddb40dcab850b19ef7ee386cf732733db550eb73c9b90cd4a3564c4fcb8ff4b",
+        "c07js01.c21": "54cb0795771271e14f37ff4a0550a187d8a962ccaf3d807447480bea485d4776",
+        "c07js01.c23": "48b857b8ee906c0fe816849f60c73d63b89ec5aaeb7f13cea22806d9b637172a",
+        "c07js01.p7": "cd4a7cfdeddb717c23e8d011e74d088a6d201394fc2758295828634f8787031b",
         "ffightjs01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524",
     },
 }
@@ -102,19 +106,33 @@ EXPECTED = {
 # Romset archives, in preference order.  Base names only: MAME sets ship as
 # .zip at least as often as .7z, and hardcoding one extension rejected a
 # perfectly good romset with "not found".  Both are tried for each name.
-STAGE0_SRC = {"us": ("ffightu", "ffight"), "jp": ("ffightj",)}
-ROMSET_EXTS = (".7z", ".zip")
+STAGE0_SRC = {"us": ("ffightu", "ffight"), "jp": ("ffightj", "ffight")}
+
+# Every romset member the build reads, per region, as (archive stems in
+# search order, members).  Checked before anything slow starts, so a missing
+# archive or file is named up front instead of failing minutes in.
+_WORLD = ["ff-32m.8h", "ff_37.12f", "ff_09.12b", "ff-5m.7a", "ff-7m.9a", "ff-1m.3a", "ff-3m.5a"]
+_J_GFX = ["ffj_09.4b", "ffj_01.4a", "ffj_13.9b", "ffj_05.9a", "ffj_24.5e", "ffj_17.5c",
+          "ffj_38.8h", "ffj_32.8f", "ffj_10.5b", "ffj_02.5a", "ffj_14.10b", "ffj_06.10a",
+          "ffj_25.7e", "ffj_18.7c", "ffj_39.9h", "ffj_33.9f"]
+NEEDS = {
+    "us": [(("ffightu", "ffight"), ["ff_36.11f", "ff_42.11h", "ffu_43.12h"]),
+           (("ffight",), _WORLD),
+           (("ffightj", "ffight"), ["ffj_30.bin", "ffj_31.bin"])],
+    "jp": [(("ffightj", "ffight"), ["ff36.bin", "ff42.bin"]),
+           (("ffightj", "ffight"), ["ff43.bin", "ffj_30.bin", "ffj_31.bin"] + _J_GFX),
+           (("ffight",), _WORLD)],
+}
 
 
 def sh(*cmd, **kw):
-    return subprocess.run([str(c) for c in cmd], check=True, **kw)
-
-
-def seven_zip() -> str:
-    for exe in ("7zz", "7z", "7za"):
-        if shutil.which(exe):
-            return exe
-    raise SystemExit("need 7zz or 7z on PATH to read the arcade romset")
+    """Run a build stage.  The stage prints its own error; this adds one
+    readable line instead of a second traceback on top of it."""
+    try:
+        return subprocess.run([str(c) for c in cmd], check=True, **kw)
+    except subprocess.CalledProcessError as e:
+        raise SystemExit(f"\nbuild stage failed: {Path(str(cmd[1])).name} (exit {e.returncode}); "
+                         f"its error is printed above")
 
 
 def stage0(region: str, romset: Path, out: Path) -> None:
@@ -129,21 +147,8 @@ def stage0(region: str, romset: Path, out: Path) -> None:
     xml = (HERE / "data" / "stage0" / region / "retime_patches.mra.xml").read_text()
     patches = [(int(o, 16), bytes.fromhex(v.replace(" ", "")))
                for o, v in re.findall(r'<patch offset="([^"]+)">([^<]+)</patch>', xml)]
-    ez = seven_zip()
     names = {"us": ("ff_36.11f", "ff_42.11h"), "jp": ("ff36.bin", "ff42.bin")}[region]
-    src = None
-    for stem in STAGE0_SRC[region]:
-        for ext in ROMSET_EXTS:
-            p = romset / f"{stem}{ext}"
-            if p.exists():
-                src = p
-                break
-        if src:
-            break
-    if src is None:
-        want = ", ".join(f"{s}{e}" for s in STAGE0_SRC[region] for e in ROMSET_EXTS)
-        raise SystemExit(f"romset not found: need one of {want} in {romset}")
-    sh(ez, "e", "-y", f"-o{out}", src, *names, capture_output=True)
+    romset_reader.extract(romset, STAGE0_SRC[region], names, out)
     a, b = (out / names[0]).read_bytes(), (out / names[1]).read_bytes()
     # the two program ROMs interleave into one 16-bit image; patch offsets
     # are image addresses, so de-interleave, patch, and write back
@@ -207,8 +212,8 @@ def write_mra(region: str, zip_path: Path, out: Path) -> Path:
     text = re.sub(r'name="([^"]+)"\s+crc="[0-9a-fA-F]+"', fix, base)
     if missing:
         raise SystemExit(f"MRA names parts not in the built set: {missing}")
-    name = {"us": "Final Fight (CD Cutscenes)",
-            "jp": "Final Fight (CD Cutscenes, Japan)"}[region]
+    name = {"us": "Final Fight EX (USA)",
+            "jp": "Final Fight EX (Japan)"}[region]
     text = re.sub(r"<name>[^<]*</name>", f"<name>{name}</name>", text, count=1)
     out.mkdir(parents=True, exist_ok=True)
     p = out / f"{name}.mra"
@@ -269,8 +274,6 @@ def main() -> int:
             f"    {sys.executable} -m pip install {' '.join(missing)}\n"
             f"  (the stages run under the same interpreter that starts this "
             f"script, so installing them elsewhere will not help)")
-    if not shutil.which("7zz") and not shutil.which("7z") and not shutil.which("7za"):
-        raise SystemExit("need 7zz, 7z or 7za on PATH to read the arcade romset")
 
     discs = {r: d for r, d in (("jp", a.disc_jp), ("us", a.disc_us)) if d}
     for r, d in discs.items():
@@ -306,6 +309,12 @@ def main() -> int:
     elif a.region == "both" and len(discs) < 2:
         raise SystemExit("--region both needs both discs")
     print("building: " + ", ".join(SETS[r] for r in regions))
+
+    # every romset file the chosen regions need, before the slow part
+    for r in regions:
+        for stems, members in NEEDS[r]:
+            romset_reader.read(a.romset, stems, members)
+    print("romset: every file found")
 
     # the chain resolves data/ and work/ against this directory
     cfg = {r: str(d.resolve()) for r, d in discs.items()}
@@ -363,7 +372,9 @@ def main() -> int:
         mis = a.out_dir / "mister"
         (mis / "games" / "hbmame").mkdir(parents=True, exist_ok=True)
         shutil.copy2(built, mis / "games" / "hbmame" / f"{SETS[r]}.zip")
-        mra = write_mra(r, built, mis / "_Arcade" / "_Backports")
+        # USA at the top, Japan in its own folder, like the other kits
+        mra = write_mra(r, built, mis / "_Arcade" / "_Arcade Patches" /
+                        "_Enhanced Versions" / ("_Japan" if r == "jp" else ""))
         print(f"\n  {SETS[r]}:")
         print(f"    {hb / (SETS[r] + '.zip')}")
         print(f"    {mra}")

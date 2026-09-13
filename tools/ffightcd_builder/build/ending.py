@@ -38,6 +38,7 @@ sys.path.insert(0, str(HERE))          # sibling stages (convert.quant12)
 sys.path.insert(0, str(HERE.parent))   # track root: ffcd/ lives there
 from ffcd.player import ScriptPlayer    # noqa: E402
 from ffcd import megadrive, layers as X  # noqa: E402
+from ffcd.files import link_or_copy  # noqa: E402
 
 
 # ======== esnaps ========================================================
@@ -65,11 +66,11 @@ def _esnaps(a) -> int:
         out.mkdir(parents=True)
         n = 0
         for k in range(0, last - fb + 1):
-            os.link(end / f"f{fb + k:06d}.png", out / f"f{k:06d}.png")
+            link_or_copy(end / f"f{fb + k:06d}.png", out / f"f{k:06d}.png")
             n += 1
         if pad_to is not None:
             for k in range(n, pad_to):
-                os.link(end / f"f{last:06d}.png", out / f"f{k:06d}.png")
+                link_or_copy(end / f"f{last:06d}.png", out / f"f{k:06d}.png")
             n = pad_to
         print(f"{region}_esnap: {n} frames (= {region}_end[{fb}:]"
               f"{f' + black pad to {pad_to}' if pad_to else ''})")
@@ -867,7 +868,7 @@ def _merge(a) -> int:
     # not see it: used_f stayed put, the tail did not shrink, and the extra
     # 52 frames were appended to the take-over instead -- moving the handback
     # and dragging ENGINE3, the CODY! card and the farewell 52 frames later
-    # against real-time audio (Steve: "voice/caption drift in the later
+    # against real-time audio (review: "voice/caption drift in the later
     # 'CODY!' and cody/jessica scene").  TOTAL is held; the trailing black
     # pays for the seam.
     pre_scene = (gap_dur + 48) if esnap is not None else GAP_F

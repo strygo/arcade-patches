@@ -1534,6 +1534,29 @@ def render_project_page(site: dict, project: dict, kit: dict | None,
     return page(site, title, "\n".join(parts), depth=1)
 
 
+def write_redirects(site: dict, patch: dict) -> None:
+    """A renamed page leaves a stub at each old slug that forwards to the
+    new one, so links already out in the world keep working."""
+    for old in patch.get("redirect_from", []):
+        target = f"../{patch['slug']}/"
+        out_dir = DOCS / old
+        out_dir.mkdir(parents=True, exist_ok=True)
+        (out_dir / "index.html").write_text(f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{esc(patch['title'])} · {esc(site['title'])}</title>
+<meta http-equiv="refresh" content="0; url={target}">
+<link rel="canonical" href="{target}">
+</head>
+<body>
+<p>This page has moved to <a href="{target}">{esc(patch['title'])}</a>.</p>
+</body>
+</html>
+""")
+        print(f"{old}: redirect to {patch['slug']} written")
+
+
 def render_legal(site: dict) -> str:
     contact = esc(site.get("contact_note", ""))
     body = f"""<h1>Legal &amp; disclaimers</h1>
@@ -1634,6 +1657,7 @@ def main() -> None:
         out_dir = DOCS / slug
         out_dir.mkdir(parents=True, exist_ok=True)
         (out_dir / "index.html").write_text(render_patch_page(site, patch, bundle, shots))
+        write_redirects(site, patch)
         print(f"{slug}: page rendered ({len(shots)} screenshot blocks)")
 
     project_thumbs = {}

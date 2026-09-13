@@ -98,7 +98,7 @@ SEC, USER, HDR = 2352, 2048, 16
 # capcom tree; the US image is the on-demand extraction of the multi-track
 # .7z rip, which is why it lives under work/ and the JP .img does not.
 TRACK = Path(__file__).resolve().parents[1]
-REPO = TRACK.parents[1]
+REPO = TRACK.parents[1] if len(TRACK.parents) > 1 else TRACK.parents[-1]
 JP_IMG = str(REPO / "roms/segacd/Final Fight CD (JP).img")
 US_IMG = str(TRACK / "work/build/disc/us/Final Fight CD (USA) (Track 01).bin")
 

@@ -31,6 +31,7 @@ import sys, os, zlib
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # track root: ffcd/ lives there
 from ffcd.player import ScriptPlayer
 from ffcd import megadrive
+from ffcd.files import link_or_copy
 
 _ap = argparse.ArgumentParser(description=__doc__.strip().split("\n")[0])
 _ap.add_argument("region", choices=("jp", "us"))
@@ -76,7 +77,7 @@ for f in range(MAXF):
     crc = zlib.crc32(bytes(v.regs[:24]), crc)
     path = f"{OUT}/f{f:06d}.png"
     if crc == last_crc and last_path:
-        os.link(last_path, path)
+        link_or_copy(last_path, path)
     else:
         vram, cram, regs, vsram = p.snapshot()
         img = megadrive.render_np(None, vscroll=(megadrive.vs(vsram[0]),

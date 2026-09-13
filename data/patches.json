@@ -90,8 +90,8 @@
           "note": "companion project: the reconstructed Gold sets that the Gold Arrange MRAs load"
         },
         {
-          "label": "Final Fight \u2014 CD Cutscenes",
-          "url": "../final-fight-cd/",
+          "label": "Final Fight EX",
+          "url": "../final-fight-ex/",
           "note": "companion project: the cutscene backport set that pairs with the Arrange + CD Cutscenes MRA"
         },
         {
@@ -1069,47 +1069,53 @@
       ]
     },
     {
-      "slug": "final-fight-cd",
-      "title": "Final Fight \u2014 CD Cutscenes",
-      "subtitle": "Sega CD cutscenes on the CPS-1 arcade board",
+      "slug": "final-fight-ex",
+      "title": "Final Fight EX",
+      "subtitle": "The Sega CD cutscenes, on the arcade board",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-08-25",
+      "version": "rc2",
+      "date": "2026-09-17",
       "game": "Final Fight (arcade, Capcom CPS-1)",
       "set": "\u2014",
       "hardware": "Capcom CPS-1",
-      "summary": "The Sega CD version of Final Fight opened with a proper animated cutscene. This puts it back on the arcade game, running as native CPS-1 graphics, for HBMAME and MiSTer.",
+      "summary": "The Sega CD version of Final Fight opened with a proper animated cutscene. Final Fight EX puts it back on the arcade game, running as native CPS-1 graphics, with a new EX title, for HBMAME and MiSTer.",
       "description": [
-        "The 1993 Sega CD port replaced the arcade's brief story block with a fully animated opening and a soundtrack with spoken dialogue. This project reproduces that cutscene as native CPS-1 presentation on the arcade Final Fight, driven by a new 68K cutscene engine added to the game's program ROM. The stock game, its timing, and its gameplay are left intact.",
+        "The 1993 Sega CD port replaced the arcade's brief story block with a fully animated opening and a soundtrack with spoken dialogue. Final Fight EX reproduces that cutscene as native CPS-1 presentation on the arcade Final Fight, driven by a new 68K cutscene engine added to the game's program ROM, and gives it a new EX title screen. The stock game, its timing, and its gameplay are left intact.",
         "The cutscene art needs far more room than a stock Final Fight board has, so the graphics region is grown from 2 MB to 6 MB. An original CPS-1 board and stock MAME cannot address that extra ROM, so this runs only on HBMAME and on MiSTer's jtcps1 core.",
         "There are two regional builds, USA (ffightus01) and Japan (ffightjs01), each matched to its own disc. You supply the arcade Final Fight romset and your own Final Fight CD, and the build is put together on your machine.",
         "This is the visual half. The cutscenes play over the arcade game's own music and effects. The Sega CD's soundtrack and spoken dialogue are a separate release, the CPS+ arrange packs, which ship their own MiSTer MRA combining the two. Install this on its own and you get the cutscenes with arcade audio."
       ],
       "changes": [
         "The Sega CD opening cutscene rebuilt as native CPS-1 graphics: the Metro City map, the Mad Gear line-up, Damnd's sketch and the knife, Haggar's phone call, and the Cody & Guy montage",
+        "The ending's reunion scene between Haggar and Jessica, redrawn from the Sega CD",
+        "A new Final Fight EX title screen",
         "A new 68K cutscene engine, leaving the stock story, timing, and gameplay unchanged",
         "USA (ffightus01) and Japan (ffightjs01) builds, each matched to its region's disc dialogue and artwork",
         "Delivered as an HBMAME set and a MiSTer jtcps1 MRA that sit alongside the stock game"
       ],
       "screenshots": [
         {
-          "single": "data/screenshots/final-fight-cd/scene_map.png",
+          "single": "data/screenshots/final-fight-ex/title_ex_usa.png",
+          "caption": "The Final Fight EX title, with the EX settled beside FIGHT."
+        },
+        {
+          "single": "data/screenshots/final-fight-ex/scene_map.png",
           "caption": "The opening cutscene sets the scene in Metro City, with the added English narration rendered natively on CPS-1."
         },
         {
-          "single": "data/screenshots/final-fight-cd/scene_sketch.png",
+          "single": "data/screenshots/final-fight-ex/scene_sketch.png",
           "caption": "Damnd's sketch of his victims, the knife driven in, over the opening's English caption."
         },
         {
-          "single": "data/screenshots/final-fight-cd/scene_phone.png",
+          "single": "data/screenshots/final-fight-ex/scene_phone.png",
           "caption": "Haggar takes the kidnappers' call, their threat shown as an English caption."
         },
         {
-          "single": "data/screenshots/final-fight-cd/scene_codyguy.png",
+          "single": "data/screenshots/final-fight-ex/scene_codyguy.png",
           "caption": "Cody and Guy resolve to take on Mad Gear, English dialogue captions and all."
         },
         {
-          "single": "data/screenshots/final-fight-cd/scene_ending.png",
+          "single": "data/screenshots/final-fight-ex/scene_ending.png",
           "caption": "The ending's new scene: Haggar and Jessica's reunion, redrawn from the Sega CD, with the English dialogue as a caption."
         }
       ],
@@ -1121,13 +1127,13 @@
         {
           "label": "CPS+",
           "url": "../cps-plus/",
-          "note": "the \u2018Final Fight (Arrange + CD Cutscenes)\u2019 MRA in the CPS+ kit pairs this set with the Sega CD arranged soundtrack on MiSTer"
+          "note": "the \u2018Final Fight EX (Arrange)\u2019 MRA in the CPS+ kit pairs this set with the Sega CD arranged soundtrack on MiSTer"
         }
       ],
       "reconstruction": {
         "requires": [
           "your own Final Fight CD disc image for each region you build: the USA disc for ffightus01, the Japan disc for ffightjs01",
-          "your own arcade Final Fight romset: ffight, ffightu and ffightj, MAME 0.260-era"
+          "your own arcade Final Fight romset: ffight, ffightu and ffightj (MAME 0.260-era, .zip or .7z)"
         ],
         "kit_dir": "tools/ffightcd_builder",
         "kit_include": [
@@ -1139,11 +1145,36 @@
           "data/captions/*",
           "data/audio/*",
           "data/stage0/*/retime_patches.mra.xml",
+          "assets/native_ex/*",
+          "assets/arcade_ex_alternative/*",
           "control/*.key",
           "mras/*.mra"
         ],
         "kit_command": "python3 apply.py --disc-jp \"Final Fight CD (JP).img\" \\\n                 --disc-us \"Final Fight CD (USA) (Track 01).bin\" \\\n                 --romset /path/to/roms --out-dir out"
-      }
+      },
+      "redirect_from": [
+        "final-fight-cd"
+      ],
+      "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-09-17",
+          "items": [
+            "New name: Final Fight \u2014 CD Cutscenes is now Final Fight EX, with a new title screen.",
+            "Fixed visual defects on the player select screen.",
+            "The kit now builds on Windows, and works with .zip or .7z romsets (7-Zip is only needed for .7z). It also checks for every romset file before it starts and names anything missing.",
+            "The MiSTer MRAs are now called Final Fight EX (USA) and Final Fight EX (Japan).",
+            "Both sets are rebuilt and their checksums have changed, so rebuild them with the rc2 kit."
+          ]
+        },
+        {
+          "version": "rc1",
+          "date": "2026-08-25",
+          "items": [
+            "First public release, as Final Fight \u2014 CD Cutscenes."
+          ]
+        }
+      ]
     },
     {
       "slug": "ssf2t-gmc",

@@ -32,7 +32,10 @@ import sys
 import tempfile
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[3]
+from ffcd import romset
+
+_here = Path(__file__).resolve()
+REPO = _here.parents[3] if len(_here.parents) > 3 else _here.parents[-1]
 TRACK = Path(__file__).resolve().parents[1]
 ROMSET = REPO / "roms" / "mame0260"
 _cfg = TRACK / "paths.json"
@@ -53,22 +56,11 @@ D1_SCENES = ([("map", d) for d in range(4)] +
 def build_image(region: str) -> bytes:
     img = bytearray(0x100000)
     with tempfile.TemporaryDirectory() as td:
-        subprocess.run(["7zz", "e", "-y", f"-o{td}",
-                        str(ROMSET / "ffight.7z"),
-                        "ff_36.11f", "ff_42.11h", "ff_37.12f", "ff-32m.8h"],
-                       check=True, capture_output=True)
-        arc, member = (("ffightu.7z", "ffu_43.12h") if region == "us"
-                       else ("ffightj.7z", "ff43.bin"))
-        arc_path = ROMSET / arc
-        if not arc_path.exists():
-            # rom archives get recompressed; accept .7z or .zip
-            for alt in (arc_path.with_suffix(".zip"), arc_path.with_suffix(".7z")):
-                if alt.exists():
-                    arc_path = alt
-                    break
-        subprocess.run(["7zz", "e", "-y", f"-o{td}",
-                        str(arc_path), member],
-                       check=True, capture_output=True)
+        romset.extract(ROMSET, ("ffight",),
+                       ["ff_36.11f", "ff_42.11h", "ff_37.12f", "ff-32m.8h"], td)
+        stem, member = (("ffightu", "ffu_43.12h") if region == "us"
+                        else ("ffightj", "ff43.bin"))
+        romset.extract(ROMSET, (stem, "ffight"), [member], td)
         img[0:0x40000:2] = Path(td, "ff_36.11f").read_bytes()
         img[1:0x40000:2] = Path(td, "ff_42.11h").read_bytes()
         img[0x40000:0x80000:2] = Path(td, "ff_37.12f").read_bytes()

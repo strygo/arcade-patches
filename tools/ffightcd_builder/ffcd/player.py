@@ -49,8 +49,8 @@ PROFILE = {
 # sitting near a frame boundary tips to the other side, and each tip changes
 # a run of frames until the next re-sync.  The correction moves: jp ending 0
 # frames (bit-identical), jp opening 65, us opening 788, us ending 254.  The
-# us ending also runs one frame shorter (see clock_hold).  Steve reviewed the
-# us ending against tr24 and approved it.
+# us ending also runs one frame shorter (see clock_hold).  The us ending was
+# reviewed against tr24 and approved.
 #
 # CD_PHASE.  The timecode's sub-frame alignment at clock zero: the audio track
 # does not start on a vblank boundary, so this term is REAL, but its VALUE is

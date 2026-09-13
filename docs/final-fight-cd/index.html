@@ -2,71 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Final Fight — CD Cutscenes · Arcade Patches</title>
-<link rel="stylesheet" href="../style.css">
+<title>Final Fight EX · Arcade Patches</title>
+<meta http-equiv="refresh" content="0; url=../final-fight-ex/">
+<link rel="canonical" href="../final-fight-ex/">
 </head>
 <body>
-<header class="site">
-  <div class="inner">
-    <a class="home" href="../">Arcade Patches</a>
-    <div class="tagline">Translations, restorations and arranged soundtracks for classic arcade games.</div>
-  </div>
-</header>
-<main>
-<a class="back" href="../">&larr; All patches</a>
-<h1>Final Fight — CD Cutscenes</h1>
-<p class="subtitle">Sega CD cutscenes on the CPS-1 arcade board</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-1</span></div>
-<dl class="meta"><dt>Game</dt><dd>Final Fight (arcade, Capcom CPS-1)</dd><dt>Hardware</dt><dd>Capcom CPS-1</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-08-25</dd></dl>
-<h2>Screenshots</h2>
-<figure class="shot single"><img src="../img/final-fight-cd/00_single.png" alt="The opening cutscene sets the scene in Metro City, with the added English narration rendered natively on CPS-1."><figcaption>The opening cutscene sets the scene in Metro City, with the added English narration rendered natively on CPS-1.</figcaption></figure>
-<figure class="shot single"><img src="../img/final-fight-cd/01_single.png" alt="Damnd&#x27;s sketch of his victims, the knife driven in, over the opening&#x27;s English caption."><figcaption>Damnd&#x27;s sketch of his victims, the knife driven in, over the opening&#x27;s English caption.</figcaption></figure>
-<figure class="shot single"><img src="../img/final-fight-cd/02_single.png" alt="Haggar takes the kidnappers&#x27; call, their threat shown as an English caption."><figcaption>Haggar takes the kidnappers&#x27; call, their threat shown as an English caption.</figcaption></figure>
-<figure class="shot single"><img src="../img/final-fight-cd/03_single.png" alt="Cody and Guy resolve to take on Mad Gear, English dialogue captions and all."><figcaption>Cody and Guy resolve to take on Mad Gear, English dialogue captions and all.</figcaption></figure>
-<figure class="shot single"><img src="../img/final-fight-cd/04_single.png" alt="The ending&#x27;s new scene: Haggar and Jessica&#x27;s reunion, redrawn from the Sega CD, with the English dialogue as a caption."><figcaption>The ending&#x27;s new scene: Haggar and Jessica&#x27;s reunion, redrawn from the Sega CD, with the English dialogue as a caption.</figcaption></figure>
-<h2>About this patch</h2>
-<p>The 1993 Sega CD port replaced the arcade&#x27;s brief story block with a fully animated opening and a soundtrack with spoken dialogue. This project reproduces that cutscene as native CPS-1 presentation on the arcade Final Fight, driven by a new 68K cutscene engine added to the game&#x27;s program ROM. The stock game, its timing, and its gameplay are left intact.</p>
-<p>The cutscene art needs far more room than a stock Final Fight board has, so the graphics region is grown from 2 MB to 6 MB. An original CPS-1 board and stock MAME cannot address that extra ROM, so this runs only on HBMAME and on MiSTer&#x27;s jtcps1 core.</p>
-<p>There are two regional builds, USA (ffightus01) and Japan (ffightjs01), each matched to its own disc. You supply the arcade Final Fight romset and your own Final Fight CD, and the build is put together on your machine.</p>
-<p>This is the visual half. The cutscenes play over the arcade game&#x27;s own music and effects. The Sega CD&#x27;s soundtrack and spoken dialogue are a separate release, the CPS+ arrange packs, which ship their own MiSTer MRA combining the two. Install this on its own and you get the cutscenes with arcade audio.</p>
-<h2>What's changed</h2><ul>
-<li>The Sega CD opening cutscene rebuilt as native CPS-1 graphics: the Metro City map, the Mad Gear line-up, Damnd&#x27;s sketch and the knife, Haggar&#x27;s phone call, and the Cody &amp; Guy montage</li>
-<li>A new 68K cutscene engine, leaving the stock story, timing, and gameplay unchanged</li>
-<li>USA (ffightus01) and Japan (ffightjs01) builds, each matched to its region&#x27;s disc dialogue and artwork</li>
-<li>Delivered as an HBMAME set and a MiSTer jtcps1 MRA that sit alongside the stock game</li>
-</ul>
-<h2>Download</h2>
-<div class="download">
-  <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/final-fight-cd-rc1-kit.zip">final-fight-cd-rc1-kit.zip</a>
-  (246 KB)</div>
-  <div class="hash">SHA-256: fff8504621075f9ab49ed553e2e2f707a7ca3c0fd8278772b301402cc4e98471</div>
-</div>
-<p>The kit is our reconstruction code and a short list of byte patches.
-Everything else is rebuilt on your machine from files you already own.</p>
-<h3>What you supply</h3>
-<ul><li>your own Final Fight CD disc image for each region you build: the USA disc for ffightus01, the Japan disc for ffightjs01</li><li>your own arcade Final Fight romset: ffight, ffightu and ffightj, MAME 0.260-era</li></ul>
-<h2>How to build</h2>
-<pre><code>unzip final-fight-cd-rc1-kit.zip -d final-fight-cd
-cd final-fight-cd
-python3 apply.py --disc-jp &quot;Final Fight CD (JP).img&quot; \
-                 --disc-us &quot;Final Fight CD (USA) (Track 01).bin&quot; \
-                 --romset /path/to/roms --out-dir out</code></pre>
-
-<h2>Related projects</h2><ul><li><a href="../cps-plus/">CPS+</a>, the ‘Final Fight (Arrange + CD Cutscenes)’ MRA in the CPS+ kit pairs this set with the Sega CD arranged soundtrack on MiSTer</li></ul>
-<h2>Notes</h2><ul class="notes">
-<li>Because it grows the graphics ROM, this runs only on HBMAME and MiSTer (jtcps1), not stock MAME or an original CPS-1 board.</li>
-<li>The cutscene art and audio derive from Capcom&#x27;s Final Fight CD. This is an unofficial fan project, unaffiliated with Capcom or Sega.</li>
-</ul>
-</main>
-<footer class="site">
-  <div class="inner">
-    <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
-    by Capcom. All game titles, characters, and artwork remain the property of their
-    respective owners. No ROMs or other copyrighted game data are hosted here.</p>
-    <p><a href="../legal.html">Legal &amp; disclaimers</a></p>
-  </div>
-</footer>
+<p>This page has moved to <a href="../final-fight-ex/">Final Fight EX</a>.</p>
 </body>
 </html>

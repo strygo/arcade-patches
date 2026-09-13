@@ -146,7 +146,7 @@ def main() -> int:
                          "(the scene's background layer, plane A blanked and "
                          "sprites parked) while every patch decision is made "
                          "against `snapdir`'s full frames.  That is the "
-                         "layered build Steve asked for: the background is a "
+                         "layered build review asked for: the background is a "
                          "rigid pan the panorama reproduces exactly (208 "
                          "tiles, ONE palette), and the characters and shadow "
                          "-- which differ from it -- fall out as sprite "
@@ -157,7 +157,7 @@ def main() -> int:
                     help="take the OBJ cells from these ISOLATED "
                          "character frames (RGBA, alpha 0 where the character "
                          "is absent) instead of from the composited frame.  "
-                         "Steve: 'why aren't you using Jessica as standalone "
+                         "Review: 'why aren't you using Jessica as standalone "
                          "sprites rather than including scenery around her'.  "
                          "A composited cell forces ONE 14-colour palette to "
                          "hold skin, satin, grass and sand together, which is "
@@ -237,7 +237,7 @@ def main() -> int:
     # steps is the worst of both -- not a fade, just the picture going
     # murky and then cutting -- and on the plane it is worse still,
     # because a dim step is a new palette fit, so the tail cells are
-    # REQUANTISED: Steve saw the JP scene "change palettes at the end and
+    # REQUANTISED: review saw the JP scene "change palettes at the end and
     # these transitions look bad", and asked for a straight cut to black.
     # So the fade is not encoded at all.  Runs from here on emit no
     # deltas and take no palette block: the picture holds at full
@@ -436,7 +436,7 @@ def main() -> int:
     # colours are near-misses in every palette scores ~0 everywhere and takes
     # whichever came first -- for the cell holding Jessica's lip against
     # Cody's white shirt that was a palette with neither, and it rendered
-    # FLAT WHITE from the panorama's first paint (the block Steve reported
+    # FLAT WHITE from the panorama's first paint (the block reported in review
     # beside her mouth, which no downstream sprite pass could reach because
     # the cell was never a refresh candidate).  The refresh path already
     # learned this -- "that is how the shoe came out dark" -- and the lesson
@@ -847,7 +847,7 @@ def main() -> int:
                         # Jessica's lip is only moderate in mean, so it lost
                         # every spare to duller but larger misses and stayed
                         # white from the panorama's first paint -- the block
-                        # Steve saw beside her mouth, which no amount of
+                        # seen in review beside her mouth, which no amount of
                         # sprite-patching downstream could reach because the
                         # cell was never a refresh candidate.
                         _pxmax = float(np.abs(best_rgb.astype(int)
@@ -872,7 +872,7 @@ def main() -> int:
                             # cell that renders flat white over Jessica's lip
                             # is catastrophic to look at but only moderate in
                             # mean, so it lost every spare palette to duller
-                            # but larger misses -- Steve saw exactly that
+                            # but larger misses -- review saw exactly that
                             # white block beside her mouth survive two
                             # rounds of this pass.
                             pxmax = float(np.abs(best_rgb.astype(int)
@@ -924,7 +924,7 @@ def main() -> int:
                     # WORSE.  The gate above only ever asked whether the cell
                     # got BETTER -- by mean, or in its worst block -- so a
                     # re-fit that lowered the cell mean while wrecking a
-                    # corner sailed through.  That is what Steve saw as the
+                    # corner sailed through.  That is what review saw as the
                     # pan began: cell (6,12) holds Jessica's chin against her
                     # hair and the sky, and its repaint rendered the jawline
                     # in mottled blue and pink.  The cell mean improved; the
@@ -1310,7 +1310,7 @@ def main() -> int:
     # ones the refresh pass flagged as changing.  Emitting only the changing
     # ones left the static parts of the figures unpainted, showing the
     # background through: the tan strip across the top of Cody's jeans, and
-    # Steve's "the top of her legs don't animate, causing a break".
+    # the review note "the top of her legs don't animate, causing a break".
     # Bands are fixed and their SCREEN position moves (y = band*16 - cum), so
     # the sampling mirrors the refresh loop's own geometry.
     if args.anim_objects and obj_src is not None:
@@ -1451,7 +1451,7 @@ def main() -> int:
     # hold back part of the OBJ bank for CATASTROPHIC cells.
     # The settled-tail pass runs first (measured best overall) but it spent
     # the bank down to 13 spare, and the cell holding Jessica's lip against
-    # Cody's white shirt -- which renders FLAT WHITE, the block Steve saw
+    # Cody's white shirt -- which renders FLAT WHITE, the block seen in review
     # beside her mouth -- never got one.  A cell whose worst pixel is this
     # far out is not a refinement; it is a hole in the picture.
     TAIL_CAP = OBJ_PALS - 12
@@ -1543,7 +1543,7 @@ def main() -> int:
     # corrections, which refine an already-acceptable cell, take what is
     # left.  Same ordering lesson as the plane's rank-then-spend.
     # The settled-tail pass fixes the cells that are wrong once the camera
-    # stops.  The cells Steve reported -- the white block at Jessica's mouth,
+    # stops.  The cells reported in review -- the white block at Jessica's mouth,
     # the wrong palette either side of her heel -- are wrong DURING the pan,
     # and no amount of palette budget fixes them: they straddle two colour
     # worlds and cannot be held in 15 entries (the panorama cap sweep moved
@@ -1574,7 +1574,7 @@ def main() -> int:
                 break
             # Each SPAN carries ITS OWN art.  Taking the worst frame's cell
             # and stamping it across every span the cell was bad painted a
-            # LATER moment early -- Steve saw Jessica's foot appear at its
+            # LATER moment early -- review saw Jessica's foot appear at its
             # final position while she was still flat, and a white block by
             # her mouth that cleared only when the refresh caught up.  The
             # gate says WHEN; the art has to match that when.
@@ -1600,7 +1600,7 @@ def main() -> int:
                     # `..71` and vanished on the exact frame the pan begins,
                     # uncovering the plane's unpatched quantisation of her
                     # chin -- pale blue and pink where the disc has skin.
-                    # That is what Steve saw "when the scene scrolls up".
+                    # That is what review saw "when the scene scrolls up".
                     # Nothing about the disc changed at event 71; what
                     # stopped was the RECORDING (the refresh returns early
                     # once the camera moves), and the span end was being
@@ -1813,7 +1813,7 @@ def main() -> int:
     # patch can never be retired, which is fine for a static correction and
     # useless for animation -- it is why the figures could not be carried
     # here and had to be flattened into the plane, where a refresh repaints
-    # background through a character's palette (Steve's miscoloured tile
+    # background through a character's palette (the miscoloured tile
     # under Jessica's heel).  0x7FFF means "never expires"; it is compared
     # SIGNED, so 0xFFFF would read as -1 and retire every patch instantly.
     if k_fade is not None:

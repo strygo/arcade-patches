@@ -308,7 +308,7 @@ def render_np(F, vscroll=(0, 0), dump=None, state=None):
     # its own -- it halves what is beneath.  The game turns the mode ON for
     # exactly that stretch (reg12 0x81 -> 0x89 between f7400 and f8000).
     # Without this the operator drew as opaque MAGENTA, which is the purple
-    # shadow Steve reported twice; 2767 px of it per frame from f7960 on,
+    # shadow reported twice in review; 2767 px of it per frame from f7960 on,
     # against 32-47 px in the disc-composed reference.
     sh_mode = bool(regs[12] & 0x08)
     shadow_op = hilite_op = None
@@ -339,7 +339,7 @@ def render_np(F, vscroll=(0, 0), dump=None, state=None):
         # is not beneath it -- the hardware exempts those pixels.  The
         # characters are plane A HIGH here (plane A low is empty all scene),
         # so without the exemption the shadow painted OVER Cody and Jessica,
-        # which is what Steve saw as "the shadow appears above the
+        # which is what showed in review as "the shadow appears above the
         # characters".
         #
         # The exemption is the ONLY use of hi_seen.  The hardware also

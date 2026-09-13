@@ -17,9 +17,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ffcd.cps1 import chunky_to_planar  # noqa: E402
+from ffcd import romset  # noqa: E402
 from engine import build_engine, be16, be32, ENGINE, DATA, OFFTAB, MARGTAB, CAPTAB, CAPPAL, SCRIPT, PALBLOCKS, BASEMAPS, DELTAS, TAIL_SCRIPT, TAIL_BASEMAP, STATE  # noqa: E402
 import fmloop  # noqa: E402
 import vbsched  # noqa: E402
+import title_ex  # noqa: E402
+import select_window  # noqa: E402
 from text import (CREDITS_SRC, build_ending_captions, build_ending_captions_rom,
 
                   build_credits, rom_caption_lines)  # noqa: E402
@@ -27,7 +30,11 @@ from text import (CREDITS_SRC, build_ending_captions, build_ending_captions_rom,
 
 
 
-REPO = Path(__file__).resolve().parents[3]
+# The developer tree's repo root.  An unpacked kit can sit only a folder or
+# two deep (C:\ffex\build\rom.py), where parents[3] doesn't exist; the kit
+# always names its romset in paths.json, so REPO is only a default there.
+_here = Path(__file__).resolve()
+REPO = _here.parents[3] if len(_here.parents) > 3 else _here.parents[-1]
 # Everything the build reads lives under the TRACK -- the directory that
 # holds build/, ffcd/ and data/.  Anchoring to the track rather than to a
 # repo root is what lets this run from wherever it is unpacked.
@@ -120,7 +127,7 @@ ENDING_CAPTIONS_US = (
 # outlier is the DISC'S OWN RELATIONSHIP: at the common offset her mouth opens
 # 29 frames after her row does, and a map overriding that forces her onto the
 # caption -- inventing sync the disc does not have, exactly what a JP map does.
-# Steve: "why would the us continue to depend on the map?"
+# Review: "why would the us continue to depend on the map?"
 #
 # A RATE is not it either, though a drift would be physical (the 1.25 vs
 # 1.2516617 class): a free linear fit cps = a + b*capture gives b=1.0395 for
@@ -245,7 +252,7 @@ FAREWELL_CAPTIONS_US = (
     # NO credits compensation: the backport section costs 7 rows and
     # collapsing the roll's fully-blank runs to one dot each gives 7 back,
     # so the roll is still 87 rows and ENGINE3 still arms at f4766.  These
-    # are the values Steve approved before the credit existed.
+    # are the values approved before the credit existed.
     # Line 2 fires at its measured voice onset - 8 f, the lead line 4
     # settled on: her "How can you..." harmonics enter at 78.50 s of the
     # cut track (centre-channel spectrogram; the whisper word table agrees
@@ -352,7 +359,7 @@ FAREWELL_CAPTIONS_US = (
 # 98.6% of all voiced duration inside a mouth, every segment 96-100%.  The
 # scene and the dialogue were authored together and match by construction;
 # only the start was wrong.  D=256 is the top of the plateau and the value
-# that moves the handback least (12 frames).  Steve reviewed this build:
+# that moves the handback least (12 frames).  Review of this build:
 # "this looks great - much better than before."
 #
 # It also corroborates the word table, which five independent voice detectors
@@ -395,7 +402,7 @@ JP_ENDING_CAPTIONS = (
 # Reading the standalone track instead cost a visible bug: it assumes tr24
 # t=0 lands on capture frame 3900, and the true anchor is 3694, so every
 # caption shipped 206 frames (3.44 s) LATE and the mouths moved first
-# (Steve caught it).
+# (caught in review).
 #
 # Cross-checked against the CD's own mouth animation, measured by
 # pan-cancelled per-character frame differencing of the capture:
@@ -416,7 +423,7 @@ CODY_PAL, GUY_PAL = 14, 6
 # records sharing a window.  The walker reveals a record's cells one per
 # frame, so two records type in PARALLEL -- Cody's last line put 27 cells
 # up in 14 frames, double everyone else's rate, and read as an instant
-# reveal next to the typewriter elsewhere (Steve spotted it).  One record
+# reveal next to the typewriter elsewhere (spotted in review).  One record
 # types row 22 to the end, then row 24, at a steady one cell per frame --
 # which is what the Latin builder has always done for its 2-line entries.
 JP_SCENE_CAPTIONS = (
@@ -505,7 +512,7 @@ REGIONS = {
                   # plans, they took immediate action...", whose measured
                   # start is 1885, so fire = onset - 15 = 1870.  A value of
                   # 1842 implies an onset of 1857, 28 frames earlier than the
-                  # table's own row boundary.  Steve reviewed 1870 and did
+                  # table's own row boundary.  Review heard 1870 and did
                   # not object; the JP line at the same spot needed its own
                   # (much larger) correction and was bracketed by ear.
                   #
@@ -692,8 +699,8 @@ REGIONS = {
                   # dominance, syllabic modulation and YIN pitch-tracking
                   # were each validated on labelled windows and each failed
                   # to separate this narrator from the music bed.  So the
-                  # instrument is Steve's ear, and
-                  # the bracket was built and reviewed: at +67 (1843) he
+                  # instrument is the ear, and
+                  # the bracket was built and reviewed: at +67 (1843) review
                   # still heard "the caption starts rendering well before the
                   # first word"; at +224 (2000) "the timing of E is good".
                   # 2000 also lands 6 frames before whisper's stranded が at
@@ -706,7 +713,7 @@ REGIONS = {
                   # with the voice.
                   #
                   # The clear does NOT move with the fire: 0x122 would
-                  # otherwise hold 498 f and outlive its scene (Steve: "the
+                  # otherwise hold 498 f and outlive its scene (review: "the
                   # prior caption should clear early -- it hung beyond its
                   # scene").  It goes at 1620, measured against two bounds:
                   #
@@ -724,17 +731,17 @@ REGIONS = {
                   # text-only tail still being read).  0x122 is fully rendered
                   # 12 f BEFORE its voice
                   # ends, so nothing is left to read and holding it longer
-                  # just reads as a hang -- which is what Steve saw at 1786.
+                  # just reads as a hang -- which is what review saw at 1786.
                   # 1620 (16 f after the VOICE) left the line
                   # readable for 20 frames -- it finishes DRAWING at ~1600,
                   # so a voice-relative clear is a text-suppressing clear for
                   # a line whose render time (104 f) exceeds its voice (93 f).
-                  # 1786 was the other extreme (Steve: hung past its scene).
+                  # 1786 was the other extreme (review: hung past its scene).
                   # 0x122's TEXT is a whole sentence spanning TWO transcript
                   # segments -- 巨大な暴力集団 (1511-1604) AND マットギアに
                   # 徹底的な攻撃を加える (1604-1791) -- so its voice ends at
                   # 1791, not 1604.  Clearing against 1604 clears while the
-                  # line is still being spoken (Steve: "it disappears even
+                  # line is still being spoken (review: "it disappears even
                   # before the voice finishes the sentence").  With 0x12D at
                   # 2000 the clear has to cover the speech itself: 1795, just
                   # past the voice and at the shot's fade-out (~1800).
@@ -856,15 +863,13 @@ def build_j_stock_gfx():
     ]
     space = bytearray(0x200000)
     with tempfile.TemporaryDirectory() as td:
-        subprocess.run(["7zz", "e", "-y", f"-o{td}",
-                        str(ROMSET / "ffightj.7z")]
-                       + [r for r, _ in J_BYTE],
-                       check=True, capture_output=True)
+        romset.extract(ROMSET, ("ffightj", "ffight"), [r for r, _ in J_BYTE], td)
         for rom, base in J_BYTE:
             d = Path(td, rom).read_bytes()
             assert len(d) == 0x20000, rom
             space[base:base + 0x100000:8] = d
     patch_dash_tile(space)
+    select_window.patch(space)
     out = {}
     for fi, name in enumerate(("c07.c01", "c07.c03", "c07.c05", "c07.c07")):
         off = fi * 2
@@ -1201,6 +1206,8 @@ def main() -> int:
         jp_title=region.get("jp_title", False),
         ovr_chain=chain or None)
     print(f"engine {len(engine)} bytes, INIT at +{init_off:#x}, {nevents} events")
+    ex_title_entry = ENGINE + len(engine)
+    engine += title_ex.init_code()
 
     # engine.lst is a disassembly listing for reading the emitted code.  It
     # is a development aid, not part of any ROM, so capstone is optional:
@@ -1353,7 +1360,7 @@ def main() -> int:
         # voiced span instead, and the silent holds absorb the slack.
         anchors = region.get("ending_anchors")
         if OPT["ending_head_delay"] is not None:
-            # The "one offset, no warping" candidate.  Steve: "why is
+            # The "one offset, no warping" candidate.  Review: "why is
             # there any warping at all?"  The disc's animation and its dialogue
             # were authored together, so a faithful scene plus a correctly
             # placed audio start should need no piecewise map -- and measured,
@@ -1529,6 +1536,7 @@ def main() -> int:
     assert all(b == 0xFF for b in data[_co:_co + len(credits_blob)]), \
         f"CREDITS at {CREDITS_ADDR:#x} would overwrite a placed blob"
     place(CREDITS_ADDR, credits_blob, "CREDITS")
+    place(title_ex.DATA, title_ex.packed()[1], "EX_FRAMES")
 
     # 16_WORD_SWAP file layout
     p7 = bytearray(len(data))
@@ -1562,6 +1570,11 @@ def main() -> int:
     assert len(planar) <= 0x400000, f"art {len(planar):#x} exceeds 4 MB appended"
     space = bytearray(b"\xff" * 0x400000)
     space[0:len(planar)] = planar
+    ex_start = title_ex.GFX_OFFSET - 0x200000
+    ex_gfx = title_ex.graphics()
+    assert len(planar) <= ex_start, "cutscene art overlaps EX title tiles"
+    assert space[ex_start:ex_start + len(ex_gfx)] == b"\xff" * len(ex_gfx)
+    space[ex_start:ex_start + len(ex_gfx)] = ex_gfx
     # The mapper-neutral continue-screen fill (see the $2F12 patch below)
     # relies on code $2F12 decoding transparent on EVERY layer.  SCR3 reads
     # its 512-byte 32x32 tile at code*512 = gfx 0x5E2400, which is inside the
@@ -1589,21 +1602,10 @@ def main() -> int:
     # ---- program ROMs: stage0 p1/p2 + detours; engine into p5
     import subprocess, tempfile
     with tempfile.TemporaryDirectory() as td:
-        subprocess.run(["7zz", "e", "-y", f"-o{td}",
-                        str(ROMSET / "ffight.7z"),
-                        "ff-32m.8h", "ff_37.12f"],
-                       check=True, capture_output=True)
+        romset.extract(ROMSET, ("ffight",), ["ff-32m.8h", "ff_37.12f"], td)
         p4_arc, p4_member = region["p4"]
-        p4_path = ROMSET / p4_arc
-        if not p4_path.exists():
-            # rom archives get recompressed; accept .7z or .zip
-            for alt in (p4_path.with_suffix(".zip"), p4_path.with_suffix(".7z")):
-                if alt.exists():
-                    p4_path = alt
-                    break
-        subprocess.run(["7zz", "e", "-y", f"-o{td}",
-                        str(p4_path), p4_member],
-                       check=True, capture_output=True)
+        # the clone's own archive first, then a merged parent set
+        romset.extract(ROMSET, (Path(p4_arc).stem, "ffight"), [p4_member], td)
         p1 = bytearray((stage0 / "ff_36.11f").read_bytes())
         p2 = bytearray((stage0 / "ff_42.11h").read_bytes())
         p3 = bytearray(Path(td, "ff_37.12f").read_bytes())
@@ -1619,9 +1621,7 @@ def main() -> int:
                 assert p4[off] == oldb, (hex(off), hex(p4[off]), hex(oldb))
                 p4[off] = newb
             if rj.get("p3"):
-                subprocess.run(["7zz", "e", "-y", f"-o{td}",
-                                str(ROMSET / "ffight.7z"),
-                                "ff_37.12f"], check=True, capture_output=True)
+                romset.extract(ROMSET, ("ffight",), ["ff_37.12f"], td)
                 p3_patched = bytearray(Path(td, "ff_37.12f").read_bytes())
                 for off, oldb, newb in rj["p3"]:
                     assert p3_patched[off] == oldb, (hex(off), hex(p3_patched[off]), hex(oldb))
@@ -1682,6 +1682,9 @@ def main() -> int:
             else:
                 out.append((p3_out if a % 2 == 0 else p4)[(a - 0x40000) // 2])
         return bytes(out)
+
+    assert r_pair(0x18170, 6) == bytes.fromhex("207c000ca040")
+    w_pair(0x18170, be16(0x4EB9) + be32(ex_title_entry))
 
     # ---- MAPPER-NEUTRAL FILLS.  Two stock sites fill a shared 16 KB map with
     # tile codes the ffight PAL leaves UNMAPPED, relying on "unmapped draws
@@ -1954,14 +1957,8 @@ def main() -> int:
     WORLD_GFX = [("c07.c01", "ff-5m.7a"), ("c07.c03", "ff-7m.9a"),
                  ("c07.c05", "ff-1m.3a"), ("c07.c07", "ff-3m.5a")]
     with tempfile.TemporaryDirectory() as td:
-        subprocess.run(["7zz", "e", "-y", f"-o{td}",
-                        str(ROMSET / "ffight.7z"), "ff_09.12b"]
-                       + [r for _, r in WORLD_GFX],
-                       check=True, capture_output=True)
-        subprocess.run(["7zz", "e", "-y", f"-o{td}",
-                        str(ROMSET / "ffightj.7z"),
-                        "ffj_30.bin", "ffj_31.bin"],
-                       check=True, capture_output=True)
+        romset.extract(ROMSET, ("ffight",), ["ff_09.12b"] + [r for _, r in WORLD_GFX], td)
+        romset.extract(ROMSET, ("ffightj", "ffight"), ["ffj_30.bin", "ffj_31.bin"], td)
         m1 = bytearray(Path(td, "ff_09.12b").read_bytes())
         stock_base = {"c07.v1": Path(td, "ffj_30.bin").read_bytes(),
                       "c07.v2": Path(td, "ffj_31.bin").read_bytes()}
@@ -2030,6 +2027,7 @@ def main() -> int:
             space4[fi * 2::8] = rom[0::2]
             space4[fi * 2 + 1::8] = rom[1::2]
         patch_dash_tile(space4)
+        select_window.patch(space4)
         for fi, name in enumerate(("c07.c01", "c07.c03", "c07.c05", "c07.c07")):
             d = bytearray(n4)
             d[0::2] = space4[fi * 2::8]
@@ -2078,12 +2076,29 @@ def main() -> int:
             # non-empty value here means the environment is carrying a stale
             # variable from an older build script -- worth seeing, not acting on.
             "stray_env": _stray,
+            "frontend": {
+                "title": "FINAL FIGHT EX",
+                "revision": "260917",
+                "ex_design": "arcade lettering",
+                "ex_png_sha256": _hl.sha256((title_ex.ART / "ex.png").read_bytes()).hexdigest(),
+                "ex_grid_sha256": _hl.sha256((title_ex.ART / "ex_pixels.json").read_bytes()).hexdigest(),
+                "ex_letter_sha256": {_n: _hl.sha256((title_ex.ART / f"{_n}.png").read_bytes()).hexdigest()
+                                     for _n in ("e", "x")},
+                "ex_gfx_offset": title_ex.GFX_OFFSET,
+                "ex_gfx_sha256": _hl.sha256(ex_gfx).hexdigest(),
+                "ex_position": list(title_ex.HOME),
+                "ex_tiles": title_ex.packed()[2],
+                "ex_layer": "SCR3 (topmost)",
+                "ex_motion_sha256": _hl.sha256((title_ex.MOTION / "cd_title_motion.json").read_bytes()).hexdigest(),
+                "window_pixels": list(select_window.PIXELS),
+            },
             "members": {},
         }
-        for _n, _b in sorted(ren.items()):
+        for _n, _b in sorted(members.items()):
             _prov["members"][_n] = {"bytes": len(_b),
                                     "crc32": format(zlib.crc32(_b) & 0xFFFFFFFF, "08x"),
-                                    "md5": _hl.md5(_b).hexdigest()}
+                                    "md5": _hl.md5(_b).hexdigest(),
+                                    "sha256": _hl.sha256(_b).hexdigest()}
         (outdir / "build_provenance.json").write_text(_js.dumps(_prov, indent=2))
         print(f"wrote {outdir}/build_provenance.json "
               f"({len(_prov['members'])} members"

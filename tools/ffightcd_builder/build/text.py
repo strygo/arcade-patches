@@ -350,7 +350,7 @@ def build_credits(read, header: str) -> bytes:
     """Stock roll + the backport credit, as a relocatable blob.
 
     Placed immediately BEFORE the last section header ("special thanks"),
-    which is where Steve asked for it, and written in the roll's own idiom.
+    which is where review asked for it, and written in the roll's own idiom.
     The stock rhythm, read off the stream itself:
 
         HEADER (two rows) | 3 dots | name, dot, name, dot ... | 1 dot | next

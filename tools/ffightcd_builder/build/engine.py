@@ -20,6 +20,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from ffcd.cps1 import chunky_to_planar  # noqa: E402
+import title_ex
 
 def be16(v): return struct.pack(">H", v & 0xFFFF)
 def be32(v): return struct.pack(">I", v & 0xFFFFFFFF)
@@ -956,7 +957,7 @@ def build_engine(nevents: int, init_cue: int = 0,
                 # (the letterbox rule above), but the OBJ layer is NOT part
                 # of that shadow -- so the walker happily populated the page
                 # through the dark ticks and the patch sprites drew on black
-                # with no picture behind them.  Steve caught it as the
+                # with no picture behind them.  Review caught it as the
                 # scene's first few frames being "just the mouths": two
                 # patch cells, Jessica's lips and Cody's, alone on an empty
                 # screen.  It is the scene-END flash (108b) mirrored.
@@ -988,7 +989,7 @@ def build_engine(nevents: int, init_cue: int = 0,
                 emit(0x0C40, 0xFFFF)
                 bxx(0x6700, "pwdn")                  # pre-first event
                 # PARK THE PAGE ON THE LAST DRAWING FRAME.
-                # Steve: "the background is hidden one frame before the obj
+                # Review: "the background is hidden one frame before the obj
                 # tiles" -- captured in game as f7367, the whole scene black
                 # with a dozen patch cells (grass, jeans, her shoe) scattered
                 # over it.  The cause is the lag this engine already knows
@@ -1023,7 +1024,7 @@ def build_engine(nevents: int, init_cue: int = 0,
                 # frame long, so that lag IS a 1 px vertical offset -- and
                 # because a patch carries its OWN palette, the misregistered
                 # cell also reads as a palette change against its
-                # neighbours.  Both halves of Steve's report ("jessica's
+                # neighbours.  Both halves of the review report ("jessica's
                 # mouth shifts down by 1px and changes palettes"), one cause.
                 # The cure is to take sy from the record that will be LIVE
                 # when these sprites are displayed: the next one, whenever
@@ -1378,7 +1379,7 @@ def build_engine(nevents: int, init_cue: int = 0,
         emit(0x6606)                         # bne.s past the jmp
         emit(0x4EF9, be32(chain_addr))
     # ---- CLOSE THE CREDITS' BLANK-BEAT LAG (polish, not a fix:
-    # stock does this too, confirmed by Steve in the pure arcade ending).
+    # stock does this too, confirmed by review in the pure arcade ending).
     #
     # Between credits scenes the sequencer blanks by writing 0x12C2 to the
     # LAYER SHADOW ($6e(a5)).  Measured by sweeping the layer word over a
@@ -1588,7 +1589,7 @@ def build_engine(nevents: int, init_cue: int = 0,
     # OBJ base: NO register write here (see objhook: a second $800100
     # write per frame restarts the CPS-A OBJ DMA on the core)
     lea(0x800140, 1)                         # bury scroll1 while settling
-    emit(0x337C, 0x12CC, 0x002E)
+    emit(0x337C, 0x348C, 0x002E)
     bxx(0x6000, "srest")
     lab["sstep"] = len(b)
     # every sliding frame: real OBJ list back (sprites displaced below
@@ -1645,36 +1646,21 @@ def build_engine(nevents: int, init_cue: int = 0,
     emit(0x3B41, 0x0028)
     emit(0x3B7C, 0x9000, 0x009E)             # obj base shadow stays stock
                                              # (the register is the hook's)
-    # scroll2-X / scroll3-Y shadows to the stock title rest.  Proven by
-    # the credited-title control (user tip: coin-in fixes the F): the
-    # attract and credited titles have IDENTICAL scroll2/scroll3 maps,
-    # and the only video-state deltas are these regs (s2x off by 0x200 =
-    # 512px = half the scroll2 map: the attract window shows the blank
-    # half, cutting the "Fight" F tail) plus text/fade.  The $5E8 vblank
-    # refresh recomputes the regs from these shadows every frame
-    # (s2x_reg = $2e(a5)+0xFFC0, s3y_reg = 0x700-$38(a5)), which is why
-    # writing the regs directly never stuck.
+    # Restore the stock SCR2 title X so the Fight tail remains visible.
+    # SCR3 is blank in the stock title; EX uses it as a foreground overlay.
+    # The ISR derives hardware scrolls from these staged/live shadows.
     emit(0x323C, 0x0200)                     # move.w #$200,d1
     emit(0x3B41, 0x002A)                     # s2x staged  $2a(a5)
     emit(0x3B41, 0x002E)                     # s2x live    $2e(a5)
-    emit(0x323C, 0x0100)                     # move.w #$100,d1
+    emit(0x323C, 0x0710)                     # move.w #$710,d1 (EX map origin)
     emit(0x3B41, 0x0034)                     # s3y staged  $34(a5)
     emit(0x3B41, 0x0038)                     # s3y live    $38(a5)
-    # layer order + CPS-B priority masks to the stock title values (the
-    # cutscene's 0x18CE ordering drops the tail's outline layer; regs
-    # refreshed from these shadows by the same $5E8/$54C ISR paths)
-    emit(0x3B7C, 0x12CE, 0x006E)             # layer control staged $6e(a5)
-    emit(0x3B7C, 0x12CE, 0x0070)             # layer control live   $70(a5)
+    # Preserve stock SCR2/OBJ/SCR1 ordering, with EX on top in SCR3.
+    # Keep the stock priority masks; the ISR consumes these shadows.
+    emit(0x3B7C, 0x348E, 0x006E)             # layer control staged $6e(a5)
+    emit(0x3B7C, 0x348E, 0x0070)             # layer control live   $70(a5)
     emit(0x3B7C, 0x4009, 0x0074)             # -> reg 0x800170
     emit(0x3B7C, 0x7FFF, 0x0076)             # -> reg 0x800168
-    # scroll3 to the STOCK title rest (x $28, y $620).  The story block
-    # leaves the cutscene parking values (ffc0/0700) in the CPS-A regs,
-    # and nothing at the title rewrites them (no RAM shadow: a write
-    # here RETAINS after the hook dies -- measured).  At 0700 the map
-    # window sits 224px low, scrolling the logo's F/g descender tail
-    # cells (map rows 53-54, present and identical to stock) offscreen
-    # -- the truncated-F user report.  Landed frames only: during the
-    # slide the tail must not show before the scroll1 logo arrives.
     # coin-prompt line: call the game's own chooser at $18B8 -- it
     # stamps INSERT COIN (credits 0) or PUSH 1P START (credits > 0)
     # plus the credit digit, exactly as stock (a coin can land during
@@ -1720,16 +1706,16 @@ def build_engine(nevents: int, init_cue: int = 0,
         bxx(0x51CB, "scloop")
     lab["scskip"] = len(b)
     lea(0x800140, 1)
-    emit(0x337C, 0x12CE, 0x002E)
+    emit(0x337C, 0x348E, 0x002E)
     bxx(0x6000, "ovrx")
     lab["sdead"] = len(b)
     lea(0x800140, 1)
-    emit(0x337C, 0x12CE, 0x002E)
+    emit(0x337C, 0x348E, 0x002E)
     emit(0x30BC, 0xDEAD)
     bxx(0x6000, "ovrx")
     lab["slay"] = len(b)
     lea(0x800140, 1)                         # keep stock layer order
-    emit(0x337C, 0x12CE, 0x002E)
+    emit(0x337C, 0x348E, 0x002E)
     # ---- RESTORES (every pre-landed vblank, after the updates above).
     lab["srest"] = len(b)
     # blank the scroll1 TEXT rows every sliding vblank -- the game
@@ -1987,6 +1973,7 @@ def build_engine(nevents: int, init_cue: int = 0,
     # snapshots differ on rows 56-71).  Finals are $48..$A8, displaced
     # are >= $F0: disjoint at $F0.
     lab["objhook"] = len(b)
+    bxx(0x6100, "extick")                    # topmost EX overlay, title-only
     emit(0x0C79, 0x51DE, 0x00FF, 0xFFF0)     # cmpi.w #$51DE,STATE.l
     bxx(0x6600, "ohstock")                   # not the slide -> stock write
     emit(0x3039, 0x00FF, 0xFFF4)             # move.w F4,d0 (n, pre-increment:
@@ -2128,6 +2115,8 @@ def build_engine(nevents: int, init_cue: int = 0,
     emit(0x33FC, 0x12CE, 0x0080, 0x016E)     # move.w #$12CE,$80016E.l -- deferred
     emit(0x3039, 0x0080, 0x0160)             # move.w $800160.l,d0 -- displaced insn
     emit(0x4EF9, 0x0005, 0xE846)             # jmp $5E846.l -- resume CPS-B ID check
+
+    title_ex.emit_tick(emit, bxx, lab, b)
 
     for name, positions in fix.items():
         for pos in positions:

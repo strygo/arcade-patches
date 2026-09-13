@@ -22,7 +22,7 @@
 <misterromdescription>
     <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores"/>
     <rotation>horizontal</rotation>
-    <name>Final Fight (CD Cutscenes)</name>
+    <name>Final Fight EX (USA)</name>
     <setname>ffightus01</setname>
     <mameversion>0282</mameversion>
     <year>1989</year>
@@ -30,7 +30,11 @@
     <players>2</players>
     <rbf>jtcps1</rbf>
     <joystick>8</joystick>
-    <region>World</region>
+    <region>USA</region>
+    <platform>CPS-1</platform>
+    <category>Beat 'em up</category>
+    <catver>Fighter / 2.5D</catver>
+    <mraauthor>jotego,strygo</mraauthor>
     <rom index="0" zip="/hbmame/ffightus01.zip" md5="None" address="0x30000000">
         <!--  -->
         <part>
@@ -45,15 +49,15 @@
         </part>
         <!-- maincpu - starts at 0x0 - length 0x200000 (21 bits) -->
         <interleave output="16">
-            <part name="c07.p1" crc="dcff2266" map="10"/>
-            <part name="c07.p2" crc="17ed10c8" map="01"/>
+            <part name="c07.p1" crc="f3b4ea53" map="10"/>
+            <part name="c07.p2" crc="1363bbc4" map="01"/>
         </interleave>
         <interleave output="16">
             <part name="c07.p3" crc="118eb060" map="10"/>
-            <part name="c07u.p4" crc="2b1bc0bd" map="01"/>
+            <part name="c07u.p4" crc="38964eff" map="01"/>
         </interleave>
-        <part name="c07.p5" crc="48cf3f73"/>
-        <part name="c07us01.p7" crc="39f5c73f"/>
+        <part name="c07.p5" crc="9f5a14bc"/>
+        <part name="c07us01.p7" crc="a28a8b1e"/>
         <!-- audiocpu - starts at 0x200000 - length 0x10000 (16 bits) -->
         <part name="c07.m1" crc="87eca9ec"/>
         <!-- oki - starts at 0x210000 - length 0x40000 (18 bits) -->
@@ -63,8 +67,8 @@
         <interleave output="64">
             <part name="c07.c01" crc="7b4aad16" map="00000021"/>
             <part name="c07.c03" crc="28192faf" map="00002100"/>
-            <part name="c07.c05" crc="ec02b25a" map="00210000"/>
-            <part name="c07.c07" crc="dd687e86" map="21000000"/>
+            <part name="c07.c05" crc="deff8c10" map="00210000"/>
+            <part name="c07.c07" crc="4b532b36" map="21000000"/>
         </interleave>
         <interleave output="64">
             <part name="c07us01.c09" crc="3365bae7" map="00000021"/>
@@ -73,10 +77,10 @@
             <part name="c07us01.c15" crc="d65f25ed" map="21000000"/>
         </interleave>
         <interleave output="64">
-            <part name="c07us01.c17" crc="297d4989" map="00000021"/>
-            <part name="c07us01.c19" crc="6d1398cc" map="00002100"/>
-            <part name="c07us01.c21" crc="75b081e7" map="00210000"/>
-            <part name="c07us01.c23" crc="6e11b86d" map="21000000"/>
+            <part name="c07us01.c17" crc="7816f1b3" map="00000021"/>
+            <part name="c07us01.c19" crc="f41e8234" map="00002100"/>
+            <part name="c07us01.c21" crc="926cbbe9" map="00210000"/>
+            <part name="c07us01.c23" crc="5b8c7af3" map="21000000"/>
         </interleave>
         <!-- Total 0x350000 bytes - 3392 kBytes -->
     </rom>

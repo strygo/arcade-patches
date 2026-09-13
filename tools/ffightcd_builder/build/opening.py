@@ -3,7 +3,7 @@ numbering, run the SHIPPED convert.py with the canonical shot table,
 and byte-compare against the shipped conv artifacts.  Usage:
     opening.py jp|us [--align-only]
 
-ONE ROUTE, AND IT READS NO CAPTURE (Steve: "opening should not
+ONE ROUTE, AND IT READS NO CAPTURE (review: "opening should not
 read captures").  The shot tables are in VM frames, so there is no mapping
 left to do -- see the note above build_aligned.
 
@@ -42,6 +42,8 @@ import argparse
 import sys, os, subprocess, hashlib
 from pathlib import Path
 from PIL import Image
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # track root: ffcd/ lives there
+from ffcd.files import link_or_copy  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 TRACK = HERE.parent
@@ -131,7 +133,7 @@ def build_aligned(rows):
         dst = ALIGNED / f"f{cf:06d}.png"
         if dst.exists():
             dst.unlink()
-        os.link(VMSWEEP / f"f{vf:06d}.png", dst)
+        link_or_copy(VMSWEEP / f"f{vf:06d}.png", dst)
         n += 1
     print(f"aligned snapdir: {n} frames "
           f"(clamped head {head}, tail {tail})", flush=True)

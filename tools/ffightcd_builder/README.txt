@@ -1,15 +1,15 @@
-Final Fight CD — cutscene backport reconstruction kit
-=====================================================
+Final Fight EX — reconstruction kit
+===================================
 
-Version:      rc1 (2026-08-25)
+Version:      rc2 (2026-09-17)
 Hardware:     Capcom CPS-1
 Target:       HBMAME sets ffightus01 / ffightjs01, and MiSTer (jtcps1)
 Backport by:  Steve Gordon (https://x.com/strygo)
-Website:      https://strygo.github.io/arcade-patches/final-fight-cd/
+Website:      https://strygo.github.io/arcade-patches/final-fight-ex/
 
-This kit rebuilds the CPS-1 arcade backport of Final Fight's Sega CD
-cutscenes from your own disc images and your own arcade romset. No game
-data is included.
+This kit rebuilds Final Fight EX, the CPS-1 arcade Final Fight with the
+Sega CD version's cutscenes and an EX title, from your own disc images and
+your own arcade romset. No game data is included.
 
 The cutscenes are not captured from an emulator. A 68000 interpreter runs
 the disc's own scene script and renders the Mega Drive video state it
@@ -27,14 +27,20 @@ WHAT YOU NEED
      Supply both to build both sets.
 
   2. Your arcade Final Fight romset, MAME 0.260-era, in one directory:
-       ffight.7z (World), ffightu.7z (USA), ffightj.7z (Japan)
+       ffight (World), ffightu (USA) and ffightj (Japan), as .zip or .7z,
+       split or merged. The USA build reads all three; the Japan build reads
+       ffight and ffightj.
 
-  3. Python 3.9 or newer with numpy and Pillow, and 7zz (or 7z) on PATH.
-     No emulator, no assembler.
+  3. Python 3.9 or newer with numpy and Pillow. .zip romsets need nothing
+     else; .7z romsets need 7-Zip (7zz, 7z, or 7-Zip's normal Windows
+     install). No emulator, no assembler.
 
 
 USAGE
 -----
+
+(On Windows, run it as "py apply.py ..." on one line, or end each line with ^
+in Command Prompt or ` in PowerShell instead of \.)
 
     python3 apply.py --disc-us "Final Fight CD (USA) (Track 01).bin" \
                      --romset /path/to/roms --out-dir out
@@ -44,9 +50,11 @@ the build covers whichever regions you supplied a disc for. This writes:
 
     out/hbmame/ffightus01.zip        for HBMAME
     out/hbmame/ffightjs01.zip
-    out/mister/_Arcade/_Backports/*.mra   MiSTer, laid out like the SD
-    out/mister/games/hbmame/*.zip    you can copy out/mister/'s contents
-                                     to the card root
+    out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/Final Fight EX (USA).mra
+    out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Final Fight EX (Japan).mra
+    out/mister/games/hbmame/*.zip    MiSTer, laid out like the SD card:
+                                     copy out/mister/'s contents to the
+                                     card root
 
 The first build takes about six minutes for both regions, less for one;
 each stage prints as it goes.
@@ -62,8 +70,13 @@ ON MISTER
 
 Copy the contents of out/mister/ to the root of the MiSTer SD card:
 
-    _Arcade/_Backports/Final Fight (CD Cutscenes).mra
+    _Arcade/_Arcade Patches/_Enhanced Versions/Final Fight EX (USA).mra
+    _Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Final Fight EX (Japan).mra
     games/hbmame/ffightus01.zip
+    games/hbmame/ffightjs01.zip
+
+Earlier releases put these MRAs in _Arcade/_Backports; delete them from there
+when you copy the new ones over.
 
 The standard Jotego jtcps1 core is required.
 
