@@ -6,6 +6,16 @@ are taken from SC-55 captures.  SC-55's playback-only GS setup window is
 removed, every file is converted to stereo 24-bit/48-kHz FLAC, and steady
 second-pass loop candidates are written as Vorbis comments and JSON sidecars.
 
+The SC-55 exports feed packs that are rebuilt on users' machines against
+pinned hashes, so their audio is computed here rather than by an ffmpeg filter
+graph: ffmpeg's resampler runs in float and rounds differently per CPU, and a
+Windows export differed from the Mac in every file.  The in-repo chain is the
+one those pins were made with -- the setup trim, swresample's filter_size=64
+64 -> 48 kHz conversion, llrint to s32 and the FLAC encoder's shift to 24 bits
+-- reproduced bit for bit (pack/resample.py), so the decoded FLAC audio is the
+same on every CPU.  ffmpeg only encodes the finished integer PCM, which FLAC
+stores losslessly; the file bytes may still vary with the ffmpeg version.
+
 The optional Final Fight mastering profile is the fixed, album-relative chain
 approved while comparing song00 against the X68000 MIDI OSV reference.  It is
 not a per-track normalizer, so the source soundtrack's relative levels remain
@@ -17,9 +27,15 @@ import argparse
 import hashlib
 import json
 import os
+import struct
 import subprocess
 import sys
 from pathlib import Path
+
+import numpy as np
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from pack import resample  # noqa: E402
 
 
 class ExportError(RuntimeError):
@@ -29,6 +45,9 @@ class ExportError(RuntimeError):
 OUTPUT_SAMPLE_RATE = 48_000
 OUTPUT_BITS = 24
 SC55_SETUP_SECONDS = 0.5
+# swresample settings the published SC-55 exports were converted with
+SC55_FILTER_SIZE = 64
+SC55_TAPS_SHA256 = "15974aee5370021799860f3ddc83da62e0fa915998cf7f4a4f8ff6a46c1066f8"
 SC55_GAMES = ("daimakaimura", "sf2ce", "ssf2")
 MT32_GAMES = ("ffight",)
 GAME_TITLES = {
@@ -83,7 +102,10 @@ def _display_path(repo: Path, path: Path) -> str:
 
 
 def _run(command: list[str]) -> str:
-    result = subprocess.run(command, text=True, capture_output=True)
+    result = subprocess.run(
+        command, capture_output=True,
+        text=True, encoding="utf-8", errors="replace",
+    )
     if result.returncode:
         details = "\n".join(part for part in (result.stdout, result.stderr) if part)
         raise ExportError(
@@ -191,23 +213,20 @@ def _processing(
                 (float(loop_candidate["end_seconds"]) - SC55_SETUP_SECONDS)
                 * OUTPUT_SAMPLE_RATE
             )
-            # The end trim happens AFTER the sample-rate converter, in the
-            # output sample domain.  Trimming the converter's input instead
-            # would make it flush against a truncated tail, and the last few
-            # dozen frames before LOOPEND would differ from a full-length
-            # conversion -- which is how the published packs were made.
-            # The converter can also finish one frame short depending on
-            # phase, so pad before the exact trim: LOOPEND is always a valid
-            # exclusive stream boundary.
-            exact_end = f",apad,atrim=end_sample={output_end}"
+            # The end cut happens AFTER the sample-rate converter, in the
+            # output sample domain: the samples before LOOPEND are those of
+            # a full-length conversion, which is how the published packs were
+            # made.  A conversion that ends short of LOOPEND is padded with
+            # silence, as ffmpeg's apad did.
+            exact_end = f"; end at sample {output_end}"
             note += "; stream ends at LOOPEND"
         return (
             SC55_SETUP_SECONDS,
             (
-                f"atrim=start={SC55_SETUP_SECONDS},"
-                "asetpts=PTS-STARTPTS,"
-                f"aresample={OUTPUT_SAMPLE_RATE}:filter_size=64:"
-                f"phase_shift=10:exact_rational=1{exact_end}"
+                f"trim {SC55_SETUP_SECONDS} s; swresample-exact "
+                f"{OUTPUT_SAMPLE_RATE} Hz filter_size={SC55_FILTER_SIZE} "
+                "phase_shift=10 exact_rational=1 (float32, arm64 order); "
+                f"llrint to s32, 24-bit{exact_end}"
             ),
             note,
         )
@@ -224,8 +243,6 @@ def _processing(
 def _reuse_record(
     repo: Path, sidecar: Path, output: Path, source_hash: str,
     module: str, audio_filter: str, loop_tags: dict[str, int],
-    compatible_audio_filter: str | None = None,
-    processing_note: str | None = None,
 ) -> dict[str, object] | None:
     if not sidecar.is_file() or not output.is_file():
         return None
@@ -234,83 +251,83 @@ def _reuse_record(
         record.get("schema") != "cpsplus-x68000-midi-flac-v1"
         or record.get("source_sha256") != source_hash
         or record.get("sound_module") != module
+        or record.get("audio_filter") != audio_filter
         or record.get("loop_tags") != loop_tags
         or record.get("output_sha256") != _sha256(output)
     ):
         return None
     if record.get("output") != _display_path(repo, output):
         return None
-    if record.get("audio_filter") != audio_filter:
-        if (
-            record.get("audio_filter") != compatible_audio_filter
-            or not loop_tags
-            or int(record.get("flac", {}).get("frames", 0))
-            != int(loop_tags["LOOPEND"])
-        ):
-            return None
-        record["audio_filter"] = audio_filter
-        if processing_note is not None:
-            record["processing_note"] = processing_note
-        sidecar.write_text(json.dumps(record, indent=2) + "\n")
     return record
 
 
-def _compact_prior_flac(
-    args: argparse.Namespace, repo: Path, sidecar: Path, output: Path,
-    source_hash: str, module: str, loop_tags: dict[str, int],
-    old_audio_filter: str, audio_filter: str, processing_note: str,
-) -> dict[str, object] | None:
-    if module != "SC-55" or not loop_tags:
-        return None
-    if not sidecar.is_file() or not output.is_file():
-        return None
-    prior = json.loads(sidecar.read_text())
-    if (
-        prior.get("schema") != "cpsplus-x68000-midi-flac-v1"
-        or prior.get("source_sha256") != source_hash
-        or prior.get("sound_module") != module
-        or prior.get("audio_filter") != old_audio_filter
-        or prior.get("loop_tags") != loop_tags
-        or prior.get("output_sha256") != _sha256(output)
-    ):
-        return None
+def _float_wav(path: Path) -> tuple[int, np.ndarray]:
+    """(rate, samples) of a 32-bit float WAV, samples as a float32 view of
+    shape (frames, channels) -- the file is mapped, not read."""
+    raw = np.memmap(path, dtype=np.uint8, mode="r")
+    if bytes(raw[:4]) != b"RIFF" or bytes(raw[8:12]) != b"WAVE":
+        raise ExportError(f"not a WAV file: {path}")
+    pos, fmt = 12, None
+    while pos + 8 <= len(raw):
+        chunk = bytes(raw[pos:pos + 4])
+        size = struct.unpack("<I", bytes(raw[pos + 4:pos + 8]))[0]
+        if chunk == b"fmt ":
+            tag, channels, rate, _, _, bits = struct.unpack(
+                "<HHIIHH", bytes(raw[pos + 8:pos + 24]))
+            if tag == 0xFFFE:                   # WAVE_FORMAT_EXTENSIBLE
+                tag = struct.unpack("<H", bytes(raw[pos + 32:pos + 34]))[0]
+            fmt = tag, channels, rate, bits
+        elif chunk == b"data":
+            if fmt is None or fmt[0] != 3 or fmt[3] != 32 or fmt[1] != 2:
+                raise ExportError(f"expected stereo 32-bit float WAV: {path}")
+            size = min(size, len(raw) - pos - 8) // 8 * 8
+            samples = np.frombuffer(raw, "<f4", count=size // 4, offset=pos + 8)
+            return fmt[2], samples.reshape(-1, 2)
+        pos += 8 + size + (size & 1)
+    raise ExportError(f"WAV has no audio data: {path}")
 
-    prior_hash = str(prior["output_sha256"])
-    temporary = output.with_name(f".{output.name}.{os.getpid()}.compact.tmp.flac")
-    if temporary.exists():
-        temporary.unlink()
-    command = [
-        str(args.ffmpeg), "-hide_banner", "-loglevel", "error", "-y",
-        "-i", str(output), "-map", "0:a:0", "-map_metadata", "0",
-        "-af", f"atrim=end_sample={loop_tags['LOOPEND']},asetpts=PTS-STARTPTS",
-        "-ar", str(OUTPUT_SAMPLE_RATE), "-ac", "2",
-        "-sample_fmt", "s32", "-bits_per_raw_sample", str(OUTPUT_BITS),
-        "-c:a", "flac", "-compression_level", "12", str(temporary),
-    ]
-    print(
-        f"compacting {prior['game']}/{prior['song']} at LOOPEND ...",
-        flush=True,
-    )
-    try:
-        _run(command)
-        os.replace(temporary, output)
-    finally:
-        if temporary.exists():
-            temporary.unlink()
-    flac = _probe_flac(args.ffprobe, output)
-    if int(flac["frames"]) != int(loop_tags["LOOPEND"]):
-        raise ExportError(f"compacted FLAC does not end at LOOPEND: {output}")
-    for key, value in loop_tags.items():
-        if flac["tags"].get(key) != str(value):
-            raise ExportError(f"compacted FLAC lost {key} metadata: {output}")
 
-    prior["audio_filter"] = audio_filter
-    prior["processing_note"] = processing_note
-    prior["compacted_from_output_sha256"] = prior_hash
-    prior["output_sha256"] = _sha256(output)
-    prior["flac"] = flac
-    sidecar.write_text(json.dumps(prior, indent=2) + "\n")
-    return prior
+def _sc55_pcm(source: Path, loop_tags: dict[str, int]) -> np.ndarray:
+    """The SC-55 capture as the published 24-bit export, in s32 form (the low
+    byte zero), shape (frames, 2).
+
+    ffmpeg's chain, step by step: atrim=start drops round(0.5 s * rate)
+    input frames; aresample converts in float (swresample's fltp), which
+    resample.convolve_f32 reproduces exactly; the float result goes to s32 by
+    llrint (round to nearest, ties to even, of v * 2**31; saturating); the
+    FLAC encoder keeps the top 24 bits (an arithmetic shift, so a floor);
+    apad + atrim=end_sample pad with silence and cut at LOOPEND."""
+    rate, samples = _float_wav(source)
+    start = round(SC55_SETUP_SECONDS * rate)
+    samples = samples[start:]
+    if not np.all(np.isfinite(samples)):
+        raise ExportError(f"capture holds non-finite samples: {source}")
+    end = loop_tags.get("LOOPEND")
+
+    def to_s32(v: np.ndarray) -> np.ndarray:
+        q31 = np.clip(np.rint(v.astype(np.float64) * 2.0**31),
+                      -2.0**31, 2.0**31 - 1).astype(np.int64)
+        return ((q31 >> 8) << 8).astype("<i4")
+
+    pcm = resample.convolve_f32(
+        lambda k: np.ascontiguousarray(samples[:, k]), len(samples), 2,
+        rate, OUTPUT_SAMPLE_RATE, to_s32, "<i4", SC55_FILTER_SIZE, limit=end)
+    if end is not None and len(pcm) < end:
+        pcm = np.concatenate((pcm, np.zeros((end - len(pcm), 2), "<i4")))
+    return pcm
+
+
+def _decode_s32(ffmpeg: Path, path: Path) -> bytes:
+    """A FLAC file's samples as s32le: lossless, no conversion in ffmpeg."""
+    result = subprocess.run(
+        [str(ffmpeg), "-hide_banner", "-loglevel", "error", "-i", str(path),
+         "-map", "0:a:0", "-f", "s32le", "-c:a", "pcm_s32le", "-"],
+        capture_output=True)
+    if result.returncode:
+        raise ExportError(
+            f"could not decode {path}: "
+            f"{result.stderr.decode('utf-8', 'replace')[:500]}")
+    return result.stdout
 
 
 def _export_one(
@@ -331,28 +348,12 @@ def _export_one(
     output.parent.mkdir(parents=True, exist_ok=True)
 
     if not args.overwrite:
-        compatible_audio_filter = None
-        if module == "SC-55" and loop_tags and ",apad,atrim=end_sample=" in audio_filter:
-            compatible_audio_filter = audio_filter.rsplit(
-                ",apad,atrim=end_sample=", 1
-            )[0]
         reused = _reuse_record(
             repo, sidecar, output, source_hash, module, audio_filter, loop_tags,
-            compatible_audio_filter, processing_note,
         )
         if reused is not None:
             print(f"reusing {game}/{song}", flush=True)
             return reused
-
-        _, old_audio_filter, _ = _processing(
-            module, args.ffight_profile, loop_candidate, compact_loop=False
-        )
-        compacted = _compact_prior_flac(
-            args, repo, sidecar, output, source_hash, module, loop_tags,
-            old_audio_filter, audio_filter, processing_note,
-        )
-        if compacted is not None:
-            return compacted
 
     if not source.is_file():
         raise ExportError(f"capture WAV is missing: {source}")
@@ -362,10 +363,23 @@ def _export_one(
     temporary = output.with_name(f".{output.name}.{os.getpid()}.tmp.flac")
     if temporary.exists():
         temporary.unlink()
+    pcm = None
+    if module == "SC-55":
+        print(f"converting {game}/{song} ({module}) ...", flush=True)
+        pcm = _sc55_pcm(source, loop_tags).tobytes()
+        # already the finished s32 samples: nothing for ffmpeg to convert
+        audio_input = [
+            "-f", "s32le", "-ar", str(OUTPUT_SAMPLE_RATE), "-ac", "2",
+            "-i", "pipe:0",
+        ]
+    else:
+        audio_input = [
+            "-i", str(source), "-map", "0:a:0", "-vn", "-sn", "-dn",
+            "-af", audio_filter,
+        ]
     command = [
         str(args.ffmpeg), "-hide_banner", "-loglevel", "error", "-y",
-        "-i", str(source), "-map", "0:a:0", "-vn", "-sn", "-dn",
-        "-af", audio_filter,
+        *audio_input,
         "-ar", str(OUTPUT_SAMPLE_RATE), "-ac", "2",
         "-sample_fmt", "s32", "-bits_per_raw_sample", str(OUTPUT_BITS),
         "-c:a", "flac", "-compression_level", "12",
@@ -380,7 +394,18 @@ def _export_one(
     command.append(str(temporary))
     print(f"exporting {game}/{song} ({module}) ...", flush=True)
     try:
-        _run(command)
+        if pcm is None:
+            _run(command)
+        else:
+            result = subprocess.run(command, input=pcm, capture_output=True)
+            if result.returncode:
+                raise ExportError(
+                    f"command failed ({result.returncode}): "
+                    f"{' '.join(command)}\n"
+                    f"{result.stderr.decode('utf-8', 'replace')}")
+            # FLAC is lossless: hold the encoder to that before publishing
+            if _decode_s32(args.ffmpeg, temporary) != pcm:
+                raise ExportError(f"FLAC does not decode to its PCM: {output}")
         os.replace(temporary, output)
     finally:
         if temporary.exists():
@@ -418,6 +443,9 @@ def _export_one(
         "loop_tags": loop_tags,
         "output": _display_path(repo, output),
         "output_sha256": _sha256(output),
+        # the file bytes carry the encoder's version; the audio does not
+        "pcm_s32le_sha256": (hashlib.sha256(pcm).hexdigest()
+                             if pcm is not None else None),
         "flac": flac,
     }
     sidecar.write_text(json.dumps(record, indent=2) + "\n")
@@ -543,13 +571,23 @@ def self_test() -> None:
     assert _loop_tags(None, 0.5) == {}
     trim, audio_filter, _ = _processing("SC-55", "song00-osv")
     assert trim == SC55_SETUP_SECONDS
-    assert audio_filter.startswith("atrim=start=0.5")
+    assert audio_filter.startswith("trim 0.5 s; swresample-exact")
     _, compact_filter, compact_note = _processing(
         "SC-55", "song00-osv", candidate
     )
-    assert ":end=" not in compact_filter          # trim after the resampler
-    assert "apad,atrim=end_sample=696000" in compact_filter
+    assert compact_filter.endswith("; end at sample 696000")
     assert compact_note.endswith("stream ends at LOOPEND")
+    # the SC-55 conversion's filter bank has one possible content
+    bank = resample.taps32(64_000, OUTPUT_SAMPLE_RATE, SC55_FILTER_SIZE)
+    assert bank.shape == (3, 88)
+    assert hashlib.sha256(bank.tobytes()).hexdigest() == SC55_TAPS_SHA256
+    # a fused multiply-add that lands on a float32 midpoint in float64 is
+    # settled by the part float64 rounded away, not by ties-to-even
+    one, tail = np.array([1.0]), 2.0**-24
+    assert resample.fma32(np.array([tail + 2.0**-76]), one)[0] == 1 + 2.0**-23
+    assert resample.fma32(np.array([-tail - 2.0**-76]), -one)[0] == -1 - 2.0**-23
+    assert resample.fma32(np.array([tail - 2.0**-76]), one)[0] == 1.0
+    assert resample.fma32(np.array([tail]), one)[0] == 1.0
     trim, audio_filter, _ = _processing("MT-32", "song00-osv")
     assert trim == 0.0
     assert audio_filter == FFIGHT_OSV_FILTER
@@ -578,12 +616,14 @@ def main(argv: list[str] | None = None) -> int:
         "--output", type=Path, default=base / "flac" / "midi",
     )
     parser.add_argument(
-        "--ffmpeg", type=Path, default=Path("ffmpeg"),
-        help="ffmpeg executable",
+        "--ffmpeg", type=Path,
+        default=Path(os.environ.get("CPSPLUS_FFMPEG") or "ffmpeg"),
+        help="ffmpeg executable (default: $CPSPLUS_FFMPEG, then PATH)",
     )
     parser.add_argument(
-        "--ffprobe", type=Path, default=Path("ffprobe"),
-        help="ffprobe executable",
+        "--ffprobe", type=Path,
+        default=Path(os.environ.get("CPSPLUS_FFPROBE") or "ffprobe"),
+        help="ffprobe executable (default: $CPSPLUS_FFPROBE, then PATH)",
     )
     parser.add_argument(
         "--ffight-profile", choices=sorted(FFIGHT_PROFILES),

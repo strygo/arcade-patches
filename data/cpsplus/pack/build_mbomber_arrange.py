@@ -71,6 +71,13 @@ TRIG_GAIN = 0x2c
 XFADE_SAMPLES = 7200                 # ~163 ms at 44.1 kHz; format v1 global
 CD_DIR = PKG_ROOT / "work" / "intermediate" / "mbomber" / "cd_full"
 LOOPS_TSV = MANIFESTS / "mbomber_arrange_loops.tsv"
+INPUT_PINS = MANIFESTS / "mbomber_arrange_inputs.json"
+PINS_SOURCE = {
+    "release": "Muscle Bomber (Japan), FM Towns, Alcohol 120% .mds/.mdf image",
+    "rip": "each audio track extracted from its start offset to the next "
+           "track's, less the 150 trailing pregap sectors; crc32 is the CRC32 "
+           "of that PCM",
+}
 TRIGGER_TSV = MANIFESTS / "mbomber_arrange_trigger_map.tsv"
 
 # Only these confidence tiers are built.  Anything weaker stays unmapped and
@@ -143,15 +150,32 @@ def read_wav_slice(path: Path, first: int, count: int | None
 
 def build(out: str | None = None, loops_path: str | None = None,
           triggers_path: str | None = None, cd_dir: str | None = None,
-          disc: str | None = None) -> Path:
+          disc: str | None = None, check_inputs: bool = False,
+          allow_input_mismatch: bool = False, write_pins: bool = False) -> Path:
     loops = load_loops(Path(loops_path) if loops_path else LOOPS_TSV)
     trig = load_triggers(Path(triggers_path) if triggers_path else TRIGGER_TSV)
     cd = Path(cd_dir) if cd_dir else CD_DIR
     # FM Towns rip is .mds/.mdf; the extractor's mds path reproduces the
     # INVENTORY-documented cut (length-150 sectors) byte-exactly (29/29,
     # verified)
-    from .discsrc import ensure_audio_cache
-    ensure_audio_cache(cd, set(trig.values()) | set(loops), disc, "--disc")
+    from . import inputpins
+    from .discsrc import check_audio_cache, ensure_audio_cache
+    needed = set(trig.values()) | set(loops)
+    ensure_audio_cache(cd, needed, disc, "--disc")
+    out_path = Path(out) if out else PACKS_DIR / "mbomber_arrange.cpk"
+    pins = None if write_pins else inputpins.load_pins(INPUT_PINS)
+    checks = {}
+    if pins:
+        checks = check_audio_cache(cd, set(trig.values()), INPUT_PINS,
+                                   "Muscle Bomber (FM Towns)", "[mbomber]")
+        inputpins.gate("mbomber_arrange", checks, pins, out_path,
+                       allow_input_mismatch, check_inputs, "[mbomber]")
+    elif check_inputs:
+        print(f"[mbomber] {INPUT_PINS.name} not found: nothing to check against")
+        raise SystemExit(0)
+    audit = inputpins.Audit("mbomber_arrange", pins, checks)
+    pin_tracks = ({t: inputpins.fingerprint(read_wav_slice(cd / f"{t}.wav", 0, None)[0])
+                   for t in sorted(set(trig.values()))} if write_pins else {})
 
     # --- cross-check the two tracked manifests against each other ----------
     missing = [c for c in ARENA_CMDS if c not in trig]
@@ -215,6 +239,8 @@ def build(out: str | None = None, loops_path: str | None = None,
                 name=f"{track} ({L['mode']})",
                 source=f"fmtowns_mbomber/{track}.wav[{L['loop_start']}:"
                        f"{L['loop_start']+want}]")
+        audit.track(track, [track], pcm, data,
+                    (0, meta.loop_end_sample, meta.xfade_enable))
         ti = w.add_track(data, meta)
         w.set_trigger(cmd, TriggerRow(verb=VERB_PLAY, track=ti, gain=TRIG_GAIN,
                                       suppress=1))
@@ -223,9 +249,14 @@ def build(out: str | None = None, loops_path: str | None = None,
               f"{body/rate:7.3f}s {'whole' if one_shot else 'body '}  "
               f"{L['mode']:9s}  {len(data)/1e6:6.2f} MB")
 
-    out_path = Path(out) if out else PACKS_DIR / "mbomber_arrange.cpk"
     w.write(out_path)
     size = out_path.stat().st_size
+    rec = audit.write(inputpins.audit_path(out_path), out_path)
+    if pins:
+        print(f"[mbomber] {out_path.name}: {rec['diagnosis']}")
+    if write_pins:
+        inputpins.write_pins(INPUT_PINS, PINS_SOURCE, pin_tracks,
+                             {"mbomber_arrange": audit.pins_entry(out_path)})
     print(f"[mbomber] {out_path}  {size/1e6:.1f} MB, {len(w.tracks)} tracks, "
           f"{len(trig)} play triggers, audio {total_audio/1e6:.1f} MB")
     if size > DDR_BUDGET_BYTES:
@@ -245,9 +276,18 @@ def main(argv=None):
     ap.add_argument("--disc", help="FM Towns Muscle Bomber rip: .mds (with "
                     ".mdf beside it), or a .zip/.7z containing one (needed "
                     "when the extraction cache is empty)")
+    ap.add_argument("--check-inputs", action="store_true",
+                    help="only check the disc's tracks against the pinned "
+                         "inputs (one row per track) and exit: 0 all match, 3 not")
+    ap.add_argument("--allow-input-mismatch", action="store_true",
+                    help="build even when tracks differ from the verified disc")
+    ap.add_argument("--write-pins", action="store_true",
+                    help="maintainer: build from the verified disc and write "
+                         + INPUT_PINS.name)
     a = ap.parse_args(argv)
     build(out=a.out, loops_path=a.loops, triggers_path=a.triggers,
-          cd_dir=a.cd_dir, disc=a.disc)
+          cd_dir=a.cd_dir, disc=a.disc, check_inputs=a.check_inputs,
+          allow_input_mismatch=a.allow_input_mismatch, write_pins=a.write_pins)
 
 
 if __name__ == "__main__":

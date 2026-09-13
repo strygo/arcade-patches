@@ -42,7 +42,19 @@ def validate(row):
         raise ValueError('negative source position')
 
 
-def pcm_for(row, capture):
+def verified_build(recipe, capture_sha256):
+    """The verified MAME build whose recording has this hash, or None.
+
+    MAME's PlayStation sound emulation keeps envelope levels in floating
+    point, so its macOS and Windows builds record a few samples 1-3 LSB
+    apart.  Each verified recording carries its own loop and pack hashes."""
+    builds = recipe['source'].get('verified_builds') or [dict(
+        mame='reviewed', capture_sha256=recipe['source']['capture_sha256'],
+        tracks={r['id']: r['reviewed_wav_sha256'] for r in recipe['tracks']})]
+    return next((b for b in builds if b['capture_sha256'] == capture_sha256), None)
+
+
+def pcm_for(row, capture, want=None):
     validate(row)
     a, b, n = row['loop_start'], row['loop_end'], row['crossfade_frames']
     with wave.open(str(capture)) as f:
@@ -60,7 +72,7 @@ def pcm_for(row, capture):
     buf = io.BytesIO()
     with wave.open(buf, 'wb') as f:
         f.setparams((2,2,RATE,0,'NONE','not compressed')); f.writeframes(pcm)
-    if hashlib.sha256(buf.getvalue()).hexdigest() != row['reviewed_wav_sha256']:
+    if hashlib.sha256(buf.getvalue()).hexdigest() != (want or row['reviewed_wav_sha256']):
         raise ValueError(f"{row['id']}: reconstructed PCM differs from reviewed recording")
     return pcm
 
@@ -78,14 +90,15 @@ def build(recipe_path=RECIPE, capture=None, outdir=PACKS_DIR):
     capture=Path(capture or CAPTURE)
     if not capture.exists():
         raise SystemExit(f'{capture}: no recording. Make it with tools/capture_strider_psx.py, or pass --capture')
-    if digest(capture)!=recipe['source']['capture_sha256']:
-        raise ValueError(f'{capture}: not the reviewed recording (hash mismatch)')
+    source=verified_build(recipe,digest(capture))
+    if source is None:
+        raise ValueError(f'{capture}: not a verified recording (hash mismatch)')
     outdir=Path(outdir);outdir.mkdir(parents=True,exist_ok=True)
     w=PackWriter(protocols.PROTOCOLS['strider'],title='Strider (PSX Soundtrack)',
                  trigger_rows=256,default_rate=RATE,xfade_samples=0)
     tracks={};audit=[]
     for row in recipe['tracks']:
-        pcm=pcm_for(row,capture)
+        pcm=pcm_for(row,capture,source['tracks'][row['id']])
         stream=adxcodec.encode(pcm,2,RATE)
         c1,c2=adxcodec.calc_coeffs(adxcodec.DEFAULT_CUTOFF,RATE)
         meta=TrackMeta(sample_rate=RATE,channels=2,gain=127,coef1=c1,coef2=c2,
@@ -110,6 +123,7 @@ def build(recipe_path=RECIPE, capture=None, outdir=PACKS_DIR):
     stored_zip(outdir/'strider_psx.zip',{pack.name:pack.read_bytes()})
     report=dict(pack=pack.name,sha256=digest(pack),bytes=pack.stat().st_size,
                 review_status=recipe['review_status'],recipe_sha256=digest(recipe_path),
+                recording=source['mame'],
                 tracks=audit)
     (outdir/'strider_psx.build.json').write_text(json.dumps(report,indent=2)+'\n')
     return report

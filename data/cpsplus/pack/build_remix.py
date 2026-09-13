@@ -12,6 +12,10 @@ itself is the user's copy:
   HD Remix       OC ReMix's official soundtrack OCRA-0012, the FLAC set
                  (https://ocremix.org/album/12).
 
+Decoding is integer-only end to end (album_audio.py, resample.py), so a
+pack rebuilt on any CPU matches the pinned hash; the build record notes the
+ffmpeg that did the decoding and ADX encoding.
+
 Pass the folder holding the album with --source-root.  Files are located by
 the album's own layout first and by name otherwise, so a renamed folder still
 works.
@@ -20,11 +24,14 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+from decimal import ROUND_HALF_EVEN, localcontext
+from fractions import Fraction
+from functools import lru_cache
 from pathlib import Path
 import zipfile
 import numpy as np
 
-from . import adxcodec, protocols, xfade
+from . import adxcodec, protocols, resample, xfade
 from .album_audio import RATE, decode, locate, sha256
 from .build_common import MANIFESTS, PACKS_DIR, REPO_ROOT
 from .build_ffight_arrange import load_triggers
@@ -78,12 +85,25 @@ def bake_crossfade(pcm, row):
     return pcm, row
 
 
+FADE_BITS=40
+
+@lru_cache(maxsize=None)
+def fade_in_gains(n):
+    """Raised-cosine gains sin(pi*k/(2n))**2, k < n, as Q40 integers.
+
+    Worked in decimal arithmetic and rounded half-even, so no libm sits
+    between the recipe and the pack bytes."""
+    with localcontext() as ctx:
+        ctx.prec=30
+        return np.array([int((resample.sin_pi(Fraction(k,2*n),30)**2*(1<<FADE_BITS))
+                             .to_integral_value(rounding=ROUND_HALF_EVEN)) for k in range(n)],dtype=np.int64)
+
 def bake_fade_in(pcm, n):
-    """Raised-cosine fade-in over the first n samples, baked into the PCM."""
+    """Raised-cosine fade-in over the first n samples, baked into the PCM
+    (gain applied in int64, rounded half up; a gain <= 1 cannot clip)."""
     if not n: return pcm
-    ramp=np.sin(np.linspace(0,np.pi/2,n,endpoint=False))**2
-    head=np.clip(np.rint(pcm[:n].astype(np.float64)*ramp[:,None]),-32768,32767).astype('<i2')
-    return np.concatenate((head,pcm[n:]))
+    head=(pcm[:n].astype(np.int64)*fade_in_gains(n)[:,None]+(1<<(FADE_BITS-1)))>>FADE_BITS
+    return np.concatenate((head.astype('<i2'),pcm[n:]))
 
 def build(key, source_root, outdir):
     title,album,game=PACKS[key]
@@ -141,7 +161,8 @@ def build(key, source_root, outdir):
             if r.verb!=VERB_NONE or r.suppress: raise ValueError(f'fail-open command gated: {cmd:#x}')
     finally: rd.close()
     report=dict(pack=pack.name,sha256=sha256(pack),bytes=pack.stat().st_size,
-                review_status=recipe['review_status'],tracks=audit)
+                review_status=recipe['review_status'],ffmpeg=adxcodec.ffmpeg_version(),
+                resample_table_sha256=resample.TABLE_SHA256[(44100,RATE)],tracks=audit)
     (outdir/f'{name}.build.json').write_text(json.dumps(report,indent=2)+'\n')
     # Fixed archive metadata: zip bytes as well as CPK bytes reproduce.
     with zipfile.ZipFile(outdir/f'{name}.zip','w',compression=zipfile.ZIP_STORED) as z:
@@ -188,6 +209,14 @@ def self_test():
             pass
         else:
             raise AssertionError(changes)
+    # The resampler's taps are exact, so table() checks the one digest they
+    # can have.  A 16-bit tone and the same tone as 24-bit give the same s16.
+    resample.table(44100,RATE)
+    tone=np.round(np.sin(np.arange(4410)*2*np.pi*1000/44100)*20000).astype(np.int32)[:,None]
+    out16=resample.resample(np.hstack([tone,-tone]),44100,RATE)
+    out24=resample.resample(np.hstack([tone,-tone])<<8,44100,RATE,8)
+    assert len(out16)==4800 and np.array_equal(out16,out24)
+    assert 19990<=out16[100:-100,0].max()<=20010
     print('remix builder self-test passed')
 
 def main(argv=None):

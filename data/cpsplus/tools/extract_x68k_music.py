@@ -101,7 +101,8 @@ def _sha256(data: bytes) -> str:
 
 
 def _run(command: list[str]) -> None:
-    result = subprocess.run(command, text=True, capture_output=True)
+    result = subprocess.run(command, capture_output=True, text=True,
+                            encoding="utf-8", errors="replace")
     if result.returncode:
         details = "\n".join(part for part in (result.stdout, result.stderr) if part)
         raise ExtractionError(
@@ -126,7 +127,8 @@ def _find_archive(root: Path, stem: str) -> Path:
 
 def _seven_zip_members(archive: Path, seven_zip: str) -> list[str]:
     result = subprocess.run(
-        [seven_zip, "l", "-slt", str(archive)], text=True, capture_output=True
+        [seven_zip, "l", "-slt", str(archive)], capture_output=True, text=True,
+        encoding="utf-8", errors="replace",
     )
     if result.returncode:
         raise ExtractionError(result.stderr.strip() or f"cannot list {archive}")

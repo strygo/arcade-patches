@@ -1,0 +1,93 @@
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores" />
+    <rotation>horizontal</rotation>
+    <name>Super Street Fighter II Turbo: Grand Master Challenge (USA) [Arrange]</name>
+    <setname>ssf2tgmc</setname>
+    <mameversion>0282</mameversion>
+    <year>1994</year>
+    <manufacturer>Capcom</manufacturer>
+    <players>2</players>
+    <rbf>jtcps2-cpsplus</rbf>
+    <joystick>8</joystick>
+    <region>USA</region>
+    <platform>CPS-2</platform>
+    <category>Fighting</category>
+    <catver>Fighter / Versus</catver>
+    <mraauthor>jotego,strygo</mraauthor>
+    <rom index="0" zip="/hbmame/ssf2tgmc.zip|ssf2xj.zip|ssf2t.zip|qsound.zip" address="0x30000000">
+        
+        <part>
+            00 0E 00 0F 00 1F 00 5F
+            FF FF FF FF FF FF FF FF
+            32 FF 00 02 04 06 26 28
+            2A 2C 2E 00 00 30 02 04
+            08 30 FF FF FF FF FF FF
+            FC FF FF FF </part>
+        
+        <part name="ssf2xj.key" crc="160d1424" />
+        
+        <part name="sfxj.03d" crc="b8a10ee0" />
+        <part name="sfxj.04a" crc="86104c3a" />
+        <part name="sfxj.05" crc="f4ff18f5" />
+        <part name="sfxj.06b" crc="413477c2" />
+        <part name="sfxj.07a" crc="a18b3d83" />
+        <part name="sfxj.08" crc="ea0d1d90" />
+        <part name="sfx.09" crc="642fae3f" />
+        
+        <part name="sfx.01" crc="b47b8835" />
+        <part name="sfx.02" crc="0022633f" />
+        
+        <interleave output="16">
+            <part name="sfx.11m" crc="9bdbd476" map="12" />
+        </interleave>
+        <interleave output="16">
+            <part name="sfx.12m" crc="a05e3aab" map="12" />
+        </interleave>
+        
+        <interleave output="64">
+            <part name="sfx.13m" crc="75dac0eb" map="00000021" />
+            <part name="sfx.15m" crc="84dcc039" map="00002100" />
+            <part name="sfx.17m" crc="bfcaf206" map="00210000" />
+            <part name="sfx.19m" crc="13a55fd3" map="21000000" />
+        </interleave>
+        <interleave output="64">
+            <part name="sfx.14m" crc="b7cc32e7" map="00000021" />
+            <part name="sfx.16m" crc="8376ad18" map="00002100" />
+            <part name="sfx.18m" crc="f5b1b336" map="00210000" />
+            <part name="sfx.20m" crc="459d5c6b" map="21000000" />
+        </interleave>
+        <interleave output="64">
+            <part name="sfx.21m" crc="e32854af" map="00000021" />
+            <part name="sfx.23m" crc="760f2927" map="00002100" />
+            <part name="sfx.25m" crc="1ee90208" map="00210000" />
+            <part name="sfx.27m" crc="f814400f" map="21000000" />
+        </interleave>
+        
+        <part name="dl-1425.bin" crc="d6cf5ef5" length="0x2000" />
+        
+    <part repeat="960">00</part><part name="ssf2t_arrange.cpk" zip="/CPS+/ssf2t_arrange.zip" />
+    <patch offset="8">09 5f c0 03</patch>
+  </rom>
+    <rom index="2">
+        <part>
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01
+00 03 01 00 01 01 00 00 02 94 41 17 46 53 55 58
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01
+00 03 01 00 01 01 00 00 02 94 41 17 46 53 55 58
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</part>
+    </rom>
+    <nvram index="2" size="128" />
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff">
+        <DSWA />
+        <DSWB />
+        <DSWC />
+    </switches>
+    <buttons names="Light Punch,Middle Punch,Heavy Punch,Light Kick,Middle Kick,Heavy Kick,Start,Coin,Core credits" default="A,B,X,Y,L,R,Start,Select,-" count="6" />
+</misterromdescription>

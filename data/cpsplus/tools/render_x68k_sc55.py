@@ -14,6 +14,8 @@ import argparse
 import concurrent.futures
 import hashlib
 import json
+import os
+import shutil
 import struct
 import subprocess
 import sys
@@ -28,6 +30,7 @@ class RenderError(RuntimeError):
 
 
 SETTLE_LOOP_PASSES = 1
+EXE = ".exe" if os.name == "nt" else ""
 
 ROM_FILES = {
     "mk1": (
@@ -56,6 +59,13 @@ KNOWN_ROMSETS = {
 }
 
 
+def absolute(path) -> Path:
+    """An absolute path that keeps a mapped drive letter: on Windows,
+    Path.resolve() rewrites Z:\\... to \\\\server\\share\\..., which the
+    renderer and its ROM loader can't always open."""
+    return Path(os.path.abspath(os.path.expanduser(str(path))))
+
+
 def _sha256(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as source:
@@ -77,7 +87,10 @@ def _display_path(repo: Path, path: Path) -> str:
 
 
 def _run(command: list[str]) -> str:
-    result = subprocess.run(command, text=True, capture_output=True)
+    result = subprocess.run(
+        command, capture_output=True,
+        text=True, encoding="utf-8", errors="replace",
+    )
     if result.returncode:
         details = "\n".join(part for part in (result.stdout, result.stderr) if part)
         raise RenderError(
@@ -182,6 +195,18 @@ def _loop_candidate(
     }
 
 
+def _link_firmware(source: Path, link: Path) -> None:
+    # Symlinks need Developer Mode or elevation on Windows; a hard link (same
+    # volume) or a copy of the few MB of firmware isolates the song as well.
+    try:
+        link.symlink_to(source)
+    except OSError:
+        try:
+            os.link(source, link)
+        except OSError:
+            shutil.copy2(source, link)
+
+
 def _renderer_command(
     args: argparse.Namespace, renderer: Path, rom_dir: Path,
     output: Path, source: Path,
@@ -189,30 +214,30 @@ def _renderer_command(
     return [
         str(renderer),
         "--romset", args.romset,
-        "--rom-directory", str(rom_dir.resolve()),
+        "--rom-directory", str(absolute(rom_dir)),
         "--reset", "none",
         "--format", args.format,
         "--end", args.end,
-        "-o", str(output.resolve()),
-        str(source.resolve()),
+        "-o", str(absolute(output)),
+        str(absolute(source)),
     ]
 
 
 def render(args: argparse.Namespace, repo: Path) -> Path:
-    catalog_path = args.catalog.resolve()
+    catalog_path = absolute(args.catalog)
     if not catalog_path.is_file():
         raise RenderError(f"extraction catalog is missing: {catalog_path}")
     catalog = json.loads(catalog_path.read_text())
     if catalog.get("schema") != "cpsplus-x68000-audio-v1":
         raise RenderError(f"unsupported extraction catalog: {catalog_path}")
-    renderer = args.renderer.resolve()
+    renderer = absolute(args.renderer)
     if not renderer.is_file():
         raise RenderError(
             f"SC-55 renderer is missing: {renderer}; build it with "
             "setup_x68k_capture_tools.py"
         )
     version = _run([str(renderer), "--version"])
-    firmware_hashes, firmware_revision = _firmware(args.rom_dir.resolve(), args.romset)
+    firmware_hashes, firmware_revision = _firmware(absolute(args.rom_dir), args.romset)
 
     games = [
         game for game in catalog["games"]
@@ -246,7 +271,7 @@ def render(args: argparse.Namespace, repo: Path) -> Path:
             "extract_x68k_music.py --loops 3 before capture"
         )
 
-    args.output = args.output.resolve()
+    args.output = absolute(args.output)
     args.output.mkdir(parents=True, exist_ok=True)
     output_catalog = args.output / "catalog.json"
     captures_by_song: dict[tuple[str, str], dict[str, object]] = {}
@@ -335,13 +360,13 @@ def render(args: argparse.Namespace, repo: Path) -> Path:
         game, row, source, input_hash, output = job
         print(f"rendering {game['game']}/{row['song']} ...", flush=True)
         # Nuked-SC55 persists module SRAM beside its ROMs.  Give every song a
-        # private writable directory containing read-only firmware links so a
-        # preceding (or concurrent) capture can never change another song's
-        # initial state.
+        # private writable directory containing the firmware (links where the
+        # OS allows, else copies) so a preceding (or concurrent) capture can
+        # never change another song's initial state.
         with tempfile.TemporaryDirectory(prefix="cpsplus-sc55-") as temporary:
             isolated_roms = Path(temporary)
             for name in ROM_FILES[args.romset]:
-                (isolated_roms / name).symlink_to(args.rom_dir.resolve() / name)
+                _link_firmware(absolute(args.rom_dir) / name, isolated_roms / name)
             _run(_renderer_command(
                 args, renderer, isolated_roms, output, source
             ))
@@ -403,6 +428,20 @@ def self_test() -> None:
         9648, 19248
     )
     assert set(ROM_FILES) == {"mk1", "mk2"}
+    with tempfile.TemporaryDirectory() as temporary:
+        # Without symlink or hard-link permission the firmware is copied.
+        rom = Path(temporary) / "rom.bin"
+        rom.write_bytes(b"sc55")
+        def refuse(*_):
+            raise OSError(1314, "A required privilege is not held by the client")
+        symlink_to, link = Path.symlink_to, os.link
+        Path.symlink_to = os.link = refuse
+        try:
+            _link_firmware(rom, Path(temporary) / "copy.bin")
+        finally:
+            Path.symlink_to, os.link = symlink_to, link
+        assert (Path(temporary) / "copy.bin").read_bytes() == b"sc55"
+        assert not (Path(temporary) / "copy.bin").is_symlink()
     print("render_x68k_sc55 self-test: OK")
 
 
@@ -417,7 +456,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--renderer", type=Path,
-        default=upstream / "Nuked-SC55-GUI-Float" / "build" / "nuked-sc55-render",
+        default=upstream / "Nuked-SC55-GUI-Float" / "build" / f"nuked-sc55-render{EXE}",
     )
     parser.add_argument(
         "--rom-dir", type=Path, default=repo / "roms" / "sc55",

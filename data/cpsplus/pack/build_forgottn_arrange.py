@@ -18,6 +18,11 @@ different here, and why:
     concatenation `tr06+tr07`, loop_start at the tr06/tr07 boundary — the
     intro plays once, the main theme repeats.  This is the one authored loop
     point in the pack; everything else is a whole-track loop.
+
+INPUTS ARE PINNED (manifests/forgottn_arrange_inputs.json; see
+build_mtwins_arrange and pack/inputpins.py): every build checks the
+extracted tracks first, one row per track, and stops if one differs from
+the verified disc unless --allow-input-mismatch.
 """
 from __future__ import annotations
 
@@ -39,6 +44,13 @@ from .format import (PackWriter, PackReader, TrackMeta, TriggerRow, CODEC_ADX,
 TRIG_GAIN = 0x63
 
 TRIGGER_TSV = MANIFESTS / "forgottn_arrange_trigger_map.tsv"
+INPUT_PINS = MANIFESTS / "forgottn_arrange_inputs.json"
+PINS_SOURCE = {
+    "release": "Forgotten Worlds (Japan), PC Engine Super CD-ROM2",
+    "rip": "cue sheet with one .bin per track (redump layout); every audio "
+           "track extracted whole, its INDEX 00 pregap included, so crc32 is "
+           "that track's .bin CRC32",
+}
 CD_DIR = PKG_ROOT / "work" / "intermediate" / "forgottn" / "cd_full"
 
 ONE_SHOT = {"tr18", "tr08", "tr19"}
@@ -89,14 +101,30 @@ def _load_track_pcm(cd: Path, track: str):
 
 def build(out: str | None = None, triggers_path: str | None = None,
           cd_dir: str | None = None, measure_snr: bool = True,
-          disc: str | None = None) -> dict:
+          disc: str | None = None, check_inputs: bool = False,
+          allow_input_mismatch: bool = False, write_pins: bool = False) -> dict:
     rows = load_triggers(Path(triggers_path) if triggers_path else TRIGGER_TSV)
     cd = Path(cd_dir) if cd_dir else CD_DIR
     # PCE rips keep each track's own pregap (whole bin verbatim); `a+b`
     # concat rows need both parts.  Convention byte-verified.
-    from .discsrc import ensure_audio_cache
+    from . import inputpins
+    from .discsrc import check_audio_cache, ensure_audio_cache
     needed = {part for r in rows if r.track for part in r.track.split("+")}
     ensure_audio_cache(cd, needed, disc, "--disc", pregap="keep")
+    out_path = Path(out) if out else PACKS_DIR / "forgottn_arrange.cpk"
+    pins = None if write_pins else inputpins.load_pins(INPUT_PINS)
+    checks = {}
+    if pins:
+        checks = check_audio_cache(cd, needed, INPUT_PINS,
+                                   "Forgotten Worlds (PC Engine CD)", "[forgottn]")
+        inputpins.gate("forgottn_arrange", checks, pins, out_path,
+                       allow_input_mismatch, check_inputs, "[forgottn]")
+    elif check_inputs:
+        print(f"[forgottn] {INPUT_PINS.name} not found: nothing to check against")
+        raise SystemExit(0)
+    audit = inputpins.Audit("forgottn_arrange", pins, checks)
+    pin_tracks = ({t: inputpins.fingerprint(read_wav(cd / f"{t}.wav")[0])
+                   for t in sorted(needed)} if write_pins else {})
     play_rows = [r for r in rows if r.verb == VERB_PLAY]
     silence_rows = [r for r in rows if r.verb == VERB_NONE and r.suppress == 1]
     if silence_rows:
@@ -127,6 +155,9 @@ def build(out: str | None = None, triggers_path: str | None = None,
             # ADX frames are 32 samples; a concat boundary is generally not
             # frame-aligned, so round the loop start DOWN to the frame below
             # (<=0.7 ms early re-entry, inaudible against a 22.7 s intro).
+            audit.track(track, track.split("+"), pcm, data,
+                        (loop_start // 32 * 32 if loops else 0,
+                         n if loops else 0, 0))
             fb = adxcodec.FRAME_BYTES * ch
             ls_sample = loop_start // 32 * 32
             ls_byte = adxcodec.samples_to_stream_byte(ls_sample, ch)
@@ -148,7 +179,6 @@ def build(out: str | None = None, triggers_path: str | None = None,
         w.set_trigger(row.cmd, TriggerRow(verb=VERB_PLAY, track=ti_of[track],
                                           gain=TRIG_GAIN, suppress=row.suppress))
 
-    out_path = Path(out) if out else PACKS_DIR / "forgottn_arrange.cpk"
     w.write(out_path)
 
     rd = PackReader(out_path)
@@ -162,6 +192,12 @@ def build(out: str | None = None, triggers_path: str | None = None,
             if got.verb != VERB_NONE:
                 raise ValueError(f"fail-open row 0x{row.cmd:02x} got written")
     size = out_path.stat().st_size
+    rec = audit.write(inputpins.audit_path(out_path), out_path)
+    if pins:
+        print(f"[forgottn] {out_path.name}: {rec['diagnosis']}")
+    if write_pins:
+        inputpins.write_pins(INPUT_PINS, PINS_SOURCE, pin_tracks,
+                             {"forgottn_arrange": audit.pins_entry(out_path)})
     print(f"[forgottn] {out_path}  {size / 1e6:.1f} MB, "
           f"{len(ti_of)} tracks, {len(play_rows)} play triggers")
     if snrs:
@@ -180,8 +216,18 @@ def main(argv=None):
                     ".cue, or a .zip/.7z containing one (needed when the "
                     "extraction cache is empty)")
     ap.add_argument("--no-snr", action="store_true")
+    ap.add_argument("--check-inputs", action="store_true",
+                    help="only check the disc's tracks against the pinned "
+                         "inputs (one row per track) and exit: 0 all match, 3 not")
+    ap.add_argument("--allow-input-mismatch", action="store_true",
+                    help="build even when tracks differ from the verified disc")
+    ap.add_argument("--write-pins", action="store_true",
+                    help="maintainer: build from the verified disc and write "
+                         + INPUT_PINS.name)
     a = ap.parse_args(argv)
-    build(a.out, a.map, a.cd, measure_snr=not a.no_snr, disc=a.disc)
+    build(a.out, a.map, a.cd, measure_snr=not a.no_snr, disc=a.disc,
+          check_inputs=a.check_inputs,
+          allow_input_mismatch=a.allow_input_mismatch, write_pins=a.write_pins)
 
 
 if __name__ == "__main__":

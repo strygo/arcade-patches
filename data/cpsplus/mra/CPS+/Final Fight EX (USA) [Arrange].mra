@@ -1,0 +1,91 @@
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores" />
+    <rotation>horizontal</rotation>
+    <name>Final Fight EX (USA) [Arrange]</name>
+    <setname>ffightus01</setname>
+    <mameversion>0282</mameversion>
+    <year>1989</year>
+    <manufacturer>Capcom</manufacturer>
+    <players>2</players>
+    <rbf>jtcps1-cpsplus</rbf>
+    <joystick>8</joystick>
+    <region>USA</region>
+    <platform>CPS-1</platform>
+    <category>Beat 'em up</category>
+    <catver>Fighter / 2.5D</catver>
+    <mraauthor>jotego,strygo</mraauthor>
+    <rom index="0" zip="/hbmame/ffightus01.zip" address="0x30000000">
+        
+        <part>
+            00 08 40 08 40 09 FF FF
+            FF FF FF FF FF FF FF FF
+            20 04 FF FF FF FF 2E 26
+            30 28 32 00 00 2A 02 04
+            08 00 20 00 00 FF FF 00
+            FF FF FF FF FF FF FF FF
+            FF FF FF FF FF FF FF FF
+            FF FF FF FF FF FF FF FF
+        </part>
+        
+        <interleave output="16">
+            <part name="c07.p1" crc="f3b4ea53" map="10" />
+            <part name="c07.p2" crc="76c49180" map="01" />
+        </interleave>
+        <interleave output="16">
+            <part name="c07.p3" crc="118eb060" map="10" />
+            <part name="c07u.p4" crc="38964eff" map="01" />
+        </interleave>
+        <part name="c07.p5" crc="75f9a494" />
+        <part name="c07us01.p7" crc="e6e4df5f" />
+        
+        <part name="c07.m1" crc="87eca9ec" />
+        
+        <part name="c07.v1" crc="375c66e7" />
+        <part name="c07.v2" crc="1ef137f9" />
+        
+        <interleave output="64">
+            <part name="c07.c01" crc="7b4aad16" map="00000021" />
+            <part name="c07.c03" crc="28192faf" map="00002100" />
+            <part name="c07.c05" crc="deff8c10" map="00210000" />
+            <part name="c07.c07" crc="4b532b36" map="21000000" />
+        </interleave>
+        <interleave output="64">
+            <part name="c07us01.c09" crc="3365bae7" map="00000021" />
+            <part name="c07us01.c11" crc="9f53c8e0" map="00002100" />
+            <part name="c07us01.c13" crc="cf35f998" map="00210000" />
+            <part name="c07us01.c15" crc="d65f25ed" map="21000000" />
+        </interleave>
+        <interleave output="64">
+            <part name="c07us01.c17" crc="c9dbe31e" map="00000021" />
+            <part name="c07us01.c19" crc="30c802e6" map="00002100" />
+            <part name="c07us01.c21" crc="936c49c4" map="00210000" />
+            <part name="c07us01.c23" crc="ce2427a3" map="21000000" />
+        </interleave>
+        
+    <part repeat="960">00</part><part name="ffight_arrange.cpk" zip="/CPS+/ffight_arrange.zip" />
+    <patch offset="8">41 21 c0 03</patch>
+  <patch offset="99840">e8 01</patch>
+  </rom>
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,f4,9f">
+        <DSWA />
+        <DSWB />
+        <dip name="Difficulty Level 1" bits="8,10" ids="Hardest,Harder,Hard,Medium,Normal,Easy,Easier,Easiest" />
+        <dip name="Difficulty Level 2" bits="11,12" ids="Hardest,Hard,Normal,Easy" />
+        <dip name="Bonus" bits="13,14" ids="None,100k &amp; *200k,200k,100k" />
+        <DSWC />
+        <dip name="Lives" bits="16,17" ids="1,4,3,2" />
+        <dip name="Free Play" bits="18" ids="On,Off" />
+        <dip name="Freeze" bits="19" ids="On,Off" />
+        <dip name="Flip Screen" bits="20" ids="On,Off" />
+        <dip name="Demo Sounds" bits="21" ids="On,Off" />
+        <dip name="Allow Continue" bits="22" ids="Yes,No" />
+        <dip name="Game Mode" bits="23" ids="Test,Game" />
+        <IN0 />
+        <dip name="Service Mode" bits="30" ids="On,Off" />
+        <dip name="PCB type" ids="88617A,89626A" bits="24" />
+    </switches>
+    <buttons names="Attack,Jump,Evade,-,-,-,Start,Coin,Core credits" default="A,B,X,Start,Select,-" count="3" />
+</misterromdescription>

@@ -12,7 +12,9 @@ recording, checks every one against its pinned hash, and encodes the pack.
 
 ## What you need
 
-- **MAME** on your PATH, or its path in `mame_bin` in `discs.toml`.
+- **MAME** on your PATH, or its path in `mame_bin` in `discs.toml` (the
+  executable, or the folder holding it; `mame64.exe` from older Windows
+  builds and a `C:\MAME` install are found too).
   Verified with MAME 0.288 (`brew install mame` on a Mac, your package
   manager on Linux, the official build from mamedev.org on Windows).
 - **Your Strider (USA) disc rip**: `.chd`, or `.cue` with its `.bin` files
@@ -36,10 +38,23 @@ bytes the published pack was cut from. If your recording differs, the
 builder stops and says so rather than encoding different audio. The usual
 causes are a different disc release, a different BIOS revision selected in
 `psu.zip`, or a MAME build whose PlayStation emulation renders differently
-from 0.288. Reproduction has been verified on a Mac; whether every MAME
-build on every platform is bit-identical has not been proven, which is why
-the check is there.
+from the verified ones.
+
+Two MAME 0.288 builds are verified: Homebrew's on a Mac (Apple Silicon) and
+the official Windows build from mamedev.org. They do not record identical
+bytes. MAME's PlayStation sound emulation keeps volume envelopes in
+floating point, and the two builds round a few thousand samples 1-3 steps
+differently, far below anything audible. The kit accepts both recordings,
+and each has its own pinned hashes, so the pack you build matches the one
+published for your platform. Other builds (Linux packages, Intel Macs) have
+not been checked; if yours records differently the builder says so.
 
 The capture script runs MAME with its own empty configuration folder, so
 your personal MAME settings do not affect the recording, and it never
-touches your MAME installation.
+touches your MAME installation. The MAME command line it ran is saved as
+`work/strider_psx/mame/command.txt`, quoted for your platform's shell, with
+MAME's own output beside it in `mame.log` (the input schedule itself reaches
+MAME's script through environment variables, so run the capture through the
+script rather than by pasting that line). If the previous recording cannot
+be replaced because another program has it open, close that program (or
+delete the WAV) and run again.

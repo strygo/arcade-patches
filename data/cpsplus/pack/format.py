@@ -32,12 +32,20 @@ from dataclasses import dataclass, field, asdict
 from pathlib import Path
 
 MAGIC = b"CP2A"
-FORMAT_VERSION = 1
+FORMAT_VERSION = 2
+# v2 (2026-09-11, NG+): byte-latch dialects carry an argument-command bitmap and
+# fade law 3.  A pack that uses neither is still WRITTEN as v1 so every existing
+# CPS pack stays byte-identical to its published hash; readers accept <= 2.
 BUILDER_VERSION = 1
 HEADER_SIZE = 4096
 # Offset of the v1 global crossfade length (u16, samples).  Placed clear of
 # the control-verb map (0xa8 .. 0xa8+32*4 = 0x128 max) so no collision.
 OFF_XFADE_SAMPLES = 0x128
+OFF_DIALECT = 0x12a          # v2: u8 dialect (0 QSound record, 1 CPS1 byte, 2 Neo Geo byte+args)
+OFF_ARGSET = 0x130           # v2: 32-byte bitmap, bit c set = command c consumes the NEXT byte
+DIALECT_QSOUND = 0
+DIALECT_CPS1_BYTE = 1
+DIALECT_NEOGEO_BYTE = 2
 TRIGGER_ROW_SIZE = 4
 TRACK_INDEX_SIZE = 32
 TRACK_ALIGN = 64
@@ -47,8 +55,6 @@ DDR_BUDGET_BYTES = 268_435_456  # 256 MiB at 0x30000000. VERIFIED, not assumed:
 #   18-bit page counter x 1 kB = exactly 2**28, wrapping back to 0x30000000;
 #   Main_MiSTer masks every DDR write (fpga_mem(x) = 0x20000000 | (x & 0x1FFFFFFF));
 #   u-boot mem=511M against exactly 1 GB, so 0x40000000 is the end of RAM.
-#   See internal research notes. The previous 240 MB value was an unsourced
-#   guess and under-reported headroom by 16 MiB.
 
 # --- verbs (trigger rows use 0..2; control map uses 0 and 2..6) --------------
 VERB_NONE = 0
@@ -65,6 +71,9 @@ VERB_NAMES = {0: "none", 1: "play", 2: "stop", 3: "fade_out",
 FADE_NONE = 0
 FADE_ANTHOLOGY = 1  # steps = const1 / arg, stepped per frame (const1=0xffff)
 FADE_HSF2 = 2       # steps = (const1 / arg) * const2 (const1=0x444, const2=60)
+FADE_NG_MAKOTO = 3  # frames = const2 + const1 / arg; target fixed at 0 (arg is the
+                    # driver's speed byte, not a level).  samsho2 measured: const1=5860,
+                    # const2=59 -> 0x20: 4.1 s, 0x60: 2.0 s, 0xa0: 1.6 s, 0xff: 1.4 s
 
 # --- codecs --------------------------------------------------------------------
 CODEC_ADX = 0
@@ -92,6 +101,11 @@ class Protocol:
     control_default_verb: int = VERB_NONE
     control_region_start: int = 0xff00
     control_verbs: dict = field(default_factory=dict)  # cmd -> verb
+    dialect: int = DIALECT_QSOUND                       # v2
+    arg_commands: set = field(default_factory=set)      # v2: commands that take one argument byte
+
+    def uses_v2(self) -> bool:
+        return self.dialect != DIALECT_QSOUND or bool(self.arg_commands) or self.fade_law == FADE_NG_MAKOTO
 
 
 @dataclass
@@ -179,9 +193,10 @@ def _pack_header(*, game_id: str, title: str, default_rate: int,
                  crc_tables: int, crc_data: int, proto: Protocol,
                  xfade_samples: int = 0) -> bytes:
     hdr = bytearray(HEADER_SIZE)
+    version = FORMAT_VERSION if proto.uses_v2() else 1
     _HDR_FIXED.pack_into(
         hdr, 0,
-        MAGIC, FORMAT_VERSION, HEADER_SIZE,
+        MAGIC, version, HEADER_SIZE,
         game_id.encode()[:16].ljust(16, b"\0"),
         title.encode()[:64].ljust(64, b"\0"),
         BUILDER_VERSION, default_rate,
@@ -204,6 +219,12 @@ def _pack_header(*, game_id: str, title: str, default_rate: int,
         off += 4
     # v1: global loop-crossfade length (samples); 0 = no crossfade in this pack
     struct.pack_into("<H", hdr, OFF_XFADE_SAMPLES, xfade_samples & 0xffff)
+    if version >= 2:
+        hdr[OFF_DIALECT] = proto.dialect & 0xff
+        bits = 0
+        for c in proto.arg_commands:
+            bits |= 1 << (c & 0xff)
+        hdr[OFF_ARGSET:OFF_ARGSET + 32] = bits.to_bytes(32, 'little')
     return bytes(hdr)
 
 
@@ -240,6 +261,11 @@ def _parse_header(hdr: bytes) -> Header:
     # v1: global crossfade length (0 on v0 packs — that region is zero-filled)
     xfade_samples = struct.unpack_from("<H", hdr, OFF_XFADE_SAMPLES)[0] \
         if ver >= 1 else 0
+    dialect, argset = DIALECT_QSOUND, set()
+    if ver >= 2:
+        dialect = hdr[OFF_DIALECT]
+        bits = int.from_bytes(hdr[OFF_ARGSET:OFF_ARGSET + 32], 'little')
+        argset = {c for c in range(256) if bits >> c & 1}
     (latch, o1, o2, o3, o4, o5, o6, hp, hr,
      law, dverb, cstart, fc1, fc2, nverbs) = _HDR_PROTO.unpack_from(hdr, 0x8c)
     verbs = {}
@@ -255,7 +281,7 @@ def _parse_header(hdr: bytes) -> Header:
         handshake_pending=hp, handshake_ready=hr,
         fade_law=law, fade_const1=fc1, fade_const2=fc2,
         control_default_verb=dverb, control_region_start=cstart,
-        control_verbs=verbs)
+        control_verbs=verbs, dialect=dialect, arg_commands=argset)
     return Header(
         game_id=proto.game_id, title=title.rstrip(b"\0").decode(),
         default_rate=drate, trigger_offset=toff, trigger_rows=trows,

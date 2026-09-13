@@ -24,6 +24,8 @@ import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
+import numpy as np
+
 from . import adxcodec, protocols
 from .adxencode import encode_adx_track
 from .build_common import MANIFESTS, PACKS_DIR, PKG_ROOT
@@ -163,14 +165,20 @@ def probe_flac(path: Path) -> dict:
 
 
 def decode_flac(path: Path) -> tuple[bytes, int]:
+    """The FLAC's samples as s16, taken exactly as the published packs were.
+
+    ffmpeg decodes FLAC losslessly to s32; the reduction to s16 is done here
+    as ffmpeg's s32 -> s16 conversion does it, an arithmetic shift right by
+    16 (a floor, no dither), so the result cannot depend on the CPU."""
     proc = subprocess.run(
-        ["ffmpeg", "-v", "error", "-i", str(path), "-f", "s16le",
-         "-acodec", "pcm_s16le", "-ac", str(CHANNELS), "-ar", str(RATE), "-"],
+        [adxcodec.FFMPEG, "-v", "error", "-i", str(path), "-map", "0:a:0",
+         "-f", "s32le", "-acodec", "pcm_s32le", "-"],
         capture_output=True, check=True)
-    frame_bytes = CHANNELS * 2
-    if len(proc.stdout) % frame_bytes:
+    s32 = np.frombuffer(proc.stdout, dtype="<i4")
+    if s32.size % CHANNELS:
         raise ValueError(f"{path.name}: decoded PCM ends mid-frame")
-    return proc.stdout, len(proc.stdout) // frame_bytes
+    pcm = (s32 >> 16).astype("<i2").tobytes()
+    return pcm, s32.size // CHANNELS
 
 
 def build(*, out: Path | None = None, flac_dir: Path = SOURCE_DIR,

@@ -1,10 +1,10 @@
 """CRI ADX codec support: header parse/synthesis, coefficients, ffmpeg bridge.
 
-References (in-repo):
-  reference/adx/cri_adx_file.wiki   — container header (v3/v4 loop blocks)
-  reference/adx/cri_adx_adpcm.wiki  — codec math + coefficient formula
-  reference/ffmpeg/adx.c            — ff_adx_calculate_coeffs (lrint variant)
-  reference/ffmpeg/adxenc.c/adxdec.c
+References:
+  multimedia.cx wiki, "CRI ADX file" and "CRI ADX ADPCM" — container header
+    (v3/v4 loop blocks), codec math and the coefficient formula
+  FFmpeg libavcodec adx.c (ff_adx_calculate_coeffs, lrint variant),
+    adxenc.c and adxdec.c
 
 Notes for the eventual RTL decoder:
   * ffmpeg's decoder uses `scale = frame_scale` while the multimedia.cx wiki
@@ -28,15 +28,31 @@ import os as _os
 import shutil as _shutil
 # ADX encode/decode shells out to ffmpeg (the reference codec this module's
 # tables were verified against).  Resolution order: $CPSPLUS_FFMPEG, PATH.
+# Every ffmpeg call in the pack builders goes through FFMPEG.
 # NOTE for byte-reproducibility: pack ADX bytes depend on ffmpeg's adxenc
-# implementation (unchanged upstream for many years; shipped packs were
-# encoded with ffmpeg 7.x/homebrew).  A differing ffmpeg build fails the
-# byte-gates rather than shipping silently different audio.
+# implementation (unchanged upstream for many years; the canonical packs were
+# encoded with Homebrew ffmpeg 8.1.2 on arm64).  adxenc is integer-only, so
+# the CPU's SIMD path cannot move its output; FFmpeg's decoders and resampler
+# are not.  A differing ffmpeg build fails the byte-gates rather than shipping
+# silently different audio.
 FFMPEG = _os.environ.get("CPSPLUS_FFMPEG") or _shutil.which("ffmpeg")
 if not FFMPEG:
     raise ImportError(
         "ffmpeg not found -- install it (brew install ffmpeg) or set "
         "CPSPLUS_FFMPEG to the binary path; ADX packs cannot build without it")
+_VERSION: str | None = None
+
+
+def ffmpeg_version() -> str:
+    """First line of `ffmpeg -version`, for build records."""
+    global _VERSION
+    if _VERSION is None:
+        out = subprocess.run([FFMPEG, "-version"], stdout=subprocess.PIPE,
+                             stderr=subprocess.DEVNULL, check=True).stdout
+        _VERSION = out.decode(errors="replace").splitlines()[0].strip()
+    return _VERSION
+
+
 FRAME_BYTES = 18
 FRAME_SAMPLES = 32
 COEFF_BITS = 12

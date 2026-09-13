@@ -31,6 +31,15 @@ leaves suppress=0, the tap holds `sub` low, and the real byte reaches the Z80 ->
 authentic arcade FM.  Verified in rtl/cpsplus_cps1_tap.v (sub = ... && cls_sup,
 cls_sup = row_q[24]) and format.py (unmapped rows are TriggerRow(), suppress=0).
 
+INPUTS ARE PINNED.  manifests/mtwins_arrange_inputs.json holds every
+extracted track of the verified disc (length, PCM sha256, CRC32 -- equal to
+the track's redump .bin CRC32, since each track is taken whole -- and search
+anchors; see pack/inputpins.py).  Every build checks the extraction against
+it, prints one row per track, re-cuts a track whose samples sit elsewhere on
+the disc (a PREGAP-style cue, another dump's split), and stops if a track
+still differs unless --allow-input-mismatch.  work/packs/
+mtwins_arrange.audit.json records each stage's hashes.
+
 ADX ONLY.  Every mtwins CD track fits the 256 MiB DDR cap comfortably as ADX
 (unlike ffight, whose PCM variant was built over-cap on purpose), so this
 builder ships one ADX pack and does not build a PCM variant.
@@ -55,6 +64,13 @@ from .format import (PackWriter, PackReader, TrackMeta, TriggerRow, CODEC_ADX,
 
 CD_DIR = PKG_ROOT / "work" / "intermediate" / "mtwins" / "cd_full"
 TRIGGER_TSV = MANIFESTS / "mtwins_arrange_trigger_map.tsv"
+INPUT_PINS = MANIFESTS / "mtwins_arrange_inputs.json"
+PINS_SOURCE = {
+    "release": "Chiki Chiki Boys (Japan), PC Engine Super CD-ROM2",
+    "rip": "cue sheet with one .bin per track (redump layout); every audio "
+           "track extracted whole, its INDEX 00 pregap included, so crc32 is "
+           "that track's .bin CRC32",
+}
 
 DDR_HARD_CAP_BYTES = 256 * 1024 * 1024          # 268,435,456
 # Assembled length of base/mtwins.mra <rom index="0"> — sum of all part files
@@ -124,15 +140,30 @@ def load_triggers(path: Path = TRIGGER_TSV) -> list[MapRow]:
 
 def build(out: str | None = None, triggers_path: str | None = None,
           cd_dir: str | None = None, measure_snr: bool = True,
-          disc: str | None = None) -> dict:
+          disc: str | None = None, check_inputs: bool = False,
+          allow_input_mismatch: bool = False, write_pins: bool = False) -> dict:
     rows = load_triggers(Path(triggers_path) if triggers_path else TRIGGER_TSV)
     cd = Path(cd_dir) if cd_dir else CD_DIR
     # PCE rips keep each track's own pregap (whole bin verbatim) -- the
     # convention the shipped, ear-approved pack was built from, verified
     # byte-identical against scripted extraction
-    from .discsrc import ensure_audio_cache
-    ensure_audio_cache(cd, {r.track for r in rows if r.track},
-                       disc, "--disc", pregap="keep")
+    from . import inputpins
+    from .discsrc import check_audio_cache, ensure_audio_cache
+    needed = {r.track for r in rows if r.track}
+    ensure_audio_cache(cd, needed, disc, "--disc", pregap="keep")
+    out_path = Path(out) if out else PACKS_DIR / "mtwins_arrange.cpk"
+    pins = None if write_pins else inputpins.load_pins(INPUT_PINS)
+    checks = {}
+    if pins:
+        checks = check_audio_cache(cd, needed, INPUT_PINS,
+                                   "Chiki Chiki Boys (PC Engine CD)", "[mtwins]")
+        inputpins.gate("mtwins_arrange", checks, pins, out_path,
+                       allow_input_mismatch, check_inputs, "[mtwins]")
+    elif check_inputs:
+        print(f"[mtwins] {INPUT_PINS.name} not found: nothing to check against")
+        raise SystemExit(0)
+    audit = inputpins.Audit("mtwins_arrange", pins, checks)
+    pin_tracks: dict = {}
     play_rows = [r for r in rows if r.verb == VERB_PLAY]
     # verb=none rows are all fail-open (suppress=0) in this map, so they are
     # simply not written.  A silence-only row (suppress=1) would need real
@@ -159,6 +190,8 @@ def build(out: str | None = None, triggers_path: str | None = None,
         if track not in ti_of:
             src = cd / f"{track}.wav"
             pcm, rate, ch, n = read_wav(src)
+            if write_pins:
+                pin_tracks[track] = inputpins.fingerprint(pcm)
             loops = track not in ONE_SHOT
             data, coef1, coef2, snr = encode_adx_track(
                 pcm, rate, ch, n, track, measure_snr)
@@ -170,6 +203,7 @@ def build(out: str | None = None, triggers_path: str | None = None,
             loop_end_sample = n if loops else 0
             if loops and loop_end_byte % (adxcodec.FRAME_BYTES * ch):
                 raise ValueError(f"{track}: loop end not frame-aligned")
+            audit.track(track, [track], pcm, data, (0, loop_end_sample, 0))
             meta = TrackMeta(
                 sample_rate=rate, channels=ch, codec=CODEC_ADX, gain=0x7f,
                 loop_start_sample=0, loop_start_byte=0,
@@ -188,8 +222,6 @@ def build(out: str | None = None, triggers_path: str | None = None,
         w.set_trigger(row.cmd, TriggerRow(verb=VERB_PLAY, track=ti_of[track],
                                           gain=0x7f, suppress=row.suppress))
 
-    name = "mtwins_arrange.cpk"
-    out_path = Path(out) if out else PACKS_DIR / name
     w.write(out_path)
     size = out_path.stat().st_size
 
@@ -220,6 +252,12 @@ def build(out: str | None = None, triggers_path: str | None = None,
     finally:
         rd.close()
 
+    rec = audit.write(inputpins.audit_path(out_path), out_path)
+    if pins:
+        print(f"[mtwins] {out_path.name}: {rec['diagnosis']}")
+    if write_pins:
+        inputpins.write_pins(INPUT_PINS, PINS_SOURCE, dict(sorted(pin_tracks.items())),
+                             {"mtwins_arrange": audit.pins_entry(out_path)})
     image = size + MTWINS_ROM_BYTES
     print(f"[mtwins] {out_path}")
     print(f"[mtwins]   pack        {size:,} B ({size / 1e6:.1f} MB), "
@@ -251,10 +289,21 @@ def main(argv=None) -> int:
                     "extraction cache is empty)")
     ap.add_argument("--no-snr", action="store_true")
     ap.add_argument("--no-verify", action="store_true")
+    ap.add_argument("--check-inputs", action="store_true",
+                    help="only check the disc's tracks against the pinned "
+                         "inputs (one row per track) and exit: 0 all match, 3 not")
+    ap.add_argument("--allow-input-mismatch", action="store_true",
+                    help="build even when tracks differ from the verified "
+                         "disc (it will not match the published pack)")
+    ap.add_argument("--write-pins", action="store_true",
+                    help="maintainer: build from the verified disc and write "
+                         + INPUT_PINS.name)
     a = ap.parse_args(argv)
     res = build(out=a.out, triggers_path=a.triggers, cd_dir=a.cd_dir,
                 disc=a.disc,
-                measure_snr=not a.no_snr)
+                measure_snr=not a.no_snr, check_inputs=a.check_inputs,
+                allow_input_mismatch=a.allow_input_mismatch,
+                write_pins=a.write_pins)
     if not a.no_verify:
         audition_verify(str(res["path"]))
     return 0

@@ -1,0 +1,86 @@
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores" />
+    <rotation>horizontal</rotation>
+    <name>Street Fighter Zero 2 Dash (Japan) [Arrange]</name>
+    <setname>sfz2d</setname>
+    <mameversion>0282</mameversion>
+    <year>2006</year>
+    <manufacturer>Capcom</manufacturer>
+    <players>2</players>
+    <rbf>jtcps2-cpsplus</rbf>
+    <joystick>8</joystick>
+    <region>Japan</region>
+    <platform>CPS-2</platform>
+    <category>Fighting</category>
+    <catver>Fighter / Versus</catver>
+    <mraauthor>jotego,strygo</mraauthor>
+    <rom index="0" zip="/hbmame/sfz2d.zip" address="0x30000000">
+        
+        <part>
+            00 0C 00 0D 00 2D 00 7D
+            FF FF FF FF FF FF FF FF
+            32 FF 00 02 04 06 26 28
+            2A 2C 2E 00 00 30 02 04
+            08 30 FF FF FF FF FF FF
+            FC FF FF FF </part>
+        
+        <part name="sfz2alj.key" crc="4c42320f" />
+        
+        <part name="szaj.03a" crc="ef46dae9" />
+        <part name="szaj.04a" crc="2b7532bf" />
+        <part name="szaj.05a" crc="c88ebf88" />
+        <part name="szaj.06a" crc="35ed5b7a" />
+        <part name="szaj.07a" crc="e0e127ec" />
+        <part name="szaj.08a" crc="efcc529b" />
+        
+        <part name="sza.01" crc="1588cdd2" />
+        <part name="sza.02" crc="82ec6d9f" />
+        
+        <interleave output="16">
+            <part name="sza.11m" crc="f23db54d" map="12" />
+        </interleave>
+        <interleave output="16">
+            <part name="sza.12m" crc="c824a1ea" map="12" />
+        </interleave>
+        
+        <interleave output="64">
+            <part name="sza.13m" crc="ae258b4a" map="00000021" />
+            <part name="sza.15m" crc="6fd70f52" map="00002100" />
+            <part name="sza.17m" crc="c6caea78" map="00210000" />
+            <part name="sza.19m" crc="0956de4d" map="21000000" />
+        </interleave>
+        <interleave output="64">
+            <part name="sza.14m" crc="0560c6aa" map="00000021" />
+            <part name="sza.16m" crc="ae940f87" map="00002100" />
+            <part name="sza.18m" crc="4bc3c8bc" map="00210000" />
+            <part name="sza.20m" crc="39e674c0" map="21000000" />
+        </interleave>
+        
+        <part name="dl-1425.bin" crc="d6cf5ef5" length="0x2000" />
+        
+    <part repeat="960">00</part><part name="sfz2al_arrange.cpk" zip="/CPS+/sfz2al_arrange.zip" />
+    <patch offset="8">09 7d c0 03</patch>
+  </rom>
+    <rom index="2">
+        <part>
+01 00 01 00 00 01 02 00 00 00 00 00 00 00 00 00
+01 07 04 01 00 02 00 00 00 00 00 00 00 00 00 00
+08 96 08 26 0F C2 A0 65 7A 6F 72 61 32 70 6C 01
+00 01 00 00 01 02 00 00 00 00 00 00 00 00 00 01
+07 04 01 00 02 00 00 00 00 00 00 00 00 00 00 08
+96 08 26 0F C2 A0 65 7A 6F 72 61 32 70 6C 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</part>
+    </rom>
+    <nvram index="2" size="128" />
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff">
+        <DSWA />
+        <DSWB />
+        <DSWC />
+    </switches>
+    <buttons names="Light Punch,Middle Punch,Heavy Punch,Light Kick,Middle Kick,Heavy Kick,Start,Coin,Core credits" default="A,B,X,Y,L,R,Start,Select,-" count="6" />
+</misterromdescription>

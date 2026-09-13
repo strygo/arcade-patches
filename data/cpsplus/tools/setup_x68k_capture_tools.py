@@ -3,95 +3,72 @@
 
 Third-party source, dependencies, and binaries are kept below ``--root``
 (a work directory beside this tree by default) and are never part of any
-download.  Needs git, cmake and a C++ compiler.  SC-55 firmware is not
+download.  Needs git, cmake and a C++ compiler; the build goes through the
+same CMake helpers as setup_x68k_music_tools.py.  SC-55 firmware is not
 downloaded; use a dump from hardware you own when running the renderer.
 """
 from __future__ import annotations
 
 import argparse
-import shutil
-import subprocess
+import os
 import sys
 from pathlib import Path
 
-
-class SetupError(RuntimeError):
-    pass
+from setup_x68k_music_tools import (
+    GIT, SetupError, _run, absolute, cmake_build, require_binary,
+)
 
 
 RTMIDI_REPOSITORY = "https://github.com/thestk/rtmidi.git"
 RTMIDI_COMMIT = "a3233c22949342f6697681e2cf2403e27fcf0c9e"
 NUKED_REPOSITORY = "https://github.com/JohnMama12/Nuked-SC55-GUI-Float.git"
 NUKED_COMMIT = "4b639496f7fab9d3fae8ddd5370e7ba8e785fa8b"
-
-
-def _run(command: list[str], cwd: Path | None = None) -> str:
-    result = subprocess.run(command, cwd=cwd, text=True, capture_output=True)
-    if result.returncode:
-        details = "\n".join(part for part in (result.stdout, result.stderr) if part)
-        raise SetupError(
-            f"command failed ({result.returncode}): {' '.join(command)}\n{details}"
-        )
-    return result.stdout.strip()
+RTMIDI_NEEDED = os.name != "nt"
 
 
 def _checkout(path: Path, repository: str, commit: str) -> None:
     if not path.exists():
-        _run(["git", "clone", "--no-checkout", repository, str(path)])
-        _run(["git", "checkout", "--detach", commit], path)
+        _run([*GIT, "clone", "--no-checkout", repository, str(path)])
+        _run([*GIT, "checkout", "--detach", commit], path)
     elif not (path / ".git").is_dir():
         raise SetupError(f"existing path is not a Git checkout: {path}")
-    head = _run(["git", "rev-parse", "HEAD"], path)
+    head = _run([*GIT, "rev-parse", "HEAD"], path)
     if head != commit:
         raise SetupError(
             f"{path} is at {head}, expected {commit}; move it aside rather "
             "than having this setup command overwrite it"
         )
-    dirty = _run(["git", "status", "--porcelain", "--untracked-files=no"], path)
+    dirty = _run([*GIT, "status", "--porcelain", "--untracked-files=no"], path)
     if dirty:
         raise SetupError(f"tracked files are modified in {path}; move it aside")
 
 
-def _generator(build: Path) -> list[str]:
-    if (build / "CMakeCache.txt").is_file():
-        return []
-    return ["-G", "Ninja"] if shutil.which("ninja") else []
-
-
 def setup(root: Path) -> Path:
     root.mkdir(parents=True, exist_ok=True)
-    rtmidi = root / "rtmidi"
     nuked = root / "Nuked-SC55-GUI-Float"
-    _checkout(rtmidi, RTMIDI_REPOSITORY, RTMIDI_COMMIT)
     _checkout(nuked, NUKED_REPOSITORY, NUKED_COMMIT)
-
-    rtmidi_build = rtmidi / "build"
-    rtmidi_prefix = rtmidi / "install"
-    _run([
-        "cmake", "-S", str(rtmidi), "-B", str(rtmidi_build),
-        *_generator(rtmidi_build),
-        "-DCMAKE_BUILD_TYPE=Release",
-        "-DBUILD_SHARED_LIBS=OFF",
-        "-DRTMIDI_BUILD_TESTING=OFF",
-        f"-DCMAKE_INSTALL_PREFIX={rtmidi_prefix.resolve()}",
-    ])
-    _run(["cmake", "--build", str(rtmidi_build), "--target", "install"])
+    options = [
+        "-DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON",
+        f"-DNUKED_SOURCE=JohnMama12/Nuked-SC55-GUI-Float@{NUKED_COMMIT[:12]}",
+    ]
+    # The pinned Nuked-SC55 requires rtmidi on every platform except Windows
+    # (USE_RTMIDI is set only if NOT WIN32), and only its SDL frontend links
+    # it; the headless renderer never does.
+    if RTMIDI_NEEDED:
+        rtmidi = root / "rtmidi"
+        _checkout(rtmidi, RTMIDI_REPOSITORY, RTMIDI_COMMIT)
+        rtmidi_prefix = rtmidi / "install"
+        cmake_build(rtmidi, rtmidi / "build", "install", options=(
+            "-DBUILD_SHARED_LIBS=OFF",
+            "-DRTMIDI_BUILD_TESTING=OFF",
+            f"-DCMAKE_INSTALL_PREFIX={absolute(rtmidi_prefix).as_posix()}",
+        ))
+        options.append(f"-DCMAKE_PREFIX_PATH={absolute(rtmidi_prefix).as_posix()}")
 
     nuked_build = nuked / "build"
-    _run([
-        "cmake", "-S", str(nuked), "-B", str(nuked_build),
-        *_generator(nuked_build),
-        "-DCMAKE_BUILD_TYPE=Release",
-        "-DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON",
-        f"-DCMAKE_PREFIX_PATH={rtmidi_prefix.resolve()}",
-        f"-DNUKED_SOURCE=JohnMama12/Nuked-SC55-GUI-Float@{NUKED_COMMIT[:12]}",
-    ])
-    _run([
-        "cmake", "--build", str(nuked_build), "--target", "nuked-sc55-render"
-    ])
-    renderer = nuked_build / "nuked-sc55-render"
-    if not renderer.is_file():
-        raise SetupError(f"build succeeded but {renderer} is missing")
+    cmake_build(nuked, nuked_build, "nuked-sc55-render",
+                options=tuple(options), output=nuked_build)
+    renderer = require_binary(nuked_build, "nuked-sc55-render")
     version = _run([str(renderer), "--version"])
     print(f"ready: {renderer}\n{version}")
     return renderer

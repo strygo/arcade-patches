@@ -3,11 +3,25 @@ the Capcom Music Generation album.
 
 WHERE THE SOURCE LIVES.  roms/soundtracks/
 capcom_music_generation_area_88_original_soundtrack (override with --ost):
-one disc, 49 tracks -- tr01-26 the arcade score (a STUDIO RE-RECORDING, not
-a board line-out), tr27 a standalone arrange (out of scope by decision),
-tr28-49 the Super Famicom score.  THE JOIN IS BY DISC + TRACK NUMBER, NOT BY
-NAME (build_ffight_ost doctrine); tags win, filename numbers are the
-fallback, duplicate claims are an error.
+Capcom Music Generation: Area 88 Original Soundtrack (Suleputer
+CPCA-10161), one disc, 49 tracks -- tr01-26 the arcade score (a STUDIO
+RE-RECORDING, not a board line-out), tr27 a standalone arrange (out of scope
+by decision), tr28-49 the Super Famicom score, of which the pack uses
+tr30-49 (tr28 opening and tr29 start jingle have no arcade cue).  THE JOIN
+IS BY DISC + TRACK NUMBER, NOT BY NAME (build_ffight_ost doctrine); tags
+win, filename numbers are the fallback, duplicate claims are an error.
+
+THE INPUTS ARE PINNED (manifests/unsquad_snes_inputs.json, see
+pack/inputpins.py and build_ffight_ost).  The verified rip is one
+16-bit/44.1 kHz FLAC per track, every length a whole number of CD sectors;
+FLAC, WAV or any lossless container decodes to the same PCM and matches,
+lossy files never can.  Tracks are identified by their audio, not their
+tags: a rip numbered differently, split differently, or with another read
+offset is searched for each pinned recording and re-cut exactly, so the
+loop points in manifests/unsquad_snes_loops.tsv -- absolute sample
+positions in the pinned track -- stay valid without any shifting.  A track
+that cannot be re-cut to its pinned PCM is reported, and the pack is not
+built unless --allow-input-mismatch.
 
 THE MAP IS THE EAR-CLOSED MANIFEST.  Command -> role comes from
 manifests/unsquad_snes_trigger_map.tsv: four review passes closed the
@@ -47,10 +61,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from pack import protocols                                            # noqa: E402
-from pack.build_common import PACKS_DIR                               # noqa: E402
+from pack import inputpins, protocols                                 # noqa: E402
+from pack.build_common import MANIFESTS, PACKS_DIR                    # noqa: E402
 from pack.build_ffight_ost import (decode_flac, fade_onset,           # noqa: E402
-                                   index_ost, XFADE_SECONDS, _encode)
+                                   index_ost, XFADE_SECONDS, _encode,
+                                   check_album, _probe_tags)
 from pack.format import (PackWriter, PackReader, TrackMeta, TriggerRow,  # noqa: E402
                          CODEC_ADX, VERB_PLAY)
 
@@ -99,6 +114,38 @@ DISC = 1
 TRIG_GAIN = 0x23
 
 LOOPS_TSV = Path(__file__).resolve().parent.parent / "manifests" / "unsquad_snes_loops.tsv"
+INPUT_PINS = MANIFESTS / "unsquad_snes_inputs.json"
+ALBUM = ("Capcom Music Generation: Area 88 Original Soundtrack (Suleputer "
+         "CPCA-10161)")
+PINS_SOURCE = {
+    "release": ALBUM + ": one disc, 49 tracks; tracks 28-49 are the Super "
+               "Famicom score and the pack uses tracks 30-49",
+    "rip": "one 16-bit/44.1 kHz FLAC per track, every length a whole number "
+           "of CD sectors; crc32 is the CRC32 of the track's PCM (EAC's Copy "
+           "CRC for an EAC rip with the same offset and gap handling)",
+}
+
+
+def pin_key(trackno: int) -> str:
+    return f"tr{trackno:02d}"
+
+
+def wrong_album_message(root: Path, n_files: int, sample: Path | None) -> str:
+    """Why nothing matched, when none of the pinned recordings is there."""
+    tags = _probe_tags(sample) if sample else {}
+    seen = f"{n_files} audio file(s)"
+    if tags.get("album"):
+        seen += f', album tag "{tags["album"]}"'
+    if tags.get("tracktotal") or tags.get("totaltracks"):
+        seen += f", {tags.get('tracktotal') or tags.get('totaltracks')} tracks per its tags"
+    return (f"none of the Super Famicom score recordings this pack needs was "
+            f"found in {root} ({seen}).\n"
+            f"The pack is built from {ALBUM}: one disc of 49 tracks, the "
+            f"arcade score (tracks 1-27) followed by the Super Famicom score "
+            f"(tracks 28-49; the pack uses 30-49).\n"
+            f"An Area 88 album with a different track count -- a 21-track "
+            f"disc, for instance -- is a different release that does not "
+            f"carry the Super Famicom score, and cannot build this pack.")
 
 
 def _read_loops() -> dict[int, tuple[int, int, str]]:
@@ -136,7 +183,12 @@ def _defade_tail(pcm, ls: int, le: int, n: int):
     return out
 
 
-def build(out_dir: Path, ost_index: dict[tuple[int, int], Path]) -> dict:
+def build(out_dir: Path, ost_index: dict[tuple[int, int], Path],
+          checks: dict | None = None, pins: dict | None = None,
+          pin_tracks: dict | None = None) -> dict:
+    """checks: the input table (pin key -> TrackCheck) the audio comes from;
+    None reads the indexed files.  pin_tracks collects input fingerprints
+    for the maintainer --write-pins step."""
     proto = protocols.PROTOCOLS["unsquad"]
     if proto.latch_page != 0x800180:
         raise ValueError("unsquad descriptor is not the CPS1 byte latch")
@@ -145,18 +197,31 @@ def build(out_dir: Path, ost_index: dict[tuple[int, int], Path]) -> dict:
                    default_rate=44100, xfade_samples=xfade_samples)
 
     print(f"[unsq] === {TITLE} ===")
+    audit = inputpins.Audit("unsquad_snes", pins, checks or {})
     loops = _read_loops()
     track_index: dict[int, int] = {}      # album track no -> pack track id
     rows = []
     for cmd, role, one_shot, trackno in ROLES:
         ti = track_index.get(trackno)
         if ti is None:
-            src = ost_index.get((DISC, trackno))
-            if src is None:
-                raise FileNotFoundError(
-                    f"{TITLE}: no file indexed for disc {DISC} track "
-                    f"{trackno} ({role})")
-            pcm, rate = decode_flac(src)
+            pkey = pin_key(trackno)
+            if checks is not None:
+                chk = checks[pkey]
+                src = chk.path or next(p for p, _, _ in chk.segments if p)
+                pcm, rate = inputpins.load_checked(chk, "ffmpeg"), 44100
+            else:
+                src = ost_index.get((DISC, trackno))
+                if src is None:
+                    raise FileNotFoundError(
+                        f"{TITLE}: no file indexed for disc {DISC} track "
+                        f"{trackno} ({role}). This pack needs {ALBUM}, 49 "
+                        f"tracks, whose tracks 30-49 are the Super Famicom "
+                        f"score; an Area 88 album with fewer tracks is a "
+                        f"different release without it")
+                pcm, rate = decode_flac(src)
+            if pin_tracks is not None:
+                pin_tracks[pkey] = {"role": role, "disc": DISC, "track": trackno,
+                                    **inputpins.fingerprint(pcm)}
             frames = len(pcm) // 2
             if one_shot:
                 keep, ls, le, xf = frames, 0, 0, 0
@@ -180,6 +245,8 @@ def build(out_dir: Path, ost_index: dict[tuple[int, int], Path]) -> dict:
             from pack import adxcodec
             data, coef1, coef2, _ = _encode(pcm[:keep*2], rate, 2, keep,
                                             src.stem, False)
+            audit.track(f"tr{trackno:02d}", [pkey], pcm[:keep*2], data,
+                        (ls, le if not one_shot else 0, xf))
             meta = TrackMeta(
                 sample_rate=rate, channels=2, codec=CODEC_ADX, gain=0x7f,
                 loop_start_sample=ls,
@@ -223,9 +290,14 @@ def build(out_dir: Path, ost_index: dict[tuple[int, int], Path]) -> dict:
         if r.verb != 0 or r.suppress != 0:
             raise ValueError(f"readback: 0x{c:02x} must fail open")
     size = out_path.stat().st_size
+    rec = audit.write(out_dir / "unsquad_snes.audit.json", out_path)
     print(f"[unsq] {out_path.name}: {len(rows)} mapped cues (+{len(CAVE_CLONES)} "
-          f"clones, +aliases), {len(track_index)} tracks, {size/1e6:.1f} MB\n")
-    return {"path": str(out_path), "rows": len(rows), "size": size}
+          f"clones, +aliases), {len(track_index)} tracks, {size/1e6:.1f} MB")
+    if pins:
+        print(f"[unsq] {out_path.name}: {rec['diagnosis']}")
+    print()
+    return {"path": str(out_path), "rows": len(rows), "size": size,
+            "audit": audit}
 
 
 def main(argv=None):
@@ -233,12 +305,48 @@ def main(argv=None):
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--out-dir", type=Path, default=PACKS_DIR)
     ap.add_argument("--ost", type=Path, required=True,
-                    help="root of the CMG Area 88 rip (scanned for .flac)")
+                    help="folder holding your rip of " + ALBUM + " (49 "
+                         "tracks, lossless: .flac or .wav)")
+    ap.add_argument("--check-inputs", action="store_true",
+                    help="only check the rip against the pinned input tracks "
+                         "(one row per track) and exit: 0 all match, 3 not")
+    ap.add_argument("--allow-input-mismatch", action="store_true",
+                    help="build even when input tracks differ from the "
+                         "verified rip (it will not match the published pack)")
+    ap.add_argument("--write-pins", action="store_true",
+                    help="maintainer: build from the verified rip and write "
+                         + INPUT_PINS.name)
     a = ap.parse_args(argv)
     a.out_dir.mkdir(parents=True, exist_ok=True)
-    index = index_ost(a.ost, default_disc=DISC)   # one-disc album
-    print(f"[unsq] indexed {len(index)} tracks from {a.ost}")
-    build(a.out_dir, index)
+    if a.write_pins:
+        index = index_ost(a.ost, default_disc=DISC)
+        tracks: dict = {}
+        res = build(a.out_dir, index, pin_tracks=tracks)
+        inputpins.write_pins(INPUT_PINS, PINS_SOURCE, dict(sorted(tracks.items())),
+                             {"unsquad_snes": res["audit"].pins_entry(Path(res["path"]))})
+        return 0
+    pins = inputpins.load_pins(INPUT_PINS)
+    if pins is None:
+        if a.check_inputs:
+            print(f"[unsq] {INPUT_PINS.name} not found: nothing to check against")
+            return 0
+        index = index_ost(a.ost, default_disc=DISC)   # one-disc album
+        print(f"[unsq] indexed {len(index)} tracks from {a.ost}")
+        build(a.out_dir, index)
+        return 0
+
+    wanted = {pin_key(t): (DISC, t) for t in sorted({t for *_, t in ROLES})}
+    checks, index, unplaced, _ = check_album(
+        pins, a.ost, wanted, "Area 88 Original Soundtrack (CPCA-10161)",
+        INPUT_PINS.name, default_disc=DISC, tag="[unsq]")
+    ok = [c for c in checks.values() if c.ok]
+    if not ok:
+        files = sorted(index.values()) + sorted(unplaced)
+        print("[unsq] " + wrong_album_message(a.ost, len(files),
+                                              files[0] if files else None))
+    inputpins.gate("unsquad_snes", checks, pins, a.out_dir / "unsquad_snes.cpk",
+                   a.allow_input_mismatch, a.check_inputs, "[unsq]")
+    build(a.out_dir, index, checks=checks, pins=pins)
     return 0
 
 

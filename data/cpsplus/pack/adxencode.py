@@ -1,14 +1,10 @@
 """Shared audio layer: WAV in, ADX frame stream out, with an SNR check.
 
 Every pack whose audio is re-encoded rather than copied from the disc goes
-through here -- Final Fight, its OST editions, Mega Twins and Forgotten
-Worlds.  It lives in its own module because it is genuinely shared: as part of
-build_ffight_arrange it put a Final Fight file on three unrelated builders' import
-path, so a missing numpy surfaced as a Final Fight traceback while building
-Mega Twins.
+through here, so it has no dependency on any one game's builder.
 
 numpy is imported lazily and only by snr_db, so packs that copy their audio
-straight off the disc do not need it at all.
+straight off the disc, or skip the SNR measurement, do not need it at all.
 """
 from __future__ import annotations
 

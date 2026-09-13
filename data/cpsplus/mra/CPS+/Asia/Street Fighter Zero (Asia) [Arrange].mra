@@ -1,0 +1,79 @@
+<misterromdescription>
+    <about author="jotego" webpage="https://patreon.com/jotego" twitter="@topapate" source="https://jotego/jtcores" />
+    <rotation>horizontal</rotation>
+    <name>Street Fighter Zero (Asia) [Arrange]</name>
+    <setname>sfza</setname>
+    <mameversion>0282</mameversion>
+    <year>1995</year>
+    <manufacturer>Capcom</manufacturer>
+    <players>2</players>
+    <rbf>jtcps2-cpsplus</rbf>
+    <joystick>8</joystick>
+    <region>Asia</region>
+    <platform>CPS-2</platform>
+    <category>Fighting</category>
+    <catver>Fighter / Versus</catver>
+    <mraauthor>jotego,strygo</mraauthor>
+    <rom index="0" zip="sfza.zip|sfa.zip|qsound.zip" address="0x30000000">
+        
+        <part>
+            00 08 00 09 00 19 00 59
+            FF FF FF FF FF FF FF FF
+            32 FF 00 02 04 06 26 28
+            2A 2C 2E 00 00 30 02 04
+            08 30 FF FF FF FF FF FF
+            FC FF FF FF </part>
+        
+        <part name="sfza.key" crc="2aa6ac63" />
+        
+        <part name="sfza.03b" crc="ca91bed9" />
+        <part name="sfz.04a" crc="5f99e9a5" />
+        <part name="sfz.05a" crc="0810544d" />
+        <part name="sfz.06" crc="806e8f38" />
+        
+        <part name="sfz.01" crc="ffffec7d" />
+        <part name="sfz.02" crc="45f46a08" />
+        
+        <interleave output="16">
+            <part name="sfz.11m" crc="c4b093cd" map="12" />
+        </interleave>
+        <interleave output="16">
+            <part name="sfz.12m" crc="8bdbc4b4" map="12" />
+        </interleave>
+        
+        <part repeat="0x800000"> FF</part>
+        <interleave output="64">
+            <part name="sfz.14m" crc="90fefdb3" map="00000021" />
+            <part name="sfz.16m" crc="5354c948" map="00002100" />
+            <part name="sfz.18m" crc="41a1e790" map="00210000" />
+            <part name="sfz.20m" crc="a549df98" map="21000000" />
+        </interleave>
+        
+        <part name="dl-1425.bin" crc="d6cf5ef5" length="0x2000" />
+        
+    <part repeat="960">00</part><part name="sfa1_arrange.cpk" zip="/CPS+/sfa1_arrange.zip" />
+    <patch offset="8">09 59 c0 03</patch>
+  </rom>
+    <rom index="2">
+        <part>
+01 00 01 00 00 01 02 00 00 00 00 00 00 00 00 00
+01 01 03 01 00 02 00 00 00 00 00 00 00 00 00 00
+07 95 08 27 10 94 FF 45 4C 43 53 41 49 53 21 43
+01 00 01 00 00 01 02 00 00 00 00 00 00 00 00 00
+01 01 03 01 00 02 00 00 00 00 00 00 00 00 00 00
+07 95 08 27 10 94 FF 45 4C 43 53 41 49 53 21 43
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+</part>
+    </rom>
+    <nvram index="2" size="128" />
+    <rom index="1">
+        <part>00 80</part>
+    </rom>
+    <switches page_id="1" page_name="Switches" base="16" default="ff,ff">
+        <DSWA />
+        <DSWB />
+        <DSWC />
+    </switches>
+    <buttons names="Light Punch,Middle Punch,Heavy Punch,Light Kick,Middle Kick,Heavy Kick,Start,Coin,Core credits" default="A,B,X,Y,L,R,Start,Select,-" count="6" />
+</misterromdescription>

@@ -194,14 +194,19 @@ def probe_flac(path: Path) -> dict:
 
 
 def decode_flac(path: Path) -> np.ndarray:
+    """The FLAC's samples as s16, taken exactly as the published packs were.
+
+    ffmpeg decodes FLAC losslessly to s32; the reduction to s16 is done here
+    as ffmpeg's s32 -> s16 conversion does it, an arithmetic shift right by
+    16 (a floor, no dither), so the result cannot depend on the CPU."""
     proc = subprocess.run(
-        ["ffmpeg", "-v", "error", "-i", str(path), "-f", "s16le",
-         "-acodec", "pcm_s16le", "-ac", str(CHANNELS), "-ar", str(RATE), "-"],
+        [adxcodec.FFMPEG, "-v", "error", "-i", str(path), "-map", "0:a:0",
+         "-f", "s32le", "-acodec", "pcm_s32le", "-"],
         capture_output=True, check=True)
-    pcm = np.frombuffer(proc.stdout, dtype="<i2")
-    if pcm.size % CHANNELS:
+    s32 = np.frombuffer(proc.stdout, dtype="<i4")
+    if s32.size % CHANNELS:
         raise ValueError(f"{path.name}: decoded PCM ends mid-frame")
-    return pcm.reshape(-1, CHANNELS)
+    return (s32 >> 16).astype("<i2").reshape(-1, CHANNELS)
 
 
 def measure_cleanup(pcm: np.ndarray) -> tuple[tuple[int, int], int]:

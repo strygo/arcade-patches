@@ -10,12 +10,28 @@ WHERE THE SOURCES LIVE.  roms/soundtracks/final_fight_ost (override with
 
 THE JOIN IS BY DISC + TRACK NUMBER, NOT BY NAME.  Track titles vary with
 whoever ripped the discs; the disc layout does not.  Every .flac or .wav
-under the OST root is indexed by (disc, track) read from its tags (ffprobe; any of
-track/TRACKNUMBER + disc/DISCNUMBER, "3/67" forms accepted), falling back to
-a leading number in the filename and a CD/Disc number in a parent folder
-name.  Duplicate (disc, track) claims are an error, never a guess.  The
-arcade command <-> role mapping still comes from the ear-confirmed
-manifests/ffight_arrange_trigger_map.tsv.  Two role remaps are explicit
+(or other lossless file ffmpeg reads) under the OST root is indexed by
+(disc, track) read from its tags (ffprobe; any of track/TRACKNUMBER +
+disc/DISCNUMBER, "3/67" forms accepted), falling back to a leading number in
+the filename and a CD/Disc number in a parent folder name.  Duplicate
+(disc, track) claims are an error, never a guess.  The arcade command <->
+role mapping still comes from the ear-confirmed
+manifests/ffight_arrange_trigger_map.tsv.
+
+THE INPUTS ARE PINNED.  manifests/ffight_ost_inputs.json holds every input
+track of the verified build (length, PCM sha256, CRC32, search anchors; see
+pack/inputpins.py), and every run checks the rip against it first, printing
+one row per track.  A track whose samples sit elsewhere in the rip (another
+read offset, other gap handling, other numbering) is re-cut from where it
+really is, and only if the result is the pinned PCM; an edition with any
+input that still differs is not built unless --allow-input-mismatch.  Each
+built pack gets work/packs/<pack>.audit.json: per-track input, pre-encode
+PCM and ADX hashes, so a hash mismatch names the first stage that differs.
+
+The verified rip: the five-disc Final Fight Original Sound Collection,
+ripped with Exact Audio Copy in secure mode, read offset correction +48,
+gaps appended to the previous track, one 16-bit/44.1 kHz FLAC per track.
+EAC with AccurateRip-corrected offset and that gap setting reproduces it.  Two role remaps are explicit
 because the ports renumbered their stages:
   * SNES calls the Bay Area "ROUND4"; the arcade calls it Round 5.
   * SNES has no Industrial Area stage.  Its Industrial 2 survives only as
@@ -46,8 +62,8 @@ import numpy as np
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from pack import adxcodec, protocols, xfade                           # noqa: E402
-from pack.build_common import PACKS_DIR                               # noqa: E402
+from pack import adxcodec, inputpins, protocols, xfade                # noqa: E402
+from pack.build_common import MANIFESTS, PACKS_DIR                    # noqa: E402
 from pack.format import (PackWriter, PackReader, TrackMeta, TriggerRow,  # noqa: E402
                          CODEC_ADX, VERB_NONE, VERB_PLAY)
 
@@ -148,14 +164,29 @@ EDITIONS = {
 
 XFADE_SECONDS = 1.0            # blend length; must fit inside the fade tail
 
+INPUT_PINS = MANIFESTS / "ffight_ost_inputs.json"
+PINS_SOURCE = {
+    "release": "Final Fight Original Sound Collection (5 discs); the packs "
+               "use disc 1 tracks 28-67 and disc 2 tracks 18-37",
+    "rip": "Exact Audio Copy, secure mode, read offset correction +48, gaps "
+           "appended to the previous track; one 16-bit/44.1 kHz FLAC per "
+           "track. crc32 is EAC's Copy CRC for the track",
+}
+# Lossless containers ffmpeg decodes to the identical PCM; lossy ones are
+# recognised only to say why they can never match.
+AUDIO_EXTS = (".flac", ".wav", ".wv", ".ape", ".aif", ".aiff")
+LOSSY_EXTS = (".mp3", ".m4a", ".aac", ".ogg", ".opus", ".wma")
+
+
+def pin_key(disc: int, track: int) -> str:
+    return f"CD{disc}/{track:02d}"
+
 
 def decode_flac(path: Path) -> tuple[np.ndarray, int]:
     """-> (int16 stereo interleaved, rate).  ffmpeg, matching adxcodec's own
     dependency rather than adding a decoder."""
-    out = subprocess.run(
-        ["ffmpeg", "-v", "error", "-i", str(path), "-f", "s16le", "-acodec",
-         "pcm_s16le", "-ac", "2", "-ar", "44100", "-"],
-        capture_output=True, check=True).stdout
+    out = subprocess.run(inputpins.ffmpeg_s16_cmd(path),
+                         capture_output=True, check=True).stdout
     return np.frombuffer(out, dtype="<i2").copy(), 44100
 
 
@@ -169,10 +200,38 @@ def _first_int(s: str | None) -> int | None:
 
 def _probe_tags(path: Path) -> dict:
     out = subprocess.run(
-        ["ffprobe", "-v", "error", "-show_entries", "format_tags",
+        [_ffprobe(), "-v", "error", "-show_entries", "format_tags",
          "-of", "json", str(path)], capture_output=True, check=True).stdout
     tags = json.loads(out).get("format", {}).get("tags", {})
     return {k.lower(): v for k, v in tags.items()}
+
+
+def _ffprobe() -> str:
+    ff = Path(inputpins.ffmpeg_exe())
+    probe = ff.with_name(ff.name.replace("ffmpeg", "ffprobe"))
+    return str(probe) if probe.name != ff.name and probe.exists() else "ffprobe"
+
+
+def _probe_stream(path: Path) -> str | None:
+    """A note when a file cannot be 16-bit/44.1 kHz CD audio, else None."""
+    try:
+        out = subprocess.run(
+            [_ffprobe(), "-v", "error", "-select_streams", "a:0", "-show_entries",
+             "stream=codec_name,sample_rate,bits_per_raw_sample,channels",
+             "-of", "json", str(path)], capture_output=True, check=True).stdout
+        st = (json.loads(out).get("streams") or [{}])[0]
+    except (OSError, subprocess.CalledProcessError, ValueError):
+        return None
+    codec, rate = st.get("codec_name", "?"), str(st.get("sample_rate", "?"))
+    bits = str(st.get("bits_per_raw_sample") or "?")
+    lossy = codec in ("mp3", "aac", "vorbis", "opus", "wmav2", "ac3")
+    if lossy or rate != "44100" or bits not in ("16", "?") or st.get("channels") != 2:
+        return (f"your file is {codec}, {rate} Hz, {bits}-bit, "
+                f"{st.get('channels', '?')} ch -- not the 16-bit/44.1 kHz "
+                f"stereo CD audio this pack was built from"
+                + ("; lossy audio can never match" if lossy else
+                   "; resampled or re-quantised audio cannot match"))
+    return None
 
 
 def _disc_from_parents(path: Path, root: Path) -> int | None:
@@ -181,6 +240,36 @@ def _disc_from_parents(path: Path, root: Path) -> int | None:
         if m:
             return int(m.group(1))
     return None
+
+
+def scan_album(root: Path, default_disc: int | None = None):
+    """-> (index, unplaced, problems, lossy): the (disc, track) index of every
+    lossless file under root, the files it could not place (no number, or a
+    duplicate claim), a sentence per such problem, and any lossy files."""
+    index: dict[tuple[int, int], Path] = {}
+    unplaced, problems = [], []
+    files = sorted(f for f in root.rglob("*") if f.is_file())
+    lossy = [f for f in files if f.suffix.lower() in LOSSY_EXTS]
+    for f in (f for f in files if f.suffix.lower() in AUDIO_EXTS):
+        tags = _probe_tags(f)
+        track = _first_int(tags.get("track") or tags.get("tracknumber")) \
+            or _first_int(f.stem)
+        disc = _first_int(tags.get("disc") or tags.get("discnumber")) \
+            or _disc_from_parents(f, root) or default_disc
+        if track is None:
+            problems.append(f"cannot determine a track number for {f} "
+                            "(no track tag, no leading number in the name)")
+        elif disc is None:
+            problems.append(f"cannot determine a disc number for {f} "
+                            "(no disc tag, no CD/Disc N in a parent folder)")
+        elif (disc, track) in index:
+            problems.append(f"disc {disc} track {track} claimed twice:\n"
+                            f"  {index[(disc, track)]}\n  {f}")
+        else:
+            index[(disc, track)] = f
+            continue
+        unplaced.append(f)
+    return index, unplaced, problems, lossy
 
 
 def index_ost(root: Path, default_disc: int | None = None
@@ -196,31 +285,64 @@ def index_ost(root: Path, default_disc: int | None = None
     """
     if not root.is_dir():
         raise FileNotFoundError(f"OST root not found: {root} (use --ost)")
-    index: dict[tuple[int, int], Path] = {}
     # Whatever the rip is stored as, ffmpeg decodes it to the same PCM, so a
     # WAV rip of the same discs produces the same pack and the same hash.
-    tracks = sorted(f for f in root.rglob("*")
-                    if f.is_file() and f.suffix.lower() in (".flac", ".wav"))
-    if not tracks:
-        raise FileNotFoundError(f"no .flac or .wav files under {root}")
-    for f in tracks:
-        tags = _probe_tags(f)
-        track = _first_int(tags.get("track") or tags.get("tracknumber")) \
-            or _first_int(f.stem)
-        disc = _first_int(tags.get("disc") or tags.get("discnumber")) \
-            or _disc_from_parents(f, root) or default_disc
-        if track is None:
-            raise ValueError(f"cannot determine a track number for {f} "
-                             "(no track tag, no leading number in the name)")
-        if disc is None:
-            raise ValueError(f"cannot determine a disc number for {f} "
-                             "(no disc tag, no CD/Disc N in a parent folder)")
-        key = (disc, track)
-        if key in index:
-            raise ValueError(f"disc {disc} track {track} claimed twice:\n"
-                             f"  {index[key]}\n  {f}")
-        index[key] = f
+    index, unplaced, problems, lossy = scan_album(root, default_disc)
+    if not index and not unplaced:
+        raise FileNotFoundError(_no_audio_message(root, lossy))
+    if problems:
+        raise ValueError(problems[0])
     return index
+
+
+def _no_audio_message(root: Path, lossy: list[Path]) -> str:
+    msg = f"no .flac or .wav files under {root}"
+    if lossy:
+        msg += (f" -- it holds {len(lossy)} lossy file(s) ({lossy[0].suffix}), "
+                f"which can never reproduce the verified pack: rip the disc "
+                f"losslessly (FLAC or WAV)")
+    return msg
+
+
+def check_album(pins: dict, root: Path, wanted: dict[str, tuple[int, int]],
+                title: str, pins_name: str, default_disc: int | None = None,
+                tag: str = "[inputs]"):
+    """Check the album rip at root against the pinned input tracks and print
+    the table.  -> (checks by pin key, index, unplaced files, lossy files)."""
+    if not root.is_dir():
+        raise FileNotFoundError(f"album folder not found: {root}")
+    index, unplaced, problems, lossy = scan_album(root, default_disc)
+    if not index and not unplaced:
+        raise FileNotFoundError(_no_audio_message(root, lossy))
+    for p in problems:
+        print(f"{tag} note: {p}")
+    want = {key: index.get(dt) for key, dt in wanted.items()}
+    groups = [[index[k] for k in sorted(index) if k[0] == d]
+              for d in sorted({d for d, _ in index})]
+    if unplaced:
+        groups.append(sorted(unplaced))
+
+    def describe(p: Path) -> str:
+        try:
+            parts = p.relative_to(root).parts
+        except ValueError:
+            return str(p)
+        return "/".join(parts) if len(parts) <= 2 else ".../" + "/".join(parts[-2:])
+
+    checks = inputpins.check_tracks(pins, want, groups, "ffmpeg", describe)
+    for c in checks.values():
+        if c.path is not None:
+            c.source_sha256 = inputpins.file_sha256(c.path)
+            if not c.ok:
+                note = _probe_stream(c.path)
+                if note:
+                    c.notes.insert(0, note)
+    print(inputpins.format_report(title, checks, pins_name, describe))
+    if lossy:
+        names = ", ".join(f.name for f in lossy[:3]) + (", ..." if len(lossy) > 3 else "")
+        print(f"{tag} note: {len(lossy)} lossy file(s) were ignored ({names}): "
+              f"lossy audio can never match the verified rip")
+    return checks, index, unplaced, lossy
 
 
 def fade_onset(pcm: np.ndarray, rate: int) -> int:
@@ -268,7 +390,12 @@ def configure_opening(w, key):
 
 
 def build_edition(key: str, out_dir: Path, ost_index: dict[tuple[int, int], Path],
-                  disc_label: str = "CD", measure_snr: bool = False) -> dict:
+                  disc_label: str = "CD", measure_snr: bool = False,
+                  checks: dict | None = None, pins: dict | None = None,
+                  pin_tracks: dict | None = None) -> dict:
+    """checks: the input table (pin key -> TrackCheck) the audio is taken
+    from; None reads the indexed files directly.  pin_tracks, when given,
+    collects each input's fingerprint (maintainer --write-pins)."""
     title, disc, table, trig_gain = EDITIONS[key]
     proto = dataclasses.replace(protocols.PROTOCOLS["sf2"], game_id="ffight")
     if proto.latch_page != 0x800180:
@@ -281,19 +408,30 @@ def build_edition(key: str, out_dir: Path, ost_index: dict[tuple[int, int], Path
                    default_rate=44100, xfade_samples=xfade_samples)
 
     print(f"[ffost] === {title} ===")
+    pack = f"ffight_{key}"
+    audit = inputpins.Audit(pack, pins, checks or {})
     rows, skipped = [], []
     for cmd, role, one_shot in ROLES:
         trackno = table.get(role)
         if trackno is None:
             skipped.append((cmd, role))
             continue
-        src = ost_index.get((disc, trackno))
-        if src is None:
-            raise FileNotFoundError(
-                f"{title}: no file indexed for disc {disc} track {trackno} "
-                f"({role}); files present for disc {disc}: "
-                f"{sorted(tr for d, tr in ost_index if d == disc)}")
-        pcm, rate = decode_flac(src)
+        pkey = pin_key(disc, trackno)
+        if checks is not None:
+            chk = checks[pkey]
+            src = chk.path or next(p for p, _, _ in chk.segments if p)
+            pcm, rate = inputpins.load_checked(chk, "ffmpeg"), 44100
+        else:
+            src = ost_index.get((disc, trackno))
+            if src is None:
+                raise FileNotFoundError(
+                    f"{title}: no file indexed for disc {disc} track {trackno} "
+                    f"({role}); files present for disc {disc}: "
+                    f"{sorted(tr for d, tr in ost_index if d == disc)}")
+            pcm, rate = decode_flac(src)
+        if pin_tracks is not None:
+            pin_tracks[pkey] = {"role": role, "disc": disc, "track": trackno,
+                                **inputpins.fingerprint(pcm)}
         frames = len(pcm) // 2
 
         if one_shot:
@@ -321,6 +459,8 @@ def build_edition(key: str, out_dir: Path, ost_index: dict[tuple[int, int], Path
             keep = le + xfade_samples if xf else frames
         data, coef1, coef2, snr = _encode(pcm[:keep*2], rate, 2, keep,
                                           src.stem, measure_snr)
+        audit.track(role, [pkey], pcm[:keep*2], data,
+                    (ls, le if not one_shot else 0, xf))
         meta = TrackMeta(
             sample_rate=rate, channels=2, codec=CODEC_ADX, gain=0x7f,
             loop_start_sample=ls, loop_start_byte=adxcodec.samples_to_stream_byte(ls, 2),
@@ -338,7 +478,9 @@ def build_edition(key: str, out_dir: Path, ost_index: dict[tuple[int, int], Path
               f"{le/rate:6.1f}s  {kind}  {len(data)/1e6:5.2f} MB")
     suppress_only = configure_opening(w, key)
     for cmd, role in skipped:
-        print(f"[ffost] 0x{cmd:02x} {role:<18} NO SOURCE IN THIS EDITION -> fails open")
+        print(f"[ffost] 0x{cmd:02x} {role:<18} note: this edition has no "
+              f"recording of this cue, so the arcade board's own music plays "
+              f"(by design)")
 
     out_path = out_dir / f"ffight_{key}.cpk"
     w.write(out_path)
@@ -358,9 +500,13 @@ def build_edition(key: str, out_dir: Path, ost_index: dict[tuple[int, int], Path
             raise ValueError(f"readback: 0x{cmd:02x} should be unmapped")
     size = out_path.stat().st_size
     rd.close()
-    print(f"[ffost] {out_path.name}: {len(rows)} rows, {size/1e6:.1f} MB\n")
+    rec = audit.write(out_dir / f"{pack}.audit.json", out_path)
+    print(f"[ffost] {out_path.name}: {len(rows)} rows, {size/1e6:.1f} MB")
+    if pins:
+        print(f"[ffost] {out_path.name}: {rec['diagnosis']}")
+    print()
     return {"path": str(out_path), "rows": len(rows), "size": size,
-            "skipped": [f"0x{c:02x}" for c, _ in skipped]}
+            "skipped": [f"0x{c:02x}" for c, _ in skipped], "audit": audit}
 
 
 def _encode(pcm: np.ndarray, rate: int, ch: int, frames: int,
@@ -401,6 +547,16 @@ def main(argv=None):
                     help="root of the OST rip (scanned recursively for "
                          ".flac); see your wrapper script")
     ap.add_argument("--self-test", action="store_true")
+    ap.add_argument("--check-inputs", action="store_true",
+                    help="only check the rip against the pinned input tracks "
+                         "(one row per track) and exit: 0 all match, 3 not")
+    ap.add_argument("--allow-input-mismatch", action="store_true",
+                    help="build an edition even when its input tracks differ "
+                         "from the verified rip (it will not match the "
+                         "published pack)")
+    ap.add_argument("--write-pins", action="store_true",
+                    help="maintainer: build every edition from the verified "
+                         "rip and write " + INPUT_PINS.name)
     a = ap.parse_args(argv)
     if a.self_test:
         self_test()
@@ -409,11 +565,57 @@ def main(argv=None):
         ap.error("--ost is required unless --self-test is used")
     keys = sorted(EDITIONS) if a.edition == "all" else [a.edition]
     a.out_dir.mkdir(parents=True, exist_ok=True)
-    index = index_ost(a.ost)
-    discs = sorted({d for d, _ in index})
-    print(f"[ffost] indexed {len(index)} tracks across discs {discs} from {a.ost}")
+
+    if a.write_pins:
+        if keys != sorted(EDITIONS):
+            ap.error("--write-pins builds every edition")
+        index = index_ost(a.ost)
+        tracks, packs = {}, {}
+        for k in keys:
+            res = build_edition(k, a.out_dir, index, pin_tracks=tracks)
+            packs[f"ffight_{k}"] = res["audit"].pins_entry(Path(res["path"]))
+        inputpins.write_pins(INPUT_PINS, PINS_SOURCE, dict(sorted(tracks.items())),
+                             packs)
+        return 0
+
+    pins = inputpins.load_pins(INPUT_PINS)
+    if pins is None:
+        if a.check_inputs:
+            print(f"[ffost] {INPUT_PINS.name} not found: nothing to check against")
+            return 0
+        index = index_ost(a.ost)
+        discs = sorted({d for d, _ in index})
+        print(f"[ffost] indexed {len(index)} tracks across discs {discs} from {a.ost}")
+        for k in keys:
+            build_edition(k, a.out_dir, index)
+        return 0
+
+    needed = {k: [pin_key(EDITIONS[k][1], t) for t in EDITIONS[k][2].values()]
+              for k in keys}
+    wanted = {pk: (int(pk[2:].split("/")[0]), int(pk.split("/")[1]))
+              for k in keys for pk in needed[k]}
+    checks, index, _, _ = check_album(pins, a.ost, dict(sorted(wanted.items())),
+                                      "Final Fight Original Sound Collection",
+                                      INPUT_PINS.name, tag="[ffost]")
+    if a.check_inputs:
+        # build_pack.py drops a mode's return value; the exit status is the
+        # answer make_packs.py --check-inputs reads
+        raise SystemExit(0 if all(c.ok for c in checks.values()) else 3)
+    rc = 0
     for k in keys:
-        build_edition(k, a.out_dir, index)
+        pack = f"ffight_{k}"
+        mine = {pk: checks[pk] for pk in needed[k]}
+        why = inputpins.refusal(mine, a.allow_input_mismatch)
+        if why:
+            print(f"[ffost] {pack}: {why}\n")
+            (a.out_dir / f"{pack}.cpk").unlink(missing_ok=True)
+            inputpins.Audit(pack, pins, mine).write(
+                a.out_dir / f"{pack}.audit.json", None, refused=why)
+            rc = 3
+            continue
+        build_edition(k, a.out_dir, index, checks=mine, pins=pins)
+    if rc:
+        raise SystemExit(rc)      # 3: some edition was not built (inputs)
     return 0
 
 

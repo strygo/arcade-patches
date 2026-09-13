@@ -1,12 +1,49 @@
 {
   "schema": 1,
   "pack": "strider_psx",
-  "review_status": "encoded_listening_pending",
+  "review_status": "approved",
   "source": {
     "disc": "Strider (USA).chd",
     "disc_sha256": "6b268854074f78e868fd96c08514dfd0b24e4314f0c712ea6900ab99ff7df029",
     "capture": "tools/capture_strider_psx.py (MAME, the game's sound test)",
-    "capture_sha256": "7cd3835135e3090ac6d7cf1af191fe0529b93e47f5f7720d28deab88a13394a4"
+    "capture_sha256": "7cd3835135e3090ac6d7cf1af191fe0529b93e47f5f7720d28deab88a13394a4",
+    "verified_builds_note": "MAME's PlayStation sound emulation keeps envelope levels in floating point, so its macOS (arm64) and Windows (x64) builds record a few thousand samples 1-3 LSB apart (inaudible). Both recordings are accepted; each has its own loop and pack hashes. The macOS recording is the reviewed one and fills capture_sha256 / reviewed_wav_sha256.",
+    "verified_builds": [
+      {
+        "mame": "MAME 0.288, macOS arm64 (Homebrew)",
+        "capture_sha256": "7cd3835135e3090ac6d7cf1af191fe0529b93e47f5f7720d28deab88a13394a4",
+        "pack_sha256": "b9d14409596cb123feeb5e62dd2021354fd42d505c84d3bb713099a864d7253f",
+        "tracks": {
+          "psx_01": "0a5f9bc88ba0fb3ae44cd6de9e3e805643f0fcaf8920aade42a7209908e16e4d",
+          "psx_02": "3dee90c49ad69ed0d1390179650804958c4b70716263608d2285e11456a289c0",
+          "psx_03": "5be1b65deb35204b472f319879236dc5a6f256d11eb3c9ebd9b6439a1f93cd0f",
+          "psx_04": "c479809b659af5ec03b94b1cfd807efc24ac016d88c657d125a458a97d2c9e70",
+          "psx_05": "1eacfe8151975da3aea0ec5446cf94ab197f74f191f527ea66f4464f5bd703da",
+          "psx_06": "3ec65d59cb7ddb167722b7ad08432b127755db3fab188b12c699a15ffcc7bee7",
+          "psx_07": "1f4a717a1ced5f50f5c26d8af8221672d5ef97f0c00617dd2e7d90e766dc0a10",
+          "psx_08": "b1982f1270091dee6bc965774f0bde91196e2e625e67c5ca9b59161766d48cd7",
+          "psx_09": "87983b6d3ef30cacbdcb73dc34ff03db851ea6275b9853ebb402822d825c4184",
+          "psx_10": "da05cbbf27c2b96a00ac5511882636897db536f8ae3fad47e45c5564ef75d863"
+        }
+      },
+      {
+        "mame": "MAME 0.288, Windows x64 (mamedev.org)",
+        "capture_sha256": "c7cbcd7ca1ab89da10bd7698a66f0825b915da61f68ebec2f6d4bf29226c659a",
+        "pack_sha256": "a7c0f944bfaf4f63d96e46a3c10548c043d67a0e9298c7b82c843cb1886f5366",
+        "tracks": {
+          "psx_01": "0dcee2ac76e20cd82a883ca573623d774cb1294018e16bdacb094eddb9742da0",
+          "psx_02": "499d3c3fa18b49415a72b0cf174bb1c065adb8faece80f87c9edb55ff5f20d42",
+          "psx_03": "46a2ed464ee7da424480c769ca07272a59984b80d4213891319d1709078041c5",
+          "psx_04": "e02b334507bb2fe7f24563b7fe0c1e634ee40f479804f73a2e5d0ca0bcee30b1",
+          "psx_05": "55580014d123db9d7ce622b71142a3cfbd4f86840d182dd68fe8fd304f50df9f",
+          "psx_06": "229651830ddc446b4f299769592d121cdb0750882ca7ffd42c8d06d7130ffccb",
+          "psx_07": "f60158128f384148fc1009e81286ea98146453347feb403c5c7bafdb2c3efc29",
+          "psx_08": "0ac0d64372ce47d63e93f8d723923d5f0f5e504a78beb65eba8c0fa3ae27a147",
+          "psx_09": "c4157e41926bd4f013db7cfb069b8e12114e12ad2f017e34b765b2f077096927",
+          "psx_10": "9aecdb31eb674a8b5362eaa262c407b5293c5df7f792e4d94059deeef807cc3e"
+        }
+      }
+    ]
   },
   "trigger_gain": 123,
   "loudness": {

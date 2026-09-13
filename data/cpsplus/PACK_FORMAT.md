@@ -162,7 +162,7 @@ the RTL testbench golden); the FPGA implementation in
 loop, loop_end − loop_start > N, and `xfade_samples > 0`.  Crossfade-disabled
 tracks are the plain hard-cut loop above, bit-identical to v0.
 Coefficients are the ffmpeg `lrint` variants of the 500 Hz-cutoff formula
-(reference/ffmpeg/adx.c); note ffmpeg decodes with `scale`, the
+(FFmpeg libavcodec/adx.c); note ffmpeg decodes with `scale`, the
 multimedia.cx wiki with `scale+1` — the RTL decoder must pick one and be
 tested against the same choice (≤1 LSB per residual step).
 
