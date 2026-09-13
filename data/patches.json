@@ -665,34 +665,41 @@
       "title": "Vampire Savior 2",
       "subtitle": "English translation",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-07-10",
+      "version": "rc2",
+      "date": "2026-09-17",
       "game": "Vampire Savior 2: The Lord of Vampire (Japan 970913)",
       "set": "vsav2",
       "hardware": "Capcom CPS-2",
       "summary": "Vampire Savior 2 never left Japan. This translates all of it: Western character names, all 241 post-fight quotes, every ending, and the final showdown with Jedah.",
       "description": [
         "Vampire Savior 2 is a Japan-only update of Vampire Savior with a shuffled roster. Donovan, Huitzil, and Pyron join the fight, while Gallon, Aulbath, and Sasquatch sit this one out, and it carries its own set of endings. It never came out in English. This patch translates the entire game.",
-        "Where the dialogue matches the Western release of Vampire Savior, the patch reuses Capcom's own English so it reads like the official localization. The lines unique to this version get a fresh translation, written to read naturally while staying true to the original: the quotes for Huitzil, Pyron, and Donovan, plus every ending and the final confrontation with Jedah.",
+        "Where Capcom's own English exists, in the Western Vampire Savior and the PlayStation Darkstalkers 3, the patch uses it, as long as it says what the Japanese says, so it reads like the official localization. The lines unique to this version get a fresh translation, written to read naturally while staying true to the original: the quotes for Huitzil, Pyron, and Donovan, plus every ending and the final confrontation with Jedah.",
         "The title screen keeps the Vampire Savior 2 name, which is how the game appeared in arcades. 'Darkstalkers 3' was a later name used only for the home versions."
       ],
       "changes": [
         "USA region presentation",
         "Western character names on character select, route map, and fight HUD: Bulleta \u2192 Baby Bonnie Hood, Zabel \u2192 L.Raptor, Lei-Lei \u2192 Hsien-Ko, Phobos \u2192 Huitzil",
-        "All 241 post-fight quotes in English, reusing Capcom's own wording where it exists",
-        "All 29 ending pages and both four-page Jedah final-boss dialogs translated",
-        "Route stage names and option labels match the official U.S. arcade wording"
+        "All 241 post-fight quotes in English, using Capcom's own wording where it matches the Japanese",
+        "Both endings and both four-page Jedah final-boss dialogs translated",
+        "Route stage names and option labels match the official U.S. arcade wording",
+        "Capcom's misspelled \"L.Rapter\" name art corrected to L.Raptor",
+        "Oboro Bishamon's win plays his own victory music, as intended"
       ],
       "artifact": {
         "stock_zip": "../capcom/roms/mame0260/vsav2.zip",
-        "patched_zip": "../capcom/translations/vsav2/out/narrative_english/vsav2.zip"
+        "patched_zip": "../capcom/translations/vsav2/out/vsav2_english/vsav2.zip"
       },
       "mra": {
         "base": "data/mra/vsav2.mra",
-        "name": "Vampire Savior 2 (English)",
+        "name": "Vampire Savior 2 (USA) [English Translation]",
         "setname": "vsav2en",
-        "filename": "Vampire Savior 2 (English Translation).mra",
-        "zip_dir": "_Arcade/_Translations"
+        "filename": "Vampire Savior 2 (USA) [English Translation].mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Translations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo",
+        "region": "USA"
       },
       "hbmame": {
         "setname": "vsav2s04",
@@ -700,36 +707,65 @@
         "renames": {
           "vs2j.03": "c76s04.p1",
           "vs2j.04": "c76s04.p2",
-          "vs2j.08": "c76s04.p6"
+          "vs2j.08": "c76s04.p6",
+          "vs2.13m": "c76s04.c1",
+          "vs2.15m": "c76s04.c2",
+          "vs2.17m": "c76s04.c3",
+          "vs2.19m": "c76s04.c4"
         }
       },
       "screenshots": [
         {
-          "before": "../capcom/translations/vsav2/work/select_left_sweep/vsav2_3695_left_04.png",
-          "after": "../capcom/translations/vsav2/work/name_acceptance/lei_lei/vsav2_3695_select.png",
+          "before": "data/screenshots/vsav2/select_lei_lei_stock.png",
+          "after": "data/screenshots/vsav2/select_lei_lei_english.png",
           "caption": "Character select. Lei-Lei becomes Hsien-Ko."
         },
         {
-          "single": "../capcom/translations/vsav2/work/name_acceptance/bulleta/vsav2_3495_select.png",
+          "single": "data/screenshots/vsav2/select_bulleta.png",
           "caption": "Bulleta under her Western name, Baby Bonnie Hood."
         },
         {
-          "single": "../capcom/translations/vsav2/work/post_fight_quote_acceptance/bulleta_natural/vsav2_6000_quote.png",
+          "single": "data/screenshots/vsav2/raptor_select.png",
+          "caption": "Capcom's hidden English name art spelled him \"L.Rapter\". It now reads L.Raptor everywhere it appears."
+        },
+        {
+          "single": "data/screenshots/vsav2/quote_bb_hood.png",
           "caption": "Post-fight quotes in English (B.B. Hood shown)."
         },
         {
-          "before": "../capcom/translations/vsav2/work/narrative_review_sweep/vs2_narrative_0a0a8e_0004_00/vsav2_6000_narrative_page.png",
-          "after": "../capcom/translations/vsav2/work/narrative_patch_acceptance/standard_ending_p00/vsav2_6000_english_page.png",
+          "before": "data/screenshots/vsav2/ending_stock.png",
+          "after": "data/screenshots/vsav2/ending_english.png",
           "caption": "The same ending page before and after."
         },
         {
-          "single": "../capcom/translations/vsav2/work/baseline_surface_sweep/vsav2_3100_coin_title.png",
+          "single": "data/screenshots/vsav2/title.png",
           "caption": "The title art is intentionally unchanged. The official U.S. arcade release of the previous game also used Vampire Savior branding."
         }
       ],
       "notes": [
         "Release candidate: the translation is complete and tested, but the wording review is still open. Report anything that reads badly.",
-        "MAME reports checksum warnings for the three patched program ROMs. This is expected; the game boots and plays normally."
+        "MAME reports checksum warnings for the seven patched files. This is expected; the game boots and plays normally."
+      ],
+      "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-09-17",
+          "items": [
+            "The translation now uses Capcom's official Darkstalkers 3 English wherever it was accurate to the Japanese, and the rest has been refined to match Capcom's style.",
+            "The longest ending no longer crashes and resets the game partway through.",
+            "Oboro Bishamon's win now plays his own victory theme instead of the pre-boss theme.",
+            "Capcom's hidden name art spelled Lord Raptor \"L.Rapter\". It now reads L.Raptor everywhere it appears.",
+            "Oboro Bishamon's silent win quote now shows as a clean row of dots, instead of stray marks.",
+            "The set now also changes four graphics ROMs for the name art, so rebuild it with the rc2 kit."
+          ]
+        },
+        {
+          "version": "rc1",
+          "date": "2026-07-10",
+          "items": [
+            "First public release."
+          ]
+        }
       ]
     },
     {
