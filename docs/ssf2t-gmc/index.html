@@ -49,9 +49,9 @@ please <a href="https://x.com/strygo">let us know</a>. Anything you find goes in
 <h2>Downloads</h2>
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware</div>
-  <div class="file"><a href="../downloads/ssf2t-gmc-rc2-ips.zip?v=24cc02f3f2">ssf2t-gmc-rc2-ips.zip</a>
+  <div class="file"><a href="../downloads/ssf2t-gmc-rc2-ips.zip?v=b5ff8e5b06">ssf2t-gmc-rc2-ips.zip</a>
   (50 KB)</div>
-  <div class="hash">SHA-256: 24cc02f3f2bb68682eb984808961360cb59cab52b7c57afbf5ca145314a899a0</div>
+  <div class="hash">SHA-256: b5ff8e5b06e1880e55a959149cd0a90680c044ebd2035030a051a246c435ac11</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRA only</div>
@@ -70,7 +70,8 @@ python3 apply.py /path/to/ssf2xj.zip --out-dir out</code></pre>
 checks the result, and writes the files for every platform in one go:</p>
 <pre><code>out/mame/ssf2xj.zip
 out/hbmame/ssf2tgmc.zip
-out/mister/_Arcade/_Arcade Patches/_Restorations/Super Street Fighter II Turbo Grand Master Challenge (USA) [English Restoration].mra</code></pre>
+out/mister/_Arcade/_Arcade Patches/_Restorations/Super Street Fighter II Turbo Grand Master Challenge (USA) [English Restoration].mra
+out/mister/games/hbmame/ssf2tgmc.zip</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
 stock set in your MAME rompath (it keeps the name <code>ssf2xj.zip</code>), or burn its ROM
 files. MAME reports checksum warnings for the patched ROMs. That's expected, and the game runs
@@ -84,6 +85,9 @@ warnings. The <a href="https://github.com/Robbbert/hbmame">HBMAME</a> set defini
 Jotego's <code>jtcps2</code> core, which update_all installs. The MRA applies the restoration in memory
 as the game loads, so nothing on your card is modified, and it keeps its own settings and saves under <code>ssf2tgmc</code>.
 The MiSTer-only download holds the same MRAs, ready to copy.</p>
+<p><code>out/mister/</code> also holds the HBMAME set in <code>games/hbmame/</code>.
+The MRA above doesn't need it, but the <a href="../cps-plus/">CPS+</a> Arrange and HD Remix MRAs load it,
+so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</code> to your card as well.</p>
 <p><strong>Any IPS patcher.</strong> Apply each file in <code>ips/</code>
 (Flips, Lunar IPS, …) to the ROM file of the same name and re-zip the set yourself.</p>
 <h3>Changed ROMs</h3>

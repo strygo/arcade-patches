@@ -52,9 +52,9 @@
 <h2>Downloads</h2>
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/ssf2-ex-rc1-ips.zip?v=5bbb65af33">ssf2-ex-rc1-ips.zip</a>
+  <div class="file"><a href="../downloads/ssf2-ex-rc1-ips.zip?v=6bed5f0e98">ssf2-ex-rc1-ips.zip</a>
   (684 KB)</div>
-  <div class="hash">SHA-256: 5bbb65af33a05c987acf2dbd8602675316675e631582b0064b9adc54ec4e7fd3</div>
+  <div class="hash">SHA-256: 6bed5f0e98d7e48aa60eb0513c14ae1982262d12840ca713c12dbe1f2a77b890</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
@@ -80,10 +80,12 @@ checks the result, and writes the files for every platform in one go: (add <code
   out/mame/usa/ssf2xj.zip
   out/hbmame/ssf2tuc.zip
   out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/Super Street Fighter II EX The Ultimate Championship (USA).mra
+  out/mister/games/hbmame/ssf2tuc.zip
 Japan (Japanese):
   out/mame/japan/ssf2xj.zip
   out/hbmame/ssf2xuc.zip
-  out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Super Street Fighter II EX The Ultimate Championship (Japan).mra</code></pre>
+  out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Super Street Fighter II EX The Ultimate Championship (Japan).mra
+  out/mister/games/hbmame/ssf2xuc.zip</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
 stock set in your MAME rompath (it keeps the name <code>ssf2xj.zip</code>, so use one build at a time), or burn its ROM
 files. MAME reports checksum warnings for the patched ROMs. That's expected, and the game runs
@@ -97,6 +99,9 @@ warnings. The <a href="https://github.com/Robbbert/hbmame">HBMAME</a> set defini
 Jotego's <code>jtcps2</code> core, which update_all installs. The MRA applies the edition in memory
 as the game loads, so nothing on your card is modified, and each build keeps its own settings and saves under its own setname.
 The MiSTer-only download holds the same MRAs, ready to copy.</p>
+<p><code>out/mister/</code> also holds the HBMAME set in <code>games/hbmame/</code>.
+The MRA above doesn't need it, but the <a href="../cps-plus/">CPS+</a> Arrange and HD Remix MRAs load it,
+so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</code> to your card as well.</p>
 <p><strong>Any IPS patcher.</strong> Apply each file in <code>ips/&lt;variant&gt;/</code>
 (Flips, Lunar IPS, …) to the ROM file of the same name and re-zip the set yourself.</p>
 <h3>Changed ROMs</h3>

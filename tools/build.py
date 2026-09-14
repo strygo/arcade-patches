@@ -298,6 +298,8 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
             lines.append(f"{pad}HBMAME:                   out/hbmame/{hb}.zip")
         if mra:
             lines.append(f"{pad}MiSTer:                   out/{mra}")
+        if hb and patch.get("mister_hbmame"):
+            lines.append(f"{pad}                          out/mister/games/hbmame/{hb}.zip")
     if mame_build:
         lines += [
             "",
@@ -332,6 +334,13 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
             "game loads, so nothing on the card is modified. You need Jotego's jtcps2",
             "core, which update_all installs. The MRAs are also a separate download.",
         ]
+        if patch.get("mister_hbmame"):
+            lines += [
+                "",
+                "out/mister/ also holds the HBMAME set in games/hbmame/. This MRA doesn't use",
+                "it, but the CPS+ Arrange and HD Remix MRAs load it: if you use CPS+, copy",
+                "the games folder from out/mister/ to the card as well.",
+            ]
     ips_dir = "ips/<build>/" if variants else "ips/"
     if mame_build:
         # Re-zipping the patched files IS a MAME build, so a patch without
@@ -674,6 +683,8 @@ def build_rom_downloads(patch: dict) -> dict | None:
         }
         if patch.get("mame_build") is False:
             manifest["mame_build"] = False
+        if patch.get("mister_hbmame"):
+            manifest["mister_hbmame"] = True
         if specs:
             manifest["variants"] = [
                 {k: e[k] for k in ("key", "label", "members") if k in e}
@@ -1048,6 +1059,8 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>""")
             listing.append(f"{pad}out/hbmame/{hb}.zip")
         if mra:
             listing.append(f"{pad}out/{mra}")
+        if hb and patch.get("mister_hbmame"):
+            listing.append(f"{pad}out/mister/games/hbmame/{hb}.zip")
     one = f" (add <code>--variant {esc(variants[0]['key'])}</code> to make just one build)" if variants else ""
     parts.append(f"""<h2>How to apply</h2>
 <pre><code>unzip {esc(ips['zipname'])} -d {setname}-patch
@@ -1088,6 +1101,10 @@ warnings. {status}</p>""")
 Jotego's <code>jtcps2</code> core, which update_all installs. The MRA applies the {noun} in memory
 as the game loads, so nothing on your card is modified, and {"each build keeps its own settings and saves under its own setname" if variants else f"it keeps its own settings and saves under <code>{esc(patch['mra']['setname'])}</code>"}.
 The MiSTer-only download holds the same MRAs, ready to copy.</p>""")
+        if patch.get("mister_hbmame"):
+            parts.append("""<p><code>out/mister/</code> also holds the HBMAME set in <code>games/hbmame/</code>.
+The MRA above doesn't need it, but the <a href="../cps-plus/">CPS+</a> Arrange and HD Remix MRAs load it,
+so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</code> to your card as well.</p>""")
 
     ips_dir = "ips/&lt;variant&gt;/" if variants else "ips/"
     if mame_build:

@@ -245,6 +245,14 @@ def write_out_dir(target, out_dir, only_variant):
             os.makedirs(os.path.dirname(hb), exist_ok=True)
             print(f"HBMAME ({os.path.relpath(hb, out_dir)}):")
             patch_zip_hbmame(manifest, patches, target, hb)
+            if base.get("mister_hbmame"):
+                # The CPS+ MRAs for this game load the HBMAME set from the card,
+                # so the SD-card tree carries a copy next to the MRA.
+                card = os.path.join(out_dir, "mister", "games", "hbmame", os.path.basename(hb))
+                os.makedirs(os.path.dirname(card), exist_ok=True)
+                with open(hb, "rb") as fin, open(card, "wb") as fout:
+                    fout.write(fin.read())
+                print(f"MiSTer: wrote {os.path.relpath(card, out_dir)} (for the CPS+ MRAs)")
         if manifest.get("mra"):
             src = os.path.join(HERE, *manifest["mra"].split("/"))
             dst = os.path.join(out_dir, *manifest["mra"].split("/"))
