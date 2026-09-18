@@ -74,6 +74,13 @@ are **only bumped on explicit instruction**. Re-running the build regenerates
 the current version in place from the latest work-repo outputs — this is the
 normal workflow while a release candidate is being finalized.
 
+Superseded kits stay in `docs/downloads`. When a version is bumped, the new zip
+is added alongside the old one and the old one is **not** deleted: romhacking.net
+entries, forum posts and bookmarks link the exact filename of the version they
+were written against, so removing it breaks every one of those links. The pages
+only ever link the current version, so an old zip is invisible on the site and
+costs nothing but disk.
+
 ## Adding a patch
 
 Add an entry to `data/patches.json` (copy an existing one), point

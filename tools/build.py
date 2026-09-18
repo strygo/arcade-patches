@@ -104,6 +104,13 @@ def human_size(n: int) -> str:
 
 
 # ------------------------------------------------------------- downloads
+#
+# Superseded kits STAY in docs/downloads.  Nothing here prunes them, and a
+# release must not delete them by hand: romhacking.net entries, forum posts
+# and bookmarks link the exact filename of the version they were written
+# against, and removing it turns every one of those links into a 404.  The
+# pages only ever link the current version, so an old zip costs nothing but
+# the disk it sits on.
 
 
 def make_readme(patch: dict, members: list, fmt: str,
