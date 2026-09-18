@@ -859,6 +859,88 @@ def badges(patch: dict) -> str:
     return f'<div class="badges">{"".join(out)}</div>'
 
 
+def changelog_days(patches: list, projects: list = ()) -> list:
+    """Every release of every entry, newest day first.
+
+    One event per release_history record; an entry without a history still
+    gets the one event its own date and version describe, so a first release
+    is not missing from the changelog.  The oldest event for an entry is what
+    added it to the site, the rest are updates.
+    """
+    events = []
+    for entry in list(projects) + list(patches):
+        hist = entry.get("release_history") or []
+        if hist:
+            for rel in hist:
+                events.append({"slug": entry["slug"], "title": entry["title"],
+                               "date": rel["date"], "version": rel["version"],
+                               "items": list(rel["items"]),
+                               "has_history": True})
+        elif entry.get("date") and entry.get("version"):
+            events.append({"slug": entry["slug"], "title": entry["title"],
+                           "date": entry["date"], "version": entry["version"],
+                           "items": [], "has_history": False})
+    first = {}
+    for ev in sorted(events, key=lambda e: (e["date"], e["slug"])):
+        first.setdefault(ev["slug"], ev["date"])
+    for ev in events:
+        ev["kind"] = "added" if first[ev["slug"]] == ev["date"] else "updated"
+    days = {}
+    for ev in events:
+        days.setdefault(ev["date"], []).append(ev)
+    return [{"date": d, "events": sorted(days[d], key=lambda e: e["title"])}
+            for d in sorted(days, reverse=True)]
+
+
+def changelog_link(ev: dict, depth: int = 0) -> str:
+    """A release links to the entry's own release history where it has one."""
+    rel = "../" * depth
+    frag = "#history" if ev["has_history"] else ""
+    return f'{rel}{esc(ev["slug"])}/{frag}'
+
+
+def render_changelog_entry(ev: dict, depth: int = 0, with_items: bool = False) -> str:
+    label = "New" if ev["kind"] == "added" else esc(ev["version"])
+    items = ""
+    if with_items and ev["items"]:
+        items = "<ul>" + "".join(f"<li>{esc(i)}</li>" for i in ev["items"]) + "</ul>"
+    return (f'<li><a href="{changelog_link(ev, depth)}">{esc(ev["title"])}</a>'
+            f' <span class="badge plain">{label}</span>{items}</li>')
+
+
+def render_changelog_section(site: dict, days: list) -> str:
+    """The home page's abridged changelog: the most recent days only."""
+    limit = site.get("changelog_recent", 8)
+    if not days:
+        return ""
+    out = ['<section class="changelog" id="changes">',
+           '<h2 class="kind">Recent changes</h2>']
+    left = limit
+    for day in days:
+        if left <= 0:
+            break
+        evs = day["events"][:left]
+        left -= len(evs)
+        out.append(f'<h3>{esc(day["date"])}</h3><ul class="changes">')
+        out.extend(render_changelog_entry(ev) for ev in evs)
+        out.append("</ul>")
+    out.append('<p class="more"><a href="changelog/">Full changelog</a></p>')
+    out.append("</section>")
+    return "\n".join(out)
+
+
+def render_changelog_page(site: dict, days: list) -> str:
+    out = ["<h1>Changelog</h1>",
+           "<p>Every release, newest first. Each entry links to that patch's own "
+           "release history.</p>"]
+    for day in days:
+        out.append(f'<h2>{esc(day["date"])}</h2><ul class="changes">')
+        out.extend(render_changelog_entry(ev, depth=1, with_items=True)
+                   for ev in day["events"])
+        out.append("</ul>")
+    return page(site, f"Changelog · {site['title']}", "\n".join(out), depth=1)
+
+
 def render_index(site: dict, patches: list, thumbs: dict,
                  projects: list = (), project_thumbs: dict = {}) -> str:
     """The home page: the intro, then one section per kind of project (site
@@ -917,7 +999,8 @@ def render_index(site: dict, patches: list, thumbs: dict,
 <p class="kind-intro">{esc(sec['description'])}</p>
 {''.join(cards)}
 </section>""")
-    body = f"{intro}\n" + "\n".join(sections)
+    changes = render_changelog_section(site, changelog_days(patches, projects))
+    body = f"{intro}\n" + "\n".join(sections) + f"\n{changes}"
     return page(site, site["title"], body)
 
 
@@ -1387,7 +1470,7 @@ def render_release_history(patch: dict) -> str:
     hist = patch.get("release_history")
     if not hist:
         return ""
-    parts = ["<h2>Release history</h2>"]
+    parts = ['<h2 id="history">Release history</h2>']
     for rel in hist:
         parts.append(
             f'<h3>{esc(rel["version"])} ({esc(rel["date"])})</h3><ul>'
@@ -1737,6 +1820,10 @@ def main() -> None:
     (DOCS / "index.html").write_text(
         render_index(site, patches, thumbs, projects, project_thumbs))
     (DOCS / "legal.html").write_text(render_legal(site))
+    days = changelog_days(patches, projects)
+    (DOCS / "changelog").mkdir(parents=True, exist_ok=True)
+    (DOCS / "changelog" / "index.html").write_text(render_changelog_page(site, days))
+    print(f"changelog: {sum(len(d['events']) for d in days)} releases over {len(days)} days")
     print(f"\nSite built into {DOCS}")
 
 

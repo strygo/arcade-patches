@@ -356,3 +356,18 @@ details.faq p {
   margin: 6px 0 12px; padding-left: 18px;
   color: var(--text-dim); font-size: 0.92rem;
 }
+
+/* Recent changes: the abridged changelog above the sections, and the full
+   changelog page.  One list per day, each release linking to that entry's
+   own release history. */
+section.changelog { margin: 2rem 0 2.5rem; }
+section.changelog h3,
+main > h2 + ul.changes { margin-top: 1.1rem; }
+section.changelog h3 { font-size: 0.95rem; color: var(--text-dim); font-weight: 600; margin-bottom: 0.35rem; }
+ul.changes { list-style: none; margin: 0 0 0.9rem; padding: 0; }
+ul.changes > li { padding: 0.25rem 0; border-bottom: 1px solid var(--border); }
+ul.changes > li:last-child { border-bottom: 0; }
+ul.changes > li > a { font-weight: 600; }
+ul.changes ul { margin: 0.35rem 0 0.5rem 1.1rem; color: var(--text-dim); }
+ul.changes ul li { padding: 0.1rem 0; }
+section.changelog .more { margin: 0.4rem 0 0; }

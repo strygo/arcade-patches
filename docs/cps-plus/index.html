@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CPS+ · Arcade Patches</title>
-<link rel="stylesheet" href="../style.css?v=037f8dbbc1">
+<link rel="stylesheet" href="../style.css?v=0896b5e12b">
 </head>
 <body>
 <header class="site">
@@ -165,7 +165,7 @@
 <details class="faq"><summary>Do the packs work in MAME or on a real arcade board?</summary><p>No. CPS+ is a MiSTer feature: the streaming player lives in the FPGA cores and the pack loads into the MiSTer&#x27;s DDR memory. Everywhere else the games just play their stock music.</p><p>The companion projects do cover other targets: SFA2 Gold, Final Fight EX, Grand Master Challenge and Super Street Fighter II EX all ship HBMAME sets. See their pages, linked below.</p></details>
 <details class="faq"><summary>I built the 1.2 packs. Do I need to rebuild them for 1.3?</summary><p>No. Every pack you built with 1.2 still works with 1.3. Three packs (the two Double Impact remixes and HD Remix) have new reference hashes, because they now build to the same bytes on every computer, but the difference is inaudible and the files are the same size. Copy the new MRAs to your card.</p><p>If you use the Gold, Final Fight EX or Grand Master Challenge MRAs, rebuild those sets with their projects&#x27; latest kits: the MRAs now expect the new sets.</p></details>
 <details class="faq"><summary>I built the 1.1 packs. Do I need to rebuild them for 1.2?</summary><p>Six packs changed. The three Final Fight soundtrack packs (SNES, X68000 FM and X68000 MIDI) now start their opening where the arcade&#x27;s own song starts, in both regions, and leave the phone ring to the board. The three Super Street Fighter II packs (Arrange, Turbo Arrange and X68000 MIDI) now let the QSound logo jingle play from the arcade board. Ten SSF2-family MRAs also changed, carrying each region&#x27;s factory EEPROM defaults.</p><p>Drop the 1.2 kit over your old one, add the new sources to discs.toml, and run make_packs.py again. Every pack it builds is checked against the published hashes, so the six changed ones come out corrected and the rest come out identical, and out/mister/ picks up the new MRAs. The other 17 packs and the three cores are unchanged, hash for hash.</p></details>
-<h2>Release history</h2>
+<h2 id="history">Release history</h2>
 <h3>1.3 (2026-09-17)</h3><ul>
 <li>Super Street Fighter II Turbo: Grand Master Challenge, with the Anniversary Edition arrangement or the HD Remix soundtrack, loading the restoration&#x27;s HBMAME set.</li>
 <li>Super Street Fighter II EX: The Ultimate Championship, USA and Japan, with the same two soundtracks. The bonus stages keep the board&#x27;s own music.</li>
