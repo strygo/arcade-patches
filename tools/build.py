@@ -862,6 +862,17 @@ def badges(patch: dict) -> str:
     return f'<div class="badges">{"".join(out)}</div>'
 
 
+def what_it_is(entry: dict) -> str:
+    """One line saying what an entry is, for its first appearance in the
+    changelog: the opening sentence of its summary, else its subtitle."""
+    summary = (entry.get("summary") or "").strip()
+    if summary:
+        first = summary.split(". ")[0].rstrip(".")
+        if len(first) <= 180:
+            return first + "."
+    return (entry.get("subtitle") or "").strip()
+
+
 def changelog_days(patches: list, projects: list = ()) -> list:
     """Every release of every entry, newest day first.
 
@@ -877,12 +888,13 @@ def changelog_days(patches: list, projects: list = ()) -> list:
             for rel in hist:
                 events.append({"slug": entry["slug"], "title": entry["title"],
                                "date": rel["date"], "version": rel["version"],
-                               "items": list(rel["items"]),
+                               "items": list(rel["items"]), "what": what_it_is(entry),
                                "has_history": True})
         elif entry.get("date") and entry.get("version"):
             events.append({"slug": entry["slug"], "title": entry["title"],
                            "date": entry["date"], "version": entry["version"],
-                           "items": [], "has_history": False})
+                           "items": [], "what": what_it_is(entry),
+                           "has_history": False})
     first = {}
     for ev in sorted(events, key=lambda e: (e["date"], e["slug"])):
         first.setdefault(ev["slug"], ev["date"])
@@ -905,8 +917,11 @@ def changelog_link(ev: dict, depth: int = 0) -> str:
 def render_changelog_entry(ev: dict, depth: int = 0, with_items: bool = False) -> str:
     label = "New" if ev["kind"] == "added" else esc(ev["version"])
     items = ""
-    if with_items and ev["items"]:
-        items = "<ul>" + "".join(f"<li>{esc(i)}</li>" for i in ev["items"]) + "</ul>"
+    if with_items:
+        lines = ev["items"] if ev["kind"] == "updated" else (
+            [ev["what"]] if ev.get("what") else [])
+        if lines:
+            items = "<ul>" + "".join(f"<li>{esc(i)}</li>" for i in lines) + "</ul>"
     return (f'<li><a href="{changelog_link(ev, depth)}">{esc(ev["title"])}</a>'
             f' <span class="badge plain">{label}</span>{items}</li>')
 
@@ -931,7 +946,7 @@ def render_changelog_section(site: dict, days: list) -> str:
     if not days:
         return ""
     out = ['<section class="changelog" id="changes">',
-           '<h2 class="kind">Recent changes</h2>']
+           '<h2 class="kind">Recent Changes</h2>']
     left = limit
     for day in days:
         if left <= 0:
@@ -947,7 +962,8 @@ def render_changelog_section(site: dict, days: list) -> str:
 
 
 def render_changelog_page(site: dict, days: list) -> str:
-    out = ["<h1>Changelog</h1>",
+    out = ['<a class="back" href="../">&larr; All patches</a>',
+           "<h1>Changelog</h1>",
            "<p>Every release, newest first. Each entry links to that patch's own "
            "release history.</p>"]
     for day in days:
