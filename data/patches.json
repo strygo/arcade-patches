@@ -1533,7 +1533,7 @@
         "EX puts it together on the arcade game. Shin and Ten Akuma are playable from the start, picked from Ryu. The car, the falling barrels and the oil drums are back between fights. Link cabinets with the adapter and it runs Tournament Battle; without it, it plays as normal. Every fighter gets two more colors, the move names are the modern ones, and the new title reads The Ultimate Championship.",
         "Nothing about the existing fighters changes: this is Japan's Super Turbo underneath. The USA build carries all of Grand Master Challenge's English text; the Japan build keeps the Japanese.",
         "EX keeps the board's own ROM layout: the same files as the Japanese set, so it runs in MAME, HBMAME and on MiSTer, and on a real CPS-2 board.",
-        "This is a release candidate. It passes its checks in MAME and HBMAME; MiSTer and a real link cable are still to be tested."
+        "This is a release candidate."
       ],
       "changes": [
         "Shin Akuma and Ten Akuma, playable from the start: on Ryu, hold Start and press three kicks for Shin, or MP, HP, MK and HK together for Ten (hold Start and three punches still gives Akuma)",
