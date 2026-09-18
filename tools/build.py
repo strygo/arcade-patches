@@ -805,6 +805,9 @@ def page(site: dict, title: str, body: str, depth: int = 0) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
+<link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="{rel}favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="{rel}apple-touch-icon.png">
 <link rel="stylesheet" href="{rel}style.css">
 </head>
 <body>
@@ -908,6 +911,20 @@ def render_changelog_entry(ev: dict, depth: int = 0, with_items: bool = False) -
             f' <span class="badge plain">{label}</span>{items}</li>')
 
 
+def render_contact_section(site: dict) -> str:
+    """Where to send a correction.  The site has no issue tracker, so this is
+    the one place a reader is pointed at."""
+    url = site.get("author_url")
+    if not url:
+        return ""
+    handle = url.rstrip("/").rsplit("/", 1)[-1]
+    return f"""<section class="contact" id="contact">
+<h2 class="kind">Contact</h2>
+<p>Spotted something wrong, or got a patch working on real hardware?
+Say so to <a href="{esc(url)}">@{esc(handle)}</a> on X.</p>
+</section>"""
+
+
 def render_changelog_section(site: dict, days: list) -> str:
     """The home page's abridged changelog: the most recent days only."""
     limit = site.get("changelog_recent", 8)
@@ -1000,7 +1017,8 @@ def render_index(site: dict, patches: list, thumbs: dict,
 {''.join(cards)}
 </section>""")
     changes = render_changelog_section(site, changelog_days(patches, projects))
-    body = f"{intro}\n" + "\n".join(sections) + f"\n{changes}"
+    body = (f"{intro}\n" + "\n".join(sections)
+            + f"\n{changes}\n{render_contact_section(site)}")
     return page(site, site["title"], body)
 
 
@@ -1761,6 +1779,8 @@ def main() -> None:
     DOCS.mkdir(exist_ok=True)
     (DOCS / ".nojekyll").write_text("")
     shutil.copyfile(ROOT / "site" / "style.css", DOCS / "style.css")
+    for icon in ("favicon.svg", "favicon.ico", "apple-touch-icon.png"):
+        shutil.copyfile(ROOT / "site" / icon, DOCS / icon)
 
     patches = sorted(
         (p for p in patches if not p.get("hidden")),
