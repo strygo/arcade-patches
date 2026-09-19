@@ -17,6 +17,20 @@ SAMPLES = ("sza.11m", "sza.12m")
 Z80 = ("sza.01", "sza.02")
 
 
+def missing_inputs(arc: dict) -> list:
+    """Members this reconstruction reads that the romset does not have.
+
+    Checked before anything is assembled: a split set (one that leaves the
+    shared graphics and samples in its parent) otherwise died with a KeyError
+    deep in the graphics pool, which tells a user nothing about what to fetch.
+    """
+    need = list(GFX_PRIMARY) + list(GFX_SECONDARY) + list(SAMPLES) + list(Z80)
+    missing = [m for m in need if m not in arc]
+    if len([m for m, b in arc.items() if len(b) == PROG_SIZE]) < 6:
+        missing.append("the six 512 KB program ROMs")
+    return missing
+
+
 def prepare_inputs(arc: dict, extracted: dict) -> dict:
     """arc: {member: bytes} of the stock arcade romset.
     extracted: {'entry531': [tiles], 'comp2': bytes, 'audio': {sza.0x: bytes}}.

@@ -76,9 +76,24 @@ def zread(path):
 
 
 def write_set(members, want, out_path):
-    """Verify every member against the known-good build, then write the zip."""
-    if set(members) != set(want):
-        fail("reconstructed member set does not match the expected build")
+    """Verify every member against the known-good build, then write the zip.
+
+    The reconstruction starts from your romset, so a zip that carries more
+    than this build uses -- a merged set, a scanned .dat, a leftover file --
+    would otherwise stop the build on a file the set does not even contain.
+    Those are dropped; only a member this build needs and cannot find is an
+    error, and it says which.
+    """
+    missing = sorted(set(want) - set(members))
+    if missing:
+        fail("your romset is missing " + ", ".join(missing)
+             + " — is this the right set for this region?")
+    extra = sorted(set(members) - set(want))
+    if extra:
+        shown = ", ".join(extra[:4]) + (" …" if len(extra) > 4 else "")
+        print(f"  (ignoring {len(extra)} file(s) in your romset this build "
+              f"does not use: {shown})")
+    members = {m: members[m] for m in want}
     for m in want:
         if hashlib.md5(members[m]).hexdigest() != want[m]:
             fail(f"{m}: checksum mismatch — wrong disc or romset for this region")
@@ -110,13 +125,19 @@ def main():
     profile = PROFILES[args.region]
     print("Reading your arcade romset...")
     arc = zread(args.romset)
+    gaps = assemble.missing_inputs(arc)
+    if gaps:
+        fail("your romset is missing " + ", ".join(gaps)
+             + ".\n       A split set leaves those in its parent: use a "
+               "non-merged romset, the one that runs on its own.")
     print("Extracting Cammy data from your disc (this takes a minute)...")
     try:
         z6 = ex.extract_zero6(args.iso, profile)
         audio = ex.extract_audio(args.iso, profile)
     except Exception as exc:  # noqa: BLE001
         fail(f"could not extract from the disc — is this the {args.region.upper()} "
-             f"anthology ISO? ({exc})")
+             f"anthology ISO? ({exc})\n"
+             f"       looked for: {Path(args.iso).absolute()}")
     inp = assemble.prepare_inputs(arc, {
         "entry531": z6["entry531"], "comp2": z6["comp2"], "audio": audio,
     })
