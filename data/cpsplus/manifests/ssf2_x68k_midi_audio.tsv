@@ -1,11 +1,4 @@
-# SSF2 X68000 external-MIDI preprocessing and loop coordinates.
-# source_* values address the unmodified 48 kHz stereo SC-55 FLAC.  Each
-# render starts with a stable signed-s16 DC pedestal; the builder validates
-# dc_left/dc_right, subtracts it, then discards trim_samples from the start.
-# pack_ls/pack_le are (source coordinate - trim_samples - 48000), rounded
-# down to the 32-sample ADX grid.  This retains the MIDI-authored loop period
-# and one genuine second-pass tail for the CPS+ crossfade.  A dash in all four
-# loop fields designates an authored one-shot.  Evidence measured 2026-08-31.
+# ssf2_x68k_midi_audio: see REBUILDING.md
 song	source_frames	dc_left	dc_right	trim_samples	source_ls	source_le	pack_ls	pack_le
 song00	6734877	1298	1298	70560	3681390	6734877	3562816	6616288
 song01	5159460	1298	1298	163680	2838267	5159460	2626560	4947776

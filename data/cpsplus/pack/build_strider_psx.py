@@ -86,7 +86,7 @@ def stored_zip(path, files):
 
 
 def build(recipe_path=RECIPE, capture=None, outdir=PACKS_DIR):
-    recipe=json.loads(Path(recipe_path).read_text())
+    recipe=json.loads(Path(recipe_path).read_text(encoding="utf-8"))
     capture=Path(capture or CAPTURE)
     if not capture.exists():
         raise SystemExit(f'{capture}: no recording. Make it with tools/capture_strider_psx.py, or pass --capture')
@@ -125,7 +125,7 @@ def build(recipe_path=RECIPE, capture=None, outdir=PACKS_DIR):
                 review_status=recipe['review_status'],recipe_sha256=digest(recipe_path),
                 recording=source['mame'],
                 tracks=audit)
-    (outdir/'strider_psx.build.json').write_text(json.dumps(report,indent=2)+'\n')
+    (outdir/'strider_psx.build.json').write_text(json.dumps(report,indent=2)+'\n', encoding="utf-8", newline="\n")
     return report
 
 

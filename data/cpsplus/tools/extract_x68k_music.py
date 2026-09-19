@@ -411,7 +411,7 @@ def extract_game(
             "midi": {"status": "no-native-midi-bank"},
             "loops": {"status": "requires driver capture"},
         })
-        (game_dir / "catalog.json").write_text(json.dumps(common, indent=2) + "\n")
+        (game_dir / "catalog.json").write_text(json.dumps(common, indent=2) + "\n", encoding="utf-8", newline="\n")
         return common
 
     if not sps_tool.is_file():
@@ -465,7 +465,7 @@ def extract_game(
         },
         "loop_points": {"fm": fm_loop_rows, "midi": loop_rows},
     })
-    (game_dir / "catalog.json").write_text(json.dumps(common, indent=2) + "\n")
+    (game_dir / "catalog.json").write_text(json.dumps(common, indent=2) + "\n", encoding="utf-8", newline="\n")
     return common
 
 
@@ -582,7 +582,7 @@ def main(argv: list[str] | None = None) -> int:
         "games": catalogs,
     }
     catalog_path = args.output / "catalog.json"
-    catalog_path.write_text(json.dumps(summary, indent=2) + "\n")
+    catalog_path.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8", newline="\n")
     loop_path = args.output / "loop_points.tsv"
     _write_loop_table(catalogs, loop_path)
     print(

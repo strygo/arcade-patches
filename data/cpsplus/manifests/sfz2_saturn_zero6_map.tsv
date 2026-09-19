@@ -1,6 +1,4 @@
-# Saturn SFZ2/SFZ2-dash MUS song <-> Anthology zero6 Y_DATA ADX entry identity map (followup_a)
-# Rule: adx_entry = 169 + saturn_song_id (holds for ALL 60 songs). zero6_cmd = arcade sound command that starts this entry (comp2 type-1 table, US +0x17fa0); NOT equal to saturn_song_id (permuted).
-# saturn times: file sizes / 128000 B/s (s16be stereo 32000Hz blk4096). adx times: v4 header loop points / 48000.
+# sfz2_saturn_zero6_map: see REBUILDING.md
 saturn_song	source_disc	adx_entry	zero6_cmd	sat_intro_s	sat_loop_s	adx_intro_s	adx_loop_s	adx_loopflag	match_method	wave_ncc	confidence	notes
 01	sfz2	170	0x01	3.648	57.152	3.648	57.148	1	duration+audio	0.997	high	
 02	sfz2	171	0x02	3.328	61.120	3.332	61.114	1	duration	-	high	

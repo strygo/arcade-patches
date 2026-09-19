@@ -1,5 +1,4 @@
-# Pack listening approved 2026-09-05; hardware review pending. Audio recipe: ssf2t_hdremix_audio.json
-# cmd	verb	suppress	track	cue	evidence
+# ssf2t_hdremix_trigger_map: see REBUILDING.md
 0x01	play	1	9	09 Made in U.S.A. (Ken Stage)	listening_approved_hardware_pending
 0x02	play	1	6	06 Reinterpretation (Ryu Stage)	listening_approved_hardware_pending
 0x03	play	1	13	13 Dosu-Koi (E. Honda Stage)	listening_approved_hardware_pending
@@ -55,7 +54,6 @@
 0x35	play	1	5	05 Fisticuffs (VS)	listening_approved_hardware_pending
 0x36	play	1	46	46 Ready for the Next Sucka (Match End)	listening_approved_hardware_pending
 0x37	play	1	47	47 Just One More... (Continue)	listening_approved_hardware_pending
-0x38	play	1	48	48 New Blood (Here Comes a New Challenger)	listening_approved_hardware_pending
 0x39	play	1	65	65 See Ya! (Game Over)	listening_approved_hardware_pending
 0x3a	play	1	66	66 Grand Masters (Ranking Display)	listening_approved_hardware_pending
 0x3c	play	1	64	64 The World Warriors (Credits)	listening_approved_hardware_pending

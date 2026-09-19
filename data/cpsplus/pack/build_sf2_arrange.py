@@ -123,7 +123,7 @@ def _arrange_bank() -> dict[int, tuple[int, str, int]]:
     Reads hsf2_bgm_command_map.tsv (set=ARRANGE) — the same byte-exact source
     build_hsf2 --bank arrange consumes."""
     out: dict[int, tuple[int, str, int]] = {}
-    rows = HSF2_MAP.read_text().splitlines()
+    rows = HSF2_MAP.read_text(encoding="utf-8").splitlines()
     hdr = rows[0].split("\t")
     for line in rows[1:]:
         d = dict(zip(hdr, line.split("\t")))
@@ -217,14 +217,14 @@ def emit_map(path: Path) -> Path:
             f"0x{r['hsf2_cmd']:02x}", r["character"], r["confidence"],
             r["note"])))
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("\n".join(lines) + "\n")
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     return path
 
 
 def read_map(path: Path) -> list[dict]:
     """Parse the tracked trigger map (cmd, arrange_entry, hsf2_cmd, ...)."""
     rows = []
-    for line in path.read_text().splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         if not line.strip() or line.lstrip().startswith("#"):
             continue
         f = line.split("\t")

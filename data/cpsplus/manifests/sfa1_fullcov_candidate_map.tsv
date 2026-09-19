@@ -1,29 +1,4 @@
-# SFA1 FULL-COVERAGE map -- arcade command -> Saturn SFA1 CD-DA arranged
-# track, for the non-stage cues. STATUS: EAR-CONFIRMED rev 4 
-# -- all pairs ear-approved; the credit rolls are SWAPPED vs the naive
-# alignment (arcade Credit Roll 1 = Saturn Staff Roll B track tr50).
-#
-# SOURCES.  Audio: the 1996 Saturn port's arranged CD-DA (the listening gate
-# rejected the Anthology in-game bank; the Anthology ARRANGE bank the
-# shipped stages use is the SAME RECORDING as the Saturn arranged stages,
-# r=+0.999 -- one master family).  Command grounding: every row matched by
-# rate-corrected waveform NCC against the reference CPS2 gamerip (which is
-# 48 kHz audio mislabelled 44.1 kHz -- stretch factor 48000/44100=1.0885;
-# uncorrected it matches NOTHING, measured r 0.06 on known-identical Ryu).
-# Board renders via service-mode injection (MAME sfa; attract-mode
-# injection is swamped by the 68K's own latch writes).  The board's own
-# SOUND & VOICE test confirms code == raw latch command.
-#
-# STRUCTURE.  Endings are TWELVE consecutive commands 0x15-0x20 in CPS2
-# character order, then CREDIT ROLL 1 at 0x21; Dan (the add-on character)
-# has his ending OUTSIDE the block at 0x33, mirroring his stage at 0x32.
-# 0x25 is a DUPLICATE command for Sodom's ending (audio == 0x19, r=0.989).
-# Credit Roll 1/2 (arcade) == Staff Roll A/B (Saturn) ear-adjudicated.
-# Saturn disc layout: tr02-09 utilities, tr10-22 "(arcade)" stage renders
-# (render-excluded), tr23-35 arranged stages (shipped audio), tr36-48
-# arranged endings (arrange char order), tr49/50 staff rolls.
-#
-# cmd	saturn_track	role	character	evidence	status
+# sfa1_fullcov_candidate_map: see REBUILDING.md
 0x0d	tr02	opening_demo	-	album_ncc_0.81	ear_confirmed
 0x0e	tr03	select	-	album_ncc_0.67	ear_confirmed
 0x0f	tr04	vs_screen	-	album_ncc_0.46	ear_confirmed

@@ -128,7 +128,7 @@ XFADE_SAMPLES = 7200
 # ------------------------------------------------------------- loop table ----
 def _load_loops(path: Path) -> dict[int, dict]:
     """entry(int e.g. 141) -> {char, ls, le, method, quality}."""
-    rows = path.read_text().splitlines()
+    rows = path.read_text(encoding="utf-8").splitlines()
     hdr = rows[0].split("\t")
     out: dict[int, dict] = {}
     for line in rows[1:]:
@@ -232,7 +232,7 @@ def _load_fullcov(path: Path):
     """(cmd, trNN, role, char) rows that carry a Saturn track and passed the
     ear gate; fail_open rows are deliberately absent from the pack."""
     rows = []
-    for line in path.read_text().splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line or line.startswith("#") or line.startswith("cmd"):
             continue
@@ -246,7 +246,7 @@ def _load_saturn_loops(path: Path):
     """char -> {tr, entry, ls, le, method} from the Saturn-coordinate
     manifest (derived from the ear-adjudicated 48k points; see its header)."""
     out = {}
-    for line in path.read_text().splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line or line.startswith("#") or line.startswith("char"):
             continue
@@ -266,7 +266,7 @@ def build(disc: str, out: str | None = None,
     # (see its header for the full derivation chain and its verification)
     map_tsv = Path(trigger_map) if trigger_map else TRIGGER_TSV
     stage_cmds: dict[int, int] = {}
-    for line in map_tsv.read_text().splitlines():
+    for line in map_tsv.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line or line.startswith("#") or line.startswith("cmd"):
             continue

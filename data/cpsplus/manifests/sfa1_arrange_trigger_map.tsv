@@ -1,21 +1,4 @@
-# sfa1_arrange trigger map -- arcade sound command -> Anthology arrange entry.
-#
-# Derived from Capcom's zero1 comp2 type-1 dispatch table and used
-# directly -- this map is the single source of truth, with no runtime
-# dependency on the comp2 blob:
-#   1. Capcom's zero1 comp2 type-1 dispatch table (+0xf0b0, US=JP), tracked
-#      as protocols.ZERO1_MUSIC_MAP: table_key 0x41..0x4d -> in-game stage
-#      entries e97..e109 (13 themes, CPS2 sound-test order).
-#   2. arcade cmd = table_key - 0x38 (Phase-0 join, 8/8 verified,
-#      manifests/protocol/sfau.json).
-#   3. service-mode sweep + listening rekey: comp2-keyed 0x09..0x14 -> real
-#      arcade stage cmds 0x01..0x0c, 13th theme (Dan) on 0x32; 0x0d..0x15
-#      stay unmapped UI cues (fail open).
-#   4. in-game entry -> SAME-CHARACTER arrange entry e141..e153 (character
-#      permutation from the Hyper sound-test FAQ; ear-confirmed 4 clips,
-#      chroma-consistent).  Loop points: manifests/sfa1_arrange_loops.tsv.
-#
-# cmd	ingame_entry	arrange_entry	character
+# sfa1_arrange_trigger_map: see REBUILDING.md
 0x01	97	141	ryu
 0x02	98	142	ken
 0x03	99	145	chunli

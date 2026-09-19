@@ -1,98 +1,30 @@
-# Muscle Bomber / Saturday Night Slam Masters (CPS1.5 `slammast`) ARRANGE
-# trigger map -- *** BUILT: work/packs/mbomber_arrange.cpk ***
-#   arcade QSound sound-command  ->  FM Towns "Muscle Bomber: The Body
-#   Explosion" (1994, Capcom) CD-DA arrange track.
-#
-# STATUS: arena-theme rows EAR-CONFIRMED; loop points proposed, not yet confirmed.
-#   * PACK-WORTHINESS: **CONFIRMED** by user ear verdict -- all 5 A/B pairs in
-#     the internal listening archive were judged to match AND to be arranged.
-#   * The arcade cmd->scene side is HARD-grounded: manifests/protocol/slammast.json
-#     plus internal campaign notes, every music label tied
-#     to a same-run MAME snapshot (venue cards and named health bars) and to the
-#     0xff00/0xff06 control bracketing.
-#   * The mapping law 0x0021+N <-> tr15+N is **VALIDATED AT 5 OF 9 POINTS** by
-#     ear (0x0021/0x0022/0x0023/0x0024/0x0027), including the 0x0022->tr16 row
-#     that had rested on the law rather than on its own statistics.  The
-#     remaining four rows follow by exhaustion: 9 long tracks tr15-tr23 map to
-#     9 commands 0x0021-0x0029, exactly.
-#   * LOOP POINTS: ear-confirmed, manifests/mbomber_arrange_loops.tsv.
-#   * BUILT: pack/build_mbomber.py -> work/packs/mbomber_arrange.cpk (94.8 MB,
-#     9 tracks, 9 play triggers) and mra/CPS+/Saturday Night Slam Masters
-#     (Arrange).mra on jtcps15_cpsplus.  The builder accepts ONLY rows whose
-#     confidence is `confirmed` or `by_exhaustion`, so the two `low` rows below
-#     are deliberately NOT in the pack.
-#
-# SOURCE QUALIFIES ON IDENTITY (this is settled, see PREP_NOTES.md):
-#   The FM Towns CD-DA is a genuine distinct ARRANGEMENT (Setsuo Yamamoto), not
-#   a render of the arcade QSound master.  Drift-immune windowed waveform test:
-#   same-master control r_med 0.90/0.67, different-theme control r_med 0.22/0.19,
-#   arcade-vs-FM-Towns probes r_med 0.25/0.23/0.22/0.18 -- at the negative floor.
-#   So this source does NOT hit the render exclusion that dropped SFA3, Pocket
-#   Fighter, Darkstalkers and Warriors of Fate.
-#
-# DIALECT NOTE (cps15_qsound): CPS1.5 uses the CPS2 QSound shared-RAM RECORD
-#   protocol relocated to latch page 0xf18000 -- NOT the CPS1 byte latch.  A
-#   record is a run of odd-offset byte writes (cmd_hi 0x01, cmd_lo 0x03, args
-#   0x05..0x19) terminated by the 0x1f handshake write; the Z80 acks 0xff at
-#   0xc00f.  Pack suppression must therefore be a per-COMMAND music filter on
-#   the assembled 16-bit command, applied at the handshake, not a byte filter.
-#   Swallow only the mapped BGM commands; pass the whole SFX/voice space
-#   (0x00a0-0x01e8 and the low SFX/voice commands 0x0010, 0x0030-0x0072) through
-#   untouched.  Keep the control family 0xff00 (stop) / 0xff06 (fade) as the
-#   MSU/CD stop and fade hooks -- 0xff06 fires ~60 frames before 0xff00 at every
-#   demo-match end, which is the natural fade window.
-#
-# LOOP AUTHORING (PROPOSED, AWAITING EAR): the CD-DA tracks are FADE MASTERS
-#   with NO embedded loop points, exactly like the SFA1 arrange source, and they
-#   contain no digitally exact internal repeats (they are live re-recordings),
-#   so loops had to be authored rather than recovered.  Loop points for all nine
-#   arena themes are now proposed in `manifests/mbomber_arrange_loops.tsv`, with
-#   full-context previews in `the internal listening archive`.  Loop lengths run
-#   40.2-72.2 s; 6 of 9 want the equal-power hardware crossfade (XFADE_N = 7200
-#   samples, ~163 ms), 3 take a hard cut.  Samples are 44100 Hz stereo frame
-#   indices into cd_full/trNN.wav.  The short cues (0x0039, 0x0058) are one-shot
-#   and need no loop.
-#
-# Columns follow manifests/ffight_arrange_trigger_map.tsv:
-#   cmd	cd_track	label	confidence	notes
-#
-# COVERAGE.  29 of the disc's 29 audio tracks are mapped, to 29 arcade cues.
-# Four arcade music cues stay UNMAPPED because the disc has no counterpart for
-# them: 0x35 (Game Select), 0x16 and 0x37 (Here Comes a New Challenger) and
-# 0x38 -- these exist in the FM Towns rip only as pieces that were never
-# pressed as CD-DA tracks.  Unmapped cues fail open and play the original.
-#
-# NAMES.  Every track name below comes from the FM Towns rip's own titles,
-# joined to this disc by duration and confirmed by direct waveform correlation
-# (r >= 0.89, wide margins) -- not by inference from the arcade side.
-
-# cols: cmd   track   label   confidence   evidence
-0x001b	tr30	Staff Roll	confirmed	EAR-CONFIRMED.
-0x0020	tr02	Title	confirmed	EAR-CONFIRMED. Named via the FM Towns rip's own track titles, joined to the disc by duration and by direct waveform correlation (r>=0.89).
-0x0021	tr15	Tokyo (stage 1)	confirmed	EAR-CONFIRMED (A/B pair 01). envelope NCC +0.562, lag +0.22s, tempo 0.990, z +6.56  Named from the FM Towns rip (waveform correlation r>=0.89).
-0x0022	tr16	Moscow (stage 2)	confirmed	EAR-CONFIRMED (A/B pair 02) despite weak statistics (NCC +0.266, lag +165s); this row validated the law itself  Named from the FM Towns rip (waveform correlation r>=0.89).
-0x0023	tr17	Hanover (stage 3)	confirmed	EAR-CONFIRMED (A/B pair 03). envelope NCC +0.467, lag +0.22s, tempo 0.980, z +7.75  Named from the FM Towns rip (waveform correlation r>=0.89).
-0x0024	tr18	London (stage 4)	confirmed	EAR-CONFIRMED (A/B pair 04). envelope NCC +0.409, lag +0.22s, tempo 0.990, z +6.79  Named from the FM Towns rip (waveform correlation r>=0.89).
-0x0025	tr19	New York (stage 5)	confirmed	EAR-CONFIRMED (listener: ab_gap pairs match). Arcade reference captured via the slammast service-mode SOUND TEST (TEST MENU > 2. SOUND & VOICE, REQ-No.), 60 s isolated SFX-free; objective z +9.48 (next best tr21 +0.179). Law now confirmed 9/9.  Named from the FM Towns rip (waveform correlation r>=0.89).
-0x0026	tr20	Calgary (stage 6)	confirmed	EAR-CONFIRMED (listener: ab_gap pairs match). Arcade reference captured via the slammast service-mode SOUND TEST (TEST MENU > 2. SOUND & VOICE, REQ-No.), 60 s isolated SFX-free; objective z +6.19 (next best tr18 +0.249). Law now confirmed 9/9.  Named from the FM Towns rip (waveform correlation r>=0.89).
-0x0027	tr21	Los Angeles (stage 7)	confirmed	EAR-CONFIRMED (A/B pair 05). NCC +0.198, lag +0.38s, tempo 1.000, z +4.04; the law's own N=6 prediction  Named from the FM Towns rip (waveform correlation r>=0.89).
-0x0028	tr22	Mexico (stage 8)	confirmed	EAR-CONFIRMED (listener: ab_gap pairs match). Arcade reference captured via the slammast service-mode SOUND TEST (TEST MENU > 2. SOUND & VOICE, REQ-No.), 60 s isolated SFX-free; objective z +14.48 (next best tr15 +0.196). Law now confirmed 9/9.  Named from the FM Towns rip (waveform correlation r>=0.89).
-0x0029	tr23	Sydney (stage 9)	confirmed	EAR-CONFIRMED (listener: ab_gap pairs match). Arcade reference captured via the slammast service-mode SOUND TEST (TEST MENU > 2. SOUND & VOICE, REQ-No.), 60 s isolated SFX-free; objective z +7.55 (next best tr17 +0.188). Law now confirmed 9/9.  Named from the FM Towns rip (waveform correlation r>=0.89).
-0x002a	tr05	Theme of Zalazof	confirmed	EAR-CONFIRMED. Vs.-screen stinger, one per fighter.
-0x002b	tr06	Theme of Colt	confirmed	EAR-CONFIRMED.
-0x002c	tr09	Theme of Stinger	confirmed	EAR-CONFIRMED.
-0x002d	tr08	Theme of Titan	confirmed	EAR-CONFIRMED.
-0x002e	tr07	Theme of Budo	confirmed	EAR-CONFIRMED (heard after being placed by exhaustion; it was the last command and last track left once the other nine were confirmed, and the 0x35->tr07 rejection freed exactly that slot).
-0x002f	tr10	Theme of Haggar	confirmed	EAR-CONFIRMED.
-0x0030	tr12	Theme of Gomes	confirmed	EAR-CONFIRMED.
-0x0031	tr11	Theme of Sheep	confirmed	EAR-CONFIRMED.
-0x0032	tr13	Theme of Kimala	confirmed	EAR-CONFIRMED.
-0x0033	tr14	Theme of Astro	confirmed	EAR-CONFIRMED on a second pass (the first listen was inconclusive; the pairing was also forced by exhaustion once the other nine were placed).
-0x0034	tr03	Player Select	confirmed	EAR-CONFIRMED.
-0x0036	tr04	Vs.	confirmed	EAR-CONFIRMED.
-0x0039	tr27	CWA OFFICIAL RATINGS screen theme	confirmed	EAR-CONFIRMED (listener: arcade and tr27 match). Built ONE-SHOT: tr27 ends in a 65.8 dB decay to silence and has no internal repeat (self-sim +0.32 vs 0.79-0.92 on the arena themes), and the arcade cue fires once per attract cycle then stops
-0x003a	tr25	Continue	confirmed	EAR-CONFIRMED. Game flow agrees: it starts as the continue countdown begins.
-0x003b	tr26	Game Over	confirmed	EAR-CONFIRMED. Game flow agrees: it fires only after the continue countdown expires, with Ranking following.
-0x003c	tr24	Victory or Defeat	confirmed	EAR-CONFIRMED. Game flow agrees: 0x3c fires the instant a match is decided.
-0x003e	tr28	Ending (1st Time)	confirmed	EAR-CONFIRMED.
-0x003f	tr29	Ending (2nd Time)	confirmed	EAR-CONFIRMED.
+# mbomber_arrange_trigger_map: see REBUILDING.md
+0x001b	tr30	Staff Roll	confirmed	
+0x0020	tr02	Title	confirmed	
+0x0021	tr15	Tokyo (stage 1)	confirmed	
+0x0022	tr16	Moscow (stage 2)	confirmed	
+0x0023	tr17	Hanover (stage 3)	confirmed	
+0x0024	tr18	London (stage 4)	confirmed	
+0x0025	tr19	New York (stage 5)	confirmed	
+0x0026	tr20	Calgary (stage 6)	confirmed	
+0x0027	tr21	Los Angeles (stage 7)	confirmed	
+0x0028	tr22	Mexico (stage 8)	confirmed	
+0x0029	tr23	Sydney (stage 9)	confirmed	
+0x002a	tr05	Theme of Zalazof	confirmed	
+0x002b	tr06	Theme of Colt	confirmed	
+0x002c	tr09	Theme of Stinger	confirmed	
+0x002d	tr08	Theme of Titan	confirmed	
+0x002e	tr07	Theme of Budo	confirmed	
+0x002f	tr10	Theme of Haggar	confirmed	
+0x0030	tr12	Theme of Gomes	confirmed	
+0x0031	tr11	Theme of Sheep	confirmed	
+0x0032	tr13	Theme of Kimala	confirmed	
+0x0033	tr14	Theme of Astro	confirmed	
+0x0034	tr03	Player Select	confirmed	
+0x0036	tr04	Vs.	confirmed	
+0x0039	tr27	CWA OFFICIAL RATINGS screen theme	confirmed	
+0x003a	tr25	Continue	confirmed	
+0x003b	tr26	Game Over	confirmed	
+0x003c	tr24	Victory or Defeat	confirmed	
+0x003e	tr28	Ending (1st Time)	confirmed	
+0x003f	tr29	Ending (2nd Time)	confirmed	

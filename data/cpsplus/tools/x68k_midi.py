@@ -806,7 +806,7 @@ def main(argv: list[str] | None = None) -> int:
         text = json.dumps(rows, indent=2) + "\n"
         if args.output:
             args.output.parent.mkdir(parents=True, exist_ok=True)
-            args.output.write_text(text)
+            args.output.write_text(text, encoding="utf-8", newline="\n")
         else:
             print(text, end="")
         return 0

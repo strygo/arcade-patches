@@ -126,7 +126,7 @@ def traced_protocol(path: Path = PROTOCOL_JSON) -> Protocol:
         raise FileNotFoundError(
             f"{path} missing — spf2t needs its Phase-0 latch trace; refusing "
             f"to fall back to protocols.generic_protocol()")
-    j = json.loads(path.read_text())
+    j = json.loads(path.read_text(encoding="utf-8"))
 
     if j.get("set") != "spf2t":
         raise AssertionError(f"{path.name}: descriptor is for {j.get('set')!r}")
@@ -236,7 +236,7 @@ def load_source_map(path: Path = SOURCE_MAP_TSV) -> list[MapRow]:
 
 def load_looptable(path: Path = LOOPTABLE_TSV) -> dict[int, dict]:
     """song -> {intro_bytes, loop_start_frame, loop_len_frames}."""
-    rows = path.read_text().splitlines()
+    rows = path.read_text(encoding="utf-8").splitlines()
     hdr = rows[0].split("\t")
     out = {}
     for line in rows[1:]:

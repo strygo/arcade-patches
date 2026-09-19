@@ -1,6 +1,4 @@
-# Strider PSX: reviewed Sound Remix tracks; one shared USA/Japan pack.
-# Native music fallback stops the arranged player, without suppressing native audio.
-# Credit and all effect/voice commands remain transparent. 0xf0/0xf1 stop via protocol.
+# strider_psx_trigger_map: see REBUILDING.md
 cmd	verb	suppress	track	cue
 0x00	play	1	psx_01	St. Petersburg 1 ~ Step into it!
 0x01	play	1	psx_01	St. Petersburg 2 ~ Heartless Cathedral (Mosque)

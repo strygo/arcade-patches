@@ -107,7 +107,7 @@ def bake_fade_in(pcm, n):
 
 def build(key, source_root, outdir):
     title,album,game=PACKS[key]
-    recipe=json.loads((MANIFESTS/f'{key}_audio.json').read_text())
+    recipe=json.loads((MANIFESTS/f'{key}_audio.json').read_text(encoding="utf-8"))
     if source_root is None:
         source_root=REPO_ROOT/'roms/soundtracks'/album
         if not source_root.is_dir():
@@ -162,8 +162,8 @@ def build(key, source_root, outdir):
     finally: rd.close()
     report=dict(pack=pack.name,sha256=sha256(pack),bytes=pack.stat().st_size,
                 review_status=recipe['review_status'],ffmpeg=adxcodec.ffmpeg_version(),
-                resample_table_sha256=resample.TABLE_SHA256[(44100,RATE)],tracks=audit)
-    (outdir/f'{name}.build.json').write_text(json.dumps(report,indent=2)+'\n')
+                resample_table_sha256=resample.table_sha256(44100,RATE),tracks=audit)
+    (outdir/f'{name}.build.json').write_text(json.dumps(report,indent=2)+'\n', encoding="utf-8", newline="\n")
     # Fixed archive metadata: zip bytes as well as CPK bytes reproduce.
     with zipfile.ZipFile(outdir/f'{name}.zip','w',compression=zipfile.ZIP_STORED) as z:
         zi=zipfile.ZipInfo(pack.name,date_time=(2026,9,4,0,0,0)); zi.external_attr=0o100644<<16
@@ -171,6 +171,7 @@ def build(key, source_root, outdir):
     return report
 
 def self_test():
+    resample.table_sha256(44100,RATE)   # the build report's lookup, in a second
     row=dict(trim_start=0,keep_samples=96000,loop_start=0,loop_end=48000,loop_count=0,xfade_samples=4800)
     validate(row,96000)
     for changes in [dict(loop_end=48001),dict(keep_samples=100000),dict(trim_start=-1),dict(xfade_samples=96000)]:

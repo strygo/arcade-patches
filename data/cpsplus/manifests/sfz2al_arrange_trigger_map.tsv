@@ -1,19 +1,4 @@
-# sfz2al ARRANGE trigger map -- arcade sound command -> Saturn MUS song.
-#
-# Capcom's own dispatch table: the Anthology zero6
-# comp2 type-1 rows at +0x17fa0 (US; regionally byte-identical), entry
-# rebased by adx_entry = 169 + saturn_song (the all-60-songs identity proven
-# in sfz2_saturn_zero6_map.tsv, which remains the evidence file and is
-# cross-checked against this map at build time).  Type-1 rows pointing at
-# ADX entry 0 (1 s of silence -- the PS2 "any other music-range command
-# stops the BGM" idiom) are the stop rows.  This map is used directly, with
-# no runtime dependency on the extraction/ blob.
-#
-# comp2_vol is Capcom's per-row volume byte, recorded for provenance only:
-# trigger gain is the measured EBU R128 loudness match (TRIG_GAIN in
-# build_saturn.py), which overrides it for sfa2/sfz2al.
-#
-# cmd	song	verb	comp2_vol
+# sfz2al_arrange_trigger_map: see REBUILDING.md
 0x01	01	play	0x60
 0x02	02	play	0x60
 0x03	05	play	0x60

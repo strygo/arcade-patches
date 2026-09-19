@@ -1,10 +1,4 @@
-# SNES SFZ2 (Y_DATA e440-459) loop points for the sfa2_snes pack.
-# 19/20 entries (e440-e458) carry Capcom-authored ADX HEADER loops
-# (loop_flag=1) -> used byte-exact, like build_zero1's in-game path.
-# e459 (Australia) has NO header loop -> best-effort whole-track loop.
-# *** EVERY loop point still needs HUMAN EAR VERIFICATION (unconfirmed). ***
-# loop_*_sample are the ADX-header values; the builder uses the header's
-# frame-aligned BYTE offsets as the authoritative wrap points.
+# sfa2_snes_loops: see REBUILDING.md
 entry	loop_start_sample	loop_end_sample	source	char	note
 440	87392	2818094	adx_header	Opening	Capcom ADX-header loop (game's own); ear-verify seam
 441	128	3097060	adx_header	Ryu	Capcom ADX-header loop (game's own); ear-verify seam

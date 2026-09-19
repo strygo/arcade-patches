@@ -1,6 +1,4 @@
-# All 25 music tracks listening-approved; hardware approval pending. Audio recipe: msword_di_audio.json
-# Native hexadecimal IDs verified by msword_music_census.json; no BCD conversion.
-# cmd	verb	suppress	track	cue	evidence
+# msword_di_trigger_map: see REBUILDING.md
 0x00	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Priestly Charge.mp3	Priestly Charge	listening_approved_hardware_pending
 0x01	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Release the Hounds.mp3	Release the Hounds	listening_approved_hardware_pending
 0x02	play	1	Magic Sword-Double Impact Remixed Soundtrack/ms_Play It Again Big Man.mp3	Play It Again Big Man	listening_approved_hardware_pending

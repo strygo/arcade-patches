@@ -117,7 +117,7 @@ def _run(command: list[str]) -> str:
 def _load_catalog(path: Path, schema: str) -> dict[str, object]:
     if not path.is_file():
         raise ExportError(f"capture catalog is missing: {path}")
-    catalog = json.loads(path.read_text())
+    catalog = json.loads(path.read_text(encoding="utf-8"))
     if catalog.get("schema") != schema:
         raise ExportError(f"unsupported capture catalog: {path}")
     return catalog
@@ -246,7 +246,7 @@ def _reuse_record(
 ) -> dict[str, object] | None:
     if not sidecar.is_file() or not output.is_file():
         return None
-    record = json.loads(sidecar.read_text())
+    record = json.loads(sidecar.read_text(encoding="utf-8"))
     if (
         record.get("schema") != "cpsplus-x68000-midi-flac-v1"
         or record.get("source_sha256") != source_hash
@@ -448,7 +448,7 @@ def _export_one(
                              if pcm is not None else None),
         "flac": flac,
     }
-    sidecar.write_text(json.dumps(record, indent=2) + "\n")
+    sidecar.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8", newline="\n")
     return record
 
 
@@ -553,7 +553,7 @@ def export(args: argparse.Namespace, repo: Path) -> Path:
         "counts_by_game": counts,
         "loop_tagged_files": looped,
         "files": records,
-    }, indent=2) + "\n")
+    }, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(
         f"exported {len(records)} FLACs ({looped} loop-tagged); "
         f"catalog: {output_catalog}"

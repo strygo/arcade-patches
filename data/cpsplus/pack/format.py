@@ -432,7 +432,7 @@ class PackWriter:
                 for i, (_, m) in enumerate(self.tracks)],
             "triggers": rows,
         }
-        Path(str(path) + ".json").write_text(json.dumps(side, indent=1))
+        Path(str(path) + ".json").write_text(json.dumps(side, indent=1), encoding="utf-8", newline="\n")
 
 
 # ------------------------------------------------------------------ reader ----
@@ -452,7 +452,7 @@ class PackReader:
                        for i in range(h.track_count)]
         self._raw_trig, self._raw_idx = trig, idx
         side = Path(str(self.path) + ".json")
-        self.sidecar = json.loads(side.read_text()) if side.exists() else None
+        self.sidecar = json.loads(side.read_text(encoding="utf-8")) if side.exists() else None
         if self.sidecar and len(self.sidecar.get("tracks", [])) != len(self.tracks):
             # a stale sidecar from an older build of the same pack name must
             # not poison reads -- names/sources are cosmetic, drop them

@@ -1,81 +1,8 @@
-# Final Fight 30th Anniversary CPS2 Edition (ffightae_cps2 / hbmame ffightaec2)
-# ARRANGE trigger map -> Final Fight CD (USA) CD-DA.  A RE-KEY of the settled
-# CPS1 map (ffight_arrange_trigger_map.tsv): the CD side (track roles, loop
-# authoring) is unchanged and already user ear-confirmed; only the arcade-side
-# keying moves to this hack's CPS2 QSound commands.
-#
-# THESE ROWS BUILD ffightae_cps2_arrange.cpk (pack/build_ffightae_cps2_arrange.py) --
-# DELIBERATELY ITS OWN PACK.  A shared CPS1+CPS2 ffight_arrange.cpk was
-# built, emulation-gated and committed (6be153cb), then reverted on review:
-# it re-opened the shipped CPS1 pack's hardware validation, exercised the
-# never-hardware-tested loader clamp on CPS1 cores, and exposed the CPS1
-# byte rows to this hack's own page-0 SFX bank (see the builder docstring).
-# Play rows carry the measured trigger gain 0x2d (EBU R128 vs the hack's own
-# QSound music, median +8.9 LU over 18 pairs); loop authoring is imported
-# from build_ffight_arrange so the two packs cannot drift.
-#
-# THE SET.  grego2d/rotwang's CPS2 conversion of Final Fight: 68K program
-# ported onto CPS2, sound rebuilt on the SFA3 (sz3) QSound driver 1.71 with a
-# modified sz3.01 (Z80 bank 0) + modified sz3.11m (sample ROM), stock sz3.02 +
-# sz3.12m.  MiSTer set ffightae_cps2.zip (Arcade_Offset MRA, jtcps2);
-# MAME oracle: hbmame `ffightaec2` (same CRCs, renamed parts + stock sz3.12m).
-# Phase-0 descriptor: manifests/protocol/ffightaec2.json (driver banner
-# "1.71 /CPS2 1998 /May.", record layout = sfa3ud: cmd 01/03, args 05/07/09,
-# handshake 1f, record-then-handshake).
-#
-# THE KEYING LAW (measured, 2026-09-01).  The hack pages its sounds by high
-# byte: 0x01xx = the CPS1 ffight cue space carried over LOW-BYTE-IDENTICAL
-# (music AND the dense SFX/voice space around it), 0x02xx/0x03xx = new/remapped
-# SFX pages.  Music rows below therefore key 0x0100 | <cps1 cmd>.  Evidence:
-#   * 0x0140 fires at coin-up stage 1 entry (slum street on screen, f2112) and
-#     at the attract slum demo -- CPS1 0x40 R1 Slum.
-#   * 0x0142 fires at the attract subway demo (train-interior snapshot f14250,
-#     3P demo) -- CPS1 0x42 R2 Subway.
-#   * 0x0155 fires on the SELECT PLAYER screen (snapshot f1150) -- CPS1 0x55.
-#   * 0x0150 fires between select and stage entry (f1757, 5.9 s before the
-#     stage theme -- the CPS1 area-map window exactly) -- CPS1 0x50.
-#   * 0x0152 fires at the attract story's song position; ring->song->answer
-#     order and spacing match CPS1 US to 0.1 s (see OPENING below).
-#   * full-page injection sweep (recorded injection sweep): the
-#     page is dense like CPS1's byte space; every mapped row renders long
-#     sustained music (recorded long renders).
-# Rows not behaviorally anchored ride this law pending the listening-kit
-# review (listening kit): 0x0141, 0x0143-0x0149, 0x014c, 0x0151,
-# 0x0153, 0x0154, 0x0157, 0x0158.  Flagged hardest for the ear: 0x0157 (its
-# injected render is sparse/ambient-like where CPS1 0x57 is a jingle).
-#
-# === OPENING SEQUENCE (differs from the CPS1 US pack -- JP-STYLE ENTRY) ===
-# Attract cycle 1 (latch trace, cold boot):  ring 0x03be 16.8 s -> SONG 0x0152
-# 23.0 s -> answer click 0x03c5 24.7 s -> Belger laugh 0x03e2 x3 46.1-47.5 s ->
-# Damnd laugh 0x0368 58.7 s -> TITLE 73.1-73.5 s (20-frame snapshot cadence),
-# gone by ~78.8 s.  This is the CPS1 US timeline shifted ~10.15 s earlier
-# (CPS2 boots faster); ring->title window 62.0 s vs CPS1's 61.9 s.
-# BUT attract cycle 2+ omit the phone prologue and enter DIRECTLY on 0x0152
-# (147.2 s, no ring/click) -- the ring fires ONCE PER BOOT.  A CPS1-US-style
-# entry on the ring would leave every later attract cycle with a silent story
-# block, so this pack enters on the SONG cue like the CPS1 JP pack does:
-#   0x0152 -> PLAY tr25, suppress=1   (the board's song, gated, entry point)
-#   0x03be ring / 0x03c5 click       -> no rows: native SEs pass through
-# Loop sizing: the JP authored wrap transfers VERBATIM -- one 2.879 s bar-wrap
-# (ls=1056928 le=1183904 count=1, US-disc sample coordinates, no loop_shift)
-# ends the master at 23.0+47.5+2.9 = 73.4 s, inside the measured title
-# appearance window 73.1-73.5 s.  Same landing the JP CPS1 pack authored
-# (music end 0.1-0.3 s after the title appears, ~5 s before it gives way).
-#
-# === CONTROLS (measured on this driver, ctrl_probe 2026-09-01) ===
-# 0xff00 stops the BGM and the driver still starts songs after it (STOP row in
-# protocols.py); 0xff05 does NOT stop music (fires at coin-in -- the alpha2
-# SFX-slot release; mapping it would cut the title music at coin-in, the
-# sfz2al lesson); 0xff07 argb=0x00 fades the BGM out, 0xff06 argb=0xff leaves
-# it at unity -- the CONTROL_ALPHA2_ARCADE fade-from-arg-byte semantics
-# (VERB_FADE_KEEP both).  Neither ff06 nor ff07 has been observed emitted by
-# this 68K yet (attract + coin + gameplay traces show ff00/ff05 only).
-#
-# cols: cmd  verb  suppress  cd_track  cue	evidence
-0x0152	play	1	tr25	Opening SONG - entry cue, every attract cycle	trace f1369 (23.0 s) at the story song position; cycle 2 re-entry f8779 (147.2 s) with no ring first; JP-style entry per the OPENING section
-0x0140	play	1	tr02	R1 Slum (also R3/R6 reuse on CD side)	coin-up trace f2112 + slum street snapshot f2600; attract slum demo f6736; CPS1 0x40
+# ffightae_cps2_arrange_trigger_map: see REBUILDING.md
+0x0152	play	1	tr25	Opening SONG - entry cue, every attract cycle	
+0x0140	play	1	tr02	R1 Slum (also R3/R6 reuse on CD side)	
 0x0141	play	1	tr03	R1 Slum 2 (Basement)	law + long render sustained; CPS1 0x41
-0x0142	play	1	tr04	R2 Subway	attract subway demo f14171 + train-interior snapshot f14250; CPS1 0x42
+0x0142	play	1	tr04	R2 Subway	
 0x0143	play	1	tr05	R2 Subway Park 2 (Sodom Fight)	law + long render sustained; CPS1 0x43
 0x0144	play	1	tr06	R3 West Side (Cage Match)	law + long render sustained; CPS1 0x44
 0x0145	play	1	tr07	R5 Bay Area 1	law + long render sustained; CPS1 0x45
@@ -84,16 +11,14 @@
 0x0148	play	1	tr10	R4 Industrial Area 1	law + long render sustained; CPS1 0x48
 0x0149	play	1	tr11	R4 Industrial Area 2 (Rolento Fight)	law + long render sustained; CPS1 0x49
 0x014c	play	1	tr12	Bonus Stage	law + long render sustained; CPS1 0x4c
-0x0150	play	1	tr13	Round Start (area-map screen)	coin-up trace f1757, post-select pre-stage, 5.9 s before the stage theme (the CPS1 area-map window); CPS1 0x50
+0x0150	play	1	tr13	Round Start (area-map screen)	
 0x0151	play	1	tr14	Game Over	law + long render; CPS1 0x51
 0x0153	play	1	tr18	Continue (countdown)	law + long render; CPS1 0x53
 0x0154	play	1	tr26	Ending (cutscene)	law + long render; CPS1 0x54; same authored 3-pass loop as the CPS1 pack
-0x0155	play	1	tr17	Character Select	coin-up trace f1120 + SELECT PLAYER snapshot f1150; also the attract select flash; CPS1 0x55
-0x0157	play	1	tr16	Round Clear	law; EAR-FLAGGED: injected render is sparse where CPS1 0x57 is a clean jingle -- close at the listening gate before shipping
+0x0155	play	1	tr17	Character Select	
+0x0157	play	1	tr16	Round Clear	
 0x0158	play	1	tr15	All Rounds Clear (area map)	law + long render (13.2 s vs tr15's 11 s); CPS1 0x58
-#
-# === DOCUMENTED FAIL-OPENS (no bytes written; the board plays its own SE) ===
-0x03be	none	0	-	Phone RINGING (SE page; fires ONCE per boot, attract cycle 1 only)	trace f1001 (16.8 s); NOT the entry cue -- see OPENING
-0x03c5	none	0	-	Phone ANSWERED click (SE page)	trace f1472 (24.7 s), cycle 1 only
-0x03e2	none	0	-	Belger laugh (TV scene SE, fires x3 in ~1.4 s)	trace f2747/f2795/f2835 + the CPS1 0x3c precedent: an SE must not be suppressed
-0x0368	none	0	-	Damnd laugh (story end + stage entries)	trace f3500 attract, f1888/f2008 x2 at stage 1 entry; CPS1 0x28 precedent -- keep fail-open
+0x03be	none	0	-	Phone RINGING (SE page; fires ONCE per boot, attract cycle 1 only)	
+0x03c5	none	0	-	Phone ANSWERED click (SE page)	
+0x03e2	none	0	-	Belger laugh (TV scene SE, fires x3 in ~1.4 s)	
+0x0368	none	0	-	Damnd laugh (story end + stage entries)	

@@ -1,147 +1,30 @@
-# Mega Twins / Chiki Chiki Boys (CPS1 `mtwins`) ARRANGE trigger map
-#   -> Chiki Chiki Boys (Japan), PC Engine CD-ROM2 CD-DA.
-#
-# STATUS: COMPLETE. Every row below is USER EAR-CONFIRMED. Nothing is guessed.
-# Arcade cues with no CD counterpart are listed explicitly and fail open to the
-# arcade original, which is the correct outcome for them.
-#
-# === DISTINCTNESS: SETTLED, INCLUDED ===
-# User verdict: "PCE is definitely arranged and deserves inclusion." The PCE CD-DA
-# is a genuine re-arrangement, NOT a recording of arcade audio -- 25 isolated
-# arcade renders x 24 CD tracks scored p50 0.012..0.044 against a known-render
-# band of 0.65-0.94 and a CTRL- floor of ~0.04. See internal research notes
-#
-# === LOOPING: NO CROSSFADE REQUIRED ===
-# Every recovered cue calls CD_PLAY ($E012) with play mode 1 = "Infinite repeat
-# play": the DRIVE repeats the whole track with no further command from the game.
-# No cue names an address inside a track, so there is NO authored inner loop point
-# anywhere in this game. Whole-track repeat, same as Sega CD MSCPLAYR on `ffight`.
-#
-# === HOW THE MAPPING WAS ESTABLISHED ===
-# Machine methods FAILED to settle this and must not be cited as support:
-#   * waveform NCC (xcorr_id.py) only proves "not the same recording" -- it cannot
-#     tell a re-performed cover from unrelated music, and every pair sat at the floor.
-#   * chroma (chroma_id.py) DOES NOT survive a change of sound hardware: on an
-#     ear-confirmed `ffight` CPS1-vs-SegaCD control it rated a KNOWN-IDENTICAL
-#     composition at +0.069, the noise floor, and mis-paired 3 of 4. See its header.
-#   * PCE-duration / arcade-loop-period ratio is NOT a usable filter. Confirmed
-#     pairs span 1.11x .. 7.49x; a 0.9-5.0 band excluded 2 correct pairs (cmd18->tr21
-#     at 7.49x, cmd1f->tr22 at 6.83x) and never once caught a wrong alignment.
-# The map is ORDINAL WITH SKIPS, and every skip was found BY EAR, not predicted.
-#
-# === ARCADE BGM ENUMERATION (corrected) ===
-# 27 BGM total. An initial sweep found 25 by requiring audio to still be sounding at
-# the end of a 45 s render -- a rule that structurally excludes anything that ENDS,
-# so it silently dropped both fanfares (cmd16, cmd1c). Commands 0x41-0xff were also
-# swept (191 cmds): all sound effects / OKI PCM, no BGM. cmd8c aliases cmd16 and
-# cmd92 aliases cmd1c (p50 0.985 / 0.973); cmd5d==cmdd3, cmd6b~=cmde1.
-# NOTE for strider/forgottn: the same "sustained to end" rule would drop THEIR
-# fanfares and stage-clear jingles too. Use the corrected classifier from the start.
-#
-# === CD SIDE ===
-# 26 CD tracks: tr02 and tr26 are MODE1/2352 data; tr01 is the spoken Japanese
-# "this is not a regular CD" CD-ROM2 warning. 23 music tracks, tr03..tr25.
-# tr03 is PCE-EXCLUSIVE -- no arcade counterpart exists. It is also the only cue
-# addressed by INDEX 01 (+2.000 s pregap skip) rather than a plain track boundary.
-# tr24 is played by NO recovered cue (it appears only as an END boundary in the
-# tr23 entry) yet is plainly arcade cmd15's arrangement -- so the statically
-# recovered cue table has at least one gap. Harmless here: this pack maps arcade
-# commands directly to CD audio and never consults the PCE cue table at runtime.
-#
-# === CODE ANALYSIS: WHY THE COUNTS DIFFER (27 arcade BGM vs 23 CD tracks) ===
-#
-# ARCADE DISPATCH (68K program image, che_30/35 + che_31/36 interleaved).
-# Music is a 128-byte RING QUEUE of {fade, command} pairs in work RAM at
-# a5+$8E3A, index at a5+$8E39, drained one entry per frame at prog 0x0005F0:
-#     LEA ($8E3A,A5),A0 / MOVE.B ($8E39,A5),D0 / CMPI.W #$FFFF,(0,A0,D0)
-#     MOVE.B (0,A0,D0),$800189   ; fade byte
-#     MOVE.B (1,A0,D0),$800181   ; command byte
-#     MOVE.W #$FFFF,(0,A0) / ADDQ.B #2,D0 / ANDI.B #$7F,D0
-# The fade byte is pushed SEPARATELY from the command byte, which is why the
-# CPS+ trigger format's independent fade/verb split matches this game natively.
-# Idle/stop is MOVE.W #$00FF,$800180 at prog 0x0005E6 -- confirms idle byte 0xff.
-#
-# PCE DISPATCH. Cue index lives at $D821; the selector at CPU $D9F5 does
-#     LDA $D821 / STZ $01 / (ASL A, ROL $01) x3 / ADC #$22 / ADC #$DE
-# i.e. entry = $DE22 + index*8, then JSR $D806. 27 STA $D821 sites exist.
-# Cues 2-14 and 17 are NEVER selected by an immediate -- only via TXA (stage
-# index), so they are the stage BGM. Cues 0,1,15,16,18,19,20,21 are selected by
-# explicit LDA #n at event sites; cue1 (tr03) has 4 sites / 2 distinct code
-# paths (the other 2 are overlay copies), so tr03 is genuinely played.
-#
-# *** tr24 IS ORPHANED CONTENT ON THE PCE DISC ***
-# The 22 cues reference tr03..tr23 and tr25. tr24 is referenced by NO cue -- it
-# occurs only as the END boundary of the tr23 entry. Yet tr24 is plainly a
-# finished arrangement of arcade cmd15 (ear-confirmed). Capcom arranged, mastered
-# and pressed it, then never wired it to a cue. THIS PACK PLAYS IT (row 0x15),
-# restoring a track the PC Engine release never plays.
-# Complementary case: tr03 is played by the PCE game but has no arcade cue, so it
-# has no row here and is not used by this pack.
-#
-# THE 5 DROPPED ARCADE CUES are 3 fanfares (0x13, 0x16, 0x1c) and 2 boss themes
-# (0x1b, 0x1e) -- short cues the port left on the PC Engine's internal sound chip
-# instead of spending CD-DA tracks on them ("some used the PC Engine's sound
-# chip"). They fail open to the arcade original, which is correct for them.
-#
-# cmd        arcade sound-command byte (68K latch 0x800180)
-# verb       play = VERB_PLAY(1); none = VERB_NONE(0)
-# suppress   1 = substitute idle byte so the Z80 never starts the native music
-# track      CD-DA track supplying the arrangement; "-" = none, fail open to arcade
-# label      what the cue is
-# evidence   how the row was established
+# mtwins_arrange_trigger_map: see REBUILDING.md
 cmd	verb	suppress	track	label	evidence
-0x01	play	1	tr04	BGM 01	ear-confirmed (pair00); anchor for the whole map
-0x02	play	1	tr07	BGM 02	ear-confirmed (pair01); establishes the cue1/tr03 skip
-0x03	play	1	tr08	BGM 03	ear-confirmed (pair02)
-0x04	play	1	tr09	BGM 04	ear-confirmed (pair03)
-0x05	play	1	tr06	BGM 05	ear-confirmed; 11.2s loop -> 58.6s track (5.2x)
-0x06	play	1	tr10	BGM 06	ear-confirmed (pair05); resync anchor after cmd05
-0x07	play	1	tr11	BGM 07	ear-confirmed (pair06)
-0x08	play	1	tr12	BGM 08	ear-confirmed (in the pair07-14 block)
-0x09	play	1	tr13	BGM 09	ear-confirmed (in the pair07-14 block)
-0x0a	play	1	tr14	BGM 10	ear-confirmed (in the pair07-14 block)
-0x0b	play	1	tr15	BGM 11	ear-confirmed (in the pair07-14 block)
-0x0c	play	1	tr16	BGM 12	ear-confirmed (in the pair07-14 block)
-0x0d	play	1	tr17	BGM 13	ear-confirmed (in the pair07-14 block)
-0x0e	play	1	tr05	BGM 14	ear-confirmed
-0x0f	play	1	tr18	BGM 15	ear-confirmed (pair14)
-0x10	play	1	tr19	BGM 16	ear-confirmed; tail-ordinal hypothesis, verified
-0x12	play	1	tr20	BGM 17	ear-confirmed; tail-ordinal hypothesis, verified
-0x14	play	1	tr23	BGM 18	ear-confirmed
-0x15	play	1	tr24	BGM 19	ear-confirmed; tr24 is played by no recovered PCE cue
-0x17	play	1	tr25	BGM 20	ear-confirmed; 1.11x ratio, below the band I had filtered on
-0x18	play	1	tr21	BGM 21	ear-confirmed; 41.5s loop -> 311s track (7.49x)
-0x1f	play	1	tr22	BGM 22	ear-confirmed; 46.2s loop -> 315s track (6.83x)
-# --- FANFARES -> FAIL OPEN to arcade FM (user decision, on measured evidence) ---
-# These are NOT mapped to tr03 (a tempting purpose-match).  Reasons:
-#   * MELODY: user ear-checked -- cmd16/cmd1c do not sound like tr03.
-#   * LOOP BEHAVIOUR (measured from deterministic arcade renders, 1s resolution):
-#       cmd16  ~8s then silence   -> ONE-SHOT fanfare
-#       cmd1c  ~11s then silence  -> ONE-SHOT fanfare
-#       cmd5e  ~15s then silence  -> ONE-SHOT fanfare
-#       cmd13  181s of 191s active -> CONTINUOUS looping BGM, NOT a fanfare at all
-#     tr03 is a single 69 s track; it cannot be both a one-shot (for 16/1c/5e) and
-#     a loop (for 13), and it matches none of them melodically. Forcing it created
-#     a wrong pairing in all four cases.
-# cmd16/cmd1c/cmd5e ARE one code-level cue: the arcade picks a stage-variant at
-# prog 0x1E5E6 / 0x1E630 (CMPI.B #$03/#$09,($8F64,A5)). cmd13 is separate.
-# All four now fail open (verb=none, suppress=0 -> unwritten -> arcade FM plays),
-# same mechanism as the secret cues below. tr03 is left PCE-only/unused.
+0x01	play	1	tr04	BGM 01	
+0x02	play	1	tr07	BGM 02	
+0x03	play	1	tr08	BGM 03	
+0x04	play	1	tr09	BGM 04	
+0x05	play	1	tr06	BGM 05	
+0x06	play	1	tr10	BGM 06	
+0x07	play	1	tr11	BGM 07	
+0x08	play	1	tr12	BGM 08	
+0x09	play	1	tr13	BGM 09	
+0x0a	play	1	tr14	BGM 10	
+0x0b	play	1	tr15	BGM 11	
+0x0c	play	1	tr16	BGM 12	
+0x0d	play	1	tr17	BGM 13	
+0x0e	play	1	tr05	BGM 14	
+0x0f	play	1	tr18	BGM 15	
+0x10	play	1	tr19	BGM 16	
+0x12	play	1	tr20	BGM 17	
+0x14	play	1	tr23	BGM 18	
+0x15	play	1	tr24	BGM 19	
+0x17	play	1	tr25	BGM 20	
+0x18	play	1	tr21	BGM 21	
+0x1f	play	1	tr22	BGM 22	
 0x13	none	0	-	looping BGM (was mis-grouped as fanfare) - FAIL OPEN	measured continuous 181/191s; no CD match
 0x16	none	0	-	one-shot fanfare (default variant) - FAIL OPEN	measured ~8s one-shot; melody != tr03; code prog 0x1E5F2
 0x1c	none	0	-	one-shot fanfare (stage 3 variant) - FAIL OPEN	measured ~11s one-shot; code prog 0x1E5E6 when ($8F64,A5)==3
 0x5e	none	0	-	one-shot fanfare (stage 9 variant) - FAIL OPEN	measured ~15s one-shot; code prog 0x1E63C when ($8F64,A5)==9
-# --- arcade SECRET cues with NO CD arrangement: fail open, play the arcade original ---
-# RESOLVED. These are not stage/boss music -- they are Easter-egg cues, which is
-# why each has exactly ONE trigger site in the 68K (cmd1b @0x10E2E, cmd1e @0x3736A,
-# vs 2+ for every real stage theme) and why the PCE port never arranged them:
-#   0x1b = "Hidden Secret Door (Midway Demo 2)"  -- user-identified from arcade
-#   0x1e = "Typhoon Kid (Secret BGM)"            -- user-identified from arcade
-# The long chase for their "PCE counterpart" was a false premise: no counterpart
-# exists because the port omitted these secret cues entirely. For the record, the
-# things that were ruled out along the way -- all 22 CD cues map 1:1 to non-secret
-# arcade cues; no CD track is reused by two cues; the only ADPCM on the disc is one
-# SFX bank replicated 13x (the internal listening archive). Fail-open to arcade FM is
-# correct and is the only place these two tracks exist in any form.
 0x1b	none	0	-	Hidden Secret Door (Midway Demo 2) - SECRET	arcade-only; single trigger @0x10E2E; port omits it
 0x1e	none	0	-	Typhoon Kid (Secret BGM) - SECRET	arcade-only; single trigger @0x3736A; port omits it

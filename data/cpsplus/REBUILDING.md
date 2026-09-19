@@ -86,7 +86,7 @@ python3 cpsplus/integration/verify_dist.py
 ```
 
 Checks that everything staged under `dist/mister_sd` still matches the
-canonical packs — each pack ZIP byte-for-byte against `work/packs/<name>.cpk`,
+canonical packs — each pack ZIP byte-for-byte against `packs/<name>.cpk`,
 each cue sheet against a freshly generated one, and that no canonical pack is
 missing a ZIP.  Nothing regenerates `dist/` automatically, so it drifts
 silently; `--fix` regenerates whatever is stale.  This matters most for the

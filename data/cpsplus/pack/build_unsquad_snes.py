@@ -150,7 +150,7 @@ def wrong_album_message(root: Path, n_files: int, sample: Path | None) -> str:
 
 def _read_loops() -> dict[int, tuple[int, int, str]]:
     out = {}
-    for line in LOOPS_TSV.read_text().splitlines():
+    for line in LOOPS_TSV.read_text(encoding="utf-8").splitlines():
         if not line or line.startswith("#") or line.startswith("track"):
             continue
         f = line.split("\t")

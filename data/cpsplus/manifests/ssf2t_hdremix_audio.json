@@ -21,6 +21,7 @@
   "trigger_gain": 25,
   "xfade_samples": 4800,
   "fail_open": [
+    56,
     59,
     61,
     63,
@@ -5360,20 +5361,6 @@
       "status": "listening_approved_hardware_pending"
     },
     {
-      "cmd": 56,
-      "album_track": 48,
-      "title": "48 New Blood (Here Comes a New Challenger)",
-      "source": "OC ReMix - Super Street Fighter II Turbo HD Remix Official Soundtrack/flacs/48 New Blood (Here Comes a New Challenger).flac",
-      "source_sha256": "26c72a6e682da7978417bb47e1b603d10df1875a303ff120a46289218ed0b36b",
-      "trim_start": 0,
-      "keep_samples": 135001,
-      "loop_start": 0,
-      "loop_end": 0,
-      "loop_count": 0,
-      "xfade_samples": 0,
-      "status": "listening_approved_hardware_pending"
-    },
-    {
       "cmd": 57,
       "album_track": 65,
       "title": "65 See Ya! (Game Over)",
@@ -5853,5 +5840,8 @@
       ]
     ],
     "spread_lu": 5.199999999999999
+  },
+  "notes": {
+    "fail_open_0x38": "'48 New Blood' is the album's Here-Comes-a-New-Challenger cue, but the arcade Z80 plays command 0x38 OVER the running BGM and then hands the channels back -- a suspend/resume the pack format cannot express. A PLAY row here replaced the music with a one-shot and left the game silent until the next command (28.6 s measured, P2 credits in at PLAYER SELECT), so 0x38 fails open to the board. Evidence and method: manifests/ssf2_arrange_trigger_map.tsv."
   }
 }

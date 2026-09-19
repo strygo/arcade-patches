@@ -400,7 +400,7 @@ def main(argv: list[str] | None = None) -> int:
         }
         if args.catalog:
             args.catalog.parent.mkdir(parents=True, exist_ok=True)
-            args.catalog.write_text(json.dumps(payload, indent=2) + "\n")
+            args.catalog.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8", newline="\n")
         print(f"extracted {len(catalog)} files from {args.image} to {args.output}")
         return 0
     parser.error("choose list or extract, or use --self-test")

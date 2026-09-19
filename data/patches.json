@@ -41,8 +41,8 @@
       "subtitle": "Arranged CD-era soundtracks for CPS-1 & CPS-2 arcade games on MiSTer",
       "section": "arrangements",
       "status": "released",
-      "version": "1.3",
-      "date": "2026-09-17",
+      "version": "1.3b",
+      "date": "2026-09-19",
       "hardware": "MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)",
       "summary": "When Capcom brought its arcade games home on CD, it sent the music back to the studio and re-recorded it. Those versions never made it back to the arcade. CPS+ puts them there. Pick a game on your MiSTer and the arranged soundtrack is just playing, while every punch, voice and jingle still comes from the arcade board itself.",
       "featured_stats": "27 audio packs \u00b7 80 MRAs \u00b7 3 cores \u00b7 every pack built from sources you own",
@@ -143,8 +143,8 @@
         "Sound effects, voices and the announcer always play live through the original arcade audio path; packs substitute music only, and a few cues deliberately pass through to the arcade board's own music."
       ],
       "kit": {
-        "source": "${CPSPLUS_TREE:-../capcom/cpsplus}/dist/cpsplus-kit-1.3.zip",
-        "zipname": "cpsplus-kit-1.3.zip",
+        "source": "${CPSPLUS_TREE:-../capcom/cpsplus}/dist/cpsplus-kit-1.3b.zip",
+        "zipname": "cpsplus-kit-1.3b.zip",
         "label": "CPS+ MiSTer kit: cores, MRAs and the pack builder"
       },
       "highlights": [
@@ -564,6 +564,15 @@
         }
       ],
       "release_history": [
+        {
+          "version": "1.3b",
+          "date": "2026-09-19",
+          "items": [
+            "A second player joining at the character select no longer kills the music. The board borrows the music channels for the \u201cHere comes a new challenger\u201d stinger and hands them back; the packs read that as a new song, so the arranged track stopped and nothing restarted it. Affects the Street Fighter II family: Super Street Fighter II, Turbo, Hyper, and the X68000 and HD Remix soundtracks. The board's own stinger is heard under the arranged music, and HD Remix's arranged stinger is no longer in the pack.",
+            "Fixes the pack builder: building any of the three album-sourced packs (Final Fight and Magic Sword Double Impact, Super Turbo HD Remix) stopped with a KeyError at the last step. The packs themselves are unchanged \u2014 each still builds to the same bytes as before.",
+            "The kit's README now states the version it was built as."
+          ]
+        },
         {
           "version": "1.3",
           "date": "2026-09-17",

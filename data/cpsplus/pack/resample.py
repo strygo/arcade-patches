@@ -178,6 +178,21 @@ def taps32(src_rate: int, dst_rate: int,
     return rows[:L]
 
 
+def table_sha256(src_rate: int, dst_rate: int, filter_size: int = FILTER_SIZE,
+                 coef_bits: int = COEF_BITS) -> str:
+    """The pinned digest for a rate pair, looked up the one way.
+
+    TABLE_SHA256 is keyed by all four values the table depends on; a caller
+    that spells the key itself gets it wrong the moment the design gains a
+    parameter, which is how a build report started raising KeyError.
+    """
+    try:
+        return TABLE_SHA256[(src_rate, dst_rate, filter_size, coef_bits)]
+    except KeyError:
+        raise KeyError(f"no pinned resampler table for {src_rate}->{dst_rate} "
+                       f"filter_size {filter_size} coef_bits {coef_bits}") from None
+
+
 @lru_cache(maxsize=None)
 def table(src_rate: int, dst_rate: int, filter_size: int = FILTER_SIZE,
           coef_bits: int = COEF_BITS) -> np.ndarray:

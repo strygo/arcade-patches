@@ -1,7 +1,4 @@
-# EAR-CONFIRMED (user): auditioned the full 23-pair arcade-vs-arrange
-#   set in the internal listening archive — every pair matches, all arrange tracks
-#   sound good and line up. This confirms BOTH the mapping (incl. the 10 permuted
-#   jingle rows the +0x19 stage rule would have mis-keyed) AND pack-worthiness.
+# spf2t_arrange_source_map: see REBUILDING.md
 saturn_song	role	saturn_intro_s	saturn_loop_s	dc_file	dc_loop_s	dc_wf_p50	ant_soundtest_entry	ant_wf_p50	ant_ingame_entry	ant_ingame_loop_s	ing_wf_p50	arcade_cmd	saturn_render	arc_ren_p50	dc_q_file	ren_q_p50	arcade_evidence
 0x1A	Morrigan stage	8.127	45.836	R21_SMOR	45.856	+0.989	e230	+0.929	e534	45.854	+0.94	0x01	0x03	+0.555	Q01_SMOR	-0.751	grounded
 0x1B	Chun-Li stage	4.063	64.745	R22_SCHU	64.739	+0.996	e231	+0.991	e532	64.720	+1.00	0x02	0x04	+0.619	Q02_SCHU	-0.739	grounded

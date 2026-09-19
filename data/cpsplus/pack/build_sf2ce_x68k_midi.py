@@ -62,6 +62,17 @@ TRIG_GAIN = 0x7f
 # four-boss ending.
 EXTRA_MUSIC_COMMANDS = {0x10, 0x12, 0x13, 0x15, 0x8c}
 
+# The challenger stinger: the board's sound driver plays this cue OVER the
+# running BGM and then hands the channels back -- a suspend/resume the pack
+# format has no verb for.  A PLAY row here replaced the music with a one-shot
+# and left the game silent until the next music command (28.6 s measured on
+# SSF2, P2 credits in at PLAYER SELECT; same shape on CPS1 SF2CE, where the
+# select theme returns at lag 0 against a no-P2 control run).  So the cue
+# fails open and the board plays its own stinger over the arranged track,
+# which keeps running.  Evidence and method:
+# manifests/ssf2_arrange_trigger_map.tsv.
+NATIVE_RESTORE_CMDS = frozenset({0x15})
+
 
 @dataclass(frozen=True)
 class MusicRow:
@@ -276,6 +287,8 @@ def build(*, out: Path | None = None, flac_dir: Path = SOURCE_DIR,
         trigger = TriggerRow(
             verb=VERB_PLAY, track=ti, gain=TRIG_GAIN, suppress=1)
         for cmd in row.commands:
+            if cmd in NATIVE_RESTORE_CMDS:
+                continue
             writer.set_trigger(cmd, trigger)
             command_count += 1
 
@@ -292,13 +305,16 @@ def build(*, out: Path | None = None, flac_dir: Path = SOURCE_DIR,
             raise ValueError("readback: wrong control-verb map")
         for row in music:
             for cmd in row.commands:
+                if cmd in NATIVE_RESTORE_CMDS:
+                    continue
                 got = reader.triggers[cmd]
                 if (got.verb, got.track, got.gain, got.suppress) != (
                         VERB_PLAY, track_of[row.song], TRIG_GAIN, 1):
                     raise ValueError(
                         f"readback: command 0x{cmd:02x} does not map to "
                         f"{row.song}")
-        mapped = {cmd for row in music for cmd in row.commands}
+        mapped = {cmd for row in music for cmd in row.commands
+                  if cmd not in NATIVE_RESTORE_CMDS}
         for cmd, got in enumerate(reader.triggers):
             if cmd not in mapped and (got.verb != VERB_NONE or got.suppress):
                 if cmd != 0xf7 or got.verb != VERB_STOP or got.suppress:

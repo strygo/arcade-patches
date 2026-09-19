@@ -1,15 +1,4 @@
-# Ghouls'n Ghosts / Daimakaimura X68000 MIDI pack loop points.
-# Source coordinates are the 48 kHz LOOPSTART/LOOPEND tags written by
-# tools/export_x68k_midi_flac.py from the extracted MIDI's global loop.
-#
-# The source renders contain two complete passes and end at source_le.  A
-# one-second CPS+ crossfade needs real continuation audio after pack_le, so the
-# pack phase is shifted one second earlier: pack_ls/le = source_ls/le - 48000,
-# rounded DOWN to the 32-sample ADX grid.  This preserves the measured period;
-# the retained second-pass final second is blended against the corresponding
-# first-pass final second.  Songs absent from this table are one-shots.
-#
-# song  source_ls  source_le  pack_ls  pack_le  evidence
+# ghouls_x68k_midi_loops: see REBUILDING.md
 song	source_ls	source_le	pack_ls	pack_le	evidence
 song09	1001738	2003475	953728	1955456	embedded global MIDI loop; Time-Out Warning
 song0c	3955447	7368777	3907424	7320768	embedded global MIDI loop; Stage 1

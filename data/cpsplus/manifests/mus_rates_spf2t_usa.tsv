@@ -1,7 +1,4 @@
-# MUS per-song sample rates — decoded from the boot binary's stream-start command builder 
-# binary: 1stread_usa.prg @ load base 0x06010000; control table file+0x4427c (VA 0x0605427c), 49 rows x 8 bytes, indexed by song id
-# pitch-word table file+0x43848 (VA 0x06053848): 0000 79CE 7991 7800 7ADB  (row byte3 -> word; word -> SCSP OCT|FNS: rate = 44100*2^oct*(1024+fns)/1024)
-# game default pitch_index = 4 (0x7ADB = 37790.77 Hz)
+# mus_rates_spf2t_usa: see REBUILDING.md
 song_id	pitch_index	pitch_word	rate_hz	rate_nominal	flags
 00	1	0x79CE	31998.34	32000	NON-DEFAULT-RATE,no-files/dead-slot
 01	0	0x0000	44100.00	44100	NON-DEFAULT-RATE

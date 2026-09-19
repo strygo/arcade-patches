@@ -51,12 +51,19 @@ TRIG_GAIN = 0x1d   # same measured value for ssf2 / ssf2t
 HSF2_AFS_NAME = protocols.HSF2_AFS_NAME
 HSF2_MAP = MANIFESTS / "hsf2_bgm_command_map.tsv"
 NATIVE_QSOUND_LOGO_CMD = 0x3D
+# "HERE COMES A NEW CHALLENGER": the Z80 plays this cue over the running BGM
+# and then hands the channels back, so a pack PLAY row here silences the music
+# until the next command (28.6 s on the measured P2-joins-at-select route).
+# The pack has no suspend/resume verb, so the cue must fail open to the board.
+# Evidence and method: manifests/ssf2_arrange_trigger_map.tsv.
+NATIVE_RESTORE_CMD = 0x38
+FAIL_OPEN_CMDS = (NATIVE_QSOUND_LOGO_CMD, NATIVE_RESTORE_CMD)
 
 
 def _read_trigger_map(path: Path):
     """Rows of (cmd, arrange_entry, character, confidence, note)."""
     rows = []
-    for line in path.read_text().splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         line = line.rstrip("\n")
         if not line.strip() or line.lstrip().startswith("#"):
             continue
@@ -78,7 +85,7 @@ def _arrange_vols() -> dict[int, int]:
     out: dict[int, int] = {}
     if not HSF2_MAP.exists():
         return out
-    rows = HSF2_MAP.read_text().splitlines()
+    rows = HSF2_MAP.read_text(encoding="utf-8").splitlines()
     hdr = rows[0].split("\t")
     for line in rows[1:]:
         d = dict(zip(hdr, line.split("\t")))
@@ -95,10 +102,10 @@ def build(game: str, iso_path: str, map_path: str | None = None,
         MANIFESTS / f"{game}_arrange_trigger_map.tsv"
     trig = _read_trigger_map(map_file)
     mapped_commands = {cmd for cmd, *_ in trig}
-    if NATIVE_QSOUND_LOGO_CMD in mapped_commands:
-        raise ValueError(
-            f"{map_file}: command 0x{NATIVE_QSOUND_LOGO_CMD:02x} is the "
-            "native QSound-logo cue and must fail open")
+    for cmd in FAIL_OPEN_CMDS:
+        if cmd in mapped_commands:
+            raise ValueError(
+                f"{map_file}: command 0x{cmd:02x} must fail open to the board")
     vols = _arrange_vols()
 
     img = resolve_image(iso_path, member_hint=".iso")
@@ -133,16 +140,19 @@ def build(game: str, iso_path: str, map_path: str | None = None,
     out_path = Path(out) if out else PACKS_DIR / f"{game}_arrange.cpk"
     w.write(out_path)
 
-    # The standalone games issue 0x3d followed by 0xd1 for the natural
-    # QSound-logo sequence.  HSF2's Arrange-bank entry 61 is one second of
-    # silence, not an arranged logo.  Pin the fail-open row in the serialized
-    # pack so a future ordinal-map expansion cannot mute/distort the logo.
+    # Pin both fail-open rows in the serialized pack so a future ordinal-map
+    # expansion cannot claim them.  0x3d: the standalone games issue it
+    # followed by 0xd1 for the natural QSound-logo sequence, and HSF2's
+    # Arrange-bank entry 61 is one second of silence, not an arranged logo.
+    # 0x38: the challenger stinger the driver plays over -- and hands back --
+    # the running BGM (see NATIVE_RESTORE_CMD above).
     rd = PackReader(out_path)
     try:
-        logo = rd.triggers[NATIVE_QSOUND_LOGO_CMD]
-        if logo.verb != VERB_NONE or logo.suppress:
-            raise ValueError(
-                "readback: command 0x3d must pass through to native QSound")
+        for cmd in FAIL_OPEN_CMDS:
+            row = rd.triggers[cmd]
+            if row.verb != VERB_NONE or row.suppress:
+                raise ValueError(f"readback: command 0x{cmd:02x} must pass "
+                                 "through to native QSound")
     finally:
         rd.close()
 

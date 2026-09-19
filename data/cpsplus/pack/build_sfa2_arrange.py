@@ -116,7 +116,7 @@ def _load_trigger_map_tsv(path: Path) -> tuple[dict[int, tuple[int, int | None]]
     header); gain on legacy rows is honoured as before."""
     plays: dict[int, tuple[int, int | None]] = {}
     stops: list[int] = []
-    for line in Path(path).read_text().splitlines():
+    for line in Path(path).read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line or line.startswith("#") or line.lower().startswith("cmd"):
             continue
@@ -155,7 +155,7 @@ def build(iso_path: str, out: str | None = None,
     if game == "sfz2al" and SATURN_MAP_TSV.exists():
         # consistency assert vs the identity-map evidence file
         want = {}
-        for line in SATURN_MAP_TSV.read_text().splitlines():
+        for line in SATURN_MAP_TSV.read_text(encoding="utf-8").splitlines():
             if line.startswith("#") or line.startswith("saturn_song"):
                 continue
             f = line.split("\t")
@@ -170,7 +170,7 @@ def build(iso_path: str, out: str | None = None,
     # loop-table manifest cross-check (warn-only)
     ref = {}
     if LOOPTABLE_TSV.exists():
-        rows = LOOPTABLE_TSV.read_text().splitlines()
+        rows = LOOPTABLE_TSV.read_text(encoding="utf-8").splitlines()
         hdr = rows[0].split("\t")
         for line in rows[1:]:
             f = dict(zip(hdr, line.split("\t")))

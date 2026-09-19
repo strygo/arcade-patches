@@ -33,7 +33,7 @@ def write_lut_hex(n: int, path: str | Path) -> Path:
     """Emit the LUT as one hex word per line for Verilog $readmemh."""
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text("\n".join(f"{w:04x}" for w in make_lut(n)) + "\n")
+    path.write_text("\n".join(f"{w:04x}" for w in make_lut(n)) + "\n", encoding="utf-8", newline="\n")
     return path
 
 

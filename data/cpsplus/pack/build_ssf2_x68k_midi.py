@@ -53,6 +53,17 @@ XFADE_SAMPLES = RATE
 TRIG_GAIN = 0x1d
 NATIVE_QSOUND_LOGO_CMD = 0x3D
 
+# The challenger stinger: the board's sound driver plays this cue OVER the
+# running BGM and then hands the channels back -- a suspend/resume the pack
+# format has no verb for.  A PLAY row here replaced the music with a one-shot
+# and left the game silent until the next music command (28.6 s measured on
+# SSF2, P2 credits in at PLAYER SELECT; same shape on CPS1 SF2CE, where the
+# select theme returns at lag 0 against a no-P2 control run).  So the cue
+# fails open and the board plays its own stinger over the arranged track,
+# which keeps running.  Evidence and method:
+# manifests/ssf2_arrange_trigger_map.tsv.
+NATIVE_RESTORE_CMDS = frozenset({0x38})
+
 
 @dataclass(frozen=True)
 class MusicRow:
@@ -323,7 +334,7 @@ def build(*, out: Path | None = None, flac_dir: Path = SOURCE_DIR,
               f"{kind:<11} {len(data) / 1e6:6.2f} MB  {music_row.role}")
 
     for row in music:
-        if not row.in_game:
+        if not row.in_game or row.command in NATIVE_RESTORE_CMDS:
             continue
         writer.set_trigger(
             row.command,
@@ -343,9 +354,10 @@ def build(*, out: Path | None = None, flac_dir: Path = SOURCE_DIR,
             raise ValueError("readback: wrong QSound record layout")
         if reader.header.proto.control_verbs != proto.control_verbs:
             raise ValueError("readback: wrong control-verb map")
-        mapped = {row.command for row in music if row.in_game}
+        mapped = {row.command for row in music
+                  if row.in_game and row.command not in NATIVE_RESTORE_CMDS}
         for row in music:
-            if not row.in_game:
+            if not row.in_game or row.command in NATIVE_RESTORE_CMDS:
                 continue
             got = reader.triggers[row.command]
             if (got.verb, got.track, got.gain, got.suppress) != (
@@ -372,7 +384,8 @@ def build(*, out: Path | None = None, flac_dir: Path = SOURCE_DIR,
         worst = min(snrs, key=lambda value: value[1])
         print(f"[ssf2] ADX SNR mean {mean:.2f} dB, worst "
               f"{worst[0]} {worst[1]:.2f} dB")
-    play_count = sum(row.in_game for row in music)
+    play_count = sum(row.in_game and row.command not in NATIVE_RESTORE_CMDS
+                     for row in music)
     print(f"[ssf2] {out_path}: {len(music)} tracks, {play_count} play "
           f"commands, {sum(row.loops for row in audio.values())} loops, "
           f"{size / 1e6:.1f} MB")

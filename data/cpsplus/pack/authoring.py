@@ -28,7 +28,7 @@ def _inventory(game: str) -> list[tuple[int, str]]:
     inv: list[tuple[int, str]] = []
     if game == "hsf2":
         path = MANIFESTS / "hsf2_bgm_command_map.tsv"
-        rows = path.read_text().splitlines()
+        rows = path.read_text(encoding="utf-8").splitlines()
         hdr = rows[0].split("\t")
         seen = set()
         for line in rows[1:]:
@@ -46,7 +46,7 @@ def _inventory(game: str) -> list[tuple[int, str]]:
     elif game == "sfz2al":
         path = MANIFESTS / "sfz2_saturn_zero6_map.tsv"
         if path.exists():
-            for line in path.read_text().splitlines():
+            for line in path.read_text(encoding="utf-8").splitlines():
                 if line.startswith("#") or line.startswith("saturn_song"):
                     continue
                 f = line.split("\t")
@@ -100,7 +100,7 @@ def init(game: str, dest: str | None = None) -> Path:
     toml_path = d / "pack.toml"
     if toml_path.exists():
         raise FileExistsError(f"{toml_path} already exists")
-    toml_path.write_text("\n".join(lines) + "\n")
+    toml_path.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     print(f"[init] scaffolded {toml_path} "
           f"({len(inv)} known commands pre-filled)")
     return d
@@ -146,7 +146,7 @@ def _align32(name: str, label: str, v: int) -> int:
 
 def build(project_dir: str, out: str | None = None) -> Path:
     d = Path(project_dir)
-    cfg = tomllib.loads((d / "pack.toml").read_text())
+    cfg = tomllib.loads((d / "pack.toml").read_text(encoding="utf-8"))
     pack = cfg.get("pack", {})
     game = pack.get("game")
     if not game:

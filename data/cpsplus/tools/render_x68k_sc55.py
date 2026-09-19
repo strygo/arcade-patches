@@ -227,7 +227,7 @@ def render(args: argparse.Namespace, repo: Path) -> Path:
     catalog_path = absolute(args.catalog)
     if not catalog_path.is_file():
         raise RenderError(f"extraction catalog is missing: {catalog_path}")
-    catalog = json.loads(catalog_path.read_text())
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
     if catalog.get("schema") != "cpsplus-x68000-audio-v1":
         raise RenderError(f"unsupported extraction catalog: {catalog_path}")
     renderer = absolute(args.renderer)
@@ -276,7 +276,7 @@ def render(args: argparse.Namespace, repo: Path) -> Path:
     output_catalog = args.output / "catalog.json"
     captures_by_song: dict[tuple[str, str], dict[str, object]] = {}
     if output_catalog.is_file():
-        previous = json.loads(output_catalog.read_text())
+        previous = json.loads(output_catalog.read_text(encoding="utf-8"))
         if (
             previous.get("schema") != "cpsplus-x68000-sc55-capture-v1"
             or previous.get("romset") != args.romset
@@ -334,7 +334,7 @@ def render(args: argparse.Namespace, repo: Path) -> Path:
                 output.unlink(missing_ok=True)
                 sidecar.unlink(missing_ok=True)
             else:
-                existing = json.loads(sidecar.read_text())
+                existing = json.loads(sidecar.read_text(encoding="utf-8"))
                 reusable = (
                     existing.get("input_sha256") == input_hash
                     and existing.get("renderer_version") == version
@@ -395,7 +395,7 @@ def render(args: argparse.Namespace, repo: Path) -> Path:
             "format": args.format,
             "end_behavior": args.end,
         }
-        output.with_suffix(".json").write_text(json.dumps(record, indent=2) + "\n")
+        output.with_suffix(".json").write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8", newline="\n")
         return record
 
     # Every render is independent (own MIDI, own firmware directory, own
@@ -418,7 +418,7 @@ def render(args: argparse.Namespace, repo: Path) -> Path:
         "firmware_revision": firmware_revision,
         "firmware_sha256": firmware_hashes,
         "captures": captures,
-    }, indent=2) + "\n")
+    }, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"captured {len(captures)} songs; catalog: {output_catalog}")
     return output_catalog
 

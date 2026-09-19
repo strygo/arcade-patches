@@ -1,47 +1,4 @@
-# Final Fight VOICED cutscene cues -- the pack side of the contract with the
-# ffightcd Sega CD cutscene backport (the Final Fight CD backport project's audio contract is
-# the full contract; this file is the machine-readable row set).
-#
-# Stock ffight/ffightu/ffightj ROMs NEVER emit these bytes (phase-0 census:
-# music/SFX cues top out at 0x58, control family is 0xf0-0xf9), so one pack
-# serves both ROM families: stock ROMs hit the no-voice rows (0x35/0x54),
-# backport ROMs emit 0x70-0x73 for the voiced Sega-CD cutscene audio:
-# 0x70/0x72 at the opening engine's INIT (credit-gated), 0x71/0x73 at the
-# ending engine's INIT (not gated).  The ending key MUST be emitted: the stock
-# ending-music cue 0x54 fires regardless and maps to the arranged instrumental
-# ending, so an un-emitted voiced key leaves the instrumental in its place.
-# The stock 0x54 sites emit alias 0x78, gated in the trigger map (row 0x78)
-# like 0x74-0x77.
-#
-# All four rows: verb=play, suppress=1, gain 0x7f, ONE-SHOT (no loop -- the
-# cutscene spans the audio; playback ends itself in the master's own fade).
-# Sources are raw CD-DA disc tracks, cut at the cue's INDEX 01 and never
-# modified.  The builder extracts them from user-supplied disc rips
-# (--us-disc/--jp-disc; pack/discsrc.py + tools/extract_cdda.py) into the
-# cd_full / cd_jp_full extraction caches.
-# Identity evidence (NCC vs the backport's aligned references):
-#   0x72: aligned JP opening = raw tr23 at +0.38s, r=+1.000 piecewise
-#   0x73: aligned JP ending  = raw tr24 + 87612-sample lead pad, r=+1.000
-#         piecewise at the exact lag.  tr24 holds sample-exact internal
-#         repeats (58.013s material recurs at 83.034s, 25.02s period) and
-#         tr29 shares one section verbatim -- both earlier double-matches
-#         are properties of the master, not assembly.
-# Both ENDING rows require PROCESSING before
-# packing -- the shipped ROMs are fitted to processed tracks, not the raw
-# rips.  Chain per row (full contract: ffightcd AUDIO_CONTRACT.md section 4):
-#   0x71  pad 88,200 samples of silence (150 sectors, 2.000000 s), then cut
-#         7 bars @ 82.19 BPM at 39.225 s, 0.12 s crossfade.
-#         115.00 -> 117.00 -> 96.44 s.
-#   0x73  pad 87,612 samples (149 sectors, 1.986667 s), then cut 8 bars
-#         @ 82.19 BPM at 56.0 s, 0.12 s crossfade.
-#         138.57 -> 140.56 -> 117.08 s.
-# The processing is build_ffight.py's ARCADE_CUT, PINNED: the builder
-# hashes the processed PCM every build (ARCADE_CUT_PIN) against the byte-
-# exact files the shipped ROMs were ear-tuned against, verified once against
-# the backport project's reference cutter (cut_ending_track.py, byte-
-# identical both regions).  A drifted transform refuses to pack.
-# len_s below stays the RAW source length; processed lengths are above.
-# cmd	cue	source	len_s	loop	suppress	gain
+# ffight_voiced_cues: see REBUILDING.md
 0x70	Opening voiced US (ffightcd backport)	cd_full/tr23.wav	137.72	once	1	0x7f
 0x71	Ending voiced US (ffightcd backport)	cd_full/tr24.wav	115.00	once	1	0x7f
 0x72	Opening voiced JP (ffightcd backport)	cd_jp_full/tr23.wav	129.13	once	1	0x7f

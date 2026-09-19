@@ -34,6 +34,16 @@ from .sources import resolve_image
 # discarded; baked here so rebuilds reproduce the shipped packs byte-exactly.
 TRIG_GAIN = {"arrange": 0x2d, "cps1": 0x25}   # per bank; unmeasured banks keep the AFS vol
 
+# "HERE COMES A NEW CHALLENGER".  The PS2 dispatch table types 0x38 as BGM, so
+# the generated table would claim it -- but on the ARCADE board (1.06b as well
+# as the standalone 1.04 driver) the Z80 plays this cue OVER the running BGM
+# and then hands the channels back, which no pack verb can express.  Claiming
+# it replaced the music with a 2.35 s one-shot and left the game silent until
+# the next command (28.6 s on the measured P2-joins-at-select route).  It
+# therefore fails open to the board, like the native QSound logo at 0x3d.
+# Evidence and method: manifests/ssf2_arrange_trigger_map.tsv.
+NATIVE_RESTORE_CMDS = frozenset({0x38})
+
 
 def _boot_elf_name(iso: IsoFS) -> str:
     cnf = iso.read_file("/SYSTEM.CNF").decode("ascii", "replace")
@@ -50,7 +60,7 @@ def _load_manifest_map(bank: str) -> dict[int, tuple[int, int, str]]:
         return {}
     want_set = {"arrange": "ARRANGE", "cps2": "CPS2", "cps1": "CPS1"}[bank]
     out = {}
-    rows = path.read_text().splitlines()
+    rows = path.read_text(encoding="utf-8").splitlines()
     hdr = rows[0].split("\t")
     for line in rows[1:]:
         f = dict(zip(hdr, line.split("\t")))
@@ -117,6 +127,8 @@ def build(iso_path: str, out: str | None = None, bank: str = "arrange",
         typ, _, _, _ = row(cmd)
         if typ != protocols.HSF2_TYPE_BGM:
             continue
+        if cmd in NATIVE_RESTORE_CMDS:
+            continue
         _, entry, vol, _ = row(cmd + bank_off)
         generated[cmd] = (entry, vol)
         name = afs.name(entry)
@@ -152,9 +164,11 @@ def build(iso_path: str, out: str | None = None, bank: str = "arrange",
     # types as non-BGM (e.g. native QSound-logo command 0x3d) are expected to
     # be absent and therefore fail open to the arcade sound hardware.
     missing_ingame = [c for c, (_, _, ig) in manifest.items()
-                      if c not in generated and c != 0 and ig == "yes"]
+                      if c not in generated and c != 0 and ig == "yes"
+                      and c not in NATIVE_RESTORE_CMDS]
     missing_other = [c for c, (_, _, ig) in manifest.items()
-                     if c not in generated and c != 0 and ig != "yes"]
+                     if c not in generated and c != 0
+                     and (ig != "yes" or c in NATIVE_RESTORE_CMDS)]
     if mismatches or missing_ingame:
         raise AssertionError(
             f"ELF table does not match hsf2_bgm_command_map.tsv: "
@@ -166,6 +180,16 @@ def build(iso_path: str, out: str | None = None, bank: str = "arrange",
 
     out_path = Path(out) if out else PACKS_DIR / f"hsf2_{bank}.cpk"
     w.write(out_path)
+    from .format import PackReader, VERB_NONE
+    rd = PackReader(out_path)
+    try:
+        for cmd in sorted(NATIVE_RESTORE_CMDS):
+            trg = rd.triggers[cmd]
+            if trg.verb != VERB_NONE or trg.suppress:
+                raise ValueError(f"readback: command 0x{cmd:02x} must pass "
+                                 "through to native QSound")
+    finally:
+        rd.close()
     size = out_path.stat().st_size
     print(f"[hsf2:{bank}] {out_path}  {size / 1e6:.1f} MB, "
           f"{len(w.tracks)} tracks, {n_play} play + {n_stop} stop triggers "

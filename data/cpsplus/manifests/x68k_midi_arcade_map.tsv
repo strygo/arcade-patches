@@ -1,10 +1,4 @@
-# Evidence-first X68000 external-MIDI -> arcade music mapping.
-# Audio similarity may rank unresolved candidates but must never promote them.
-# X68000 music-test labels were cross-checked against these review references:
-# https://streetfighter.fandom.com/wiki/User_blog:S617519/"Street_Fighter_II%27:_Champion_Edition"_(X68000)_Music_test
-# https://streetfighter.fandom.com/wiki/User_blog:S617519/"Super_Street_Fighter_II:_The_New_Challengers"_(X68000)_Music_test
-# Arcade-side authority is the traced MAME sweep evidence named per row.
-# Daimakaimura evidence: clean 256-command ghoulsu MAME 0.288 sweep, same-board reference identity, service-mode long ending renders, and a complete A/B listening approval on 2026-08-31.
+# x68k_midi_arcade_map: see REBUILDING.md
 game	song	x68k_select	arcade_set	arcade_cmd	role	match_status	in_game	evidence	arcade_aliases
 daimakaimura	song00	0x01	ghoulsu	0x00	Opening	verified	yes	MAME 0x00 render matches arcade Opening; X68000 audio/order diagonal	0x80
 daimakaimura	song01	0x02	ghoulsu	0x01	Game Over	verified	yes	MAME 0x01 duration/reference identity is Game Over; X68000 song01 follows the same command diagonal	0x81
@@ -33,25 +27,25 @@ daimakaimura	song17	0x18	ghoulsu	0x17	Ending (1st Round)	verified	yes	MAME 0x17 
 daimakaimura	song18	0x19	ghoulsu	0x18	Zap	verified	yes	MAME 0x18 same-board identity plus strong X68000 audio diagonal	0x98
 daimakaimura	song19	0x1a	ghoulsu	0x19	Ending sequence variant A	verified	yes	listening-gate-approved full-length X68000/arcade A/B; service-mode odd ending family	0x1b,0x1d,0x1f,0x99,0x9b,0x9d,0x9f
 daimakaimura	song1a	0x1b	ghoulsu	0x1a	Ending sequence variant B	verified	yes	listening-gate-approved full-length X68000/arcade A/B; service-mode even ending family	0x1c,0x1e,0x9a,0x9c,0x9e
-ffight	song00	0x01	ffight	0x40	R1 SLUM1	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song01	0x02	ffight	0x41	R1 SLUM2	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song02	0x03	ffight	0x42	R2 SUBWAY1	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song03	0x04	ffight	0x43	R2 SUBWAY2	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song04	0x05	ffight	0x44	R3 WEST SIDE1	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song05	0x06	ffight	0x45	BAY AREA1	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song06	0x07	ffight	0x46	BAY AREA2	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song07	0x08	ffight	0x47	BAY AREA3	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song08	0x09	ffight	0x48	R4 INDUSTRIAL1	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song09	0x0a	ffight	0x49	R4 INDUSTRIAL2	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song0a	0x0b	ffight	0x4c	BONUS STAGE	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song0d	0x0e	ffight	0x50	ROUND START	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song11	0x12	ffight	0x51	GAME OVER	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song12	0x13	ffight	0x35	OPENING	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song13	0x14	ffight	0x53	CONTINUE	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song14	0x15	ffight	0x54	ENDING	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song15	0x16	ffight	0x55	CHARACTER SELECT	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song16	0x17	ffight	0x57	ROUND CLEAR	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
-ffight	song18	0x19	ffight	0x58	ALL ROUND CLEAR	verified	yes	OSV disc/track bridge plus ear-confirmed ffight command/role manifest
+ffight	song00	0x01	ffight	0x40	R1 SLUM1	verified	yes	
+ffight	song01	0x02	ffight	0x41	R1 SLUM2	verified	yes	
+ffight	song02	0x03	ffight	0x42	R2 SUBWAY1	verified	yes	
+ffight	song03	0x04	ffight	0x43	R2 SUBWAY2	verified	yes	
+ffight	song04	0x05	ffight	0x44	R3 WEST SIDE1	verified	yes	
+ffight	song05	0x06	ffight	0x45	BAY AREA1	verified	yes	
+ffight	song06	0x07	ffight	0x46	BAY AREA2	verified	yes	
+ffight	song07	0x08	ffight	0x47	BAY AREA3	verified	yes	
+ffight	song08	0x09	ffight	0x48	R4 INDUSTRIAL1	verified	yes	
+ffight	song09	0x0a	ffight	0x49	R4 INDUSTRIAL2	verified	yes	
+ffight	song0a	0x0b	ffight	0x4c	BONUS STAGE	verified	yes	
+ffight	song0d	0x0e	ffight	0x50	ROUND START	verified	yes	
+ffight	song11	0x12	ffight	0x51	GAME OVER	verified	yes	
+ffight	song12	0x13	ffight	0x35	OPENING	verified	yes	
+ffight	song13	0x14	ffight	0x53	CONTINUE	verified	yes	
+ffight	song14	0x15	ffight	0x54	ENDING	verified	yes	
+ffight	song15	0x16	ffight	0x55	CHARACTER SELECT	verified	yes	
+ffight	song16	0x17	ffight	0x57	ROUND CLEAR	verified	yes	
+ffight	song18	0x19	ffight	0x58	ALL ROUND CLEAR	verified	yes	
 ffight	song19	0x1a	ffight		CREDIT	no-counterpart	yes	X68000 has a music cue; arcade 0x5f is a coin SFX, not counterpart music
 sf2ce	song00	0x01	sf2ce	0x01	Ryu Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree
 sf2ce	song01	0x02	sf2ce	0x02	E.Honda Stage	verified	yes	listening-gate-approved X68000/arcade two-file A/B; music-test order and command layout agree

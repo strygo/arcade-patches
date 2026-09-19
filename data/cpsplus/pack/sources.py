@@ -35,7 +35,18 @@ def resolve_image(path: Path | str, member_hint: str | None = None,
         # a rip extracted beside its cue sheet: the first FILE entry is the
         # data track, which is the image every consumer of this function wants
         import re as _re
-        files = _re.findall(r'FILE\s+"([^"]+)"', path.read_text(errors="replace"))
+        # a cue sheet carries no encoding mark and its writer's was whatever
+        # the ripping machine used, so take the reading whose file is there
+        raw, files = path.read_bytes(), []
+        for enc in ("utf-8-sig", "cp932", "cp1252"):
+            try:
+                names = _re.findall(r'FILE\s+"([^"]+)"', raw.decode(enc))
+            except UnicodeDecodeError:
+                continue
+            files = files or names
+            if names and (path.parent / names[0]).exists():
+                files = names
+                break
         if not files:
             raise ValueError(f"{path.name}: no FILE entries in the cue sheet")
         img = path.parent / files[0]
