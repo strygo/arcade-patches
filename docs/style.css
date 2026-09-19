@@ -265,6 +265,9 @@ li { margin: 4px 0; }
 .notes { color: var(--text-dim); font-size: 0.9rem; }
 
 .back { font-size: 0.9rem; display: inline-block; margin-top: 22px; }
+/* An inline-block never collapses its margin into the header's, so a back
+   link opening a page would sit 22px lower than the index's first line. */
+main > .back:first-child { margin-top: 0; }
 
 footer.site {
   border-top: 1px solid var(--border);
