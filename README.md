@@ -9,17 +9,21 @@ before/after screenshots, download bundles, checksums, and apply instructions.
 
 ## Layout
 
-- `data/patches.json` — all site content: site config plus one entry per patch
-  (status, version, description, changes, screenshot sources, artifact
-  sources, MiSTer MRA config). Entries with `"hidden": true` are kept but not
-  built or listed.
+- `data/patches.json` — site content plus one entry per patch. Entries with
+  `"hidden": true` are kept but not built or listed.
+- `data/releases.json` — append-only public release inventory. It pins the
+  current version, download filenames, sizes, SHA-256 hashes, and the Capcom
+  readiness evidence that qualified each release.
 - `data/mra/` — vendored base MRAs from [jotego/jtbin](https://github.com/jotego/jtbin)
   (GPLv2, attribution headers preserved) that the MiSTer patch overlays are
   derived from.
-- `data/generated/` — per-patch member manifests captured at build time, so the
-  site can be rebuilt without the work repo present.
-- `tools/build.py` — the whole build: generates patch bundles and MiSTer MRAs,
-  copies screenshots, renders HTML into `docs/`.
+- `data/generated/` — legacy per-patch member manifests retained with the
+  existing publication history. Inventoried downloads carry their own
+  manifests.
+- `tools/build.py` — verifies inventoried downloads and renders HTML into
+  `docs/`.
+- `tools/import_release.py` — the only supported path from an immutable,
+  qualified Capcom candidate into `docs/downloads` and `data/releases.json`.
 - `tools/ipsutil.py` — IPS encoder/decoder (has a self-test: `python3 tools/ipsutil.py`).
 - `tools/mra.py` — MiSTer MRA assembler (faithful port of Main_MiSTer's
   loader) and patch-overlay generator.
@@ -41,53 +45,59 @@ before/after screenshots, download bundles, checksums, and apply instructions.
 python3 tools/build.py
 ```
 
-No dependencies beyond Python 3.9+.
+No dependencies beyond Python 3.9+. The build verifies every current patch
+download against `data/releases.json`, reads its embedded manifest for the
+page, and fails if a file is missing or changed. It does not inspect Capcom
+development outputs and cannot regenerate or replace a published patch kit.
 
-Patch downloads and screenshots are sourced from the sibling work repo
-(`../capcom`) using the paths recorded in `data/patches.json`. When those
-sources are present, everything is regenerated and **round-trip verified**,
-or the build fails:
-
-- IPS bundles: the patches applied to the stock romset must reproduce the
-  acceptance-tested build byte-for-byte.
-- MiSTer MRAs: the stock romset assembly must match the base MRA's published
-  `asm_md5`, and the generated patch-overlay MRA assembled over the stock set
-  must equal the official MRA assembled over the patched set, byte-for-byte.
-- CHD patches: the shipped apply script is run for real against the stock
-  dump (chdman extract → patch → rebuild) and the result must carry the
-  patched CHD's SHA1. Regeneration is cached on the CHDs' header SHA1s, since
-  extraction takes minutes; `chdman` must be on PATH only when the source
-  CHDs actually change.
-
-When the sources are absent, the previously generated downloads, images, and
-manifests are reused, so the site still rebuilds from this repository alone.
+The CPS+ audio project still uses its existing project-kit path while its
+separate full-media qualification remains outstanding.
 
 Every download contains a `readme.txt` describing the project, the changes,
 apply instructions, and legal notes. IPS bundles additionally contain a
 checksum manifest and an `apply.py` that verifies every file before and after
 patching. No ROM data is ever included.
 
-## Versioning
+## Importing a release
 
-Patch versions (currently `rc1`) are set manually in `data/patches.json` and
-are **only bumped on explicit instruction**. Re-running the build regenerates
-the current version in place from the latest work-repo outputs — this is the
-normal workflow while a release candidate is being finalized.
+Capcom owns production and end-user QA. Prepare the page prose and set its new
+version and date in `data/patches.json`, then import the exact candidate that
+produced the `ready_for_import` record:
 
-Superseded kits stay in `docs/downloads`. When a version is bumped, the new zip
-is added alongside the old one and the old one is **not** deleted: romhacking.net
-entries, forum posts and bookmarks link the exact filename of the version they
-were written against, so removing it breaks every one of those links. The pages
-only ever link the current version, so an old zip is invisible on the site and
-costs nothing but disk.
+```bash
+python3 tools/import_release.py \
+  --ready ../capcom/release/validation/example.ready.json \
+  --candidate ../capcom/path/to/out/releases/example/rc2
+python3 tools/build.py
+```
+
+The importer checks that the readiness record, `release.json`, clean
+reproduction, QA receipt, download set, and every download hash agree. It
+requires the page to name the candidate's version, copies the files, verifies
+them again, appends that version to `data/releases.json`, and makes it current.
+An existing slug/version or download filename is never replaced.
+
+After GitHub Pages deploys the commit, verify that every hosted current
+download is exactly the qualified file recorded in the inventory:
+
+```bash
+python3 tools/verify_hosted_releases.py
+```
+
+Because imported filenames are append-only and the hosted SHA-256 must equal
+the qualified candidate's SHA-256, this check binds the deployed download to
+the reconstruction and runtime evidence in its readiness record.
+
+Superseded kits stay in `docs/downloads` and in the version history under
+`data/releases.json`. The page links only the inventory's current version.
+Historical filenames therefore remain stable for external links.
 
 ## Adding a patch
 
-Add an entry to `data/patches.json` (copy an existing one), point
-`artifact.stock_zip` / `artifact.patched_zip` at the stock and patched MAME
-zips, list screenshot source paths, and run the build. Entries with
-`"artifact": null` render as download-less status pages (for in-development
-work).
+Create the project and candidate in Capcom first. Add its page content to
+`data/patches.json`, then use the qualified-candidate import above. Entries
+with `"artifact": null` and `"hidden": true` can still describe work that is
+not yet published.
 
 ## Publishing
 

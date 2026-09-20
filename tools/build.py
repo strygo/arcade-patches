@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
-"""Build the static site into docs/ from data/patches.json.
+"""Build the static site into docs/ from tracked publication data.
 
-- Generates distributable IPS patch bundles by diffing stock vs patched romset
-  zips found in the sibling work repo (../capcom). Every bundle is round-trip
-  verified: stock + IPS must reproduce the patched bytes exactly.
-- Copies curated screenshots into docs/img/.
-- Renders all HTML pages.
-
-The build degrades gracefully when the work repo is absent: previously
-generated bundles, screenshots, and member manifests (data/generated/) are
-reused, so the site can be rebuilt from this repository alone.
+Released patch downloads come only from data/releases.json and are verified
+in place before their pages render.  The site build never regenerates or
+replaces an inventoried release from a sibling development checkout.
 """
 
 import hashlib
@@ -30,6 +24,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import chdpatch
 import ipsutil
 import mra as mralib
+from release_inventory import load_inventory, published_bundle, validate_inventory
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
@@ -1794,6 +1789,8 @@ def main() -> None:
     if args.only:
         ONLY.update(x.strip() for x in args.only.split(",") if x.strip())
     config = json.loads((ROOT / "data" / "patches.json").read_text())
+    inventory = load_inventory(ROOT / "data" / "releases.json")
+    validate_inventory(ROOT, inventory)
     site, patches = config["site"], config["patches"]
     projects = [p for p in config.get("projects", []) if not p.get("hidden")]
     global SITE
@@ -1813,10 +1810,10 @@ def main() -> None:
     thumbs = {}
     for patch in patches:
         slug = patch["slug"]
+        bundle = published_bundle(ROOT, patch, inventory)
         if patch.get("builds"):
             builds = copy_build_titles(patch)
             shots = copy_screenshots(patch)
-            bundle = build_reconstruction_kit(patch) or build_downloads(patch)
             if builds and slug not in thumbs:
                 key = patch.get("thumbnail_build")
                 chosen = next((b for b in builds if b["key"] == key), builds[0])
@@ -1831,7 +1828,6 @@ def main() -> None:
         # A single-build patch can still ship a reconstruction kit: Final
         # Fight CD has one set per region, not a build matrix, but its
         # download IS the kit.
-        bundle = build_reconstruction_kit(patch) or build_downloads(patch)
         shots = copy_screenshots(patch)
         for shot in shots:
             if patch.get("thumbnail") is False:
