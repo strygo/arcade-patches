@@ -54,7 +54,10 @@ class ReleaseInventoryTests(unittest.TestCase):
                             "files": {"ips": {"name": old.name,
                                               "size": old.stat().st_size,
                                               "sha256": sha256_file(old)}},
-                            "qualification": {},
+                            "qualification": {
+                                "type": "historical-publication",
+                                "note": "Fixture predates qualification.",
+                            },
                         }
                     },
                 }
@@ -96,6 +99,35 @@ class ReleaseInventoryTests(unittest.TestCase):
         config["patches"][0]["version"] = version
         write_json(self.root / "data/patches.json", config)
 
+    def kit_candidate(self, slug: str, version: str) -> tuple[Path, Path]:
+        candidate = self.root / f"candidate-{slug}-{version}"
+        download = candidate / "downloads" / f"{slug}-{version}-kit.zip"
+        download.parent.mkdir(parents=True)
+        with zipfile.ZipFile(download, "w") as archive:
+            archive.writestr("README.txt", "fixture\n")
+        release = {
+            "schema": 1,
+            "status": "candidate",
+            "plan": {"kit": slug, "version": version, "candidate": f"{version}-1",
+                     "date": "2026-02-02", "sources": {"capcom": "a" * 40}},
+            "downloads": {download.name: sha256_file(download)},
+        }
+        release_path = candidate / "release.json"
+        write_json(release_path, release)
+        ready = {
+            "schema": 1,
+            "status": "ready_for_import",
+            "release": release,
+            "release_sha256": sha256_file(release_path),
+            "qa": {"status": "passed", "release_sha256": sha256_file(release_path)},
+            "reproduction": {"status": "clean_rebuild_identical",
+                             "release_sha256": sha256_file(release_path),
+                             "downloads": release["downloads"]},
+        }
+        ready_path = self.root / f"{slug}.ready.json"
+        write_json(ready_path, ready)
+        return ready_path, candidate
+
     def test_import_appends_and_activates_qualified_version(self) -> None:
         ready, candidate = self.candidate()
         self.set_page_version("rc2")
@@ -103,6 +135,8 @@ class ReleaseInventoryTests(unittest.TestCase):
         inventory = load_inventory(self.root / "data/releases.json")
         self.assertEqual("rc2", inventory["releases"]["demo"]["current"])
         self.assertEqual({"rc1", "rc2"}, set(inventory["releases"]["demo"]["versions"]))
+        self.assertEqual("qualified-candidate", inventory["releases"]["demo"]
+                         ["versions"]["rc2"]["qualification"]["type"])
         validate_inventory(self.root, inventory)
         bundle = published_bundle(
             self.root, json.loads((self.root / "data/patches.json").read_text())["patches"][0],
@@ -126,6 +160,18 @@ class ReleaseInventoryTests(unittest.TestCase):
         self.assertEqual("1.0", inventory["releases"]["newkit"]["current"])
         validate_inventory(self.root, inventory)
 
+    def test_project_kit_uses_the_candidate_importer(self) -> None:
+        config = json.loads((self.root / "data/patches.json").read_text())
+        config["projects"] = [{"slug": "cps-plus", "version": "1.4",
+                               "kit": {"label": "CPS+ kit"}}]
+        write_json(self.root / "data/patches.json", config)
+        ready, candidate = self.kit_candidate("cps-plus", "1.4")
+        import_candidate(self.root, ready, candidate)
+        inventory = load_inventory(self.root / "data/releases.json")
+        self.assertEqual("qualified-candidate", inventory["releases"]["cps-plus"]
+                         ["versions"]["1.4"]["qualification"]["type"])
+        validate_inventory(self.root, inventory)
+
     def test_changed_candidate_is_rejected_without_copy(self) -> None:
         ready, candidate = self.candidate()
         self.set_page_version("rc2")
@@ -142,6 +188,17 @@ class ReleaseInventoryTests(unittest.TestCase):
             output.write(b"changed")
         with self.assertRaisesRegex(ReleaseInventoryError, "size changed"):
             validate_inventory(self.root, load_inventory(self.root / "data/releases.json"))
+
+    def test_uninventoried_historical_download_is_rejected(self) -> None:
+        write_rom_zip(self.root / "docs/downloads/forgotten-rc1-ips.zip", "rc1")
+        with self.assertRaisesRegex(ReleaseInventoryError, "cover docs/downloads exactly"):
+            validate_inventory(self.root, load_inventory(self.root / "data/releases.json"))
+
+    def test_missing_qualification_state_is_rejected(self) -> None:
+        inventory = load_inventory(self.root / "data/releases.json")
+        inventory["releases"]["demo"]["versions"]["rc1"]["qualification"] = {}
+        with self.assertRaisesRegex(ReleaseInventoryError, "invalid qualification type"):
+            validate_inventory(self.root, inventory)
 
     def test_hosted_verifier_checks_inventory_bytes(self) -> None:
         verified = verify_hosted(self.root, (self.root / "docs").as_uri())

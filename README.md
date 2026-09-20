@@ -12,16 +12,16 @@ before/after screenshots, download bundles, checksums, and apply instructions.
 - `data/patches.json` — site content plus one entry per patch. Entries with
   `"hidden": true` are kept but not built or listed.
 - `data/releases.json` — append-only public release inventory. It pins the
-  current version, download filenames, sizes, SHA-256 hashes, and the Capcom
-  readiness evidence that qualified each release.
+  current version plus every retained historical download's filename, size,
+  SHA-256 hash, and qualification/provenance state.
 - `data/mra/` — vendored base MRAs from [jotego/jtbin](https://github.com/jotego/jtbin)
   (GPLv2, attribution headers preserved) that the MiSTer patch overlays are
   derived from.
-- `data/generated/` — legacy per-patch member manifests retained with the
-  existing publication history. Inventoried downloads carry their own
-  manifests.
 - `tools/build.py` — verifies inventoried downloads and renders HTML into
   `docs/`.
+- `tools/release_packager.py` — deterministic IPS/MRA packaging loaded only
+  by Capcom's isolated candidate factory from a pinned commit; the site build
+  never invokes it.
 - `tools/import_release.py` — the only supported path from an immutable,
   qualified Capcom candidate into `docs/downloads` and `data/releases.json`.
 - `tools/ipsutil.py` — IPS encoder/decoder (has a self-test: `python3 tools/ipsutil.py`).
@@ -50,8 +50,9 @@ download against `data/releases.json`, reads its embedded manifest for the
 page, and fails if a file is missing or changed. It does not inspect Capcom
 development outputs and cannot regenerate or replace a published patch kit.
 
-The CPS+ audio project still uses its existing project-kit path while its
-separate full-media qualification remains outstanding.
+The build requires every ZIP under `docs/downloads` to appear exactly once in
+the inventory. CPS+ entries are marked as pre-boundary audio publications and
+cannot be mistaken for qualified candidates.
 
 Every download contains a `readme.txt` describing the project, the changes,
 apply instructions, and legal notes. IPS bundles additionally contain a

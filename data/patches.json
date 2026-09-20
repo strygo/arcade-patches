@@ -143,8 +143,6 @@
         "Sound effects, voices and the announcer always play live through the original arcade audio path; packs substitute music only, and a few cues deliberately pass through to the arcade board's own music."
       ],
       "kit": {
-        "source": "${CPSPLUS_TREE:-../capcom/cpsplus}/dist/cpsplus-kit-1.3b.zip",
-        "zipname": "cpsplus-kit-1.3b.zip",
         "label": "CPS+ MiSTer kit: cores, MRAs and the pack builder"
       },
       "highlights": [

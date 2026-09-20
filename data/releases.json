@@ -1,8 +1,103 @@
 {
   "releases": {
+    "cps-plus": {
+      "current": "1.3b",
+      "versions": {
+        "1.0": {
+          "date": "2026-08-25",
+          "files": {
+            "kit": {
+              "name": "cpsplus-kit-1.0.zip",
+              "sha256": "947d67db49f19204c6cea6fa9040ec7b6ac74c238edfd2ebcbc4afd197a623eb",
+              "size": 4624899
+            }
+          },
+          "kind": "kit",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "audio-publication-unqualified"
+          }
+        },
+        "1.1": {
+          "date": "2026-09-01",
+          "files": {
+            "kit": {
+              "name": "cpsplus-kit-1.1.zip",
+              "sha256": "c6a45e8f61146a04d40d1a90ac5377c4fad2505c35e3726c7bde3982522ac8b7",
+              "size": 4733113
+            }
+          },
+          "kind": "kit",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "audio-publication-unqualified"
+          }
+        },
+        "1.2": {
+          "date": "2026-09-10",
+          "files": {
+            "kit": {
+              "name": "cpsplus-kit-1.2.zip",
+              "sha256": "d90f72b42c57e30bd333b0b40ed5dc60b0ae3d4e8bdb94e8d71955eb897dfa3d",
+              "size": 4807485
+            }
+          },
+          "kind": "kit",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "audio-publication-unqualified"
+          }
+        },
+        "1.3": {
+          "date": "2026-09-17",
+          "files": {
+            "kit": {
+              "name": "cpsplus-kit-1.3.zip",
+              "sha256": "82f9e0936a5b9d6ca4193c00d94d5737ed16a19770964ff352f093d3e862cb14",
+              "size": 4930352
+            }
+          },
+          "kind": "kit",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "audio-publication-unqualified"
+          }
+        },
+        "1.3b": {
+          "date": "2026-09-19",
+          "files": {
+            "kit": {
+              "name": "cpsplus-kit-1.3b.zip",
+              "sha256": "c234ed13e33ebbfb3732b95de773a0c4840900d491f98a84b8683435568f293a",
+              "size": 4897931
+            }
+          },
+          "kind": "kit",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "audio-publication-unqualified"
+          }
+        }
+      }
+    },
     "final-fight-ex": {
       "current": "rc2",
       "versions": {
+        "rc1": {
+          "date": "2026-08-25",
+          "files": {
+            "kit": {
+              "name": "final-fight-cd-rc1-kit.zip",
+              "sha256": "fff8504621075f9ab49ed553e2e2f707a7ca3c0fd8278772b301402cc4e98471",
+              "size": 251451
+            }
+          },
+          "kind": "kit",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "historical-publication"
+          }
+        },
         "rc2": {
           "date": "2026-09-17",
           "files": {
@@ -88,6 +183,36 @@
     "sfa2-gold": {
       "current": "rc3",
       "versions": {
+        "rc1": {
+          "date": "2026-08-25",
+          "files": {
+            "kit": {
+              "name": "sfa2-gold-rc1-kit.zip",
+              "sha256": "ce2435a190fccf9baab718b47343fdaf291a30fcc59088ff7439ad65cef2a099",
+              "size": 1020685
+            }
+          },
+          "kind": "kit",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "historical-publication"
+          }
+        },
+        "rc2": {
+          "date": "2026-08-27",
+          "files": {
+            "kit": {
+              "name": "sfa2-gold-rc2-kit.zip",
+              "sha256": "762ddfb6bfd648ae60e13e6e316aafb16815c3684f8549dec5f8bf9b1ac03325",
+              "size": 1020662
+            }
+          },
+          "kind": "kit",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "historical-publication"
+          }
+        },
         "rc3": {
           "date": "2026-09-17",
           "files": {
@@ -198,6 +323,26 @@
     "ssf2t-gmc": {
       "current": "rc2",
       "versions": {
+        "rc1": {
+          "date": "2026-09-10",
+          "files": {
+            "ips": {
+              "name": "ssf2t-gmc-rc1-ips.zip",
+              "sha256": "40a326aac4fade66d0c6c5836803434adb0bff40991d5a5060957c15c9dc2f51",
+              "size": 22665
+            },
+            "mra": {
+              "name": "ssf2t-gmc-rc1-mra.zip",
+              "sha256": "74f923f39e7490e95ac583d8c6e390a2ad2570fc8f621ac7952e0c975909b588",
+              "size": 28267
+            }
+          },
+          "kind": "rom",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "historical-publication"
+          }
+        },
         "rc2": {
           "date": "2026-09-17",
           "files": {
@@ -228,6 +373,26 @@
     "vhunt2-english": {
       "current": "rc2",
       "versions": {
+        "rc1": {
+          "date": "2026-07-10",
+          "files": {
+            "ips": {
+              "name": "vhunt2-english-rc1-ips.zip",
+              "sha256": "6de4d8a1021fa84219a6e939fe8867398d13687aae3eac93ff6aa9da35611e54",
+              "size": 16206
+            },
+            "mra": {
+              "name": "vhunt2-english-rc1-mra.zip",
+              "sha256": "707c7c053f47bd3e5efc376030318020189876a7c1d47cc4a85a5f0831283cb1",
+              "size": 19317
+            }
+          },
+          "kind": "rom",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "historical-publication"
+          }
+        },
         "rc2": {
           "date": "2026-09-17",
           "files": {
@@ -258,6 +423,26 @@
     "vsav2-english": {
       "current": "rc2",
       "versions": {
+        "rc1": {
+          "date": "2026-07-10",
+          "files": {
+            "ips": {
+              "name": "vsav2-english-rc1-ips.zip",
+              "sha256": "d816711868ce6c884cb9242becb22e76a8052b49bba27c571440929dadc4787a",
+              "size": 16329
+            },
+            "mra": {
+              "name": "vsav2-english-rc1-mra.zip",
+              "sha256": "aaedb9bd9ceec0280df1999a4cfef3cbc338577cd68ea17356127849e87f2a28",
+              "size": 19572
+            }
+          },
+          "kind": "rom",
+          "qualification": {
+            "note": "Preserved public download predating the qualified-candidate importer.",
+            "type": "historical-publication"
+          }
+        },
         "rc2": {
           "date": "2026-09-17",
           "files": {

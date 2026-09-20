@@ -12,6 +12,12 @@ from pathlib import Path, PurePosixPath
 
 SCHEMA = 1
 ROLES = ("ips", "mra", "chd", "kit")
+QUALIFICATION_TYPES = (
+    "qualified-candidate",
+    "unchanged-public-parity",
+    "historical-publication",
+    "audio-publication-unqualified",
+)
 
 
 class ReleaseInventoryError(Exception):
@@ -118,16 +124,17 @@ def load_inventory(path: Path) -> dict:
     return inventory
 
 
-def load_site_patches(root: Path) -> dict[str, dict]:
+def load_site_entries(root: Path) -> dict[str, dict]:
     config = read_json(Path(root) / "data" / "patches.json")
-    patches = config.get("patches")
-    require(isinstance(patches, list), "data/patches.json has no patches list")
     result = {}
-    for patch in patches:
-        require(isinstance(patch, dict), "patch entry must be an object")
-        slug = token(patch.get("slug"), "patch slug")
-        require(slug not in result, f"duplicate patch slug: {slug}")
-        result[slug] = patch
+    for group in ("patches", "projects"):
+        values = config.get(group, [])
+        require(isinstance(values, list), f"data/patches.json {group} must be a list")
+        for entry in values:
+            require(isinstance(entry, dict), f"{group} entry must be an object")
+            slug = token(entry.get("slug"), f"{group} slug")
+            require(slug not in result, f"duplicate site slug: {slug}")
+            result[slug] = entry
     return result
 
 
@@ -135,8 +142,10 @@ def validate_file_record(root: Path, slug: str, version: str, role: str,
                          record: dict) -> dict:
     require(isinstance(record, dict), f"invalid {slug} {version} {role} file record")
     name = relative_name(record.get("name"))
-    require(file_role(slug, version, name) == role,
-            f"role does not match filename for {slug} {version}: {name}")
+    # Migrated releases retain their historical public filenames.  New
+    # imports use file_role()'s canonical slug-version-role convention, while
+    # old names such as cpsplus-kit-1.3b.zip and final-fight-cd-rc1-kit.zip
+    # remain valid because their explicit role and digest are inventoried.
     sha = record.get("sha256")
     size = record.get("size")
     require(isinstance(sha, str) and re.fullmatch(r"[0-9a-f]{64}", sha),
@@ -150,14 +159,33 @@ def validate_file_record(root: Path, slug: str, version: str, role: str,
     return {"zipname": name, "size": size, "sha256": sha}
 
 
+def validate_qualification(slug: str, version: str, qualification: object) -> None:
+    require(isinstance(qualification, dict), f"missing qualification: {slug} {version}")
+    kind = qualification.get("type")
+    require(kind in QUALIFICATION_TYPES,
+            f"invalid qualification type for {slug} {version}: {kind!r}")
+    if kind in ("historical-publication", "audio-publication-unqualified"):
+        require(isinstance(qualification.get("note"), str) and qualification["note"],
+                f"unqualified publication needs a note: {slug} {version}")
+        return
+    for field in ("candidate", "capcom_source_commit", "ready_record_sha256", "release_sha256"):
+        require(isinstance(qualification.get(field), str) and qualification[field],
+                f"qualified release lacks {field}: {slug} {version}")
+    require(re.fullmatch(r"[0-9a-f]{40}", qualification["capcom_source_commit"]) is not None,
+            f"invalid Capcom commit: {slug} {version}")
+    for field in ("ready_record_sha256", "release_sha256"):
+        require(re.fullmatch(r"[0-9a-f]{64}", qualification[field]) is not None,
+                f"invalid {field}: {slug} {version}")
+
+
 def validate_inventory(root: Path, inventory: dict, *, require_complete: bool = True,
                        require_page_current: bool = True) -> None:
     require(inventory.get("schema") == SCHEMA, "unsupported release inventory schema")
     releases = inventory.get("releases")
     require(isinstance(releases, dict), "release inventory has no releases map")
-    patches = load_site_patches(root)
-    active = {slug for slug, patch in patches.items()
-              if not patch.get("hidden") and patch.get("version")}
+    entries = load_site_entries(root)
+    active = {slug for slug, entry in entries.items()
+              if not entry.get("hidden") and entry.get("version")}
     if require_complete:
         require(set(releases) == active,
                 f"inventory must cover active patches exactly; missing={sorted(active-set(releases))}, "
@@ -165,18 +193,19 @@ def validate_inventory(root: Path, inventory: dict, *, require_complete: bool = 
     used_names: set[str] = set()
     for slug, release in sorted(releases.items()):
         token(slug, "release slug")
-        require(slug in patches, f"inventory release has no patch entry: {slug}")
+        require(slug in entries, f"inventory release has no site entry: {slug}")
         require(isinstance(release, dict), f"invalid release entry: {slug}")
         current = token(release.get("current"), f"{slug} current version")
         versions = release.get("versions")
         require(isinstance(versions, dict) and current in versions,
                 f"{slug} current version is absent from its history")
         if slug in active and require_page_current:
-            require(patches[slug]["version"] == current,
-                    f"{slug} page version {patches[slug]['version']} != inventory current {current}")
+            require(entries[slug]["version"] == current,
+                    f"{slug} page version {entries[slug]['version']} != inventory current {current}")
         for version, item in sorted(versions.items()):
             token(version, f"{slug} version")
             require(isinstance(item, dict), f"invalid release version: {slug} {version}")
+            validate_qualification(slug, version, item.get("qualification"))
             kind = item.get("kind")
             require(kind in ("rom", "chd", "kit"), f"invalid release kind: {slug} {version}")
             files = item.get("files")
@@ -191,6 +220,10 @@ def validate_inventory(root: Path, inventory: dict, *, require_complete: bool = 
                 require(info["zipname"] not in used_names,
                         f"download appears in more than one release: {info['zipname']}")
                 used_names.add(info["zipname"])
+    published_names = {path.name for path in (Path(root) / "docs" / "downloads").glob("*.zip")}
+    require(used_names == published_names,
+            f"download inventory must cover docs/downloads exactly; "
+            f"missing={sorted(published_names-used_names)}, extra={sorted(used_names-published_names)}")
 
 
 def _rom_bundle(root: Path, patch: dict, files: dict) -> dict:
@@ -306,7 +339,7 @@ def import_candidate(root: Path, ready_path: Path, candidate: Path) -> dict:
     require(isinstance(plan, dict), "candidate has no release plan")
     slug = token(plan.get("kit"), "candidate kit")
     version = token(plan.get("version"), "candidate version")
-    patches = load_site_patches(root)
+    patches = load_site_entries(root)
     require(slug in patches and not patches[slug].get("hidden"),
             f"candidate has no active site page: {slug}")
     require(patches[slug].get("version") == version,
@@ -345,6 +378,7 @@ def import_candidate(root: Path, ready_path: Path, candidate: Path) -> dict:
             "files": files,
             "kind": kind,
             "qualification": {
+                "type": "qualified-candidate",
                 "candidate": plan.get("candidate"),
                 "capcom_source_commit": plan.get("sources", {}).get("capcom"),
                 "ready_record_sha256": sha256_file(ready_path),
