@@ -74,8 +74,13 @@
           },
           "kind": "kit",
           "qualification": {
-            "note": "Preserved public download predating the qualified-candidate importer.",
-            "type": "audio-publication-unqualified"
+            "candidate": "1.3b-parity-2",
+            "capcom_source_commit": "c25a42ba2312f590b61200e891351935951ff88d",
+            "publication_commit": "093099878af0705697f7aaadda6e53f035fca1d3",
+            "ready_record": "release/validation/cps-plus.public-parity.ready.json",
+            "ready_record_sha256": "c137b08e251a067925e3e0949784d72c73f31f7aba5ef78cd452fe90109f8f68",
+            "release_sha256": "eedf3968d9723abb18b7cd2bf4a8e7d4fdcbbaf088b796835b1b973b3c742aec",
+            "type": "unchanged-public-parity"
           }
         }
       }

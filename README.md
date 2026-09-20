@@ -51,8 +51,8 @@ page, and fails if a file is missing or changed. It does not inspect Capcom
 development outputs and cannot regenerate or replace a published patch kit.
 
 The build requires every ZIP under `docs/downloads` to appear exactly once in
-the inventory. CPS+ entries are marked as pre-boundary audio publications and
-cannot be mistaken for qualified candidates.
+the inventory. Historical CPS+ versions retain their pre-boundary provenance;
+the current version records its Capcom public-parity qualification.
 
 Every download contains a `readme.txt` describing the project, the changes,
 apply instructions, and legal notes. IPS bundles additionally contain a
