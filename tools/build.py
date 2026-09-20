@@ -455,6 +455,11 @@ game boots on Japanese, USA, and Export BIOS regions.</p>
 </table>"""
 
 
+def tools_notice(bundle: dict) -> str:
+    return (f'<p>Tools updated {esc(bundle["tools_updated"])}. Game version unchanged.</p>'
+            if bundle.get("tools_updated") else "")
+
+
 def render_download(patch: dict, bundle: dict | None) -> str:
     if not bundle:
         return ""
@@ -484,7 +489,7 @@ def render_rom_download(patch: dict, bundle: dict) -> str:
     mame_build = patch.get("mame_build", True)
     kit = ("Patch kit for MAME, HBMAME, MiSTer and original hardware" if mame_build
            else "Patch kit for HBMAME and MiSTer")
-    parts = ["<h2>Downloads</h2>"]
+    parts = ["<h2>Downloads</h2>", tools_notice(bundle)]
     if variants:
         parts.append(download_box(f"{kit}, all {n} builds", ips))
         if mra_info:
@@ -497,6 +502,12 @@ def render_rom_download(patch: dict, bundle: dict) -> str:
 set <code>{setname}.zip</code>.{" Every build is made from that one set." if variants else ""}
 Each zip includes a <code>readme.txt</code> with full instructions.</p>""")
 
+    if bundle.get("kit_revision", 1) > 1:
+        parts.append("<p>Merged, split and complete sets work, including nested or renamed ROMs. "
+                     "Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), "
+                     "and <code>--check</code> to check inputs before building. ZIPs and extracted folders "
+                     "need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's "
+                     "ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>")
     if variants:
         has_hb = any(v.get("hbmame") for v in variants)
         head = "<tr><th>Build</th><th><code>--variant</code></th>"
@@ -695,7 +706,13 @@ def render_kit_download(patch: dict, kit: dict) -> str:
     needs = "".join(f"<li>{esc(x)}</li>" for x in rec.get("requires", []))
     cmd = rec.get("kit_command") or (
         f"python3 apply.py --help")
+    inputs_note = ("<p>Merged, split and complete archives and extracted ROM folders are accepted. "
+                   "Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> "
+                   "to verify arcade inputs before rebuilding from your disc. "
+                   "7z needs installed 7-Zip; ZIP does not.</p>" if kit.get("kit_revision", 1) > 1 else "")
     return f"""<h2>Download</h2>
+{tools_notice(kit)}
+{inputs_note}
 {download_box("Reconstruction kit, rebuilds from your own disc + romset", kit)}
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>

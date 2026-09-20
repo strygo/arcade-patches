@@ -1,34 +1,19 @@
 #!/usr/bin/env python3
-"""Apply this patch set to your own dump of the game.
+"""Apply a kit to merged, split, complete or extracted MAME ROM sources.
 
-Usage:
-    python3 apply.py <stock zip> --out-dir out   writes every platform's files (recommended):
-                                                   out/mame/     MAME / original hardware set
-                                                   out/hbmame/   HBMAME set
-                                                   out/mister/   MiSTer MRA (uses your stock zip)
-    python3 apply.py <stock zip>                 writes <set>_patched.zip next to it
-    python3 apply.py <stock zip> -o out.zip      writes to the given path
-    python3 apply.py <stock zip> --hbmame        writes the HBMAME clone set zip
-    python3 apply.py <rom directory>             patches extracted files in place
-
-Bundles that carry several builds of one game (regional editions) take
---variant <key> to choose one (--out-dir makes all of them unless you do);
---list-variants shows them.
-
-The stock zip is your own MAME-format romset (see manifest.json for the exact
-set this patch targets). Every file is checksum-verified before and after
-patching; nothing is written unless the source matches the expected original.
-
-Requires only Python 3.8+. No third-party modules.
+Use --rompath DIR --out-dir OUT for collection discovery. Existing positional
+extracted-directory mode remains an explicit legacy in-place operation.
 """
-
 import argparse
 import json
 import os
 import sys
-import zipfile
-import zlib
+import shutil
+import tempfile
+from pathlib import Path
+from rom_sources import Resolver, RomError, search_paths, write_zip, verify
 
+import zlib
 
 def apply_ips(patch: bytes, src: bytes) -> bytes:
     if patch[:5] != b"PATCH":
@@ -104,49 +89,6 @@ def fail(msg: str) -> None:
     sys.exit(1)
 
 
-def patch_zip(manifest, patches, in_path, out_path):
-    expected = {m["name"]: m for m in manifest["members"]}
-    with zipfile.ZipFile(in_path) as zin:
-        names = set(zin.namelist())
-        missing_patched = sorted(
-            n for n, m in expected.items() if m["action"] == "patch" and n not in names
-        )
-        added = sorted(n for n, m in expected.items() if m["action"] == "add")
-        if missing_patched:
-            fail(
-                f"{in_path} does not look like a {manifest['set']} set; "
-                f"missing: {', '.join(missing_patched)}"
-            )
-        missing_other = sorted(set(expected) - names - set(added))
-        if missing_other:
-            print(f"warning: set is missing unpatched files: {', '.join(missing_other)}")
-        with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as zout:
-            for name in sorted(names):
-                data = zin.read(name)
-                m = expected.get(name)
-                if m is None:
-                    print(f"  {name}: not in manifest, copied unchanged")
-                    zout.writestr(name, data)
-                    continue
-                if m["action"] == "patch":
-                    if crc32(data) != m["stock_crc32"]:
-                        fail(
-                            f"{name}: CRC32 {crc32(data)} does not match the expected "
-                            f"original {m['stock_crc32']}. Wrong or already-patched set; "
-                            f"this patch targets MAME set '{manifest['set']}' "
-                            f"({manifest['game']})."
-                        )
-                    data = apply_ips(patches[name], data)
-                    if crc32(data) != m["patched_crc32"]:
-                        fail(f"{name}: patched output checksum mismatch (bad patch file?)")
-                    print(f"  {name}: patched, CRC32 {m['stock_crc32']} -> {m['patched_crc32']}")
-                elif crc32(data) != m["stock_crc32"]:
-                    print(f"  {name}: warning: CRC32 differs from the reference set, copied unchanged")
-                zout.writestr(name, data)
-            for name in added:
-                zout.writestr(name, build_added(expected[name], patches[name]))
-    print(f"Wrote {out_path}")
-
 
 def build_added(m, patch):
     """A ROM the stock set doesn't have: its patch creates it from nothing."""
@@ -156,41 +98,6 @@ def build_added(m, patch):
     print(f"  {m['name']}: added, CRC32 {m['patched_crc32']}")
     return data
 
-
-def patch_zip_hbmame(manifest, patches, in_path, out_path):
-    hb = manifest.get("hbmame")
-    if not hb:
-        fail("this bundle has no HBMAME set mapping (--hbmame not supported here)")
-    expected = {m["name"]: m for m in manifest["members"] if m["action"] != "copy"}
-    with zipfile.ZipFile(in_path) as zin:
-        names = set(zin.namelist())
-        missing = sorted(n for n, m in expected.items() if m["action"] == "patch" and n not in names)
-        if missing:
-            fail(
-                f"{in_path} does not look like a {manifest['set']} set; "
-                f"missing: {', '.join(missing)}"
-            )
-        with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as zout:
-            for name in sorted(expected):
-                m = expected[name]
-                if m["action"] == "add":
-                    zout.writestr(hb["renames"][name], build_added(m, patches[name]))
-                    continue
-                data = zin.read(name)
-                if crc32(data) != m["stock_crc32"]:
-                    fail(
-                        f"{name}: CRC32 {crc32(data)} does not match the expected "
-                        f"original {m['stock_crc32']}. Wrong or already-patched set; "
-                        f"this patch targets MAME set '{manifest['set']}' "
-                        f"({manifest['game']})."
-                    )
-                data = apply_ips(patches[name], data)
-                if crc32(data) != m["patched_crc32"]:
-                    fail(f"{name}: patched output checksum mismatch (bad patch file?)")
-                new_name = hb["renames"][name]
-                print(f"  {name} -> {new_name}: patched, CRC32 {m['patched_crc32']}")
-                zout.writestr(new_name, data)
-    print(f"Wrote {out_path}")
 
 
 def patch_dir(manifest, patches, in_dir):
@@ -224,125 +131,144 @@ def patch_dir(manifest, patches, in_dir):
         sys.exit(1)
 
 
-def write_out_dir(target, out_dir, only_variant):
-    """Every platform's files for each build, in one run."""
-    base = read_manifest()
-    keys = [v["key"] for v in base.get("variants", [])]
-    if only_variant or not keys:
-        keys = [only_variant]
-    for key in keys:
-        manifest, patches = load_bundle(key)
-        if manifest.get("variant"):
-            print(f"== {manifest['variant']['label']} (--variant {key})")
-        if base.get("mame_build", True):
-            sub = os.path.join("mame", key) if key else "mame"
-            mame = os.path.join(out_dir, sub, manifest["set"] + ".zip")
-            os.makedirs(os.path.dirname(mame), exist_ok=True)
-            print(f"MAME ({os.path.relpath(mame, out_dir)}):")
-            patch_zip(manifest, patches, target, mame)
-        if manifest.get("hbmame"):
-            hb = os.path.join(out_dir, "hbmame", manifest["hbmame"]["setname"] + ".zip")
-            os.makedirs(os.path.dirname(hb), exist_ok=True)
-            print(f"HBMAME ({os.path.relpath(hb, out_dir)}):")
-            patch_zip_hbmame(manifest, patches, target, hb)
-            if base.get("mister_hbmame"):
-                # The CPS+ MRAs for this game load the HBMAME set from the card,
-                # so the SD-card tree carries a copy next to the MRA.
-                card = os.path.join(out_dir, "mister", "games", "hbmame", os.path.basename(hb))
-                os.makedirs(os.path.dirname(card), exist_ok=True)
-                with open(hb, "rb") as fin, open(card, "wb") as fout:
-                    fout.write(fin.read())
-                print(f"MiSTer: wrote {os.path.relpath(card, out_dir)} (for the CPS+ MRAs)")
-        if manifest.get("mra"):
-            src = os.path.join(HERE, *manifest["mra"].split("/"))
-            dst = os.path.join(out_dir, *manifest["mra"].split("/"))
-            os.makedirs(os.path.dirname(dst), exist_ok=True)
-            with open(src, "rb") as fin, open(dst, "wb") as fout:
-                fout.write(fin.read())
-            print(f"MiSTer: wrote {os.path.relpath(dst, out_dir)}")
-        print()
-    print(f"Done. Everything is in {out_dir}/ (see readme.txt for where each file goes).")
-    if base.get("mame_build") is False:
-        print("There is no MAME build: stock MAME can't load the added program ROM.")
-        print("HBMAME and MiSTer load it with no checksum warnings. MiSTer uses your")
-        print("stock set in games/mame/.")
-    else:
-        print("MAME reports checksum warnings for the patched ROMs; that's expected.")
-        print("HBMAME and MiSTer load without them. MiSTer uses your stock set in games/mame/.")
+def requirements(manifest, compact=False):
+    result = []
+    for member in manifest["members"]:
+        if member["action"] == "add" or member.get("role") == "device" or member["name"] == "dl-1425.bin":
+            continue
+        if compact and member["action"] == "copy":
+            continue
+        result.append({"name": member["name"], "size": member["size"],
+                       "crc32": member["stock_crc32"], "sha256": member.get("stock_sha256")})
+    return result
+
+
+def build_members(manifest, patches, source, compact=False):
+    result = {}
+    for m in manifest["members"]:
+        name = m["name"]
+        if name == "dl-1425.bin" or m.get("role") == "device" or (compact and m["action"] == "copy"):
+            continue
+        if m["action"] == "add":
+            data = build_added(m, patches[name])
+        elif m["action"] == "patch":
+            data = apply_ips(patches[name], source[name])
+        else:
+            data = source[name]
+        expected = {"size": m.get("output_size", m["size"]),
+                    "crc32": m.get("patched_crc32", m.get("stock_crc32")),
+                    "sha256": m.get("output_sha256")}
+        if not expected["sha256"] or not verify(data, expected):
+            raise RomError(f"{name}: output identity mismatch or missing output SHA-256")
+        result[manifest["hbmame"]["renames"][name] if compact else name] = data
+    return result
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("target", nargs="?", help="stock romset zip, or a directory of extracted ROM files")
-    ap.add_argument("--out-dir", help="write the MAME, HBMAME and MiSTer files for every build here")
-    ap.add_argument("-o", "--output", help="output zip path (zip input only)")
-    ap.add_argument(
-        "--hbmame",
-        action="store_true",
-        help="write the HBMAME clone set zip (patched ROMs only, HBMAME names)",
-    )
-    ap.add_argument("--variant", help="which build to apply, for bundles that hold several")
-    ap.add_argument("--list-variants", action="store_true",
-                    help="show the builds in this bundle and exit")
-    args = ap.parse_args()
-
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("target", nargs="?")
+    parser.add_argument("--rompath", action="append", default=[])
+    parser.add_argument("--out-dir")
+    parser.add_argument("-o", "--output")
+    parser.add_argument("--hbmame", action="store_true")
+    parser.add_argument("--platform", choices=("all", "mame", "hbmame", "mister"))
+    parser.add_argument("--variant")
+    parser.add_argument("--list-variants", action="store_true")
+    parser.add_argument("--include-devices", action="store_true")
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--check-runtime", action="store_true")
+    parser.add_argument("--self-test", action="store_true")
+    args = parser.parse_args()
+    if args.self_test:
+        assert apply_ips(b"PATCH\x00\x00\x00\x00\x01ZEOF", b"ABC") == b"ZBC"
+        print("IPS applier self-test passed")
+        return
+    base = read_manifest()
     if args.list_variants:
-        here = os.path.dirname(os.path.abspath(__file__))
-        with open(os.path.join(here, "manifest.json"), "r", encoding="utf-8") as f:
-            m = json.load(f)
-        for v in m.get("variants", []):
-            print(f"  {v['key']:12} {v['label']}")
-        if not m.get("variants"):
-            print("  (single build; no --variant needed)")
+        for variant in base.get("variants", []):
+            print(f"{variant['key']}: {variant['label']}")
         return
-
-    if not args.target:
-        ap.error("the following arguments are required: target")
-    if args.out_dir:
-        if os.path.isdir(args.target) or args.output or args.hbmame:
-            ap.error("--out-dir takes the stock zip and no -o/--hbmame")
-        m = read_manifest()
-        print(f"{m['title']} ({m['version']})")
-        print(f"Target: MAME set '{m['set']}' - {m['game']}")
-        print()
-        write_out_dir(args.target, args.out_dir, args.variant)
-        return
-    manifest, patches = load_bundle(args.variant)
-    if manifest.get("mame_build") is False and not args.hbmame:
-        fail("this edition has no MAME build (stock MAME can't load its added ROM); "
-             "use --out-dir, or --hbmame for the HBMAME set")
-    print(f"{manifest['title']} ({manifest['version']})")
-    print(f"Target: MAME set '{manifest['set']}' - {manifest['game']}")
-    if manifest.get("variant"):
-        print(f"Build:  {manifest['variant']['label']} (--variant {manifest['variant']['key']})")
-    print()
-
-    if os.path.isdir(args.target):
-        if args.hbmame:
-            fail("--hbmame needs the stock zip as input, not a directory")
+    if args.out_dir and args.output:
+        parser.error("choose --out-dir or --output")
+    if args.hbmame and args.platform not in (None, "hbmame"):
+        parser.error("--hbmame conflicts with --platform")
+    platform = args.platform or ("hbmame" if args.hbmame else "all" if args.out_dir or args.check or args.check_runtime else "mame")
+    if platform in ("all", "mister") and not args.out_dir and not (args.check or args.check_runtime):
+        parser.error("this platform needs --out-dir")
+    if args.target and os.path.isdir(args.target) and not args.out_dir and not args.rompath and not (args.check or args.check_runtime):
+        if platform != "mame" or args.output:
+            parser.error("use --rompath for directory discovery; positional directory mode patches in place")
+        manifest, patches = load_bundle(args.variant)
         patch_dir(manifest, patches, args.target)
+        return
+    keys = [v["key"] for v in base.get("variants", [])]
+    if args.variant or not keys:
+        keys = [args.variant]
+    elif not args.out_dir and not (args.check or args.check_runtime):
+        parser.error("choose --variant or use --out-dir for all builds")
+    bundles = [load_bundle(key) for key in keys]
+    default_name = (bundles[0][0].get("hbmame", {}).get("setname", base["set"])
+                    if platform == "hbmame" else base["set"] + "_patched") + ".zip"
+    output = Path(args.out_dir or args.output or default_name).resolve()
+    if args.target and Path(args.target).resolve() == output:
+        parser.error("output must differ from input")
+    resolver = Resolver(search_paths(args.target, args.rompath, HERE),
+                        hints=[base["set"], *base.get("parents", []), "qsound", "qsound_hle"],
+                        exclude=[output], progress=print)
+    needed = {}
+    for manifest, _ in bundles:
+        need_full = platform in ("mame", "all") and base.get("mame_build", True)
+        need_hb = (platform in ("hbmame", "all") or (platform == "mister" and base.get("mister_hbmame"))) and bool(manifest.get("hbmame"))
+        if platform == "mame" and not base.get("mame_build", True):
+            raise RomError("This kit has no MAME build; select HBMAME or MiSTer")
+        if platform == "hbmame" and not need_hb:
+            raise RomError("This kit has no HBMAME mapping")
+        if need_full or need_hb or args.check_runtime:
+            for spec in requirements(manifest, compact=not (need_full or args.check_runtime)):
+                if spec["name"] in needed and needed[spec["name"]] != spec:
+                    raise RomError("Variants require conflicting stock identities")
+                needed[spec["name"]] = spec
+    source = resolver.resolve(needed.values())
+    devices = resolver.devices(include=args.include_devices) if needed else {}
+    if args.check_runtime:
+        resolver.devices(include=True)
+        print("Game and firmware content verified; MiSTer also needs its MRA-named archive paths on the card.")
+    if args.check or args.check_runtime:
+        print("Build inputs verified")
+        return
+    # Build and verify every selected result before publishing any file.
+    outputs = {}
+    for manifest, patches in bundles:
+        key = manifest.get("variant", {}).get("key")
+        if platform in ("all", "mame") and base.get("mame_build", True):
+            name = str(Path("mame") / (key or "") / (base["set"] + ".zip"))
+            outputs[name] = build_members(manifest, patches, source) | devices
+        if manifest.get("hbmame") and (platform in ("all", "hbmame") or (platform == "mister" and base.get("mister_hbmame"))):
+            name = "hbmame/" + manifest["hbmame"]["setname"] + ".zip"
+            members = build_members(manifest, patches, source, compact=True)
+            if platform in ("all", "hbmame"):
+                outputs[name] = members
+            if platform in ("all", "mister") and base.get("mister_hbmame"):
+                outputs["mister/games/" + name] = members
+        if platform in ("all", "mister") and manifest.get("mra"):
+            outputs[manifest["mra"]] = (Path(HERE) / manifest["mra"]).read_bytes()
+    if not outputs:
+        raise RomError("No output is available for the selected platform")
+    if args.out_dir:
+        # A staging/backup transaction protects existing destinations on failure.
+        from rom_sources import publish_tree
+        publish_tree(output, outputs)
     else:
-        out = args.output
-        if not out:
-            if args.hbmame:
-                setname = manifest.get("hbmame", {}).get("setname")
-                if not setname:
-                    fail("this bundle has no HBMAME set mapping (--hbmame not supported here)")
-                out = os.path.join(os.path.dirname(os.path.abspath(args.target)), setname + ".zip")
-            else:
-                base, ext = os.path.splitext(args.target)
-                tag = "_" + manifest["variant"]["key"] if manifest.get("variant") else ""
-                out = base + tag + "_patched" + (ext or ".zip")
-        if os.path.abspath(out) == os.path.abspath(args.target):
-            fail("output path must differ from input path")
-        if args.hbmame:
-            patch_zip_hbmame(manifest, patches, args.target, out)
-            print(f"Put it in HBMAME's roms/ folder next to your stock {manifest['set']}.zip;")
-            print(f"the game appears as '{manifest['hbmame']['setname']}', with no checksum warnings.")
-        else:
-            patch_zip(manifest, patches, args.target, out)
-            print("MAME reports checksum warnings for the patched ROMs; that's expected.")
+        write_zip(output, next(iter(outputs.values())))
+    print(f"Built game files: {output}")
+    if platform in ("all", "hbmame"):
+        print("Compact HBMAME clones use the stock game archives and QSound in your emulator ROM path.")
+    if platform in ("all", "mister"):
+        print("MiSTer MRAs use stock archives on the card; renamed input archives are not installed automatically.")
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (RomError, OSError, ValueError) as exc:
+        raise SystemExit(f"ERROR: {exc}")

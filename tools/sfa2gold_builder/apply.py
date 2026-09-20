@@ -29,12 +29,13 @@ Usage (recommended — build everything for one region):
 Usage (single file):
     python3 apply.py --iso ... --romset ... --region us --size 8mb --out sfa2g.zip
 
-Requires only Python 3.8+ — no emulator, no assembler.
+Requires only Python 3.10+ — no emulator, no assembler.
 """
 import argparse
 import base64
 import hashlib
 import json
+import re
 import shutil
 import sys
 import zipfile
@@ -42,6 +43,7 @@ from pathlib import Path
 
 import assemble
 import extract as ex
+from rom_sources import Resolver, RomError, QSOUND, search_paths, verify, publish_tree, write_zip
 
 HERE = Path(__file__).resolve().parent
 PROFILES = {"jp": ex.JP, "us": ex.US, "eu": ex.EU, "asia": ex.ASIA}
@@ -84,6 +86,9 @@ def write_set(members, want, out_path):
     Those are dropped; only a member this build needs and cannot find is an
     error, and it says which.
     """
+    want = {n: h for n, h in want.items() if n != "dl-1425.bin" or n in members}
+    if "dl-1425.bin" in members and not verify(members["dl-1425.bin"], QSOUND):
+        fail("QSound firmware identity mismatch")
     missing = sorted(set(want) - set(members))
     if missing:
         fail("your romset is missing " + ", ".join(missing)
@@ -97,39 +102,50 @@ def write_set(members, want, out_path):
     for m in want:
         if hashlib.md5(members[m]).hexdigest() != want[m]:
             fail(f"{m}: checksum mismatch — wrong disc or romset for this region")
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    # Match the canonical release writer exactly so the ZIP container, not
-    # only every reconstructed member, is reproducible.
-    stamp = (1980, 1, 1, 0, 0, 0)
-    with zipfile.ZipFile(out_path, "w", zipfile.ZIP_DEFLATED) as z:
-        for name in sorted(members):
-            info = zipfile.ZipInfo(name, date_time=stamp)
-            info.compress_type = zipfile.ZIP_DEFLATED
-            z.writestr(info, members[name], zipfile.ZIP_DEFLATED)
+    write_zip(out_path, members)
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--iso", required=True, help="your PS2 anthology disc image")
-    ap.add_argument("--romset", required=True, help="your arcade sfz2al/sfz2alj zip")
+    ap.add_argument("--iso", help="your PS2 anthology disc image")
+    ap.add_argument("--romset", help="your arcade ZIP, 7z, or ROM folder")
+    ap.add_argument("--rompath", action="append", default=[])
+    ap.add_argument("--include-devices", action="store_true")
+    ap.add_argument("--check", action="store_true")
+    ap.add_argument("--check-runtime", action="store_true")
+    ap.add_argument("--platform", choices=("all", "mame", "hbmame", "mister"), default="all")
     ap.add_argument("--region", required=True, choices=("jp", "us", "eu", "asia"))
     ap.add_argument("--out-dir", help="build every platform into this folder")
     ap.add_argument("--size", choices=("4mb", "8mb"), help="single-file mode: capacity")
     ap.add_argument("--out", help="single-file mode: output zip path")
     args = ap.parse_args()
-    if not args.out_dir and not (args.size and args.out):
+    if not (args.check or args.check_runtime) and not args.out_dir and not (args.size and args.out):
         fail("give --out-dir, or both --size and --out")
 
     data = json.loads((HERE / "recipes" / f"{args.region}.json").read_text())
     profile = PROFILES[args.region]
     print("Reading your arcade romset...")
-    arc = zread(args.romset)
+    catalog = json.loads((HERE / "rom_inputs.json").read_text())["sets"]
+    source_set = "sfz2alj" if args.region == "jp" else "sfz2al"
+    resolver = Resolver(search_paths(args.romset, args.rompath, HERE),
+                        hints=[source_set, "sfz2al", "qsound", "qsound_hle"],
+                        exclude=[Path(args.out_dir or args.out or "out"), HERE / "work"], progress=print)
+    arc = resolver.resolve([s for s in catalog[source_set].values() if s["role"] == "game"])
+    arc.update(resolver.devices(include=args.include_devices))
+    if args.check_runtime:
+        resolver.devices(include=True)
+    if args.check or args.check_runtime:
+        print("Gold stock ROM inputs verified")
+        return
+    if not args.iso:
+        fail("--iso is required to reconstruct Gold")
+    if args.out and args.romset and Path(args.out).resolve() == Path(args.romset).resolve():
+        fail("output must differ from source archive")
     gaps = assemble.missing_inputs(arc)
     if gaps:
         fail("your romset is missing " + ", ".join(gaps)
-             + ".\n       A split set leaves those in its parent: use a "
-               "non-merged romset, the one that runs on its own.")
+             + ". Add its parent archive with --rompath.")
     print("Extracting Cammy data from your disc (this takes a minute)...")
     try:
         z6 = ex.extract_zero6(args.iso, profile)
@@ -154,7 +170,11 @@ def main():
         print(f"\nWrote {args.out} — all {len(members)} members checksum-verified.")
         return
 
-    out = Path(args.out_dir)
+    # Publish all selected outputs only after reconstruction/verification finishes.
+    import tempfile
+    Path(args.out_dir).parent.mkdir(parents=True, exist_ok=True)
+    stage_context = tempfile.TemporaryDirectory(prefix=".gold-export-", dir=Path(args.out_dir).parent)
+    out = Path(stage_context.name)
     names = SETS[args.region]
     print("Reconstructing 4MB (MAME / hardware)...")
     m4, w4 = reconstruct("4mb")
@@ -173,8 +193,20 @@ def main():
     if mra.exists():
         arcade = out.joinpath("mister", *MRA_ROOT, MRA_DIR[args.region])
         arcade.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(mra, arcade / mra.name)
-    print(f"\nBuilt {args.region} into {out}/ — every set checksum-verified:")
+        text = mra.read_text()
+        text = re.sub(r'zip="(/hbmame/[^"|]+\.zip)"',
+                      r'zip="\1|qsound.zip|qsound_hle.zip"', text)
+        (arcade / mra.name).write_text(text)
+    files = {}
+    for path in out.rglob("*"):
+        if path.is_file():
+            name = path.relative_to(out).as_posix()
+            if args.platform == "all" or name.startswith(args.platform + "/"):
+                files[name] = path.read_bytes()
+    publish_tree(Path(args.out_dir), files)
+    stage_context.cleanup()
+    out = Path(args.out_dir)
+    print(f"\nBuilt {args.region} into {out}/ — every game member checksum-verified:")
     print(f"  mame/{args.region}/{names['4mb']}.zip   (stock MAME, real hardware)")
     print(f"  hbmame/{names['8mb']}.zip     (HBMAME)")
     mra_path = "/".join(filter(None, ("/".join(MRA_ROOT), MRA_DIR[args.region], names["mra"])))
@@ -185,4 +217,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except RomError as exc:
+        fail(str(exc))

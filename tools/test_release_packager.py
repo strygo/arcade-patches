@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import sys
+import subprocess
 import tempfile
 import unittest
 import zipfile
@@ -41,7 +42,14 @@ class ReleasePackagerTests(unittest.TestCase):
             with zipfile.ZipFile(root / "published/downloads/demo-rc1-ips.zip") as archive:
                 manifest = json.loads(archive.read("manifest.json"))
                 self.assertIn("ips/game.03.ips", archive.namelist())
+                self.assertIn("rom_sources.py", archive.namelist())
+                archive.extractall(root / "kit")
             self.assertEqual("patch", manifest["members"][0]["action"])
+            self.assertEqual(64, len(manifest["members"][0]["stock_sha256"]))
+            subprocess.run([sys.executable, str(root / "kit/apply.py"), str(stock),
+                            "--out-dir", str(root / "out")], check=True, capture_output=True)
+            with zipfile.ZipFile(root / "out/mame/demo.zip") as archive:
+                self.assertEqual(b"fixed", archive.read("game.03"))
 
 
 if __name__ == "__main__":

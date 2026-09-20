@@ -1276,6 +1276,8 @@
         "kit_include": [
           "apply.py",
           "README.txt",
+          "rom_sources.py",
+          "rom_inputs.json",
           "ffcd/*.py",
           "build/*.py",
           "data/ending/*",

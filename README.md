@@ -76,7 +76,8 @@ The importer checks that the readiness record, `release.json`, clean
 reproduction, QA receipt, download set, and every download hash agree. It
 requires the page to name the candidate's version, copies the files, verifies
 them again, appends that version to `data/releases.json`, and makes it current.
-An existing slug/version or download filename is never replaced.
+Game releases are append-only. A qualified tooling revision may refresh an existing
+filename while preserving the game version and every reconstructed game byte.
 
 After GitHub Pages deploys the commit, verify that every hosted current
 download is exactly the qualified file recorded in the inventory:
@@ -85,13 +86,45 @@ download is exactly the qualified file recorded in the inventory:
 python3 tools/verify_hosted_releases.py
 ```
 
-Because imported filenames are append-only and the hosted SHA-256 must equal
-the qualified candidate's SHA-256, this check binds the deployed download to
+Because the hosted SHA-256 must equal the selected qualified revision's
+SHA-256, this check binds the deployed download to
 the reconstruction and runtime evidence in its readiness record.
 
 Superseded kits stay in `docs/downloads` and in the version history under
 `data/releases.json`. The page links only the inventory's current version.
 Historical filenames therefore remain stable for external links.
+
+## Updating kit tools without changing the game version
+
+Use Capcom's `release/plan_tooling_revision.py` and tooling-parity qualification,
+then import its readiness record with the same command above. Keep the page's
+game version and the public download filename. The inventory records a separate
+kit revision and tools date, with immutable copies under
+`docs/downloads/archive/<sha256>/<filename>`. Existing entries migrate to
+revision 1 without changing their bytes. Every original remains recoverable.
+
+The importer requires the exact current baseline, the next revision number,
+unchanged public names, clean reproduction and a matching game-content contract.
+Promotion stages the replacements and uses an exclusive recovery journal. To
+restore an interrupted promotion, run `python3 tools/import_release.py --recover`.
+To select a previous kit revision, run:
+
+```bash
+python3 tools/import_release.py --rollback <kit> <game-version> <revision>
+python3 tools/build.py
+```
+
+The whole revision history is retained. After deployment,
+`python3 tools/verify_hosted_releases.py --archives` also checks the immutable
+copies. The renderer's existing content-hash URL query updates automatically
+when the stable filename's contents change.
+
+The IPS, Gold and Final Fight EX kits share Capcom's `release/rom_sources.py`.
+Refresh vendored copies with `release/sync_kit_tools.py --site <this-checkout>`
+from Capcom; `--check` detects drift. ZIP, 7z and loose files may be merged,
+split, nested or renamed, provided their contents match the required hashes.
+Use repeatable `--rompath` and `--check` in the shipped appliers. New collection
+workflows stage verified outputs without changing the source collection.
 
 ## Adding a patch
 

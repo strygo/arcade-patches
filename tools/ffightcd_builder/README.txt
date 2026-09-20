@@ -31,7 +31,7 @@ WHAT YOU NEED
        split or merged. The USA build reads all three; the Japan build reads
        ffight and ffightj.
 
-  3. Python 3.9 or newer with numpy and Pillow. .zip romsets need nothing
+  3. Python 3.10 or newer with numpy and Pillow. .zip romsets need nothing
      else; .7z romsets need 7-Zip (7zz, 7z, or 7-Zip's normal Windows
      install). No emulator, no assembler.
 
@@ -107,3 +107,12 @@ Unofficial fan reconstruction. Not affiliated with or endorsed by Capcom.
 All game titles, characters and artwork remain the property of their
 owners. You must own the discs and the romset used as inputs. Do not sell
 this kit or distribute it applied to game images.
+
+ROM COLLECTIONS
+---------------
+Merged, split and complete ZIP/7z sets and extracted folders are accepted.
+Use --rompath DIR (repeatable) to search a collection. Names may differ;
+required contents are verified by strong hashes. 7z needs installed 7-Zip.
+Use --check to preflight arcade inputs without supplying the disc.
+--out-dir builds all supported platforms; --platform selects just one.
+Source archives are never modified.

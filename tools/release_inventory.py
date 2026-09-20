@@ -11,6 +11,7 @@ from pathlib import Path, PurePosixPath
 
 
 SCHEMA = 1
+INVENTORY_SCHEMAS = (1, 2)
 ROLES = ("ips", "mra", "chd", "kit")
 QUALIFICATION_TYPES = (
     "qualified-candidate",
@@ -119,7 +120,7 @@ def empty_inventory() -> dict:
 
 def load_inventory(path: Path) -> dict:
     inventory = read_json(path)
-    require(inventory.get("schema") == SCHEMA, "unsupported release inventory schema")
+    require(inventory.get("schema") in INVENTORY_SCHEMAS, "unsupported release inventory schema")
     require(isinstance(inventory.get("releases"), dict), "release inventory has no releases map")
     return inventory
 
@@ -180,7 +181,7 @@ def validate_qualification(slug: str, version: str, qualification: object) -> No
 
 def validate_inventory(root: Path, inventory: dict, *, require_complete: bool = True,
                        require_page_current: bool = True) -> None:
-    require(inventory.get("schema") == SCHEMA, "unsupported release inventory schema")
+    require(inventory.get("schema") in INVENTORY_SCHEMAS, "unsupported release inventory schema")
     releases = inventory.get("releases")
     require(isinstance(releases, dict), "release inventory has no releases map")
     entries = load_site_entries(root)
@@ -205,6 +206,9 @@ def validate_inventory(root: Path, inventory: dict, *, require_complete: bool = 
         for version, item in sorted(versions.items()):
             token(version, f"{slug} version")
             require(isinstance(item, dict), f"invalid release version: {slug} {version}")
+            if inventory["schema"] == 2:
+                from kit_revisions import validate_revisions
+                validate_revisions(root, slug, version, item)
             validate_qualification(slug, version, item.get("qualification"))
             kind = item.get("kind")
             require(kind in ("rom", "chd", "kit"), f"invalid release kind: {slug} {version}")
@@ -266,7 +270,7 @@ def _rom_bundle(root: Path, patch: dict, files: dict) -> dict:
     return result
 
 
-def published_bundle(root: Path, patch: dict, inventory: dict) -> dict:
+def _published_bundle(root: Path, patch: dict, inventory: dict) -> dict:
     slug = patch["slug"]
     require(slug in inventory["releases"], f"no published release inventory for {slug}")
     release = inventory["releases"][slug]
@@ -286,6 +290,14 @@ def published_bundle(root: Path, patch: dict, inventory: dict) -> dict:
                 f"embedded manifest version mismatch: {info['zipname']}")
         return {"kind": "chd", "chd": info, "manifest": manifest}
     return {"kind": "kit", **info, "regions": []}
+
+
+def published_bundle(root: Path, patch: dict, inventory: dict) -> dict:
+    result = _published_bundle(root, patch, inventory)
+    item = inventory["releases"][patch["slug"]]["versions"][patch["version"]]
+    if item.get("current_revision", 1) > 1:
+        result.update(kit_revision=item["current_revision"], tools_updated=item["date"])
+    return result
 
 
 def candidate_release(ready_path: Path, candidate: Path) -> tuple[dict, dict]:
@@ -326,6 +338,7 @@ def candidate_release(ready_path: Path, candidate: Path) -> tuple[dict, dict]:
 
 def import_candidate(root: Path, ready_path: Path, candidate: Path) -> dict:
     root = Path(root)
+    require(not (root / "data/kit-revision-transaction.json").exists(), "unfinished publication; run import_release.py --recover")
     inventory_path = root / "data" / "releases.json"
     inventory = load_inventory(inventory_path)
     # Release-page prose is prepared with the new version before import.  At
@@ -336,6 +349,9 @@ def import_candidate(root: Path, ready_path: Path, candidate: Path) -> dict:
                        require_page_current=False)
     ready, release = candidate_release(ready_path, candidate)
     plan = release.get("plan")
+    if plan and plan.get("kit_revision"):
+        from kit_revisions import import_revision
+        return import_revision(root, ready_path, candidate, ready, release)
     require(isinstance(plan, dict), "candidate has no release plan")
     slug = token(plan.get("kit"), "candidate kit")
     version = token(plan.get("version"), "candidate version")
@@ -386,6 +402,9 @@ def import_candidate(root: Path, ready_path: Path, candidate: Path) -> dict:
             },
         }
         entry["current"] = version
+        if inventory["schema"] == 2:
+            from kit_revisions import archive_version
+            archive_version(root, entry["versions"][version])
         validate_inventory(root, inventory)
         published_bundle(root, patches[slug], inventory)
         write_json_atomic(inventory_path, inventory)

@@ -21,7 +21,7 @@ WHAT YOU NEED
   2. Your arcade Street Fighter Zero 2 Alpha romset:
        - sfz2al.zip  for the USA / Europe / Asia sets
        - sfz2alj.zip for the Japan set
-  3. Python 3.8 or newer. Nothing else — no emulator, no assembler.
+  3. Python 3.10 or newer. Nothing else — no emulator, no assembler.
 
 USAGE (recommended — build every platform for one region)
 ----------------------------------------------------------
@@ -71,7 +71,8 @@ Copy the contents of out/mister/ to the root of the MiSTer SD card:
 Earlier releases put these MRAs in _Arcade/_Backports; delete them from there
 when you copy the new ones over.
 
-The standard Jotego jtCPS2 core is required. No separate qsound.zip is needed.
+The standard Jotego jtCPS2 core is required. If QSound was absent from your input, keep qsound.zip or qsound_hle.zip in
+games/mame on MiSTer. MAME/HBMAME can find it in their normal ROM paths.
 
 LEGAL
 -----
@@ -80,3 +81,14 @@ Unofficial fan reconstruction. Not affiliated with or endorsed by Capcom. All
 game titles, characters, and artwork remain the property of their owners. You
 must own the disc and romset used as inputs. Do not sell this kit or distribute
 it applied to game images.
+
+ROM COLLECTIONS
+---------------
+Merged, split and complete ZIP/7z sets and extracted folders are accepted.
+Use --rompath DIR (repeatable) to search a collection. Names may differ;
+required contents are verified by strong hashes. 7z needs installed 7-Zip.
+Use --check to preflight arcade inputs without supplying the disc.
+--out-dir builds all supported platforms; --platform selects just one.
+Source archives are never modified.
+QSound is optional when building. Valid embedded firmware is preserved.
+--include-devices requires and includes firmware from any supplied archive.

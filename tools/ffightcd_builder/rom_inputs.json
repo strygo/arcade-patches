@@ -1,0 +1,526 @@
+{
+  "schema": 1,
+  "sets": {
+    "ffight": {
+      "ff-1m.3a": {
+        "crc32": "0b605e44",
+        "name": "ff-1m.3a",
+        "role": "game",
+        "sha256": "e5d9bf0282dada21d4a8ab50a9f51dab47a8209a93db11973fcbfe6396b0f1ac",
+        "size": 524288
+      },
+      "ff-32m.8h": {
+        "crc32": "c747696e",
+        "name": "ff-32m.8h",
+        "role": "game",
+        "sha256": "86da0d2884a5407f67ac490ce366f5887f80ac6da343c1a86a9489129b63fbc7",
+        "size": 524288
+      },
+      "ff-3m.5a": {
+        "crc32": "52291cd2",
+        "name": "ff-3m.5a",
+        "role": "game",
+        "sha256": "d8660712fc0a7f6e0ebcebd67966e5d0852d214054d8794c2e23a6b174bfb923",
+        "size": 524288
+      },
+      "ff-5m.7a": {
+        "crc32": "9c284108",
+        "name": "ff-5m.7a",
+        "role": "game",
+        "sha256": "dce4a9b9f28b7e7f8eb8d7f03251b6c24318f8b4b686d6f2a6b0f2dcb5918acd",
+        "size": 524288
+      },
+      "ff-7m.9a": {
+        "crc32": "a7584dfb",
+        "name": "ff-7m.9a",
+        "role": "game",
+        "sha256": "75aaeae98b4a89fe4db75dc2c8b75916392c2decb226f2158950a4731535c8db",
+        "size": 524288
+      },
+      "ff_09.12b": {
+        "crc32": "b8367eb5",
+        "name": "ff_09.12b",
+        "role": "game",
+        "sha256": "07c0fdf83581da618a730a3de88aa44f7fedea1c283979ac73a1449b1b39ee17",
+        "size": 65536
+      },
+      "ff_36.11f": {
+        "crc32": "f9a5ce83",
+        "name": "ff_36.11f",
+        "role": "game",
+        "sha256": "0763a7b2a150334423bc0e90d3977dd155a9676003204fb16bf5c49b86887126",
+        "size": 131072
+      },
+      "ff_37.12f": {
+        "crc32": "e1033784",
+        "name": "ff_37.12f",
+        "role": "game",
+        "sha256": "34a36b617c0be4244fe86326350cf986a38145361987875f24fa71991450fbcd",
+        "size": 131072
+      },
+      "ff_42.11h": {
+        "crc32": "65f11215",
+        "name": "ff_42.11h",
+        "role": "game",
+        "sha256": "a6a287ee9eb1952af93cdc3e0612005b15bcbba9c8697d974ad6285b303b3f7a",
+        "size": 131072
+      }
+    },
+    "ffightj": {
+      "ff36.bin": {
+        "crc32": "f9a5ce83",
+        "name": "ff36.bin",
+        "role": "game",
+        "sha256": "0763a7b2a150334423bc0e90d3977dd155a9676003204fb16bf5c49b86887126",
+        "size": 131072
+      },
+      "ff42.bin": {
+        "crc32": "65f11215",
+        "name": "ff42.bin",
+        "role": "game",
+        "sha256": "a6a287ee9eb1952af93cdc3e0612005b15bcbba9c8697d974ad6285b303b3f7a",
+        "size": 131072
+      },
+      "ff43.bin": {
+        "crc32": "b6dee1c3",
+        "name": "ff43.bin",
+        "role": "game",
+        "sha256": "1bc247d5bc756ed797cb7c65c2ec0eef2a388e02a6472dd09afbcaa0bd013c56",
+        "size": 131072
+      },
+      "ffj_01.4a": {
+        "crc32": "815b1797",
+        "name": "ffj_01.4a",
+        "role": "game",
+        "sha256": "875c00651821c163d5a99da1aca344f711a8cd12428ec950d25f8f885475610f",
+        "size": 131072
+      },
+      "ffj_02.5a": {
+        "crc32": "5d91f694",
+        "name": "ffj_02.5a",
+        "role": "game",
+        "sha256": "a08c9f2d8cf0c0ef3ed64a852e05146aa4880b0cfc1ccca5292ec17829133c2d",
+        "size": 131072
+      },
+      "ffj_05.9a": {
+        "crc32": "d0fcd4b5",
+        "name": "ffj_05.9a",
+        "role": "game",
+        "sha256": "62e2e94ff15e4d2b0f2f6e615cb441312f7305e2f788f50d7c5b7f87fad45738",
+        "size": 131072
+      },
+      "ffj_06.10a": {
+        "crc32": "1c18f042",
+        "name": "ffj_06.10a",
+        "role": "game",
+        "sha256": "fac30feffb36c00025ddc6640322fce5f041589426cff89564e7da76ef2cfb3a",
+        "size": 131072
+      },
+      "ffj_09.4b": {
+        "crc32": "5b116d0d",
+        "name": "ffj_09.4b",
+        "role": "game",
+        "sha256": "d35ff7bc039bc6cd5c9677c87ce4167ab0ed6117788597ee03f44db9a1fb3d78",
+        "size": 131072
+      },
+      "ffj_10.5b": {
+        "crc32": "624a924a",
+        "name": "ffj_10.5b",
+        "role": "game",
+        "sha256": "cf86ed0f9faa212043a201152337182d8c10767bb44ebc64338e9a6b8cb6744f",
+        "size": 131072
+      },
+      "ffj_13.9b": {
+        "crc32": "8721a7da",
+        "name": "ffj_13.9b",
+        "role": "game",
+        "sha256": "eaca37867b6fa2a51723bf1209e4f0e2f8c233f941ce1ee0270f8687ff273b70",
+        "size": 131072
+      },
+      "ffj_14.10b": {
+        "crc32": "0a2e9101",
+        "name": "ffj_14.10b",
+        "role": "game",
+        "sha256": "5acd4407f2ee03642ff2e06af72b3462673c640881450d8a123dcf4f9741d48a",
+        "size": 131072
+      },
+      "ffj_17.5c": {
+        "crc32": "2dc18cf4",
+        "name": "ffj_17.5c",
+        "role": "game",
+        "sha256": "902b8850e99a62913d9088cebf3a3d96b7e1d6fc8af886e2e0fe32abeccb063b",
+        "size": 131072
+      },
+      "ffj_18.7c": {
+        "crc32": "b19ede59",
+        "name": "ffj_18.7c",
+        "role": "game",
+        "sha256": "bf8bfe8d32b4eabb2580f72fd3db1dda3018a86f71454196f911597823c0a83f",
+        "size": 131072
+      },
+      "ffj_24.5e": {
+        "crc32": "a1ab607a",
+        "name": "ffj_24.5e",
+        "role": "game",
+        "sha256": "7ae492882290a768d84ede25191930b1f691f515ba7805e95f01a1a461864ad7",
+        "size": 131072
+      },
+      "ffj_25.7e": {
+        "crc32": "6e8181ea",
+        "name": "ffj_25.7e",
+        "role": "game",
+        "sha256": "051df1f81f98a04685bb729b9613a1513ea511d2b4c9bdcb5f6ddb77efe3f29a",
+        "size": 131072
+      },
+      "ffj_30.bin": {
+        "crc32": "375c66e7",
+        "name": "ffj_30.bin",
+        "role": "game",
+        "sha256": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+        "size": 131072
+      },
+      "ffj_31.bin": {
+        "crc32": "1ef137f9",
+        "name": "ffj_31.bin",
+        "role": "game",
+        "sha256": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+        "size": 131072
+      },
+      "ffj_32.8f": {
+        "crc32": "c8bc4a57",
+        "name": "ffj_32.8f",
+        "role": "game",
+        "sha256": "c4e8786a1c283c624c26a60e458b18ddd9147acd278f47eff6fe7d292ccc3e22",
+        "size": 131072
+      },
+      "ffj_33.9f": {
+        "crc32": "7369fa07",
+        "name": "ffj_33.9f",
+        "role": "game",
+        "sha256": "c381c318a2dd36c620031dea1ff059596e99b534c531ecdbd6c221f8d2fc66d6",
+        "size": 131072
+      },
+      "ffj_38.8h": {
+        "crc32": "6535a57f",
+        "name": "ffj_38.8h",
+        "role": "game",
+        "sha256": "1b837e362281b897312e4504e36ec2914acde72d1a47315c321b7ff32da3c42f",
+        "size": 131072
+      },
+      "ffj_39.9h": {
+        "crc32": "9416b477",
+        "name": "ffj_39.9h",
+        "role": "game",
+        "sha256": "419a7042935dd3e3a6e58d5bf8a7bd9724a86e9bfa18c824d3111024d398838c",
+        "size": 131072
+      }
+    },
+    "ffightu": {
+      "ff_36.11f": {
+        "crc32": "f9a5ce83",
+        "name": "ff_36.11f",
+        "role": "game",
+        "sha256": "0763a7b2a150334423bc0e90d3977dd155a9676003204fb16bf5c49b86887126",
+        "size": 131072
+      },
+      "ff_42.11h": {
+        "crc32": "65f11215",
+        "name": "ff_42.11h",
+        "role": "game",
+        "sha256": "a6a287ee9eb1952af93cdc3e0612005b15bcbba9c8697d974ad6285b303b3f7a",
+        "size": 131072
+      },
+      "ffu_43.12h": {
+        "crc32": "4ca65947",
+        "name": "ffu_43.12h",
+        "role": "game",
+        "sha256": "ce221b5d9db9beeca876d1f5920acfe0949d4050cb54b4855ae81627d4548f5b",
+        "size": 131072
+      }
+    },
+    "sfz2al": {
+      "dl-1425.bin": {
+        "crc32": "d6cf5ef5",
+        "name": "dl-1425.bin",
+        "role": "device",
+        "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "size": 24576
+      },
+      "sfz2al.key": {
+        "crc32": "2904963e",
+        "name": "sfz2al.key",
+        "role": "game",
+        "sha256": "95efb0620c9e932ebab4b2349d85b77393cf21acb4e53415f4255422d74acdf5",
+        "size": 20
+      },
+      "sza.01": {
+        "crc32": "1bc323cf",
+        "name": "sza.01",
+        "role": "game",
+        "sha256": "5e19b44a93cbca1e8329c614c56501b818f3a3b51196ddeadfd194694e1e0383",
+        "size": 131072
+      },
+      "sza.02": {
+        "crc32": "ba6a5013",
+        "name": "sza.02",
+        "role": "game",
+        "sha256": "7d2fa824f397200dd078945f768be9ffa51a63d46a9c54136f0fc4b9994687c6",
+        "size": 131072
+      },
+      "sza.11m": {
+        "crc32": "aa47a601",
+        "name": "sza.11m",
+        "role": "game",
+        "sha256": "aa97fe335f339c11bf406b4c86eee53cda383dbd8907b5ce2e29bf5c3f71f27d",
+        "size": 2097152
+      },
+      "sza.12m": {
+        "crc32": "2237bc53",
+        "name": "sza.12m",
+        "role": "game",
+        "sha256": "84e88c9c6d63259fa6f009dae1f1a90b33e824220ef94d7778d45daa071953cd",
+        "size": 2097152
+      },
+      "sza.13m": {
+        "crc32": "4d1f1f22",
+        "name": "sza.13m",
+        "role": "game",
+        "sha256": "478b2f5284ae7a30f772df7b8ba7c65971691bf0f37a472073a2685b6377647f",
+        "size": 4194304
+      },
+      "sza.14m": {
+        "crc32": "0560c6aa",
+        "name": "sza.14m",
+        "role": "game",
+        "sha256": "3742915239ce17d46559ae8e98c4cac8afb104bd9b94d8cbefb0d6f7d9f270b8",
+        "size": 1048576
+      },
+      "sza.15m": {
+        "crc32": "19cea680",
+        "name": "sza.15m",
+        "role": "game",
+        "sha256": "6fa32510b60069c638efe6973bb6325d64327c7f7d02a316448113bf98e1a3a4",
+        "size": 4194304
+      },
+      "sza.16m": {
+        "crc32": "ae940f87",
+        "name": "sza.16m",
+        "role": "game",
+        "sha256": "cca105948e4c2ed37d15c08aae0e2a9e588256c2a7a0b6c5bfcdc6b84ad9909a",
+        "size": 1048576
+      },
+      "sza.17m": {
+        "crc32": "e01b4588",
+        "name": "sza.17m",
+        "role": "game",
+        "sha256": "54fc9acbfd30b381da2df0ee326a4b2a32f2fb801dbb94c022e8ac72345e5bce",
+        "size": 4194304
+      },
+      "sza.18m": {
+        "crc32": "4bc3c8bc",
+        "name": "sza.18m",
+        "role": "game",
+        "sha256": "303ba3d35849c1b6526453c66425239d93cab330618fd7563862d266e61bd58a",
+        "size": 1048576
+      },
+      "sza.19m": {
+        "crc32": "0feeda64",
+        "name": "sza.19m",
+        "role": "game",
+        "sha256": "75903ef520e2b63cb7611d78974c1b284881377d2e7b2dc0aadcd173a352da6f",
+        "size": 4194304
+      },
+      "sza.20m": {
+        "crc32": "39e674c0",
+        "name": "sza.20m",
+        "role": "game",
+        "sha256": "34ba4ebdb22b550c6de88c58fa931ead86832c1b6b11e50d340ebd936d41dd4a",
+        "size": 1048576
+      },
+      "szaa.03": {
+        "crc32": "88e7023e",
+        "name": "szaa.03",
+        "role": "game",
+        "sha256": "e0d8cf1b6ff889bc408c9a40ee8436f8c29326bf0290108cc6c5d990c69e82be",
+        "size": 524288
+      },
+      "szaa.04": {
+        "crc32": "ae8ec36e",
+        "name": "szaa.04",
+        "role": "game",
+        "sha256": "7b520b448656aba03bbb6bd1a5fb1a249a20163907f1e6cd238b2f80718ad3f0",
+        "size": 524288
+      },
+      "szaa.05": {
+        "crc32": "f053a55e",
+        "name": "szaa.05",
+        "role": "game",
+        "sha256": "67d5ccc04d126fe0dbb894c14eb5b9f5f92cbc613e68caea4c81708216d589ae",
+        "size": 524288
+      },
+      "szaa.06": {
+        "crc32": "cfc0e7a8",
+        "name": "szaa.06",
+        "role": "game",
+        "sha256": "72c4c2f222d2b4d0bf985b3575bee258816113a7795379266632e333ce394268",
+        "size": 524288
+      },
+      "szaa.07": {
+        "crc32": "5feb8b20",
+        "name": "szaa.07",
+        "role": "game",
+        "sha256": "f22f5da9b832fbfeec3c24742089203caaf469ceb445cc0299839df7627c72b9",
+        "size": 524288
+      },
+      "szaa.08": {
+        "crc32": "6eb6d412",
+        "name": "szaa.08",
+        "role": "game",
+        "sha256": "a307c0f65f59f3e5e0b1a1465322d939dfb73ab1b89a00c4f3ca7fc9b5a185a8",
+        "size": 524288
+      }
+    },
+    "sfz2alj": {
+      "dl-1425.bin": {
+        "crc32": "d6cf5ef5",
+        "name": "dl-1425.bin",
+        "role": "device",
+        "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "size": 24576
+      },
+      "sfz2alj.key": {
+        "crc32": "4c42320f",
+        "name": "sfz2alj.key",
+        "role": "game",
+        "sha256": "c9ab73539da40484c4706416e81c34413833f937190525952bb2b34025c51c6d",
+        "size": 20
+      },
+      "sza.01": {
+        "crc32": "1bc323cf",
+        "name": "sza.01",
+        "role": "game",
+        "sha256": "5e19b44a93cbca1e8329c614c56501b818f3a3b51196ddeadfd194694e1e0383",
+        "size": 131072
+      },
+      "sza.02": {
+        "crc32": "ba6a5013",
+        "name": "sza.02",
+        "role": "game",
+        "sha256": "7d2fa824f397200dd078945f768be9ffa51a63d46a9c54136f0fc4b9994687c6",
+        "size": 131072
+      },
+      "sza.11m": {
+        "crc32": "aa47a601",
+        "name": "sza.11m",
+        "role": "game",
+        "sha256": "aa97fe335f339c11bf406b4c86eee53cda383dbd8907b5ce2e29bf5c3f71f27d",
+        "size": 2097152
+      },
+      "sza.12m": {
+        "crc32": "2237bc53",
+        "name": "sza.12m",
+        "role": "game",
+        "sha256": "84e88c9c6d63259fa6f009dae1f1a90b33e824220ef94d7778d45daa071953cd",
+        "size": 2097152
+      },
+      "sza.13m": {
+        "crc32": "4d1f1f22",
+        "name": "sza.13m",
+        "role": "game",
+        "sha256": "478b2f5284ae7a30f772df7b8ba7c65971691bf0f37a472073a2685b6377647f",
+        "size": 4194304
+      },
+      "sza.14m": {
+        "crc32": "0560c6aa",
+        "name": "sza.14m",
+        "role": "game",
+        "sha256": "3742915239ce17d46559ae8e98c4cac8afb104bd9b94d8cbefb0d6f7d9f270b8",
+        "size": 1048576
+      },
+      "sza.15m": {
+        "crc32": "19cea680",
+        "name": "sza.15m",
+        "role": "game",
+        "sha256": "6fa32510b60069c638efe6973bb6325d64327c7f7d02a316448113bf98e1a3a4",
+        "size": 4194304
+      },
+      "sza.16m": {
+        "crc32": "ae940f87",
+        "name": "sza.16m",
+        "role": "game",
+        "sha256": "cca105948e4c2ed37d15c08aae0e2a9e588256c2a7a0b6c5bfcdc6b84ad9909a",
+        "size": 1048576
+      },
+      "sza.17m": {
+        "crc32": "e01b4588",
+        "name": "sza.17m",
+        "role": "game",
+        "sha256": "54fc9acbfd30b381da2df0ee326a4b2a32f2fb801dbb94c022e8ac72345e5bce",
+        "size": 4194304
+      },
+      "sza.18m": {
+        "crc32": "4bc3c8bc",
+        "name": "sza.18m",
+        "role": "game",
+        "sha256": "303ba3d35849c1b6526453c66425239d93cab330618fd7563862d266e61bd58a",
+        "size": 1048576
+      },
+      "sza.19m": {
+        "crc32": "0feeda64",
+        "name": "sza.19m",
+        "role": "game",
+        "sha256": "75903ef520e2b63cb7611d78974c1b284881377d2e7b2dc0aadcd173a352da6f",
+        "size": 4194304
+      },
+      "sza.20m": {
+        "crc32": "39e674c0",
+        "name": "sza.20m",
+        "role": "game",
+        "sha256": "34ba4ebdb22b550c6de88c58fa931ead86832c1b6b11e50d340ebd936d41dd4a",
+        "size": 1048576
+      },
+      "szaj.03a": {
+        "crc32": "a3802fe3",
+        "name": "szaj.03a",
+        "role": "game",
+        "sha256": "2f3959b5bba4f730a0c1a71ba0013f54bd197a4b0d91cbfa1219b764921210d1",
+        "size": 524288
+      },
+      "szaj.04a": {
+        "crc32": "e7ca87c7",
+        "name": "szaj.04a",
+        "role": "game",
+        "sha256": "94d5bdc1669bd4f4237e7f4a0ad1648e02841fd6f2b2a7f8ac78727e6d00d9f9",
+        "size": 524288
+      },
+      "szaj.05a": {
+        "crc32": "c88ebf88",
+        "name": "szaj.05a",
+        "role": "game",
+        "sha256": "d12b40f78d942ae0e4d7ee21d2fbd93579ba80829f966e3f9b8368fd9c0969ff",
+        "size": 524288
+      },
+      "szaj.06a": {
+        "crc32": "35ed5b7a",
+        "name": "szaj.06a",
+        "role": "game",
+        "sha256": "6893e9b43a34ca46ade01055fccadda15be29abed1f16ccd3fc72029497ba576",
+        "size": 524288
+      },
+      "szaj.07a": {
+        "crc32": "975dcb3e",
+        "name": "szaj.07a",
+        "role": "game",
+        "sha256": "e6823c354ad026fc2e22b0219cb186c150088f0f84b1cfa23581f7291f1ee803",
+        "size": 524288
+      },
+      "szaj.08a": {
+        "crc32": "dc73f2d7",
+        "name": "szaj.08a",
+        "role": "game",
+        "sha256": "1b423f069467031e94ccd611f95a9ae94c8092ed9d0c3e59918a88fe0da7d7d4",
+        "size": 524288
+      }
+    }
+  }
+}

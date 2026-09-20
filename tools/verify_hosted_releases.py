@@ -30,7 +30,7 @@ def hosted_digest(url: str) -> tuple[int, str]:
     return size, h.hexdigest()
 
 
-def verify_hosted(root: Path, base_url: str) -> list[str]:
+def verify_hosted(root: Path, base_url: str, archives: bool = False) -> list[str]:
     inventory = load_inventory(root / "data" / "releases.json")
     validate_inventory(root, inventory)
     base = base_url.rstrip("/") + "/downloads/"
@@ -48,6 +48,19 @@ def verify_hosted(root: Path, base_url: str) -> list[str]:
                 raise ReleaseInventoryError(
                     f"hosted hash mismatch for {record['name']}: {digest} != {record['sha256']}")
             verified.append(f"{slug} {version} {role}: {record['name']}")
+        if archives:
+            checked = set()
+            for historical in release["versions"].values():
+                for revision in historical.get("revisions", {}).values():
+                    for record in revision["files"].values():
+                        if record["archive"] in checked:
+                            continue
+                        checked.add(record["archive"])
+                        url = urllib.parse.urljoin(base, urllib.parse.quote(record["archive"]))
+                        size, digest = hosted_digest(url)
+                        if size != record["size"] or digest != record["sha256"]:
+                            raise ReleaseInventoryError(f"hosted archive mismatch: {record['archive']}")
+                        verified.append(f"archived: {record['archive']}")
     return verified
 
 
@@ -56,9 +69,10 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base-url", default=config["site"]["site_url"],
                         help="published site root (default: site.site_url)")
+    parser.add_argument("--archives", action="store_true", help="also check immutable revision downloads")
     args = parser.parse_args()
     try:
-        verified = verify_hosted(ROOT, args.base_url)
+        verified = verify_hosted(ROOT, args.base_url, archives=args.archives)
     except ReleaseInventoryError as exc:
         raise SystemExit(f"hosted verification failed: {exc}") from exc
     for item in verified:

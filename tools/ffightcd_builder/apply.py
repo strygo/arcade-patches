@@ -29,13 +29,14 @@ collides):
     mister/games/hbmame/<set>.zip     MiSTer, laid out like the SD card, so
                                       you can copy mister/'s contents to the root
 
-Requires Python 3.9+, numpy, Pillow, and 7zz (or 7z) for the romset.
+Requires Python 3.10+, numpy, Pillow, and 7zz (or 7z) for the romset.
 The first build runs the scene player over both bundles and takes several
 minutes; it prints each stage as it goes.
 """
 from __future__ import annotations
 
 import argparse
+import os
 import hashlib
 import json
 import re
@@ -49,6 +50,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from ffcd import romset as romset_reader  # noqa: E402
+from rom_sources import publish_tree, RomError
 SETS = {"us": "ffightus01", "jp": "ffightjs01"}
 
 # per-member SHA-256 of the published sets; a finished build must match
@@ -111,7 +113,7 @@ STAGE0_SRC = {"us": ("ffightu", "ffight"), "jp": ("ffightj", "ffight")}
 # Every romset member the build reads, per region, as (archive stems in
 # search order, members).  Checked before anything slow starts, so a missing
 # archive or file is named up front instead of failing minutes in.
-_WORLD = ["ff-32m.8h", "ff_37.12f", "ff_09.12b", "ff-5m.7a", "ff-7m.9a", "ff-1m.3a", "ff-3m.5a"]
+_WORLD = ["ff_36.11f", "ff_42.11h", "ff-32m.8h", "ff_37.12f", "ff_09.12b", "ff-5m.7a", "ff-7m.9a", "ff-1m.3a", "ff-3m.5a"]
 _J_GFX = ["ffj_09.4b", "ffj_01.4a", "ffj_13.9b", "ffj_05.9a", "ffj_24.5e", "ffj_17.5c",
           "ffj_38.8h", "ffj_32.8f", "ffj_10.5b", "ffj_02.5a", "ffj_14.10b", "ffj_06.10a",
           "ffj_25.7e", "ffj_18.7c", "ffj_39.9h", "ffj_33.9f"]
@@ -249,14 +251,27 @@ def main() -> int:
                     help="your Final Fight CD (Japan) disc image")
     ap.add_argument("--disc-us", type=Path, default=None,
                     help="your Final Fight CD (USA) disc image")
-    ap.add_argument("--romset", required=True, type=Path,
-                    help="directory holding the arcade ffight romset archives")
+    ap.add_argument("--romset", type=Path, help="ROM folder, merged archive, or split archive")
+    ap.add_argument("--rompath", type=Path, action="append", default=[])
+    ap.add_argument("--check", action="store_true", help="verify arcade inputs without reconstructing discs")
+    ap.add_argument("--platform", choices=("all", "hbmame", "mister"), default="all")
     ap.add_argument("--out-dir", type=Path, default=Path("out"))
     ap.add_argument("--cache", action="store_true",
                     help="keep work/ after a successful build, to inspect the "
                          "renders and intermediates (a re-run rebuilds them "
                          "either way)")
     a = ap.parse_args()
+    if a.rompath:
+        os.environ["CAPCOM_ARCADE_ROM_PATH"] = os.pathsep.join(map(str, a.rompath)) + (
+            os.pathsep + os.environ["CAPCOM_ARCADE_ROM_PATH"] if os.environ.get("CAPCOM_ARCADE_ROM_PATH") else "")
+    a.romset = a.romset or (a.rompath[0] if a.rompath else Path("roms"))
+    if a.check:
+        regions = (a.region,) if a.region in ("us", "jp") else ("us", "jp")
+        for region in regions:
+            for stems, members in NEEDS[region]:
+                romset_reader.read(a.romset, stems, members)
+        print("Final Fight arcade inputs verified")
+        return 0
 
     # Preflight the third-party deps.  Without this the first missing one
     # surfaces as a ModuleNotFoundError inside a stage subprocess, five
@@ -296,8 +311,6 @@ def main() -> int:
                 f"or a compressed rip will not work as-is.")
     if not discs:
         raise SystemExit("supply --disc-us and/or --disc-jp")
-    if not a.romset.is_dir():
-        raise SystemExit(f"romset directory not found: {a.romset}")
 
     # each region builds from its own disc; the region list follows the
     # discs unless --region narrows it
@@ -348,6 +361,12 @@ def main() -> int:
            "--stage0", gen / "stage0" / r,
            "--parts", gen / "stage1_parts")
 
+    # Validate both regions before publishing any requested output.
+    import tempfile
+    final_out = a.out_dir
+    final_out.parent.mkdir(parents=True, exist_ok=True)
+    export_context = tempfile.TemporaryDirectory(prefix=".ffex-export-", dir=final_out.parent)
+    a.out_dir = Path(export_context.name)
     for r in regions:
         built = (HERE / "work" / "build" / "vmsweep" /
                  f"{r}_set" / f"{SETS[r]}.zip")
@@ -379,6 +398,12 @@ def main() -> int:
         print(f"    {hb / (SETS[r] + '.zip')}")
         print(f"    {mra}")
 
+    outputs = {p.relative_to(a.out_dir).as_posix(): p.read_bytes()
+               for p in a.out_dir.rglob("*") if p.is_file()
+               and (a.platform == "all" or p.relative_to(a.out_dir).parts[0] == a.platform)}
+    publish_tree(final_out, outputs)
+    export_context.cleanup()
+    a.out_dir = final_out
     print(f"\nCopy the contents of {a.out_dir / 'mister'} to your MiSTer SD "
           f"card root.\nHBMAME and MAME warn about checksums -- this is an "
           f"unofficial build, and those warnings are expected.")
@@ -401,4 +426,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except RomError as exc:
+        raise SystemExit(str(exc))

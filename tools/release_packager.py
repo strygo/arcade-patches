@@ -434,13 +434,19 @@ def diff_members(slug: str, stock: dict, patched: dict) -> tuple[list, dict]:
             if ipsutil.apply_ips(ips, b"") != patched[name]:
                 raise SystemExit(f"{slug}: round-trip verification failed for added {name}")
             members.append({"name": name, "size": len(patched[name]), "action": "add",
-                            "patched_crc32": crc32(patched[name])})
+                            "patched_crc32": crc32(patched[name]),
+                            "output_size": len(patched[name]),
+                            "output_sha256": hashlib.sha256(patched[name]).hexdigest()})
             ips_files[name] = ips
             continue
         entry = {
             "name": name,
             "size": len(stock[name]),
             "stock_crc32": crc32(stock[name]),
+            "stock_sha256": hashlib.sha256(stock[name]).hexdigest(),
+            "output_size": len(patched[name]),
+            "output_sha256": hashlib.sha256(patched[name]).hexdigest(),
+            "role": "device" if name == "dl-1425.bin" else "game",
             "action": "copy",
         }
         if stock[name] != patched[name]:
@@ -527,6 +533,8 @@ def build_rom_downloads(patch: dict) -> dict:
         "game": patch["game"],
         "set": patch["set"],
         "hardware": patch["hardware"],
+        "input_schema": 1,
+        "parents": {"ssf2xj": ["ssf2t"], "mshvsfj": ["mshvsf"], "sfz2alj": ["sfz2al"]}.get(patch["set"], []),
     }
     if patch.get("mame_build") is False:
         manifest["mame_build"] = False
@@ -556,6 +564,7 @@ def build_rom_downloads(patch: dict) -> dict:
         write(z, "readme.txt", make_readme(patch, members, "ips", variants).encode())
         write(z, "manifest.json", json.dumps(manifest, indent=2).encode())
         write(z, "apply.py", (ROOT / "tools" / "bundle_apply.py").read_bytes())
+        write(z, "rom_sources.py", (ROOT / "tools" / "rom_sources.py").read_bytes())
         for e, ips_files in results:
             prefix = f"ips/{e['key']}/" if e["key"] else "ips/"
             for name, ips in sorted(ips_files.items()):
