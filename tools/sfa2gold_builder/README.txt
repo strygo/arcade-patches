@@ -62,14 +62,14 @@ ON MISTER
 
 Copy the contents of out/mister/ to the root of the MiSTer SD card:
 
-    _Arcade/_Arcade Patches/_Enhanced Versions/<name>.mra          the USA MRA
-    _Arcade/_Arcade Patches/_Enhanced Versions/_Europe/<name>.mra  the other
-    _Arcade/_Arcade Patches/_Enhanced Versions/_Asia/<name>.mra    regions, each
-    _Arcade/_Arcade Patches/_Enhanced Versions/_Japan/<name>.mra   in its folder
-    games/hbmame/<set>.zip                                         the 8MB sets
+    _Arcade/_Arcade Patches/_Restorations/<name>.mra          the USA MRA
+    _Arcade/_Arcade Patches/_Restorations/_Europe/<name>.mra  the other
+    _Arcade/_Arcade Patches/_Restorations/_Asia/<name>.mra    regions, each
+    _Arcade/_Arcade Patches/_Restorations/_Japan/<name>.mra   in its folder
+    games/hbmame/<set>.zip                                    the 8MB sets
 
-Earlier releases put these MRAs in _Arcade/_Backports; delete them from there
-when you copy the new ones over.
+Earlier releases put these MRAs in _Arcade/_Arcade Patches/_Enhanced Versions
+or _Arcade/_Backports; delete them from there when you copy the new ones over.
 
 The standard Jotego jtCPS2 core is required. If QSound was absent from your input, keep qsound.zip or qsound_hle.zip in
 games/mame on MiSTer. MAME/HBMAME can find it in their normal ROM paths.

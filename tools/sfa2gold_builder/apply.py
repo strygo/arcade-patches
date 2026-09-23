@@ -21,7 +21,7 @@ Usage (recommended — build everything for one region):
     hbmame/<set>.zip          8MB set for HBMAME
     mister/                   MiSTer (Jotego jtcps2), laid out like the SD card
                               so you can copy its contents to the card root:
-                                _Arcade/_Arcade Patches/_Enhanced Versions/
+                                _Arcade/_Arcade Patches/_Restorations/
                                   <name>.mra               USA
                                   _<Region>/<name>.mra     Europe, Asia, Japan
                                 games/hbmame/<set>.zip
@@ -63,7 +63,7 @@ SETS = {
 # MiSTer folder: every project of ours lives under _Arcade/_Arcade Patches,
 # sorted the way the website is.  USA sits at the top of its section and every
 # other region in its own subfolder.
-MRA_ROOT = ("_Arcade", "_Arcade Patches", "_Enhanced Versions")
+MRA_ROOT = ("_Arcade", "_Arcade Patches", "_Restorations")
 MRA_DIR = {"us": "", "eu": "_Europe", "asia": "_Asia", "jp": "_Japan"}
 
 

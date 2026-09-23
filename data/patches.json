@@ -20,7 +20,7 @@
       {
         "key": "restorations",
         "title": "Restorations",
-        "description": "Some games lost things on the way out of Japan: quotes, endings, even characters, or the ability to run outside Japan at all. A restoration puts back what the Japanese version had and leaves the rest of the game as it was."
+        "description": "Some games lost things on the way out of Japan: quotes, endings, even characters, or the ability to run outside Japan at all. Others never reached the arcade in their final form. A restoration puts back what was lost and leaves the rest of the game as it was."
       },
       {
         "key": "translations",
@@ -905,7 +905,7 @@
       "slug": "sfa2-gold",
       "title": "Street Fighter Alpha 2 Gold",
       "subtitle": "Zero 2 Dash, rebuilt for CPS-2 hardware",
-      "section": "enhanced",
+      "section": "restorations",
       "status": "release-candidate",
       "version": "rc3",
       "date": "2026-09-17",
