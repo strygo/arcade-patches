@@ -907,8 +907,8 @@
       "subtitle": "Zero 2 Dash, rebuilt for CPS-2 hardware",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc3",
-      "date": "2026-09-17",
+      "version": "rc4",
+      "date": "2026-09-24",
       "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "us",
@@ -916,10 +916,11 @@
       "description": [
         "Street Fighter Alpha 2 Gold, known as Zero 2 Dash in Japan, was the console revision of Alpha 2 that added Cammy as a playable fighter, first on PlayStation and Saturn and in final form in Capcom's 2006 PlayStation 2 anthology. It was never released on arcade hardware. This project rebuilds the anthology's edition as a real CPS-2 game.",
         "It is a faithful reconstruction, not a remix. It starts from the original arcade Zero 2 Alpha program and restores the anthology's changes piece by piece: Cammy, her graphics, the audio, and the endings, each one checked against the PlayStation 2 original. Four regional builds are provided, shown below. The English builds also carry the full Japanese script, newly translated: every story and ending page, Evil Ryu's own ending, and all 452 win quotes.",
-        "This is a release candidate. All four builds are complete and verified against the reference. The 4 MB builds have been run and accepted in MAME, and the 8 MB builds are verified by content and checksum."
+        "This is a release candidate."
       ],
       "changes": [
         "Cammy restored as a playable fighter, with her graphics, palettes, voice, sound effects, win poses, and ending",
+        "Cammy's own stage music: her X-Men vs. Street Fighter theme, played on Alpha 2's own sound hardware",
         "Shin Akuma selectable: press Start five times on Akuma at player select",
         "The revised title, presentation, and staff-credit screens for each region",
         "In the English builds, the full Japanese script in English: every story and ending page, Evil Ryu's own ending, and all 452 win quotes, plus red blood and Birdie's missing victory pose",
@@ -989,7 +990,7 @@
       },
       "notes": [
         "The 8 MB builds hold more QSound audio than an original CPS-2 board supports, so they run only on HBMAME and MiSTer, not real hardware.",
-        "This is a fan reconstruction, unaffiliated with Capcom. The kit ships no code or data from the anthology or the arcade game. The sets are built from discs and roms you already own."
+        "This is a fan reconstruction, unaffiliated with Capcom. The sets are built from discs and roms you already own, and the kit ships no code or data from the anthology or the arcade game, with one exception: Cammy's stage music uses about 4 KB of her theme's score from X-Men vs. Street Fighter (Capcom, 1996), which the kit carries."
       ],
       "related": [
         {
@@ -1004,6 +1005,15 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc4",
+          "date": "2026-09-24",
+          "items": [
+            "Cammy's stage music is restored. You can hear it in a two-player match.",
+            "Portraits before a fight and in the story scenes no longer pick up the wrong colors.",
+            "In the English builds, the last lines of every ending now display in full, and ending text sits clear of the screen edges."
+          ]
+        },
         {
           "version": "rc3",
           "date": "2026-09-17",

@@ -1,7 +1,7 @@
 Street Fighter Alpha 2 Gold / Zero 2 Dash — reconstruction kit
 ==============================================================
 
-Version:      rc3 (2026-09-17)
+Version:      rc4 (2026-09-24)
 Hardware:     Capcom CPS-2
 Target:       MAME and HBMAME sets, and MiSTer (jtcps2) — 4 regions
 Backport by:  Steve Gordon (https://x.com/strygo)
@@ -79,7 +79,9 @@ LEGAL
 
 Unofficial fan reconstruction. Not affiliated with or endorsed by Capcom. All
 game titles, characters, and artwork remain the property of their owners. You
-must own the disc and romset used as inputs. Do not sell this kit or distribute
+must own the disc and romset used as inputs. The recipes carry one piece of
+Capcom data: about 4 KB of Cammy's theme score from X-Men vs. Street Fighter
+(Capcom, 1996), which her stage music is built from. Do not sell this kit or distribute
 it applied to game images.
 
 ROM COLLECTIONS

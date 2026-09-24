@@ -20,16 +20,17 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 2 Gold</h1>
 <p class="subtitle">Zero 2 Dash, rebuilt for CPS-2 hardware</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-09-17</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-09-24</dd></dl>
 <h2>The four builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/sfa2-gold/title_us.png?v=078494fcfd" alt="Street Fighter Alpha 2 Gold (USA) title screen"><figcaption><strong>Street Fighter Alpha 2 Gold</strong><br>USA · <code>sfa2g</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_eu.png?v=eb70160c05" alt="Street Fighter Alpha 2 Dash (Europe) title screen"><figcaption><strong>Street Fighter Alpha 2 Dash</strong><br>Europe · <code>sfa2d</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_jp.png?v=2850bec363" alt="Street Fighter Zero 2 Dash (Japan) title screen"><figcaption><strong>Street Fighter Zero 2 Dash</strong><br>Japan · <code>sfz2d</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_asia.png?v=e2099bcd99" alt="Street Fighter Zero 2 Dash (Asia (English)) title screen"><figcaption><strong>Street Fighter Zero 2 Dash</strong><br>Asia (English) · <code>sfz2da</code></figcaption></figure></div>
 <h2>About</h2>
 <p>Street Fighter Alpha 2 Gold, known as Zero 2 Dash in Japan, was the console revision of Alpha 2 that added Cammy as a playable fighter, first on PlayStation and Saturn and in final form in Capcom&#x27;s 2006 PlayStation 2 anthology. It was never released on arcade hardware. This project rebuilds the anthology&#x27;s edition as a real CPS-2 game.</p>
 <p>It is a faithful reconstruction, not a remix. It starts from the original arcade Zero 2 Alpha program and restores the anthology&#x27;s changes piece by piece: Cammy, her graphics, the audio, and the endings, each one checked against the PlayStation 2 original. Four regional builds are provided, shown below. The English builds also carry the full Japanese script, newly translated: every story and ending page, Evil Ryu&#x27;s own ending, and all 452 win quotes.</p>
-<p>This is a release candidate. All four builds are complete and verified against the reference. The 4 MB builds have been run and accepted in MAME, and the 8 MB builds are verified by content and checksum.</p>
+<p>This is a release candidate.</p>
 <h2>What's included</h2><ul>
 <li>Cammy restored as a playable fighter, with her graphics, palettes, voice, sound effects, win poses, and ending</li>
+<li>Cammy&#x27;s own stage music: her X-Men vs. Street Fighter theme, played on Alpha 2&#x27;s own sound hardware</li>
 <li>Shin Akuma selectable: press Start five times on Akuma at player select</li>
 <li>The revised title, presentation, and staff-credit screens for each region</li>
 <li>In the English builds, the full Japanese script in English: every story and ending page, Evil Ryu&#x27;s own ending, and all 452 win quotes, plus red blood and Birdie&#x27;s missing victory pose</li>
@@ -57,25 +58,30 @@ could hold, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>
 <tr><td>USA</td><td>Street Fighter Alpha 2 Gold</td><td class="mono">sfa2g</td><td class="mono">sfz2al</td></tr><tr><td>Europe</td><td>Street Fighter Alpha 2 Dash</td><td class="mono">sfa2d</td><td class="mono">sfz2al</td></tr><tr><td>Japan</td><td>Street Fighter Zero 2 Dash</td><td class="mono">sfz2d</td><td class="mono">sfz2alj</td></tr><tr><td>Asia (English)</td><td>Street Fighter Zero 2 Dash</td><td class="mono">sfz2da</td><td class="mono">sfz2al</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-09-20. Game version unchanged.</p>
-<p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
+
+
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/sfa2-gold-rc3-kit.zip?v=d0e38e2ee2">sfa2-gold-rc3-kit.zip</a>
+  <div class="file"><a href="../downloads/sfa2-gold-rc4-kit.zip?v=7b6a661740">sfa2-gold-rc4-kit.zip</a>
   (1.2 MB)</div>
-  <div class="hash">SHA-256: d0e38e2ee260008265ca9bdcdafc4c85762c83ab76a8869f80c284b3e98651a3</div>
+  <div class="hash">SHA-256: 7b6a661740628ba4c60ffbe1116095d3deac37dc72e3da1a4d6831393c7d65ca</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
 <ul><li>your own PlayStation 2 anthology disc image: Street Fighter Alpha Anthology, or Street Fighter Zero — Fighter&#x27;s Generation for the Japan set</li><li>your own arcade Street Fighter Zero 2 Alpha romset: sfz2al, plus sfz2alj for the Japan set</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip sfa2-gold-rc3-kit.zip -d sfa2-gold
+<pre><code>unzip sfa2-gold-rc4-kit.zip -d sfa2-gold
 cd sfa2-gold
 python3 apply.py --iso &quot;Street Fighter Alpha Anthology.iso&quot; \
                  --romset sfz2al.zip --region us --out-dir out</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc4 (2026-09-24)</h3><ul>
+<li>Cammy&#x27;s stage music is restored. You can hear it in a two-player match.</li>
+<li>Portraits before a fight and in the story scenes no longer pick up the wrong colors.</li>
+<li>In the English builds, the last lines of every ending now display in full, and ending text sits clear of the screen edges.</li>
+</ul>
 <h3>rc3 (2026-09-17)</h3><ul>
 <li>The English builds (USA, Europe and Asia) now carry the whole Japanese script in English. Every story and ending page is back, in the Japanese order, including scenes the English version cut short.</li>
 <li>Evil Ryu has his own ending again, with his narration and his scene with Akuma, instead of borrowing Ryu&#x27;s.</li>
@@ -97,7 +103,7 @@ python3 apply.py --iso &quot;Street Fighter Alpha Anthology.iso&quot; \
 <h2>Related projects</h2><ul><li><a href="../sfz2al-restoration/">Street Fighter Zero 2 Alpha</a>, the same English restoration on the arcade Zero 2 Alpha, without the Gold additions</li><li><a href="../cps-plus/">CPS+</a>, pair these sets with the arranged Saturn soundtrack on MiSTer, using the Gold Arrange MRAs in the CPS+ kit, which load them directly</li></ul>
 <h2>Notes</h2><ul class="notes">
 <li>The 8 MB builds hold more QSound audio than an original CPS-2 board supports, so they run only on HBMAME and MiSTer, not real hardware.</li>
-<li>This is a fan reconstruction, unaffiliated with Capcom. The kit ships no code or data from the anthology or the arcade game. The sets are built from discs and roms you already own.</li>
+<li>This is a fan reconstruction, unaffiliated with Capcom. The sets are built from discs and roms you already own, and the kit ships no code or data from the anthology or the arcade game, with one exception: Cammy&#x27;s stage music uses about 4 KB of her theme&#x27;s score from X-Men vs. Street Fighter (Capcom, 1996), which the kit carries.</li>
 </ul>
 </main>
 <footer class="site">

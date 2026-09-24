@@ -52,13 +52,13 @@ PROFILES = {"jp": ex.JP, "us": ex.US, "eu": ex.EU, "asia": ex.ASIA}
 # friendly MiSTer MRA filename (title and region; no date).
 SETS = {
     "us": {"4mb": "sfz2al", "8mb": "sfa2g",
-           "mra": "Street Fighter Alpha 2 Gold (USA)"},
+           "mra": "Street Fighter Alpha 2 Gold (USA) [Backport]"},
     "eu": {"4mb": "sfz2al", "8mb": "sfa2d",
-           "mra": "Street Fighter Alpha 2 Dash (Europe)"},
+           "mra": "Street Fighter Alpha 2 Dash (Europe) [Backport]"},
     "jp": {"4mb": "sfz2alj", "8mb": "sfz2d",
-           "mra": "Street Fighter Zero 2 Dash (Japan)"},
+           "mra": "Street Fighter Zero 2 Dash (Japan) [Backport]"},
     "asia": {"4mb": "sfz2al", "8mb": "sfz2da",
-             "mra": "Street Fighter Zero 2 Dash (Asia)"},
+             "mra": "Street Fighter Zero 2 Dash (Asia) [Backport]"},
 }
 # MiSTer folder: every project of ours lives under _Arcade/_Arcade Patches,
 # sorted the way the website is.  USA sits at the top of its section and every
