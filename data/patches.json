@@ -2224,6 +2224,195 @@
         "MAME shows checksum warnings for the ten patched files. That's expected; the game plays normally. HBMAME with the matching set definitions loads them without them.",
         "Fan work, unaffiliated with Capcom or Marvel. The patch contains no ROM data; you need your own dump of the Japanese set."
       ]
+    },
+    {
+      "slug": "vsav-restoration",
+      "title": "Vampire Savior",
+      "subtitle": "English restoration \u00b7 The Japanese board, in English",
+      "section": "restorations",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-09-22",
+      "game": "Vampire Savior: The Lord of Vampire (Japan 970519)",
+      "set": "vsavj",
+      "hardware": "Capcom CPS-2",
+      "patch_noun": "restoration",
+      "patch_kind": "English restoration patch",
+      "patch_intro": "An unofficial fan restoration of Vampire Savior: The Lord of Vampire (Japan 970519): the Japanese board's content, in English, in a USA build.",
+      "summary": "The export boards toned Vampire Savior down: less blood, recolored gore, dropped win quotes and endings cut short. This is the Japanese game, in English, with all of it back.",
+      "description": [
+        "Vampire Savior wasn't the same game everywhere. The export boards recolored Jedah's blood purple and Forever Torment's green, cut a few gory touches entirely, and defaulted to sweat instead of blood. Their English script dropped fourteen win quotes and 47 ending pages. Even the damage values differ: in places the export boards hit a little harder.",
+        "The English Restoration is the Japanese board, in English. The blood is red again, everywhere it was in Japan. All 241 win quotes and every ending page are here, translated from the Japanese: where Capcom's English said the same thing it's kept, and everything else is newly translated, including the pages the export dropped. The fights run on Japan's damage values and Japan's computer difficulty.",
+        "Out of the box it's set up like a Japanese cabinet: blood on, Auto guard selectable at the select screen, one coin one credit. The operator menu and the Western character names stay as the US board has them, and Lord Raptor's name finally reads L.Raptor instead of L.Rapter.",
+        "It's a USA build that runs in MAME, HBMAME and on MiSTer. The Japanese board already has everything above, so there's no Japan build for now.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "All 241 win quotes from the Japanese game, in English, including the fourteen the US board dropped",
+        "Every ending page from the Japanese game, in English, including the 47 the US board dropped, with Japan's page timing",
+        "The dialogue before the final battle with Jedah, checked line by line against the Japanese and revised where Capcom's English strayed",
+        "Red blood: Jedah's attacks (purple on the US board), Forever Torment's guillotine and well (green), and hit blood on by default",
+        "Lord Raptor's blood spray in his bite throw, and the paper notice in Bishamon's Togakubi Sarashi finish, both cut from the export boards",
+        "Japan's damage values and computer difficulty",
+        "Set up like a Japanese cabinet: blood on, Auto guard selectable, one coin one credit",
+        "Lord Raptor's name spelled right"
+      ],
+      "comparison": {
+        "heading": "Compared with the boards",
+        "intro": [
+          "How the English Restoration compares with the Japanese and US boards."
+        ],
+        "columns": [
+          "",
+          "Japan",
+          "USA",
+          "English Restoration"
+        ],
+        "rows": [
+          [
+            "Language",
+            "Japanese",
+            "English",
+            "English"
+          ],
+          [
+            "Win quotes",
+            "241",
+            "227",
+            "241, translated from the Japanese"
+          ],
+          [
+            "Ending pages",
+            "All",
+            "47 dropped",
+            "All, translated from the Japanese"
+          ],
+          [
+            "Hit blood out of the box",
+            "Blood",
+            "Sweat",
+            "Blood"
+          ],
+          [
+            "Jedah's blood",
+            "Red",
+            "Purple",
+            "Red"
+          ],
+          [
+            "Forever Torment's blood",
+            "Red",
+            "Green",
+            "Red"
+          ],
+          [
+            "Lord Raptor's bite-throw spray",
+            "Yes",
+            "No",
+            "Yes"
+          ],
+          [
+            "Auto guard at the select screen",
+            "On",
+            "Off until the operator enables it",
+            "On"
+          ],
+          [
+            "Damage values",
+            "Japan's",
+            "Higher in places",
+            "Japan's"
+          ],
+          [
+            "Computer difficulty",
+            "Japan's",
+            "Export's",
+            "Japan's"
+          ],
+          [
+            "Character names",
+            "Japanese",
+            "Western",
+            "Western"
+          ]
+        ]
+      },
+      "feedback": true,
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/vsavj.zip",
+        "patched_zip": "../capcom/backports/vsav/out/regional_restoration/hbmame/vsavru.zip"
+      },
+      "mra": {
+        "base": "data/mra/vsavj.mra",
+        "name": "Vampire Savior: The Lord of Vampire (USA) [English Restoration]",
+        "setname": "vsavru",
+        "filename": "Vampire Savior The Lord of Vampire (USA) [English Restoration].mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo",
+        "region": "USA"
+      },
+      "hbmame": {
+        "setname": "vsavru",
+        "renames": {
+          "vm3.13m": "vm3.13m",
+          "vm3.15m": "vm3.15m",
+          "vm3.17m": "vm3.17m",
+          "vm3.19m": "vm3.19m",
+          "vm3j.03d": "vm3j.03d",
+          "vm3j.04d": "vm3j.04d",
+          "vm3j.07b": "vm3j.07b"
+        }
+      },
+      "screenshots": [
+        {
+          "before": "data/screenshots/vsav-restoration/blood_stock_usa.png",
+          "after": "data/screenshots/vsav-restoration/blood_restoration_usa.png",
+          "before_label": "US board",
+          "after_label": "English Restoration",
+          "caption": "Forever Torment's blood is green on the US board. It's red again, as in Japan."
+        },
+        {
+          "single": "data/screenshots/vsav-restoration/ending_hsienko_usa.png",
+          "caption": "Hsien-Ko's ending, with the seven pages the US board dropped back in."
+        },
+        {
+          "single": "data/screenshots/vsav-restoration/quote_demitri_usa.png",
+          "caption": "One of the win quotes the US board dropped, in English."
+        },
+        {
+          "before": "data/screenshots/vsav-restoration/mode_select_stock_usa.png",
+          "after": "data/screenshots/vsav-restoration/mode_select_restoration_usa.png",
+          "before_label": "US board",
+          "after_label": "English Restoration",
+          "caption": "Auto guard is there from the start, as on a Japanese cabinet. The US board hides it until the operator turns it on."
+        },
+        {
+          "before": "data/screenshots/vsav-restoration/select_raptor_stock_usa.png",
+          "after": "data/screenshots/vsav-restoration/select_raptor_restoration_usa.png",
+          "before_label": "US board",
+          "after_label": "English Restoration",
+          "caption": "L.Rapter becomes L.Raptor."
+        }
+      ],
+      "related": [
+        {
+          "label": "Vampire Savior 2",
+          "url": "../vsav2-english/",
+          "note": "the Japan-only follow-up, translated into English"
+        },
+        {
+          "label": "Night Warriors 2",
+          "url": "../vhunt2-english/",
+          "note": "its twin, Vampire Hunter 2, translated into English"
+        }
+      ],
+      "notes": [
+        "MAME shows checksum warnings for the patched files. That's expected; the game plays normally. HBMAME with the matching set definitions loads them without them.",
+        "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
+      ]
     }
   ]
 }
