@@ -20,12 +20,7 @@
       {
         "key": "restorations",
         "title": "Restorations",
-        "description": "Some games lost things on the way out of Japan: quotes, endings, even characters, or the ability to run outside Japan at all. Others never reached the arcade in their final form. A restoration puts back what was lost and leaves the rest of the game as it was."
-      },
-      {
-        "key": "translations",
-        "title": "Translations",
-        "description": "Games that only ever came out in Japan, translated into English so everyone can play them."
+        "description": "Some games lost things on the way out of Japan: quotes, endings, even characters, or the ability to run outside Japan at all. Others never left Japan, or never reached the arcade in their final form. A restoration brings the Japanese game back, in English where it needs it, and leaves the rest of the game as it was."
       }
     ],
     "repo_url": null,
@@ -621,7 +616,7 @@
       "slug": "vhunt2-english",
       "title": "Night Warriors 2",
       "subtitle": "English translation",
-      "section": "translations",
+      "section": "restorations",
       "status": "release-candidate",
       "version": "rc2",
       "date": "2026-09-17",
@@ -653,7 +648,7 @@
         "name": "Night Warriors 2 (USA) [English Translation]",
         "setname": "nwarr2en",
         "filename": "Night Warriors 2 (USA) [English Translation].mra",
-        "zip_dir": "_Arcade/_Arcade Patches/_Translations",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
         "platform": "CPS-2",
         "category": "Fighting",
         "catver": "Fighter / Versus",
@@ -726,7 +721,7 @@
       "slug": "vsav2-english",
       "title": "Vampire Savior 2",
       "subtitle": "English translation",
-      "section": "translations",
+      "section": "restorations",
       "status": "release-candidate",
       "version": "rc2",
       "date": "2026-09-17",
@@ -757,7 +752,7 @@
         "name": "Vampire Savior 2 (USA) [English Translation]",
         "setname": "vsav2en",
         "filename": "Vampire Savior 2 (USA) [English Translation].mra",
-        "zip_dir": "_Arcade/_Arcade Patches/_Translations",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
         "platform": "CPS-2",
         "category": "Fighting",
         "catver": "Fighter / Versus",
