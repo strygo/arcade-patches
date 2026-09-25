@@ -1,7 +1,7 @@
 {
   "releases": {
     "cps-plus": {
-      "current": "1.3b",
+      "current": "1.4",
       "versions": {
         "1.0": {
           "current_revision": 1,
@@ -214,6 +214,53 @@
                 "ready_record_sha256": "c137b08e251a067925e3e0949784d72c73f31f7aba5ef78cd452fe90109f8f68",
                 "release_sha256": "eedf3968d9723abb18b7cd2bf4a8e7d4fdcbbaf088b796835b1b973b3c742aec",
                 "type": "unchanged-public-parity"
+              }
+            }
+          }
+        },
+        "1.4": {
+          "current_revision": 1,
+          "date": "2026-09-25",
+          "files": {
+            "kit": {
+              "archive": "archive/82e425122a709906bb2634d328f992eca30265ec26f43c78803a7f0e408ef899/cps-plus-1.4-kit.zip",
+              "name": "cps-plus-1.4-kit.zip",
+              "sha256": "82e425122a709906bb2634d328f992eca30265ec26f43c78803a7f0e408ef899",
+              "size": 5026573
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "1.4-candidate.5",
+            "capcom_source_commit": "f228636bbe3df45e1681afe6f35de478467ed3d0",
+            "ready_record_sha256": "82c4b1dfe47cf134f503613dca088226fc58b6f0e4200284ffa3e50d02bdc4cc",
+            "release_sha256": "b951768b51ab565580679bbf6b0fbf58cd79f6eccace5904561a5f2285a52444",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-09-25",
+              "files": {
+                "kit": {
+                  "archive": "archive/82e425122a709906bb2634d328f992eca30265ec26f43c78803a7f0e408ef899/cps-plus-1.4-kit.zip",
+                  "name": "cps-plus-1.4-kit.zip",
+                  "sha256": "82e425122a709906bb2634d328f992eca30265ec26f43c78803a7f0e408ef899",
+                  "size": 5026573
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "1.4-candidate.5",
+                "capcom_source_commit": "f228636bbe3df45e1681afe6f35de478467ed3d0",
+                "ready_record_sha256": "82c4b1dfe47cf134f503613dca088226fc58b6f0e4200284ffa3e50d02bdc4cc",
+                "release_sha256": "b951768b51ab565580679bbf6b0fbf58cd79f6eccace5904561a5f2285a52444",
+                "type": "qualified-candidate"
               }
             }
           }

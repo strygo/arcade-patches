@@ -36,11 +36,11 @@
       "subtitle": "Arranged CD-era soundtracks for CPS-1 & CPS-2 arcade games on MiSTer",
       "section": "arrangements",
       "status": "released",
-      "version": "1.3b",
-      "date": "2026-09-19",
+      "version": "1.4",
+      "date": "2026-09-25",
       "hardware": "MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)",
       "summary": "When Capcom brought its arcade games home on CD, it sent the music back to the studio and re-recorded it. Those versions never made it back to the arcade. CPS+ puts them there. Pick a game on your MiSTer and the arranged soundtrack is just playing, while every punch, voice and jingle still comes from the arcade board itself.",
-      "featured_stats": "27 audio packs \u00b7 80 MRAs \u00b7 3 cores \u00b7 every pack built from sources you own",
+      "featured_stats": "30 audio packs \u00b7 151 MRAs \u00b7 3 cores \u00b7 every pack built from sources you own",
       "description": [
         "From Final Fight CD onward, Capcom kept sending its arcade soundtracks back to the studio. Every CD-based home port got a full re-recording of the music, the 'arrange' versions, produced by the original composers' teams. For thirty years those recordings stayed locked to the home versions. CPS+ puts them where they always belonged, under the arcade games themselves.",
         "On a MiSTer, the real CPS-1 or CPS-2 hardware logic runs the game while the CD-era soundtrack plays the music, started, looped and faded by the game itself, exactly the way Capcom's own console releases timed it. Hit sounds, voices and the announcer stay pure arcade. It sounds like the arcade board grew a CD drive.",
@@ -54,7 +54,8 @@
       ],
       "download_notes": [
         "The download is tools: the MRAs, the three CPS+ cores with their GPL-3.0 source, and the pack builder. It makes the packs on your machine from discs, disks and albums you own, naming anything it skips for want of a disc. It also assembles out/mister/ for you, holding the cores, your packs, and only the MRAs those packs can load, so nothing on the card fails to start.",
-        "Five MRA groups pair CPS+ audio with sets that are not stock: the Alpha 2 Gold MRAs load the SFA2 Gold reconstructed sets, the Grand Master Challenge and Super Street Fighter II EX MRAs load those projects' HBMAME sets, \u2018Final Fight EX (Arrange)\u2019 loads the Final Fight EX set, and \u2018Final Fight 30th Anniversary CPS2 Edition (Arrange)\u2019 loads the CPS2 conversion of Final Fight that the Arcade Offset project distributes. Build the first four with their own kits first (links below)."
+        "Five MRA groups pair CPS+ audio with sets that are not stock: the Alpha 2 Gold MRAs load the SFA2 Gold reconstructed sets, the Grand Master Challenge and Super Street Fighter II EX MRAs load those projects' HBMAME sets, \u2018Final Fight EX (Arrange)\u2019 loads the Final Fight EX set, and \u2018Final Fight 30th Anniversary CPS2 Edition (Arrange)\u2019 loads the CPS2 conversion of Final Fight that the Arcade Offset project distributes. Build the first four with their own kits first (links below).",
+        "The Captain Commando MRAs change one instruction in the game, so the Stage 3 boss fight keeps its music when Yamato splits apart. Nothing else in the game differs."
       ],
       "quickstart": [
         "Download and unzip the kit.",
@@ -141,8 +142,8 @@
         "label": "CPS+ MiSTer kit: cores, MRAs and the pack builder"
       },
       "highlights": [
-        "27 audio packs covering 18 arcade games: every arranged soundtrack Capcom recorded for the CPS line, the SNES and X68000 MIDI scores, the Double Impact and HD Remix arrangements, and Strider's PlayStation remix",
-        "80 ready-to-play MRAs, so you pick the game from the CPS+ folder and the music is just there",
+        "30 audio packs covering 19 arcade games: every arranged soundtrack Capcom recorded for the CPS line, the SNES, X68000 MIDI and MS-DOS scores, the Double Impact and HD Remix arrangements, and the PlayStation soundtracks of Strider and Captain Commando",
+        "151 ready-to-play MRAs, so you pick the game from the CPS+ folder and the music is just there",
         "Runs on a stock MiSTer, with no firmware changes and nothing to configure",
         "Only tools in the download. Packs build from the discs, disks and albums you already own, in one command"
       ],
@@ -165,7 +166,7 @@
         {
           "platform": "PlayStation 2",
           "disc": "Hyper Street Fighter II: The Anniversary Edition",
-          "variants": "Japan or Europe, or the USA Street Fighter Anniversary Collection; all three carry identical audio data"
+          "variants": "Japan or Europe, or the USA Street Fighter Anniversary Collection; all three carry identical audio data; an .iso, a zip of one, or a .chd"
         },
         {
           "platform": "PlayStation 2",
@@ -236,6 +237,16 @@
           "platform": "PlayStation",
           "disc": "Strider",
           "variants": "USA, the disc bundled with Strider 2; the kit records the game's own sound test with MAME and your PlayStation BIOS set"
+        },
+        {
+          "platform": "MS-DOS",
+          "disc": "Super Street Fighter II Turbo (MS-DOS)",
+          "variants": "the 1995 CD release, as its folder or a .zip/.7z of it; the FM, Sound Canvas and MT-32 soundtracks are rendered on your machine, the last two from your own Roland SC-55 or MT-32 ROMs"
+        },
+        {
+          "platform": "PlayStation",
+          "disc": "Captain Commando",
+          "variants": "Japan, its only release; .chd, or .cue with its bins"
         }
       ],
       "coverage_intro": "Every soundtrack is built from one disc, one set of disks, or one album you own. Where a disc came out in several regions, the ones listed below all produce the same pack.",
@@ -243,15 +254,15 @@
         {
           "q": "What do I need installed to build the packs?",
           "a": [
-            "Python 3.11 or newer, numpy, and ffmpeg on your PATH. On a Mac: brew install python ffmpeg, then pip3 install numpy. On Linux, use your package manager. 7-Zip is only needed if your rips are .7z archives. The three X68000 packs additionally need git, cmake and a C/C++ compiler (see the X68000 question below). The Strider pack needs MAME as well (see the Strider question below).",
+            "Python 3.11 or newer, numpy, and ffmpeg on your PATH. On a Mac: brew install python ffmpeg, then pip3 install numpy. On Linux, use your package manager. 7-Zip is only needed if your rips are .7z archives. The three X68000 packs and the rendered MS-DOS packs (FM, Sound Canvas and MT-32) additionally need git, cmake and a C/C++ compiler (see the X68000 question below, and the kit's MSDOS.md). The Strider pack needs MAME as well (see the Strider question below).",
             "Nothing is installed on the MiSTer itself. The kit is plain files copied to the SD card, and a stock MiSTer runs them as-is."
           ]
         },
         {
           "q": "What disc rip formats does the builder accept?",
           "a": [
-            "A .cue sheet with its .bin files beside it, a .mds/.mdf pair, or a .zip/.7z archive containing exactly one cue sheet. For the PlayStation 2 sources, point it at the .iso (or a zip containing it). The two CD-audio sources (the Final Fight OST and the Area 88 soundtrack) are folders of .flac or .wav files instead of a disc image. The X68000 games are a zip of their .dim or .xdf floppy images. The two album sources are the downloads themselves: Capcom's Double Impact zip, as downloaded or unpacked, and the OC ReMix folder holding the FLACs. The Strider PlayStation disc can be .chd, or .cue with its bins.",
-            "CHD rips need converting back first with chdman extractcd, since the builder doesn't read CHD directly."
+            "A .cue sheet with its .bin files beside it, a .mds/.mdf pair, or a .zip/.7z archive containing exactly one cue sheet. For the PlayStation 2 sources, point it at the .iso, a zip containing it, or a .chd. The two CD-audio sources (the Final Fight OST and the Area 88 soundtrack) are folders of .flac or .wav files instead of a disc image. The X68000 games are a zip of their .dim or .xdf floppy images. The two album sources are the downloads themselves: Capcom's Double Impact zip, as downloaded or unpacked, and the OC ReMix folder holding the FLACs. The Strider and Captain Commando PlayStation discs can be .chd, or .cue with their bins. The MS-DOS game is its folder, or a .zip/.7z of it.",
+            "The PlayStation and PlayStation 2 discs are read from CHD with MAME's chdman. Other CHD rips need converting back first with chdman extractcd."
           ]
         },
         {
@@ -297,6 +308,14 @@
           ]
         },
         {
+          "q": "I built the 1.3b packs. Do I need to rebuild them for 1.4?",
+          "a": [
+            "Some of them. The Street Fighter II family now shares one pack per soundtrack across all its games: ssf2_arrange replaces ssf2t_arrange and hsf2_arrange, ssf2_cps1 replaces hsf2_cps1, and ssf2_hdremix is HD Remix under its new name. ssf2_x68k_midi changed too. Drop the 1.4 kit over your old one, add any new sources to discs.toml, and run make_packs.py again. It rebuilds those, adds whatever new packs your sources allow, and every other pack comes out identical, hash for hash. The three cores are unchanged.",
+            "On the card, delete the old hsf2_arrange, hsf2_cps1, ssf2t_arrange and ssf2t_hdremix packs from games/CPS+/, and the old MRAs named \u2018Hyper Street Fighter II (World)\u2019 and \u2018Super Street Fighter II EX The Ultimate Championship\u2019. The new ones replace them.",
+            "If you use the Super Street Fighter II EX or Alpha 2 Gold MRAs, rebuild those sets with their projects' latest kits (EX rc2, Gold rc4): the MRAs now expect the new sets."
+          ]
+        },
+        {
           "q": "I built the 1.2 packs. Do I need to rebuild them for 1.3?",
           "a": [
             "No. Every pack you built with 1.2 still works with 1.3. Three packs (the two Double Impact remixes and HD Remix) have new reference hashes, because they now build to the same bytes on every computer, but the difference is inaudible and the files are the same size. Copy the new MRAs to your card.",
@@ -312,6 +331,16 @@
         }
       ],
       "coverage": [
+        {
+          "game": "Captain Commando",
+          "sets": "captcommu, captcommj",
+          "packs": [
+            {
+              "soundtrack": "PlayStation soundtrack",
+              "disc": "Captain Commando"
+            }
+          ]
+        },
         {
           "game": "Final Fight",
           "sets": "ffightu, ffightj, ffightus01, ffightjs01",
@@ -382,6 +411,30 @@
             {
               "soundtrack": "CPS-1 soundtrack",
               "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            },
+            {
+              "soundtrack": "HD Remix",
+              "disc": "Super Street Fighter II Turbo HD Remix official soundtrack"
+            },
+            {
+              "soundtrack": "X68000 MIDI soundtrack",
+              "disc": "Super Street Fighter II"
+            },
+            {
+              "soundtrack": "MS-DOS FM soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
+            },
+            {
+              "soundtrack": "MS-DOS Sound Canvas soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
+            },
+            {
+              "soundtrack": "MS-DOS MT-32 soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
+            },
+            {
+              "soundtrack": "MS-DOS CD soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
             }
           ]
         },
@@ -520,12 +573,32 @@
               "disc": "Hyper Street Fighter II: The Anniversary Edition"
             },
             {
-              "soundtrack": "X68000 MIDI soundtrack",
-              "disc": "Super Street Fighter II"
+              "soundtrack": "CPS-1 soundtrack",
+              "disc": "Hyper Street Fighter II: The Anniversary Edition"
             },
             {
               "soundtrack": "HD Remix",
               "disc": "Super Street Fighter II Turbo HD Remix official soundtrack"
+            },
+            {
+              "soundtrack": "X68000 MIDI soundtrack",
+              "disc": "Super Street Fighter II"
+            },
+            {
+              "soundtrack": "MS-DOS FM soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
+            },
+            {
+              "soundtrack": "MS-DOS Sound Canvas soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
+            },
+            {
+              "soundtrack": "MS-DOS MT-32 soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
+            },
+            {
+              "soundtrack": "MS-DOS CD soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
             }
           ]
         },
@@ -539,8 +612,32 @@
               "disc": "Hyper Street Fighter II: The Anniversary Edition"
             },
             {
+              "soundtrack": "CPS-1 soundtrack",
+              "disc": "Hyper Street Fighter II: The Anniversary Edition"
+            },
+            {
               "soundtrack": "HD Remix",
               "disc": "Super Street Fighter II Turbo HD Remix official soundtrack"
+            },
+            {
+              "soundtrack": "X68000 MIDI soundtrack",
+              "disc": "Super Street Fighter II"
+            },
+            {
+              "soundtrack": "MS-DOS FM soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
+            },
+            {
+              "soundtrack": "MS-DOS Sound Canvas soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
+            },
+            {
+              "soundtrack": "MS-DOS MT-32 soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
+            },
+            {
+              "soundtrack": "MS-DOS CD soundtrack",
+              "disc": "Super Street Fighter II Turbo (MS-DOS)"
             }
           ]
         },
@@ -557,6 +654,18 @@
         }
       ],
       "release_history": [
+        {
+          "version": "1.4",
+          "date": "2026-09-25",
+          "items": [
+            "New: Every Street Fighter II family game now has every soundtrack. Super Street Fighter II, Super Street Fighter II Turbo (with Super Street Fighter II X, Grand Master Challenge and EX) and Hyper Street Fighter II each get eight: the Anniversary Edition arrange, the CPS-1 soundtrack, HD Remix, the X68000 MIDI score and the four new MS-DOS soundtracks.",
+            "New: the four soundtracks of the 1995 MS-DOS Super Street Fighter II Turbo, built from your copy of the game: FM, Roland Sound Canvas, Roland MT-32 and the CD's own audio. The kit's MSDOS.md explains what each needs.",
+            "New: Captain Commando with its PlayStation soundtrack, USA and Japan, from the Japanese PlayStation disc.",
+            "Improved: The family's games share one pack per soundtrack, so the card holds one Anniversary Edition arrange instead of three, about 330 MB less. Super Street Fighter II and Turbo now fade the music out at the end of a match, as the board does, and the CPS-1 soundtrack plays at the board's own level instead of about 5 dB loud.",
+            "Fix: The X68000 MIDI soundtrack's character select, bonus stage and four endings no longer cut out partway; they loop as the X68000 game does. It now also plays Turbo's character select and opening.",
+            "Fix: The Final Fight and Magic Sword Double Impact packs build with every ffmpeg. Some ffmpeg builds dropped a few samples from the album's MP3s, so the build stopped or failed its hash check. The packs themselves are unchanged."
+          ]
+        },
         {
           "version": "1.3b",
           "date": "2026-09-19",
