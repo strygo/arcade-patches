@@ -1,0 +1,233 @@
+{
+ "note": "Text already public before the content audit; tolerated, never extended by hand.",
+ "tolerated": [
+  {
+   "member": "build/convert_pan.py",
+   "line": "\"Steve: 'why aren't you using Jessica as standalone \""
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "\"layered build Steve asked for: the background is a \""
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "\"layered build review asked for: the background is a \""
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# Cody's white shirt -- which renders FLAT WHITE, the block Steve saw"
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# FLAT WHITE from the panorama's first paint (the block Steve reported"
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# FLAT WHITE from the panorama's first paint (the block reported in review"
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# LATER moment early -- Steve saw Jessica's foot appear at its"
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# REQUANTISED: Steve saw the JP scene \"change palettes at the end and"
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# Steve saw beside her mouth, which no amount of"
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# Steve's \"the top of her legs don't animate, causing a break\"."
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# That is what Steve saw \"when the scene scrolls up\"."
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# background through a character's palette (Steve's miscoloured tile"
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# but larger misses -- Steve saw exactly that"
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# corner sailed through.  That is what Steve saw as the"
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# stops.  The cells Steve reported -- the white block at Jessica's mouth,"
+  },
+  {
+   "member": "build/convert_pan.py",
+   "line": "# stops.  The cells reported in review -- the white block at Jessica's mouth,"
+  },
+  {
+   "member": "build/ending.py",
+   "line": "# against real-time audio (Steve: \"voice/caption drift in the later"
+  },
+  {
+   "member": "build/engine.py",
+   "line": "# Steve: \"the background is hidden one frame before the obj"
+  },
+  {
+   "member": "build/engine.py",
+   "line": "# neighbours.  Both halves of Steve's report (\"jessica's"
+  },
+  {
+   "member": "build/engine.py",
+   "line": "# stock does this too, confirmed by Steve in the pure arcade ending)."
+  },
+  {
+   "member": "build/engine.py",
+   "line": "# with no picture behind them.  Steve caught it as the"
+  },
+  {
+   "member": "build/opening.py",
+   "line": "ONE ROUTE, AND IT READS NO CAPTURE (Steve: \"opening should not"
+  },
+  {
+   "member": "build/repair.py",
+   "line": "# hide it via its cel-merge structure (user-approved look); the"
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# (Steve caught it)."
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# (caught in review)."
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# 1786 was the other extreme (Steve: hung past its scene)."
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# ROM's own ear-approved FM schedule plays."
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# Steve: \"why would the us continue to depend on the map?\""
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# The \"one offset, no warping\" candidate.  Steve: \"why is"
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# are the values Steve approved before the credit existed."
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# instrument is Steve's ear, and"
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# just reads as a hang -- which is what Steve saw at 1786."
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# lands AFTER the shout -- text into silence (user-reported)."
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# line is still being spoken (Steve: \"it disappears even"
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# now fires at the measured \"What?\" burst.  (User-reported:"
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# otherwise hold 498 f and outlive its scene (Steve: \"the"
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# reveal next to the typewriter elsewhere (Steve spotted it).  One record"
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# table's own row boundary.  Steve reviewed 1870 and did"
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# that moves the handback least (12 frames).  Steve reviewed this build:"
+  },
+  {
+   "member": "build/rom.py",
+   "line": "# villain scene keeps Damnd static and silent (user-confirmed)."
+  },
+  {
+   "member": "build/text.py",
+   "line": "+ _cred_name(\"STEVE GORDON\")"
+  },
+  {
+   "member": "build/text.py",
+   "line": "which is where Steve asked for it, and written in the roll's own idiom."
+  },
+  {
+   "member": "build/text.py",
+   "line": "which is where review asked for it, and written in the roll's own idiom."
+  },
+  {
+   "member": "builder/manifests/ffight_di_audio.json",
+   "line": "\"review_note\": \"2026-09-05: the whole-file wrap was rejected; the 32-second one-shot was approved in the complete pack listening sign-off. Hardware review pending.\""
+  },
+  {
+   "member": "builder/manifests/sfa1_fullcov_candidate_map.tsv",
+   "line": "# -- all pairs ear-approved; the credit rolls are SWAPPED vs the naive"
+  },
+  {
+   "member": "builder/manifests/ssf2t_hdremix_audio.json",
+   "line": "\"method\": \"full 30 s album ending; disc edit does not pass transfer gate, retain natural album resolution; accepted in pack listening sign-off 2026-09-05\""
+  },
+  {
+   "member": "builder/manifests/unsquad_snes_trigger_map.tsv",
+   "line": "# arcade FM; the owner's pairing is the map).  SFC tracks may serve"
+  },
+  {
+   "member": "builder/manifests/unsquad_snes_trigger_map.tsv",
+   "line": "# tr40 per the owner's note (\"round 7 ascending boss should be 40\") plus the"
+  },
+  {
+   "member": "builder/pack/build_ffight_arrange.py",
+   "line": "# audible; see the loops manifest header.  Both ear-approved."
+  },
+  {
+   "member": "builder/pack/build_ffight_arrange.py",
+   "line": "derived from source and has never been observed failing, so the user asked for"
+  },
+  {
+   "member": "builder/pack/build_mtwins_arrange.py",
+   "line": "# convention the shipped, ear-approved pack was built from, verified"
+  },
+  {
+   "member": "builder/pack/build_sf2_arrange.py",
+   "line": "\"your wrapper script for the owner's paths\")"
+  },
+  {
+   "member": "builder/pack/build_sf2ce_x68k_midi.py",
+   "line": "# mono-downmix comparison over all 46 user-approved pairs puts the encoded pack"
+  },
+  {
+   "member": "builder/pack/build_unsquad_snes.py",
+   "line": "several assignments are the owner's curated role fit, and several SFC"
+  },
+  {
+   "member": "ffcd/megadrive.py",
+   "line": "# shadow Steve reported twice; 2767 px of it per frame from f7960 on,"
+  },
+  {
+   "member": "ffcd/megadrive.py",
+   "line": "# which is what Steve saw as \"the shadow appears above the"
+  },
+  {
+   "member": "ffcd/player.py",
+   "line": "# us ending also runs one frame shorter (see clock_hold).  Steve reviewed the"
+  }
+ ]
+}

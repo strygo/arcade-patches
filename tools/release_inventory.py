@@ -2,6 +2,7 @@
 """Tracked, append-only publication inventory for release downloads."""
 from __future__ import annotations
 
+import content_audit
 import hashlib
 import json
 import re
@@ -333,6 +334,11 @@ def candidate_release(ready_path: Path, candidate: Path) -> tuple[dict, dict]:
                 f"invalid candidate hash for {name}")
         require(sha256_file(path) == expected, f"candidate download hash mismatch: {name}")
         validate_zip(path)
+        # No names or review citations beyond what was already public.
+        try:
+            content_audit.check(path)
+        except ValueError as exc:
+            raise ReleaseInventoryError(str(exc)) from exc
     return ready, release
 
 
