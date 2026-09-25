@@ -131,7 +131,7 @@ def make_readme(patch: dict, members: list, fmt: str,
             lines.append(f"       \"{rel}\"")
         lines += [
             f"2. Have the stock, unmodified romset at games/mame/{setname}.zip",
-            "   (split MAME sets also need qsound.zip next to it).",
+            "   (split sets also need the parent and QSound ZIPs named in the MRA).",
             "3. You need Jotego's jtcps2 core; the standard MiSTer downloader /",
             "   update_all installs it automatically.",
             "",
@@ -155,7 +155,7 @@ def make_readme(patch: dict, members: list, fmt: str,
             lines.append(f"1. Copy \"{mra_cfg['filename']}\" anywhere under _Arcade/ on your MiSTer.")
         lines += [
             f"2. Have the stock, unmodified romset at games/mame/{setname}.zip",
-            "   (split MAME sets also need qsound.zip next to it).",
+            "   (split sets also need the parent and QSound ZIPs named in the MRA).",
             "3. You need Jotego's jtcps2 core; the standard MiSTer downloader /",
             "   update_all installs it automatically.",
             "",
