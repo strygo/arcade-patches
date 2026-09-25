@@ -1532,8 +1532,8 @@
       "subtitle": "Japan's Super Turbo, with everything added back",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-09-17",
+      "version": "rc2",
+      "date": "2026-09-24",
       "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
       "set": "ssf2xj",
       "hardware": "Capcom CPS-2",
@@ -1544,13 +1544,13 @@
       "summary": "Japan's Super Turbo with the extras it never had together: Shin Akuma and Ten Akuma on the select screen, the bonus stages back, Tournament Battle, two more colors and Free Play. In English or Japanese.",
       "description": [
         "Super Turbo is the version competitive players swear by, but it left things behind. The bonus stages from Super Street Fighter II were gone. Shin Akuma was a hidden boss you had to earn, and Ten Akuma only turned up years later at home. Tournament Battle, the eight-player linked-cabinet mode, stayed with the earlier Super Street Fighter II.",
-        "EX puts it together on the arcade game. Shin and Ten Akuma are playable from the start, picked from Ryu. The car, the falling barrels and the oil drums are back between fights. Link cabinets with the adapter and it runs Tournament Battle; without it, it plays as normal. Every fighter gets two more colors, the move names are the modern ones, and the new title reads The Ultimate Championship.",
+        "EX puts it together on the arcade game. Akuma has his own select-screen cell, with Shin and Ten available through codes there; the original Ryu codes still work. A random-select cell sits opposite him. The car, the falling barrels and the oil drums are back between fights. Link cabinets with the adapter and it runs Tournament Battle; without it, it plays as normal. Every fighter gets two more colors, the move names are the modern ones, and the new title reads The Ultimate Championship.",
         "Nothing about the existing fighters changes: this is Japan's Super Turbo underneath. The USA build carries all of Grand Master Challenge's English text; the Japan build keeps the Japanese.",
-        "EX keeps the board's own ROM layout: the same files as the Japanese set, so it runs in MAME, HBMAME and on MiSTer, and on a real CPS-2 board.",
+        "EX keeps the board's own ROM layout: the same files as the Japanese set. It runs in MAME and HBMAME, and the release candidate was tested on MiSTer. Arcade-board testing is not claimed.",
         "This is a release candidate."
       ],
       "changes": [
-        "Shin Akuma and Ten Akuma, playable from the start: on Ryu, hold Start and press three kicks for Shin, or MP, HP, MK and HK together for Ten (hold Start and three punches still gives Akuma)",
+        "Akuma and random-select cells on the player-select screen. On Akuma or Ryu, hold Start and press three kicks for Shin, or MP, HP, MK and HK together for Ten (hold Start and three punches gives Akuma)",
         "Ten Akuma has his Super gauge and the Raging Demon, with the \u5929 pose",
         "The three bonus stages from Super Street Fighter II, back in one-player games: the car after three fights, the barrels after six, the oil drums after nine",
         "Tournament Battle: with the link adapter, eight players and three matches across linked cabinets; without it, the game plays normally",
@@ -1643,18 +1643,22 @@
             "label": "USA (English)",
             "patched_zip": "../capcom/translations/ssf2x/out/enhanced/us/ssf2tuc.zip",
             "mra": {
-              "name": "Super Street Fighter II EX: The Ultimate Championship (USA)",
+              "name": "Super Street Fighter II EX (USA)",
               "setname": "ssf2tuc",
-              "filename": "Super Street Fighter II EX The Ultimate Championship (USA).mra",
+              "filename": "Super Street Fighter II EX (USA).mra",
               "region": "USA"
             },
             "hbmame": {
               "setname": "ssf2tuc",
               "renames": {
                 "sfx.13m": "sfx.13m",
+                "sfx.14m": "sfx.14m",
                 "sfx.15m": "sfx.15m",
+                "sfx.16m": "sfx.16m",
                 "sfx.17m": "sfx.17m",
+                "sfx.18m": "sfx.18m",
                 "sfx.19m": "sfx.19m",
+                "sfx.20m": "sfx.20m",
                 "sfx.21m": "sfx.21m",
                 "sfx.23m": "sfx.23m",
                 "sfx.25m": "sfx.25m",
@@ -1673,15 +1677,23 @@
             "label": "Japan (Japanese)",
             "patched_zip": "../capcom/translations/ssf2x/out/enhanced/jp/ssf2xuc.zip",
             "mra": {
-              "name": "Super Street Fighter II EX: The Ultimate Championship (Japan)",
+              "name": "Super Street Fighter II EX (Japan)",
               "setname": "ssf2xuc",
-              "filename": "Super Street Fighter II EX The Ultimate Championship (Japan).mra",
+              "filename": "Super Street Fighter II EX (Japan).mra",
               "subdir": "_Japan",
               "region": "Japan"
             },
             "hbmame": {
               "setname": "ssf2xuc",
               "renames": {
+                "sfx.13m": "sfx.13m",
+                "sfx.14m": "sfx.14m",
+                "sfx.15m": "sfx.15m",
+                "sfx.16m": "sfx.16m",
+                "sfx.17m": "sfx.17m",
+                "sfx.18m": "sfx.18m",
+                "sfx.19m": "sfx.19m",
+                "sfx.20m": "sfx.20m",
                 "sfx.21m": "sfx.21m",
                 "sfx.23m": "sfx.23m",
                 "sfx.25m": "sfx.25m",
@@ -1763,6 +1775,23 @@
         "Credits: the bonus stages are adapted from Capcom's Super Street Fighter II, the Tournament Battle link code comes from originalgrego's SSF2X Tournament Battle restoration, and Ten Akuma's move timing comes from the Dreamcast version.",
         "MAME reports checksum warnings for the patched files. That's expected; the game plays normally. HBMAME with the ssf2tuc or ssf2xuc set definition loads it without them.",
         "Fan work, unaffiliated with Capcom."
+      ],
+      "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-09-24",
+          "items": [
+            "Akuma now has his own select-screen cell opposite a random-select roulette; Shin and Ten can be selected from Akuma while the original Ryu shortcuts remain.",
+            "The Akuma portraits, names and HUD alignment, result naming, bonus-stage labels and inherited Grand Master Challenge ending presentation have been corrected.",
+            "Ten Akuma's Raging Demon finish presentation follows the Dreamcast version. Steve approved MiSTer testing for the current JP and USA builds.",
+            "The MiSTer MRA filenames and menu names are shortened to Super Street Fighter II EX, matching the companion arrange-track MRAs. Rebuild your set with the rc2 kit."
+          ]
+        },
+        {
+          "version": "rc1",
+          "date": "2026-09-17",
+          "items": ["First public release candidate."]
+        }
       ]
     },
     {
