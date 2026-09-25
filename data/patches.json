@@ -1727,8 +1727,12 @@
           "caption": "The Japan build keeps the big X."
         },
         {
-          "single": "data/screenshots/ssf2-ex/ten_raging_demon.png",
-          "caption": "Ten Akuma finishes with the Raging Demon and the \u5929 pose."
+          "single": "data/screenshots/ssf2-ex/select_akuma.png",
+          "caption": "Akuma has his own cell on the select screen, with a random-select roulette opposite him."
+        },
+        {
+          "single": "data/screenshots/ssf2-ex/ten_finish.png",
+          "caption": "Ten Akuma's Raging Demon finish, with the \u5929 as in the Dreamcast version."
         },
         {
           "before": "data/screenshots/ssf2-ex/portrait_vs_ryu.png",
@@ -1766,13 +1770,18 @@
           "note": "EX's Tournament Battle link code comes from this project"
         },
         {
+          "label": "Super Street Fighter II Turbo: New Legacy",
+          "url": "https://newlegacy.fr/credits.html",
+          "note": "Tyrone's Akuma portrait art in EX comes from this project"
+        },
+        {
           "label": "CPS+",
           "url": "../cps-plus/",
           "note": "companion project: the Anniversary Edition and HD Remix soundtracks for EX on MiSTer, through its SSF2 EX MRAs"
         }
       ],
       "notes": [
-        "Credits: the bonus stages are adapted from Capcom's Super Street Fighter II, the Tournament Battle link code comes from originalgrego's SSF2X Tournament Battle restoration, and Ten Akuma's move timing comes from the Dreamcast version.",
+        "Credits: Akuma's colored select, VS and fight-HUD portraits are Tyrone's art from Super Street Fighter II Turbo: New Legacy; the bonus stages are adapted from Capcom's Super Street Fighter II; the Tournament Battle link code comes from originalgrego's SSF2X Tournament Battle restoration; and Ten Akuma's move timing and finish come from the Dreamcast version.",
         "MAME reports checksum warnings for the patched files. That's expected; the game plays normally. HBMAME with the ssf2tuc or ssf2xuc set definition loads it without them.",
         "Fan work, unaffiliated with Capcom."
       ],
@@ -1781,16 +1790,20 @@
           "version": "rc2",
           "date": "2026-09-24",
           "items": [
-            "Akuma now has his own select-screen cell opposite a random-select roulette; Shin and Ten can be selected from Akuma while the original Ryu shortcuts remain.",
-            "The Akuma portraits, names and HUD alignment, result naming, bonus-stage labels and inherited Grand Master Challenge ending presentation have been corrected.",
-            "Ten Akuma's Raging Demon finish presentation follows the Dreamcast version. Steve approved MiSTer testing for the current JP and USA builds.",
-            "The MiSTer MRA filenames and menu names are shortened to Super Street Fighter II EX, matching the companion arrange-track MRAs. Rebuild your set with the rc2 kit."
+            "A new select-screen layout: Akuma has his own cell, with a random-select roulette opposite him and the grid re-centered. Shin and Ten are picked from Akuma's cell, and the original Ryu codes still work.",
+            "Akuma, Shin and Ten have colored portraits on the select, VS, continue and NEXT FIGHTER screens and in the fight HUD, with separate colors for each player.",
+            "Playable Akuma is named everywhere: Gouki in the Japan build and Akuma in the USA build, on the select and VS screens, in the fight HUD and in the bonus stages. A two-player bonus stage now names an Akuma winner.",
+            "Ten Akuma's Raging Demon finish shows the \u5929 as in the Dreamcast version, with the Dreamcast hit timing.",
+            "Fixed endings that could stall after the final fight: the win poses froze and endings such as Guile's family scene never started.",
+            "Fixed the select-screen cursor and the alignment of the fighters' names on the select screen, and of Akuma's name in the fight HUD."
           ]
         },
         {
           "version": "rc1",
           "date": "2026-09-17",
-          "items": ["First public release candidate."]
+          "items": [
+            "First public release candidate."
+          ]
         }
       ]
     },
