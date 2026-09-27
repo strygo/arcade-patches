@@ -1008,7 +1008,7 @@
     {
       "slug": "sfa2-gold",
       "title": "Street Fighter Alpha 2 Gold",
-      "subtitle": "Zero 2 Dash, rebuilt for CPS-2 hardware",
+      "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
       "version": "rc4",
@@ -1153,7 +1153,7 @@
     {
       "slug": "sfz2al-restoration",
       "title": "Street Fighter Zero 2 Alpha",
-      "subtitle": "English restoration \u00b7 The Japanese script, all of it",
+      "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
       "version": "rc1",
@@ -1321,7 +1321,7 @@
     {
       "slug": "final-fight-ex",
       "title": "Final Fight EX",
-      "subtitle": "The Sega CD cutscenes, on the arcade board",
+      "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
       "version": "rc2",
@@ -1432,7 +1432,7 @@
     {
       "slug": "ssf2t-gmc",
       "title": "Super Street Fighter II Turbo: Grand Master Challenge",
-      "subtitle": "English restoration \u00b7 Japan's Super Turbo",
+      "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
       "version": "rc2",
@@ -1638,7 +1638,7 @@
     {
       "slug": "ssf2-ex",
       "title": "Super Street Fighter II EX: The Ultimate Championship",
-      "subtitle": "Japan's Super Turbo, with everything added back",
+      "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
       "version": "rc2",
@@ -1919,7 +1919,7 @@
     {
       "slug": "mshvsf-restoration",
       "title": "Marvel Super Heroes vs. Street Fighter",
-      "subtitle": "English restoration \u00b7 Everything the Japanese board has",
+      "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
       "version": "rc1",
@@ -2143,7 +2143,7 @@
     {
       "slug": "mshvsf-ex",
       "title": "Marvel Super Heroes vs. Street Fighter EX",
-      "subtitle": "Norimaro, the bosses and more, in every region",
+      "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
       "version": "rc1",
@@ -2384,7 +2384,7 @@
     {
       "slug": "vsav-restoration",
       "title": "Vampire Savior",
-      "subtitle": "English restoration \u00b7 The Japanese board, in English",
+      "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
       "version": "rc1",
