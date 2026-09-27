@@ -125,6 +125,7 @@ section.kind .kind-intro { color: var(--text-dim); font-size: 0.95rem; margin: 0
 }
 .card .sub { color: var(--text-dim); font-size: 0.92rem; margin: 2px 0 6px; }
 .card p.summary { margin: 6px 0 0; font-size: 0.95rem; }
+.card .updated { color: var(--text-dim); font-size: 0.85rem; margin-top: 8px; }
 .card img.thumb {
   width: 176px;
   image-rendering: pixelated;

@@ -198,14 +198,30 @@ def status_pill(patch: dict) -> str:
     return f'<span class="badge {esc(status)}">{esc(label)}</span>'
 
 
+def version_label(ver: str) -> str:
+    return "v" + ver if ver[0].isdigit() else ver
+
+
+def updated_line(entry: dict) -> str:
+    """The home page card's version and release date, so a returning reader
+    can see what changed without opening every page.  Same date as the
+    page's own "Updated" field."""
+    parts = []
+    if entry.get("version"):
+        parts.append(esc(version_label(entry["version"])))
+    if entry.get("date"):
+        parts.append(f'Updated <time datetime="{esc(entry["date"])}">'
+                     f'{esc(entry["date"])}</time>')
+    return f'<div class="updated">{" · ".join(parts)}</div>' if parts else ""
+
+
 def badges(patch: dict) -> str:
     out = []
     pill = status_pill(patch)
     if pill:
         out.append(pill)
     if patch.get("version"):
-        ver = patch["version"]
-        out.append(f'<span class="badge plain">{esc("v" + ver if ver[0].isdigit() else ver)}</span>')
+        out.append(f'<span class="badge plain">{esc(version_label(patch["version"]))}</span>')
     out.append(f'<span class="badge plain">{esc(patch["hardware"])}</span>')
     return f'<div class="badges">{"".join(out)}</div>'
 
@@ -349,6 +365,7 @@ def render_index(site: dict, patches: list, thumbs: dict,
     <div class="sub">{esc(proj['subtitle'])}</div>
     <p class="summary">{esc(proj['summary'])}</p>
     {stats_html}
+    {updated_line(proj)}
   </div>
   {thumb_html}
 </a>"""
@@ -365,6 +382,7 @@ def render_index(site: dict, patches: list, thumbs: dict,
     <h2>{esc(patch["title"])}</h2>
     <div class="sub">{esc(patch['subtitle'])} · {esc(patch['game'])}</div>
     <p class="summary">{esc(patch['summary'])}</p>
+    {updated_line(patch)}
   </div>
   {thumb_html}
 </a>"""
