@@ -236,7 +236,8 @@ def _rom_bundle(root: Path, patch: dict, files: dict) -> dict:
     manifest = read_zip_json(Path(root) / "docs" / "downloads" / ips["zipname"], "manifest.json")
     require(manifest.get("version") == patch["version"],
             f"embedded manifest version mismatch: {ips['zipname']}")
-    result = {"kind": "rom", "ips": ips}
+    # input_schema marks the shared ROM discovery (--rompath, --check).
+    result = {"kind": "rom", "ips": ips, "rom_inputs": bool(manifest.get("input_schema"))}
     variants = manifest.get("variants")
     if variants is not None:
         require(isinstance(variants, list) and variants, f"empty variants in {ips['zipname']}")
@@ -290,7 +291,9 @@ def _published_bundle(root: Path, patch: dict, inventory: dict) -> dict:
         require(manifest.get("version") == version,
                 f"embedded manifest version mismatch: {info['zipname']}")
         return {"kind": "chd", "chd": info, "manifest": manifest}
-    return {"kind": "kit", **info, "regions": []}
+    with zipfile.ZipFile(Path(root) / "docs" / "downloads" / info["zipname"]) as archive:
+        rom_inputs = any(Path(name).name == "rom_sources.py" for name in archive.namelist())
+    return {"kind": "kit", **info, "regions": [], "rom_inputs": rom_inputs}
 
 
 def published_bundle(root: Path, patch: dict, inventory: dict) -> dict:

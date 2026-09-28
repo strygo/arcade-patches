@@ -20,13 +20,15 @@ def write_json(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, indent=2, sort_keys=True) + "\n")
 
 
-def write_rom_zip(path: Path, version: str) -> None:
+def write_rom_zip(path: Path, version: str, input_schema: int | None = None) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     manifest = {
         "version": version,
         "members": [{"name": "game.03", "size": 4, "stock_crc32": "00000000",
                      "patched_crc32": "11111111", "action": "patch"}],
     }
+    if input_schema is not None:
+        manifest["input_schema"] = input_schema
     with zipfile.ZipFile(path, "w") as archive:
         archive.writestr("manifest.json", json.dumps(manifest))
         archive.writestr("apply.py", "pass\n")
@@ -142,6 +144,19 @@ class ReleaseInventoryTests(unittest.TestCase):
             self.root, json.loads((self.root / "data/patches.json").read_text())["patches"][0],
             inventory)
         self.assertEqual("demo-rc2-ips.zip", bundle["ips"]["zipname"])
+        self.assertFalse(bundle["rom_inputs"])
+
+    def test_bundle_reports_rom_discovery_from_the_kit_manifest(self) -> None:
+        old = self.root / "docs/downloads/demo-rc1-ips.zip"
+        write_rom_zip(old, "rc1", input_schema=1)
+        inventory = json.loads((self.root / "data/releases.json").read_text())
+        inventory["releases"]["demo"]["versions"]["rc1"]["files"]["ips"].update(
+            size=old.stat().st_size, sha256=sha256_file(old))
+        write_json(self.root / "data/releases.json", inventory)
+        bundle = published_bundle(
+            self.root, json.loads((self.root / "data/patches.json").read_text())["patches"][0],
+            load_inventory(self.root / "data/releases.json"))
+        self.assertTrue(bundle["rom_inputs"])
 
     def test_existing_version_cannot_be_replaced(self) -> None:
         ready, candidate = self.candidate("rc1")

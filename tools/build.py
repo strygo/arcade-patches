@@ -520,7 +520,7 @@ def render_rom_download(patch: dict, bundle: dict) -> str:
 set <code>{setname}.zip</code>.{" Every build is made from that one set." if variants else ""}
 Each zip includes a <code>readme.txt</code> with full instructions.</p>""")
 
-    if bundle.get("kit_revision", 1) > 1:
+    if bundle.get("rom_inputs"):
         parts.append("<p>Merged, split and complete sets work, including nested or renamed ROMs. "
                      "Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), "
                      "and <code>--check</code> to check inputs before building. ZIPs and extracted folders "
@@ -727,7 +727,7 @@ def render_kit_download(patch: dict, kit: dict) -> str:
     inputs_note = ("<p>Merged, split and complete archives and extracted ROM folders are accepted. "
                    "Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> "
                    "to verify arcade inputs before rebuilding from your disc. "
-                   "7z needs installed 7-Zip; ZIP does not.</p>" if kit.get("kit_revision", 1) > 1 else "")
+                   "7z needs installed 7-Zip; ZIP does not.</p>" if kit.get("rom_inputs") else "")
     return f"""<h2>Download</h2>
 {tools_notice(kit)}
 {inputs_note}
