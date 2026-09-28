@@ -718,6 +718,194 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "ng-plus",
+      "title": "NG+",
+      "subtitle": "Arranged Neo Geo CD soundtracks for Neo Geo arcade games on MiSTer",
+      "section": "arrangements",
+      "status": "released",
+      "version": "1.0",
+      "date": "2026-09-28",
+      "hardware": "MiSTer FPGA (the NG+ build of the Neo Geo core, included)",
+      "summary": "SNK re-recorded the music for its Neo Geo CD releases, but the CD versions came with long loads and cut animation. NG+ plays those arranged soundtracks under the original cartridge games on MiSTer: the arcade game, whole and without loading, with the CD's music.",
+      "featured_stats": "5 games \u00b7 5 arranged soundtracks \u00b7 1 core \u00b7 every image built from sources you own",
+      "description": [
+        "When SNK moved its fighting games to the Neo Geo CD, it gave many of them new soundtracks recorded for CD audio. The CD versions paid for it: long loads between fights, and animation trimmed to fit the console's memory. The cartridge games never had the arranged music.",
+        "NG+ puts the two together on a MiSTer. The cartridge game runs as it did in the arcade, with nothing cut and no loading, while the Neo Geo CD's soundtrack plays in place of the cartridge's music, started, looped and faded by the game itself. Sound effects and voices still come from the game's own sound hardware.",
+        "Version 1.0 covers five games: Samurai Shodown II, The King of Fighters '94 and '95, Fatal Fury Special and Art of Fighting 2."
+      ],
+      "how_it_works": [
+        "Nothing in the game is modified. The Neo Geo's main processor sends sound commands to its sound processor, and the NG+ core watches for them. When one starts a song, the core streams the matching Neo Geo CD track and holds the command back, so the cartridge's own music stays quiet. Everything else plays as it always did.",
+        "The command tables come from the Neo Geo CD versions' own sound drivers and were checked against the cartridge programs, down to the loop points and fades.",
+        "The kit builds one image per game from your cartridge ROMs, your Neo Geo CD rip and your Neo Geo BIOS set, and a launcher that starts it in the NG+ core. Each image is checked against a published hash."
+      ],
+      "download_notes": [
+        "The download is tools: the image builder with each game's published data and checksums, and the NG+ core with its GPL-3.0 source link. It builds the images on your machine from ROMs and discs you own, and assembles out/mister/, laid out like your SD card, with the core, the images and their launchers."
+      ],
+      "quickstart": [
+        "Download and unzip the kit.",
+        "Edit builder/titles.toml and point it at your Neo Geo BIOS set and, for each game you want, its cartridge ROM set and Neo Geo CD rip (each game is optional). Or pass them on the command line, for example --rom samsho2=samsho2.zip --disc samsho2=ssii.cue. make_ngplus.py --list shows every game and the disc it wants.",
+        "Run python3 builder/make_ngplus.py (Python 3.11+ and ffmpeg). It builds out/mister/, laid out like your SD card, and checks every ROM, disc track and finished image against its published checksum.",
+        "Copy the contents of out/mister/ to your MiSTer SD card, merging with what's there. The games appear under Arcade > Arcade Patches > Arrangements > NG+."
+      ],
+      "links": [
+        {
+          "label": "strygo/NeoGeo_MiSTer (ngplus branch)",
+          "url": "https://github.com/strygo/NeoGeo_MiSTer/tree/ngplus",
+          "note": "the NG+ core fork, with full GPL-3.0 source for the shipped core"
+        },
+        {
+          "label": "MiSTer-devel/NeoGeo_MiSTer",
+          "url": "https://github.com/MiSTer-devel/NeoGeo_MiSTer",
+          "note": "the upstream Neo Geo core NG+ builds on"
+        },
+        {
+          "label": "CPS+",
+          "url": "../cps-plus/",
+          "note": "the same idea for Capcom's CPS-1 and CPS-2 games"
+        }
+      ],
+      "notes": [
+        "The arranged recordings remain \u00a9 SNK and are never distributed here. Every image is built from your own ROMs and discs.",
+        "Sound effects and voices always play live through the game's own sound hardware; the images replace the music only."
+      ],
+      "kit": {
+        "label": "NG+ MiSTer kit: the core and the image builder"
+      },
+      "highlights": [
+        "Five games with their Neo Geo CD arranged soundtracks: Samurai Shodown II, The King of Fighters '94 and '95, Fatal Fury Special and Art of Fighting 2",
+        "The full cartridge game, with no load times and nothing cut",
+        "Starts as the US arcade release; the core's menu has an Arranged Volume, and the usual console mode and BIOS choices",
+        "Only tools in the download. Images build from the ROMs and discs you already own, in one command"
+      ],
+      "sources": [
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Shin Samurai Spirits: Haoumaru Jigokuhen / Samurai Shodown II",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "The King of Fighters '94",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Garou Densetsu Special / Fatal Fury Special",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "The King of Fighters '95",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Ryuuko no Ken 2 / Art of Fighting 2",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo",
+          "disc": "Cartridge ROM sets and the Neo Geo BIOS",
+          "variants": "each game's MAME-named zip, Darksoft set or .neo file, and neogeo.zip once"
+        }
+      ],
+      "coverage_intro": "Each game needs its cartridge ROM set and its Neo Geo CD disc, plus the Neo Geo BIOS set.",
+      "coverage": [
+        {
+          "game": "Samurai Shodown II",
+          "sets": "samsho2",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Shin Samurai Spirits: Haoumaru Jigokuhen / Samurai Shodown II"
+            }
+          ]
+        },
+        {
+          "game": "The King of Fighters '94",
+          "sets": "kof94",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "The King of Fighters '94"
+            }
+          ]
+        },
+        {
+          "game": "Fatal Fury Special",
+          "sets": "fatfursp",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Garou Densetsu Special / Fatal Fury Special"
+            }
+          ]
+        },
+        {
+          "game": "The King of Fighters '95",
+          "sets": "kof95",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "The King of Fighters '95"
+            }
+          ]
+        },
+        {
+          "game": "Art of Fighting 2",
+          "sets": "aof2",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Ryuuko no Ken 2 / Art of Fighting 2"
+            }
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "q": "What do I need installed to build the images?",
+          "a": [
+            "Python 3.11 or newer and ffmpeg on your PATH. A .chd disc also needs chdman, which comes with MAME. On Windows, python.org's installer and a release ffmpeg build work; run py builder\\make_ngplus.py.",
+            "Nothing is installed on the MiSTer itself. The kit is plain files copied to the SD card."
+          ]
+        },
+        {
+          "q": "What ROM and disc formats does the builder accept?",
+          "a": [
+            "For the cartridge: a MAME-named zip, a Darksoft folder or zip, or a .neo file. For the disc: its .cue sheet with the images beside it, a .zip holding them, or a .chd. The BIOS is neogeo.zip, or a folder with its files."
+          ]
+        },
+        {
+          "q": "Does it change how the game plays?",
+          "a": [
+            "No. The game runs from its cartridge ROMs as it did in the arcade. Only the music source changes."
+          ]
+        },
+        {
+          "q": "Where do my settings and saves go?",
+          "a": [
+            "Each game keeps its own button map and settings, under its set name, and its saves go to saves/NG+ on the card."
+          ]
+        },
+        {
+          "q": "Is any of the music in the download?",
+          "a": [
+            "No. The kit holds tools, checksums and the core. The builder reads the music from your own disc."
+          ]
+        }
+      ],
+      "release_history": [
+        {
+          "version": "1.0",
+          "date": "2026-09-28",
+          "items": [
+            "First release: Samurai Shodown II, The King of Fighters '94 and '95, Fatal Fury Special and Art of Fighting 2, with their Neo Geo CD arranged soundtracks."
+          ]
+        }
+      ]
     }
   ],
   "patches": [

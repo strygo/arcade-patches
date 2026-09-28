@@ -729,6 +729,58 @@
         }
       }
     },
+    "ng-plus": {
+      "current": "1.0",
+      "versions": {
+        "1.0": {
+          "current_revision": 1,
+          "date": "2026-09-28",
+          "files": {
+            "kit": {
+              "archive": "archive/dfdd42bc7b6ae1d64e710cd416f9a18fe67e8afb02170f13e13255aa93b36528/ng-plus-1.0-kit.zip",
+              "name": "ng-plus-1.0-kit.zip",
+              "sha256": "dfdd42bc7b6ae1d64e710cd416f9a18fe67e8afb02170f13e13255aa93b36528",
+              "size": 1592604
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "1.0-candidate.1",
+            "capcom_source_commit": "351834ef3da3b31512153ec219794e6681b23117",
+            "ready_record_sha256": "0325022d78edb51ad10393e3383c543e0813207194d656a9fea011681d9caff7",
+            "release_sha256": "939ffe8d4c23ab6b581cf8ca97fd52ad829678b5c0e281504ea67cee8170ce01",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-09-28",
+              "files": {
+                "kit": {
+                  "archive": "archive/dfdd42bc7b6ae1d64e710cd416f9a18fe67e8afb02170f13e13255aa93b36528/ng-plus-1.0-kit.zip",
+                  "name": "ng-plus-1.0-kit.zip",
+                  "sha256": "dfdd42bc7b6ae1d64e710cd416f9a18fe67e8afb02170f13e13255aa93b36528",
+                  "size": 1592604
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "1.0-candidate.1",
+                "capcom_source_commit": "351834ef3da3b31512153ec219794e6681b23117",
+                "ready_record_sha256": "0325022d78edb51ad10393e3383c543e0813207194d656a9fea011681d9caff7",
+                "release_sha256": "939ffe8d4c23ab6b581cf8ca97fd52ad829678b5c0e281504ea67cee8170ce01",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        }
+      }
+    },
     "sfa2-gold": {
       "current": "rc5",
       "versions": {
