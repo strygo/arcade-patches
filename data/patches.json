@@ -2398,7 +2398,8 @@
           "items": [
             "Apocalypse and Cyber-Akuma now have character-specific ending artwork over the animated arcade burst.",
             "Selected names stay above the fighters, and versus names have more space, with two lines for long hidden names.",
-            "The HP and HK colors now carry through the select, versus and fight HUD portraits.",
+            "The HP and HK colors now carry through the select, versus and fight HUD portraits, the win-quote portrait, Spider-Man's intro, Dhalsim's Yoga Teleport, Zangief's and Mech-Zangief's heat, and M. Bison's aura and glow.",
+            "Akuma's HK color is now his red gi from the Saturn version.",
             "Both kits have new checksums, so rebuild them with the rc2 downloads."
           ]
         },
