@@ -20,8 +20,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Marvel Super Heroes vs. Street Fighter EX</h1>
 <p class="subtitle">Enhanced version</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Marvel Super Heroes vs. Street Fighter (Japan 970707)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>mshvsfj</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-09-17</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Marvel Super Heroes vs. Street Fighter (Japan 970707)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>mshvsfj</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-09-27</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/mshvsf-ex/00_single.png?v=94b8921827" alt="The EX title screen."><figcaption>The EX title screen.</figcaption></figure>
 <figure class="shot single"><img src="../img/mshvsf-ex/01_single.png?v=d0470069f4" alt="Norimaro is now selectable."><figcaption>Norimaro is now selectable.</figcaption></figure>
@@ -31,17 +31,19 @@
 <p>Marvel Super Heroes vs. Street Fighter kept a lot from you. Outside Japan there was no Norimaro. Nowhere could you play as Cyber-Akuma or Apocalypse, or put the same fighter on a team twice. The console ports later added extra colors and more speeds, but only at home.</p>
 <p>EX gives the arcade game all of it. Norimaro is on the select screen in both builds, with his own ending. Hold Start on any fighter for two seconds and their hidden version appears, no codes needed, though the old codes still work. Any two fighters make a team. Cyber-Akuma and Apocalypse are playable too: hold Start on Akuma for one, on Norimaro for the other. Every fighter gets the Saturn version&#x27;s two extra colors, on the HP and HK buttons, and the service menu goes from three speeds to eight.</p>
 <p>The fighting itself is untouched: no changes to moves, damage, hitboxes or the computer. The USA build also gets a new translation, straight from the Japanese: sixteen win quotes per fighter instead of eight, and every ending retold. It comes in two builds, USA and Japan, both with Free Play, and runs in MAME, HBMAME and on MiSTer.</p>
-<p>This is a release candidate. Everything builds and boots; longer play testing and a MiSTer hardware pass are still to come.</p>
+<p>This is a release candidate. It has been tested on MiSTer.</p>
 <h2>What's changed</h2><ul>
 <li>Norimaro in both builds, with his own ending</li>
 <li>Cyber-Akuma and Apocalypse playable: hold Start on Akuma, or on Norimaro. Their special moves work on the Easy control setting too</li>
 <li>Hidden characters with a two-second Start hold; the old codes still work</li>
 <li>Any team, including the same fighter twice, in a different color (one Apocalypse per match, so his stage stays intact)</li>
 <li>Every ending in both languages, including Mech-Zangief&#x27;s, Shadow&#x27;s and Dark Sakura&#x27;s</li>
+<li>Apocalypse and Cyber-Akuma have character-specific ending artwork, layered over the animated arcade burst</li>
 <li>A new English translation from the Japanese: sixteen win quotes per fighter instead of eight, and all seventeen standard endings</li>
 <li>U.S. Agent, Mephisto and Shadow get their names in the fight HUD, which the boards leave blank</li>
 <li>M. Bison&#x27;s Hyper Combo is Knee Press Nightmare in every region, the name Capcom has used since Alpha 3</li>
-<li>Two extra colors per fighter from the Saturn version: pick your fighter with HP or HK</li>
+<li>Two extra colors per fighter from the Saturn version: pick your fighter with HP or HK; the selected color appears in select, versus and fight HUD portraits</li>
+<li>Versus names are centered and spaced, with two lines for long hidden names; selected names stay visible above the fighters</li>
 <li>Eight game speeds instead of three</li>
 <li>USA and Japan builds, both with Free Play</li>
 <li>Gameplay untouched</li>
@@ -50,30 +52,29 @@
 <p>How EX compares with the Japanese and US boards.</p>
 <table class="compare"><thead><tr><th></th><th>Japan</th><th>USA</th><th>EX</th></tr></thead><tbody><tr><th scope="row">Norimaro</th><td>Yes</td><td>No</td><td>Yes</td></tr><tr><th scope="row">Norimaro&#x27;s ending</th><td>His own</td><td>None</td><td>His own</td></tr><tr><th scope="row">Mech-Zangief, Shadow, Dark Sakura endings</th><td>Yes, Japanese</td><td>Generic</td><td>Yes, in both languages</td></tr><tr><th scope="row">English win quotes per fighter</th><td>None</td><td>8</td><td>16, translated from the Japanese</td></tr><tr><th scope="row">Hidden characters</th><td>Codes</td><td>Codes</td><td>Two-second hold, or codes</td></tr><tr><th scope="row">Cyber-Akuma</th><td>Boss only</td><td>Boss only</td><td>Playable, hold Start on Akuma</td></tr><tr><th scope="row">Apocalypse</th><td>Boss only</td><td>Boss only</td><td>Playable, hold Start on Norimaro</td></tr><tr><th scope="row">Same fighter twice</th><td>No</td><td>No</td><td>Yes</td></tr><tr><th scope="row">Colors per fighter</th><td>2</td><td>2</td><td>4</td></tr><tr><th scope="row">HUD names for U.S. Agent, Mephisto, Shadow</th><td>Blank</td><td>Blank</td><td>Yes</td></tr><tr><th scope="row">Game speeds</th><td>3</td><td>3</td><td>8</td></tr><tr><th scope="row">Free Play</th><td>Yes</td><td>Some regions</td><td>Yes</td></tr><tr><th scope="row">Gameplay</th><td>Original</td><td>Original</td><td>Original</td></tr></tbody></table>
 <h2>Downloads</h2>
-<p>Tools updated 2026-09-20. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/mshvsf-ex-rc1-ips.zip?v=0e6adac818">mshvsf-ex-rc1-ips.zip</a>
-  (164 KB)</div>
-  <div class="hash">SHA-256: 0e6adac81840d385a0ac460168ef1198188e3a2b51f697e3e1902ceaa6c8445c</div>
+  <div class="file"><a href="../downloads/mshvsf-ex-rc2-ips.zip?v=f693ef2367">mshvsf-ex-rc2-ips.zip</a>
+  (397 KB)</div>
+  <div class="hash">SHA-256: f693ef2367a4857c09016ed9c08d47f1df1cf634783ff54da3feae6160f18341</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
-  <div class="file"><a href="../downloads/mshvsf-ex-rc1-mra.zip?v=e68fcfc5d0">mshvsf-ex-rc1-mra.zip</a>
-  (92 KB)</div>
-  <div class="hash">SHA-256: e68fcfc5d06312f475869e42e3ec66f8eda9daf02287d255612923a289bba853</div>
+  <div class="file"><a href="../downloads/mshvsf-ex-rc2-mra.zip?v=cd256b1222">mshvsf-ex-rc2-mra.zip</a>
+  (220 KB)</div>
+  <div class="hash">SHA-256: cd256b12227f235edb9f141dbc60bdf9fd263ea6004e13d3aac259fde53969e4</div>
 </div>
 <p>You need your own dump of <strong>Marvel Super Heroes vs. Street Fighter (Japan 970707)</strong> as the MAME
 set <code>mshvsfj.zip</code>. Every build is made from that one set.
 Each zip includes a <code>readme.txt</code> with full instructions.</p>
-<p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
 <h3>The builds</h3>
 <table>
 <tr><th>Build</th><th><code>--variant</code></th><th>MiSTer setname</th><th>HBMAME set</th></tr>
 <tr><td>USA</td><td class="mono">usa</td><td class="mono">mshvsfex</td><td class="mono">mshvsfex</td></tr><tr><td>Japan</td><td class="mono">japan</td><td class="mono">mshvsfej</td><td class="mono">mshvsfej</td></tr>
 </table>
 <h2>How to apply</h2>
-<pre><code>unzip mshvsf-ex-rc1-ips.zip -d mshvsfj-patch
+<pre><code>unzip mshvsf-ex-rc2-ips.zip -d mshvsfj-patch
 cd mshvsfj-patch
 python3 apply.py /path/to/mshvsfj.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -105,22 +106,32 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p>Shared by every build:</p>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
-<tr><td class="mono">mvs.05h</td><td>512 KB</td><td class="mono">77870dc3</td><td class="mono">5a83d5cc</td></tr>
+<tr><td class="mono">mvs.05h</td><td>512 KB</td><td class="mono">77870dc3</td><td class="mono">c6dca8ff</td></tr>
 <tr><td class="mono">mvs.06a</td><td>512 KB</td><td class="mono">959f3030</td><td class="mono">444fb179</td></tr>
 <tr><td class="mono">mvs.07b</td><td>512 KB</td><td class="mono">7f915bdb</td><td class="mono">e9cbc426</td></tr>
-<tr><td class="mono">mvs.10b</td><td>512 KB</td><td class="mono">cf0dba98</td><td class="mono">c4faa1f9</td></tr>
-<tr><td class="mono">mvs.13m</td><td>4.0 MB</td><td class="mono">29b05fd9</td><td class="mono">5aec3072</td></tr>
-<tr><td class="mono">mvs.15m</td><td>4.0 MB</td><td class="mono">faddccf1</td><td class="mono">b3b37f0c</td></tr>
-<tr><td class="mono">mvs.17m</td><td>4.0 MB</td><td class="mono">97aaf4c7</td><td class="mono">763798a3</td></tr>
-<tr><td class="mono">mvs.19m</td><td>4.0 MB</td><td class="mono">cb70e915</td><td class="mono">6fc69f7e</td></tr>
-<tr><td class="mono">mvsj.04i</td><td>512 KB</td><td class="mono">32741ace</td><td class="mono">ba4c053c</td></tr>
+<tr><td class="mono">mvs.10b</td><td>512 KB</td><td class="mono">cf0dba98</td><td class="mono">5f6c1146</td></tr>
+<tr><td class="mono">mvs.13m</td><td>4.0 MB</td><td class="mono">29b05fd9</td><td class="mono">7c4ee686</td></tr>
+<tr><td class="mono">mvs.15m</td><td>4.0 MB</td><td class="mono">faddccf1</td><td class="mono">95871b1b</td></tr>
+<tr><td class="mono">mvs.17m</td><td>4.0 MB</td><td class="mono">97aaf4c7</td><td class="mono">668aefe9</td></tr>
+<tr><td class="mono">mvs.19m</td><td>4.0 MB</td><td class="mono">cb70e915</td><td class="mono">b4d8bde0</td></tr>
+<tr><td class="mono">mvsj.04i</td><td>512 KB</td><td class="mono">32741ace</td><td class="mono">aee80449</td></tr>
 </table>
 <p><code>mvsj.03i</code> (512 KB, original CRC32 <code>d8cbb691</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA</td><td class="mono">c514a97e</td></tr>
-<tr><td>Japan</td><td class="mono">72fd9929</td></tr>
+<tr><td>USA</td><td class="mono">8d895d94</td></tr>
+<tr><td>Japan</td><td class="mono">3a606dc3</td></tr>
 </table>
+<h2 id="history">Release history</h2>
+<h3>rc2 (2026-09-27)</h3><ul>
+<li>Apocalypse and Cyber-Akuma now have character-specific ending artwork over the animated arcade burst.</li>
+<li>Selected names stay above the fighters, and versus names have more space, with two lines for long hidden names.</li>
+<li>The HP and HK colors now carry through the select, versus and fight HUD portraits.</li>
+<li>Both kits have new checksums, so rebuild them with the rc2 downloads.</li>
+</ul>
+<h3>rc1 (2026-09-17)</h3><ul>
+<li>First public release candidate.</li>
+</ul>
 <h2>Related projects</h2><ul><li><a href="../mshvsf-restoration/">Marvel Super Heroes vs. Street Fighter</a>, the restoration on its own, without the EX additions</li><li><a href="https://rq87.flyingomelette.com/RQ/Marvel/MSHSF/nor.html">RQ87: Norimaro</a>, the Norimaro localization inventory this project credits</li><li><a href="https://github.com/Toryalai1/Arcade_Offset">Arcade Offset</a>, himanito&#x27;s earlier Unlocked MRAs covered some of this ground; this is an independent implementation</li><li><a href="../cps-plus/">CPS+</a>, companion project: arranged soundtracks for CPS-2 games on MiSTer</li></ul>
 <h2>Notes</h2><ul class="notes">
 <li>MAME shows checksum warnings for the ten patched files. That&#x27;s expected; the game plays normally. HBMAME with the matching set definitions loads them without them.</li>

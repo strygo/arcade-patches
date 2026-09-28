@@ -401,7 +401,7 @@
       }
     },
     "mshvsf-ex": {
-      "current": "rc1",
+      "current": "rc2",
       "versions": {
         "rc1": {
           "current_revision": 2,
@@ -508,6 +508,65 @@
               "mra": "e68fcfc5d06312f475869e42e3ec66f8eda9daf02287d255612923a289bba853"
             },
             "revision": 1
+          }
+        },
+        "rc2": {
+          "current_revision": 1,
+          "date": "2026-09-27",
+          "files": {
+            "ips": {
+              "archive": "archive/f693ef2367a4857c09016ed9c08d47f1df1cf634783ff54da3feae6160f18341/mshvsf-ex-rc2-ips.zip",
+              "name": "mshvsf-ex-rc2-ips.zip",
+              "sha256": "f693ef2367a4857c09016ed9c08d47f1df1cf634783ff54da3feae6160f18341",
+              "size": 406936
+            },
+            "mra": {
+              "archive": "archive/cd256b12227f235edb9f141dbc60bdf9fd263ea6004e13d3aac259fde53969e4/mshvsf-ex-rc2-mra.zip",
+              "name": "mshvsf-ex-rc2-mra.zip",
+              "sha256": "cd256b12227f235edb9f141dbc60bdf9fd263ea6004e13d3aac259fde53969e4",
+              "size": 224773
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc2-candidate.4",
+            "capcom_source_commit": "0cf9b7d2e2d04029752246c7c117092c32437512",
+            "ready_record_sha256": "e6ad8c9f23de68565b6dec4e68f227721e21aa17f9ea07e6f9a29bbaf799382a",
+            "release_sha256": "2a93df721386cdfe34c746a682a35e24db95e3a677c696a4a6131e5dc22cf1f2",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-09-27",
+              "files": {
+                "ips": {
+                  "archive": "archive/f693ef2367a4857c09016ed9c08d47f1df1cf634783ff54da3feae6160f18341/mshvsf-ex-rc2-ips.zip",
+                  "name": "mshvsf-ex-rc2-ips.zip",
+                  "sha256": "f693ef2367a4857c09016ed9c08d47f1df1cf634783ff54da3feae6160f18341",
+                  "size": 406936
+                },
+                "mra": {
+                  "archive": "archive/cd256b12227f235edb9f141dbc60bdf9fd263ea6004e13d3aac259fde53969e4/mshvsf-ex-rc2-mra.zip",
+                  "name": "mshvsf-ex-rc2-mra.zip",
+                  "sha256": "cd256b12227f235edb9f141dbc60bdf9fd263ea6004e13d3aac259fde53969e4",
+                  "size": 224773
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc2-candidate.4",
+                "capcom_source_commit": "0cf9b7d2e2d04029752246c7c117092c32437512",
+                "ready_record_sha256": "e6ad8c9f23de68565b6dec4e68f227721e21aa17f9ea07e6f9a29bbaf799382a",
+                "release_sha256": "2a93df721386cdfe34c746a682a35e24db95e3a677c696a4a6131e5dc22cf1f2",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }
