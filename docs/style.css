@@ -283,17 +283,7 @@ footer.site .inner {
 }
 footer.site p { margin: 6px 0; }
 
-/* featured project band (index) */
-.card.featured {
-  border-color: var(--accent);
-  background: linear-gradient(135deg,
-              color-mix(in srgb, var(--accent) 8%, var(--bg-card, transparent)),
-              transparent 60%);
-}
-.card.featured .kicker {
-  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 2px;
-}
+/* project cards (index): styled like every other card, plus a stats line */
 .card.featured .stats { color: var(--text-dim); font-size: 0.85rem; margin-top: 8px; }
 
 /* project page highlight bullets */
