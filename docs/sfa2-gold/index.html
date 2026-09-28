@@ -20,10 +20,10 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 2 Gold</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-09-24</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc5</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc5</dd><dt>Updated</dt><dd>2026-09-27</dd></dl>
 <h2>The four builds</h2>
-<div class="build-gallery"><figure class="build"><img src="../img/sfa2-gold/title_us.png?v=078494fcfd" alt="Street Fighter Alpha 2 Gold (USA) title screen"><figcaption><strong>Street Fighter Alpha 2 Gold</strong><br>USA · <code>sfa2g</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_eu.png?v=eb70160c05" alt="Street Fighter Alpha 2 Dash (Europe) title screen"><figcaption><strong>Street Fighter Alpha 2 Dash</strong><br>Europe · <code>sfa2d</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_jp.png?v=2850bec363" alt="Street Fighter Zero 2 Dash (Japan) title screen"><figcaption><strong>Street Fighter Zero 2 Dash</strong><br>Japan · <code>sfz2d</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_asia.png?v=e2099bcd99" alt="Street Fighter Zero 2 Dash (Asia (English)) title screen"><figcaption><strong>Street Fighter Zero 2 Dash</strong><br>Asia (English) · <code>sfz2da</code></figcaption></figure></div>
+<div class="build-gallery"><figure class="build"><img src="../img/sfa2-gold/title_us.png?v=12f45e2050" alt="Street Fighter Alpha 2 Gold (USA) title screen"><figcaption><strong>Street Fighter Alpha 2 Gold</strong><br>USA · <code>sfa2g</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_eu.png?v=fad3a42ec7" alt="Street Fighter Alpha 2 Dash (Europe) title screen"><figcaption><strong>Street Fighter Alpha 2 Dash</strong><br>Europe · <code>sfa2d</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_jp.png?v=5fa69a569c" alt="Street Fighter Zero 2 Dash (Japan) title screen"><figcaption><strong>Street Fighter Zero 2 Dash</strong><br>Japan · <code>sfz2d</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_asia.png?v=6a8bddb60d" alt="Street Fighter Zero 2 Dash (Asia (English)) title screen"><figcaption><strong>Street Fighter Zero 2 Dash</strong><br>Asia (English) · <code>sfz2da</code></figcaption></figure></div>
 <h2>About</h2>
 <p>Street Fighter Alpha 2 Gold, known as Zero 2 Dash in Japan, was the console revision of Alpha 2 that added Cammy as a playable fighter, first on PlayStation and Saturn and in final form in Capcom&#x27;s 2006 PlayStation 2 anthology. It was never released on arcade hardware. This project rebuilds the anthology&#x27;s edition as a real CPS-2 game.</p>
 <p>It is a faithful reconstruction, not a remix. It starts from the original arcade Zero 2 Alpha program and restores the anthology&#x27;s changes piece by piece: Cammy, her graphics, the audio, and the endings, each one checked against the PlayStation 2 original. Four regional builds are provided, shown below. The English builds also carry the full Japanese script, newly translated: every story and ending page, Evil Ryu&#x27;s own ending, and all 452 win quotes.</p>
@@ -62,21 +62,29 @@ could hold, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>
 
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/sfa2-gold-rc4-kit.zip?v=7b6a661740">sfa2-gold-rc4-kit.zip</a>
+  <div class="file"><a href="../downloads/sfa2-gold-rc5-kit.zip?v=d6a53ff7dc">sfa2-gold-rc5-kit.zip</a>
   (1.2 MB)</div>
-  <div class="hash">SHA-256: 7b6a661740628ba4c60ffbe1116095d3deac37dc72e3da1a4d6831393c7d65ca</div>
+  <div class="hash">SHA-256: d6a53ff7dc0f6c68bd2256a8c695471cccf18090da1a2c1a4b866d8b9b423cfe</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
 <ul><li>your own PlayStation 2 anthology disc image: Street Fighter Alpha Anthology, or Street Fighter Zero — Fighter&#x27;s Generation for the Japan set</li><li>your own arcade Street Fighter Zero 2 Alpha romset: sfz2al, plus sfz2alj for the Japan set</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip sfa2-gold-rc4-kit.zip -d sfa2-gold
+<pre><code>unzip sfa2-gold-rc5-kit.zip -d sfa2-gold
 cd sfa2-gold
 python3 apply.py --iso &quot;Street Fighter Alpha Anthology.iso&quot; \
                  --romset sfz2al.zip --region us --out-dir out</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc5 (2026-09-27)</h3><ul>
+<li>The STREET FIGHTER title lettering now uses the PlayStation 2 and Saturn yellow-to-green-to-blue colors across the intro and attract sequence in all four regions.</li>
+<li>Cammy&#x27;s Psycho Streak now freezes the fight through her salute, as on the PlayStation 2: the stage darkens, and the opponent, projectiles and round timer stop.</li>
+<li>Psycho Streak now clashes with fireballs, knocking out a Hadouken instead of passing through it.</li>
+<li>Fifteen of Cammy&#x27;s attacks now have their correct hitboxes.</li>
+<li>In Cammy&#x27;s Arcade mode, her rival fight is against Rose again. rc4 showed Rose&#x27;s dialogue, then a fight with Sakura.</li>
+<li>Every set has new checksums, so rebuild them with the rc5 kit.</li>
+</ul>
 <h3>rc4 (2026-09-24)</h3><ul>
 <li>Cammy&#x27;s stage music is restored. You can hear it in a two-player match.</li>
 <li>Portraits before a fight and in the story scenes no longer pick up the wrong colors.</li>

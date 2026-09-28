@@ -1011,8 +1011,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc4",
-      "date": "2026-09-24",
+      "version": "rc5",
+      "date": "2026-09-27",
       "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "us",
@@ -1109,6 +1109,18 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc5",
+          "date": "2026-09-27",
+          "items": [
+            "The STREET FIGHTER title lettering now uses the PlayStation 2 and Saturn yellow-to-green-to-blue colors across the intro and attract sequence in all four regions.",
+            "Cammy's Psycho Streak now freezes the fight through her salute, as on the PlayStation 2: the stage darkens, and the opponent, projectiles and round timer stop.",
+            "Psycho Streak now clashes with fireballs, knocking out a Hadouken instead of passing through it.",
+            "Fifteen of Cammy's attacks now have their correct hitboxes.",
+            "In Cammy's Arcade mode, her rival fight is against Rose again. rc4 showed Rose's dialogue, then a fight with Sakura.",
+            "Every set has new checksums, so rebuild them with the rc5 kit."
+          ]
+        },
         {
           "version": "rc4",
           "date": "2026-09-24",

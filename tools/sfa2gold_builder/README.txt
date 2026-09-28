@@ -1,7 +1,7 @@
 Street Fighter Alpha 2 Gold / Zero 2 Dash — reconstruction kit
 ==============================================================
 
-Version:      rc4 (2026-09-24)
+Version:      rc5 (2026-09-27)
 Hardware:     Capcom CPS-2
 Target:       MAME and HBMAME sets, and MiSTer (jtcps2) — 4 regions
 Backport by:  Steve Gordon (https://x.com/strygo)
