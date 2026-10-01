@@ -1883,8 +1883,8 @@
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc3",
-      "date": "2026-09-28",
+      "version": "rc4",
+      "date": "2026-10-01",
       "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
       "set": "ssf2xj",
       "hardware": "Capcom CPS-2",
@@ -1897,7 +1897,7 @@
         "Super Turbo is the version competitive players swear by, but it left things behind. The bonus stages from Super Street Fighter II were gone. Shin Akuma was a hidden boss you had to earn, and Ten Akuma only turned up years later at home. Tournament Battle, the eight-player linked-cabinet mode, stayed with the earlier Super Street Fighter II.",
         "EX puts it together on the arcade game. Akuma has his own select-screen cell, with Shin and Ten available through codes there; the original Ryu codes still work. A random-select cell sits opposite him. The car, the falling barrels and the oil drums are back between fights. Link cabinets with the adapter and it runs Tournament Battle; without it, it plays as normal. Every fighter gets two more colors, Akuma and Shin Akuma get their colors from Ultra Street Fighter II, the move names are the modern ones, and the new title reads The Ultimate Championship.",
         "Nothing about the existing fighters changes: this is Japan's Super Turbo underneath. The USA build carries all of Grand Master Challenge's English text; the Japan build keeps the Japanese.",
-        "EX uses the same ROM files as the Japanese set. It runs in MAME and HBMAME, and the release candidate was tested on MiSTer.",
+        "EX uses the same ROM files as the Japanese set. It runs in MAME and HBMAME and on MiSTer.",
         "This is a release candidate."
       ],
       "changes": [
@@ -1906,7 +1906,7 @@
         "Akuma in eleven classic colors from Ultra Street Fighter II, picked on his own cell: three punches or three kicks, any single button, or LP+LK, MP+MK or HP+HK (LP+HK keeps the EX blue). His portraits follow the color, even in a mirror match",
         "Shin Akuma in eleven colors from Ultra Street Fighter II: pick Shin on Akuma's cell, let go of every button, then press one of the same buttons before the select screen moves on",
         "Akuma's own defeated face on the Continue screen, in the color you picked",
-        "The three bonus stages from Super Street Fighter II, back in one-player games: the car after three fights, the barrels after six, the oil drums after nine",
+        "The three bonus stages from Super Street Fighter II, back in one-player games: the car after three fights, the barrels after six, the oil drums after nine. They run at the selected Turbo speed, and a BONUS STAGE setting in the operator menu can turn them off",
         "Tournament Battle: with the link adapter, eight players and three matches across linked cabinets, with the Akuma and random-select cells on its select screen; without it, the game plays normally",
         "A new title screen: The Ultimate Championship, with an EX mark",
         "Two more colors for every fighter: pick with two punches or two kicks, or hold Start as well for the Old version in those colors. The VS screen and the fight portrait show the color you picked",
@@ -2101,7 +2101,7 @@
         },
         {
           "single": "data/screenshots/ssf2-ex/bonus_barrels.png",
-          "caption": "The falling barrels, at the original Super Street Fighter II speed."
+          "caption": "The falling barrels, after six fights."
         },
         {
           "single": "data/screenshots/ssf2-ex/bonus_oil.png",
@@ -2140,6 +2140,18 @@
         "Fan work, unaffiliated with Capcom."
       ],
       "release_history": [
+        {
+          "version": "rc4",
+          "date": "2026-10-01",
+          "items": [
+            "Shin and Ten Gouki/Akuma names now appear on the select, VS and fight screens. Ten also gains the additional Akuma-family color choices.",
+            "The bonus stages run at the selected Turbo speed, and a new BONUS STAGE setting in the operator menu can turn them off.",
+            "Akuma's country appears while previewing him. Win portraits and staff-roll portraits now reflect the correct Akuma result.",
+            "Continuing as Akuma returns directly to his select cell and portrait without a brief Ryu flash.",
+            "The NEXT FIGHTER question mark uses the stock art.",
+            "Both regional builds have new checksums; rebuild them with the rc4 kit."
+          ]
+        },
         {
           "version": "rc3",
           "date": "2026-09-28",
