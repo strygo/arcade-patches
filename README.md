@@ -62,8 +62,10 @@ patching. No ROM data is ever included.
 ## Importing a release
 
 Capcom owns production and end-user QA. Prepare the page prose and set its new
-version and date in `data/patches.json`, then import the exact candidate that
-produced the `ready_for_import` record:
+version and date in `data/patches.json` **before** Capcom plans the candidate.
+The description and changes list are copied into every download's readme. See
+[AGENTS.md](AGENTS.md) for the page rules and the candidate checklist. Then
+import the exact candidate that produced the `ready_for_import` record:
 
 ```bash
 python3 tools/import_release.py \
