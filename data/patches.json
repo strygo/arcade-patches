@@ -119,7 +119,7 @@
           "note": "companion project: the English restoration of Japan's Super Turbo that the Grand Master Challenge MRAs load"
         },
         {
-          "label": "Super Street Fighter II EX: The Ultimate Championship",
+          "label": "Super Street Fighter II EX",
           "url": "../ssf2-ex/",
           "note": "companion project: the enhanced Super Turbo that the SSF2 EX MRAs load"
         },
@@ -722,7 +722,7 @@
           "date": "2026-09-17",
           "items": [
             "Super Street Fighter II Turbo: Grand Master Challenge, with the Anniversary Edition arrangement or the HD Remix soundtrack, loading the restoration's HBMAME set.",
-            "Super Street Fighter II EX: The Ultimate Championship, USA and Japan, with the same two soundtracks. The bonus stages keep the board's own music.",
+            "Super Street Fighter II EX, USA and Japan, with the same two soundtracks. The bonus stages keep the board's own music.",
             "Final Fight (Arrange + CD Cutscenes) is now Final Fight EX (Arrange), and loads the Final Fight EX rc2 sets.",
             "The Street Fighter Alpha 2 Gold MRAs load the rc3 sets.",
             "Builds on Windows: paths pasted straight into discs.toml work, the X68000 tools build with MinGW or Visual Studio, .zip and .7z sources both work, and the Strider pack records and verifies with MAME's official Windows build.",
@@ -1879,12 +1879,12 @@
     },
     {
       "slug": "ssf2-ex",
-      "title": "Super Street Fighter II EX: The Ultimate Championship",
+      "title": "Super Street Fighter II EX",
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc4",
-      "date": "2026-10-01",
+      "version": "rc5",
+      "date": "2026-10-06",
       "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
       "set": "ssf2xj",
       "hardware": "Capcom CPS-2",
@@ -1895,8 +1895,9 @@
       "summary": "Japan's Super Turbo with the extras it never had together: Shin Akuma and Ten Akuma on the select screen, the bonus stages back, Tournament Battle, two more colors and Free Play. In English or Japanese.",
       "description": [
         "Super Turbo is the version competitive players swear by, but it left things behind. The bonus stages from Super Street Fighter II were gone. Shin Akuma was a hidden boss you had to earn, and Ten Akuma only turned up years later at home. Tournament Battle, the eight-player linked-cabinet mode, stayed with the earlier Super Street Fighter II.",
-        "EX puts it together on the arcade game. Akuma has his own select-screen cell, with Shin and Ten available through codes there; the original Ryu codes still work. A random-select cell sits opposite him. The car, the falling barrels and the oil drums are back between fights. Link cabinets with the adapter and it runs Tournament Battle; without it, it plays as normal. Every fighter gets two more colors, Akuma and Shin Akuma get their colors from Ultra Street Fighter II, the move names are the modern ones, and the new title reads The Ultimate Championship.",
+        "EX puts it together on the arcade game. Akuma has his own select-screen cell, with Shin and Ten available through codes there; the original Ryu codes still work. A random-select cell sits opposite him. The car, the falling barrels and the oil drums are back between fights. Link cabinets with the adapter and it runs Tournament Battle; without it, it plays as normal. Every fighter gets two more colors, Akuma and Shin Akuma get their colors from Ultra Street Fighter II, the move names are the modern ones, and the title screen carries an EX mark.",
         "Nothing about the existing fighters changes: this is Japan's Super Turbo underneath. The USA build carries all of Grand Master Challenge's English text; the Japan build keeps the Japanese.",
+        "An EX CONFIGURATION page in the operator menu covers names, artwork and the bonus stages. The 30th Anniversary Collection's artwork is the default.",
         "EX uses the same ROM files as the Japanese set. It runs in MAME and HBMAME and on MiSTer.",
         "This is a release candidate."
       ],
@@ -1906,9 +1907,10 @@
         "Akuma in eleven classic colors from Ultra Street Fighter II, picked on his own cell: three punches or three kicks, any single button, or LP+LK, MP+MK or HP+HK (LP+HK keeps the EX blue). His portraits follow the color, even in a mirror match",
         "Shin Akuma in eleven colors from Ultra Street Fighter II: pick Shin on Akuma's cell, let go of every button, then press one of the same buttons before the select screen moves on",
         "Akuma's own defeated face on the Continue screen, in the color you picked",
-        "The three bonus stages from Super Street Fighter II, back in one-player games: the car after three fights, the barrels after six, the oil drums after nine. They run at the selected Turbo speed, and a BONUS STAGE setting in the operator menu can turn them off",
+        "The three bonus stages from Super Street Fighter II, back in one-player games: the car after three fights, the barrels after six, the oil drums after nine. They run at the selected Turbo speed; BONUS STAGE in EX CONFIGURATION turns them on or off",
+        "EX CONFIGURATION in the operator menu: Japanese or international names, ORIGINAL or 30TH ANNIVERSARY art for the Hong Kong flag, Chun-Li's storefront signs and Guile's stage (30th Anniversary by default), and BONUS STAGE on or off. Settings are saved between sessions",
         "Tournament Battle: with the link adapter, eight players and three matches across linked cabinets, with the Akuma and random-select cells on its select screen; without it, the game plays normally",
-        "A new title screen: The Ultimate Championship, with an EX mark",
+        "A new title screen with an EX mark",
         "Two more colors for every fighter: pick with two punches or two kicks, or hold Start as well for the Old version in those colors. The VS screen and the fight portrait show the color you picked",
         "Free Play in the Japanese build too",
         "Modern move names: Cammy's Spiral Arrow, Cannon Spike and Quick Spin Knuckle, and Dee Jay's Air Slasher, with the Japanese voice callouts in the USA build",
@@ -1918,7 +1920,7 @@
       "comparison": {
         "heading": "Compared with Super Turbo",
         "intro": [
-          "How EX compares with the Japanese board and with Grand Master Challenge."
+          "How EX compares with Japan's Super Turbo and with Grand Master Challenge."
         ],
         "columns": [
           "",
@@ -1938,6 +1940,12 @@
             "Japanese",
             "English",
             "English (USA build) or Japanese (Japan build)"
+          ],
+          [
+            "Artwork",
+            "Original",
+            "Original",
+            "30th Anniversary flag, signs and Guile stage by default, or Original"
           ],
           [
             "Shin Akuma",
@@ -1974,12 +1982,6 @@
             "No",
             "Yes",
             "Yes"
-          ],
-          [
-            "Title",
-            "Grand Master Challenge",
-            "Grand Master Challenge",
-            "The Ultimate Championship"
           ],
           [
             "Runs in stock MAME",
@@ -2074,7 +2076,7 @@
       "screenshots": [
         {
           "single": "data/screenshots/ssf2-ex/title_usa.png",
-          "caption": "The Ultimate Championship, with the EX mark. USA build."
+          "caption": "The new title screen, with the EX mark. USA build."
         },
         {
           "single": "data/screenshots/ssf2-ex/title_japan.png",
@@ -2140,6 +2142,19 @@
         "Fan work, unaffiliated with Capcom."
       ],
       "release_history": [
+        {
+          "version": "rc5",
+          "date": "2026-10-06",
+          "items": [
+            "A new EX CONFIGURATION page in the operator menu: Japanese or international names, original or 30th Anniversary Collection artwork for the Hong Kong flag, Chun-Li's storefront signs and Guile's stage, and the BONUS STAGE setting, which moves here. Choices are saved.",
+            "The 30th Anniversary art is the default. Saved rc4 settings keep their BONUS STAGE choice.",
+            "Player 2's Akuma HUD portrait now faces the opponent.",
+            "Ten Akuma's fireballs, uppercuts and Tatsumakis now build Super meter.",
+            "Shin and Ten Akuma's teleport no longer leaves them stuck in a pose.",
+            "After an Akuma mirror match, the staff-roll gallery no longer shows Akuma in place of the other defeated fighters.",
+            "Both regional builds have new checksums; rebuild them with the rc5 kit."
+          ]
+        },
         {
           "version": "rc4",
           "date": "2026-10-01",
