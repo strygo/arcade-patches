@@ -89,6 +89,35 @@ class ReleasePackagerTests(unittest.TestCase):
                     with zipfile.ZipFile(root / str(embedded) / 'mame/demo.zip') as z:
                         self.assertEqual(firmware, z.read('dl-1425.bin'))
 
+    def test_complete_hbmame_set_leaves_embedded_firmware_to_qsound(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            stock, patched = root / 'stock.zip', root / 'patched.zip'
+            for path, program in [(stock, b'stock'), (patched, b'fixed')]:
+                with zipfile.ZipFile(path, 'w') as z:
+                    z.writestr('game.03', program)
+                    z.writestr('game.04', b'unchanged')
+                    z.writestr('dl-1425.bin', b'firmware')
+            old = packager.DOCS, packager.SITE
+            self.addCleanup(lambda: (setattr(packager, 'DOCS', old[0]), setattr(packager, 'SITE', old[1])))
+            packager.DOCS = root / 'published'
+            packager.SITE = {'title': 'Fixture'}
+            patch = {'slug': 'embedded', 'title': 'Embedded', 'subtitle': 'Fixture',
+                     'version': 'rc1', 'date': '2026-10-06', 'game': 'Demo',
+                     'hardware': 'Fixture', 'set': 'demo', 'description': [], 'changes': [],
+                     'artifact': {'stock_zip': str(stock), 'patched_zip': str(patched)},
+                     'hbmame': {'setname': 'demorest', 'complete': True,
+                                'renames': {'game.03': 'game.03', 'game.04': 'game.04'}}}
+            packager.build_rom_downloads(patch)
+            with zipfile.ZipFile(root / 'published/downloads/embedded-rc1-ips.zip') as z:
+                z.extractall(root / 'kit')
+            subprocess.run([sys.executable, str(root / 'kit/apply.py'), str(stock),
+                            '--platform', 'hbmame', '--out-dir', str(root / 'out')],
+                           check=True, capture_output=True)
+            with zipfile.ZipFile(root / 'out/hbmame/demorest.zip') as z:
+                self.assertEqual({'game.03': b'fixed', 'game.04': b'unchanged'},
+                                 {n: z.read(n) for n in z.namelist()})
+
     def test_full_companion_reconstructs_unchanged_roms_in_hbmame_only_mode(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
