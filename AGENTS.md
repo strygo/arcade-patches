@@ -16,7 +16,7 @@ download from a **pinned, committed** revision of this repository.
 
 If any of these change after a plan pins the commit, you need a new candidate.
 The page-only fields (`summary`, `release_history`, `screenshots`,
-`comparison`, `related`) never reach a download. Finish them before planning
+`comparison`, `related`, `sort_title`) never reach a download. Finish them before planning
 anyway: the import commits whatever the page says.
 
 ### 1. Prepare the page, then commit it
