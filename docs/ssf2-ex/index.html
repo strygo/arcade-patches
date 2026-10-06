@@ -99,8 +99,9 @@ Japan (Japanese):
   out/mister/games/hbmame/ssf2xuc.zip</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
 stock set in your MAME rompath (it keeps the name <code>ssf2xj.zip</code>, so use one build at a time), or burn its ROM
-files. MAME reports checksum warnings for the patched ROMs. That's expected, and the game runs
-normally.</p>
+files. MAME's game menu won't start a set with patched ROMs, so start it from the command line:
+<code>mame ssf2xj</code>. MAME shows checksum warnings for the patched ROMs. That's expected, and the
+game runs normally. To start it from a menu, use the HBMAME build.</p>
 <p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
 <code>roms/</code> folder next to your stock <code>ssf2xj.zip</code>. It loads with no checksum
 warnings. The <a href="https://github.com/Robbbert/hbmame">HBMAME</a> set definition (<code>ssf2tuc</code>, <code>ssf2xuc</code>) is generated with the edition; an upstream submission is pending, so for now you add it to your own HBMAME build.</p>

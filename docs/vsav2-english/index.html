@@ -71,8 +71,9 @@ out/hbmame/vsav2s04.zip
 out/mister/_Arcade/_Arcade Patches/_Restorations/Vampire Savior 2 (USA) [English Translation].mra</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
 stock set in your MAME rompath (it keeps the name <code>vsav2.zip</code>), or burn its ROM
-files. MAME reports checksum warnings for the patched ROMs. That's expected, and the game runs
-normally.</p>
+files. MAME's game menu won't start a set with patched ROMs, so start it from the command line:
+<code>mame vsav2</code>. MAME shows checksum warnings for the patched ROMs. That's expected, and the
+game runs normally. To start it from a menu, use the HBMAME build.</p>
 <p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
 <code>roms/</code> folder next to your stock <code>vsav2.zip</code>. It loads with no checksum
 warnings. This translation is an official <a href="https://github.com/Robbbert/hbmame">HBMAME</a> set, <code>vsav2s04</code> (<a href="https://github.com/Robbbert/hbmame/pull/41">merged upstream</a>), so full HBMAME collections may already carry it.</p>

@@ -251,9 +251,12 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
             "",
             f"MAME: put {setname}.zip from out/mame/ ahead of the stock set in your MAME",
             "rompath" + (" (one build at a time: they share the set name)." if variants else "."),
-            "MAME reports checksum warnings for the patched ROMs; that's expected and",
-            "the game runs normally.",
+            "MAME's game menu won't start a set with patched ROMs, so start it from the",
+            f"command line: mame {setname}. MAME shows checksum warnings for the patched",
+            "ROMs; that's expected and the game runs normally.",
         ]
+        if any(o[2] for o in outputs):
+            lines += ["To start it from a menu, use the HBMAME build."]
         if (patch.get("artifact") or {}).get("auxiliary_stock_members"):
             lines += ["Keep your unmodified qsound.zip in MAME's ROM path."]
     else:

@@ -72,8 +72,9 @@ out/hbmame/nwarrru.zip
 out/mister/_Arcade/_Arcade Patches/_Restorations/Night Warriors Darkstalkers&#x27; Revenge (USA) [English Restoration].mra</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
 stock set in your MAME rompath (it keeps the name <code>vhuntj.zip</code>), or burn its ROM
-files. MAME reports checksum warnings for the patched ROMs. That's expected, and the game runs
-normally.</p>
+files. MAME's game menu won't start a set with patched ROMs, so start it from the command line:
+<code>mame vhuntj</code>. MAME shows checksum warnings for the patched ROMs. That's expected, and the
+game runs normally. To start it from a menu, use the HBMAME build.</p>
 <p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
 <code>roms/</code> folder together with <code>qsound.zip</code>; it holds the complete set. It loads with no checksum
 warnings. This restoration is an official <a href="https://github.com/Robbbert/hbmame">HBMAME</a> set, <code>nwarrru</code>, so full HBMAME collections may already carry it.</p>

@@ -566,8 +566,9 @@ checks the result, and writes the files for every platform in one go:{one}</p>
     if mame_build:
         parts.append(f"""<p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
 stock set in your MAME rompath (it keeps the name <code>{setname}.zip</code>{", so use one build at a time" if variants else ""}), or burn its ROM
-files. MAME reports checksum warnings for the patched ROMs. That's expected, and the game runs
-normally.</p>""")
+files. MAME's game menu won't start a set with patched ROMs, so start it from the command line:
+<code>mame {setname}</code>. MAME shows checksum warnings for the patched ROMs. That's expected, and the
+game runs normally.{" To start it from a menu, use the HBMAME build." if any(o[2] for o in outputs) else ""}</p>""")
     else:
         parts.append("""<p>There is no MAME build: stock MAME has no driver that loads the added
 program ROM, so on a computer, play it in HBMAME.</p>""")
