@@ -1727,14 +1727,14 @@
           }
         },
         "rc5": {
-          "current_revision": 1,
+          "current_revision": 2,
           "date": "2026-10-06",
           "files": {
             "ips": {
-              "archive": "archive/748c5e66bc60916007fb71fb4d775fe6524ab656657d74be5c3afa824fbf5d8b/ssf2-ex-rc5-ips.zip",
+              "archive": "archive/47933dd05385c5a4b54372b404d8ae693577869852507d2ad23b0bd135658ee2/ssf2-ex-rc5-ips.zip",
               "name": "ssf2-ex-rc5-ips.zip",
-              "sha256": "748c5e66bc60916007fb71fb4d775fe6524ab656657d74be5c3afa824fbf5d8b",
-              "size": 973052
+              "sha256": "47933dd05385c5a4b54372b404d8ae693577869852507d2ad23b0bd135658ee2",
+              "size": 973168
             },
             "mra": {
               "archive": "archive/084d57c4467163fa9221866231d5bca01b7456561becda96b5bfd5553cdc3037/ssf2-ex-rc5-mra.zip",
@@ -1743,18 +1743,24 @@
               "size": 571616
             }
           },
+          "game_contract_sha256": "bdbb0188525902f434b9292bb5a3892fd7e942d6403b13d20dca66965da50fb1",
           "kind": "rom",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-10-06",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "qualification": {
-            "candidate": "rc5-candidate.5",
+            "candidate": "rc5-r2-candidate.1",
             "capcom_source_commit": "c49dd24ccf83bb9caaa4b77af59e22f28b45cd5d",
-            "ready_record_sha256": "4e5c54bebbb79f87f8eac05e48223c66c164bf1015dfcf0397a8fb3f759f569e",
-            "release_sha256": "6e0b35e3337563a5d2bd24d1308428325caa367e334164e72121637155ea2ea4",
+            "ready_record_sha256": "0bc2429e99bf07723dacc9f974abd59cc97498ccb82380d0b040a046ffd3845d",
+            "release_sha256": "2101acc7fdd357797539daf3ca548f3e6aa17b8d33e1f26e8a330ed88136e870",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -1782,7 +1788,47 @@
                 "release_sha256": "6e0b35e3337563a5d2bd24d1308428325caa367e334164e72121637155ea2ea4",
                 "type": "qualified-candidate"
               }
+            },
+            "2": {
+              "date": "2026-10-06",
+              "files": {
+                "ips": {
+                  "archive": "archive/47933dd05385c5a4b54372b404d8ae693577869852507d2ad23b0bd135658ee2/ssf2-ex-rc5-ips.zip",
+                  "name": "ssf2-ex-rc5-ips.zip",
+                  "sha256": "47933dd05385c5a4b54372b404d8ae693577869852507d2ad23b0bd135658ee2",
+                  "size": 973168
+                },
+                "mra": {
+                  "archive": "archive/084d57c4467163fa9221866231d5bca01b7456561becda96b5bfd5553cdc3037/ssf2-ex-rc5-mra.zip",
+                  "name": "ssf2-ex-rc5-mra.zip",
+                  "sha256": "084d57c4467163fa9221866231d5bca01b7456561becda96b5bfd5553cdc3037",
+                  "size": 571616
+                }
+              },
+              "game_contract_sha256": "bdbb0188525902f434b9292bb5a3892fd7e942d6403b13d20dca66965da50fb1",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc5-r2-candidate.1",
+                "capcom_source_commit": "c49dd24ccf83bb9caaa4b77af59e22f28b45cd5d",
+                "ready_record_sha256": "0bc2429e99bf07723dacc9f974abd59cc97498ccb82380d0b040a046ffd3845d",
+                "release_sha256": "2101acc7fdd357797539daf3ca548f3e6aa17b8d33e1f26e8a330ed88136e870",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "748c5e66bc60916007fb71fb4d775fe6524ab656657d74be5c3afa824fbf5d8b",
+                  "mra": "084d57c4467163fa9221866231d5bca01b7456561becda96b5bfd5553cdc3037"
+                },
+                "revision": 1
+              }
             }
+          },
+          "tooling_baseline": {
+            "files": {
+              "ips": "748c5e66bc60916007fb71fb4d775fe6524ab656657d74be5c3afa824fbf5d8b",
+              "mra": "084d57c4467163fa9221866231d5bca01b7456561becda96b5bfd5553cdc3037"
+            },
+            "revision": 1
           }
         }
       }
