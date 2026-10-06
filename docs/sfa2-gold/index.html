@@ -20,8 +20,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 2 Gold</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc5</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc5</dd><dt>Updated</dt><dd>2026-09-27</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc6</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc6</dd><dt>Updated</dt><dd>2026-10-06</dd></dl>
 <h2>The four builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/sfa2-gold/title_us.png?v=12f45e2050" alt="Street Fighter Alpha 2 Gold (USA) title screen"><figcaption><strong>Street Fighter Alpha 2 Gold</strong><br>USA · <code>sfa2g</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_eu.png?v=fad3a42ec7" alt="Street Fighter Alpha 2 Dash (Europe) title screen"><figcaption><strong>Street Fighter Alpha 2 Dash</strong><br>Europe · <code>sfa2d</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_jp.png?v=5fa69a569c" alt="Street Fighter Zero 2 Dash (Japan) title screen"><figcaption><strong>Street Fighter Zero 2 Dash</strong><br>Japan · <code>sfz2d</code></figcaption></figure><figure class="build"><img src="../img/sfa2-gold/title_asia.png?v=6a8bddb60d" alt="Street Fighter Zero 2 Dash (Asia (English)) title screen"><figcaption><strong>Street Fighter Zero 2 Dash</strong><br>Asia (English) · <code>sfz2da</code></figcaption></figure></div>
 <h2>About</h2>
@@ -35,7 +35,7 @@
 <li>The revised title, presentation, and staff-credit screens for each region</li>
 <li>In the English builds, the full Japanese script in English: every story and ending page, Evil Ryu&#x27;s own ending, and all 452 win quotes, plus red blood and Birdie&#x27;s missing victory pose</li>
 <li>Four regional builds: USA (Alpha 2 Gold), Europe (Alpha 2 Dash), Japan (Zero 2 Dash), and an English Asia (Zero 2 Dash)</li>
-<li>4 MB builds for real hardware and stock MAME, plus 8 MB builds carrying Cammy&#x27;s full audio for HBMAME and MiSTer</li>
+<li>4 MB builds for real hardware and stock MAME, with all of Cammy&#x27;s voices, some compressed to fit, plus 8 MB builds with every sound uncompressed for HBMAME and MiSTer</li>
 </ul>
 <h2>New to the roster</h2>
 <figure class="shot single"><img src="../img/sfa2-gold/00_single.png?v=51700b861b" alt="Cammy joins the roster on the character-select screen."><figcaption>Cammy joins the roster on the character-select screen.</figcaption></figure>
@@ -62,21 +62,27 @@ could hold, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/sfa2-gold-rc5-kit.zip?v=d6a53ff7dc">sfa2-gold-rc5-kit.zip</a>
-  (1.2 MB)</div>
-  <div class="hash">SHA-256: d6a53ff7dc0f6c68bd2256a8c695471cccf18090da1a2c1a4b866d8b9b423cfe</div>
+  <div class="file"><a href="../downloads/sfa2-gold-rc6-kit.zip?v=c829774534">sfa2-gold-rc6-kit.zip</a>
+  (1.4 MB)</div>
+  <div class="hash">SHA-256: c8297745342bd8f7a3a848ab8a2b85129f3ea33a4dfa7c2e63b8898f203329c6</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
 <ul><li>your own PlayStation 2 anthology disc image: Street Fighter Alpha Anthology, or Street Fighter Zero — Fighter&#x27;s Generation for the Japan set</li><li>your own arcade Street Fighter Zero 2 Alpha romset: sfz2al, plus sfz2alj for the Japan set</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip sfa2-gold-rc5-kit.zip -d sfa2-gold
+<pre><code>unzip sfa2-gold-rc6-kit.zip -d sfa2-gold
 cd sfa2-gold
 python3 apply.py --iso &quot;Street Fighter Alpha Anthology.iso&quot; \
                  --romset sfz2al.zip --region us --out-dir out</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc6 (2026-10-06)</h3><ul>
+<li>The 4 MB builds now have all of Cammy&#x27;s voices, including her special moves, dizzy and defeat. To fit, ten of them and five of the game&#x27;s own sounds are compressed. rc5&#x27;s 4 MB builds had only five of her voices, and some of her moves, such as Cannon Drill, played another fighter&#x27;s voice.</li>
+<li>In the English builds, Dan&#x27;s ending now has his spoken “Oyaji!”, as in Japan.</li>
+<li>The USA build now shows ALPHA under the round timer, as Europe&#x27;s Alpha 2 Dash does. rc5 showed ZERO.</li>
+<li>Every set has new checksums, so rebuild them with the rc6 kit.</li>
+</ul>
 <h3>rc5 (2026-09-27)</h3><ul>
 <li>The STREET FIGHTER title lettering now uses the PlayStation 2 and Saturn yellow-to-green-to-blue colors across the intro and attract sequence in all four regions.</li>
 <li>Cammy&#x27;s Psycho Streak now freezes the fight through her salute, as on the PlayStation 2: the stage darkens, and the opponent, projectiles and round timer stop.</li>

@@ -1241,8 +1241,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc5",
-      "date": "2026-09-27",
+      "version": "rc6",
+      "date": "2026-10-06",
       "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "us",
@@ -1259,7 +1259,7 @@
         "The revised title, presentation, and staff-credit screens for each region",
         "In the English builds, the full Japanese script in English: every story and ending page, Evil Ryu's own ending, and all 452 win quotes, plus red blood and Birdie's missing victory pose",
         "Four regional builds: USA (Alpha 2 Gold), Europe (Alpha 2 Dash), Japan (Zero 2 Dash), and an English Asia (Zero 2 Dash)",
-        "4 MB builds for real hardware and stock MAME, plus 8 MB builds carrying Cammy's full audio for HBMAME and MiSTer"
+        "4 MB builds for real hardware and stock MAME, with all of Cammy's voices, some compressed to fit, plus 8 MB builds with every sound uncompressed for HBMAME and MiSTer"
       ],
       "builds": [
         {
@@ -1339,6 +1339,16 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc6",
+          "date": "2026-10-06",
+          "items": [
+            "The 4 MB builds now have all of Cammy's voices, including her special moves, dizzy and defeat. To fit, ten of them and five of the game's own sounds are compressed. rc5's 4 MB builds had only five of her voices, and some of her moves, such as Cannon Drill, played another fighter's voice.",
+            "In the English builds, Dan's ending now has his spoken “Oyaji!”, as in Japan.",
+            "The USA build now shows ALPHA under the round timer, as Europe's Alpha 2 Dash does. rc5 showed ZERO.",
+            "Every set has new checksums, so rebuild them with the rc6 kit."
+          ]
+        },
         {
           "version": "rc5",
           "date": "2026-09-27",

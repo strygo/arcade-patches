@@ -1,7 +1,7 @@
 Street Fighter Alpha 2 Gold / Zero 2 Dash — reconstruction kit
 ==============================================================
 
-Version:      rc5 (2026-09-27)
+Version:      rc6 (2026-10-06)
 Hardware:     Capcom CPS-2
 Target:       MAME and HBMAME sets, and MiSTer (jtcps2) — 4 regions
 Backport by:  Steve Gordon (https://x.com/strygo)
@@ -32,7 +32,7 @@ USAGE (recommended — build every platform for one region)
 This creates:
 
     out/mame/<region>/<set>.zip  4MB — stock MAME or real CPS-2 hardware
-    out/hbmame/<set>.zip         8MB — HBMAME with expanded Cammy audio
+    out/hbmame/<set>.zip         8MB — HBMAME, with every sound uncompressed
     out/mister/                  8MB — ready to copy to a MiSTer SD card
 
 Use the same output folder when building more than one region. Each region

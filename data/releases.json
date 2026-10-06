@@ -893,7 +893,7 @@
       }
     },
     "sfa2-gold": {
-      "current": "rc5",
+      "current": "rc6",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -1153,6 +1153,53 @@
                 "capcom_source_commit": "9cc7a8855951a9be1640ee9a62e0205ad4839864",
                 "ready_record_sha256": "9bc074a6510ca19f6f04286dd39905703befed029455804d28fd8f27b2f6ec74",
                 "release_sha256": "874cb4b389195eb0596286504d1a08bcecfa7a933c3257a9cd3fa26f9579c481",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        },
+        "rc6": {
+          "current_revision": 1,
+          "date": "2026-10-06",
+          "files": {
+            "kit": {
+              "archive": "archive/c8297745342bd8f7a3a848ab8a2b85129f3ea33a4dfa7c2e63b8898f203329c6/sfa2-gold-rc6-kit.zip",
+              "name": "sfa2-gold-rc6-kit.zip",
+              "sha256": "c8297745342bd8f7a3a848ab8a2b85129f3ea33a4dfa7c2e63b8898f203329c6",
+              "size": 1456649
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc6-candidate.1",
+            "capcom_source_commit": "878d7e4d839225645f341a80b455e382b2e8fc79",
+            "ready_record_sha256": "4190f1bea4209361f942478489cb15940a8dfe1cf773b00ed18df2493a381927",
+            "release_sha256": "ad12d3e31e121e5f38f804914f5e36ecfef6db2460b0cf391da2bb5844985e62",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-06",
+              "files": {
+                "kit": {
+                  "archive": "archive/c8297745342bd8f7a3a848ab8a2b85129f3ea33a4dfa7c2e63b8898f203329c6/sfa2-gold-rc6-kit.zip",
+                  "name": "sfa2-gold-rc6-kit.zip",
+                  "sha256": "c8297745342bd8f7a3a848ab8a2b85129f3ea33a4dfa7c2e63b8898f203329c6",
+                  "size": 1456649
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc6-candidate.1",
+                "capcom_source_commit": "878d7e4d839225645f341a80b455e382b2e8fc79",
+                "ready_record_sha256": "4190f1bea4209361f942478489cb15940a8dfe1cf773b00ed18df2493a381927",
+                "release_sha256": "ad12d3e31e121e5f38f804914f5e36ecfef6db2460b0cf391da2bb5844985e62",
                 "type": "qualified-candidate"
               }
             }
