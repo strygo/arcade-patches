@@ -765,9 +765,9 @@ You need:</p>"""]
 combines it with your arcade Zero 2 Alpha romset, and writes out the finished
 CPS-2 build.</p>
 <p>Two sizes of each build are produced. A <strong>4&nbsp;MB</strong> set stays within
-original CPS-2 limits and runs on real hardware and stock MAME. An <strong>8&nbsp;MB</strong>
-set carries Cammy's complete voice and sound-effect audio, more than an original board
-could hold, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>""")
+original CPS-2 limits and runs on real hardware and stock MAME. It carries all of Cammy's
+voices and sound effects, with some downsampled to fit. An <strong>8&nbsp;MB</strong> set
+carries the same audio at full quality, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>""")
     parts.append(f"""<h3>The builds</h3>
 <table>
 <tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer (8&nbsp;MB)</th><th>Hardware / MAME (4&nbsp;MB)</th></tr>
