@@ -494,7 +494,10 @@ def check_hbmame(slug: str, hb: dict, members: list, patched: dict) -> dict:
     manifest entry.  Renames may map a file to its own name when HBMAME keeps
     the stock filenames and only the checksums change."""
     patched_names = {m["name"] for m in members if m["action"] != "copy"}
-    expected_names = {m["name"] for m in members} if hb.get("complete") else patched_names
+    # A complete set carries every game ROM; QSound firmware stays in qsound.zip,
+    # which apply.py never writes into an HBMAME set.
+    expected_names = ({m["name"] for m in members if m["name"] != "dl-1425.bin" and m.get("role") != "device"}
+                      if hb.get("complete") else patched_names)
     if set(hb["renames"]) != expected_names:
         raise SystemExit(
             f"{slug}: hbmame.renames keys {sorted(hb['renames'])} do not match "
@@ -563,7 +566,7 @@ def build_rom_downloads(patch: dict) -> dict:
         "set": patch["set"],
         "hardware": patch["hardware"],
         "input_schema": 1,
-        "parents": {"ssf2xj": ["ssf2t"], "mshvsfj": ["mshvsf"], "sfz2alj": ["sfz2al"], "vampj": ["dstlk"]}.get(patch["set"], []),
+        "parents": {"ssf2xj": ["ssf2t"], "mshvsfj": ["mshvsf"], "sfz2alj": ["sfz2al"], "vampj": ["dstlk"], "vhuntj": ["nwarr"]}.get(patch["set"], []),
     }
     if patch.get("mame_build") is False:
         manifest["mame_build"] = False
