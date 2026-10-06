@@ -580,12 +580,17 @@ program ROM, so on a computer, play it in HBMAME.</p>""")
             status = (f"This {noun} is an official <a href=\"https://github.com/Robbbert/hbmame\">HBMAME</a> "
                       f"set, {sets} (<a href=\"{esc(hb['pr_url'])}\">merged upstream</a>), so full HBMAME "
                       f"collections may already carry it.")
+        elif hb.get("official"):
+            status = (f"This {noun} is an official <a href=\"https://github.com/Robbbert/hbmame\">HBMAME</a> "
+                      f"set, {sets}, so full HBMAME collections may already carry it.")
         else:
             status = (f"The <a href=\"https://github.com/Robbbert/hbmame\">HBMAME</a> set definition "
                       f"({sets}) is generated with the {noun}; an upstream submission is pending, so for "
                       f"now you add it to your own HBMAME build.")
+        where = ("together with <code>qsound.zip</code>; it holds the complete set" if hb.get("complete")
+                 else f"next to your stock <code>{setname}.zip</code>")
         parts.append(f"""<p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
-<code>roms/</code> folder next to your stock <code>{setname}.zip</code>. It loads with no checksum
+<code>roms/</code> folder {where}. It loads with no checksum
 warnings. {status}</p>""")
 
     if mra_info:

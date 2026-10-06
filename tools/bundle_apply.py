@@ -136,7 +136,7 @@ def requirements(manifest, compact=False):
     for member in manifest["members"]:
         if member["action"] == "add" or member.get("role") == "device" or member["name"] == "dl-1425.bin":
             continue
-        if compact and member["action"] == "copy":
+        if compact and member["action"] == "copy" and not (manifest.get("hbmame") or {}).get("complete"):
             continue
         result.append({"name": member["name"], "size": member["size"],
                        "crc32": member["stock_crc32"], "sha256": member.get("stock_sha256")})
@@ -147,7 +147,7 @@ def build_members(manifest, patches, source, compact=False):
     result = {}
     for m in manifest["members"]:
         name = m["name"]
-        if name == "dl-1425.bin" or m.get("role") == "device" or (compact and m["action"] == "copy"):
+        if name == "dl-1425.bin" or m.get("role") == "device" or (compact and m["action"] == "copy" and not (manifest.get("hbmame") or {}).get("complete")):
             continue
         if m["action"] == "add":
             data = build_added(m, patches[name])
@@ -229,7 +229,8 @@ def main():
                     raise RomError("Variants require conflicting stock identities")
                 needed[spec["name"]] = spec
     source = resolver.resolve(needed.values())
-    devices = resolver.devices(include=args.include_devices) if needed else {}
+    include_game_devices = base.get("mame_include_devices", True) or args.include_devices
+    devices = resolver.devices(include=args.include_devices) if needed and include_game_devices else {}
     if args.check_runtime:
         resolver.devices(include=True)
         print("Game and firmware content verified; MiSTer also needs its MRA-named archive paths on the card.")
@@ -261,8 +262,10 @@ def main():
     else:
         write_zip(output, next(iter(outputs.values())))
     print(f"Built game files: {output}")
+    if platform in ("all", "mame") and not devices and not base.get("mame_include_devices", True):
+        print("MAME needs your unmodified qsound.zip in its ROM path.")
     if platform in ("all", "hbmame"):
-        print("Compact HBMAME clones use the stock game archives and QSound in your emulator ROM path.")
+        print("HBMAME needs QSound in your ROM path; compact clones also need the stock game archives.")
     if platform in ("all", "mister"):
         print("MiSTer MRAs use stock archives on the card; renamed input archives are not installed automatically.")
 

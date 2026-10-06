@@ -252,8 +252,10 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
             f"MAME: put {setname}.zip from out/mame/ ahead of the stock set in your MAME",
             "rompath" + (" (one build at a time: they share the set name)." if variants else "."),
             "MAME reports checksum warnings for the patched ROMs; that's expected and",
-            "the game runs normally. The same files can be burned for an original board.",
+            "the game runs normally.",
         ]
+        if (patch.get("artifact") or {}).get("auxiliary_stock_members"):
+            lines += ["Keep your unmodified qsound.zip in MAME's ROM path."]
     else:
         lines += [
             "",
@@ -263,14 +265,18 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
     hb_sets = [o[2] for o in outputs if o[2]]
     if hb_sets:
         hb = patch.get("hbmame") or next(v["hbmame"] for v in variants if v.get("hbmame"))
-        if hb.get("pr_url"):
+        if hb.get("pr_url") or hb.get("official"):
             lines += ["", f"HBMAME: this {noun} is an official HBMAME set ({', '.join(hb_sets)}),",
                       "so full HBMAME collections may already carry it."]
         else:
             lines += ["", f"HBMAME: the set definition ({', '.join(hb_sets)}) ships with the project;",
                       "an upstream HBMAME submission is pending."]
-        lines += [f"Put the zip in HBMAME's roms/ folder next to your stock {setname}.zip.",
-                  "It loads with no checksum warnings."]
+        if hb.get('complete'):
+            lines += [f"Put {', '.join(s + '.zip' for s in hb_sets)} and qsound.zip in HBMAME's roms/ folder;",
+                      "it holds the complete set and loads with no checksum warnings."]
+        else:
+            lines += [f"Put the zip in HBMAME's roms/ folder next to your stock {setname}.zip.",
+                      "It loads with no checksum warnings."]
     if any(o[3] for o in outputs):
         lines += [
             "",
@@ -361,7 +367,8 @@ def generate_mras(patch: dict, stock_path: Path, entries: list) -> list:
     patched set, all built on the base MRA named in patch["mra"]["base"].
     Returns (path inside the download, text, patch runs) per overlay."""
     base_text = resolve(patch["mra"]["base"]).read_text()
-    stock_src = mralib.ZipSource([stock_path])
+    auxiliary = [resolve(path) for path in patch['mra'].get('auxiliary_zips', [])]
+    stock_src = mralib.ZipSource([stock_path, *auxiliary])
     stock_rom = mralib.assemble(base_text, stock_src)
     declared = mralib.declared_asm_md5(base_text)
     if declared and hashlib.md5(stock_rom).hexdigest() != declared:
@@ -380,7 +387,7 @@ def generate_mras(patch: dict, stock_path: Path, entries: list) -> list:
                 raise SystemExit(f"{patch['slug']}: added ROMs need mra.insert_after")
             target_base = mralib.insert_program_parts(base_text, after, added, placeholder=False)
             overlay_base = mralib.insert_program_parts(base_text, after, added, placeholder=True)
-        patched_rom = mralib.assemble(target_base, mralib.ZipSource([patched_path], check_crc=False))
+        patched_rom = mralib.assemble(target_base, mralib.ZipSource([patched_path, *auxiliary], check_crc=False))
         runs = mralib.diff_runs(mralib.assemble(overlay_base, stock_src), patched_rom)
         text = mralib.make_patch_mra(
             overlay_base,
@@ -418,6 +425,26 @@ def download_info(zipname: str) -> dict:
         "size": out_path.stat().st_size,
         "sha256": sha256_file(out_path),
     }
+
+
+def source_members(patch: dict, stock: dict) -> dict:
+    """Exclude explicitly identified device firmware from the game inventory.
+
+    Some canonical full archives carry QSound device firmware, while the game
+    driver inventories only game ROMs. MRA assembly still uses the original
+    archive and its declared auxiliary archives.
+    """
+    stock = dict(stock)
+    declared = patch['artifact'].get('auxiliary_stock_members', [])
+    names = [row['name'] for row in declared]
+    if len(names) != len(set(names)) or any(name != 'dl-1425.bin' for name in names):
+        raise ValueError('unsupported or duplicate auxiliary device member')
+    for row in declared:
+        body = stock.pop(row['name'], None)
+        if body is not None and (len(body) != row['size'] or
+                                  hashlib.sha256(body).hexdigest() != row['sha256']):
+            raise ValueError('auxiliary device firmware identity differs')
+    return stock
 
 
 def diff_members(slug: str, stock: dict, patched: dict) -> tuple[list, dict]:
@@ -467,17 +494,19 @@ def check_hbmame(slug: str, hb: dict, members: list, patched: dict) -> dict:
     manifest entry.  Renames may map a file to its own name when HBMAME keeps
     the stock filenames and only the checksums change."""
     patched_names = {m["name"] for m in members if m["action"] != "copy"}
-    if set(hb["renames"]) != patched_names:
+    expected_names = {m["name"] for m in members} if hb.get("complete") else patched_names
+    if set(hb["renames"]) != expected_names:
         raise SystemExit(
             f"{slug}: hbmame.renames keys {sorted(hb['renames'])} do not match "
-            f"patched members {sorted(patched_names)}"
+            f"required members {sorted(expected_names)}"
         )
     if len(set(hb["renames"].values())) != len(hb["renames"]):
         raise SystemExit(f"{slug}: hbmame.renames has duplicate target names")
-    hbmame_out = {hb["renames"][n]: crc32(patched[n]) for n in patched_names}
+    hbmame_out = {hb["renames"][n]: crc32(patched[n]) for n in expected_names}
     print(f"{slug}: HBMAME set '{hb['setname']}' verified: " +
           ", ".join(f"{n}={c}" for n, c in sorted(hbmame_out.items())))
-    return {"setname": hb["setname"], "renames": hb["renames"]}
+    return {"setname": hb["setname"], "renames": hb["renames"],
+            **({"complete": True} if hb.get("complete") else {})}
 
 
 def read_zip(path: Path) -> dict:
@@ -511,7 +540,7 @@ def build_rom_downloads(patch: dict) -> dict:
     if missing:
         raise SystemExit(f"{slug}: patched archives are missing: {missing}")
 
-    stock = read_zip(stock_path)
+    stock = source_members(patch, read_zip(stock_path))
     results, mra_entries = [], []
     for b in builds:
         tag = f"{slug}/{b['key']}" if b["key"] else slug
@@ -534,10 +563,12 @@ def build_rom_downloads(patch: dict) -> dict:
         "set": patch["set"],
         "hardware": patch["hardware"],
         "input_schema": 1,
-        "parents": {"ssf2xj": ["ssf2t"], "mshvsfj": ["mshvsf"], "sfz2alj": ["sfz2al"]}.get(patch["set"], []),
+        "parents": {"ssf2xj": ["ssf2t"], "mshvsfj": ["mshvsf"], "sfz2alj": ["sfz2al"], "vampj": ["dstlk"]}.get(patch["set"], []),
     }
     if patch.get("mame_build") is False:
         manifest["mame_build"] = False
+    if art.get("auxiliary_stock_members"):
+        manifest["mame_include_devices"] = False
     if patch.get("mister_hbmame"):
         manifest["mister_hbmame"] = True
     if specs:
