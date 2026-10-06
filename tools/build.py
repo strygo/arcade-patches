@@ -1101,9 +1101,11 @@ def main() -> None:
     for icon in ("favicon.svg", "favicon.ico", "apple-touch-icon.png"):
         shutil.copyfile(ROOT / "site" / icon, DOCS / icon)
 
+    # sort_title (page-only) orders a series where plain titles would not,
+    # e.g. Night Warriors before Night Warriors 2.
     patches = sorted(
         (p for p in patches if not p.get("hidden")),
-        key=lambda p: p["title"].lower(),
+        key=lambda p: p.get("sort_title", p["title"]).lower(),
     )
 
     thumbs = {}
