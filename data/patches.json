@@ -2874,6 +2874,126 @@
         "MAME shows checksum warnings for the patched files. That's expected; the game plays normally. HBMAME with the matching set definitions loads them without them.",
         "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
       ]
+    },
+    {
+      "slug": "dstlk-restoration",
+      "title": "Darkstalkers: The Night Warriors",
+      "subtitle": "English restoration",
+      "section": "restorations",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-10-06",
+      "game": "Vampire: The Night Warriors (Japan 940705)",
+      "set": "vampj",
+      "hardware": "Capcom CPS-2",
+      "patch_noun": "restoration",
+      "patch_kind": "English restoration patch",
+      "patch_intro": "An unofficial English restoration of Vampire: The Night Warriors (Japan 940705), presented as the USA version of Darkstalkers.",
+      "summary": "The Japanese Vampire in English, presented as Darkstalkers: every fighter\u2019s win quotes, the complete endings, the continue advice and the voices the USA version left out.",
+      "description": [
+        "The original Japanese Vampire gives each fighter a pool of win quotes, and offers move advice after a loss. The USA version uses one English win quote per fighter and removes the advice.",
+        "The English Restoration brings back the Japanese quote pools and bordered result panel, the complete ending dialogue, and all 85 continue tips, translated from the Japanese.",
+        "The voices the USA version muted are back: Morrigan\u2019s alternate victory, Vector Drain and throw, and Felicia\u2019s Rolling Buckler, Dancing Flash and special damage reaction. As in the USA release, Rikuo\u2019s crouching heavy punch can be blocked with a crouching guard.",
+        "It keeps the ten playable fighters and the Western character names, and adds Free Play to the operator menu. It runs in MAME and HBMAME and on MiSTer.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "Japanese win-quote pools in English, with the Japanese result-panel border",
+        "Complete Japanese ending dialogue in English, with the original scene timing",
+        "All 85 Japanese continue tips in English, including their arcade move commands",
+        "Morrigan\u2019s alternate victory, Vector Drain and throw voices, and Felicia\u2019s Rolling Buckler, Dancing Flash and special damage voices",
+        "Rikuo\u2019s crouching heavy punch can be blocked with a crouching guard, as in the USA release",
+        "Western character names, and Free Play in the operator menu"
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-10-06",
+          "items": [
+            "First public release."
+          ]
+        }
+      ],
+      "feedback": true,
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/vampj.zip",
+        "patched_zip": "../capcom/backports/dstlk/out/restoration/vampj.zip",
+        "auxiliary_stock_members": [
+          {
+            "name": "dl-1425.bin",
+            "size": 24576,
+            "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        ]
+      },
+      "mra": {
+        "base": "data/mra/vampj.mra",
+        "auxiliary_zips": [
+          "../capcom/roms/mame0260/qsound.zip"
+        ],
+        "name": "Darkstalkers: The Night Warriors (USA) [English Restoration]",
+        "setname": "vamprest",
+        "filename": "Darkstalkers The Night Warriors (USA) [English Restoration].mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo",
+        "region": "USA"
+      },
+      "hbmame": {
+        "setname": "vamprest",
+        "renames": {
+          "vam.01": "vam.01",
+          "vam.02": "vam.02",
+          "vam.11m": "vam.11m",
+          "vam.12m": "vam.12m",
+          "vam.13m": "vam.13m",
+          "vam.14m": "vam.14m",
+          "vam.15m": "vam.15m",
+          "vam.16m": "vam.16m",
+          "vam.17m": "vam.17m",
+          "vam.18m": "vam.18m",
+          "vam.19m": "vam.19m",
+          "vam.20m": "vam.20m",
+          "vamj.03a": "vamj.03a",
+          "vamj.04b": "vamj.04b",
+          "vamj.05a": "vamj.05a",
+          "vamj.06a": "vamj.06a",
+          "vamj.07a": "vamj.07a",
+          "vamj.08a": "vamj.08a",
+          "vamj.09a": "vamj.09a",
+          "vamj.10a": "vamj.10a",
+          "vampj.key": "vampj.key"
+        },
+        "complete": true,
+        "official": true
+      },
+      "screenshots": [
+        {
+          "single": "data/screenshots/dstlk-restoration/quote_morrigan.png",
+          "caption": "Japan's win quotes are back, in English, in the bordered result panel."
+        },
+        {
+          "single": "data/screenshots/dstlk-restoration/quote_felicia.png",
+          "caption": "Every fighter draws from a pool of quotes again, with the Japanese hearts."
+        },
+        {
+          "single": "data/screenshots/dstlk-restoration/advice_morrigan.png",
+          "caption": "After a loss, the continue screen offers one of 85 tips, here Morrigan's Vector Drain."
+        }
+      ],
+      "related": [
+        {
+          "label": "Vampire Savior",
+          "url": "../vsav-restoration/",
+          "note": "the third game, restored in English the same way"
+        }
+      ],
+      "notes": [
+        "MAME shows checksum warnings for the patched files. That\u2019s expected; the game plays normally. HBMAME with the vamprest set definition loads it without them.",
+        "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
+      ]
     }
   ]
 }

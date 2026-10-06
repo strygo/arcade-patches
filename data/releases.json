@@ -314,6 +314,70 @@
         }
       }
     },
+    "dstlk-restoration": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-10-06",
+          "files": {
+            "ips": {
+              "archive": "archive/6bb833b4899047f609effe18d10eca8a32cd8af608ad1c3bd5d100cadc700d25/dstlk-restoration-rc1-ips.zip",
+              "name": "dstlk-restoration-rc1-ips.zip",
+              "sha256": "6bb833b4899047f609effe18d10eca8a32cd8af608ad1c3bd5d100cadc700d25",
+              "size": 65493
+            },
+            "mra": {
+              "archive": "archive/22324b39158e19fb5dcd00967911741ebf923db73335bf7303f4bd8f09d54dde/dstlk-restoration-rc1-mra.zip",
+              "name": "dstlk-restoration-rc1-mra.zip",
+              "sha256": "22324b39158e19fb5dcd00967911741ebf923db73335bf7303f4bd8f09d54dde",
+              "size": 33857
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc1-candidate.7",
+            "capcom_source_commit": "b5d3daed4040dc55674435f244f563c1503501a5",
+            "ready_record_sha256": "5ef86b9e31432a51d1d9cc30da76e2ee6de904446bf75eb42f167aee6a7e52d0",
+            "release_sha256": "93dde87a22327aa9c04dcceffb38c3c331f8815b3727ffc4a571ac114a03962d",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-06",
+              "files": {
+                "ips": {
+                  "archive": "archive/6bb833b4899047f609effe18d10eca8a32cd8af608ad1c3bd5d100cadc700d25/dstlk-restoration-rc1-ips.zip",
+                  "name": "dstlk-restoration-rc1-ips.zip",
+                  "sha256": "6bb833b4899047f609effe18d10eca8a32cd8af608ad1c3bd5d100cadc700d25",
+                  "size": 65493
+                },
+                "mra": {
+                  "archive": "archive/22324b39158e19fb5dcd00967911741ebf923db73335bf7303f4bd8f09d54dde/dstlk-restoration-rc1-mra.zip",
+                  "name": "dstlk-restoration-rc1-mra.zip",
+                  "sha256": "22324b39158e19fb5dcd00967911741ebf923db73335bf7303f4bd8f09d54dde",
+                  "size": 33857
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc1-candidate.7",
+                "capcom_source_commit": "b5d3daed4040dc55674435f244f563c1503501a5",
+                "ready_record_sha256": "5ef86b9e31432a51d1d9cc30da76e2ee6de904446bf75eb42f167aee6a7e52d0",
+                "release_sha256": "93dde87a22327aa9c04dcceffb38c3c331f8815b3727ffc4a571ac114a03962d",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        }
+      }
+    },
     "final-fight-ex": {
       "current": "rc2",
       "versions": {

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Darkstalkers: The Night Warriors · Arcade Patches</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css?v=6e9d9f17a2">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="home" href="../">Arcade Patches</a>
+    <div class="tagline">Translations, restorations and arranged soundtracks for classic arcade games.</div>
+  </div>
+</header>
+<main>
+<a class="back" href="../">&larr; All patches</a>
+<h1>Darkstalkers: The Night Warriors</h1>
+<p class="subtitle">English restoration</p>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire: The Night Warriors (Japan 940705)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>vampj</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-10-06</dd></dl>
+<h2>Screenshots</h2>
+<figure class="shot single"><img src="../img/dstlk-restoration/00_single.png?v=e5822194ce" alt="Japan&#x27;s win quotes are back, in English, in the bordered result panel."><figcaption>Japan&#x27;s win quotes are back, in English, in the bordered result panel.</figcaption></figure>
+<figure class="shot single"><img src="../img/dstlk-restoration/01_single.png?v=15f7a5fcfe" alt="Every fighter draws from a pool of quotes again, with the Japanese hearts."><figcaption>Every fighter draws from a pool of quotes again, with the Japanese hearts.</figcaption></figure>
+<figure class="shot single"><img src="../img/dstlk-restoration/02_single.png?v=644862b4e9" alt="After a loss, the continue screen offers one of 85 tips, here Morrigan&#x27;s Vector Drain."><figcaption>After a loss, the continue screen offers one of 85 tips, here Morrigan&#x27;s Vector Drain.</figcaption></figure>
+<h2>About this patch</h2>
+<p>The original Japanese Vampire gives each fighter a pool of win quotes, and offers move advice after a loss. The USA version uses one English win quote per fighter and removes the advice.</p>
+<p>The English Restoration brings back the Japanese quote pools and bordered result panel, the complete ending dialogue, and all 85 continue tips, translated from the Japanese.</p>
+<p>The voices the USA version muted are back: Morrigan’s alternate victory, Vector Drain and throw, and Felicia’s Rolling Buckler, Dancing Flash and special damage reaction. As in the USA release, Rikuo’s crouching heavy punch can be blocked with a crouching guard.</p>
+<p>It keeps the ten playable fighters and the Western character names, and adds Free Play to the operator menu. It runs in MAME and HBMAME and on MiSTer.</p>
+<p>This is a release candidate.</p>
+<h2>What's changed</h2><ul>
+<li>Japanese win-quote pools in English, with the Japanese result-panel border</li>
+<li>Complete Japanese ending dialogue in English, with the original scene timing</li>
+<li>All 85 Japanese continue tips in English, including their arcade move commands</li>
+<li>Morrigan’s alternate victory, Vector Drain and throw voices, and Felicia’s Rolling Buckler, Dancing Flash and special damage voices</li>
+<li>Rikuo’s crouching heavy punch can be blocked with a crouching guard, as in the USA release</li>
+<li>Western character names, and Free Play in the operator menu</li>
+</ul>
+<h2>Spot a difference we missed?</h2>
+<p>A restoration is only as complete as its list of differences. If the Japanese version does
+something this one still doesn't, whether a line of text, a scene, a screen or a small detail,
+please <a href="https://x.com/strygo">let us know</a>. Anything you find goes into the next release.</p>
+<h2>Downloads</h2>
+
+<div class="download">
+  <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware</div>
+  <div class="file"><a href="../downloads/dstlk-restoration-rc1-ips.zip?v=6bb833b489">dstlk-restoration-rc1-ips.zip</a>
+  (64 KB)</div>
+  <div class="hash">SHA-256: 6bb833b4899047f609effe18d10eca8a32cd8af608ad1c3bd5d100cadc700d25</div>
+</div>
+<div class="download">
+  <div class="kind">MiSTer MRA only</div>
+  <div class="file"><a href="../downloads/dstlk-restoration-rc1-mra.zip?v=22324b3915">dstlk-restoration-rc1-mra.zip</a>
+  (33 KB)</div>
+  <div class="hash">SHA-256: 22324b39158e19fb5dcd00967911741ebf923db73335bf7303f4bd8f09d54dde</div>
+</div>
+<p>You need your own dump of <strong>Vampire: The Night Warriors (Japan 940705)</strong> as the MAME
+set <code>vampj.zip</code>.
+Each zip includes a <code>readme.txt</code> with full instructions.</p>
+<p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
+<h2>How to apply</h2>
+<pre><code>unzip dstlk-restoration-rc1-ips.zip -d vampj-patch
+cd vampj-patch
+python3 apply.py /path/to/vampj.zip --out-dir out</code></pre>
+<p>The script checks every file against the checksums below, applies the patches,
+checks the result, and writes the files for every platform in one go:</p>
+<pre><code>out/mame/vampj.zip
+out/hbmame/vamprest.zip
+out/mister/_Arcade/_Arcade Patches/_Restorations/Darkstalkers The Night Warriors (USA) [English Restoration].mra</code></pre>
+<p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
+stock set in your MAME rompath (it keeps the name <code>vampj.zip</code>), or burn its ROM
+files. MAME reports checksum warnings for the patched ROMs. That's expected, and the game runs
+normally.</p>
+<p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
+<code>roms/</code> folder together with <code>qsound.zip</code>; it holds the complete set. It loads with no checksum
+warnings. This restoration is an official <a href="https://github.com/Robbbert/hbmame">HBMAME</a> set, <code>vamprest</code>, so full HBMAME collections may already carry it.</p>
+<p><strong>MiSTer.</strong> Copy the <code>_Arcade</code> folder from
+<code>out/mister/</code> to the root of your SD card, and keep the stock, unmodified romset at
+<code>games/mame/vampj.zip</code> (split MAME sets also need <code>qsound.zip</code>). You need
+Jotego's <code>jtcps2</code> core, which update_all installs. The MRA applies the restoration in memory
+as the game loads, so nothing on your card is modified, and it keeps its own settings and saves under <code>vamprest</code>.
+The MiSTer-only download holds the same MRAs, ready to copy.</p>
+<p><strong>Any IPS patcher.</strong> Apply each file in <code>ips/</code>
+(Flips, Lunar IPS, …) to the ROM file of the same name and re-zip the set yourself.</p>
+<h3>Changed ROMs</h3>
+<table>
+<tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
+<tr><td class="mono">vam.13m</td><td>4.0 MB</td><td class="mono">c51baf99</td><td class="mono">2c48a876</td></tr>
+<tr><td class="mono">vam.15m</td><td>4.0 MB</td><td class="mono">3ce83c77</td><td class="mono">6465e083</td></tr>
+<tr><td class="mono">vam.17m</td><td>4.0 MB</td><td class="mono">4f2408e0</td><td class="mono">c613f6eb</td></tr>
+<tr><td class="mono">vam.19m</td><td>4.0 MB</td><td class="mono">9ff60250</td><td class="mono">29424b8d</td></tr>
+<tr><td class="mono">vamj.03a</td><td>512 KB</td><td class="mono">f55d3722</td><td class="mono">f36d0886</td></tr>
+<tr><td class="mono">vamj.04b</td><td>512 KB</td><td class="mono">4d9c43c4</td><td class="mono">48f49597</td></tr>
+<tr><td class="mono">vamj.09a</td><td>512 KB</td><td class="mono">fc0a4aac</td><td class="mono">744507a9</td></tr>
+</table>
+<h2 id="history">Release history</h2>
+<h3>rc1 (2026-10-06)</h3><ul>
+<li>First public release.</li>
+</ul>
+<h2>Related projects</h2><ul><li><a href="../vsav-restoration/">Vampire Savior</a>, the third game, restored in English the same way</li></ul>
+<h2>Notes</h2><ul class="notes">
+<li>MAME shows checksum warnings for the patched files. That’s expected; the game plays normally. HBMAME with the vamprest set definition loads it without them.</li>
+<li>Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set.</li>
+</ul>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
+    by Capcom. All game titles, characters, and artwork remain the property of their
+    respective owners. No ROMs or other copyrighted game data are hosted here.</p>
+    <p><a href="../legal.html">Legal &amp; disclaimers</a></p>
+  </div>
+</footer>
+</body>
+</html>
