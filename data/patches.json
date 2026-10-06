@@ -1344,7 +1344,7 @@
           "date": "2026-10-06",
           "items": [
             "The 4 MB builds now have all of Cammy's voices, including her special moves, dizzy and defeat. To fit, ten of them and five of the game's own sounds are compressed. rc5's 4 MB builds had only five of her voices, and some of her moves, such as Cannon Drill, played another fighter's voice.",
-            "In the English builds, Dan's ending now has his spoken “Oyaji!”, as in Japan.",
+            "In the English builds, Dan's ending now has his spoken \u201cOyaji!\u201d, as in Japan.",
             "The USA build now shows ALPHA under the round timer, as Europe's Alpha 2 Dash does. rc5 showed ZERO.",
             "Every set has new checksums, so rebuild them with the rc6 kit."
           ]
@@ -3002,6 +3002,125 @@
       ],
       "notes": [
         "MAME shows checksum warnings for the patched files. That\u2019s expected; the game plays normally. HBMAME with the vamprest set definition loads it without them.",
+        "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
+      ]
+    },
+    {
+      "slug": "nwarr-restoration",
+      "title": "Night Warriors: Darkstalkers' Revenge",
+      "subtitle": "English restoration",
+      "section": "restorations",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-10-06",
+      "game": "Vampire Hunter: Darkstalkers' Revenge (Japan 950316)",
+      "set": "vhuntj",
+      "hardware": "Capcom CPS-2",
+      "patch_noun": "restoration",
+      "patch_kind": "English restoration patch",
+      "patch_intro": "An unofficial English restoration of Vampire Hunter: Darkstalkers' Revenge (Japan 950316), presented as the USA version of Night Warriors.",
+      "summary": "The Japanese Vampire Hunter in English, presented as Night Warriors: the epilogues every export version skipped, the endings as Japan told them, and every fighter\u2019s full pool of win quotes.",
+      "description": [
+        "Night Warriors left a lot of Vampire Hunter behind. Every export version skips the epilogue that follows each ending. The endings were rewritten, with different page counts on most routes, and each fighter gets a handful of fixed win quotes where the Japanese game picks from a much larger pool.",
+        "The English Restoration brings back all 14 epilogues, rebuilds the 112 ending pages with the Japanese scenes and pacing, and restores the full pool of 323 win quotes, all translated from the Japanese.",
+        "Sasquatch\u2019s Japanese victory poses and their sounds are back, along with Morrigan\u2019s and Donovan\u2019s extra win sounds.",
+        "It keeps the Night Warriors title, the Western character names and the English operator menu with the USA settings. It runs in MAME and HBMAME and on MiSTer.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "All 14 epilogues after the endings, in English; every export version skipped them",
+        "The 112 Japanese ending pages in English, with the Japanese scenes and pacing",
+        "The full pool of 323 Japanese win quotes in English, picked as in Japan",
+        "Sasquatch\u2019s Japanese victory poses and sounds, and Morrigan\u2019s and Donovan\u2019s extra win sounds",
+        "The Night Warriors title, Western character names and the USA operator menu"
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-10-06",
+          "items": [
+            "First public release."
+          ]
+        }
+      ],
+      "feedback": true,
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/vhuntj.zip",
+        "patched_zip": "../capcom/backports/nwarr/out/restoration/vhuntj.zip"
+      },
+      "mra": {
+        "base": "data/mra/vhuntj.mra",
+        "name": "Night Warriors: Darkstalkers' Revenge (USA) [English Restoration]",
+        "setname": "nwarrru",
+        "filename": "Night Warriors Darkstalkers' Revenge (USA) [English Restoration].mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo",
+        "region": "USA"
+      },
+      "hbmame": {
+        "setname": "nwarrru",
+        "renames": {
+          "vhuntj.key": "vhuntj.key",
+          "vph.01": "vph.01",
+          "vph.02": "vph.02",
+          "vph.11m": "vph.11m",
+          "vph.12m": "vph.12m",
+          "vph.13m": "vph.13m",
+          "vph.14m": "vph.14m",
+          "vph.15m": "vph.15m",
+          "vph.16m": "vph.16m",
+          "vph.17m": "vph.17m",
+          "vph.18m": "vph.18m",
+          "vph.19m": "vph.19m",
+          "vph.20m": "vph.20m",
+          "vphj.03f": "vphj.03f",
+          "vphj.04c": "vphj.04c",
+          "vphj.05d": "vphj.05d",
+          "vphj.06c": "vphj.06c",
+          "vphj.07b": "vphj.07b",
+          "vphj.08b": "vphj.08b",
+          "vphj.09b": "vphj.09b",
+          "vphj.10b": "vphj.10b"
+        },
+        "complete": true,
+        "official": true
+      },
+      "screenshots": [
+        {
+          "single": "data/screenshots/nwarr-restoration/epilogue_morrigan.png",
+          "caption": "Morrigan's epilogue, one of the 14 that every export version skipped."
+        },
+        {
+          "single": "data/screenshots/nwarr-restoration/quote_morrigan.png",
+          "caption": "Japan's win quotes are back, in English."
+        },
+        {
+          "single": "data/screenshots/nwarr-restoration/quote_donovan.png",
+          "caption": "Every fighter draws from the full Japanese pool again, Donovan included."
+        }
+      ],
+      "related": [
+        {
+          "label": "Darkstalkers: The Night Warriors",
+          "url": "../dstlk-restoration/",
+          "note": "the first game, restored in English the same way"
+        },
+        {
+          "label": "Vampire Savior",
+          "url": "../vsav-restoration/",
+          "note": "the third game, restored in English the same way"
+        },
+        {
+          "label": "Night Warriors 2",
+          "url": "../vhunt2-english/",
+          "note": "the Japan-only follow-up, translated into English"
+        }
+      ],
+      "notes": [
+        "MAME shows checksum warnings for the patched files. That\u2019s expected; the game plays normally. HBMAME with the nwarrru set definition loads it without them.",
         "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
       ]
     }

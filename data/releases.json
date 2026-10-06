@@ -892,6 +892,70 @@
         }
       }
     },
+    "nwarr-restoration": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-10-06",
+          "files": {
+            "ips": {
+              "archive": "archive/6ab5a071dfdf1edeb66330a7a214896732a6cb2801276674bfeaf2e003163966/nwarr-restoration-rc1-ips.zip",
+              "name": "nwarr-restoration-rc1-ips.zip",
+              "sha256": "6ab5a071dfdf1edeb66330a7a214896732a6cb2801276674bfeaf2e003163966",
+              "size": 91344
+            },
+            "mra": {
+              "archive": "archive/ad1e5415ea371471c53d7624b3559476f991e33c23d8697ae18281af1d2d13b4/nwarr-restoration-rc1-mra.zip",
+              "name": "nwarr-restoration-rc1-mra.zip",
+              "sha256": "ad1e5415ea371471c53d7624b3559476f991e33c23d8697ae18281af1d2d13b4",
+              "size": 50513
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc1-candidate.3",
+            "capcom_source_commit": "a57447b8299486ac605bdcc0147dc29a4ee98995",
+            "ready_record_sha256": "5b87b9c80a8dc651e171ce333e127eb15316f00d3382cc93fb5805f1d36ad6e3",
+            "release_sha256": "b8778391546b484704723f9928be8d4401d858e19cbb088b8f4877ac55e93e2b",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-06",
+              "files": {
+                "ips": {
+                  "archive": "archive/6ab5a071dfdf1edeb66330a7a214896732a6cb2801276674bfeaf2e003163966/nwarr-restoration-rc1-ips.zip",
+                  "name": "nwarr-restoration-rc1-ips.zip",
+                  "sha256": "6ab5a071dfdf1edeb66330a7a214896732a6cb2801276674bfeaf2e003163966",
+                  "size": 91344
+                },
+                "mra": {
+                  "archive": "archive/ad1e5415ea371471c53d7624b3559476f991e33c23d8697ae18281af1d2d13b4/nwarr-restoration-rc1-mra.zip",
+                  "name": "nwarr-restoration-rc1-mra.zip",
+                  "sha256": "ad1e5415ea371471c53d7624b3559476f991e33c23d8697ae18281af1d2d13b4",
+                  "size": 50513
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc1-candidate.3",
+                "capcom_source_commit": "a57447b8299486ac605bdcc0147dc29a4ee98995",
+                "ready_record_sha256": "5b87b9c80a8dc651e171ce333e127eb15316f00d3382cc93fb5805f1d36ad6e3",
+                "release_sha256": "b8778391546b484704723f9928be8d4401d858e19cbb088b8f4877ac55e93e2b",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        }
+      }
+    },
     "sfa2-gold": {
       "current": "rc6",
       "versions": {
