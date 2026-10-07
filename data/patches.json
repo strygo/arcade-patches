@@ -2439,8 +2439,8 @@
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc2",
-      "date": "2026-09-27",
+      "version": "rc3",
+      "date": "2026-10-06",
       "game": "Marvel Super Heroes vs. Street Fighter (Japan 970707)",
       "set": "mshvsfj",
       "hardware": "Capcom CPS-2",
@@ -2452,7 +2452,7 @@
         "Marvel Super Heroes vs. Street Fighter kept a lot from you. Outside Japan there was no Norimaro. Nowhere could you play as Cyber-Akuma or Apocalypse, or put the same fighter on a team twice. The console ports later added extra colors and more speeds, but only at home.",
         "EX gives the arcade game all of it. Norimaro is on the select screen in both builds, with his own ending. Hold Start on any fighter for two seconds and their hidden version appears, no codes needed, though the old codes still work. Any two fighters make a team. Cyber-Akuma and Apocalypse are playable too: hold Start on Akuma for one, on Norimaro for the other. Every fighter gets the Saturn version's two extra colors, on the HP and HK buttons, and the service menu goes from three speeds to eight.",
         "The fighting itself is untouched: no changes to moves, damage, hitboxes or the computer. The USA build also gets a new translation, straight from the Japanese: sixteen win quotes per fighter instead of eight, and every ending retold. It comes in two builds, USA and Japan, both with Free Play, and runs in MAME, HBMAME and on MiSTer.",
-        "This is a release candidate. It has been tested on MiSTer."
+        "This is a release candidate."
       ],
       "changes": [
         "Norimaro in both builds, with his own ending",
@@ -2462,7 +2462,7 @@
         "Every ending in both languages, including Mech-Zangief's, Shadow's and Dark Sakura's",
         "Apocalypse and Cyber-Akuma have character-specific ending artwork, layered over the animated arcade burst",
         "A new English translation from the Japanese: sixteen win quotes per fighter instead of eight, and all seventeen standard endings",
-        "U.S. Agent, Mephisto and Shadow get their names in the fight HUD, which the boards leave blank",
+        "U.S. Agent, Mephisto and Shadow get their names in the fight HUD, which the original game leaves blank",
         "M. Bison's Hyper Combo is Knee Press Nightmare in every region, the name Capcom has used since Alpha 3",
         "Two extra colors per fighter from the Saturn version: pick your fighter with HP or HK; the selected color appears in select, versus and fight HUD portraits",
         "Versus names are centered and spaced, with two lines for long hidden names; selected names stay visible above the fighters",
@@ -2471,6 +2471,14 @@
         "Gameplay untouched"
       ],
       "release_history": [
+        {
+          "version": "rc3",
+          "date": "2026-10-06",
+          "items": [
+            "The colors you pick now stay with your team for the whole arcade run instead of going back to the first color after the first match.",
+            "Both kits have new checksums, so rebuild them with the rc3 downloads."
+          ]
+        },
         {
           "version": "rc2",
           "date": "2026-09-27",
@@ -2491,9 +2499,9 @@
         }
       ],
       "comparison": {
-        "heading": "Compared with the boards",
+        "heading": "Compared with the original",
         "intro": [
-          "How EX compares with the Japanese and US boards."
+          "How EX compares with the original Japanese and US releases."
         ],
         "columns": [
           "",
