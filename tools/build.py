@@ -811,6 +811,8 @@ def render_builds_page(site: dict, patch: dict, builds: list, bundle: dict | Non
         parts.append("<h2>What's included</h2><ul>")
         parts.extend(f"<li>{esc(c)}</li>" for c in patch["changes"])
         parts.append("</ul>")
+    if patch.get("comparison"):
+        parts.append(render_comparison(patch))
     if shots:
         parts.append(render_shots(shots, heading=patch.get("screenshots_heading", "Screenshots")))
     parts.append(render_reconstruction(patch, builds, bundle))

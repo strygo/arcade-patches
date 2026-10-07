@@ -1400,7 +1400,87 @@
             "First public release."
           ]
         }
-      ]
+      ],
+      "comparison": {
+        "heading": "Compared with Zero 2 Alpha and EX",
+        "intro": [
+          "How Gold compares with the arcade Zero 2 Alpha it builds on and with Alpha 2 EX."
+        ],
+        "columns": [
+          "",
+          "Zero 2 Alpha (arcade)",
+          "Alpha 2 Gold",
+          "Alpha 2 EX"
+        ],
+        "rows": [
+          [
+            "Cammy",
+            "No",
+            "Two Start presses on M. Bison",
+            "Her own select cell"
+          ],
+          [
+            "Cammy as a CPU opponent in Arcade",
+            "\u2014",
+            "No",
+            "Yes"
+          ],
+          [
+            "EX Akuma and EX Cammy",
+            "No",
+            "No",
+            "Yes"
+          ],
+          [
+            "Shin Akuma",
+            "Boss only",
+            "Five Start presses on Akuma",
+            "Two Start presses on Akuma"
+          ],
+          [
+            "Start presses for alternate forms",
+            "Up to five",
+            "Up to five",
+            "One or two"
+          ],
+          [
+            "Survival, Dramatic Battle, Akuma mode",
+            "Title-screen button codes",
+            "Title-screen button codes",
+            "Title menu in CONSOLE mode; codes in ARCADE mode"
+          ],
+          [
+            "Options page",
+            "No",
+            "No",
+            "OPTION MODE from the title menu"
+          ],
+          [
+            "Game speeds",
+            "3",
+            "3",
+            "8"
+          ],
+          [
+            "Time limit",
+            "99",
+            "99",
+            "25, 50, 75, 99 or infinity"
+          ],
+          [
+            "English story and endings",
+            "Some pages cut (Asia)",
+            "All, translated from the Japanese",
+            "All, translated from the Japanese"
+          ],
+          [
+            "Builds",
+            "Japan, Asia",
+            "USA, Europe, Japan, Asia",
+            "USA, Japan"
+          ]
+        ]
+      }
     },
     {
       "slug": "sfz2al-restoration",
@@ -3228,7 +3308,87 @@
             "First public release."
           ]
         }
-      ]
+      ],
+      "comparison": {
+        "heading": "Compared with Gold",
+        "intro": [
+          "How EX compares with Alpha 2 Gold and with the arcade Zero 2 Alpha both build on."
+        ],
+        "columns": [
+          "",
+          "Zero 2 Alpha (arcade)",
+          "Alpha 2 Gold",
+          "Alpha 2 EX"
+        ],
+        "rows": [
+          [
+            "Cammy",
+            "No",
+            "Two Start presses on M. Bison",
+            "Her own select cell"
+          ],
+          [
+            "Cammy as a CPU opponent in Arcade",
+            "\u2014",
+            "No",
+            "Yes"
+          ],
+          [
+            "EX Akuma and EX Cammy",
+            "No",
+            "No",
+            "Yes"
+          ],
+          [
+            "Shin Akuma",
+            "Boss only",
+            "Five Start presses on Akuma",
+            "Two Start presses on Akuma"
+          ],
+          [
+            "Start presses for alternate forms",
+            "Up to five",
+            "Up to five",
+            "One or two"
+          ],
+          [
+            "Survival, Dramatic Battle, Akuma mode",
+            "Title-screen button codes",
+            "Title-screen button codes",
+            "Title menu in CONSOLE mode; codes in ARCADE mode"
+          ],
+          [
+            "Options page",
+            "No",
+            "No",
+            "OPTION MODE from the title menu"
+          ],
+          [
+            "Game speeds",
+            "3",
+            "3",
+            "8"
+          ],
+          [
+            "Time limit",
+            "99",
+            "99",
+            "25, 50, 75, 99 or infinity"
+          ],
+          [
+            "English story and endings",
+            "Some pages cut (Asia)",
+            "All, translated from the Japanese",
+            "All, translated from the Japanese"
+          ],
+          [
+            "Builds",
+            "Japan, Asia",
+            "USA, Europe, Japan, Asia",
+            "USA, Japan"
+          ]
+        ]
+      }
     }
   ]
 }
