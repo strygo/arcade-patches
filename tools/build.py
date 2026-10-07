@@ -587,15 +587,21 @@ program ROM, so on a computer, play it in HBMAME.</p>""")
 
     hb_sets = [o[2] for o in outputs if o[2]]
     if hb_sets:
-        hb = patch.get("hbmame") or next(v["hbmame"] for v in variants if v.get("hbmame"))
-        sets = ", ".join(f"<code>{esc(s)}</code>" for s in hb_sets)
+        # Upstream status changes after a kit is published, so the page's own data
+        # (patches.json) wins over the variants recorded in the published bundle.
+        page_variants = (patch.get("artifact") or {}).get("variants") or []
+        hb = (patch.get("hbmame") or next((v["hbmame"] for v in page_variants if v.get("hbmame")), None)
+              or next(v["hbmame"] for v in variants if v.get("hbmame")))
+        codes = [f"<code>{esc(s)}</code>" for s in hb_sets]
+        sets = ", ".join(codes[:-1]) + " and " + codes[-1] if len(codes) > 1 else codes[0]
+        link = '<a href="https://github.com/Robbbert/hbmame">HBMAME</a>'
+        lead, them = ((f"This {noun}'s builds are official {link} sets, {sets}", "them") if len(codes) > 1
+                      else (f"This {noun} is an official {link} set, {sets}", "it"))
         if hb.get("pr_url"):
-            status = (f"This {noun} is an official <a href=\"https://github.com/Robbbert/hbmame\">HBMAME</a> "
-                      f"set, {sets} (<a href=\"{esc(hb['pr_url'])}\">merged upstream</a>), so full HBMAME "
-                      f"collections may already carry it.")
+            status = (f"{lead} (<a href=\"{esc(hb['pr_url'])}\">merged upstream</a>), so full HBMAME "
+                      f"collections may already carry {them}.")
         elif hb.get("official"):
-            status = (f"This {noun} is an official <a href=\"https://github.com/Robbbert/hbmame\">HBMAME</a> "
-                      f"set, {sets}, so full HBMAME collections may already carry it.")
+            status = f"{lead}, so full HBMAME collections may already carry {them}."
         else:
             status = (f"The <a href=\"https://github.com/Robbbert/hbmame\">HBMAME</a> set definition "
                       f"({sets}) is generated with the {noun}; an upstream submission is pending, so for "
@@ -795,6 +801,13 @@ carries the same audio at full quality, for HBMAME and MiSTer (Jotego's <code>jt
 <tr><th>Region</th><th>Title</th>{heads}</tr>
 {rows}
 </table>""")
+    upstream = (patch.get("hbmame") or {}).get("pr_url")
+    hb_sets = [b["hbmame_set"] for b in builds if b.get("hbmame_set")]
+    if upstream and hb_sets:
+        codes = [f"<code>{esc(s)}</code>" for s in hb_sets]
+        sets = ", ".join(codes[:-1]) + " and " + codes[-1] if len(codes) > 1 else codes[0]
+        parts.append(f"""<p>The HBMAME builds are official <a href="https://github.com/Robbbert/hbmame">HBMAME</a>
+sets, {sets} (<a href="{esc(upstream)}">merged upstream</a>), so full HBMAME collections may already carry them.</p>""")
     if bundle and bundle.get("kind") == "kit":
         parts.append(render_kit_download(patch, bundle))
     elif bundle:

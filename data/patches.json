@@ -1304,6 +1304,9 @@
           "title_screen": "data/screenshots/sfa2-gold/title_asia_sfz2da.png"
         }
       ],
+      "hbmame": {
+        "pr_url": "https://github.com/Robbbert/hbmame/pull/56"
+      },
       "screenshots_heading": "New to the roster",
       "screenshots": [
         {
@@ -1603,6 +1606,7 @@
       },
       "hbmame": {
         "setname": "sfz2alr",
+        "pr_url": "https://github.com/Robbbert/hbmame/pull/54",
         "renames": {
           "szaa.03": "szaa.03",
           "szaa.04": "szaa.04",
@@ -1889,6 +1893,7 @@
       },
       "hbmame": {
         "setname": "ssf2tgmc",
+        "pr_url": "https://github.com/Robbbert/hbmame/pull/54",
         "renames": {
           "sfxj.03d": "sfxj.03d",
           "sfxj.04a": "sfxj.04a",
@@ -2101,6 +2106,7 @@
             },
             "hbmame": {
               "setname": "ssf2tuc",
+              "pr_url": "https://github.com/Robbbert/hbmame/pull/56",
               "renames": {
                 "sfx.13m": "sfx.13m",
                 "sfx.14m": "sfx.14m",
@@ -2136,6 +2142,7 @@
             },
             "hbmame": {
               "setname": "ssf2xuc",
+              "pr_url": "https://github.com/Robbbert/hbmame/pull/56",
               "renames": {
                 "sfx.13m": "sfx.13m",
                 "sfx.14m": "sfx.14m",
@@ -2441,6 +2448,7 @@
             },
             "hbmame": {
               "setname": "mshvsfru",
+              "pr_url": "https://github.com/Robbbert/hbmame/pull/56",
               "renames": {
                 "mvsj.03i": "mvsj.03i",
                 "mvsj.04i": "mvsj.04i",
@@ -2462,6 +2470,7 @@
             },
             "hbmame": {
               "setname": "mshvsfrj",
+              "pr_url": "https://github.com/Robbbert/hbmame/pull/56",
               "renames": {
                 "mvsj.03i": "mvsj.03i",
                 "mvsj.04i": "mvsj.04i",
@@ -2690,6 +2699,7 @@
             },
             "hbmame": {
               "setname": "mshvsfex",
+              "pr_url": "https://github.com/Robbbert/hbmame/pull/56",
               "renames": {
                 "mvsj.03i": "mvsj.03i",
                 "mvsj.04i": "mvsj.04i",
@@ -2717,6 +2727,7 @@
             },
             "hbmame": {
               "setname": "mshvsfej",
+              "pr_url": "https://github.com/Robbbert/hbmame/pull/56",
               "renames": {
                 "mvsj.03i": "mvsj.03i",
                 "mvsj.04i": "mvsj.04i",
@@ -2920,6 +2931,7 @@
       },
       "hbmame": {
         "setname": "vsavru",
+        "pr_url": "https://github.com/Robbbert/hbmame/pull/56",
         "renames": {
           "vm3.13m": "vm3.13m",
           "vm3.15m": "vm3.15m",
@@ -3046,6 +3058,7 @@
       },
       "hbmame": {
         "setname": "vamprest",
+        "pr_url": "https://github.com/Robbbert/hbmame/pull/56",
         "renames": {
           "vam.01": "vam.01",
           "vam.02": "vam.02",
@@ -3156,6 +3169,7 @@
       },
       "hbmame": {
         "setname": "nwarrru",
+        "pr_url": "https://github.com/Robbbert/hbmame/pull/56",
         "renames": {
           "vhuntj.key": "vhuntj.key",
           "vph.01": "vph.01",
@@ -3266,6 +3280,9 @@
           "title_screen": "data/screenshots/sfa2-ex/title_jp.png"
         }
       ],
+      "hbmame": {
+        "pr_url": "https://github.com/Robbbert/hbmame/pull/56"
+      },
       "screenshots": [
         {
           "single": "data/screenshots/sfa2-ex/select.png",
