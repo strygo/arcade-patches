@@ -65,6 +65,13 @@ SETS = {
 # other region in its own subfolder.
 MRA_ROOT = ("_Arcade", "_Arcade Patches", "_Restorations")
 MRA_DIR = {"us": "", "eu": "_Europe", "asia": "_Asia", "jp": "_Japan"}
+# Another edition rebuilt the same way (Street Fighter Alpha 2 EX) ships a
+# kit.json naming its own sets, MRAs and folder; Gold's kit has none.
+TITLE, DESCRIPTION = "Gold", __doc__
+if (HERE / "kit.json").is_file():
+    _KIT = json.loads((HERE / "kit.json").read_text())
+    TITLE, SETS, MRA_DIR = _KIT["title"], _KIT["sets"], _KIT["mra_dir"]
+    MRA_ROOT, DESCRIPTION = tuple(_KIT["mra_root"]), _KIT["description"]
 
 
 def fail(msg):
@@ -106,7 +113,7 @@ def write_set(members, want, out_path):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__,
+    ap = argparse.ArgumentParser(description=DESCRIPTION,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--iso", help="your PS2 anthology disc image")
     ap.add_argument("--romset", help="your arcade ZIP, 7z, or ROM folder")
@@ -115,7 +122,7 @@ def main():
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--check-runtime", action="store_true")
     ap.add_argument("--platform", choices=("all", "mame", "hbmame", "mister"), default="all")
-    ap.add_argument("--region", required=True, choices=("jp", "us", "eu", "asia"))
+    ap.add_argument("--region", required=True, choices=tuple(SETS))
     ap.add_argument("--out-dir", help="build every platform into this folder")
     ap.add_argument("--size", choices=("4mb", "8mb"), help="single-file mode: capacity")
     ap.add_argument("--out", help="single-file mode: output zip path")
@@ -136,10 +143,10 @@ def main():
     if args.check_runtime:
         resolver.devices(include=True)
     if args.check or args.check_runtime:
-        print("Gold stock ROM inputs verified")
+        print(f"{TITLE} stock ROM inputs verified")
         return
     if not args.iso:
-        fail("--iso is required to reconstruct Gold")
+        fail(f"--iso is required to reconstruct {TITLE}")
     if args.out and args.romset and Path(args.out).resolve() == Path(args.romset).resolve():
         fail("output must differ from source archive")
     gaps = assemble.missing_inputs(arc)

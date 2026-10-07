@@ -3132,6 +3132,103 @@
         "MAME shows checksum warnings for the patched files. That\u2019s expected; the game plays normally. HBMAME with the nwarrru set definition loads it without them.",
         "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
       ]
+    },
+    {
+      "slug": "sfa2-ex",
+      "title": "Street Fighter Alpha 2 EX",
+      "subtitle": "Enhanced version",
+      "section": "enhanced",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-10-06",
+      "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
+      "hardware": "Capcom CPS-2",
+      "thumbnail_build": "us",
+      "summary": "Our Alpha 2 Gold backport with a console-style mode menu, Cammy and Random on the select screen, EX Akuma and EX Cammy, and more speed and time settings. In USA and Japan builds.",
+      "description": [
+        "Street Fighter Alpha 2 EX builds on our Street Fighter Alpha 2 Gold backport. Every Gold fighter plays exactly as in Gold. EX adds the menus, modes and forms the arcade game kept behind codes or never had, and every secret starts unlocked.",
+        "In CONSOLE game mode the game plays free, and START at the title opens a mode menu: Arcade, Versus, Survival, Dramatic Battle, Akuma and Options. Versus matches go straight back to the select screen, and holding START for three seconds on any select screen returns to the menu. Cammy and a Random cell sit on the select screen, Cammy turns up as a CPU opponent in the other fighters' Arcade runs, and alternate forms take a START press or two instead of five.",
+        "Two EX forms join the roster, each one START press away on its fighter's cell: EX Akuma and EX Cammy. Both follow Capcom's own EX rules, with classic moves and no Super Combos.",
+        "OPTIONS opens an OPTION MODE page with difficulty, time limit, rounds, damage, turbo and sound. The operator menu adds GAME MODE, eight GAME SPEED levels and a TIME LIMIT of 25, 50, 75, 99 or infinity, and the title has a new EX mark. The USA build is in English; the Japan build, Street Fighter Zero 2 EX, keeps the Japanese.",
+        "The MiSTer MRAs start in CONSOLE mode. MAME and HBMAME start in ARCADE mode, which keeps Gold's arcade title; set GAME MODE to CONSOLE on the operator menu's SYSTEM page for the mode menu. It runs in MAME and HBMAME and on MiSTer.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "In CONSOLE game mode, free play and a title-screen mode menu: Arcade, Versus, Survival, Dramatic Battle, Akuma and Options",
+        "Cammy and Random cells on the select screen, and Cammy as a CPU opponent in Arcade",
+        "EX Akuma (EX Gouki in Japan) and EX Cammy, under Capcom's EX rules with no Super Combos",
+        "Alternate forms with one or two START presses, and every secret unlocked from the start",
+        "Versus matches return straight to the select screen; holding START for three seconds on a select screen returns to the menu",
+        "An OPTION MODE page, and GAME MODE (CONSOLE or ARCADE), eight GAME SPEED levels and a TIME LIMIT with infinity in the operator menu",
+        "A new title screen with an EX mark",
+        "USA (Alpha 2 EX, English) and Japan (Zero 2 EX, Japanese) builds, each in 4 MB and 8 MB sizes"
+      ],
+      "builds": [
+        {
+          "key": "us",
+          "region": "USA",
+          "title": "Street Fighter Alpha 2 EX",
+          "hbmame_set": "sfa2ex",
+          "mame_set": "sfz2al",
+          "title_screen": "data/screenshots/sfa2-ex/title_us.png"
+        },
+        {
+          "key": "jp",
+          "region": "Japan",
+          "title": "Street Fighter Zero 2 EX",
+          "hbmame_set": "sfz2ex",
+          "mame_set": "sfz2alj",
+          "title_screen": "data/screenshots/sfa2-ex/title_jp.png"
+        }
+      ],
+      "screenshots": [
+        {
+          "single": "data/screenshots/sfa2-ex/select.png",
+          "caption": "Cammy and a Random cell take the bottom corners of the select screen."
+        },
+        {
+          "single": "data/screenshots/sfa2-ex/ex_akuma_select.png",
+          "caption": "EX Akuma: one START press on Akuma's cell."
+        },
+        {
+          "single": "data/screenshots/sfa2-ex/ex_cammy_fight.png",
+          "caption": "EX Cammy, one START press on Cammy's cell, against Sagat."
+        },
+        {
+          "single": "data/screenshots/sfa2-ex/option_mode.png",
+          "caption": "OPTIONS on the title menu opens OPTION MODE."
+        }
+      ],
+      "reconstruction": {
+        "requires": [
+          "your own PlayStation 2 anthology disc image: Street Fighter Alpha Anthology for the USA set, or Street Fighter Zero \u2014 Fighter's Generation for the Japan set",
+          "your own arcade Street Fighter Zero 2 Alpha romset: sfz2al for the USA set, sfz2alj for the Japan set"
+        ],
+        "kit_dir": "tools/sfa2ex_builder",
+        "kit_command": "python3 apply.py --iso \"Street Fighter Alpha Anthology.iso\" \\\n                 --romset sfz2al.zip --region us --out-dir out",
+        "how": "A small tool reads Alpha 2 Gold from your PlayStation 2 disc image, combines it with your arcade Zero 2 Alpha romset, adds EX, and writes out the finished CPS-2 build."
+      },
+      "notes": [
+        "The 8 MB builds hold more QSound audio than an original CPS-2 board supports, so they run only on HBMAME and MiSTer, not real hardware.",
+        "The 4 MB builds use the same arcade set names as Street Fighter Alpha 2 Gold's 4 MB builds (sfz2al, sfz2alj), so keep one or the other in your MAME ROM path.",
+        "This is a fan edition, unaffiliated with Capcom. The sets are built from discs and roms you already own, and the kit ships no code or data from the anthology or the arcade game beyond EX's mirrored and recolored versions of some of the game's own art. It also carries a few small pieces of other Capcom games: about 4 KB of Cammy's theme score from X-Men vs. Street Fighter (1996), for her stage music; the infinity and star symbols from Street Fighter Zero 2 Dash for the Sega Saturn; and a few bytes of projectile data from Super Street Fighter II Turbo."
+      ],
+      "related": [
+        {
+          "label": "Street Fighter Alpha 2 Gold",
+          "url": "../sfa2-gold/",
+          "note": "the arcade backport EX builds on"
+        }
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-10-06",
+          "items": [
+            "First public release."
+          ]
+        }
+      ]
     }
   ]
 }

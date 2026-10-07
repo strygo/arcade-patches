@@ -714,7 +714,8 @@ def render_builds_gallery(builds: list) -> str:
             f'{esc(b["region"])} · <code>{esc(b["hbmame_set"])}</code></figcaption>'
             f'</figure>'
         )
-    return f'<h2>The four builds</h2>\n<div class="build-gallery">{"".join(cells)}</div>'
+    count = {2: "two", 3: "three", 4: "four"}.get(len(cells), str(len(cells)))
+    return f'<h2>The {count} builds</h2>\n<div class="build-gallery">{"".join(cells)}</div>'
 
 
 def render_kit_download(patch: dict, kit: dict) -> str:
@@ -762,10 +763,11 @@ def render_reconstruction(patch: dict, builds: list, bundle: dict | None) -> str
 <p>Each build is put together on your own machine from files you already own.
 You need:</p>"""]
     parts.append(f"<ul>{reqs}</ul>")
-    parts.append("""<p>A small tool reads the revised game from your PlayStation 2 disc image,
-combines it with your arcade Zero 2 Alpha romset, and writes out the finished
-CPS-2 build.</p>
-<p>Two sizes of each build are produced. A <strong>4&nbsp;MB</strong> set stays within
+    how = rec.get("how") or ("A small tool reads the revised game from your PlayStation 2 disc image, "
+                             "combines it with your arcade Zero 2 Alpha romset, and writes out the finished "
+                             "CPS-2 build.")
+    parts.append(f"<p>{esc(how)}</p>")
+    parts.append("""<p>Two sizes of each build are produced. A <strong>4&nbsp;MB</strong> set stays within
 original CPS-2 limits and runs on real hardware and stock MAME. It carries all of Cammy's
 voices and sound effects, with some downsampled to fit. An <strong>8&nbsp;MB</strong> set
 carries the same audio at full quality, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>""")

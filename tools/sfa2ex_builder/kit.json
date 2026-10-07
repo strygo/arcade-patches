@@ -1,0 +1,25 @@
+{
+ "title": "Alpha 2 EX",
+ "description": "Rebuild Street Fighter Alpha 2 EX / Zero 2 EX from your own PlayStation 2 anthology disc image and arcade Street Fighter Zero 2 Alpha romset. See README.txt for usage.",
+ "sets": {
+  "us": {
+   "4mb": "sfz2al",
+   "8mb": "sfa2ex",
+   "mra": "Street Fighter Alpha 2 EX (USA)"
+  },
+  "jp": {
+   "4mb": "sfz2alj",
+   "8mb": "sfz2ex",
+   "mra": "Street Fighter Zero 2 EX (Japan)"
+  }
+ },
+ "mra_root": [
+  "_Arcade",
+  "_Arcade Patches",
+  "_Enhanced Versions"
+ ],
+ "mra_dir": {
+  "us": "",
+  "jp": "_Japan"
+ }
+}
