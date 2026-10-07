@@ -4,7 +4,7 @@
     "tagline": "Translations, restorations and arranged soundtracks for classic arcade games.",
     "intro": [
       "A lot of great arcade games never made it out of Japan, and plenty of others had their best material added later, on the home ports. Re-recorded soundtracks, cutscenes the arcade version never had, characters that turned up years afterward. The patches here put that work back onto the arcade hardware it belongs on.",
-      "Each one runs against your own copy of the game, on a real board, on a MiSTer, or in MAME. No game data is hosted here, and nothing goes out until it has been tested on the real thing."
+      "Each one runs against your own copy of the game, on original hardware, on a MiSTer, or in MAME. No game data is hosted here."
     ],
     "sections": [
       {
@@ -29,7 +29,7 @@
       }
     ],
     "repo_url": null,
-    "site_url": "https://strygo.github.io/arcade-patches/",
+    "site_url": "https://arcadepatches.com/",
     "contact_note": "For questions, corrections, or takedown requests, reach the author at https://x.com/strygo.",
     "author": "Steve Gordon",
     "author_url": "https://x.com/strygo"
@@ -44,11 +44,11 @@
       "version": "1.5",
       "date": "2026-09-28",
       "hardware": "MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)",
-      "summary": "When Capcom brought its arcade games home on CD, it sent the music back to the studio and re-recorded it. Those versions never made it back to the arcade. CPS+ puts them there. Pick a game on your MiSTer and the arranged soundtrack is just playing, while every punch, voice and jingle still comes from the arcade board itself.",
+      "summary": "When Capcom brought its arcade games home on CD, it sent the music back to the studio and re-recorded it. Those versions never made it back to the arcade. CPS+ puts them there. Pick a game on your MiSTer and the arranged soundtrack is just playing, while every punch, voice and jingle still comes from the arcade game itself.",
       "featured_stats": "31 audio packs \u00b7 163 MRAs \u00b7 3 cores \u00b7 every pack built from sources you own",
       "description": [
         "From Final Fight CD onward, Capcom kept sending its arcade soundtracks back to the studio. Every CD-based home port got a full re-recording of the music, the 'arrange' versions, produced by the original composers' teams. For thirty years those recordings stayed locked to the home versions. CPS+ puts them where they always belonged, under the arcade games themselves.",
-        "On a MiSTer, the real CPS-1 or CPS-2 hardware logic runs the game while the CD-era soundtrack plays the music, started, looped and faded by the game itself, exactly the way Capcom's own console releases timed it. Hit sounds, voices and the announcer stay pure arcade. It sounds like the arcade board grew a CD drive.",
+        "On a MiSTer, the real CPS-1 or CPS-2 hardware logic runs the game while the CD-era soundtrack plays the music, started, looped and faded by the game itself, exactly the way Capcom's own console releases timed it. Hit sounds, voices and the announcer stay pure arcade. It sounds like the arcade machine grew a CD drive.",
         "Version 1.5 gives Super Street Fighter II, Super Street Fighter II Turbo and Hyper Street Fighter II a ninth soundtrack: the complete remixed score of Ultra Street Fighter II: The Final Challengers on Nintendo Switch. It also puts the MS-DOS soundtracks' versus screen and boss music right."
       ],
       "how_it_works": [
@@ -141,7 +141,7 @@
       ],
       "notes": [
         "The arranged recordings remain \u00a9 Capcom and are never distributed here. Every pack is built from your own discs, disks, albums and ROMs.",
-        "Sound effects, voices and the announcer always play live through the original arcade audio path; packs substitute music only, and a few cues deliberately pass through to the arcade board's own music."
+        "Sound effects, voices and the announcer always play live through the original arcade audio path; packs substitute music only, and a few cues deliberately pass through to the arcade game's own music."
       ],
       "kit": {
         "label": "CPS+ MiSTer kit: cores, MRAs and the pack builder"
@@ -318,7 +318,7 @@
           ]
         },
         {
-          "q": "Do the packs work in MAME or on a real arcade board?",
+          "q": "Do the packs work in MAME or on original arcade hardware?",
           "a": [
             "No. CPS+ is a MiSTer feature: the streaming player lives in the FPGA cores and the pack loads into the MiSTer's DDR memory. Everywhere else the games just play their stock music.",
             "The companion projects do cover other targets: SFA2 Gold, Final Fight EX, Grand Master Challenge and Super Street Fighter II EX all ship HBMAME sets. See their pages, linked below."
@@ -350,7 +350,7 @@
         {
           "q": "I built the 1.1 packs. Do I need to rebuild them for 1.2?",
           "a": [
-            "Six packs changed. The three Final Fight soundtrack packs (SNES, X68000 FM and X68000 MIDI) now start their opening where the arcade's own song starts, in both regions, and leave the phone ring to the board. The three Super Street Fighter II packs (Arrange, Turbo Arrange and X68000 MIDI) now let the QSound logo jingle play from the arcade board. Ten SSF2-family MRAs also changed, carrying each region's factory EEPROM defaults.",
+            "Six packs changed. The three Final Fight soundtrack packs (SNES, X68000 FM and X68000 MIDI) now start their opening where the arcade's own song starts, in both regions, and leave the phone ring to the arcade game. The three Super Street Fighter II packs (Arrange, Turbo Arrange and X68000 MIDI) now let the QSound logo jingle play from the arcade game. Ten SSF2-family MRAs also changed, carrying each region's factory EEPROM defaults.",
             "Drop the 1.2 kit over your old one, add the new sources to discs.toml, and run make_packs.py again. Every pack it builds is checked against the published hashes, so the six changed ones come out corrected and the rest come out identical, and out/mister/ picks up the new MRAs. The other 17 packs and the three cores are unchanged, hash for hash."
           ]
         }
@@ -708,7 +708,7 @@
             "New: Every Street Fighter II family game now has every soundtrack. Super Street Fighter II, Super Street Fighter II Turbo (with Super Street Fighter II X, Grand Master Challenge and EX) and Hyper Street Fighter II each get eight: the Anniversary Edition arrange, the CPS-1 soundtrack, HD Remix, the X68000 MIDI score and the four new MS-DOS soundtracks.",
             "New: the four soundtracks of the 1995 MS-DOS Super Street Fighter II Turbo, built from your copy of the game: FM, Roland Sound Canvas, Roland MT-32 and the CD's own audio. The kit's MSDOS.md explains what each needs.",
             "New: Captain Commando with its PlayStation soundtrack, USA and Japan, from the Japanese PlayStation disc.",
-            "Improved: The family's games share one pack per soundtrack, so the card holds one Anniversary Edition arrange instead of three, about 330 MB less. Super Street Fighter II and Turbo now fade the music out at the end of a match, as the board does, and the CPS-1 soundtrack plays at the board's own level instead of about 5 dB loud.",
+            "Improved: The family's games share one pack per soundtrack, so the card holds one Anniversary Edition arrange instead of three, about 330 MB less. Super Street Fighter II and Turbo now fade the music out at the end of a match, as the arcade game does, and the CPS-1 soundtrack plays at the arcade game's own level instead of about 5 dB loud.",
             "Fix: The X68000 MIDI soundtrack's character select, bonus stage and four endings no longer cut out partway; they loop as the X68000 game does. It now also plays Turbo's character select and opening.",
             "Fix: The Final Fight and Magic Sword Double Impact packs build with every ffmpeg. Some ffmpeg builds dropped a few samples from the album's MP3s, so the build stopped or failed its hash check. The packs themselves are unchanged."
           ]
@@ -717,7 +717,7 @@
           "version": "1.3b",
           "date": "2026-09-19",
           "items": [
-            "A second player joining at the character select no longer kills the music. The board borrows the music channels for the \u201cHere comes a new challenger\u201d stinger and hands them back; the packs read that as a new song, so the arranged track stopped and nothing restarted it. Affects the Street Fighter II family: Super Street Fighter II, Turbo, Hyper, and the X68000 and HD Remix soundtracks. The board's own stinger is heard under the arranged music, and HD Remix's arranged stinger is no longer in the pack.",
+            "A second player joining at the character select no longer kills the music. The game borrows the music channels for the \u201cHere comes a new challenger\u201d stinger and hands them back; the packs read that as a new song, so the arranged track stopped and nothing restarted it. Affects the Street Fighter II family: Super Street Fighter II, Turbo, Hyper, and the X68000 and HD Remix soundtracks. The game's own stinger is heard under the arranged music, and HD Remix's arranged stinger is no longer in the pack.",
             "Fixes the pack builder: building any of the three album-sourced packs (Final Fight and Magic Sword Double Impact, Super Turbo HD Remix) stopped with a KeyError at the last step. The packs themselves are unchanged \u2014 each still builds to the same bytes as before.",
             "The kit's README now states the version it was built as."
           ]
@@ -727,7 +727,7 @@
           "date": "2026-09-17",
           "items": [
             "Super Street Fighter II Turbo: Grand Master Challenge, with the Anniversary Edition arrangement or the HD Remix soundtrack, loading the restoration's HBMAME set.",
-            "Super Street Fighter II EX, USA and Japan, with the same two soundtracks. The bonus stages keep the board's own music.",
+            "Super Street Fighter II EX, USA and Japan, with the same two soundtracks. The bonus stages keep the game's own music.",
             "Final Fight (Arrange + CD Cutscenes) is now Final Fight EX (Arrange), and loads the Final Fight EX rc2 sets.",
             "The Street Fighter Alpha 2 Gold MRAs load the rc3 sets.",
             "Builds on Windows: paths pasted straight into discs.toml work, the X68000 tools build with MinGW or Visual Studio, .zip and .7z sources both work, and the Strider pack records and verifies with MAME's official Windows build.",
@@ -743,7 +743,7 @@
             "Final Fight and Magic Sword with the remixed soundtracks from Final Fight: Double Impact (Simon Viklund; Melssen and Thunberg), built from Capcom's free 2010 soundtrack download. Final Fight's is one pack for both regions.",
             "Super Street Fighter II and Super Street Fighter II Turbo with the OC ReMix soundtrack from Super Street Fighter II Turbo HD Remix, built from OC ReMix's official FLAC release.",
             "Strider with the Sound Remix performances from its PlayStation port, recorded from the game's own sound test with MAME on your machine.",
-            "Fixes: the three Final Fight soundtrack packs (SNES, X68000 FM and X68000 MIDI) now start their opening where the arcade's own song starts, in both regions, and leave the phone to the board; the Super Street Fighter II packs let the QSound logo jingle play from the arcade board; the SSF2-family MRAs carry each region's factory EEPROM defaults.",
+            "Fixes: the three Final Fight soundtrack packs (SNES, X68000 FM and X68000 MIDI) now start their opening where the arcade's own song starts, in both regions, and leave the phone ring to the arcade game; the Super Street Fighter II packs let the QSound logo jingle play from the arcade game; the SSF2-family MRAs carry each region's factory EEPROM defaults.",
             "Twelve new MRAs (74 in all) and four new packs (27 in all). Six existing packs changed (see the FAQ); the other 17 packs, their MRAs and the three cores are unchanged."
           ]
         },
@@ -1202,7 +1202,7 @@
           "after": "data/screenshots/sfz3ugd/title_usa_alpha3.png",
           "before_label": "Japan region",
           "after_label": "USA region",
-          "caption": "The same patched disc on two BIOS regions. The game's own region-dependent title art shows Street Fighter Zero 3 on a Japanese board and Street Fighter Alpha 3 on a USA board. Note the U.S. copyright line under the American title."
+          "caption": "The same patched disc on two BIOS regions. The game's own region-dependent title art shows Street Fighter Zero 3 on a Japanese machine and Street Fighter Alpha 3 on a USA machine. Note the U.S. copyright line under the American title."
         },
         {
           "before": "data/screenshots/sfz3ugd/usa_bios_stock_refused.png",
@@ -1331,7 +1331,7 @@
         "kit_command": "python3 apply.py --iso \"Street Fighter Alpha Anthology.iso\" \\\n                 --romset sfz2al.zip --region us --out-dir out"
       },
       "notes": [
-        "The 8 MB builds hold more QSound audio than an original CPS-2 board supports, so they run only on HBMAME and MiSTer, not real hardware.",
+        "The 8 MB builds hold more QSound audio than the original CPS-2 hardware supports, so they run only on HBMAME and MiSTer.",
         "This is a fan reconstruction, unaffiliated with Capcom. The sets are built from discs and roms you already own, and the kit ships no code or data from the anthology or the arcade game, with one exception: Cammy's stage music uses about 4 KB of her theme's score from X-Men vs. Street Fighter (Capcom, 1996), which the kit carries."
       ],
       "related": [
@@ -1506,10 +1506,10 @@
       "patch_intro": "An unofficial fan restoration of Street Fighter Zero 2 Alpha (Asia 960826): the Japanese game's full story, endings and win quotes, in English.",
       "summary": "Zero 2 Alpha's English script was a cut-down one: shorter story scenes, a handful of random win quotes, and no ending of his own for Evil Ryu. This puts the whole Japanese script back, in English.",
       "description": [
-        "Street Fighter Zero 2 Alpha is the updated Alpha 2, and its Asian board plays in English. But that English script was a shortened one. Story scenes lost pages, Evil Ryu borrowed Ryu's ending, and each fighter picked from four random win quotes instead of the hundreds the Japanese game has.",
+        "Street Fighter Zero 2 Alpha is the updated Alpha 2, and its Asian version plays in English. But that English script was a shortened one. Story scenes lost pages, Evil Ryu borrowed Ryu's ending, and each fighter picked from four random win quotes instead of the hundreds the Japanese game has.",
         "The English Restoration is the Japanese script, in English. Every story and ending page is back, in the Japanese order. Evil Ryu has his own ending again, and his scene with Akuma. All 452 win quotes are here, picked by who you beat and how much health you had left, just like in Japan. Where Capcom's English said the same thing as the Japanese it's kept; everything else is newly translated.",
-        "A few smaller things come along: red blood on hits, as in Japan; Birdie's third victory pose, which the export board swapped out; and the Manual guard panel on the select screen now explains itself.",
-        "The fighting is untouched, and the ROM sizes and key stay stock, so it drops in over the Asian set in MAME, HBMAME, on MiSTer or on a real CPS-2 board. The same restoration is in the English builds of Street Fighter Alpha 2 Gold.",
+        "A few smaller things come along: red blood on hits, as in Japan; Birdie's third victory pose, which the export version swapped out; and the Manual guard panel on the select screen now explains itself.",
+        "The fighting is untouched, and the ROM sizes and key stay stock, so it drops in over the Asian set in MAME, HBMAME, on MiSTer or on original CPS-2 hardware. The same restoration is in the English builds of Street Fighter Alpha 2 Gold.",
         "This is a release candidate. It has been checked in MAME, route by route; a MiSTer hardware pass is still to come."
       ],
       "changes": [
@@ -1525,9 +1525,9 @@
         "Gameplay untouched"
       ],
       "comparison": {
-        "heading": "Compared with the boards",
+        "heading": "Compared with the arcade versions",
         "intro": [
-          "How the English Restoration compares with the Japanese and Asian boards."
+          "How the English Restoration compares with the Japanese and Asian versions."
         ],
         "columns": [
           "",
@@ -1638,7 +1638,7 @@
         {
           "before": "data/screenshots/sfz2al-restoration/blood_stock.png",
           "after": "data/screenshots/sfz2al-restoration/blood_restoration.png",
-          "before_label": "Asian board",
+          "before_label": "Asian version",
           "after_label": "English Restoration",
           "caption": "Red blood on hits, as in Japan."
         },
@@ -1673,7 +1673,7 @@
       "summary": "The Sega CD version of Final Fight opened with a proper animated cutscene. Final Fight EX puts it back on the arcade game, running as native CPS-1 graphics, with a new EX title, for HBMAME and MiSTer.",
       "description": [
         "The 1993 Sega CD port replaced the arcade's brief story block with a fully animated opening and a soundtrack with spoken dialogue. Final Fight EX reproduces that cutscene as native CPS-1 presentation on the arcade Final Fight, driven by a new 68K cutscene engine added to the game's program ROM, and gives it a new EX title screen. The stock game, its timing, and its gameplay are left intact.",
-        "The cutscene art needs far more room than a stock Final Fight board has, so the graphics region is grown from 2 MB to 6 MB. An original CPS-1 board and stock MAME cannot address that extra ROM, so this runs only on HBMAME and on MiSTer's jtcps1 core.",
+        "The cutscene art needs far more room than the original Final Fight hardware has, so the graphics region is grown from 2 MB to 6 MB. Original CPS-1 hardware and stock MAME cannot address that extra ROM, so this runs only on HBMAME and on MiSTer's jtcps1 core.",
         "There are two regional builds, USA (ffightus01) and Japan (ffightjs01), each matched to its own disc. You supply the arcade Final Fight romset and your own Final Fight CD, and the build is put together on your machine.",
         "This is the visual half. The cutscenes play over the arcade game's own music and effects. The Sega CD's soundtrack and spoken dialogue are a separate release, the CPS+ arrange packs, which ship their own MiSTer MRA combining the two. Install this on its own and you get the cutscenes with arcade audio."
       ],
@@ -1712,7 +1712,7 @@
         }
       ],
       "notes": [
-        "Because it grows the graphics ROM, this runs only on HBMAME and MiSTer (jtcps1), not stock MAME or an original CPS-1 board.",
+        "Because it grows the graphics ROM, this runs only on HBMAME and MiSTer (jtcps1), not stock MAME or original CPS-1 hardware.",
         "The cutscene art and audio derive from Capcom's Final Fight CD. This is an unofficial fan project, unaffiliated with Capcom or Sega."
       ],
       "related": [
@@ -1789,7 +1789,7 @@
       "description": [
         "Super Turbo came in two versions. Japan got Super Street Fighter II X, the one competitive players swear by. The rest of the world got a slightly different game: it plays differently, the continue screen is bare, most of the win quotes are gone, the endings are shorter, and Akuma's story is missing. Japan's version, of course, was in Japanese.",
         "Grand Master Challenge is Japan's game in English. The fighting is untouched. Everything you read is new: all 136 win quotes, the strategy tips on the continue screen, the full endings, and Akuma's dialogue, translated fresh from the Japanese with Capcom's own English as the style guide.",
-        "It runs anywhere Super Turbo does: MAME, HBMAME, MiSTer, or a real CPS-2 board. The patch keeps the ROM's original sizes and key, so it drops in over the stock Japanese set."
+        "It runs anywhere Super Turbo does: MAME, HBMAME, MiSTer, or original CPS-2 hardware. The patch keeps the ROM's original sizes and key, so it drops in over the stock Japanese set."
       ],
       "changes": [
         "Japan's game, exactly as it plays in Japan",
@@ -1914,7 +1914,7 @@
           "after": "data/screenshots/ssf2t-gmc/title_jp.png",
           "before_label": "US Super Turbo",
           "after_label": "Japanese Super Turbo X",
-          "caption": "Where it comes from. The US board on the left, the Japanese board on the right."
+          "caption": "Where it comes from. The US version on the left, the Japanese version on the right."
         },
         {
           "before": "data/screenshots/ssf2t-gmc/continue_usa.png",
@@ -2314,10 +2314,10 @@
       "hardware": "Capcom CPS-2",
       "patch_noun": "restoration",
       "patch_kind": "English restoration patch",
-      "patch_intro": "An unofficial fan restoration of Marvel Super Heroes vs. Street Fighter (Japan 970707): the Japanese board's content, in English, in a USA build and a Japanese build.",
-      "summary": "The US board left things out: no Norimaro, generic endings for the secret fighters, and half the win quotes. This puts it all back, in English, and changes nothing else.",
+      "patch_intro": "An unofficial fan restoration of Marvel Super Heroes vs. Street Fighter (Japan 970707): the Japanese version's content, in English, in a USA build and a Japanese build.",
+      "summary": "The US version left things out: no Norimaro, generic endings for the secret fighters, and half the win quotes. This puts it all back, in English, and changes nothing else.",
       "description": [
-        "Marvel Super Heroes vs. Street Fighter wasn't the same game everywhere. The Japanese board has Norimaro on the select screen with his own ending, real endings for Mech-Zangief, Shadow and Dark Sakura, and sixteen win quotes per fighter. The US board dropped Norimaro entirely, gave the secret fighters a generic ending, and cut the win quotes to eight.",
+        "Marvel Super Heroes vs. Street Fighter wasn't the same game everywhere. The Japanese version has Norimaro on the select screen with his own ending, real endings for Mech-Zangief, Shadow and Dark Sakura, and sixteen win quotes per fighter. The US version dropped Norimaro entirely, gave the secret fighters a generic ending, and cut the win quotes to eight.",
         "The English Restoration is the Japanese game, in English. Norimaro is back, with his ending. The secret fighters get their own endings and art. All sixteen win quotes per fighter and all seventeen standard endings are translated fresh from the Japanese.",
         "Nothing else changes. The title, the secret-character codes, the team rules and the bosses are exactly as they were, and the fighting is untouched. If you want more, like playable bosses, any team you like, extra colors and eight speeds, that's EX, which includes everything here.",
         "There are two builds. The USA build is the English one. The Japan build keeps its Japanese text and gets the few fixes that apply to it. Both run in MAME, HBMAME and on MiSTer.",
@@ -2327,16 +2327,15 @@
         "Norimaro is back, on the select screen and as a computer opponent",
         "Norimaro's own ending, in English",
         "Mech-Zangief, Shadow and Dark Sakura get their own endings and art, instead of the generic one",
-        "Sixteen win quotes per fighter, translated from the Japanese (the US board has eight)",
+        "Sixteen win quotes per fighter, translated from the Japanese (the US version has eight)",
         "All seventeen standard endings, translated from the Japanese",
-        "Pick a secret fighter and the select screen shows their name (Mech-Zangief, not Zangief)",
         "Japan build: the same fixes, with the Japanese text kept",
         "Title, codes, team rules, bosses and gameplay untouched"
       ],
       "comparison": {
-        "heading": "Compared with the boards",
+        "heading": "Compared with the arcade versions",
         "intro": [
-          "How the English Restoration compares with the Japanese and US boards, and with EX."
+          "How the English Restoration compares with the Japanese and US versions, and with EX."
         ],
         "columns": [
           "",
@@ -2385,7 +2384,7 @@
             "Secret fighter's name on the select screen",
             "Base fighter's",
             "Base fighter's",
-            "Their own",
+            "Base fighter's",
             "Their own"
           ],
           [
@@ -2493,9 +2492,9 @@
         {
           "before": "data/screenshots/mshvsf-restoration/select_stock_usa.png",
           "after": "data/screenshots/mshvsf-restoration/select_restoration_usa.png",
-          "before_label": "US board",
+          "before_label": "US version",
           "after_label": "English Restoration",
-          "caption": "The US board puts the game's logo where Norimaro should be. He's back."
+          "caption": "The US version puts the game's logo where Norimaro should be. He's back."
         },
         {
           "single": "data/screenshots/mshvsf-restoration/ending_norimaro_usa.png",
@@ -2813,29 +2812,29 @@
       "hardware": "Capcom CPS-2",
       "patch_noun": "restoration",
       "patch_kind": "English restoration patch",
-      "patch_intro": "An unofficial fan restoration of Vampire Savior: The Lord of Vampire (Japan 970519): the Japanese board's content, in English, in a USA build.",
-      "summary": "The export boards toned Vampire Savior down: less blood, recolored gore, dropped win quotes and endings cut short. This is the Japanese game, in English, with all of it back.",
+      "patch_intro": "An unofficial fan restoration of Vampire Savior: The Lord of Vampire (Japan 970519): the Japanese version's content, in English, in a USA build.",
+      "summary": "The export versions toned Vampire Savior down: less blood, recolored gore, dropped win quotes and endings cut short. This is the Japanese game, in English, with all of it back.",
       "description": [
-        "Vampire Savior wasn't the same game everywhere. The export boards recolored Jedah's blood purple and Forever Torment's green, cut a few gory touches entirely, and defaulted to sweat instead of blood. Their English script dropped fourteen win quotes and 47 ending pages. Even the damage values differ: in places the export boards hit a little harder.",
-        "The English Restoration is the Japanese board, in English. The blood is red again, everywhere it was in Japan. All 241 win quotes and every ending page are here, translated from the Japanese: where Capcom's English said the same thing it's kept, and everything else is newly translated, including the pages the export dropped. The fights run on Japan's damage values and Japan's computer difficulty.",
-        "Out of the box it's set up like a Japanese cabinet: blood on, Auto guard selectable at the select screen, one coin one credit. The operator menu and the Western character names stay as the US board has them, and Lord Raptor's name finally reads L.Raptor instead of L.Rapter.",
-        "It's a USA build that runs in MAME, HBMAME and on MiSTer. The Japanese board already has everything above, so there's no Japan build for now.",
+        "Vampire Savior wasn't the same game everywhere. The export versions recolored Jedah's blood purple and Forever Torment's green, cut a few gory touches entirely, and defaulted to sweat instead of blood. Their English script dropped fourteen win quotes and 47 ending pages. Even the damage values differ: in places the export versions hit a little harder.",
+        "The English Restoration is the Japanese game, in English. The blood is red again, everywhere it was in Japan. All 241 win quotes and every ending page are here, translated from the Japanese: where Capcom's English said the same thing it's kept, and everything else is newly translated, including the pages the export dropped. The fights run on Japan's damage values and Japan's computer difficulty.",
+        "Out of the box it's set up like a Japanese cabinet: blood on, Auto guard selectable at the select screen, one coin one credit. The operator menu and the Western character names stay as the US version has them, and Lord Raptor's name finally reads L.Raptor instead of L.Rapter.",
+        "It's a USA build that runs in MAME, HBMAME and on MiSTer. The Japanese version already has everything above, so there's no Japan build for now.",
         "This is a release candidate."
       ],
       "changes": [
-        "All 241 win quotes from the Japanese game, in English, including the fourteen the US board dropped",
-        "Every ending page from the Japanese game, in English, including the 47 the US board dropped, with Japan's page timing",
+        "All 241 win quotes from the Japanese game, in English, including the fourteen the US version dropped",
+        "Every ending page from the Japanese game, in English, including the 47 the US version dropped, with Japan's page timing",
         "The dialogue before the final battle with Jedah, checked line by line against the Japanese and revised where Capcom's English strayed",
-        "Red blood: Jedah's attacks (purple on the US board), Forever Torment's guillotine and well (green), and hit blood on by default",
-        "Lord Raptor's blood spray in his bite throw, and the paper notice in Bishamon's Togakubi Sarashi finish, both cut from the export boards",
+        "Red blood: Jedah's attacks (purple in the US version), Forever Torment's guillotine and well (green), and hit blood on by default",
+        "Lord Raptor's blood spray in his bite throw, and the paper notice in Bishamon's Togakubi Sarashi finish, both cut from the export versions",
         "Japan's damage values and computer difficulty",
         "Set up like a Japanese cabinet: blood on, Auto guard selectable, one coin one credit",
         "Lord Raptor's name spelled right"
       ],
       "comparison": {
-        "heading": "Compared with the boards",
+        "heading": "Compared with the arcade versions",
         "intro": [
-          "How the English Restoration compares with the Japanese and US boards."
+          "How the English Restoration compares with the Japanese and US versions."
         ],
         "columns": [
           "",
@@ -2946,29 +2945,29 @@
         {
           "before": "data/screenshots/vsav-restoration/blood_stock_usa.png",
           "after": "data/screenshots/vsav-restoration/blood_restoration_usa.png",
-          "before_label": "US board",
+          "before_label": "US version",
           "after_label": "English Restoration",
-          "caption": "Forever Torment's blood is green on the US board. It's red again, as in Japan."
+          "caption": "Forever Torment's blood is green in the US version. It's red again, as in Japan."
         },
         {
           "single": "data/screenshots/vsav-restoration/ending_hsienko_usa.png",
-          "caption": "Hsien-Ko's ending, with the seven pages the US board dropped back in."
+          "caption": "Hsien-Ko's ending, with the seven pages the US version dropped back in."
         },
         {
           "single": "data/screenshots/vsav-restoration/quote_demitri_usa.png",
-          "caption": "One of the win quotes the US board dropped, in English."
+          "caption": "One of the win quotes the US version dropped, in English."
         },
         {
           "before": "data/screenshots/vsav-restoration/mode_select_stock_usa.png",
           "after": "data/screenshots/vsav-restoration/mode_select_restoration_usa.png",
-          "before_label": "US board",
+          "before_label": "US version",
           "after_label": "English Restoration",
-          "caption": "Auto guard is there from the start, as on a Japanese cabinet. The US board hides it until the operator turns it on."
+          "caption": "Auto guard is there from the start, as on a Japanese cabinet. The US version hides it until the operator turns it on."
         },
         {
           "before": "data/screenshots/vsav-restoration/select_raptor_stock_usa.png",
           "after": "data/screenshots/vsav-restoration/select_raptor_restoration_usa.png",
-          "before_label": "US board",
+          "before_label": "US version",
           "after_label": "English Restoration",
           "caption": "L.Rapter becomes L.Raptor."
         }
@@ -3311,7 +3310,7 @@
         "how": "A small tool reads Alpha 2 Gold from your PlayStation 2 disc image, combines it with your arcade Zero 2 Alpha romset, adds EX, and writes out the finished CPS-2 build."
       },
       "notes": [
-        "The 8 MB builds hold more QSound audio than an original CPS-2 board supports, so they run only on HBMAME and MiSTer, not real hardware.",
+        "The 8 MB builds hold more QSound audio than the original CPS-2 hardware supports, so they run only on HBMAME and MiSTer.",
         "The 4 MB builds use the same arcade set names as Street Fighter Alpha 2 Gold's 4 MB builds (sfz2al, sfz2alj), so keep one or the other in your MAME ROM path.",
         "This is a fan edition, unaffiliated with Capcom. The sets are built from discs and roms you already own, and the kit ships no code or data from the anthology or the arcade game beyond EX's mirrored and recolored versions of some of the game's own art. It also carries a few small pieces of other Capcom games: about 4 KB of Cammy's theme score from X-Men vs. Street Fighter (1996), for her stage music; the infinity and star symbols from Street Fighter Zero 2 Dash for the Sega Saturn; and a few bytes of projectile data from Super Street Fighter II Turbo."
       ],
@@ -3785,7 +3784,7 @@
         {
           "label": "Night Warriors 2 Arrange",
           "url": "../vhunt2-arrange/",
-          "note": "a CPS-2+ game with the 512 KB sound program"
+          "note": "a CPS-2+ game"
         },
         {
           "label": "CPS+",

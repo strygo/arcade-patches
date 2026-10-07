@@ -5,7 +5,7 @@ Version:      rc2 (2026-09-17)
 Hardware:     Capcom CPS-1
 Target:       HBMAME sets ffightus01 / ffightjs01, and MiSTer (jtcps1)
 Backport by:  Steve Gordon (https://x.com/strygo)
-Website:      https://strygo.github.io/arcade-patches/final-fight-ex/
+Website:      https://arcadepatches.com/final-fight-ex/
 
 This kit rebuilds Final Fight EX, the CPS-1 arcade Final Fight with the
 Sega CD version's cutscenes and an EX title, from your own disc images and

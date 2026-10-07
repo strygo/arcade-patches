@@ -121,13 +121,13 @@ Prerequisite: the patch is acceptance-tested in `../capcom` and has a
    Night Warriors 2 - English translation of Vampire Hunter 2:
    Darkstalkers Revenge (970929J) by strygo. The patch (IPS against
    the stock vhunt2 set) is available at:
-   https://strygo.github.io/arcade-patches/vhunt2-english/
+   https://arcadepatches.com/vhunt2-english/
    ```
 
 10. **PR to `Robbbert/hbmame`** from the fork branch. Title = commit subject
     prefixed with the driver file (`cps2mis - Added <setname>`, matching
     merged PR #38); body: one-paragraph description of the hack, a note that
-    patches are available at https://strygo.github.io/arcade-patches/ (plus
+    patches are available at https://arcadepatches.com/ (plus
     the per-game page), what was verified (validate + verifyroms + boot),
     title screenshot (the site's Pages-hosted screenshots can be embedded
     directly). One game per PR.

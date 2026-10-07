@@ -32,7 +32,7 @@
 <h2>About this patch</h2>
 
 <p>The 1993 Sega CD port replaced the arcade&#x27;s brief story block with a fully animated opening and a soundtrack with spoken dialogue. Final Fight EX reproduces that cutscene as native CPS-1 presentation on the arcade Final Fight, driven by a new 68K cutscene engine added to the game&#x27;s program ROM, and gives it a new EX title screen. The stock game, its timing, and its gameplay are left intact.</p>
-<p>The cutscene art needs far more room than a stock Final Fight board has, so the graphics region is grown from 2 MB to 6 MB. An original CPS-1 board and stock MAME cannot address that extra ROM, so this runs only on HBMAME and on MiSTer&#x27;s jtcps1 core.</p>
+<p>The cutscene art needs far more room than the original Final Fight hardware has, so the graphics region is grown from 2 MB to 6 MB. Original CPS-1 hardware and stock MAME cannot address that extra ROM, so this runs only on HBMAME and on MiSTer&#x27;s jtcps1 core.</p>
 <p>There are two regional builds, USA (ffightus01) and Japan (ffightjs01), each matched to its own disc. You supply the arcade Final Fight romset and your own Final Fight CD, and the build is put together on your machine.</p>
 <p>This is the visual half. The cutscenes play over the arcade game&#x27;s own music and effects. The Sega CD&#x27;s soundtrack and spoken dialogue are a separate release, the CPS+ arrange packs, which ship their own MiSTer MRA combining the two. Install this on its own and you get the cutscenes with arcade audio.</p>
 <h2>What's changed</h2><ul>
@@ -44,13 +44,13 @@
 <li>Delivered as an HBMAME set and a MiSTer jtcps1 MRA that sit alongside the stock game</li>
 </ul>
 <h2>Download</h2>
-<p>Tools updated 2026-09-20. Game version unchanged.</p>
+<p>Tools updated 2026-10-07. Game version unchanged.</p>
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/final-fight-ex-rc2-kit.zip?v=da7217a627">final-fight-ex-rc2-kit.zip</a>
-  (270 KB)</div>
-  <div class="hash">SHA-256: da7217a6278401c649aed00bd604b19e6dcc5d9deabd47eb4335c6a008545a9e</div>
+  <div class="file"><a href="../downloads/final-fight-ex-rc2-kit.zip?v=992c7831d6">final-fight-ex-rc2-kit.zip</a>
+  (271 KB)</div>
+  <div class="hash">SHA-256: 992c7831d66fd0fcd5696e53deccb773c5ed04d74bfad9fd883b01350db313b2</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
@@ -76,7 +76,7 @@ python3 apply.py --disc-jp &quot;Final Fight CD (JP).img&quot; \
 </ul>
 <h2>Related projects</h2><ul><li><a href="../cps-plus/">CPS+</a>, the ‘Final Fight EX (Arrange)’ MRA in the CPS+ kit pairs this set with the Sega CD arranged soundtrack on MiSTer</li></ul>
 <h2>Notes</h2><ul class="notes">
-<li>Because it grows the graphics ROM, this runs only on HBMAME and MiSTer (jtcps1), not stock MAME or an original CPS-1 board.</li>
+<li>Because it grows the graphics ROM, this runs only on HBMAME and MiSTer (jtcps1), not stock MAME or original CPS-1 hardware.</li>
 <li>The cutscene art and audio derive from Capcom&#x27;s Final Fight CD. This is an unofficial fan project, unaffiliated with Capcom or Sega.</li>
 </ul>
 </main>

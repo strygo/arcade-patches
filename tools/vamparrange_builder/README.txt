@@ -5,7 +5,7 @@ Version:      (stamped at release)
 Hardware:     Capcom CPS-2 with the CPS+ extensions
 Target:       MiSTer (CPS+ core, included) and HBMAME — USA and Japan
 Backport by:  Steve Gordon (https://x.com/strygo)
-Website:      https://strygo.github.io/arcade-patches/{SLUG}/
+Website:      https://arcadepatches.com/{SLUG}/
 
 This kit builds {TITLE}, a CPS-2 backport of the Arrange edition from
 Capcom's PlayStation 2 Vampire: Darkstalkers Collection, from your own disc

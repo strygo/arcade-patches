@@ -5,7 +5,7 @@ Version:      rc6 (2026-10-06)
 Hardware:     Capcom CPS-2
 Target:       MAME and HBMAME sets, and MiSTer (jtcps2) — 4 regions
 Backport by:  Steve Gordon (https://x.com/strygo)
-Website:      https://strygo.github.io/arcade-patches/sfa2-gold/
+Website:      https://arcadepatches.com/sfa2-gold/
 
 This kit builds the CPS-2 arcade backport of Street Fighter Alpha 2 Gold /
 Zero 2 Dash from your own PlayStation 2 disc image and arcade romset. Original

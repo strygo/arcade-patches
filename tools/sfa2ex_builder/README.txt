@@ -5,7 +5,7 @@ Version:      (stamped at release)
 Hardware:     Capcom CPS-2
 Target:       MAME and HBMAME sets, and MiSTer (jtcps2) — USA and Japan
 Project by:   Steve Gordon (https://x.com/strygo)
-Website:      https://strygo.github.io/arcade-patches/sfa2-ex/
+Website:      https://arcadepatches.com/sfa2-ex/
 
 This kit builds Street Fighter Alpha 2 EX, an enhanced CPS-2 edition of
 Street Fighter Alpha 2 Gold / Zero 2 Dash, from your own PlayStation 2 disc

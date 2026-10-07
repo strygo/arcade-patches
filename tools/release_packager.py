@@ -100,7 +100,7 @@ def make_readme(patch: dict, members: list, fmt: str,
     if author_line():
         lines.append(f"Patch by: {author_line()}")
     if SITE.get("site_url"):
-        lines.append(f"Website:  {SITE['site_url']}")
+        lines.append(f"Website:  {SITE['site_url']}{patch['slug']}/")
     lines += [
         "",
         "ABOUT THIS PROJECT",
@@ -246,6 +246,16 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
             lines.append(f"{pad}MiSTer:                   out/{mra}")
         if hb and patch.get("mister_hbmame"):
             lines.append(f"{pad}                          out/mister/games/hbmame/{hb}.zip")
+    # The shared ROM discovery (manifest input_schema); the page says the same.
+    lines += [
+        "",
+        "Merged, split and complete sets work, including nested or renamed ROMs.",
+        "Use --rompath DIR (repeatable) to search a collection instead of naming the",
+        "zip, and --check to check inputs before building. ZIPs and extracted folders",
+        "need no extra software; 7z archives need 7-Zip. QSound can stay in your",
+        "emulator's ROM path; valid firmware already in a source set is kept in",
+        "complete outputs.",
+    ]
     if mame_build:
         lines += [
             "",
@@ -267,10 +277,17 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
         ]
     hb_sets = [o[2] for o in outputs if o[2]]
     if hb_sets:
-        hb = patch.get("hbmame") or next(v["hbmame"] for v in variants if v.get("hbmame"))
+        # Upstream status is page data (patches.json), not the manifest entries.
+        page_variants = (patch.get("artifact") or {}).get("variants") or []
+        hb = (patch.get("hbmame") or next((v["hbmame"] for v in page_variants if v.get("hbmame")), None)
+              or next(v["hbmame"] for v in variants if v.get("hbmame")))
         if hb.get("pr_url") or hb.get("official"):
-            lines += ["", f"HBMAME: this {noun} is an official HBMAME set ({', '.join(hb_sets)}),",
-                      "so full HBMAME collections may already carry it."]
+            if len(hb_sets) > 1:
+                lines += ["", f"HBMAME: this {noun}'s builds are official HBMAME sets",
+                          f"({' and '.join(hb_sets)}), so full HBMAME collections may already carry them."]
+            else:
+                lines += ["", f"HBMAME: this {noun} is an official HBMAME set ({hb_sets[0]}),",
+                          "so full HBMAME collections may already carry it."]
         else:
             lines += ["", f"HBMAME: the set definition ({', '.join(hb_sets)}) ships with the project;",
                       "an upstream HBMAME submission is pending."]
