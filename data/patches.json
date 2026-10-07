@@ -21,6 +21,11 @@
         "key": "restorations",
         "title": "Restorations",
         "description": "Some games lost things on the way out of Japan: quotes, endings, even characters, or the ability to run outside Japan at all. Others never left Japan, or never reached the arcade in their final form. A restoration brings the Japanese game back, in English where it needs it, and leaves the rest of the game as it was."
+      },
+      {
+        "key": "hardware",
+        "title": "Hardware Extensions",
+        "description": "Some backports need more than the original hardware had. An extension gives an arcade system more memory on MiSTer and in HBMAME, and the original games still run on it unchanged."
       }
     ],
     "repo_url": null,
@@ -3401,6 +3406,13 @@
       "game": "Vampire Savior 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
+      "requirements": {
+        "text": "These games need CPS-2+, an extended CPS-2 system with more memory. On MiSTer they need a 128 MB SDRAM module (a smaller one is not enough) and the CPS+ core, which the kit includes. On a computer they need HBMAME with the CPS+ driver. They don't run on the standard jtCPS2 core or in stock MAME.",
+        "link": {
+          "label": "About CPS-2+ hardware",
+          "url": "../cps2-plus/"
+        }
+      },
       "summary": "The Arrange edition of Vampire Savior 2 from Capcom's PlayStation 2 collection, as a CPS-2 game: Jon Talbain, Rikuo and Sasquatch return, Dee joins the roster, and NIGHTMARE difficulty hides a fight with him. USA and Japan builds.",
       "description": [
         "Vampire Savior 2 Arrange is one of the arranged editions in Capcom's 2005 PlayStation 2 Vampire: Darkstalkers Collection, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.",
@@ -3408,7 +3420,7 @@
         "Hidden fighters are picked from the bottom cell: press Down to spin the roulette, Start five times for Shadow, or Start seven times for Marionette. Hold Start while confirming Bishamon for Oboro Bishamon, or Jon Talbain for his dark form.",
         "The operator menu adds a ninth difficulty, NIGHTMARE. At NIGHTMARE, a player who wins the secret Oboro Bishamon fight then faces Dee.",
         "B.B. Hood's spoken intro against Jon Talbain is back, from the original Vampire Savior, and Dee has his own voice. The music is the arcade game's own.",
-        "The USA build is in English, with our translation; the Japan build keeps the Japanese. It runs on MiSTer with the CPS+ core included in the kit (128 MB SDRAM), and in HBMAME.",
+        "The USA build is in English, with our translation; the Japan build keeps the Japanese.",
         "This is a release candidate."
       ],
       "changes": [
@@ -3463,7 +3475,6 @@
         ]
       },
       "notes": [
-        "These sets need the CPS+ extensions: the CPS+ core included in the kit on MiSTer, or HBMAME. They don't run on the standard jtCPS2 core or in stock MAME.",
         "On MiSTer each game image is about 92 MB, so it takes longer to load than the original game.",
         "This is a fan backport, unaffiliated with Capcom. The sets are built from the disc and romsets you already own; the kit ships only our own code, translated text and layout, plus the CPS+ core with its source and licenses."
       ],
@@ -3505,6 +3516,13 @@
       "game": "Vampire Hunter 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
+      "requirements": {
+        "text": "These games need CPS-2+, an extended CPS-2 system with more memory. On MiSTer they need a 128 MB SDRAM module (a smaller one is not enough) and the CPS+ core, which the kit includes. On a computer they need HBMAME with the CPS+ driver. They don't run on the standard jtCPS2 core or in stock MAME.",
+        "link": {
+          "label": "About CPS-2+ hardware",
+          "url": "../cps2-plus/"
+        }
+      },
       "summary": "The Arrange edition of Vampire Hunter 2 from Capcom's PlayStation 2 collection, as a CPS-2 game: Jedah, Lilith, Q-Bee, B.B. Hood and Dee join the roster, with the Arrange's game system and NIGHTMARE difficulty. USA and Japan builds.",
       "description": [
         "Night Warriors 2 Arrange (Vampire Hunter 2 Arrange in Japan) is one of the arranged editions in Capcom's 2005 PlayStation 2 Vampire: Darkstalkers Collection, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.",
@@ -3514,7 +3532,7 @@
         "Hidden fighters are picked from the bottom cell: press Down to spin the roulette, Start five times for Shadow, or Start seven times for Marionette. Hold Start while confirming Bishamon for Oboro Bishamon, or Jon Talbain for his dark form.",
         "The operator menu adds a ninth difficulty, NIGHTMARE. At NIGHTMARE, a player who wins the secret Oboro Bishamon fight then faces Dee.",
         "B.B. Hood's spoken intro against Jon Talbain is back, from the original Vampire Savior.",
-        "The USA build, Night Warriors 2 Arrange, is in English, with our translation; the Japan build keeps the Japanese. It runs on MiSTer with the CPS+ core included in the kit (128 MB SDRAM), and in HBMAME.",
+        "The USA build, Night Warriors 2 Arrange, is in English, with our translation; the Japan build keeps the Japanese.",
         "This is a release candidate."
       ],
       "changes": [
@@ -3566,7 +3584,6 @@
         ]
       },
       "notes": [
-        "These sets need the CPS+ extensions: the CPS+ core included in the kit on MiSTer, or HBMAME. They don't run on the standard jtCPS2 core or in stock MAME.",
         "On MiSTer each game image is about 92 MB, so it takes longer to load than the original game.",
         "This is a fan backport, unaffiliated with Capcom. The sets are built from the disc and romsets you already own; the kit ships only our own code, translated text and layout, plus the CPS+ core with its source and licenses."
       ],
@@ -3603,6 +3620,8 @@
       "slug": "cps2-plus",
       "title": "CPS-2+ hardware",
       "subtitle": "An extended CPS-2 system for MiSTer and HBMAME",
+      "section": "hardware",
+      "summary": "Capcom's CPS-2 with more program memory, graphics, QSound samples and sound program. Vampire Savior 2 Arrange and Night Warriors 2 Arrange need it.",
       "intro": [
         "CPS-2+ is an extended version of Capcom's CPS-2 arcade system. It gives a game more program memory, more graphics, more sound samples and a larger sound program.",
         "We made CPS-2+ for the Arrange editions of Vampire Savior 2 and Vampire Hunter 2. These editions come from Capcom's 2005 PlayStation 2 collection. Their added fighters, art and voices do not fit in the original CPS-2 memory.",

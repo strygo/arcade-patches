@@ -292,6 +292,11 @@ ul.highlights {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 10px;
 }
+.requirements {
+  margin: 12px 0 16px; padding: 10px 14px; border-left: 3px solid var(--accent);
+  border-radius: 4px; background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+.requirements p { margin: 0; }
 ul.highlights li {
   padding: 10px 14px; border: 1px solid var(--border, #333); border-radius: 8px;
   background: color-mix(in srgb, var(--accent) 5%, transparent);

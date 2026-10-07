@@ -7,7 +7,7 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../style.css?v=6e9d9f17a2">
+<link rel="stylesheet" href="../style.css?v=b536806e65">
 </head>
 <body>
 <header class="site">
@@ -25,6 +25,7 @@
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/vhunt2-arrange/title_us.png?v=cc4a5cd4ec" alt="Night Warriors 2 Arrange (USA) title screen"><figcaption><strong>Night Warriors 2 Arrange</strong><br>USA · <code>vhunt2s02</code></figcaption></figure><figure class="build"><img src="../img/vhunt2-arrange/title_jp.png?v=be34fced08" alt="Vampire Hunter 2 Arrange (Japan) title screen"><figcaption><strong>Vampire Hunter 2 Arrange</strong><br>Japan · <code>vhunt2s03</code></figcaption></figure></div>
 <h2>About</h2>
+<div class="requirements"><p>These games need CPS-2+, an extended CPS-2 system with more memory. On MiSTer they need a 128 MB SDRAM module (a smaller one is not enough) and the CPS+ core, which the kit includes. On a computer they need HBMAME with the CPS+ driver. They don&#x27;t run on the standard jtCPS2 core or in stock MAME. <a href="../cps2-plus/">About CPS-2+ hardware</a></p></div>
 <p>Night Warriors 2 Arrange (Vampire Hunter 2 Arrange in Japan) is one of the arranged editions in Capcom&#x27;s 2005 PlayStation 2 Vampire: Darkstalkers Collection, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.</p>
 <p>It keeps Vampire Hunter 2&#x27;s presentation, with Pyron as the final boss, and adds the four Vampire Savior fighters it lacked: Jedah, Lilith, Q-Bee and B.B. Hood (Bulleta in Japan). Dee, the fighter Capcom made for the Arrange, joins them on his own select cell.</p>
 <p>The game system follows the Arrange: rounds without recoverable health, revised damage and Dark Force, counter hits that flash white and can force a knockdown, and slow-motion KOs. Every CPU route ends with Huitzil and Pyron.</p>
@@ -32,7 +33,7 @@
 <p>Hidden fighters are picked from the bottom cell: press Down to spin the roulette, Start five times for Shadow, or Start seven times for Marionette. Hold Start while confirming Bishamon for Oboro Bishamon, or Jon Talbain for his dark form.</p>
 <p>The operator menu adds a ninth difficulty, NIGHTMARE. At NIGHTMARE, a player who wins the secret Oboro Bishamon fight then faces Dee.</p>
 <p>B.B. Hood&#x27;s spoken intro against Jon Talbain is back, from the original Vampire Savior.</p>
-<p>The USA build, Night Warriors 2 Arrange, is in English, with our translation; the Japan build keeps the Japanese. It runs on MiSTer with the CPS+ core included in the kit (128 MB SDRAM), and in HBMAME.</p>
+<p>The USA build, Night Warriors 2 Arrange, is in English, with our translation; the Japan build keeps the Japanese.</p>
 <p>This is a release candidate.</p>
 <h2>What's included</h2><ul>
 <li>Jedah, Lilith, Q-Bee and B.B. Hood (Bulleta in Japan), with their Vampire Savior 2 themes</li>
@@ -81,7 +82,6 @@ python3 apply.py --iso &quot;Vampire Darkstalkers Collection.iso&quot; \
 </ul>
 <h2>Related projects</h2><ul><li><a href="../vhunt2-english/">Night Warriors 2</a>, our English translation, which the USA build carries</li><li><a href="../vsav2-arrange/">Vampire Savior 2 Arrange</a>, the other Arrange edition</li><li><a href="../cps2-plus/">CPS-2+ hardware</a>, how the extended system these sets need works</li></ul>
 <h2>Notes</h2><ul class="notes">
-<li>These sets need the CPS+ extensions: the CPS+ core included in the kit on MiSTer, or HBMAME. They don&#x27;t run on the standard jtCPS2 core or in stock MAME.</li>
 <li>On MiSTer each game image is about 92 MB, so it takes longer to load than the original game.</li>
 <li>This is a fan backport, unaffiliated with Capcom. The sets are built from the disc and romsets you already own; the kit ships only our own code, translated text and layout, plus the CPS+ core with its source and licenses.</li>
 </ul>

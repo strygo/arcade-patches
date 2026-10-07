@@ -339,14 +339,16 @@ def render_changelog_page(site: dict, days: list) -> str:
 
 
 def render_index(site: dict, patches: list, thumbs: dict,
-                 projects: list = (), project_thumbs: dict = {}) -> str:
+                 projects: list = (), project_thumbs: dict = {}, articles: list = ()) -> str:
     """The home page: the intro, then one section per kind of project (site
     `sections`, in order), each with its description and its cards.  Every
     patch and project names its section; an entry without one fails the
-    build rather than silently disappearing from the page."""
+    build rather than silently disappearing from the page.  An article
+    appears only when it names a section (e.g. the hardware extensions)."""
     intro = "\n".join(f"<p>{esc(p)}</p>" for p in site["intro"])
     keys = [sec["key"] for sec in site["sections"]]
-    for entry in list(projects) + list(patches):
+    articles = [a for a in articles if a.get("section")]
+    for entry in list(projects) + list(patches) + articles:
         if entry.get("section") not in keys:
             raise SystemExit(f"{entry['slug']}: section {entry.get('section')!r} "
                              f"is not one of {keys}")
@@ -387,10 +389,20 @@ def render_index(site: dict, patches: list, thumbs: dict,
   {thumb_html}
 </a>"""
 
+    def article_card(article: dict) -> str:
+        return f"""<a class="card" href="{esc(article['slug'])}/">
+  <div>
+    <h2>{esc(article["title"])}</h2>
+    <div class="sub">{esc(article['subtitle'])}</div>
+    <p class="summary">{esc(article['summary'])}</p>
+  </div>
+</a>"""
+
     sections = []
     for sec in site["sections"]:
         cards = ([featured_card(p) for p in projects if p["section"] == sec["key"]]
-                 + [patch_card(p) for p in patches if p["section"] == sec["key"]])
+                 + [patch_card(p) for p in patches if p["section"] == sec["key"]]
+                 + [article_card(a) for a in articles if a["section"] == sec["key"]])
         if not cards:
             continue
         sections.append(f"""<section class="kind" id="{esc(sec['key'])}">
@@ -793,6 +805,17 @@ carries the same audio at full quality, for HBMAME and MiSTer (Jotego's <code>jt
     return "\n".join(parts)
 
 
+def render_requirements(patch: dict) -> str:
+    """A page's hardware or software prerequisite, set apart at the top of About,
+    with an optional link (page-only; never copied into a download)."""
+    req = patch.get("requirements")
+    if not req:
+        return ""
+    link = req.get("link")
+    more = f' <a href="{esc(link["url"])}">{esc(link["label"])}</a>' if link else ""
+    return f'<div class="requirements"><p>{esc(req["text"])}{more}</p></div>'
+
+
 def render_builds_page(site: dict, patch: dict, builds: list, bundle: dict | None,
                        shots: list | None = None) -> str:
     parts = ['<a class="back" href="../">&larr; All patches</a>']
@@ -813,6 +836,7 @@ def render_builds_page(site: dict, patch: dict, builds: list, bundle: dict | Non
 
     parts.append(render_builds_gallery(builds))
     parts.append("<h2>About</h2>")
+    parts.append(render_requirements(patch))
     parts.extend(f"<p>{esc(p)}</p>" for p in patch["description"])
     if patch.get("changes"):
         parts.append("<h2>What's included</h2><ul>")
@@ -881,6 +905,7 @@ def render_patch_page(site: dict, patch: dict, bundle: dict | None, shots: list)
 
     parts.append(render_shots(shots))
     parts.append("<h2>About this patch</h2>")
+    parts.append(render_requirements(patch))
     parts.extend(f"<p>{esc(p)}</p>" for p in patch["description"])
 
     if patch.get("changes"):
@@ -1195,7 +1220,8 @@ def main() -> None:
         print(f"{slug}: project page rendered ({len(shots)} screenshot blocks)")
 
     (DOCS / "index.html").write_text(
-        render_index(site, patches, thumbs, projects, project_thumbs))
+        render_index(site, patches, thumbs, projects, project_thumbs,
+                     [a for a in config.get("articles", []) if not a.get("hidden")]))
     (DOCS / "legal.html").write_text(render_legal(site))
     for article in config.get("articles", []):
         if article.get("hidden"):
