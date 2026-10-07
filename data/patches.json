@@ -3389,6 +3389,375 @@
           ]
         ]
       }
+    },
+    {
+      "slug": "vsav2-arrange",
+      "title": "Vampire Savior 2 Arrange",
+      "subtitle": "Arcade backport",
+      "section": "restorations",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-10-07",
+      "game": "Vampire Savior 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
+      "hardware": "Capcom CPS-2 with the CPS+ core",
+      "thumbnail_build": "us",
+      "summary": "The Arrange edition of Vampire Savior 2 from Capcom's PlayStation 2 collection, as a CPS-2 game: Jon Talbain, Rikuo and Sasquatch return, Dee joins the roster, and NIGHTMARE difficulty hides a fight with him. USA and Japan builds.",
+      "description": [
+        "Vampire Savior 2 Arrange is one of the arranged editions in Capcom's 2005 PlayStation 2 Vampire: Darkstalkers Collection, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.",
+        "It keeps Vampire Savior 2's game system, with Jedah as the final boss, and brings back Jon Talbain, Rikuo and Sasquatch (Gallon, Aulbath and Sasquatch in Japan) with their Vampire Hunter 2 move sets, so every fighter is selectable. Dee, the fighter Capcom made for the Arrange, has his own cell at the bottom of the select screen, and Pyron becomes an ordinary opponent.",
+        "Hidden fighters are picked from the bottom cell: press Down to spin the roulette, Start five times for Shadow, or Start seven times for Marionette. Hold Start while confirming Bishamon for Oboro Bishamon, or Jon Talbain for his dark form.",
+        "The operator menu adds a ninth difficulty, NIGHTMARE. At NIGHTMARE, a player who wins the secret Oboro Bishamon fight then faces Dee.",
+        "B.B. Hood's spoken intro against Jon Talbain is back, from the original Vampire Savior, and Dee has his own voice. The music is the arcade game's own.",
+        "The USA build is in English, with our translation; the Japan build keeps the Japanese. It runs on MiSTer with the CPS+ core included in the kit (128 MB SDRAM), and in HBMAME.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "Jon Talbain, Rikuo and Sasquatch (Gallon, Aulbath and Sasquatch in Japan) with their Vampire Hunter 2 move sets",
+        "Dee on his own select cell, with his own voice",
+        "Roulette, Shadow and Marionette from the bottom cell; Oboro Bishamon and Jon Talbain's dark form with Start",
+        "NIGHTMARE difficulty, and a secret fight with Dee",
+        "Pyron as an ordinary opponent",
+        "B.B. Hood's spoken intro against Jon Talbain",
+        "USA (English) and Japan builds"
+      ],
+      "builds": [
+        {
+          "key": "us",
+          "region": "USA",
+          "title": "Vampire Savior 2 Arrange",
+          "hbmame_set": "vsav2s05",
+          "title_screen": "data/screenshots/vsav2-arrange/title_us.png"
+        },
+        {
+          "key": "jp",
+          "region": "Japan",
+          "title": "Vampire Savior 2 Arrange",
+          "hbmame_set": "vsav2s06",
+          "title_screen": "data/screenshots/vsav2-arrange/title_jp.png"
+        }
+      ],
+      "screenshots": [
+        {
+          "single": "data/screenshots/vsav2-arrange/select.png",
+          "caption": "One select screen for every fighter, Jon Talbain, Rikuo and Sasquatch included."
+        },
+        {
+          "single": "data/screenshots/vsav2-arrange/dee_select.png",
+          "caption": "Dee, the fighter Capcom made for the Arrange, on his own cell."
+        }
+      ],
+      "reconstruction": {
+        "requires": [
+          "your own PlayStation 2 disc image: Vampire: Darkstalkers Collection (Japan)",
+          "your own arcade romsets, all Japanese: vhunt2 (Vampire Hunter 2), vsav2 (Vampire Savior 2) and vsavj (Vampire Savior)"
+        ],
+        "kit_dir": "tools/vamparrange_builder",
+        "kit_command": "python3 apply.py --iso \"Vampire Darkstalkers Collection.iso\" \\\n                 --rompath roms --out-dir out",
+        "how": "A small tool reads the Arrange edition from your PlayStation 2 disc image, combines it with your arcade romsets, and writes out the finished sets for MiSTer and HBMAME, with the CPS+ core for MiSTer.",
+        "sizes_note": "",
+        "columns": [
+          [
+            "HBMAME / MiSTer",
+            "hbmame_set"
+          ]
+        ]
+      },
+      "notes": [
+        "These sets need the CPS+ extensions: the CPS+ core included in the kit on MiSTer, or HBMAME. They don't run on the standard jtCPS2 core or in stock MAME.",
+        "On MiSTer each game image is about 92 MB, so it takes longer to load than the original game.",
+        "This is a fan backport, unaffiliated with Capcom. The sets are built from the disc and romsets you already own; the kit ships only our own code, translated text and layout, plus the CPS+ core with its source and licenses."
+      ],
+      "related": [
+        {
+          "label": "Vampire Savior 2",
+          "url": "../vsav2-english/",
+          "note": "our English translation, which the USA build carries"
+        },
+        {
+          "label": "Night Warriors 2 Arrange",
+          "url": "../vhunt2-arrange/",
+          "note": "the other Arrange edition"
+        },
+        {
+          "label": "CPS-2+ hardware",
+          "url": "../cps2-plus/",
+          "note": "how the extended system these sets need works"
+        }
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-10-07",
+          "items": [
+            "First public release."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "vhunt2-arrange",
+      "title": "Night Warriors 2 Arrange",
+      "subtitle": "Arcade backport",
+      "section": "restorations",
+      "status": "release-candidate",
+      "hidden": true,
+      "version": "rc1",
+      "date": "2026-10-07",
+      "game": "Vampire Hunter 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
+      "hardware": "Capcom CPS-2 with the CPS+ core",
+      "thumbnail_build": "us",
+      "summary": "The Arrange edition of Vampire Hunter 2 from Capcom's PlayStation 2 collection, as a CPS-2 game: Jedah, Lilith, Q-Bee, B.B. Hood and Dee join the roster, with the Arrange's game system and NIGHTMARE difficulty. USA and Japan builds.",
+      "description": [
+        "Night Warriors 2 Arrange (Vampire Hunter 2 Arrange in Japan) is one of the arranged editions in Capcom's 2005 PlayStation 2 Vampire: Darkstalkers Collection, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.",
+        "It keeps Vampire Hunter 2's presentation, with Pyron as the final boss, and adds the four Vampire Savior fighters it lacked: Jedah, Lilith, Q-Bee and B.B. Hood (Bulleta in Japan). Dee, the fighter Capcom made for the Arrange, joins them on his own select cell.",
+        "The game system follows the Arrange: rounds without recoverable health, revised damage and Dark Force, counter hits that flash white and can force a knockdown, and slow-motion KOs. Every CPU route ends with Huitzil and Pyron.",
+        "The four added fighters bring their themes from Vampire Savior 2's arcade music, two each.",
+        "Hidden fighters are picked from the bottom cell: press Down to spin the roulette, Start five times for Shadow, or Start seven times for Marionette. Hold Start while confirming Bishamon for Oboro Bishamon, or Jon Talbain for his dark form.",
+        "The operator menu adds a ninth difficulty, NIGHTMARE. At NIGHTMARE, a player who wins the secret Oboro Bishamon fight then faces Dee.",
+        "B.B. Hood's spoken intro against Jon Talbain is back, from the original Vampire Savior.",
+        "The USA build, Night Warriors 2 Arrange, is in English, with our translation; the Japan build keeps the Japanese. It runs on MiSTer with the CPS+ core included in the kit (128 MB SDRAM), and in HBMAME.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "Jedah, Lilith, Q-Bee and B.B. Hood (Bulleta in Japan), with their Vampire Savior 2 themes",
+        "Dee on his own select cell",
+        "The Arrange's game system: rounds without recoverable health, revised damage and Dark Force, counter hits, slow-motion KOs",
+        "CPU routes that end with Huitzil and Pyron",
+        "Roulette, Shadow and Marionette from the bottom cell; Oboro Bishamon and Jon Talbain's dark form with Start",
+        "NIGHTMARE difficulty, and a secret fight with Dee",
+        "B.B. Hood's spoken intro against Jon Talbain",
+        "USA (Night Warriors 2 Arrange, English) and Japan (Vampire Hunter 2 Arrange) builds"
+      ],
+      "builds": [
+        {
+          "key": "us",
+          "region": "USA",
+          "title": "Night Warriors 2 Arrange",
+          "hbmame_set": "vhunt2s02",
+          "title_screen": "data/screenshots/vhunt2-arrange/title_us.png"
+        },
+        {
+          "key": "jp",
+          "region": "Japan",
+          "title": "Vampire Hunter 2 Arrange",
+          "hbmame_set": "vhunt2s03",
+          "title_screen": "data/screenshots/vhunt2-arrange/title_jp.png"
+        }
+      ],
+      "screenshots": [
+        {
+          "single": "data/screenshots/vhunt2-arrange/select.png",
+          "caption": "Jedah, Lilith, Q-Bee and B.B. Hood join the roster on Savior's select screen."
+        }
+      ],
+      "reconstruction": {
+        "requires": [
+          "your own PlayStation 2 disc image: Vampire: Darkstalkers Collection (Japan)",
+          "your own arcade romsets, all Japanese: vhunt2 (Vampire Hunter 2), vsav2 (Vampire Savior 2) and vsavj (Vampire Savior)"
+        ],
+        "kit_dir": "tools/vamparrange_builder",
+        "kit_command": "python3 apply.py --iso \"Vampire Darkstalkers Collection.iso\" \\\n                 --rompath roms --out-dir out",
+        "how": "A small tool reads the Arrange edition from your PlayStation 2 disc image, combines it with your arcade romsets, and writes out the finished sets for MiSTer and HBMAME, with the CPS+ core for MiSTer.",
+        "sizes_note": "",
+        "columns": [
+          [
+            "HBMAME / MiSTer",
+            "hbmame_set"
+          ]
+        ]
+      },
+      "notes": [
+        "These sets need the CPS+ extensions: the CPS+ core included in the kit on MiSTer, or HBMAME. They don't run on the standard jtCPS2 core or in stock MAME.",
+        "On MiSTer each game image is about 92 MB, so it takes longer to load than the original game.",
+        "This is a fan backport, unaffiliated with Capcom. The sets are built from the disc and romsets you already own; the kit ships only our own code, translated text and layout, plus the CPS+ core with its source and licenses."
+      ],
+      "related": [
+        {
+          "label": "Night Warriors 2",
+          "url": "../vhunt2-english/",
+          "note": "our English translation, which the USA build carries"
+        },
+        {
+          "label": "Vampire Savior 2 Arrange",
+          "url": "../vsav2-arrange/",
+          "note": "the other Arrange edition"
+        },
+        {
+          "label": "CPS-2+ hardware",
+          "url": "../cps2-plus/",
+          "note": "how the extended system these sets need works"
+        }
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-10-07",
+          "items": [
+            "First public release."
+          ]
+        }
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "slug": "cps2-plus",
+      "title": "CPS-2+ hardware",
+      "subtitle": "An extended CPS-2 system for MiSTer and HBMAME",
+      "intro": [
+        "CPS-2+ is an extended version of Capcom's CPS-2 arcade system. It gives a game more program memory, more graphics, more sound samples and a larger sound program.",
+        "We made CPS-2+ for the Arrange editions of Vampire Savior 2 and Vampire Hunter 2. These editions come from Capcom's 2005 PlayStation 2 collection. Their added fighters, art and voices do not fit in the original CPS-2 memory.",
+        "Stock CPS-2 games run on CPS-2+ without change. A game uses the extensions only when it asks for them."
+      ],
+      "sections": [
+        {
+          "heading": "Capacity",
+          "paragraphs": [
+            "The table compares the memory that a game can use."
+          ],
+          "table": {
+            "columns": [
+              "",
+              "CPS-2",
+              "CPS-2+"
+            ],
+            "rows": [
+              [
+                "Main program",
+                "4 MB, encrypted",
+                "4 MB, encrypted, plus a 4 MB extension that is not encrypted"
+              ],
+              [
+                "Graphics",
+                "32 MB",
+                "64 MB"
+              ],
+              [
+                "QSound samples",
+                "8 MB",
+                "16 MB or 32 MB"
+              ],
+              [
+                "Sound program (Z80)",
+                "256 KB",
+                "512 KB"
+              ]
+            ]
+          },
+          "after": [
+            "The clocks, the palettes, the sprite format, the QSound program and the sound volume do not change."
+          ]
+        },
+        {
+          "heading": "Main program",
+          "paragraphs": [
+            "The original 4 MB program area stays encrypted with the game's own key. The key decrypts only part of this area, often the first 1 MB.",
+            "The extension adds 4 MB at CPU addresses A00000 to DFFFFF. This area is not encrypted. The CPU can read data and run instructions there.",
+            "The extension is not encrypted on purpose. CPS-2+ does not add a new security key, and no game gets a new key."
+          ]
+        },
+        {
+          "heading": "Graphics",
+          "paragraphs": [
+            "The graphics memory is 64 MB. The lower 32 MB is the original graphics. The upper 32 MB is new.",
+            "A sprite selects the upper half through its object entry. The game writes the entry through a second address, an alias of the object memory. A write through the usual address selects the lower half again.",
+            "A scroll-layer tile selects the upper half with bit 9 of its attribute word. Tiles from the two halves can mix in one layer.",
+            "Rendering does not change. Flips, priorities and palettes work as they do on CPS-2."
+          ]
+        },
+        {
+          "heading": "Sound",
+          "paragraphs": [
+            "The QSound sample memory uses a 25-bit address. A game can have 8, 16 or 32 MB of samples. The two Arrange editions use 16 MB.",
+            "The Z80 sound program can be 512 KB. The program keeps its fixed 32 KB area. One more bit in the bank register selects 30 banks of 16 KB.",
+            "The sound DSP and its program do not change."
+          ]
+        },
+        {
+          "heading": "How a game asks for the extensions",
+          "paragraphs": [
+            "On MiSTer, the game's MRA file sends a header to the core. The header tells the core the size of each memory area. A stock game sends the stock header, and the core works as a stock CPS-2.",
+            "In HBMAME, the set definition gives the same sizes. Stock sets do not change.",
+            "A reset clears the sprite selections and the sound bank. The loaded game stays in memory."
+          ]
+        },
+        {
+          "heading": "Where it runs",
+          "list": [
+            "MiSTer: the CPS+ core, jtcps2-cpsplus_20261006.rbf. It needs a 128 MB SDRAM module. The core also plays the CPS+ arranged soundtracks.",
+            "HBMAME: the CPS+ driver, cps2plus. It runs the sets vsav2s05, vsav2s06, vhunt2s02 and vhunt2s03.",
+            "CPS-2+ games do not run on the standard jtCPS2 core or in stock MAME."
+          ],
+          "after": [
+            "Our Arrange kits include the CPS+ core. You do not have to get it separately."
+          ]
+        },
+        {
+          "heading": "Games that use CPS-2+",
+          "table": {
+            "columns": [
+              "",
+              "Program extension",
+              "Graphics",
+              "Samples",
+              "Sound program"
+            ],
+            "rows": [
+              [
+                "Vampire Savior 2 Arrange",
+                "4 MB",
+                "64 MB (8 MB of new art in the upper half)",
+                "16 MB",
+                "256 KB"
+              ],
+              [
+                "Night Warriors 2 Arrange / Vampire Hunter 2 Arrange",
+                "4 MB",
+                "64 MB (8 MB of new art in the upper half)",
+                "16 MB",
+                "512 KB"
+              ]
+            ]
+          },
+          "after": [
+            "Each game image is about 92 MB, so it takes longer to load than a stock game."
+          ]
+        },
+        {
+          "heading": "For game authors",
+          "list": [
+            "Put new encrypted code only in the range that the game's key decrypts. Put data anywhere.",
+            "Put new code that is not encrypted in the 4 MB extension.",
+            "Write every object entry through the alias when the sprite must use the upper graphics. Do this also for byte writes and reused slots.",
+            "Clear bit 9 of a scroll tile's attribute word for lower-half tiles. Make sure that the game does not use bit 9 for a different purpose.",
+            "Sample offsets are still 16 bits and wrap in a 64 KB bank."
+          ]
+        },
+        {
+          "heading": "Source and licenses",
+          "paragraphs": [
+            "The CPS+ core is a GPL-3.0 fork of Jotego's jtcores. The source for this build is at github.com/strygo/jtcores, revision 9886018d.",
+            "The HBMAME driver is one class, cps2plus_state. It adds to the standard CPS-2 driver and keeps the stock behavior."
+          ]
+        }
+      ],
+      "related": [
+        {
+          "label": "Vampire Savior 2 Arrange",
+          "url": "../vsav2-arrange/",
+          "note": "a CPS-2+ game"
+        },
+        {
+          "label": "Night Warriors 2 Arrange",
+          "url": "../vhunt2-arrange/",
+          "note": "a CPS-2+ game with the 512 KB sound program"
+        },
+        {
+          "label": "CPS+",
+          "url": "../cps-plus/",
+          "note": "arranged soundtracks on the same core"
+        }
+      ]
     }
   ]
 }

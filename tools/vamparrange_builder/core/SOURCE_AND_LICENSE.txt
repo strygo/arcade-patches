@@ -1,0 +1,24 @@
+CPS+ CPS-2 core — source and license
+====================================
+
+jtcps2-cpsplus_20261006.rbf is a build of the CPS+ fork of Jose Tejada
+(jotego)'s jtcores FPGA arcade cores, released under the same GPL-3.0
+license as upstream (licenses/GPL-3.0.txt, licenses/LICENSE.txt):
+
+    fork:      https://github.com/strygo/jtcores/tree/cpsplus
+    upstream:  https://github.com/jotego/jtcores
+
+Complete corresponding source for this binary:
+    https://github.com/strygo/jtcores/tree/9886018dac2c0de37474b9d924765db3aa75da09
+    built by https://github.com/strygo/jtcores/actions/runs/37508715830
+    SHA-256 23c1bd0a685dfe95d0d38a85e9b47f746d6294ae20b31284bc377ade2ba43bd6
+
+Modules compiled into it carry their own compatible licenses, included under
+licenses/: jtframe, fx68k (Jorge Cwik's 68000), jtdsp16 and jteeprom.
+
+The MRAs derive from jotego's CPS-2 MRAs and keep their GNU GPLv2 license
+(licenses/MRA_GPL-2.0.txt).
+
+Per the jtcores license terms, the core must never be distributed together
+with copyrighted ROM files. This kit contains none: the game sets are built on
+your own machine from files you already own.

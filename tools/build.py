@@ -752,11 +752,13 @@ cd {esc(slug)}
 def render_reconstruction(patch: dict, builds: list, bundle: dict | None) -> str:
     rec = patch.get("reconstruction", {})
     reqs = "".join(f"<li>{esc(r)}</li>" for r in rec.get("requires", []))
+    # Gold's sets come in two sizes; a page can name its own set columns.
+    columns = ([(esc(label), key) for label, key in rec["columns"]] if "columns" in rec else
+               [("HBMAME / MiSTer (8&nbsp;MB)", "hbmame_set"), ("Hardware / MAME (4&nbsp;MB)", "mame_set")])
     rows = "".join(
         f'<tr><td>{esc(b["region"])}</td>'
         f'<td>{esc(b["title"])}</td>'
-        f'<td class="mono">{esc(b["hbmame_set"])}</td>'
-        f'<td class="mono">{esc(b["mame_set"])}</td></tr>'
+        + "".join(f'<td class="mono">{esc(b[key])}</td>' for _, key in columns) + "</tr>"
         for b in builds
     )
     parts = ["""<h2>How it's distributed</h2>
@@ -767,13 +769,18 @@ You need:</p>"""]
                              "combines it with your arcade Zero 2 Alpha romset, and writes out the finished "
                              "CPS-2 build.")
     parts.append(f"<p>{esc(how)}</p>")
-    parts.append("""<p>Two sizes of each build are produced. A <strong>4&nbsp;MB</strong> set stays within
+    if "sizes_note" in rec:
+        if rec["sizes_note"]:
+            parts.append(f"<p>{esc(rec['sizes_note'])}</p>")
+    else:
+        parts.append("""<p>Two sizes of each build are produced. A <strong>4&nbsp;MB</strong> set stays within
 original CPS-2 limits and runs on real hardware and stock MAME. It carries all of Cammy's
 voices and sound effects, with some downsampled to fit. An <strong>8&nbsp;MB</strong> set
 carries the same audio at full quality, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>""")
+    heads = "".join(f"<th>{label}</th>" for label, _ in columns)
     parts.append(f"""<h3>The builds</h3>
 <table>
-<tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer (8&nbsp;MB)</th><th>Hardware / MAME (4&nbsp;MB)</th></tr>
+<tr><th>Region</th><th>Title</th>{heads}</tr>
 {rows}
 </table>""")
     if bundle and bundle.get("kind") == "kit":
@@ -1039,6 +1046,34 @@ def write_redirects(site: dict, patch: dict) -> None:
         print(f"{old}: redirect to {patch['slug']} written")
 
 
+def render_article(site: dict, article: dict) -> str:
+    """A reference page (e.g. the CPS-2+ hardware explainer): titled sections of
+    paragraphs, lists and tables, plus optional related links."""
+    parts = ['<a class="back" href="../">&larr; All patches</a>', f"<h1>{esc(article['title'])}</h1>"]
+    if article.get("subtitle"):
+        parts.append(f'<p class="subtitle">{esc(article["subtitle"])}</p>')
+    for p in article.get("intro", []):
+        parts.append(f"<p>{esc(p)}</p>")
+    for sec in article.get("sections", []):
+        if sec.get("heading"):
+            parts.append(f"<h2>{esc(sec['heading'])}</h2>")
+        for p in sec.get("paragraphs", []):
+            parts.append(f"<p>{esc(p)}</p>")
+        if sec.get("list"):
+            parts.append("<ul>" + "".join(f"<li>{esc(i)}</li>" for i in sec["list"]) + "</ul>")
+        if sec.get("table"):
+            t = sec["table"]
+            head = "".join(f"<th>{esc(c)}</th>" for c in t["columns"])
+            rows = "".join("<tr>" + "".join(
+                (f'<th scope="row">{esc(c)}</th>' if i == 0 else f"<td>{esc(c)}</td>") for i, c in enumerate(r))
+                + "</tr>" for r in t["rows"])
+            parts.append(f'<table class="compare"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table>')
+        for p in sec.get("after", []):
+            parts.append(f"<p>{esc(p)}</p>")
+    parts.append(render_related(article))
+    return page(site, f"{article['title']} · {site['title']}", "\n".join(parts), depth=1)
+
+
 def render_legal(site: dict) -> str:
     contact = esc(site.get("contact_note", ""))
     body = f"""<h1>Legal &amp; disclaimers</h1>
@@ -1162,6 +1197,13 @@ def main() -> None:
     (DOCS / "index.html").write_text(
         render_index(site, patches, thumbs, projects, project_thumbs))
     (DOCS / "legal.html").write_text(render_legal(site))
+    for article in config.get("articles", []):
+        if article.get("hidden"):
+            continue
+        out_dir = DOCS / article["slug"]
+        out_dir.mkdir(parents=True, exist_ok=True)
+        (out_dir / "index.html").write_text(render_article(site, article))
+        print(f"{article['slug']}: article rendered")
     days = changelog_days(patches, projects)
     (DOCS / "changelog").mkdir(parents=True, exist_ok=True)
     (DOCS / "changelog" / "index.html").write_text(render_changelog_page(site, days))

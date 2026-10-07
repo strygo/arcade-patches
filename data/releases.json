@@ -2376,6 +2376,58 @@
         }
       }
     },
+    "vsav2-arrange": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-10-07",
+          "files": {
+            "kit": {
+              "archive": "archive/356d8504701ffa03b708f30ac5f84db2d8fca750da9dcd7ad98476e1ecb5f204/vsav2-arrange-rc1-kit.zip",
+              "name": "vsav2-arrange-rc1-kit.zip",
+              "sha256": "356d8504701ffa03b708f30ac5f84db2d8fca750da9dcd7ad98476e1ecb5f204",
+              "size": 1887382
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc1-candidate.2",
+            "capcom_source_commit": "de3df706f1484574e2a0d2a25bbc6853d07dae5c",
+            "ready_record_sha256": "dbd42d6a10015e252ee06815e3311c9539e8176612b1f3d61987c950164ad5af",
+            "release_sha256": "b18a077431c78ffce34a29cc9584f9cc019354f5dd9d6cc25d96fa242c186b89",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-07",
+              "files": {
+                "kit": {
+                  "archive": "archive/356d8504701ffa03b708f30ac5f84db2d8fca750da9dcd7ad98476e1ecb5f204/vsav2-arrange-rc1-kit.zip",
+                  "name": "vsav2-arrange-rc1-kit.zip",
+                  "sha256": "356d8504701ffa03b708f30ac5f84db2d8fca750da9dcd7ad98476e1ecb5f204",
+                  "size": 1887382
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc1-candidate.2",
+                "capcom_source_commit": "de3df706f1484574e2a0d2a25bbc6853d07dae5c",
+                "ready_record_sha256": "dbd42d6a10015e252ee06815e3311c9539e8176612b1f3d61987c950164ad5af",
+                "release_sha256": "b18a077431c78ffce34a29cc9584f9cc019354f5dd9d6cc25d96fa242c186b89",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        }
+      }
+    },
     "vsav2-english": {
       "current": "rc2",
       "versions": {

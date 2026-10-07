@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CPS-2+ hardware · Arcade Patches</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css?v=6e9d9f17a2">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="home" href="../">Arcade Patches</a>
+    <div class="tagline">Translations, restorations and arranged soundtracks for classic arcade games.</div>
+  </div>
+</header>
+<main>
+<a class="back" href="../">&larr; All patches</a>
+<h1>CPS-2+ hardware</h1>
+<p class="subtitle">An extended CPS-2 system for MiSTer and HBMAME</p>
+<p>CPS-2+ is an extended version of Capcom&#x27;s CPS-2 arcade system. It gives a game more program memory, more graphics, more sound samples and a larger sound program.</p>
+<p>We made CPS-2+ for the Arrange editions of Vampire Savior 2 and Vampire Hunter 2. These editions come from Capcom&#x27;s 2005 PlayStation 2 collection. Their added fighters, art and voices do not fit in the original CPS-2 memory.</p>
+<p>Stock CPS-2 games run on CPS-2+ without change. A game uses the extensions only when it asks for them.</p>
+<h2>Capacity</h2>
+<p>The table compares the memory that a game can use.</p>
+<table class="compare"><thead><tr><th></th><th>CPS-2</th><th>CPS-2+</th></tr></thead><tbody><tr><th scope="row">Main program</th><td>4 MB, encrypted</td><td>4 MB, encrypted, plus a 4 MB extension that is not encrypted</td></tr><tr><th scope="row">Graphics</th><td>32 MB</td><td>64 MB</td></tr><tr><th scope="row">QSound samples</th><td>8 MB</td><td>16 MB or 32 MB</td></tr><tr><th scope="row">Sound program (Z80)</th><td>256 KB</td><td>512 KB</td></tr></tbody></table>
+<p>The clocks, the palettes, the sprite format, the QSound program and the sound volume do not change.</p>
+<h2>Main program</h2>
+<p>The original 4 MB program area stays encrypted with the game&#x27;s own key. The key decrypts only part of this area, often the first 1 MB.</p>
+<p>The extension adds 4 MB at CPU addresses A00000 to DFFFFF. This area is not encrypted. The CPU can read data and run instructions there.</p>
+<p>The extension is not encrypted on purpose. CPS-2+ does not add a new security key, and no game gets a new key.</p>
+<h2>Graphics</h2>
+<p>The graphics memory is 64 MB. The lower 32 MB is the original graphics. The upper 32 MB is new.</p>
+<p>A sprite selects the upper half through its object entry. The game writes the entry through a second address, an alias of the object memory. A write through the usual address selects the lower half again.</p>
+<p>A scroll-layer tile selects the upper half with bit 9 of its attribute word. Tiles from the two halves can mix in one layer.</p>
+<p>Rendering does not change. Flips, priorities and palettes work as they do on CPS-2.</p>
+<h2>Sound</h2>
+<p>The QSound sample memory uses a 25-bit address. A game can have 8, 16 or 32 MB of samples. The two Arrange editions use 16 MB.</p>
+<p>The Z80 sound program can be 512 KB. The program keeps its fixed 32 KB area. One more bit in the bank register selects 30 banks of 16 KB.</p>
+<p>The sound DSP and its program do not change.</p>
+<h2>How a game asks for the extensions</h2>
+<p>On MiSTer, the game&#x27;s MRA file sends a header to the core. The header tells the core the size of each memory area. A stock game sends the stock header, and the core works as a stock CPS-2.</p>
+<p>In HBMAME, the set definition gives the same sizes. Stock sets do not change.</p>
+<p>A reset clears the sprite selections and the sound bank. The loaded game stays in memory.</p>
+<h2>Where it runs</h2>
+<ul><li>MiSTer: the CPS+ core, jtcps2-cpsplus_20261006.rbf. It needs a 128 MB SDRAM module. The core also plays the CPS+ arranged soundtracks.</li><li>HBMAME: the CPS+ driver, cps2plus. It runs the sets vsav2s05, vsav2s06, vhunt2s02 and vhunt2s03.</li><li>CPS-2+ games do not run on the standard jtCPS2 core or in stock MAME.</li></ul>
+<p>Our Arrange kits include the CPS+ core. You do not have to get it separately.</p>
+<h2>Games that use CPS-2+</h2>
+<table class="compare"><thead><tr><th></th><th>Program extension</th><th>Graphics</th><th>Samples</th><th>Sound program</th></tr></thead><tbody><tr><th scope="row">Vampire Savior 2 Arrange</th><td>4 MB</td><td>64 MB (8 MB of new art in the upper half)</td><td>16 MB</td><td>256 KB</td></tr><tr><th scope="row">Night Warriors 2 Arrange / Vampire Hunter 2 Arrange</th><td>4 MB</td><td>64 MB (8 MB of new art in the upper half)</td><td>16 MB</td><td>512 KB</td></tr></tbody></table>
+<p>Each game image is about 92 MB, so it takes longer to load than a stock game.</p>
+<h2>For game authors</h2>
+<ul><li>Put new encrypted code only in the range that the game&#x27;s key decrypts. Put data anywhere.</li><li>Put new code that is not encrypted in the 4 MB extension.</li><li>Write every object entry through the alias when the sprite must use the upper graphics. Do this also for byte writes and reused slots.</li><li>Clear bit 9 of a scroll tile&#x27;s attribute word for lower-half tiles. Make sure that the game does not use bit 9 for a different purpose.</li><li>Sample offsets are still 16 bits and wrap in a 64 KB bank.</li></ul>
+<h2>Source and licenses</h2>
+<p>The CPS+ core is a GPL-3.0 fork of Jotego&#x27;s jtcores. The source for this build is at github.com/strygo/jtcores, revision 9886018d.</p>
+<p>The HBMAME driver is one class, cps2plus_state. It adds to the standard CPS-2 driver and keeps the stock behavior.</p>
+<h2>Related projects</h2><ul><li><a href="../vsav2-arrange/">Vampire Savior 2 Arrange</a>, a CPS-2+ game</li><li><a href="../vhunt2-arrange/">Night Warriors 2 Arrange</a>, a CPS-2+ game with the 512 KB sound program</li><li><a href="../cps-plus/">CPS+</a>, arranged soundtracks on the same core</li></ul>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
+    by Capcom. All game titles, characters, and artwork remain the property of their
+    respective owners. No ROMs or other copyrighted game data are hosted here.</p>
+    <p><a href="../legal.html">Legal &amp; disclaimers</a></p>
+  </div>
+</footer>
+</body>
+</html>
