@@ -773,15 +773,15 @@
       "subtitle": "Arranged Neo Geo CD soundtracks for Neo Geo arcade games on MiSTer",
       "section": "arrangements",
       "status": "released",
-      "version": "1.0",
-      "date": "2026-09-28",
+      "version": "1.1",
+      "date": "2026-10-09",
       "hardware": "MiSTer FPGA (the NG+ build of the Neo Geo core, included)",
-      "summary": "SNK re-recorded the music for its Neo Geo CD releases, but the CD versions came with long loads and cut animation. NG+ plays those arranged soundtracks under the original cartridge games on MiSTer: the arcade game, whole and without loading, with the CD's music.",
-      "featured_stats": "5 games \u00b7 5 arranged soundtracks \u00b7 1 core \u00b7 every image built from sources you own",
+      "summary": "Many Neo Geo games got new arranged soundtracks for their Neo Geo CD releases, but the CD versions came with long loads, and some with trimmed animation. NG+ plays those arranged soundtracks under the original cartridge games on MiSTer: the arcade game, whole and without loading, with the CD's music.",
+      "featured_stats": "25 games \u00b7 25 arranged soundtracks \u00b7 1 core \u00b7 every image built from sources you own",
       "description": [
-        "When SNK moved its fighting games to the Neo Geo CD, it gave many of them new soundtracks recorded for CD audio. The CD versions paid for it: long loads between fights, and animation trimmed to fit the console's memory. The cartridge games never had the arranged music.",
+        "When Neo Geo games came to the Neo Geo CD, many of them got new soundtracks recorded for CD audio. The CD versions paid for it: long loads, and in some games animation trimmed to fit the console's memory. The cartridge games never had the arranged music.",
         "NG+ puts the two together on a MiSTer. The cartridge game runs as it did in the arcade, with nothing cut and no loading, while the Neo Geo CD's soundtrack plays in place of the cartridge's music, started, looped and faded by the game itself. Sound effects and voices still come from the game's own sound hardware.",
-        "Version 1.0 covers five games: Samurai Shodown II, The King of Fighters '94 and '95, Fatal Fury Special and Art of Fighting 2."
+        "Version 1.1 covers 25 games: Samurai Shodown, Samurai Shodown II and III; Fatal Fury, Fatal Fury 2, Fatal Fury Special, Fatal Fury 3 and Real Bout Fatal Fury; The King of Fighters '94 and '95; Art of Fighting 2 and 3; Savage Reign, Kabuki Klash and Breakers; Top Hunter and Last Resort; Super Sidekicks, Super Sidekicks 2 and 3, Pleasure Goal, Baseball Stars 2, Top Player's Golf and Stakes Winner; and Quiz King of Fighters."
       ],
       "how_it_works": [
         "Nothing in the game is modified. The Neo Geo's main processor sends sound commands to its sound processor, and the NG+ core watches for them. When one starts a song, the core streams the matching Neo Geo CD track and holds the command back, so the cartridge's own music stays quiet. Everything else plays as it always did.",
@@ -822,7 +822,7 @@
         "label": "NG+ MiSTer kit: the core and the image builder"
       },
       "highlights": [
-        "Five games with their Neo Geo CD arranged soundtracks: Samurai Shodown II, The King of Fighters '94 and '95, Fatal Fury Special and Art of Fighting 2",
+        "25 games with their Neo Geo CD arranged soundtracks, from Samurai Shodown and Fatal Fury to Super Sidekicks, Top Hunter and Last Resort",
         "The full cartridge game, with no load times and nothing cut",
         "Starts as the US arcade release; the core's menu has an Arranged Volume, and the usual console mode and BIOS choices",
         "Only tools in the download. Images build from the ROMs and discs you already own, in one command"
@@ -851,6 +851,106 @@
         {
           "platform": "Neo Geo CD",
           "disc": "Ryuuko no Ken 2 / Art of Fighting 2",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Samurai Spirits / Samurai Shodown",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Samurai Spirits: Zankurou Musouken / Samurai Shodown III",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Garou Densetsu: Shukumei no Tatakai / Fatal Fury: King of Fighters",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Garou Densetsu 2 / Fatal Fury 2",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Garou Densetsu 3: Road to the Final Victory / Fatal Fury 3: Road to the Final Victory",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Real Bout Garou Densetsu / Real Bout Fatal Fury",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Art of Fighting: Ryuuko no Ken Gaiden / The Path of the Warrior: Art of Fighting 3",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Fuuun Mokushiroku: Kakutou Sousei / Savage Reign",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Far East of Eden: Tengai Makyou Shinden / Far East of Eden: Kabuki Klash",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Breakers",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Top Hunter: Roddy & Cathy",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Last Resort",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Super Sidekicks: Tokuten-ou",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Tokuten-ou 2 / Super Sidekicks 2: The World Championship",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Tokuten-ou 3: Eikou e no Chousen / Super Sidekicks 3: The Next Glory",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Futsal: 5 on 5 Mini Soccer / PleasureGoal: 5 on 5 Mini Soccer",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Baseball Stars 2",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Top Player's Golf",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Stakes Winner: GI Kanzen Seiha e no Michi",
+          "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
+        },
+        {
+          "platform": "Neo Geo CD",
+          "disc": "Quiz King of Fighters",
           "variants": "any pressing listed in the kit's titles.toml; a .cue with its images, a .zip holding them, or a .chd"
         },
         {
@@ -910,6 +1010,206 @@
               "disc": "Ryuuko no Ken 2 / Art of Fighting 2"
             }
           ]
+        },
+        {
+          "game": "Samurai Shodown",
+          "sets": "samsho",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Samurai Spirits / Samurai Shodown"
+            }
+          ]
+        },
+        {
+          "game": "Samurai Shodown III",
+          "sets": "samsho3",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Samurai Spirits: Zankurou Musouken / Samurai Shodown III"
+            }
+          ]
+        },
+        {
+          "game": "Fatal Fury",
+          "sets": "fatfury1",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Garou Densetsu: Shukumei no Tatakai / Fatal Fury: King of Fighters"
+            }
+          ]
+        },
+        {
+          "game": "Fatal Fury 2",
+          "sets": "fatfury2",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Garou Densetsu 2 / Fatal Fury 2"
+            }
+          ]
+        },
+        {
+          "game": "Fatal Fury 3",
+          "sets": "fatfury3",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Garou Densetsu 3: Road to the Final Victory / Fatal Fury 3: Road to the Final Victory"
+            }
+          ]
+        },
+        {
+          "game": "Real Bout Fatal Fury",
+          "sets": "rbff1",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Real Bout Garou Densetsu / Real Bout Fatal Fury"
+            }
+          ]
+        },
+        {
+          "game": "Art of Fighting 3",
+          "sets": "aof3",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Art of Fighting: Ryuuko no Ken Gaiden / The Path of the Warrior: Art of Fighting 3"
+            }
+          ]
+        },
+        {
+          "game": "Savage Reign",
+          "sets": "savagere",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Fuuun Mokushiroku: Kakutou Sousei / Savage Reign"
+            }
+          ]
+        },
+        {
+          "game": "Kabuki Klash",
+          "sets": "kabukikl",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Far East of Eden: Tengai Makyou Shinden / Far East of Eden: Kabuki Klash"
+            }
+          ]
+        },
+        {
+          "game": "Breakers",
+          "sets": "breakers",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Breakers"
+            }
+          ]
+        },
+        {
+          "game": "Top Hunter",
+          "sets": "tophuntr",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Top Hunter: Roddy & Cathy"
+            }
+          ]
+        },
+        {
+          "game": "Last Resort",
+          "sets": "lresort",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Last Resort"
+            }
+          ]
+        },
+        {
+          "game": "Super Sidekicks",
+          "sets": "ssideki",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Super Sidekicks: Tokuten-ou"
+            }
+          ]
+        },
+        {
+          "game": "Super Sidekicks 2",
+          "sets": "ssideki2",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Tokuten-ou 2 / Super Sidekicks 2: The World Championship"
+            }
+          ]
+        },
+        {
+          "game": "Super Sidekicks 3",
+          "sets": "ssideki3",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Tokuten-ou 3: Eikou e no Chousen / Super Sidekicks 3: The Next Glory"
+            }
+          ]
+        },
+        {
+          "game": "Pleasure Goal",
+          "sets": "pgoal",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Futsal: 5 on 5 Mini Soccer / PleasureGoal: 5 on 5 Mini Soccer"
+            }
+          ]
+        },
+        {
+          "game": "Baseball Stars 2",
+          "sets": "bstars2",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Baseball Stars 2"
+            }
+          ]
+        },
+        {
+          "game": "Top Player's Golf",
+          "sets": "tpgolf",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Top Player's Golf"
+            }
+          ]
+        },
+        {
+          "game": "Stakes Winner",
+          "sets": "stakwin",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Stakes Winner: GI Kanzen Seiha e no Michi"
+            }
+          ]
+        },
+        {
+          "game": "Quiz King of Fighters",
+          "sets": "quizkof",
+          "packs": [
+            {
+              "soundtrack": "Neo Geo CD arrange",
+              "disc": "Quiz King of Fighters"
+            }
+          ]
         }
       ],
       "faq": [
@@ -943,9 +1243,23 @@
           "a": [
             "No. The kit holds tools, checksums and the core. The builder reads the music from your own disc."
           ]
+        },
+        {
+          "q": "Does every track on the CD play?",
+          "a": [
+            "Almost every one. NG+ plays a CD track when the cartridge game asks for that piece of music, so a track that no cartridge music command reaches never plays. Four games have several: The King of Fighters '95 (16 tracks), Breakers (9 short pieces), Samurai Shodown III (6) and Stakes Winner (5). If you know where the Neo Geo CD version plays one of them, please get in touch."
+          ]
         }
       ],
       "release_history": [
+        {
+          "version": "1.1",
+          "date": "2026-10-09",
+          "items": [
+            "Twenty more games with their Neo Geo CD arranged soundtracks: Samurai Shodown, Samurai Shodown III, Fatal Fury, Fatal Fury 2, Fatal Fury 3, Real Bout Fatal Fury, Art of Fighting 3, Savage Reign, Kabuki Klash, Breakers, Top Hunter, Last Resort, Super Sidekicks, Super Sidekicks 2 and 3, Pleasure Goal, Baseball Stars 2, Top Player's Golf, Stakes Winner and Quiz King of Fighters.",
+            "The five games from 1.0 are unchanged."
+          ]
+        },
         {
           "version": "1.0",
           "date": "2026-09-28",
