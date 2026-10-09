@@ -1984,7 +1984,7 @@
       }
     },
     "ssf2-ex": {
-      "current": "rc5",
+      "current": "rc6",
       "versions": {
         "rc1": {
           "current_revision": 2,
@@ -2411,6 +2411,65 @@
               "mra": "084d57c4467163fa9221866231d5bca01b7456561becda96b5bfd5553cdc3037"
             },
             "revision": 2
+          }
+        },
+        "rc6": {
+          "current_revision": 1,
+          "date": "2026-10-09",
+          "files": {
+            "ips": {
+              "archive": "archive/fcd2301162c6c58a7326925c948fbf4aaa0bb38d67b70a027b23110648b20c72/ssf2-ex-rc6-ips.zip",
+              "name": "ssf2-ex-rc6-ips.zip",
+              "sha256": "fcd2301162c6c58a7326925c948fbf4aaa0bb38d67b70a027b23110648b20c72",
+              "size": 1059255
+            },
+            "mra": {
+              "archive": "archive/f594304c5a41db98b239ac50cba7fa871d1dcd3b364317b61cf4ced7e930d35d/ssf2-ex-rc6-mra.zip",
+              "name": "ssf2-ex-rc6-mra.zip",
+              "sha256": "f594304c5a41db98b239ac50cba7fa871d1dcd3b364317b61cf4ced7e930d35d",
+              "size": 618015
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc6-candidate.4",
+            "capcom_source_commit": "d4e82d43806c4fb1c812f45302400e86447e3899",
+            "ready_record_sha256": "80013db0195a9831884134b6094fbb685a9c029bb94504a07dad1d559ad76095",
+            "release_sha256": "a437e9cd4ea4b55477b9a70cbb123ae07378d6aa43d0ad5080e3c485871af2c4",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-09",
+              "files": {
+                "ips": {
+                  "archive": "archive/fcd2301162c6c58a7326925c948fbf4aaa0bb38d67b70a027b23110648b20c72/ssf2-ex-rc6-ips.zip",
+                  "name": "ssf2-ex-rc6-ips.zip",
+                  "sha256": "fcd2301162c6c58a7326925c948fbf4aaa0bb38d67b70a027b23110648b20c72",
+                  "size": 1059255
+                },
+                "mra": {
+                  "archive": "archive/f594304c5a41db98b239ac50cba7fa871d1dcd3b364317b61cf4ced7e930d35d/ssf2-ex-rc6-mra.zip",
+                  "name": "ssf2-ex-rc6-mra.zip",
+                  "sha256": "f594304c5a41db98b239ac50cba7fa871d1dcd3b364317b61cf4ced7e930d35d",
+                  "size": 618015
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc6-candidate.4",
+                "capcom_source_commit": "d4e82d43806c4fb1c812f45302400e86447e3899",
+                "ready_record_sha256": "80013db0195a9831884134b6094fbb685a9c029bb94504a07dad1d559ad76095",
+                "release_sha256": "a437e9cd4ea4b55477b9a70cbb123ae07378d6aa43d0ad5080e3c485871af2c4",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }
