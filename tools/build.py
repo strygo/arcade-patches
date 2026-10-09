@@ -145,14 +145,74 @@ def versioned(html: str, depth: int) -> str:
     return re.sub(r'\b(src|href)="((?:\.\./)*(?:img/|downloads/|style\.css)[^"]*)"', sub, html)
 
 
-def page(site: dict, title: str, body: str, depth: int = 0) -> str:
+SOCIAL_DIR = DOCS / "img" / "social"
+_social_used: set = set()
+
+
+def plain_summary(text: str, limit: int = 200) -> str:
+    """One preview-sized sentence or two, cut at a word boundary."""
+    text = " ".join(text.split())
+    if len(text) <= limit:
+        return text
+    cut = text[:limit].rsplit(" ", 1)[0].rstrip(",;:")
+    return cut + "\u2026"
+
+
+def social_card(key: str, images: list) -> str:
+    """docs-relative path of the 1200x630 preview card made from `images`
+    (docs-relative paths); built once, then reused while the images match."""
+    sources = [DOCS / i for i in images]
+    import social_cards
+    name = social_cards.card_name(key, sources)
+    dest = SOCIAL_DIR / name
+    if not dest.exists():
+        social_cards.make_card(sources, dest)
+    _social_used.add(name)
+    return f"img/social/{name}"
+
+
+def prune_social_cards() -> None:
+    for old in SOCIAL_DIR.glob("*.png") if SOCIAL_DIR.is_dir() else []:
+        if old.name not in _social_used:
+            old.unlink()
+
+
+def social_tags(site: dict, social: dict | None) -> str:
+    """Open Graph and X card tags. social: title, description, path (the
+    page's URL path) and image (a docs-relative card from social_card)."""
+    if not social:
+        return ""
+    base = site["site_url"]
+    url = base + social["path"]
+    title, desc = esc(social["title"]), esc(plain_summary(social["description"]))
+    image = esc(base + social["image"])  # the card's name already carries its content hash
+    return f"""
+<meta name="description" content="{desc}">
+<link rel="canonical" href="{esc(url)}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{esc(site['title'])}">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{esc(url)}">
+<meta property="og:image" content="{image}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(social.get('alt', social['title']))}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="{esc(site['x_account'])}">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="{image}">"""
+
+
+def page(site: dict, title: str, body: str, depth: int = 0, social: dict | None = None) -> str:
     rel = "../" * depth
     return versioned(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)}</title>
+<title>{esc(title)}</title>{social_tags(site, social)}
 <link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="{rel}favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="apple-touch-icon" href="{rel}apple-touch-icon.png">
@@ -325,7 +385,7 @@ def render_changelog_section(site: dict, days: list) -> str:
     return "\n".join(out)
 
 
-def render_changelog_page(site: dict, days: list) -> str:
+def render_changelog_page(site: dict, days: list, social: dict | None = None) -> str:
     out = ['<a class="back" href="../">&larr; All patches</a>',
            "<h1>Changelog</h1>",
            "<p>Every release, newest first. Each entry links to that patch's own "
@@ -335,11 +395,12 @@ def render_changelog_page(site: dict, days: list) -> str:
         out.extend(render_changelog_entry(ev, depth=1, with_items=True)
                    for ev in day["events"])
         out.append("</ul>")
-    return page(site, f"Changelog · {site['title']}", "\n".join(out), depth=1)
+    return page(site, f"Changelog · {site['title']}", "\n".join(out), depth=1, social=social)
 
 
 def render_index(site: dict, patches: list, thumbs: dict,
-                 projects: list = (), project_thumbs: dict = {}, articles: list = ()) -> str:
+                 projects: list = (), project_thumbs: dict = {}, articles: list = (),
+                 social: dict | None = None) -> str:
     """The home page: the intro, then one section per kind of project (site
     `sections`, in order), each with its description and its cards.  Every
     patch and project names its section; an entry without one fails the
@@ -413,7 +474,7 @@ def render_index(site: dict, patches: list, thumbs: dict,
     changes = render_changelog_section(site, changelog_days(patches, projects))
     body = (f"{intro}\n" + "\n".join(sections)
             + f"\n{changes}\n{render_contact_section(site)}")
-    return page(site, site["title"], body)
+    return page(site, site["title"], body, social=social)
 
 
 def render_shots(shots: list, heading: str = "Screenshots") -> str:
@@ -830,7 +891,7 @@ def render_requirements(patch: dict) -> str:
 
 
 def render_builds_page(site: dict, patch: dict, builds: list, bundle: dict | None,
-                       shots: list | None = None) -> str:
+                       shots: list | None = None, social: dict | None = None) -> str:
     parts = ['<a class="back" href="../">&larr; All patches</a>']
     parts.append(f"<h1>{esc(patch['title'])}</h1>")
     parts.append(f'<p class="subtitle">{esc(patch["subtitle"])}</p>')
@@ -867,7 +928,8 @@ def render_builds_page(site: dict, patch: dict, builds: list, bundle: dict | Non
         parts.extend(f"<li>{esc(n)}</li>" for n in patch["notes"])
         parts.append("</ul>")
 
-    return page(site, f"{patch['title']} · {site['title']}", "\n".join(parts), depth=1)
+    return page(site, f"{patch['title']} · {site['title']}", "\n".join(parts), depth=1,
+                social=social)
 
 
 
@@ -897,7 +959,8 @@ def render_related(patch: dict) -> str:
     return f"<h2>Related projects</h2><ul>{items}</ul>"
 
 
-def render_patch_page(site: dict, patch: dict, bundle: dict | None, shots: list) -> str:
+def render_patch_page(site: dict, patch: dict, bundle: dict | None, shots: list,
+                      social: dict | None = None) -> str:
     parts = ['<a class="back" href="../">&larr; All patches</a>']
     parts.append(f"<h1>{esc(patch['title'])}</h1>")
     parts.append(f'<p class="subtitle">{esc(patch["subtitle"])}</p>')
@@ -946,12 +1009,12 @@ def render_patch_page(site: dict, patch: dict, bundle: dict | None, shots: list)
         parts.append("</ul>")
 
     title = f"{patch['title']} · {site['title']}"
-    return page(site, title, "\n".join(parts), depth=1)
+    return page(site, title, "\n".join(parts), depth=1, social=social)
 
 
 
 def render_project_page(site: dict, project: dict, kit: dict | None,
-                        shots: list) -> str:
+                        shots: list, social: dict | None = None) -> str:
     parts = ['<a class="back" href="../">&larr; All patches</a>']
     parts.append(f"<h1>{esc(project['title'])}</h1>")
     parts.append(f'<p class="subtitle">{esc(project["subtitle"])}</p>')
@@ -1058,7 +1121,7 @@ def render_project_page(site: dict, project: dict, kit: dict | None,
         parts.append("</ul>")
 
     title = f"{project['title']} · {site['title']}"
-    return page(site, title, "\n".join(parts), depth=1)
+    return page(site, title, "\n".join(parts), depth=1, social=social)
 
 
 def write_redirects(site: dict, patch: dict) -> None:
@@ -1084,7 +1147,7 @@ def write_redirects(site: dict, patch: dict) -> None:
         print(f"{old}: redirect to {patch['slug']} written")
 
 
-def render_article(site: dict, article: dict) -> str:
+def render_article(site: dict, article: dict, social: dict | None = None) -> str:
     """A reference page (e.g. the CPS-2+ hardware explainer): titled sections of
     paragraphs, lists and tables, plus optional related links."""
     parts = ['<a class="back" href="../">&larr; All patches</a>', f"<h1>{esc(article['title'])}</h1>"]
@@ -1109,10 +1172,11 @@ def render_article(site: dict, article: dict) -> str:
         for p in sec.get("after", []):
             parts.append(f"<p>{esc(p)}</p>")
     parts.append(render_related(article))
-    return page(site, f"{article['title']} · {site['title']}", "\n".join(parts), depth=1)
+    return page(site, f"{article['title']} · {site['title']}", "\n".join(parts), depth=1,
+                social=social)
 
 
-def render_legal(site: dict) -> str:
+def render_legal(site: dict, social: dict | None = None) -> str:
     contact = esc(site.get("contact_note", ""))
     body = f"""<h1>Legal &amp; disclaimers</h1>
 
@@ -1151,7 +1215,7 @@ fan-work practice, please get in touch and it will be addressed promptly.
 {contact}</p>
 
 <a class="back" href="./">&larr; Back</a>"""
-    return page(site, f"Legal · {site['title']}", body)
+    return page(site, f"Legal · {site['title']}", body, social=social)
 
 
 # ------------------------------------------------------------------ main
@@ -1187,6 +1251,7 @@ def main() -> None:
     )
 
     thumbs = {}
+    pending = []  # (path, entry, render(social)): written once every image is known
     for patch in patches:
         slug = patch["slug"]
         bundle = published_bundle(ROOT, patch, inventory)
@@ -1199,8 +1264,9 @@ def main() -> None:
                 thumbs[slug] = chosen["img"].replace("../", "")
             out_dir = DOCS / slug
             out_dir.mkdir(parents=True, exist_ok=True)
-            (out_dir / "index.html").write_text(
-                render_builds_page(site, patch, builds, bundle, shots))
+            pending.append((out_dir / "index.html", patch, lambda social, patch=patch,
+                            builds=builds, bundle=bundle, shots=shots:
+                            render_builds_page(site, patch, builds, bundle, shots, social)))
             print(f"{slug}: builds page rendered ({len(builds)} builds, "
                   f"{len(shots)} screenshots)")
             continue
@@ -1213,7 +1279,9 @@ def main() -> None:
                 thumbs[slug] = candidate.replace("../", "")  # index is one level up
         out_dir = DOCS / slug
         out_dir.mkdir(parents=True, exist_ok=True)
-        (out_dir / "index.html").write_text(render_patch_page(site, patch, bundle, shots))
+        pending.append((out_dir / "index.html", patch, lambda social, patch=patch,
+                        bundle=bundle, shots=shots:
+                        render_patch_page(site, patch, bundle, shots, social)))
         write_redirects(site, patch)
         print(f"{slug}: page rendered ({len(shots)} screenshot blocks)")
 
@@ -1228,24 +1296,51 @@ def main() -> None:
                 project_thumbs[slug] = candidate.replace("../", "")
         out_dir = DOCS / slug
         out_dir.mkdir(parents=True, exist_ok=True)
-        (out_dir / "index.html").write_text(
-            render_project_page(site, project, kit, shots))
+        pending.append((out_dir / "index.html", project, lambda social, project=project,
+                        kit=kit, shots=shots:
+                        render_project_page(site, project, kit, shots, social)))
         print(f"{slug}: project page rendered ({len(shots)} screenshot blocks)")
 
+    # Link previews: each page's own home-page image; pages without one, and
+    # the site-wide pages, share a mosaic taking each home-page section's
+    # images in turn, so it shows the range of the site.
+    images = {**thumbs, **project_thumbs}
+    by_section = [[images[e["slug"]] for e in projects + patches
+                   if e["section"] == sec["key"] and e["slug"] in images]
+                  for sec in site["sections"]]
+    mixed = [col[i] for i in range(max(map(len, by_section), default=0))
+             for col in by_section if i < len(col)]
+    site_card = social_card("arcade-patches", mixed[:4])
+
+    def social_for(entry: dict, path: str) -> dict:
+        own = images.get(entry["slug"])
+        text = entry.get("summary") or (entry.get("description") or [entry.get("subtitle", "")])[0]
+        return {"title": entry["title"], "description": text, "path": path,
+                "image": social_card(entry["slug"], [own]) if own else site_card}
+
+    for path, entry, render in pending:
+        path.write_text(render(social_for(entry, f"{entry['slug']}/")))
+    home = {"title": site["title"], "description": site["tagline"], "path": "", "image": site_card}
     (DOCS / "index.html").write_text(
         render_index(site, patches, thumbs, projects, project_thumbs,
-                     [a for a in config.get("articles", []) if not a.get("hidden")]))
-    (DOCS / "legal.html").write_text(render_legal(site))
+                     [a for a in config.get("articles", []) if not a.get("hidden")],
+                     social=home))
+    (DOCS / "legal.html").write_text(render_legal(
+        site, dict(home, title=f"Legal · {site['title']}", path="legal.html")))
     for article in config.get("articles", []):
         if article.get("hidden"):
             continue
         out_dir = DOCS / article["slug"]
         out_dir.mkdir(parents=True, exist_ok=True)
-        (out_dir / "index.html").write_text(render_article(site, article))
+        (out_dir / "index.html").write_text(
+            render_article(site, article, social_for(article, f"{article['slug']}/")))
         print(f"{article['slug']}: article rendered")
     days = changelog_days(patches, projects)
     (DOCS / "changelog").mkdir(parents=True, exist_ok=True)
-    (DOCS / "changelog" / "index.html").write_text(render_changelog_page(site, days))
+    (DOCS / "changelog" / "index.html").write_text(render_changelog_page(site, days, dict(
+        home, title=f"Changelog · {site['title']}", path="changelog/",
+        description="Every release of every Arcade Patches project, newest first.")))
+    prune_social_cards()
     print(f"changelog: {sum(len(d['events']) for d in days)} releases over {len(days)} days")
     print(f"\nSite built into {DOCS}")
 
