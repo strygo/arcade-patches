@@ -21,8 +21,15 @@ anyway: the import commits whatever the page says.
 
 ### 1. Prepare the page, then commit it
 
-Write for players. The description and the changes list describe the game,
-not the release process. Public text never mentions:
+Write for players: say what the player gets, never how it was made, reviewed
+or verified. The description and the changes list describe the game, not the
+release process. Words like "reviewed English", "checked against the
+script", "approved", "source-matched" and internal data terms ("records",
+"slots", "donors") are process language; say "win quotes", "follows the
+Japanese script". Keep it short: one `changes` line per feature (what it is,
+plus the input if there is one) and short screenshot captions. A how-to with
+controls and rules belongs in the kit README, not the page. Public text never
+mentions:
 
 - where, how or whether a build was tested, or what testing is still to come
   (MiSTer, hardware checks, MAME passes, "machine verified"). Steve handles QA
@@ -39,19 +46,29 @@ Also:
 
 - `subtitle` is a plain kind label ("Enhanced version", "English
   restoration", "Arcade backport"), never a tagline.
-- Add one `release_history` entry for the new version. List only the
+- Add one `release_history` entry for the new version, shaped
+  `{"version": ..., "date": ..., "items": [...]}` like the others, first in
+  the list and matching the page's `version` and `date`. List only the
   public-facing changes since the last **public** version. Leave out bugs that
   existed only in candidates, MRA folder moves and low-level detail.
 - Check every claim against the project's own docs in `../capcom` (for
   example, `translations/ssf2x/enhanced/OPERATOR_SETTINGS.md`), not against
   commit subjects. SSF2 EX rc4 candidate 1 described a BONUS STAGE on/off
-  operator setting as a "pace" option.
+  operator setting as a "pace" option. The docs are the source for facts, not
+  wording: they are written for developers, so restate each claim in a
+  player's words.
+- A page needs screenshots before import (a hidden page may wait until then):
+  natural gameplay, no boot or identity screens, and short captions.
 - Re-read the existing `changes`, `comparison` and screenshot captions against
   the new behavior. A caption describing something the release changed must
   change too. SSF2 EX rc4's bonus stages started following the Turbo speed,
   so "at the original Super Street Fighter II speed" had to go.
 - Set `version` and `date`, keep `"hidden": true` on a brand-new page, then
   commit. The plan pins that commit.
+- `python3 tools/build.py` validates every page's shape first, hidden pages
+  included (`tools/page_schema.py`), before it renders anything. A hidden page
+  is not rendered, so the validator is the only build check it gets before
+  import unhides it.
 
 ### 2. Check the built candidate before the long gates
 

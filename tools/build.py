@@ -16,6 +16,7 @@ from html import escape as esc
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
+from page_schema import validate as validate_pages
 from release_inventory import load_inventory, published_bundle, validate_inventory
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -1230,6 +1231,7 @@ def main() -> None:
     if args.only:
         ONLY.update(x.strip() for x in args.only.split(",") if x.strip())
     config = json.loads((ROOT / "data" / "patches.json").read_text())
+    validate_pages(config)
     inventory = load_inventory(ROOT / "data" / "releases.json")
     validate_inventory(ROOT, inventory)
     site, patches = config["site"], config["patches"]
