@@ -293,10 +293,9 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
                       "an upstream HBMAME submission is pending."]
         if hb.get('complete'):
             lines += [f"Put {', '.join(s + '.zip' for s in hb_sets)} and qsound.zip in HBMAME's roms/ folder;",
-                      "it holds the complete set and loads with no checksum warnings."]
+                      "it holds the complete set."]
         else:
-            lines += [f"Put the zip in HBMAME's roms/ folder next to your stock {setname}.zip.",
-                      "It loads with no checksum warnings."]
+            lines += [f"Put the zip in HBMAME's roms/ folder next to your stock {setname}.zip."]
     if any(o[3] for o in outputs):
         lines += [
             "",

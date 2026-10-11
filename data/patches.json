@@ -2867,8 +2867,8 @@
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc3",
-      "date": "2026-10-06",
+      "version": "rc4",
+      "date": "2026-10-11",
       "game": "Marvel Super Heroes vs. Street Fighter (Japan 970707)",
       "set": "mshvsfj",
       "hardware": "Capcom CPS-2",
@@ -2892,13 +2892,22 @@
         "A new English translation from the Japanese: sixteen win quotes per fighter instead of eight, and all seventeen standard endings",
         "U.S. Agent, Mephisto and Shadow get their names in the fight HUD, which the original game leaves blank",
         "M. Bison's Hyper Combo is Knee Press Nightmare in every region, the name Capcom has used since Alpha 3",
-        "Two extra colors per fighter from the Saturn version: pick your fighter with HP or HK; the selected color appears in select, versus and fight HUD portraits",
+        "Two extra colors per fighter from the Saturn version: pick your fighter with HP or HK; the selected color appears in portraits, intros, special moves and hypers",
         "Versus names are centered and spaced, with two lines for long hidden names; selected names stay visible above the fighters",
         "Eight game speeds instead of three",
         "USA and Japan builds, both with Free Play",
         "Gameplay untouched"
       ],
       "release_history": [
+        {
+          "version": "rc4",
+          "date": "2026-10-11",
+          "items": [
+            "HP and HK colors now stay on through intros, special moves and hypers instead of switching to the Kick colors.",
+            "On the first stage, your team is back on screen for the opponent reveal instead of disappearing after MODE and SPEED.",
+            "Both kits have new checksums, so rebuild them with the rc4 downloads."
+          ]
+        },
         {
           "version": "rc3",
           "date": "2026-10-06",

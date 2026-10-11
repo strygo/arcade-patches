@@ -146,6 +146,15 @@ class ReleasePackagerTests(unittest.TestCase):
                 self.assertEqual({'game.03': b'fixed', 'game.04': b'unchanged'},
                                  {n: z.read(n) for n in z.namelist()})
 
+    def test_hbmame_readme_makes_no_checksum_claim(self):
+        # HBMAME collections lag new versions, so the readme promises nothing
+        # about HBMAME's checksums.
+        patch = {"slug": "demo", "set": "demo", "hbmame": {"setname": "demoex", "pr_url": "https://example.invalid/1"}}
+        text = "\n".join(packager.ips_readme_lines(patch, [], None))
+        self.assertIn("official HBMAME set (demoex)", text)
+        self.assertIn("next to your stock demo.zip.", text)
+        self.assertNotIn("checksum", text.split("HBMAME:", 1)[1].split("\n\n", 1)[0])
+
     def test_builds_round_trip_checked_ips_without_the_site_renderer(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
