@@ -3,6 +3,34 @@
 Other sessions often leave uncommitted edits in this checkout. Run
 `git status` before you start, and stage only the files your task owns.
 
+## Commits on master
+
+All work is on `master`, and other sessions commit to it while you work.
+
+- Before `--amend`, a fixup or a rebase, check `git log --oneline -3`. Never
+  amend or fix up a commit your task didn't make; HEAD may now be someone
+  else's.
+- Name page commits `<slug>: <version> page (...)`. They fold into the final
+  `<slug>: <version>` at import.
+- Page commits change `data/` (and the kit tooling a release needs), never
+  `docs/`. Only the import commit carries the rebuilt `docs/`.
+- Between a page commit and its import, `tools/build.py` stops at the release
+  inventory ("page version rcN != inventory current rcM"). That is expected;
+  never edit `data/releases.json` by hand to make it pass.
+- When you commit a Capcom plan, put its packager commit on
+  `keep/<slug>-<version>-candidate<N>-packager` straight away. Any later
+  rewrite, yours or another track's fold, would otherwise orphan the commit
+  the plan pins. Keep refs stay local.
+- Keep releases in order directly on top of the published tip
+  (`origin/master`), so each can be pushed on its own with
+  `git push origin <sha>:master`. To fold a release whose commits are
+  separated by another track's unpushed commits, rebase those commits on top
+  of the folded release. That is allowed only when their trees are otherwise
+  unchanged (check with `git diff <old> <new>`) and every commit their plans
+  pin is already on a `keep/` ref. Report the new hashes to Steve so the
+  other session can be told.
+- Never rewrite pushed commits.
+
 ## Release candidates: the page is part of the kit
 
 Capcom's candidate factory (`../capcom/release/CANDIDATES.md`) packages each
@@ -108,10 +136,13 @@ python3 tools/build.py
 ```
 
 Run the `check-ready` step from `../capcom`; [README.md](README.md#importing-a-release)
-explains what the importer verifies. Fold the page-preparation commits and the
-import into one commit named `<slug>: <version>`. The Capcom plan pins the
-packager commit, so keep it reachable on
-`keep/<slug>-<version>-candidate<N>-packager`. Push only with Steve's OK.
+explains what the importer verifies. Import one kit at a time and keep any
+other new page hidden until its own import: every unhidden page needs a
+release, and a failed import can leave a stray `docs/downloads/archive/`
+folder. Fold the page-preparation commits and the import into one commit
+named `<slug>: <version>` (see [Commits on master](#commits-on-master)). The
+Capcom plan pins the packager commit, which stays on its `keep/` ref. Push
+only with Steve's OK, and only the commits he named.
 After Pages deploys, run `python3 tools/verify_hosted_releases.py`.
 
 A release that changes game bytes usually has follow-ups. Check whether CPS+
