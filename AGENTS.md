@@ -74,6 +74,13 @@ Also:
 
 - `subtitle` is a plain kind label ("Enhanced version", "English
   restoration", "Arcade backport"), never a tagline.
+- Weigh an update against the whole game. The `release_history` entry is
+  where an rc's fixes and additions go. Don't rebuild the summary, the
+  description or the screenshots around them. A bug fix changes the body only
+  if the body was wrong. A small addition gets one `changes` line and at most a
+  clause in the description; it gets a screenshot or summary mention only if
+  it matters to someone choosing the game. The page should read the same as if
+  the feature had been there from the first release.
 - Add one `release_history` entry for the new version, shaped
   `{"version": ..., "date": ..., "items": [...]}` like the others, first in
   the list and matching the page's `version` and `date`. List only the
