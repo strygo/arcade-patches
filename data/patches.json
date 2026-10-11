@@ -1985,7 +1985,7 @@
       "game": "Final Fight (arcade, Capcom CPS-1)",
       "set": "\u2014",
       "hardware": "Capcom CPS-1",
-      "summary": "The Sega CD version of Final Fight opened with a proper animated cutscene. Final Fight EX puts it back on the arcade game, running as native CPS-1 graphics, with a new EX title and a hidden stage select, for HBMAME and MiSTer.",
+      "summary": "The Sega CD version of Final Fight opened with a proper animated cutscene. Final Fight EX puts it back on the arcade game, running as native CPS-1 graphics, with a new EX title, for HBMAME and MiSTer.",
       "description": [
         "The 1993 Sega CD port replaced the arcade's brief story block with a fully animated opening and a soundtrack with spoken dialogue. Final Fight EX reproduces that cutscene as native CPS-1 presentation on the arcade Final Fight, driven by a new 68K cutscene engine added to the game's program ROM, and gives it a new EX title screen. A hidden code on the title screen opens a stage select. The stock game, its timing, and its gameplay are left intact.",
         "The cutscene art needs far more room than the original Final Fight hardware has, so the graphics region is grown from 2 MB to 6 MB. Original CPS-1 hardware and stock MAME cannot address that extra ROM, so this runs only on HBMAME and on MiSTer's jtcps1 core.",
@@ -2005,10 +2005,6 @@
         {
           "single": "data/screenshots/final-fight-ex/title_ex_usa.png",
           "caption": "The Final Fight EX title, with the EX settled beside FIGHT."
-        },
-        {
-          "single": "data/screenshots/final-fight-ex/stage_select.png",
-          "caption": "The hidden stage select."
         },
         {
           "single": "data/screenshots/final-fight-ex/scene_map.png",
