@@ -1980,14 +1980,14 @@
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc2",
-      "date": "2026-09-17",
+      "version": "rc3",
+      "date": "2026-10-10",
       "game": "Final Fight (arcade, Capcom CPS-1)",
       "set": "\u2014",
       "hardware": "Capcom CPS-1",
-      "summary": "The Sega CD version of Final Fight opened with a proper animated cutscene. Final Fight EX puts it back on the arcade game, running as native CPS-1 graphics, with a new EX title, for HBMAME and MiSTer.",
+      "summary": "The Sega CD version of Final Fight opened with a proper animated cutscene. Final Fight EX puts it back on the arcade game, running as native CPS-1 graphics, with a new EX title and a hidden stage select, for HBMAME and MiSTer.",
       "description": [
-        "The 1993 Sega CD port replaced the arcade's brief story block with a fully animated opening and a soundtrack with spoken dialogue. Final Fight EX reproduces that cutscene as native CPS-1 presentation on the arcade Final Fight, driven by a new 68K cutscene engine added to the game's program ROM, and gives it a new EX title screen. The stock game, its timing, and its gameplay are left intact.",
+        "The 1993 Sega CD port replaced the arcade's brief story block with a fully animated opening and a soundtrack with spoken dialogue. Final Fight EX reproduces that cutscene as native CPS-1 presentation on the arcade Final Fight, driven by a new 68K cutscene engine added to the game's program ROM, and gives it a new EX title screen. A hidden code on the title screen opens a stage select. The stock game, its timing, and its gameplay are left intact.",
         "The cutscene art needs far more room than the original Final Fight hardware has, so the graphics region is grown from 2 MB to 6 MB. Original CPS-1 hardware and stock MAME cannot address that extra ROM, so this runs only on HBMAME and on MiSTer's jtcps1 core.",
         "There are two regional builds, USA (ffightus01) and Japan (ffightjs01), each matched to its own disc. You supply the arcade Final Fight romset and your own Final Fight CD, and the build is put together on your machine.",
         "This is the visual half. The cutscenes play over the arcade game's own music and effects. The Sega CD's soundtrack and spoken dialogue are a separate release, the CPS+ arrange packs, which ship their own MiSTer MRA combining the two. Install this on its own and you get the cutscenes with arcade audio."
@@ -1996,6 +1996,7 @@
         "The Sega CD opening cutscene rebuilt as native CPS-1 graphics: the Metro City map, the Mad Gear line-up, Damnd's sketch and the knife, Haggar's phone call, and the Cody & Guy montage",
         "The ending's reunion scene between Haggar and Jessica, redrawn from the Sega CD",
         "A new Final Fight EX title screen",
+        "A hidden stage select: hold attack and jump and press Start on the title screen",
         "A new 68K cutscene engine, leaving the stock story, timing, and gameplay unchanged",
         "USA (ffightus01) and Japan (ffightjs01) builds, each matched to its region's disc dialogue and artwork",
         "Delivered as an HBMAME set and a MiSTer jtcps1 MRA that sit alongside the stock game"
@@ -2004,6 +2005,10 @@
         {
           "single": "data/screenshots/final-fight-ex/title_ex_usa.png",
           "caption": "The Final Fight EX title, with the EX settled beside FIGHT."
+        },
+        {
+          "single": "data/screenshots/final-fight-ex/stage_select.png",
+          "caption": "The hidden stage select."
         },
         {
           "single": "data/screenshots/final-fight-ex/scene_map.png",
@@ -2065,6 +2070,14 @@
         "final-fight-cd"
       ],
       "release_history": [
+        {
+          "version": "rc3",
+          "date": "2026-10-10",
+          "items": [
+            "Added a hidden stage select: hold attack and jump and press Start on the title screen.",
+            "Both sets are rebuilt and their checksums have changed, so rebuild them with the rc3 kit."
+          ]
+        },
         {
           "version": "rc2",
           "date": "2026-09-17",

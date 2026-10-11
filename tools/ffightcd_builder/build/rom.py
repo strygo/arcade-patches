@@ -23,6 +23,7 @@ import fmloop  # noqa: E402
 import vbsched  # noqa: E402
 import title_ex  # noqa: E402
 import select_window  # noqa: E402
+import stage_select  # noqa: E402
 from text import (CREDITS_SRC, build_ending_captions, build_ending_captions_rom,
 
                   build_credits, rom_caption_lines)  # noqa: E402
@@ -1919,6 +1920,13 @@ def main() -> int:
         for i, v in enumerate(e3["eng"]):
             a = ENGINE3 + i - 0x80000
             p5[a ^ 1] = v
+        assert ENGINE3 + len(e3["eng"]) <= stage_select.BASE, \
+            "engine3 grew into the stage select code"
+
+    # Stage select: the title-screen code, the STAGE SELECT screen after
+    # character select, and the high-score bypass (stage_select.py).
+    ss_blob, ss_entries = stage_select.install(w_pair, r_pair, p5)
+    print(f"stage select {len(ss_blob)} bytes at {stage_select.BASE:#x}")
 
     (outdir / "ff_36.11f").write_bytes(p1)
     (outdir / "ff_42.11h").write_bytes(p2)

@@ -1,15 +1,15 @@
 Final Fight EX — reconstruction kit
 ===================================
 
-Version:      rc2 (2026-09-17)
+Version:      rc3 (2026-10-10)
 Hardware:     Capcom CPS-1
 Target:       HBMAME sets ffightus01 / ffightjs01, and MiSTer (jtcps1)
 Backport by:  Steve Gordon (https://x.com/strygo)
 Website:      https://arcadepatches.com/final-fight-ex/
 
 This kit rebuilds Final Fight EX, the CPS-1 arcade Final Fight with the
-Sega CD version's cutscenes and an EX title, from your own disc images and
-your own arcade romset. No game data is included.
+Sega CD version's cutscenes, an EX title and a hidden stage select, from
+your own disc images and your own arcade romset. No game data is included.
 
 The cutscenes are not captured from an emulator. A 68000 interpreter runs
 the disc's own scene script and renders the Mega Drive video state it
@@ -63,6 +63,14 @@ A successful build removes its own scratch directory, so it leaves you the
 sets and nothing else. Pass --cache to keep it if you want to look at the
 rendered scenes; a re-run renders them again either way.
 
+
+STAGE SELECT
+------------
+
+Insert a coin, then hold attack and jump and press Start on the title
+screen. Damnd's laugh confirms the code. After character select, pick any
+of the six rounds on the Metro City map with the stick, then press attack,
+jump or Start. Runs started this way don't enter the high-score table.
 
 
 ON MISTER

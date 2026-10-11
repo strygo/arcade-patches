@@ -463,7 +463,7 @@
       }
     },
     "final-fight-ex": {
-      "current": "rc2",
+      "current": "rc3",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -622,6 +622,53 @@
               "kit": "da7217a6278401c649aed00bd604b19e6dcc5d9deabd47eb4335c6a008545a9e"
             },
             "revision": 2
+          }
+        },
+        "rc3": {
+          "current_revision": 1,
+          "date": "2026-10-10",
+          "files": {
+            "kit": {
+              "archive": "archive/c78024a4a3c619d2781d50d6ed4a3d80424434299f0cba45a059ff0afab4856a/final-fight-ex-rc3-kit.zip",
+              "name": "final-fight-ex-rc3-kit.zip",
+              "sha256": "c78024a4a3c619d2781d50d6ed4a3d80424434299f0cba45a059ff0afab4856a",
+              "size": 281162
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc3-candidate.3",
+            "capcom_source_commit": "3e28bd747ffef1f0db3ce1b120c19a22afcfe5ff",
+            "ready_record_sha256": "b8f13b9ccc87eb4bd5f2929bbd5c297040eb16e6c410f9de102bd9779b81b512",
+            "release_sha256": "32b004a33e8262088a2a26491ac02cee9a257da6572024c4e9d36bb0aab3e34b",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/c78024a4a3c619d2781d50d6ed4a3d80424434299f0cba45a059ff0afab4856a/final-fight-ex-rc3-kit.zip",
+                  "name": "final-fight-ex-rc3-kit.zip",
+                  "sha256": "c78024a4a3c619d2781d50d6ed4a3d80424434299f0cba45a059ff0afab4856a",
+                  "size": 281162
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc3-candidate.3",
+                "capcom_source_commit": "3e28bd747ffef1f0db3ce1b120c19a22afcfe5ff",
+                "ready_record_sha256": "b8f13b9ccc87eb4bd5f2929bbd5c297040eb16e6c410f9de102bd9779b81b512",
+                "release_sha256": "32b004a33e8262088a2a26491ac02cee9a257da6572024c4e9d36bb0aab3e34b",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }

@@ -62,6 +62,7 @@ def load_baseline() -> set[tuple[str, str]]:
 
 def check(path: Path) -> None:
     """Raise ValueError when a download adds a name or review citation."""
+    path = Path(path)
     tolerated = load_baseline()
     new = [(m, l) for m, l in hits(path) if (m, l) not in tolerated]
     if new:
