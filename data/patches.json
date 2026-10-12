@@ -1827,8 +1827,8 @@
       "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-09-17",
+      "version": "rc2",
+      "date": "2026-10-11",
       "game": "Street Fighter Zero 2 Alpha (Asia 960826)",
       "set": "sfz2al",
       "hardware": "Capcom CPS-2",
@@ -1839,9 +1839,9 @@
       "description": [
         "Street Fighter Zero 2 Alpha is the updated Alpha 2, and its Asian version plays in English. But that English script was a shortened one. Story scenes lost pages, Evil Ryu borrowed Ryu's ending, and each fighter picked from four random win quotes instead of the hundreds the Japanese game has.",
         "The English Restoration is the Japanese script, in English. Every story and ending page is back, in the Japanese order. Evil Ryu has his own ending again, and his scene with Akuma. All 452 win quotes are here, picked by who you beat and how much health you had left, just like in Japan. Where Capcom's English said the same thing as the Japanese it's kept; everything else is newly translated.",
-        "A few smaller things come along: red blood on hits, as in Japan; Birdie's third victory pose, which the export version swapped out; and the Manual guard panel on the select screen now explains itself.",
-        "The fighting is untouched, and the ROM sizes and key stay stock, so it drops in over the Asian set in MAME, HBMAME, on MiSTer or on original CPS-2 hardware. The same restoration is in the English builds of Street Fighter Alpha 2 Gold.",
-        "This is a release candidate. It has been checked in MAME, route by route; a MiSTer hardware pass is still to come."
+        "A few smaller things come along: red blood on hits, as in Japan; Birdie's third victory pose, which the export version swapped out; English place names on the next-stage map; and the Manual guard panel on the select screen now explains itself.",
+        "The fighting follows the Japanese version, and the ROM sizes and key stay stock, so it drops in over the Asian set in MAME, HBMAME, on MiSTer or on original CPS-2 hardware. The same restoration is in the English builds of Street Fighter Alpha 2 Gold.",
+        "This is a release candidate."
       ],
       "changes": [
         "Every story page from the Japanese game, in the Japanese order, including the scenes the English script cut short",
@@ -1851,9 +1851,34 @@
         "Every ending in full, in English",
         "Story, ending and quote text translated from the Japanese, keeping Capcom's English wherever it matched",
         "Red blood on hits, as in Japan",
+        "English place names on the next-stage map, as in Japan",
+        "Win-quote pick by holding buttons, as in Japan",
+        "A REGULATION setting for white blood (off by default)",
         "Birdie's third victory pose, back",
-        "The Manual guard panel explains itself (it appears when the operator turns on Auto Guard)",
-        "Gameplay untouched"
+        "The Manual guard panel explains itself",
+        "Computer opponents and two-player damage as in the Japanese version"
+      ],
+      "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-10-11",
+          "items": [
+            "The next-stage map names the place you're headed, in English, as in Japan.",
+            "Hold buttons and a direction at the winning K.O. to pick your win quote, as in Japan.",
+            "Computer opponents and two-player damage now follow the Japanese version.",
+            "A new REGULATION operator setting switches the blood to white; it's off by default.",
+            "Factory settings now match Japan, including the Manual or Auto guard choice at the select screen.",
+            "Dan's ending has his spoken line, and Charlie's Sonic Boom and Chun-Li's Kikoken get Capcom's later fix.",
+            "The set has new checksums, so rebuild it with the rc2 kit."
+          ]
+        },
+        {
+          "version": "rc1",
+          "date": "2026-09-17",
+          "items": [
+            "First public release."
+          ]
+        }
       ],
       "comparison": {
         "heading": "Compared with the arcade versions",
@@ -1910,10 +1935,22 @@
             "Yes"
           ],
           [
-            "Gameplay",
-            "Original",
-            "Original",
-            "Original"
+            "Next-stage place names",
+            "Yes",
+            "Country only",
+            "Yes, in English"
+          ],
+          [
+            "Pick your win quote",
+            "Yes",
+            "No",
+            "Yes"
+          ],
+          [
+            "Computer opponents and two-player damage",
+            "Japanese",
+            "Export",
+            "Japanese"
           ]
         ]
       },
@@ -1946,7 +1983,8 @@
           "sza.13m": "sza.13m",
           "sza.15m": "sza.15m",
           "sza.17m": "sza.17m",
-          "sza.19m": "sza.19m"
+          "sza.19m": "sza.19m",
+          "szaa.08": "szaa.08"
         }
       },
       "screenshots": [
