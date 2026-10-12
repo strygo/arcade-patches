@@ -2921,7 +2921,7 @@
       }
     },
     "vhunt2-english": {
-      "current": "rc2",
+      "current": "rc3",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -3157,6 +3157,65 @@
               "mra": "f64f00a43d246e68846638c9a2d1892d5987872bad9046a21195bc7b1b414891"
             },
             "revision": 3
+          }
+        },
+        "rc3": {
+          "current_revision": 1,
+          "date": "2026-10-11",
+          "files": {
+            "ips": {
+              "archive": "archive/d4ce7461749074b59c1a87c8513cd29c1e5b1adb61a1c8e1c1a3c2277ad8186c/vhunt2-english-rc3-ips.zip",
+              "name": "vhunt2-english-rc3-ips.zip",
+              "sha256": "d4ce7461749074b59c1a87c8513cd29c1e5b1adb61a1c8e1c1a3c2277ad8186c",
+              "size": 43072
+            },
+            "mra": {
+              "archive": "archive/f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb/vhunt2-english-rc3-mra.zip",
+              "name": "vhunt2-english-rc3-mra.zip",
+              "sha256": "f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb",
+              "size": 20149
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc3-candidate.3",
+            "capcom_source_commit": "a04df86416add693af1b441f99819d8130d6539e",
+            "ready_record_sha256": "c9ffb8e8dc32d4e1bb325864e13c05b7e938cb91ffdc8d948051ded2990ea092",
+            "release_sha256": "e3b5dfd7bd9aab4a558c03c9a983fda46c8e04d7814fd59ec656416dc8fe56d5",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-11",
+              "files": {
+                "ips": {
+                  "archive": "archive/d4ce7461749074b59c1a87c8513cd29c1e5b1adb61a1c8e1c1a3c2277ad8186c/vhunt2-english-rc3-ips.zip",
+                  "name": "vhunt2-english-rc3-ips.zip",
+                  "sha256": "d4ce7461749074b59c1a87c8513cd29c1e5b1adb61a1c8e1c1a3c2277ad8186c",
+                  "size": 43072
+                },
+                "mra": {
+                  "archive": "archive/f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb/vhunt2-english-rc3-mra.zip",
+                  "name": "vhunt2-english-rc3-mra.zip",
+                  "sha256": "f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb",
+                  "size": 20149
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc3-candidate.3",
+                "capcom_source_commit": "a04df86416add693af1b441f99819d8130d6539e",
+                "ready_record_sha256": "c9ffb8e8dc32d4e1bb325864e13c05b7e938cb91ffdc8d948051ded2990ea092",
+                "release_sha256": "e3b5dfd7bd9aab4a558c03c9a983fda46c8e04d7814fd59ec656416dc8fe56d5",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }

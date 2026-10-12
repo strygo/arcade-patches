@@ -1277,8 +1277,8 @@
       "subtitle": "English translation",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc2",
-      "date": "2026-09-17",
+      "version": "rc3",
+      "date": "2026-10-11",
       "game": "Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)",
       "set": "vhunt2",
       "hardware": "Capcom CPS-2",
@@ -1356,6 +1356,14 @@
         "MAME reports checksum warnings for the seven patched files. This is expected; the game boots and plays normally."
       ],
       "release_history": [
+        {
+          "version": "rc3",
+          "date": "2026-10-11",
+          "items": [
+            "Win quotes now break across their two lines at natural points instead of splitting phrases.",
+            "The set has new checksums, so rebuild it with the rc3 kit."
+          ]
+        },
         {
           "version": "rc2",
           "date": "2026-09-17",

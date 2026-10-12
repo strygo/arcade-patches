@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Night Warriors 2</h1>
 <p class="subtitle">English translation</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>vhunt2</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-09-17</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>vhunt2</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-10-11</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot"><div class="pair"><div><p class="label">Original</p><img src="../img/vhunt2-english/00_before.png?v=47220f1d02" alt="Original: Title screen. The arcade-native Night Warriors 2 logo, completed from the unused Western title path in the original ROM."></div><div><p class="label">Patched</p><img src="../img/vhunt2-english/00_after.png?v=787780b268" alt="Patched: Title screen. The arcade-native Night Warriors 2 logo, completed from the unused Western title path in the original ROM."></div></div><figcaption>Title screen. The arcade-native Night Warriors 2 logo, completed from the unused Western title path in the original ROM.</figcaption></figure>
 <figure class="shot"><div class="pair"><div><p class="label">Original</p><img src="../img/vhunt2-english/01_before.png?v=98a91a89c5" alt="Original: Character select. Phobos becomes Huitzil, his official Western name."></div><div><p class="label">Patched</p><img src="../img/vhunt2-english/01_after.png?v=d308e7e99e" alt="Patched: Character select. Phobos becomes Huitzil, his official Western name."></div></div><figcaption>Character select. Phobos becomes Huitzil, his official Western name.</figcaption></figure>
@@ -60,25 +60,25 @@
 <li>Oboro Bishamon&#x27;s win plays his own victory music, as intended</li>
 </ul>
 <h2>Downloads</h2>
-<p>Tools updated 2026-10-07. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware</div>
-  <div class="file"><a href="../downloads/vhunt2-english-rc2-ips.zip?v=188cfd25f0">vhunt2-english-rc2-ips.zip</a>
+  <div class="file"><a href="../downloads/vhunt2-english-rc3-ips.zip?v=d4ce746174">vhunt2-english-rc3-ips.zip</a>
   (42 KB)</div>
-  <div class="hash">SHA-256: 188cfd25f0988c48b0b01d4e035a0bd469f93850f396cf778cef4dbe5da93900</div>
+  <div class="hash">SHA-256: d4ce7461749074b59c1a87c8513cd29c1e5b1adb61a1c8e1c1a3c2277ad8186c</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRA only</div>
-  <div class="file"><a href="../downloads/vhunt2-english-rc2-mra.zip?v=7ac2e7d996">vhunt2-english-rc2-mra.zip</a>
-  (19 KB)</div>
-  <div class="hash">SHA-256: 7ac2e7d996b9110a3859b82b2559b97ce1a44d6cbade97b8f405ed7bed73387a</div>
+  <div class="file"><a href="../downloads/vhunt2-english-rc3-mra.zip?v=f60e70bcd3">vhunt2-english-rc3-mra.zip</a>
+  (20 KB)</div>
+  <div class="hash">SHA-256: f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb</div>
 </div>
 <p>You need your own dump of <strong>Vampire Hunter 2: Darkstalkers Revenge (Japan 970929)</strong> as the MAME
 set <code>vhunt2.zip</code>.
 Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
 <h2>How to apply</h2>
-<pre><code>unzip vhunt2-english-rc2-ips.zip -d vhunt2-patch
+<pre><code>unzip vhunt2-english-rc3-ips.zip -d vhunt2-patch
 cd vhunt2-patch
 python3 apply.py /path/to/vhunt2.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -105,15 +105,19 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <h3>Changed ROMs</h3>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
-<tr><td class="mono">vh2.13m</td><td>4.0 MB</td><td class="mono">3b02ddaa</td><td class="mono">3a56e2f4</td></tr>
-<tr><td class="mono">vh2.15m</td><td>4.0 MB</td><td class="mono">4e40de66</td><td class="mono">aa61e461</td></tr>
-<tr><td class="mono">vh2.17m</td><td>4.0 MB</td><td class="mono">b31d00c9</td><td class="mono">ccd2f7c4</td></tr>
-<tr><td class="mono">vh2.19m</td><td>4.0 MB</td><td class="mono">149be3ab</td><td class="mono">5df31cf6</td></tr>
-<tr><td class="mono">vh2j.03a</td><td>512 KB</td><td class="mono">9ae8f186</td><td class="mono">10da5708</td></tr>
-<tr><td class="mono">vh2j.04a</td><td>512 KB</td><td class="mono">e2fabf53</td><td class="mono">60cf3a23</td></tr>
+<tr><td class="mono">vh2.13m</td><td>4.0 MB</td><td class="mono">3b02ddaa</td><td class="mono">d3d78306</td></tr>
+<tr><td class="mono">vh2.15m</td><td>4.0 MB</td><td class="mono">4e40de66</td><td class="mono">c204240e</td></tr>
+<tr><td class="mono">vh2.17m</td><td>4.0 MB</td><td class="mono">b31d00c9</td><td class="mono">d07037e5</td></tr>
+<tr><td class="mono">vh2.19m</td><td>4.0 MB</td><td class="mono">149be3ab</td><td class="mono">6cc239ff</td></tr>
+<tr><td class="mono">vh2j.03a</td><td>512 KB</td><td class="mono">9ae8f186</td><td class="mono">1d20cdec</td></tr>
+<tr><td class="mono">vh2j.04a</td><td>512 KB</td><td class="mono">e2fabf53</td><td class="mono">15206969</td></tr>
 <tr><td class="mono">vh2j.08</td><td>512 KB</td><td class="mono">ac873dff</td><td class="mono">be9d8a6c</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc3 (2026-10-11)</h3><ul>
+<li>Win quotes now break across their two lines at natural points instead of splitting phrases.</li>
+<li>The set has new checksums, so rebuild it with the rc3 kit.</li>
+</ul>
 <h3>rc2 (2026-09-17)</h3><ul>
 <li>The translation now uses Capcom&#x27;s official Darkstalkers 3 English wherever it was accurate to the Japanese, and the rest has been refined to match Capcom&#x27;s style.</li>
 <li>Oboro Bishamon&#x27;s win now plays his own victory theme instead of a stage theme.</li>
