@@ -1894,6 +1894,70 @@
         }
       }
     },
+    "sfa2-restoration": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-10-11",
+          "files": {
+            "ips": {
+              "archive": "archive/33cc5447f22f7fe2d8ab1b1171ab454487ed326b13c452cd47bd25d19bc09fa6/sfa2-restoration-rc1-ips.zip",
+              "name": "sfa2-restoration-rc1-ips.zip",
+              "sha256": "33cc5447f22f7fe2d8ab1b1171ab454487ed326b13c452cd47bd25d19bc09fa6",
+              "size": 1273262
+            },
+            "mra": {
+              "archive": "archive/d185010135df6c6f1053f4a854e3675bc286da0165c8c6a38aab632c66f89741/sfa2-restoration-rc1-mra.zip",
+              "name": "sfa2-restoration-rc1-mra.zip",
+              "sha256": "d185010135df6c6f1053f4a854e3675bc286da0165c8c6a38aab632c66f89741",
+              "size": 725848
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc1-candidate.2",
+            "capcom_source_commit": "8611a4c7baaa0302d016cd99fd772e0df8e9a7d0",
+            "ready_record_sha256": "b4400f76775ac836dd5f6f2a683362953ed79911e8c4b19f834a87e7900a34a9",
+            "release_sha256": "860f46f7df92339470d0d7b78c67a128f91526102f32517b705836688046b3e9",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-11",
+              "files": {
+                "ips": {
+                  "archive": "archive/33cc5447f22f7fe2d8ab1b1171ab454487ed326b13c452cd47bd25d19bc09fa6/sfa2-restoration-rc1-ips.zip",
+                  "name": "sfa2-restoration-rc1-ips.zip",
+                  "sha256": "33cc5447f22f7fe2d8ab1b1171ab454487ed326b13c452cd47bd25d19bc09fa6",
+                  "size": 1273262
+                },
+                "mra": {
+                  "archive": "archive/d185010135df6c6f1053f4a854e3675bc286da0165c8c6a38aab632c66f89741/sfa2-restoration-rc1-mra.zip",
+                  "name": "sfa2-restoration-rc1-mra.zip",
+                  "sha256": "d185010135df6c6f1053f4a854e3675bc286da0165c8c6a38aab632c66f89741",
+                  "size": 725848
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc1-candidate.2",
+                "capcom_source_commit": "8611a4c7baaa0302d016cd99fd772e0df8e9a7d0",
+                "ready_record_sha256": "b4400f76775ac836dd5f6f2a683362953ed79911e8c4b19f834a87e7900a34a9",
+                "release_sha256": "860f46f7df92339470d0d7b78c67a128f91526102f32517b705836688046b3e9",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        }
+      }
+    },
     "sfa3-restoration": {
       "current": "rc1",
       "versions": {

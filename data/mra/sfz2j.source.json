@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/jotego/jtbin",
+  "revision": "ae94f41423105233987f957ccc43a3fb51ff683b",
+  "path": "mra/_alternatives/_Street Fighter Alpha 2/Street Fighter Zero 2 (Japan 960430).mra",
+  "sha256": "c520fcd008dc8193d5e4cf32e162a6dfa2dc89e0ece538f2c4bee6b0b5cc4aa8",
+  "usage": "Unmodified canonical stock MRA; candidate packaging verifies its assembly before creating an overlay."
+}

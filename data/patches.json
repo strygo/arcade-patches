@@ -4132,6 +4132,241 @@
         "MAME reports expected checksum warnings for patched ROMs.",
         "Fan work, unaffiliated with Capcom. The download contains patches and tools; supply your own original ROMs."
       ]
+    },
+    {
+      "slug": "sfa2-restoration",
+      "title": "Street Fighter Alpha 2",
+      "subtitle": "English restoration",
+      "section": "restorations",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-10-11",
+      "game": "Street Fighter Zero 2 (Japan 960430)",
+      "set": "sfz2j",
+      "hardware": "Capcom CPS-2",
+      "patch_noun": "restoration",
+      "patch_kind": "English restoration patch",
+      "patch_intro": "An unofficial fan restoration of Street Fighter Alpha 2: the Japanese game's content in English, in USA and Asia builds, plus a Japanese build.",
+      "summary": "The English Alpha 2 cut corners: random win quotes, trimmed story and ending pages, no place names on the map, white blood. This is the Japanese game in English, with all of it back and the USA's three secret fighters kept.",
+      "description": [
+        "Street Fighter Alpha 2 wasn't the same game everywhere. In Japan, each fighter's win quote depends on who they beat and how much health they had left, and you can pick one by holding buttons. The English versions draw a few quotes at random. They also trimmed some story and ending pages, show only the country on the next-stage map, turned the blood white and left the Manual guard panel blank.",
+        "The English Restoration is the Japanese game, in English. Every win quote is back, chosen the Japanese way, and so is the button pick. The story and endings follow Japan's pages and timing, the map names the place you're headed, and the blood is red. Birdie's third victory pose and Dan's spoken line in his ending return too.",
+        "The USA version's secret fighters stay: Evil Ryu, EX Dhalsim and EX Zangief are selectable by code. The computer opponents, two-player damage and factory settings follow the Japanese version, and Charlie's Sonic Boom and Chun-Li's Kikoken get the fix from Capcom's later revision. An operator setting switches the blood to white.",
+        "There are three builds. The USA build is Street Fighter Alpha 2 in English. The Asia build is Street Fighter Zero 2 in English, with Asia's own stage details. The Japan build keeps its Japanese text and gets the same fixes and settings. All three run in MAME and HBMAME and on MiSTer.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "Every win quote from the Japanese game, in English, picked by opponent and remaining health",
+        "Win-quote pick by holding buttons, as in Japan",
+        "Story and ending pages in Japan's order and timing, including the pages the English versions cut",
+        "English place names on the next-stage map",
+        "Red blood, with a REGULATION setting for white (off by default)",
+        "Birdie's third victory pose, Dan's ending voice and a Manual guard panel that explains itself",
+        "Evil Ryu, EX Dhalsim and EX Zangief by code in the USA build; an operator setting adds them to the Japan and Asia builds",
+        "Computer opponents, two-player damage and factory settings as in the Japanese version",
+        "USA, Asia and Japan builds"
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-10-11",
+          "items": [
+            "First public release."
+          ]
+        }
+      ],
+      "comparison": {
+        "heading": "Compared with the arcade versions",
+        "intro": [
+          "How the USA build of the English Restoration compares with the Japanese and US versions."
+        ],
+        "columns": [
+          "",
+          "Japan",
+          "USA",
+          "English Restoration"
+        ],
+        "rows": [
+          [
+            "Language",
+            "Japanese",
+            "English",
+            "English"
+          ],
+          [
+            "Win quotes",
+            "By opponent and health",
+            "A few, at random",
+            "By opponent and health"
+          ],
+          [
+            "Pick a win quote by holding buttons",
+            "Yes",
+            "No",
+            "Yes"
+          ],
+          [
+            "Story and ending pages",
+            "All",
+            "Some cut or merged",
+            "All, with Japan's timing"
+          ],
+          [
+            "Next-stage map",
+            "Place name",
+            "Country only",
+            "Place name"
+          ],
+          [
+            "Blood",
+            "Red",
+            "White",
+            "Red (white by operator setting)"
+          ],
+          [
+            "Evil Ryu, EX Dhalsim, EX Zangief",
+            "No",
+            "By code",
+            "By code"
+          ],
+          [
+            "Computer opponents and two-player damage",
+            "Japan's",
+            "Export's",
+            "Japan's"
+          ]
+        ]
+      },
+      "feedback": true,
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/sfz2j.zip",
+        "parents": [
+          "sfa2"
+        ],
+        "variants": [
+          {
+            "key": "usa",
+            "label": "USA (English)",
+            "patched_zip": "../capcom/backports/sfa2/out/regional_restoration/hbmame/sfa2ru.zip",
+            "mra": {
+              "name": "Street Fighter Alpha 2 (USA) [English Restoration]",
+              "setname": "sfa2ru",
+              "filename": "Street Fighter Alpha 2 (USA) [English Restoration].mra",
+              "region": "USA"
+            },
+            "hbmame": {
+              "setname": "sfa2ru",
+              "renames": {
+                "sz2j.03b": "sz2j.03b",
+                "sz2j.04b": "sz2j.04b",
+                "sz2j.07b": "sz2j.07b",
+                "sz2.13m": "sz2.13m",
+                "sz2.15m": "sz2.15m",
+                "sz2.17m": "sz2.17m",
+                "sz2.19m": "sz2.19m"
+              }
+            }
+          },
+          {
+            "key": "asia",
+            "label": "Asia (English)",
+            "patched_zip": "../capcom/backports/sfa2/out/regional_restoration/hbmame/sfz2ra.zip",
+            "mra": {
+              "name": "Street Fighter Zero 2 (Asia) [English Restoration]",
+              "setname": "sfz2ra",
+              "filename": "Street Fighter Zero 2 (Asia) [English Restoration].mra",
+              "subdir": "_Asia",
+              "region": "Asia"
+            },
+            "hbmame": {
+              "setname": "sfz2ra",
+              "renames": {
+                "sz2j.03b": "sz2j.03b",
+                "sz2j.04b": "sz2j.04b",
+                "sz2j.07b": "sz2j.07b",
+                "sz2.13m": "sz2.13m",
+                "sz2.15m": "sz2.15m",
+                "sz2.17m": "sz2.17m",
+                "sz2.19m": "sz2.19m"
+              }
+            }
+          },
+          {
+            "key": "japan",
+            "label": "Japan (Japanese)",
+            "patched_zip": "../capcom/backports/sfa2/out/regional_restoration/hbmame/sfz2rj.zip",
+            "mra": {
+              "name": "Street Fighter Zero 2 (Japan) [Restoration]",
+              "setname": "sfz2rj",
+              "filename": "Street Fighter Zero 2 (Japan) [Restoration].mra",
+              "subdir": "_Japan",
+              "region": "Japan"
+            },
+            "hbmame": {
+              "setname": "sfz2rj",
+              "renames": {
+                "sz2j.03b": "sz2j.03b",
+                "sz2j.04b": "sz2j.04b",
+                "sz2j.07b": "sz2j.07b",
+                "sz2.13m": "sz2.13m",
+                "sz2.15m": "sz2.15m",
+                "sz2.17m": "sz2.17m",
+                "sz2.19m": "sz2.19m"
+              }
+            }
+          }
+        ]
+      },
+      "mra": {
+        "base": "data/mra/sfz2j.mra",
+        "auxiliary_zips": [
+          "../capcom/roms/mame0260/qsound.zip"
+        ],
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo"
+      },
+      "screenshots": [
+        {
+          "single": "data/screenshots/sfa2-restoration/next_stage_map.png",
+          "caption": "The next-stage map names the place you're headed, as in Japan."
+        },
+        {
+          "single": "data/screenshots/sfa2-restoration/win_quote.png",
+          "caption": "Win quotes from the Japanese game, in English."
+        },
+        {
+          "single": "data/screenshots/sfa2-restoration/red_blood.png",
+          "caption": "Red blood on hits, as in Japan."
+        },
+        {
+          "single": "data/screenshots/sfa2-restoration/manual_panel.png",
+          "caption": "The Manual guard panel explains itself."
+        }
+      ],
+      "related": [
+        {
+          "label": "Street Fighter Zero 2 Alpha",
+          "url": "../sfz2al-restoration/",
+          "note": "the later revision, restored in English the same way"
+        },
+        {
+          "label": "Street Fighter Alpha 2 Gold",
+          "url": "../sfa2-gold/",
+          "note": "the PlayStation 2 edition rebuilt for CPS-2"
+        },
+        {
+          "label": "Street Fighter Alpha 2 EX",
+          "url": "../sfa2-ex/",
+          "note": "the enhanced edition"
+        }
+      ],
+      "notes": [
+        "MAME shows checksum warnings for the patched files. That's expected; the game plays normally. HBMAME with the matching set definitions loads them without them.",
+        "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
+      ]
     }
   ],
   "articles": [
