@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "capcom_source_commit": "430e07d3e686372e0a2a29a66f715845ff2f0243",
+  "capcom_plan": "release/plans/sfa3-restoration.rc1-candidate.11.json",
+  "release_sha256": "5b039534123da0f66d4a52a5b1391f3521c658042629296ebdce6790fd9cc805",
+  "regenerate": "Use the pinned Capcom plan with release/pipeline.py build, qa and gate --gate runtime. Copy the two named runtime captures only after the gate passes and their hashes match.",
+  "capture_method": "Cold native controller input; no guest memory or register overrides, no save state or compositing.",
+  "images": [
+    {
+      "name": "opponent_quote.png",
+      "sha256": "7021faea245b259b5d1fe25f64b179dd302924fc0fb1a992a5cfd2c9bb27a738",
+      "runtime_capture": "regressions/quote_directed.png",
+      "caption": "An opponent-specific win quote."
+    },
+    {
+      "name": "ism_selection.png",
+      "sha256": "85e60e6077f0131fd9a1ee95a6781ff670d33a3a5be34a42c5179b1c082c39a2",
+      "runtime_capture": "frontend/standard_ism.png",
+      "caption": "English A/X/V-ISM selection."
+    }
+  ]
+}

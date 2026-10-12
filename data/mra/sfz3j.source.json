@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/jotego/jtbin",
+  "revision": "c6deab30cb5928ff5d48d2a4d9fece38e061045a",
+  "path": "mra/_alternatives/_Street Fighter Alpha 3/Street Fighter Zero 3 (Japan 980904).mra",
+  "sha256": "760fab7612b6fa7d0f394a107c4b0870217bf8091412f384a074f59cd24461fe",
+  "usage": "Unmodified canonical stock MRA; candidate packaging verifies its assembly before creating an overlay."
+}

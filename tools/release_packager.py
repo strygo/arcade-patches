@@ -239,7 +239,7 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
         if label:
             lines.append(f"  {label}:")
         if mame:
-            lines.append(f"{pad}MAME / original hardware: out/{mame}")
+            lines.append(f"{pad}MAME:                     out/{mame}")
         if hb:
             lines.append(f"{pad}HBMAME:                   out/hbmame/{hb}.zip")
         if mra:
@@ -585,7 +585,7 @@ def build_rom_downloads(patch: dict) -> dict:
         "set": patch["set"],
         "hardware": patch["hardware"],
         "input_schema": 1,
-        "parents": {"ssf2xj": ["ssf2t"], "mshvsfj": ["mshvsf"], "sfz2alj": ["sfz2al"], "vampj": ["dstlk"], "vhuntj": ["nwarr"]}.get(patch["set"], []),
+        "parents": art.get("parents", {"ssf2xj": ["ssf2t"], "mshvsfj": ["mshvsf"], "sfz2alj": ["sfz2al"], "vampj": ["dstlk"], "vhuntj": ["nwarr"]}.get(patch["set"], [])),
     }
     if patch.get("mame_build") is False:
         manifest["mame_build"] = False

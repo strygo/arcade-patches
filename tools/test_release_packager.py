@@ -175,12 +175,13 @@ class ReleasePackagerTests(unittest.TestCase):
                 "version": "rc1", "date": "2026-09-19", "game": "Demo Game",
                 "hardware": "Fixture", "set": "demo", "description": ["Fixture"],
                 "changes": [],
-                "artifact": {"stock_zip": str(stock), "patched_zip": str(patched)},
+                "artifact": {"stock_zip": str(stock), "patched_zip": str(patched), "parents": ["parentdemo"]},
             }
             result = packager.build_rom_downloads(patch)
             self.assertEqual("demo-rc1-ips.zip", result["ips"]["zipname"])
             with zipfile.ZipFile(root / "published/downloads/demo-rc1-ips.zip") as archive:
                 manifest = json.loads(archive.read("manifest.json"))
+                self.assertEqual(["parentdemo"], manifest["parents"])
                 self.assertIn("ips/game.03.ips", archive.namelist())
                 self.assertIn("rom_sources.py", archive.namelist())
                 archive.extractall(root / "kit")
