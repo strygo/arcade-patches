@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Vampire Savior</h1>
 <p class="subtitle">English restoration</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Vampire Savior: The Lord of Vampire (Japan 970519)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>vsavj</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-09-22</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire Savior: The Lord of Vampire (Japan 970519)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>vsavj</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-10-11</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot"><div class="pair"><div><p class="label">US version</p><img src="../img/vsav-restoration/00_before.png?v=46613a0b35" alt="US version: Forever Torment&#x27;s blood is green in the US version. It&#x27;s red again, as in Japan."></div><div><p class="label">English Restoration</p><img src="../img/vsav-restoration/00_after.png?v=9e07e55ee3" alt="English Restoration: Forever Torment&#x27;s blood is green in the US version. It&#x27;s red again, as in Japan."></div></div><figcaption>Forever Torment&#x27;s blood is green in the US version. It&#x27;s red again, as in Japan.</figcaption></figure>
 <figure class="shot single"><img src="../img/vsav-restoration/01_single.png?v=08004123ae" alt="Hsien-Ko&#x27;s ending, with the seven pages the US version dropped back in."><figcaption>Hsien-Ko&#x27;s ending, with the seven pages the US version dropped back in.</figcaption></figure>
@@ -69,25 +69,25 @@
 something this one still doesn't, whether a line of text, a scene, a screen or a small detail,
 please <a href="https://x.com/strygo">let us know</a>. Anything you find goes into the next release.</p>
 <h2>Downloads</h2>
-<p>Tools updated 2026-10-07. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware</div>
-  <div class="file"><a href="../downloads/vsav-restoration-rc1-ips.zip?v=34da396fda">vsav-restoration-rc1-ips.zip</a>
+  <div class="file"><a href="../downloads/vsav-restoration-rc2-ips.zip?v=c1757e0bff">vsav-restoration-rc2-ips.zip</a>
   (66 KB)</div>
-  <div class="hash">SHA-256: 34da396fdafb553aeb28e8af8ebf45e5636d57605e39759107a51436c1e11fdb</div>
+  <div class="hash">SHA-256: c1757e0bff033272771422e9371b6f7f2228c89832cadc6de763f6d064e823a0</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRA only</div>
-  <div class="file"><a href="../downloads/vsav-restoration-rc1-mra.zip?v=980410c8ed">vsav-restoration-rc1-mra.zip</a>
+  <div class="file"><a href="../downloads/vsav-restoration-rc2-mra.zip?v=4d7c0463a6">vsav-restoration-rc2-mra.zip</a>
   (35 KB)</div>
-  <div class="hash">SHA-256: 980410c8edd846548637c3890f97b8ecce4c1b12ff1158966d4dcd88e1e62f3e</div>
+  <div class="hash">SHA-256: 4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7</div>
 </div>
 <p>You need your own dump of <strong>Vampire Savior: The Lord of Vampire (Japan 970519)</strong> as the MAME
 set <code>vsavj.zip</code>.
 Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
 <h2>How to apply</h2>
-<pre><code>unzip vsav-restoration-rc1-ips.zip -d vsavj-patch
+<pre><code>unzip vsav-restoration-rc2-ips.zip -d vsavj-patch
 cd vsavj-patch
 python3 apply.py /path/to/vsavj.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -119,9 +119,17 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <tr><td class="mono">vm3.17m</td><td>4.0 MB</td><td class="mono">6b89445e</td><td class="mono">05295327</td></tr>
 <tr><td class="mono">vm3.19m</td><td>4.0 MB</td><td class="mono">3830fdc7</td><td class="mono">e90b3fee</td></tr>
 <tr><td class="mono">vm3j.03d</td><td>512 KB</td><td class="mono">2a2e74a4</td><td class="mono">87184d16</td></tr>
-<tr><td class="mono">vm3j.04d</td><td>512 KB</td><td class="mono">1c2427bc</td><td class="mono">fc2d5b8e</td></tr>
+<tr><td class="mono">vm3j.04d</td><td>512 KB</td><td class="mono">1c2427bc</td><td class="mono">c623f797</td></tr>
 <tr><td class="mono">vm3j.07b</td><td>512 KB</td><td class="mono">a38aaae7</td><td class="mono">b3cbf9a8</td></tr>
 </table>
+<h2 id="history">Release history</h2>
+<h3>rc2 (2026-10-11)</h3><ul>
+<li>Win quotes now break across their two lines at natural points instead of splitting phrases.</li>
+<li>The sets have new checksums, so rebuild them with the rc2 kit.</li>
+</ul>
+<h3>rc1 (2026-09-22)</h3><ul>
+<li>First public release.</li>
+</ul>
 <h2>Related projects</h2><ul><li><a href="../vsav2-english/">Vampire Savior 2</a>, the Japan-only follow-up, translated into English</li><li><a href="../vhunt2-english/">Night Warriors 2</a>, its twin, Vampire Hunter 2, translated into English</li></ul>
 <h2>Notes</h2><ul class="notes">
 <li>MAME shows checksum warnings for the patched files. That&#x27;s expected; the game plays normally. HBMAME with the matching set definitions loads them without them.</li>

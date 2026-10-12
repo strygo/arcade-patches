@@ -3221,7 +3221,7 @@
       }
     },
     "vsav-restoration": {
-      "current": "rc1",
+      "current": "rc2",
       "versions": {
         "rc1": {
           "current_revision": 2,
@@ -3326,6 +3326,65 @@
               "mra": "300bf225c4f02abec7cb7b7e8e8fa18c07987f20aaf1c636d02baafc2a2924c8"
             },
             "revision": 1
+          }
+        },
+        "rc2": {
+          "current_revision": 1,
+          "date": "2026-10-11",
+          "files": {
+            "ips": {
+              "archive": "archive/c1757e0bff033272771422e9371b6f7f2228c89832cadc6de763f6d064e823a0/vsav-restoration-rc2-ips.zip",
+              "name": "vsav-restoration-rc2-ips.zip",
+              "sha256": "c1757e0bff033272771422e9371b6f7f2228c89832cadc6de763f6d064e823a0",
+              "size": 67389
+            },
+            "mra": {
+              "archive": "archive/4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7/vsav-restoration-rc2-mra.zip",
+              "name": "vsav-restoration-rc2-mra.zip",
+              "sha256": "4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7",
+              "size": 35392
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc2-candidate.1",
+            "capcom_source_commit": "4b5146b8e20fc88650390afe03500d5cc32868c0",
+            "ready_record_sha256": "05ae0f56af1b7541fe16c1360c3207f8973ad2f6a459989f2f1b5ebfc78ec613",
+            "release_sha256": "d5d81a68b7d88452e133b47b2ce1758053ca82b5e80796a6b0c68d3f95841326",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-11",
+              "files": {
+                "ips": {
+                  "archive": "archive/c1757e0bff033272771422e9371b6f7f2228c89832cadc6de763f6d064e823a0/vsav-restoration-rc2-ips.zip",
+                  "name": "vsav-restoration-rc2-ips.zip",
+                  "sha256": "c1757e0bff033272771422e9371b6f7f2228c89832cadc6de763f6d064e823a0",
+                  "size": 67389
+                },
+                "mra": {
+                  "archive": "archive/4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7/vsav-restoration-rc2-mra.zip",
+                  "name": "vsav-restoration-rc2-mra.zip",
+                  "sha256": "4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7",
+                  "size": 35392
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc2-candidate.1",
+                "capcom_source_commit": "4b5146b8e20fc88650390afe03500d5cc32868c0",
+                "ready_record_sha256": "05ae0f56af1b7541fe16c1360c3207f8973ad2f6a459989f2f1b5ebfc78ec613",
+                "release_sha256": "d5d81a68b7d88452e133b47b2ce1758053ca82b5e80796a6b0c68d3f95841326",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }

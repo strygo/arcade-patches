@@ -3165,8 +3165,8 @@
       "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-09-22",
+      "version": "rc2",
+      "date": "2026-10-11",
       "game": "Vampire Savior: The Lord of Vampire (Japan 970519)",
       "set": "vsavj",
       "hardware": "Capcom CPS-2",
@@ -3190,6 +3190,23 @@
         "Japan's damage values and computer difficulty",
         "Set up like a Japanese cabinet: blood on, Auto guard selectable, one coin one credit",
         "Lord Raptor's name spelled right"
+      ],
+      "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-10-11",
+          "items": [
+            "Win quotes now break across their two lines at natural points instead of splitting phrases.",
+            "The sets have new checksums, so rebuild them with the rc2 kit."
+          ]
+        },
+        {
+          "version": "rc1",
+          "date": "2026-09-22",
+          "items": [
+            "First public release."
+          ]
+        }
       ],
       "comparison": {
         "heading": "Compared with the arcade versions",
