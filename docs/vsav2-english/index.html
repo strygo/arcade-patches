@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Vampire Savior 2</h1>
 <p class="subtitle">English translation</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Vampire Savior 2: The Lord of Vampire (Japan 970913)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>vsav2</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-09-17</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire Savior 2: The Lord of Vampire (Japan 970913)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>vsav2</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-10-11</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot"><div class="pair"><div><p class="label">Original</p><img src="../img/vsav2-english/00_before.png?v=ed6dc0dd7c" alt="Original: Character select. Lei-Lei becomes Hsien-Ko."></div><div><p class="label">Patched</p><img src="../img/vsav2-english/00_after.png?v=02db57d613" alt="Patched: Character select. Lei-Lei becomes Hsien-Ko."></div></div><figcaption>Character select. Lei-Lei becomes Hsien-Ko.</figcaption></figure>
 <figure class="shot single"><img src="../img/vsav2-english/01_single.png?v=5db4d7ae0d" alt="Bulleta under her Western name, Baby Bonnie Hood."><figcaption>Bulleta under her Western name, Baby Bonnie Hood.</figcaption></figure>
@@ -60,25 +60,25 @@
 <li>Oboro Bishamon&#x27;s win plays his own victory music, as intended</li>
 </ul>
 <h2>Downloads</h2>
-<p>Tools updated 2026-10-07. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware</div>
-  <div class="file"><a href="../downloads/vsav2-english-rc2-ips.zip?v=7b81889646">vsav2-english-rc2-ips.zip</a>
-  (44 KB)</div>
-  <div class="hash">SHA-256: 7b8188964686f083d0fcf22a6ab1539494873657eec35a8c1c47a125d341110a</div>
+  <div class="file"><a href="../downloads/vsav2-english-rc3-ips.zip?v=fad630b2f4">vsav2-english-rc3-ips.zip</a>
+  (45 KB)</div>
+  <div class="hash">SHA-256: fad630b2f4389de8dc959c072c25110a12e31c4603a4664a3ef355afdb760872</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRA only</div>
-  <div class="file"><a href="../downloads/vsav2-english-rc2-mra.zip?v=72a8d544b6">vsav2-english-rc2-mra.zip</a>
+  <div class="file"><a href="../downloads/vsav2-english-rc3-mra.zip?v=a266b7693a">vsav2-english-rc3-mra.zip</a>
   (21 KB)</div>
-  <div class="hash">SHA-256: 72a8d544b6369ae13789c4d461190b013a053b2caea347daa917e1bba9ab6c94</div>
+  <div class="hash">SHA-256: a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8</div>
 </div>
 <p>You need your own dump of <strong>Vampire Savior 2: The Lord of Vampire (Japan 970913)</strong> as the MAME
 set <code>vsav2.zip</code>.
 Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
 <h2>How to apply</h2>
-<pre><code>unzip vsav2-english-rc2-ips.zip -d vsav2-patch
+<pre><code>unzip vsav2-english-rc3-ips.zip -d vsav2-patch
 cd vsav2-patch
 python3 apply.py /path/to/vsav2.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -105,15 +105,19 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <h3>Changed ROMs</h3>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
-<tr><td class="mono">vs2.13m</td><td>4.0 MB</td><td class="mono">5c852f52</td><td class="mono">5dd1100c</td></tr>
-<tr><td class="mono">vs2.15m</td><td>4.0 MB</td><td class="mono">a20f58af</td><td class="mono">462e62a8</td></tr>
-<tr><td class="mono">vs2.17m</td><td>4.0 MB</td><td class="mono">39db59ad</td><td class="mono">4614aea0</td></tr>
-<tr><td class="mono">vs2.19m</td><td>4.0 MB</td><td class="mono">00c763a7</td><td class="mono">49af9cfa</td></tr>
-<tr><td class="mono">vs2j.03</td><td>512 KB</td><td class="mono">89fd86b4</td><td class="mono">5c7b4f47</td></tr>
-<tr><td class="mono">vs2j.04</td><td>512 KB</td><td class="mono">107c091b</td><td class="mono">a1192efc</td></tr>
+<tr><td class="mono">vs2.13m</td><td>4.0 MB</td><td class="mono">5c852f52</td><td class="mono">b45071fe</td></tr>
+<tr><td class="mono">vs2.15m</td><td>4.0 MB</td><td class="mono">a20f58af</td><td class="mono">2e4ba2c7</td></tr>
+<tr><td class="mono">vs2.17m</td><td>4.0 MB</td><td class="mono">39db59ad</td><td class="mono">5ab66e81</td></tr>
+<tr><td class="mono">vs2.19m</td><td>4.0 MB</td><td class="mono">00c763a7</td><td class="mono">789eb9f3</td></tr>
+<tr><td class="mono">vs2j.03</td><td>512 KB</td><td class="mono">89fd86b4</td><td class="mono">5181d5a3</td></tr>
+<tr><td class="mono">vs2j.04</td><td>512 KB</td><td class="mono">107c091b</td><td class="mono">5ef14412</td></tr>
 <tr><td class="mono">vs2j.08</td><td>512 KB</td><td class="mono">2018c120</td><td class="mono">cb8b85c6</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc3 (2026-10-11)</h3><ul>
+<li>Win quotes now break across their two lines at natural points instead of splitting phrases.</li>
+<li>The set has new checksums, so rebuild it with the rc3 kit.</li>
+</ul>
 <h3>rc2 (2026-09-17)</h3><ul>
 <li>The translation now uses Capcom&#x27;s official Darkstalkers 3 English wherever it was accurate to the Japanese, and the rest has been refined to match Capcom&#x27;s style.</li>
 <li>The longest ending no longer crashes and resets the game partway through.</li>

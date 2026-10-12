@@ -3421,7 +3421,7 @@
       }
     },
     "vsav2-english": {
-      "current": "rc2",
+      "current": "rc3",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -3657,6 +3657,65 @@
               "mra": "470310e7953b09157959fb46c8e6a015e3f9c1801f7c4b53b56171da7c98e8dc"
             },
             "revision": 3
+          }
+        },
+        "rc3": {
+          "current_revision": 1,
+          "date": "2026-10-11",
+          "files": {
+            "ips": {
+              "archive": "archive/fad630b2f4389de8dc959c072c25110a12e31c4603a4664a3ef355afdb760872/vsav2-english-rc3-ips.zip",
+              "name": "vsav2-english-rc3-ips.zip",
+              "sha256": "fad630b2f4389de8dc959c072c25110a12e31c4603a4664a3ef355afdb760872",
+              "size": 45663
+            },
+            "mra": {
+              "archive": "archive/a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8/vsav2-english-rc3-mra.zip",
+              "name": "vsav2-english-rc3-mra.zip",
+              "sha256": "a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8",
+              "size": 21763
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc3-candidate.2",
+            "capcom_source_commit": "2e0f7056d6beac089cb68ba0509dcde3c853110a",
+            "ready_record_sha256": "59eda7f55da79212a3246b0a31b1b72d80f8b3d59d7dd592c72f17de8068d4f1",
+            "release_sha256": "af7e5ca8ceda750c4be50a7fef354320a1d2b038e00ef2dc89c6c3bc55585524",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-11",
+              "files": {
+                "ips": {
+                  "archive": "archive/fad630b2f4389de8dc959c072c25110a12e31c4603a4664a3ef355afdb760872/vsav2-english-rc3-ips.zip",
+                  "name": "vsav2-english-rc3-ips.zip",
+                  "sha256": "fad630b2f4389de8dc959c072c25110a12e31c4603a4664a3ef355afdb760872",
+                  "size": 45663
+                },
+                "mra": {
+                  "archive": "archive/a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8/vsav2-english-rc3-mra.zip",
+                  "name": "vsav2-english-rc3-mra.zip",
+                  "sha256": "a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8",
+                  "size": 21763
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc3-candidate.2",
+                "capcom_source_commit": "2e0f7056d6beac089cb68ba0509dcde3c853110a",
+                "ready_record_sha256": "59eda7f55da79212a3246b0a31b1b72d80f8b3d59d7dd592c72f17de8068d4f1",
+                "release_sha256": "af7e5ca8ceda750c4be50a7fef354320a1d2b038e00ef2dc89c6c3bc55585524",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }
