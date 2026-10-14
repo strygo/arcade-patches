@@ -3734,28 +3734,34 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 1,
-          "date": "2026-10-13",
+          "current_revision": 2,
+          "date": "2026-10-14",
           "files": {
             "kit": {
-              "archive": "archive/57ab8549840250bbe885b96177fe1a9b7aad93428830343874305cb2307be48e/vsav-arrange-rc1-kit.zip",
+              "archive": "archive/2408cf90bbea03d2243bf52dc31a6b92f5bc7538219bbf1202066a0652e60c4e/vsav-arrange-rc1-kit.zip",
               "name": "vsav-arrange-rc1-kit.zip",
-              "sha256": "57ab8549840250bbe885b96177fe1a9b7aad93428830343874305cb2307be48e",
-              "size": 2158434
+              "sha256": "2408cf90bbea03d2243bf52dc31a6b92f5bc7538219bbf1202066a0652e60c4e",
+              "size": 2155252
             }
           },
+          "game_contract_sha256": "c91e9c46a17fec592391002550399a93de0add44dc9e62838bd5edc5a137b9ed",
           "kind": "kit",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-10-14",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "qualification": {
-            "candidate": "rc1-candidate.2",
-            "capcom_source_commit": "7f2ae4022de792fba396419e15953081972e5895",
-            "ready_record_sha256": "da5db413a6b4a7db9fc10c380b5a3944c26ff48ff68c9323918c61114bff65d4",
-            "release_sha256": "73205bf495f3f946d168292f277849a5479a0527431207b0ab057bcc7dfc6af0",
+            "candidate": "rc1-r2-candidate.1",
+            "capcom_source_commit": "1f156123d6e1559351985c54d1463d7fb7e825fa",
+            "ready_record_sha256": "150c8c5980627230d27cdf32576ea7f88fee9c84235289a97d9f6bdc8f90a5ff",
+            "release_sha256": "7fa73280676314d37c28e74aced4fad4156f2069fd58e990bb7ab510fcabd19d",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -3777,7 +3783,39 @@
                 "release_sha256": "73205bf495f3f946d168292f277849a5479a0527431207b0ab057bcc7dfc6af0",
                 "type": "qualified-candidate"
               }
+            },
+            "2": {
+              "date": "2026-10-14",
+              "files": {
+                "kit": {
+                  "archive": "archive/2408cf90bbea03d2243bf52dc31a6b92f5bc7538219bbf1202066a0652e60c4e/vsav-arrange-rc1-kit.zip",
+                  "name": "vsav-arrange-rc1-kit.zip",
+                  "sha256": "2408cf90bbea03d2243bf52dc31a6b92f5bc7538219bbf1202066a0652e60c4e",
+                  "size": 2155252
+                }
+              },
+              "game_contract_sha256": "c91e9c46a17fec592391002550399a93de0add44dc9e62838bd5edc5a137b9ed",
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc1-r2-candidate.1",
+                "capcom_source_commit": "1f156123d6e1559351985c54d1463d7fb7e825fa",
+                "ready_record_sha256": "150c8c5980627230d27cdf32576ea7f88fee9c84235289a97d9f6bdc8f90a5ff",
+                "release_sha256": "7fa73280676314d37c28e74aced4fad4156f2069fd58e990bb7ab510fcabd19d",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "kit": "57ab8549840250bbe885b96177fe1a9b7aad93428830343874305cb2307be48e"
+                },
+                "revision": 1
+              }
             }
+          },
+          "tooling_baseline": {
+            "files": {
+              "kit": "57ab8549840250bbe885b96177fe1a9b7aad93428830343874305cb2307be48e"
+            },
+            "revision": 1
           }
         }
       }
