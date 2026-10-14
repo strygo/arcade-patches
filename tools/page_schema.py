@@ -7,6 +7,12 @@ this before rendering anything.
 from __future__ import annotations
 
 import datetime
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+# Every key build.py reads from a multi-build page's "builds" entries.
+BUILD_KEYS = ("key", "region", "title", "hbmame_set", "title_screen")
 
 REQUIRED = ("slug", "title", "subtitle", "status", "version", "date", "game",
             "hardware", "summary")
@@ -26,6 +32,32 @@ def _date(value) -> bool:
 
 def _strings(value) -> bool:
     return isinstance(value, list) and all(isinstance(x, str) and x.strip() for x in value)
+
+
+def _builds(entry: dict, say) -> None:
+    """A builds page draws one title screen per build; build.py only warns and skips a missing one."""
+    builds = entry.get("builds")
+    if builds is None:
+        return
+    if not isinstance(builds, list) or not builds:
+        say("builds must be a non-empty list")
+        return
+    keys = []
+    for n, build in enumerate(builds, 1):
+        if not isinstance(build, dict):
+            say(f"build {n} must be an object")
+            continue
+        for key in BUILD_KEYS:
+            if not isinstance(build.get(key), str) or not build[key].strip():
+                say(f"build {n} is missing {key}")
+        keys.append(build.get("key"))
+        shot = build.get("title_screen")
+        # Only plain repo-relative paths are checked; build.py also expands ${VAR:-default} and ~.
+        if isinstance(shot, str) and shot.strip() and not any(c in shot for c in "$~") \
+                and not Path(shot).is_absolute() and not (ROOT / shot).is_file():
+            say(f"build {n} title_screen {shot!r} does not exist")
+    if len(set(keys)) != len(keys):
+        say("builds need distinct keys")
 
 
 def problems(entry: dict, kind: str = "page") -> list[str]:
@@ -55,6 +87,7 @@ def problems(entry: dict, kind: str = "page") -> list[str]:
                     say(f"screenshot {n} needs single, or before and after")
             if not shots and not entry.get("hidden"):
                 say("a visible page needs screenshots")
+        _builds(entry, say)
     if entry.get("date") is not None and not _date(entry["date"]):
         say(f"date {entry['date']!r} is not YYYY-MM-DD")
     history = entry.get("release_history")

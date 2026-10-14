@@ -49,6 +49,23 @@ class PageSchemaTests(unittest.TestCase):
         self.assertTrue(page_schema.problems(page(screenshots=[{"single": "a.png"}])))
         self.assertTrue(page_schema.problems(page(screenshots=[{"before": "a.png", "caption": "A."}])))
 
+    def test_builds_need_every_field_the_renderer_reads(self):
+        real = "data/screenshots/vsav2-arrange/title_us.png"
+        build = {"key": "us", "region": "USA", "title": "Demo", "hbmame_set": "demo01", "title_screen": real}
+        self.assertEqual([], page_schema.problems(page(builds=[build])))
+        for missing in page_schema.BUILD_KEYS:
+            incomplete = {k: v for k, v in build.items() if k != missing}
+            problems = page_schema.problems(page(builds=[incomplete], hidden=True))
+            self.assertTrue(any(f"missing {missing}" in m for m in problems), missing)
+
+    def test_build_title_screen_must_exist_and_keys_be_distinct(self):
+        build = {"key": "us", "region": "USA", "title": "Demo", "hbmame_set": "demo01",
+                 "title_screen": "data/screenshots/demo/nope.png"}
+        self.assertTrue(any("does not exist" in m for m in page_schema.problems(page(builds=[build], hidden=True))))
+        real = dict(build, title_screen="data/screenshots/vsav2-arrange/title_us.png")
+        self.assertTrue(any("distinct keys" in m for m in page_schema.problems(page(builds=[real, dict(real)]))))
+        self.assertTrue(page_schema.problems(page(builds=[])))
+
     def test_validate_raises_with_every_problem(self):
         config = {"patches": [page(date="10/10/2026"), page(slug="other", changes="x")], "projects": []}
         with self.assertRaises(page_schema.PageSchemaError) as raised:
