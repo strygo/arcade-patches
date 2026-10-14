@@ -4576,6 +4576,18 @@
       },
       "screenshots": [
         {
+          "single": "data/screenshots/sfa-restoration/win_quote.png",
+          "caption": "Win quotes from the Japanese game, in English, in a wider centered box."
+        },
+        {
+          "single": "data/screenshots/sfa-restoration/story_dialogue.png",
+          "caption": "Story dialogue follows the Japanese script."
+        },
+        {
+          "single": "data/screenshots/sfa-restoration/ending_page.png",
+          "caption": "Endings follow the Japanese script too."
+        },
+        {
           "single": "data/screenshots/sfa-restoration/manual_panel.png",
           "caption": "The Manual guard panel explains itself."
         }
