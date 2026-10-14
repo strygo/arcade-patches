@@ -1577,23 +1577,26 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc6",
-      "date": "2026-10-06",
+      "version": "rc7",
+      "date": "2026-10-12",
       "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "us",
       "summary": "Capcom's 2006 PlayStation 2 anthology carried the final revision of Alpha 2 Gold, the console edition of Alpha 2 that brought Cammy into the roster. It was never released on arcade hardware. This rebuilds it as a real CPS-2 game, in four regional builds, for emulators, MiSTer, and real hardware.",
       "description": [
         "Street Fighter Alpha 2 Gold, known as Zero 2 Dash in Japan, was the console revision of Alpha 2 that added Cammy as a playable fighter, first on PlayStation and Saturn and in final form in Capcom's 2006 PlayStation 2 anthology. It was never released on arcade hardware. This project rebuilds the anthology's edition as a real CPS-2 game.",
-        "It is a faithful reconstruction, not a remix. It starts from the original arcade Zero 2 Alpha program and restores the anthology's changes piece by piece: Cammy, her graphics, the audio, and the endings, each one checked against the PlayStation 2 original. Four regional builds are provided, shown below. The English builds also carry the full Japanese script, newly translated: every story and ending page, Evil Ryu's own ending, and all 452 win quotes.",
+        "The rebuild restores the anthology's Cammy, her graphics and audio, and the regional titles and endings. Four regional builds are provided, shown below. The English builds carry the full Japanese script in English: every story and ending page, Evil Ryu's own ending, and all 452 win quotes.",
         "This is a release candidate."
       ],
       "changes": [
         "Cammy restored as a playable fighter, with her graphics, palettes, voice, sound effects, win poses, and ending",
         "Cammy's own stage music: her X-Men vs. Street Fighter theme, played on Alpha 2's own sound hardware",
         "Shin Akuma selectable: press Start five times on Akuma at player select",
-        "The revised title, presentation, and staff-credit screens for each region",
+        "The revised title and presentation for each region",
         "In the English builds, the full Japanese script in English: every story and ending page, Evil Ryu's own ending, and all 452 win quotes, plus red blood and Birdie's missing victory pose",
+        "In the English builds, Japan's held-button win-quote pick, computer opponents, two-player damage and factory settings",
+        "In the English builds, place names on the next-stage map follow the Japanese version, with a darker banner stripe",
+        "A REGULATION operator setting: OFF, the default, keeps the red blood; ON switches to white",
         "Four regional builds: USA (Alpha 2 Gold), Europe (Alpha 2 Dash), Japan (Zero 2 Dash), and an English Asia (Zero 2 Dash)",
         "4 MB builds for real hardware and stock MAME, with all of Cammy's voices, some compressed to fit, plus 8 MB builds with every sound uncompressed for HBMAME and MiSTer"
       ],
@@ -1678,6 +1681,21 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc7",
+          "date": "2026-10-12",
+          "items": [
+            "Cammy's Hooligan Combination leaps properly again, so its Fatal Leg Twister grab works.",
+            "Fixed freezes after Cammy's throws and with a computer-controlled Cammy.",
+            "Level-2 Psycho Streak does its own damage, and a level-3 Psycho Streak K.O. no longer leaves the streak on screen.",
+            "A Custom Combo win with Cammy shows M. Bison's emblem, as on the PlayStation 2.",
+            "Charlie's Sonic Boom and Chun-Li's Kikoken get the fix from Capcom's later Alpha 2 release.",
+            "The English builds gain Japan's held-button win-quote pick, computer opponents, two-player damage and factory settings, and Cammy's lines to M. Bison and Rose are no longer cut off.",
+            "The English next-stage maps now show the Japanese place names in English, with a darker banner stripe.",
+            "A new REGULATION operator setting; OFF, the default, keeps the red blood.",
+            "Every set has new checksums, so rebuild them with the rc7 kit."
+          ]
+        },
         {
           "version": "rc6",
           "date": "2026-10-06",
