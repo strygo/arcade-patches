@@ -79,6 +79,38 @@ The MiSTer MRAs start in CONSOLE. MAME and HBMAME start in ARCADE, which keeps
 Gold's arcade title; set GAME MODE to CONSOLE on the SYSTEM page of the
 operator menu.
 
+CONSOLE FIGHTS
+--------------
+
+Hold START for about half a second to open Continue / Quit. UP and DOWN
+select a row, LP confirms, and START resumes. Quit returns to the title menu.
+A short START tap still taunts. Either joined player can pause; the player
+who opened the menu controls it. Music and sound resume with the fight.
+
+TRAINING
+--------
+
+Choose TRAINING after VERSUS on the title menu. Select your fighter, then
+the computer. NORMAL MODE is endless practice; RECORDING MODE records one
+round, and REPLAY plays it from the saved setup and settings.
+
+Hold START to open the practice menu. Training Settings controls the gauge,
+stun, attack data and input history. Computer Settings controls movement,
+guard, roll and throw escape. LP confirms menu rows; LEFT and RIGHT change
+settings. RESTART keeps your chosen stage. Character Change returns to
+selection; Quit returns to the title menu.
+
+For a different stage, highlight its fighter during COMPUTER SELECT, hold
+START for one second, move to the desired computer and confirm while still
+holding START. Otherwise the computer's usual stage is used.
+
+REGULATION
+----------
+
+The SYSTEM page's REGULATION setting starts OFF, keeping red blood.
+ON switches to white. SAVE & EXIT preserves it independently of GAME MODE;
+DEFAULT clears both settings.
+
 LEGAL
 -----
 
