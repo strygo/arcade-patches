@@ -3862,6 +3862,116 @@
       }
     },
     {
+      "slug": "vsav-arrange",
+      "title": "Vampire Savior Arrange",
+      "subtitle": "Arcade backport",
+      "section": "restorations",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-10-13",
+      "game": "Vampire Savior Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
+      "hardware": "Capcom CPS-2 with the CPS+ core",
+      "thumbnail_build": "us",
+      "requirements": {
+        "text": "These games need CPS-2+, an extended CPS-2 system with more memory. On MiSTer they need a 128 MB SDRAM module (a smaller one is not enough) and the CPS+ core, which the kit includes. On a computer they need HBMAME with the CPS+ driver. They don't run on the standard jtCPS2 core or in stock MAME.",
+        "link": {
+          "label": "About CPS-2+ hardware",
+          "url": "../cps2-plus/"
+        }
+      },
+      "summary": "The Arrange edition of Vampire Savior from Capcom\u2019s PlayStation 2 collection, as a CPS-2 game: Donovan, Huitzil and Pyron return, and Dee joins the roster. USA and Japan builds.",
+      "description": [
+        "Vampire Savior Arrange is one of the arranged editions in Capcom\u2019s 2005 PlayStation 2 Vampire: Darkstalkers Collection, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.",
+        "It keeps Vampire Savior\u2019s game system, with recoverable health and Dark Force, and brings back Donovan, Huitzil and Pyron (Donovan, Phobos and Pyron in Japan). Dee, the fighter Capcom made for the Arrange, joins them on his own cell at the bottom of the select screen.",
+        "The restored fighters have their moves, voices, endings and win quotes. The Arrange\u2019s character changes and colors are included.",
+        "The bottom cell also offers roulette and Shadow, which takes over the defeated opponent after a win. Oboro Bishamon and Jon Talbain\u2019s dark form are selectable with Start.",
+        "Native Music entries use QSound music throughout. Original Music entries add the Collection\u2019s music for the restored scenes and Dee\u2019s boss fight.",
+        "The USA build is in English, with our translation; the Japan build keeps the Japanese.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "Donovan, Huitzil and Pyron (Phobos in Japan) return to the roster",
+        "Dee on his own select cell, with his own moves and voice",
+        "The Arrange\u2019s character changes and colors",
+        "Restored endings, dialogue and win quotes",
+        "Roulette and Shadow from the bottom cell; Oboro Bishamon and Jon Talbain\u2019s dark form with Start",
+        "Native and Original Music entries",
+        "USA (English) and Japan builds"
+      ],
+      "builds": [
+        {
+          "key": "us",
+          "region": "USA",
+          "title": "Vampire Savior Arrange",
+          "hbmame_set": "vsavs01",
+          "title_screen": "data/screenshots/vsav-arrange/title_us.png"
+        },
+        {
+          "key": "jp",
+          "region": "Japan",
+          "title": "Vampire Savior Arrange",
+          "hbmame_set": "vsavs02",
+          "title_screen": "data/screenshots/vsav-arrange/title_jp.png"
+        }
+      ],
+      "screenshots": [
+        {
+          "single": "data/screenshots/vsav-arrange/dee_fight.png",
+          "caption": "Dee in battle."
+        },
+        {
+          "single": "data/screenshots/vsav-arrange/select.png",
+          "caption": "The Arrange's character select."
+        }
+      ],
+      "reconstruction": {
+        "requires": [
+          "your own PlayStation 2 disc image: Vampire: Darkstalkers Collection (Japan)",
+          "your own Japanese arcade romsets: vsavj (Vampire Savior) and vsav2 (Vampire Savior 2)"
+        ],
+        "kit_dir": "tools/vsa_arrange_builder",
+        "kit_command": "python3 apply.py --disc collection.iso --rompath roms --out-dir out",
+        "how": "A small tool combines your Collection disc image and arcade romsets, and writes the finished HBMAME sets and MiSTer files, including the CPS+ core.",
+        "sizes_note": "",
+        "columns": [
+          [
+            "HBMAME / MiSTer",
+            "hbmame_set"
+          ]
+        ]
+      },
+      "notes": [
+        "These sets require the CPS+ core and 128 MB of SDRAM on MiSTer.",
+        "This is a fan backport, unaffiliated with Capcom. The kit reconstructs the sets and music from the disc and romsets you already own."
+      ],
+      "related": [
+        {
+          "label": "Vampire Savior",
+          "url": "../vsav-restoration/",
+          "note": "our English restoration"
+        },
+        {
+          "label": "Vampire Savior 2 Arrange",
+          "url": "../vsav2-arrange/",
+          "note": "the Savior 2 Arrange backport"
+        },
+        {
+          "label": "Night Warriors 2 Arrange",
+          "url": "../vhunt2-arrange/",
+          "note": "the Hunter 2 Arrange backport"
+        }
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-10-13",
+          "items": [
+            "First release candidate."
+          ]
+        }
+      ]
+    },
+    {
       "slug": "vsav2-arrange",
       "title": "Vampire Savior 2 Arrange",
       "subtitle": "Arcade backport",

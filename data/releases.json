@@ -3671,6 +3671,58 @@
         }
       }
     },
+    "vsav-arrange": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-10-13",
+          "files": {
+            "kit": {
+              "archive": "archive/57ab8549840250bbe885b96177fe1a9b7aad93428830343874305cb2307be48e/vsav-arrange-rc1-kit.zip",
+              "name": "vsav-arrange-rc1-kit.zip",
+              "sha256": "57ab8549840250bbe885b96177fe1a9b7aad93428830343874305cb2307be48e",
+              "size": 2158434
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc1-candidate.2",
+            "capcom_source_commit": "7f2ae4022de792fba396419e15953081972e5895",
+            "ready_record_sha256": "da5db413a6b4a7db9fc10c380b5a3944c26ff48ff68c9323918c61114bff65d4",
+            "release_sha256": "73205bf495f3f946d168292f277849a5479a0527431207b0ab057bcc7dfc6af0",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-13",
+              "files": {
+                "kit": {
+                  "archive": "archive/57ab8549840250bbe885b96177fe1a9b7aad93428830343874305cb2307be48e/vsav-arrange-rc1-kit.zip",
+                  "name": "vsav-arrange-rc1-kit.zip",
+                  "sha256": "57ab8549840250bbe885b96177fe1a9b7aad93428830343874305cb2307be48e",
+                  "size": 2158434
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc1-candidate.2",
+                "capcom_source_commit": "7f2ae4022de792fba396419e15953081972e5895",
+                "ready_record_sha256": "da5db413a6b4a7db9fc10c380b5a3944c26ff48ff68c9323918c61114bff65d4",
+                "release_sha256": "73205bf495f3f946d168292f277849a5479a0527431207b0ab057bcc7dfc6af0",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        }
+      }
+    },
     "vsav-restoration": {
       "current": "rc2",
       "versions": {
