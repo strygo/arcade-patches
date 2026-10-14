@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 3</h1>
 <p class="subtitle">English restoration</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 3 (Japan 980904)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>sfz3j</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-10-11</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 3 (Japan 980904)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>sfz3j</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-10-13</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/sfa3-restoration/00_single.png?v=7021faea24" alt="An opponent-specific win quote."><figcaption>An opponent-specific win quote.</figcaption></figure>
 <figure class="shot single"><img src="../img/sfa3-restoration/01_single.png?v=85e60e6077" alt="English A/X/V-ISM selection."><figcaption>English A/X/V-ISM selection.</figcaption></figure>
@@ -45,8 +45,9 @@
 
 <p>Street Fighter Alpha 3&#x27;s US arcade version cut each character&#x27;s win quotes down to eight generic lines. The Japanese game also has a quote for each opponent. This restoration brings back all 625 opponent-specific quotes, with all 825 of the Japanese game&#x27;s win quotes in English.</p>
 <p>Detailed stage locations return in English, in the original stage panels. Biographies, rival dialogue and endings follow the Japanese script in natural English that fits each character. Capcom&#x27;s English stays where it was accurate, and Alpha 3 MAX&#x27;s official wording is used where it fits.</p>
-<p>The game uses the Japanese 980904 revision&#x27;s gameplay and secret-character access, with its original difficulty and Turbo 1 defaults. Regulation starts OFF, restoring red hit blood and the full defeat and ending effects; the operator can still switch it ON. The US arcade endings already contain the same scenes and page timing, so this restoration preserves them.</p>
+<p>The game uses the Japanese 980904 revision&#x27;s gameplay and secret-character access, with its original difficulty and Turbo 1 defaults. Regulation starts OFF, restoring red hit blood and the full defeat and ending effects; the operator can still switch it ON. The arcade ending sequences are retained, with corrected backgrounds and colors.</p>
 <p>Alpha branding in the animated intro, character selection, player introductions and win screens, English A/X/V-ISM labels, descriptions and score rankings, Western names in the intro and fights, title and entry announcements, and English operator menus retain the USA presentation. It runs in MAME and on MiSTer with the jtcps2 core. Supply your own original Japanese sfz3j romset; split sets also need their sfa3 parent and QSound firmware.</p>
+<p>The optional Japanese edition keeps the original Japanese text and names, Zero branding and Z-ISM, with the same ending background and color corrections.</p>
 <p>This is a release candidate.</p>
 <h2>What's changed</h2><ul>
 <li>All 825 Japanese win quotes in English, including 625 opponent-specific quotes the US arcade version left out</li>
@@ -55,6 +56,8 @@
 <li>Japanese Regulation OFF by default, with its operator switch and uncensored effects</li>
 <li>Japanese 980904 gameplay, difficulty, Turbo 1 defaults and secret-character access</li>
 <li>Alpha branding in the intro, selection, player introductions and win screens; English A/X/V-ISM descriptions and score rankings, Western names, title and entry announcements, and operator menus</li>
+<li>Corrected ending backgrounds, framing and colors for Adon, Akuma, Dhalsim, Gen, R. Mika, Sakura and Vega</li>
+<li>An optional Japanese edition with original Japanese text and names, Zero branding and Z-ISM, and the same ending corrections</li>
 </ul>
 <h2>Spot a difference we missed?</h2>
 <p>A restoration is only as complete as its list of differences. If the Japanese version does
@@ -63,31 +66,40 @@ please <a href="https://x.com/strygo">let us know</a>. Anything you find goes in
 <h2>Downloads</h2>
 
 <div class="download">
-  <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware</div>
-  <div class="file"><a href="../downloads/sfa3-restoration-rc1-ips.zip?v=b268e7cded">sfa3-restoration-rc1-ips.zip</a>
-  (331 KB)</div>
-  <div class="hash">SHA-256: b268e7cdedb668d34775f23d1ca18a6505cade58c0a84c5a54b8736fd7512d14</div>
+  <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 2 builds</div>
+  <div class="file"><a href="../downloads/sfa3-restoration-rc2-ips.zip?v=a31e6c0183">sfa3-restoration-rc2-ips.zip</a>
+  (342 KB)</div>
+  <div class="hash">SHA-256: a31e6c0183531c9889785d9af973b0959fd64bb7d13c05839f14f591b961d256</div>
 </div>
 <div class="download">
-  <div class="kind">MiSTer MRA only</div>
-  <div class="file"><a href="../downloads/sfa3-restoration-rc1-mra.zip?v=f67dfa2994">sfa3-restoration-rc1-mra.zip</a>
-  (192 KB)</div>
-  <div class="hash">SHA-256: f67dfa2994748d866eff6e81cbf883a4a1180588233e3381186d0bfae3236beb</div>
+  <div class="kind">MiSTer MRAs only, all 2 builds</div>
+  <div class="file"><a href="../downloads/sfa3-restoration-rc2-mra.zip?v=c5f2943911">sfa3-restoration-rc2-mra.zip</a>
+  (198 KB)</div>
+  <div class="hash">SHA-256: c5f2943911ce24b1da09e3f29b0b02f949c96f6306f0a3ca7a6a35b6b6c7db20</div>
 </div>
 <p>You need your own dump of <strong>Street Fighter Zero 3 (Japan 980904)</strong> as the MAME
-set <code>sfz3j.zip</code>.
+set <code>sfz3j.zip</code>. Every build is made from that one set.
 Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
+<h3>The builds</h3>
+<table>
+<tr><th>Build</th><th><code>--variant</code></th><th>MiSTer setname</th></tr>
+<tr><td>English restoration</td><td class="mono">english</td><td class="mono">sfa3r</td></tr><tr><td>Japanese restoration</td><td class="mono">japanese</td><td class="mono">sfz3jr</td></tr>
+</table>
 <h2>How to apply</h2>
-<pre><code>unzip sfa3-restoration-rc1-ips.zip -d sfz3j-patch
+<pre><code>unzip sfa3-restoration-rc2-ips.zip -d sfz3j-patch
 cd sfz3j-patch
 python3 apply.py /path/to/sfz3j.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
-checks the result, and writes the files for every platform in one go:</p>
-<pre><code>out/mame/sfz3j.zip
-out/mister/_Arcade/_Arcade Patches/_Restorations/Street Fighter Alpha 3 (USA) [Restoration].mra</code></pre>
+checks the result, and writes the files for every platform in one go: (add <code>--variant english</code> to make just one build)</p>
+<pre><code>English restoration:
+  out/mame/english/sfz3j.zip
+  out/mister/_Arcade/_Arcade Patches/_Restorations/Street Fighter Alpha 3 (USA) [Restoration].mra
+Japanese restoration:
+  out/mame/japanese/sfz3j.zip
+  out/mister/_Arcade/_Arcade Patches/_Restorations/Street Fighter Zero 3 (Japan) [Restoration].mra</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
-stock set in your MAME rompath (it keeps the name <code>sfz3j.zip</code>), or burn its ROM
+stock set in your MAME rompath (it keeps the name <code>sfz3j.zip</code>, so use one build at a time), or burn its ROM
 files. MAME's game menu won't start a set with patched ROMs, so start it from the command line:
 <code>mame sfz3j</code>. MAME shows checksum warnings for the patched ROMs. That's expected, and the
 game runs normally.</p>
@@ -95,28 +107,95 @@ game runs normally.</p>
 <code>out/mister/</code> to the root of your SD card, and keep the stock, unmodified romset at
 <code>games/mame/sfz3j.zip</code> (split MAME sets also need <code>qsound.zip</code>). You need
 Jotego's <code>jtcps2</code> core, which update_all installs. The MRA applies the restoration in memory
-as the game loads, so nothing on your card is modified, and it keeps its own settings and saves under <code>sfa3r</code>.
+as the game loads, so nothing on your card is modified, and each build keeps its own settings and saves under its own setname.
 The MiSTer-only download holds the same MRAs, ready to copy.</p>
-<p><strong>Any IPS patcher.</strong> Apply each file in <code>ips/</code>
+<p><strong>Any IPS patcher.</strong> Apply each file in <code>ips/&lt;variant&gt;/</code>
 (Flips, Lunar IPS, …) to the ROM file of the same name and re-zip the set yourself.</p>
 <h3>Changed ROMs</h3>
+<p><code>sz3.08c</code> (512 KB, original CRC32 <code>910c4a3b</code>) differs per build:</p>
 <table>
-<tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
-<tr><td class="mono">sz3.08c</td><td>512 KB</td><td class="mono">910c4a3b</td><td class="mono">743184e5</td></tr>
-<tr><td class="mono">sz3.09c</td><td>512 KB</td><td class="mono">b29e5199</td><td class="mono">be2779c3</td></tr>
-<tr><td class="mono">sz3.10b</td><td>512 KB</td><td class="mono">deb2ff52</td><td class="mono">61495b7e</td></tr>
-<tr><td class="mono">sz3.13m</td><td>4.0 MB</td><td class="mono">0f7a60d9</td><td class="mono">ce8690b4</td></tr>
-<tr><td class="mono">sz3.14m</td><td>4.0 MB</td><td class="mono">5ff98297</td><td class="mono">31bfae76</td></tr>
-<tr><td class="mono">sz3.15m</td><td>4.0 MB</td><td class="mono">8e933741</td><td class="mono">09e3362a</td></tr>
-<tr><td class="mono">sz3.16m</td><td>4.0 MB</td><td class="mono">52b5bdee</td><td class="mono">c366c0ab</td></tr>
-<tr><td class="mono">sz3.17m</td><td>4.0 MB</td><td class="mono">d6e98147</td><td class="mono">944c9737</td></tr>
-<tr><td class="mono">sz3.18m</td><td>4.0 MB</td><td class="mono">40631ed5</td><td class="mono">be20b9bb</td></tr>
-<tr><td class="mono">sz3.19m</td><td>4.0 MB</td><td class="mono">f31a728a</td><td class="mono">0a9b0b22</td></tr>
-<tr><td class="mono">sz3.20m</td><td>4.0 MB</td><td class="mono">763409b4</td><td class="mono">682eada9</td></tr>
-<tr><td class="mono">sz3j.03c</td><td>512 KB</td><td class="mono">cadf4a51</td><td class="mono">8f83a2d7</td></tr>
-<tr><td class="mono">sz3j.04c</td><td>512 KB</td><td class="mono">fcb31228</td><td class="mono">aea73027</td></tr>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">743184e5</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">unchanged</td></tr>
+</table>
+<p><code>sz3.09c</code> (512 KB, original CRC32 <code>b29e5199</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">675a96e5</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">6be3bebf</td></tr>
+</table>
+<p><code>sz3.10b</code> (512 KB, original CRC32 <code>deb2ff52</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">76180531</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">c9e3a11d</td></tr>
+</table>
+<p><code>sz3.13m</code> (4.0 MB, original CRC32 <code>0f7a60d9</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">ce8690b4</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">unchanged</td></tr>
+</table>
+<p><code>sz3.14m</code> (4.0 MB, original CRC32 <code>5ff98297</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">31bfae76</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">unchanged</td></tr>
+</table>
+<p><code>sz3.15m</code> (4.0 MB, original CRC32 <code>8e933741</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">09e3362a</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">unchanged</td></tr>
+</table>
+<p><code>sz3.16m</code> (4.0 MB, original CRC32 <code>52b5bdee</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">c366c0ab</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">unchanged</td></tr>
+</table>
+<p><code>sz3.17m</code> (4.0 MB, original CRC32 <code>d6e98147</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">944c9737</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">unchanged</td></tr>
+</table>
+<p><code>sz3.18m</code> (4.0 MB, original CRC32 <code>40631ed5</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">be20b9bb</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">unchanged</td></tr>
+</table>
+<p><code>sz3.19m</code> (4.0 MB, original CRC32 <code>f31a728a</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">0a9b0b22</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">unchanged</td></tr>
+</table>
+<p><code>sz3.20m</code> (4.0 MB, original CRC32 <code>763409b4</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">682eada9</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">unchanged</td></tr>
+</table>
+<p><code>sz3j.03c</code> (512 KB, original CRC32 <code>cadf4a51</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">7d3b2e48</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">15554d7d</td></tr>
+</table>
+<p><code>sz3j.04c</code> (512 KB, original CRC32 <code>fcb31228</code>) differs per build:</p>
+<table>
+<tr><th>Build</th><th>Patched CRC32</th></tr>
+<tr><td>English restoration</td><td class="mono">f7c55e84</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">c946f66f</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc2 (2026-10-13)</h3><ul>
+<li>Corrected A-ISM labels and the names of Akuma, Charlie, Vega, Balrog and M. Bison on stage, versus, winner and score-ranking screens.</li>
+<li>Corrected ending background edges, framing and colors for Adon, Akuma, Dhalsim, Gen, R. Mika, Sakura and Vega.</li>
+<li>Added a Japanese-language edition with original Japanese text and names, Zero branding and Z-ISM, and the same ending corrections.</li>
+</ul>
 <h3>rc1 (2026-10-11)</h3><ul>
 <li>First release: all Japanese win quotes, detailed stage locations and the story and endings in English, with Japanese gameplay and USA presentation.</li>
 </ul>

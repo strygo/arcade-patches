@@ -4217,20 +4217,21 @@
       "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-10-11",
+      "version": "rc2",
+      "date": "2026-10-13",
       "game": "Street Fighter Zero 3 (Japan 980904)",
       "set": "sfz3j",
       "hardware": "Capcom CPS-2",
       "patch_noun": "restoration",
       "patch_kind": "English restoration patch",
-      "patch_intro": "An unofficial fan restoration of Street Fighter Alpha 3: the Japanese arcade game's content and gameplay, in English with USA presentation.",
+      "patch_intro": "An unofficial fan restoration of Street Fighter Alpha 3: the Japanese arcade game's content and gameplay, in English with USA presentation. A separate Japanese-language edition is also included.",
       "summary": "The Japanese arcade game in English, with all 625 opponent-specific win quotes restored, detailed stage locations and the original Regulation setting.",
       "description": [
         "Street Fighter Alpha 3's US arcade version cut each character's win quotes down to eight generic lines. The Japanese game also has a quote for each opponent. This restoration brings back all 625 opponent-specific quotes, with all 825 of the Japanese game's win quotes in English.",
         "Detailed stage locations return in English, in the original stage panels. Biographies, rival dialogue and endings follow the Japanese script in natural English that fits each character. Capcom's English stays where it was accurate, and Alpha 3 MAX's official wording is used where it fits.",
-        "The game uses the Japanese 980904 revision's gameplay and secret-character access, with its original difficulty and Turbo 1 defaults. Regulation starts OFF, restoring red hit blood and the full defeat and ending effects; the operator can still switch it ON. The US arcade endings already contain the same scenes and page timing, so this restoration preserves them.",
+        "The game uses the Japanese 980904 revision's gameplay and secret-character access, with its original difficulty and Turbo 1 defaults. Regulation starts OFF, restoring red hit blood and the full defeat and ending effects; the operator can still switch it ON. The arcade ending sequences are retained, with corrected backgrounds and colors.",
         "Alpha branding in the animated intro, character selection, player introductions and win screens, English A/X/V-ISM labels, descriptions and score rankings, Western names in the intro and fights, title and entry announcements, and English operator menus retain the USA presentation. It runs in MAME and on MiSTer with the jtcps2 core. Supply your own original Japanese sfz3j romset; split sets also need their sfa3 parent and QSound firmware.",
+        "The optional Japanese edition keeps the original Japanese text and names, Zero branding and Z-ISM, with the same ending background and color corrections.",
         "This is a release candidate."
       ],
       "changes": [
@@ -4239,12 +4240,13 @@
         "Biographies, rival and boss dialogue, and endings that follow the Japanese script, keeping Capcom's wording where it was accurate",
         "Japanese Regulation OFF by default, with its operator switch and uncensored effects",
         "Japanese 980904 gameplay, difficulty, Turbo 1 defaults and secret-character access",
-        "Alpha branding in the intro, selection, player introductions and win screens; English A/X/V-ISM descriptions and score rankings, Western names, title and entry announcements, and operator menus"
+        "Alpha branding in the intro, selection, player introductions and win screens; English A/X/V-ISM descriptions and score rankings, Western names, title and entry announcements, and operator menus",
+        "Corrected ending backgrounds, framing and colors for Adon, Akuma, Dhalsim, Gen, R. Mika, Sakura and Vega",
+        "An optional Japanese edition with original Japanese text and names, Zero branding and Z-ISM, and the same ending corrections"
       ],
       "feedback": true,
       "artifact": {
         "stock_zip": "../capcom/roms/mame0260/sfz3j.zip",
-        "patched_zip": "../capcom/backports/sfa3/out/release/roms/sfz3j.zip",
         "parents": [
           "sfa3"
         ],
@@ -4253,6 +4255,42 @@
             "name": "dl-1425.bin",
             "size": 24576,
             "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        ],
+        "variants": [
+          {
+            "key": "english",
+            "label": "English restoration",
+            "patched_zip": "../capcom/backports/sfa3/out/release/roms/sfz3j.zip",
+            "mra": {
+              "base": "data/mra/sfz3j.mra",
+              "name": "Street Fighter Alpha 3 (USA) [Restoration]",
+              "setname": "sfa3r",
+              "filename": "Street Fighter Alpha 3 (USA) [Restoration].mra",
+              "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+              "platform": "CPS-2",
+              "category": "Fighting",
+              "catver": "Fighter / Versus",
+              "mraauthor": "jotego,strygo",
+              "region": "USA"
+            }
+          },
+          {
+            "key": "japanese",
+            "label": "Japanese restoration",
+            "patched_zip": "../capcom/backports/sfa3/out/release/japanese/roms/sfz3j.zip",
+            "mra": {
+              "base": "data/mra/sfz3j.mra",
+              "name": "Street Fighter Zero 3 (Japan) [Restoration]",
+              "setname": "sfz3jr",
+              "filename": "Street Fighter Zero 3 (Japan) [Restoration].mra",
+              "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+              "platform": "CPS-2",
+              "category": "Fighting",
+              "catver": "Fighter / Versus",
+              "mraauthor": "jotego,strygo",
+              "region": "Japan"
+            }
           }
         ]
       },
@@ -4269,6 +4307,15 @@
         "region": "USA"
       },
       "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-10-13",
+          "items": [
+            "Corrected A-ISM labels and the names of Akuma, Charlie, Vega, Balrog and M. Bison on stage, versus, winner and score-ranking screens.",
+            "Corrected ending background edges, framing and colors for Adon, Akuma, Dhalsim, Gen, R. Mika, Sakura and Vega.",
+            "Added a Japanese-language edition with original Japanese text and names, Zero branding and Z-ISM, and the same ending corrections."
+          ]
+        },
         {
           "version": "rc1",
           "date": "2026-10-11",
