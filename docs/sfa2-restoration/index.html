@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 2</h1>
 <p class="subtitle">English restoration</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 2 (Japan 960430)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>sfz2j</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-10-11</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 2 (Japan 960430)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>sfz2j</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-10-13</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/sfa2-restoration/00_single.png?v=6e90ab4660" alt="The next-stage map names the place you&#x27;re headed, as in Japan."><figcaption>The next-stage map names the place you&#x27;re headed, as in Japan.</figcaption></figure>
 <figure class="shot single"><img src="../img/sfa2-restoration/01_single.png?v=6bbe4e907d" alt="Win quotes from the Japanese game, in English."><figcaption>Win quotes from the Japanese game, in English.</figcaption></figure>
@@ -72,15 +72,15 @@ please <a href="https://x.com/strygo">let us know</a>. Anything you find goes in
 
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 3 builds</div>
-  <div class="file"><a href="../downloads/sfa2-restoration-rc1-ips.zip?v=33cc5447f2">sfa2-restoration-rc1-ips.zip</a>
+  <div class="file"><a href="../downloads/sfa2-restoration-rc2-ips.zip?v=99031e3784">sfa2-restoration-rc2-ips.zip</a>
   (1.2 MB)</div>
-  <div class="hash">SHA-256: 33cc5447f22f7fe2d8ab1b1171ab454487ed326b13c452cd47bd25d19bc09fa6</div>
+  <div class="hash">SHA-256: 99031e37845a54ecf577acda9414bcabea28f759c86874be5f12a2088d6a36e8</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 3 builds</div>
-  <div class="file"><a href="../downloads/sfa2-restoration-rc1-mra.zip?v=d185010135">sfa2-restoration-rc1-mra.zip</a>
+  <div class="file"><a href="../downloads/sfa2-restoration-rc2-mra.zip?v=c777d4c5c3">sfa2-restoration-rc2-mra.zip</a>
   (709 KB)</div>
-  <div class="hash">SHA-256: d185010135df6c6f1053f4a854e3675bc286da0165c8c6a38aab632c66f89741</div>
+  <div class="hash">SHA-256: c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a</div>
 </div>
 <p>You need your own dump of <strong>Street Fighter Zero 2 (Japan 960430)</strong> as the MAME
 set <code>sfz2j.zip</code>. Every build is made from that one set.
@@ -92,7 +92,7 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <tr><td>USA (English)</td><td class="mono">usa</td><td class="mono">sfa2ru</td><td class="mono">sfa2ru</td></tr><tr><td>Asia (English)</td><td class="mono">asia</td><td class="mono">sfz2ra</td><td class="mono">sfz2ra</td></tr><tr><td>Japan (Japanese)</td><td class="mono">japan</td><td class="mono">sfz2rj</td><td class="mono">sfz2rj</td></tr>
 </table>
 <h2>How to apply</h2>
-<pre><code>unzip sfa2-restoration-rc1-ips.zip -d sfz2j-patch
+<pre><code>unzip sfa2-restoration-rc2-ips.zip -d sfz2j-patch
 cd sfz2j-patch
 python3 apply.py /path/to/sfz2j.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -133,17 +133,21 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <tr><td class="mono">sz2.15m</td><td>4.0 MB</td><td class="mono">19cea680</td><td class="mono">d941803d</td></tr>
 <tr><td class="mono">sz2.17m</td><td>4.0 MB</td><td class="mono">e01b4588</td><td class="mono">73f31124</td></tr>
 <tr><td class="mono">sz2.19m</td><td>4.0 MB</td><td class="mono">0feeda64</td><td class="mono">33e41f41</td></tr>
-<tr><td class="mono">sz2j.04b</td><td>512 KB</td><td class="mono">f53d6c45</td><td class="mono">0f245d48</td></tr>
+<tr><td class="mono">sz2j.04b</td><td>512 KB</td><td class="mono">f53d6c45</td><td class="mono">bdc00d52</td></tr>
 <tr><td class="mono">sz2j.07b</td><td>512 KB</td><td class="mono">6352f038</td><td class="mono">c6500e15</td></tr>
 </table>
 <p><code>sz2j.03b</code> (512 KB, original CRC32 <code>3e1e2e85</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">ba5d0534</td></tr>
-<tr><td>Asia (English)</td><td class="mono">74783d7a</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">68600815</td></tr>
+<tr><td>USA (English)</td><td class="mono">f528583f</td></tr>
+<tr><td>Asia (English)</td><td class="mono">3b0d6071</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">2715551e</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc2 (2026-10-13)</h3><ul>
+<li>Fixed the game resetting when Evil Ryu meets Sakura as his rival.</li>
+<li>Fixed the wrong rival dialogue for EX Zangief against Birdie and EX Dhalsim against Zangief.</li>
+</ul>
 <h3>rc1 (2026-10-11)</h3><ul>
 <li>First public release.</li>
 </ul>

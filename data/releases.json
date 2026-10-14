@@ -1895,7 +1895,7 @@
       }
     },
     "sfa2-restoration": {
-      "current": "rc1",
+      "current": "rc2",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -1951,6 +1951,65 @@
                 "capcom_source_commit": "8611a4c7baaa0302d016cd99fd772e0df8e9a7d0",
                 "ready_record_sha256": "b4400f76775ac836dd5f6f2a683362953ed79911e8c4b19f834a87e7900a34a9",
                 "release_sha256": "860f46f7df92339470d0d7b78c67a128f91526102f32517b705836688046b3e9",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        },
+        "rc2": {
+          "current_revision": 1,
+          "date": "2026-10-13",
+          "files": {
+            "ips": {
+              "archive": "archive/99031e37845a54ecf577acda9414bcabea28f759c86874be5f12a2088d6a36e8/sfa2-restoration-rc2-ips.zip",
+              "name": "sfa2-restoration-rc2-ips.zip",
+              "sha256": "99031e37845a54ecf577acda9414bcabea28f759c86874be5f12a2088d6a36e8",
+              "size": 1273317
+            },
+            "mra": {
+              "archive": "archive/c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a/sfa2-restoration-rc2-mra.zip",
+              "name": "sfa2-restoration-rc2-mra.zip",
+              "sha256": "c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a",
+              "size": 725877
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc2-candidate.1",
+            "capcom_source_commit": "e4ca1ea488808a807716609c9ca28da577ce5039",
+            "ready_record_sha256": "7c50dbf23bba45e84baf3ba3196009de6fcda75ea6628a6ff51e207bab2b7d18",
+            "release_sha256": "5d926bb8372925afe636ccde4d914ef483a8e2e4853e46f071ca76cf80aad13d",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-13",
+              "files": {
+                "ips": {
+                  "archive": "archive/99031e37845a54ecf577acda9414bcabea28f759c86874be5f12a2088d6a36e8/sfa2-restoration-rc2-ips.zip",
+                  "name": "sfa2-restoration-rc2-ips.zip",
+                  "sha256": "99031e37845a54ecf577acda9414bcabea28f759c86874be5f12a2088d6a36e8",
+                  "size": 1273317
+                },
+                "mra": {
+                  "archive": "archive/c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a/sfa2-restoration-rc2-mra.zip",
+                  "name": "sfa2-restoration-rc2-mra.zip",
+                  "sha256": "c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a",
+                  "size": 725877
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc2-candidate.1",
+                "capcom_source_commit": "e4ca1ea488808a807716609c9ca28da577ce5039",
+                "ready_record_sha256": "7c50dbf23bba45e84baf3ba3196009de6fcda75ea6628a6ff51e207bab2b7d18",
+                "release_sha256": "5d926bb8372925afe636ccde4d914ef483a8e2e4853e46f071ca76cf80aad13d",
                 "type": "qualified-candidate"
               }
             }

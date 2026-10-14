@@ -4139,8 +4139,8 @@
       "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-10-11",
+      "version": "rc2",
+      "date": "2026-10-13",
       "game": "Street Fighter Zero 2 (Japan 960430)",
       "set": "sfz2j",
       "hardware": "Capcom CPS-2",
@@ -4167,6 +4167,14 @@
         "USA, Asia and Japan builds"
       ],
       "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-10-13",
+          "items": [
+            "Fixed the game resetting when Evil Ryu meets Sakura as his rival.",
+            "Fixed the wrong rival dialogue for EX Zangief against Birdie and EX Dhalsim against Zangief."
+          ]
+        },
         {
           "version": "rc1",
           "date": "2026-10-11",
