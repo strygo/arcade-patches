@@ -3977,8 +3977,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-10-07",
+      "version": "rc2",
+      "date": "2026-10-13",
       "game": "Vampire Hunter 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
@@ -3993,7 +3993,7 @@
       "description": [
         "Night Warriors 2 Arrange (Vampire Hunter 2 Arrange in Japan) is one of the arranged editions in Capcom's 2005 PlayStation 2 Vampire: Darkstalkers Collection, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.",
         "It keeps Vampire Hunter 2's presentation, with Pyron as the final boss, and adds the four Vampire Savior fighters it lacked: Jedah, Lilith, Q-Bee and B.B. Hood (Bulleta in Japan). Dee, the fighter Capcom made for the Arrange, joins them on his own select cell.",
-        "The game system follows the Arrange: rounds without recoverable health, revised damage and Dark Force, counter hits that flash white and can force a knockdown, and slow-motion KOs. Every CPU route ends with Huitzil and Pyron.",
+        "The game system follows the Arrange: rounds without recoverable health, revised damage and Dark Force, counter hits that flash white and can force a knockdown, equal hits that trade, timed blocks that stop chip damage, and slow-motion KOs. Every CPU route ends with Huitzil and Pyron.",
         "The four added fighters bring their themes from Vampire Savior 2's arcade music, two each.",
         "Hidden fighters are picked from the bottom cell: press Down to spin the roulette, Start five times for Shadow, or Start seven times for Marionette. Hold Start while confirming Bishamon for Oboro Bishamon, or Jon Talbain for his dark form.",
         "The operator menu adds a ninth difficulty, NIGHTMARE. At NIGHTMARE, a player who wins the secret Oboro Bishamon fight then faces Dee.",
@@ -4004,7 +4004,7 @@
       "changes": [
         "Jedah, Lilith, Q-Bee and B.B. Hood (Bulleta in Japan), with their Vampire Savior 2 themes",
         "Dee on his own select cell",
-        "The Arrange's game system: rounds without recoverable health, revised damage and Dark Force, counter hits, slow-motion KOs",
+        "The Arrange's game system: rounds without recoverable health, revised damage and Dark Force, counter hits, trades, timed blocks, slow-motion KOs",
         "CPU routes that end with Huitzil and Pyron",
         "Roulette, Shadow and Marionette from the bottom cell; Oboro Bishamon and Jon Talbain's dark form with Start",
         "NIGHTMARE difficulty, and a secret fight with Dee",
@@ -4071,6 +4071,18 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-10-13",
+          "items": [
+            "Equal hits now trade, and a well-timed block stops chip damage, as in the Arrange.",
+            "The health bars, names and timer now show in every round.",
+            "The USA build now uses B.B. Hood\u2019s English name on the select, versus and fight screens.",
+            "Dee\u2019s blocking effects and effect colors are corrected, and his small portrait now appears beside the health bar.",
+            "English win quotes have corrected line breaks and a clearer continue prompt.",
+            "Rebuild both regions with the rc2 kit."
+          ]
+        },
         {
           "version": "rc1",
           "date": "2026-10-07",

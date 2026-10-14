@@ -3235,7 +3235,7 @@
       }
     },
     "vhunt2-arrange": {
-      "current": "rc1",
+      "current": "rc2",
       "versions": {
         "rc1": {
           "current_revision": 2,
@@ -3320,6 +3320,53 @@
               "kit": "c4a8d5ce4b744c682e4a869bef7bf2109f513a970de4da0f7de6a2183236c4e6"
             },
             "revision": 1
+          }
+        },
+        "rc2": {
+          "current_revision": 1,
+          "date": "2026-10-13",
+          "files": {
+            "kit": {
+              "archive": "archive/f0c276fd616adfd815a1577e7bd94ed3c79fb9c119d7c7929bdbb76942204dea/vhunt2-arrange-rc2-kit.zip",
+              "name": "vhunt2-arrange-rc2-kit.zip",
+              "sha256": "f0c276fd616adfd815a1577e7bd94ed3c79fb9c119d7c7929bdbb76942204dea",
+              "size": 1970530
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc2-candidate.5",
+            "capcom_source_commit": "d442fee1fd2936809f8ab6b072e348e719fcd2ae",
+            "ready_record_sha256": "ff96be375a0dee295b11b22ef7b7c18aec5360516f74a40612eb3f528734f208",
+            "release_sha256": "132b04ee282dd52c1fc2864c516514b927923e7baf8d59c9268302075403c2cc",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-13",
+              "files": {
+                "kit": {
+                  "archive": "archive/f0c276fd616adfd815a1577e7bd94ed3c79fb9c119d7c7929bdbb76942204dea/vhunt2-arrange-rc2-kit.zip",
+                  "name": "vhunt2-arrange-rc2-kit.zip",
+                  "sha256": "f0c276fd616adfd815a1577e7bd94ed3c79fb9c119d7c7929bdbb76942204dea",
+                  "size": 1970530
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc2-candidate.5",
+                "capcom_source_commit": "d442fee1fd2936809f8ab6b072e348e719fcd2ae",
+                "ready_record_sha256": "ff96be375a0dee295b11b22ef7b7c18aec5360516f74a40612eb3f528734f208",
+                "release_sha256": "132b04ee282dd52c1fc2864c516514b927923e7baf8d59c9268302075403c2cc",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }
