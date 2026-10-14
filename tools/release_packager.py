@@ -252,10 +252,14 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
         "Merged, split and complete sets work, including nested or renamed ROMs.",
         "Use --rompath DIR (repeatable) to search a collection instead of naming the",
         "zip, and --check to check inputs before building. ZIPs and extracted folders",
-        "need no extra software; 7z archives need 7-Zip. QSound can stay in your",
-        "emulator's ROM path; valid firmware already in a source set is kept in",
-        "complete outputs.",
+        "need no extra software; 7z archives need 7-Zip.",
     ]
+    if (patch.get('artifact') or {}).get('auxiliary_stock_members'):
+        lines += ["Keep your unmodified qsound.zip in the emulator's ROM path.",
+                  "Device firmware is not copied into the game archives."]
+    else:
+        lines += ["QSound can stay in your emulator's ROM path; valid firmware already",
+                  "in a source set is kept in complete outputs."]
     if mame_build:
         lines += [
             "",
@@ -291,6 +295,9 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
         else:
             lines += ["", f"HBMAME: the set definition ({', '.join(hb_sets)}) ships with the project;",
                       "an upstream HBMAME submission is pending."]
+        if patch.get('hbmame_driver'):
+            lines += ["The matching driver declarations are included in " +
+                      patch['hbmame_driver']['filename'] + "."]
         if hb.get('complete'):
             lines += [f"Put {', '.join(s + '.zip' for s in hb_sets)} and qsound.zip in HBMAME's roms/ folder;",
                       "it holds the complete set."]
@@ -618,6 +625,15 @@ def build_rom_downloads(patch: dict) -> dict:
         write(z, "manifest.json", json.dumps(manifest, indent=2).encode())
         write(z, "apply.py", (ROOT / "tools" / "bundle_apply.py").read_bytes())
         write(z, "rom_sources.py", (ROOT / "tools" / "rom_sources.py").read_bytes())
+        if patch.get('hbmame_driver'):
+            driver = patch['hbmame_driver']
+            source = resolve(driver['source'])
+            filename = Path(driver['filename'])
+            if (not source.is_relative_to(ROOT / 'data/hbmame') or
+                    filename.is_absolute() or '..' in filename.parts or
+                    filename.parts[0] != 'hbmame' or filename.suffix != '.inc'):
+                raise ValueError('unsupported companion source location')
+            write(z, filename.as_posix(), source.read_bytes())
         for e, ips_files in results:
             prefix = f"ips/{e['key']}/" if e["key"] else "ips/"
             for name, ips in sorted(ips_files.items()):

@@ -4410,6 +4410,180 @@
         "MAME shows checksum warnings for the patched files. That's expected; the game plays normally. HBMAME with the matching set definitions loads them without them.",
         "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
       ]
+    },
+    {
+      "slug": "sfa-restoration",
+      "title": "Street Fighter Alpha: Warriors' Dreams",
+      "subtitle": "English restoration",
+      "section": "restorations",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-10-13",
+      "game": "Street Fighter Zero (Japan 950727)",
+      "set": "sfzj",
+      "hardware": "Capcom CPS-2",
+      "patch_noun": "restoration",
+      "patch_kind": "English restoration patch",
+      "patch_intro": "An unofficial fan restoration of Street Fighter Alpha: the Japanese game's dialogue and gameplay in USA and Asia builds, plus a Japanese build.",
+      "summary": "The Japanese win quotes, rival dialogue, endings and continue advice in English, with red blood, Auto guard and the original Dramatic Battle music.",
+      "description": [
+        "Street Fighter Alpha's English versions have a smaller win-quote pool than Street Fighter Zero in Japan. The English Restoration brings the Japanese pool and its quote choices to the USA and Asia games, along with English rival dialogue, endings and continue advice based on the Japanese script.",
+        "Win quotes are centered in a wider box. The Manual guard panel explains the difference between Manual and Auto. Red blood, the Japanese Auto guard default, Japanese move selection for computer opponents and Dramatic Battle music return, along with Capcom's later fixes for guard behavior and Rose's crouching heavy kick.",
+        "The USA build keeps Street Fighter Alpha's title and character names. Asia keeps Street Fighter Zero's title with English text and export character names. Japan keeps its Japanese text and names and receives the shared fixes.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "The Japanese win quotes in English, with Japan's quote selection and button choices",
+        "Rival dialogue, endings and continue advice translated from the Japanese game",
+        "A wider win-quote box with centered English text",
+        "The Manual guard panel explains itself",
+        "Red blood and Japan's Auto guard default",
+        "Japanese move selection for computer opponents and Dramatic Battle music",
+        "Capcom's November fixes for guard behavior and Rose's crouching heavy kick",
+        "USA, Asia and Japan builds"
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-10-13",
+          "items": [
+            "First release candidate with USA, Asia and Japan builds."
+          ]
+        }
+      ],
+      "feedback": true,
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/sfzj.zip",
+        "parents": [
+          "sfa"
+        ],
+        "auxiliary_stock_members": [
+          {
+            "name": "dl-1425.bin",
+            "size": 24576,
+            "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        ],
+        "variants": [
+          {
+            "key": "usa",
+            "label": "USA (English)",
+            "patched_zip": "../capcom/backports/sfa/out/regional_restoration/usa/sfzj.zip",
+            "mra": {
+              "name": "Street Fighter Alpha (USA) [English Restoration]",
+              "setname": "sfaru",
+              "filename": "Street Fighter Alpha (USA) [English Restoration].mra",
+              "region": "USA"
+            },
+            "hbmame": {
+              "setname": "sfaru",
+              "complete": true,
+              "renames": {
+                "sfz.01": "sfz.01",
+                "sfz.02": "sfz.02",
+                "sfz.04b": "sfz.04b",
+                "sfz.05a": "sfz.05a",
+                "sfz.06": "sfz.06",
+                "sfz.11m": "sfz.11m",
+                "sfz.12m": "sfz.12m",
+                "sfz.14m": "sfz.14m",
+                "sfz.16m": "sfz.16m",
+                "sfz.18m": "sfz.18m",
+                "sfz.20m": "sfz.20m",
+                "sfzj.03c": "sfzj.03c",
+                "sfzj.key": "sfzj.key"
+              }
+            }
+          },
+          {
+            "key": "asia",
+            "label": "Asia (English)",
+            "patched_zip": "../capcom/backports/sfa/out/regional_restoration/asia/sfzj.zip",
+            "mra": {
+              "name": "Street Fighter Zero (Asia) [English Restoration]",
+              "setname": "sfzra",
+              "filename": "Street Fighter Zero (Asia) [English Restoration].mra",
+              "region": "Asia",
+              "subdir": "_Asia"
+            },
+            "hbmame": {
+              "setname": "sfzra",
+              "complete": true,
+              "renames": {
+                "sfz.01": "sfz.01",
+                "sfz.02": "sfz.02",
+                "sfz.04b": "sfz.04b",
+                "sfz.05a": "sfz.05a",
+                "sfz.06": "sfz.06",
+                "sfz.11m": "sfz.11m",
+                "sfz.12m": "sfz.12m",
+                "sfz.14m": "sfz.14m",
+                "sfz.16m": "sfz.16m",
+                "sfz.18m": "sfz.18m",
+                "sfz.20m": "sfz.20m",
+                "sfzj.03c": "sfzj.03c",
+                "sfzj.key": "sfzj.key"
+              }
+            }
+          },
+          {
+            "key": "japan",
+            "label": "Japan (Japanese)",
+            "patched_zip": "../capcom/backports/sfa/out/regional_restoration/japan/sfzj.zip",
+            "mra": {
+              "name": "Street Fighter Zero (Japan) [Restoration]",
+              "setname": "sfzrj",
+              "filename": "Street Fighter Zero (Japan) [Restoration].mra",
+              "region": "Japan",
+              "subdir": "_Japan"
+            },
+            "hbmame": {
+              "setname": "sfzrj",
+              "complete": true,
+              "renames": {
+                "sfz.01": "sfz.01",
+                "sfz.02": "sfz.02",
+                "sfz.04b": "sfz.04b",
+                "sfz.05a": "sfz.05a",
+                "sfz.06": "sfz.06",
+                "sfz.11m": "sfz.11m",
+                "sfz.12m": "sfz.12m",
+                "sfz.14m": "sfz.14m",
+                "sfz.16m": "sfz.16m",
+                "sfz.18m": "sfz.18m",
+                "sfz.20m": "sfz.20m",
+                "sfzj.03c": "sfzj.03c",
+                "sfzj.key": "sfzj.key"
+              }
+            }
+          }
+        ]
+      },
+      "mra": {
+        "base": "data/mra/sfzj.mra",
+        "auxiliary_zips": [
+          "../capcom/roms/mame0260/qsound.zip"
+        ],
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo"
+      },
+      "hbmame_driver": {
+        "source": "data/hbmame/sfa-restoration.cpp.inc",
+        "filename": "hbmame/sfarest.cpp.inc"
+      },
+      "screenshots": [
+        {
+          "single": "data/screenshots/sfa-restoration/manual_panel.png",
+          "caption": "The Manual guard panel explains itself."
+        }
+      ],
+      "notes": [
+        "MAME shows checksum warnings for the patched files. HBMAME with the included set definitions loads the three regional builds.",
+        "Fan work, unaffiliated with Capcom. You need your own dump of the Japanese arcade set; the downloads contain patches, not complete game ROMs."
+      ]
     }
   ],
   "articles": [
