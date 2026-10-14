@@ -3867,8 +3867,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-10-07",
+      "version": "rc2",
+      "date": "2026-10-13",
       "game": "Vampire Savior 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
@@ -3962,6 +3962,15 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-10-13",
+          "items": [
+            "Dee\u2019s blocking effects and effect colors are corrected, and his small portrait now appears beside the health bar.",
+            "English win quotes have corrected line breaks and a clearer continue prompt.",
+            "Rebuild both regions with the rc2 kit."
+          ]
+        },
         {
           "version": "rc1",
           "date": "2026-10-07",

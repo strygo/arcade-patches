@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Vampire Savior 2 Arrange</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Vampire Savior 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-10-07</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire Savior 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-10-13</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/vsav2-arrange/title_us.png?v=12b9f1ba9c" alt="Vampire Savior 2 Arrange (USA) title screen"><figcaption><strong>Vampire Savior 2 Arrange</strong><br>USA · <code>vsav2s05</code></figcaption></figure><figure class="build"><img src="../img/vsav2-arrange/title_jp.png?v=d8a0daac27" alt="Vampire Savior 2 Arrange (Japan) title screen"><figcaption><strong>Vampire Savior 2 Arrange</strong><br>Japan · <code>vsav2s06</code></figcaption></figure></div>
 <h2>About</h2>
@@ -72,25 +72,30 @@ You need:</p>
 <tr><td>USA</td><td>Vampire Savior 2 Arrange</td><td class="mono">vsav2s05</td></tr><tr><td>Japan</td><td>Vampire Savior 2 Arrange</td><td class="mono">vsav2s06</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-10-07. Game version unchanged.</p>
+
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/vsav2-arrange-rc1-kit.zip?v=dd15354ab1">vsav2-arrange-rc1-kit.zip</a>
+  <div class="file"><a href="../downloads/vsav2-arrange-rc2-kit.zip?v=b2797f7354">vsav2-arrange-rc2-kit.zip</a>
   (1.8 MB)</div>
-  <div class="hash">SHA-256: dd15354ab1b259eadec3e77ec0906feca669c03c50bc2d27c0cdb0568eed2b8c</div>
+  <div class="hash">SHA-256: b2797f73542f93237dbe1328f95d72b332aed7d3816a0b267d3bb662b94b042b</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
 <ul><li>your own PlayStation 2 disc image: Vampire: Darkstalkers Collection (Japan)</li><li>your own arcade romsets, all Japanese: vhunt2 (Vampire Hunter 2), vsav2 (Vampire Savior 2) and vsavj (Vampire Savior)</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip vsav2-arrange-rc1-kit.zip -d vsav2-arrange
+<pre><code>unzip vsav2-arrange-rc2-kit.zip -d vsav2-arrange
 cd vsav2-arrange
 python3 apply.py --iso &quot;Vampire Darkstalkers Collection.iso&quot; \
                  --rompath roms --out-dir out</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc2 (2026-10-13)</h3><ul>
+<li>Dee’s blocking effects and effect colors are corrected, and his small portrait now appears beside the health bar.</li>
+<li>English win quotes have corrected line breaks and a clearer continue prompt.</li>
+<li>Rebuild both regions with the rc2 kit.</li>
+</ul>
 <h3>rc1 (2026-10-07)</h3><ul>
 <li>First public release.</li>
 </ul>
