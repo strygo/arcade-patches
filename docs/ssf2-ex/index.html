@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Super Street Fighter II EX</h1>
 <p class="subtitle">Enhanced version</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc6</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>ssf2xj</dd><dt>Version</dt><dd>rc6</dd><dt>Updated</dt><dd>2026-10-09</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc7</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>ssf2xj</dd><dt>Version</dt><dd>rc7</dd><dt>Updated</dt><dd>2026-10-15</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/ssf2-ex/00_single.png?v=7592b76ccd" alt="The new title screen, with the EX mark. USA build."><figcaption>The new title screen, with the EX mark. USA build.</figcaption></figure>
 <figure class="shot single"><img src="../img/ssf2-ex/01_single.png?v=c8d66af5db" alt="The Japan build keeps the big X."><figcaption>The Japan build keeps the big X.</figcaption></figure>
@@ -63,8 +63,8 @@
 <li>Shin Akuma in eleven colors from Ultra Street Fighter II: pick Shin on Akuma&#x27;s cell, let go of every button, then press one of the same buttons before the select screen moves on</li>
 <li>Akuma&#x27;s own defeated face on the Continue screen, in the color you picked</li>
 <li>The three bonus stages from Super Street Fighter II, back in one-player games: the car after three fights, the barrels after six, the oil drums after nine. They run at the selected Turbo speed; BONUS STAGE in EX CONFIGURATION turns them on or off</li>
-<li>EX CONFIGURATION in the operator menu: Japanese or international names; ORIGINAL, 30TH ANNIVERSARY or ULTRA SF2 artwork; and BONUS STAGE on or off. 30TH ANNIVERSARY, the default, uses the 30th Anniversary Collection&#x27;s Hong Kong flag, Chun-Li&#x27;s storefront signs and Guile&#x27;s stage, with the red-winged runway emblem. Settings are saved between sessions</li>
-<li>ULTRA SF2 artwork follows Ultra Street Fighter II&#x27;s stages: its runway emblem and a gold can on Guile&#x27;s stage, Chun-Li&#x27;s storefront without its signs, a red sun on E. Honda&#x27;s bathhouse mural and a plain floor on Zangief&#x27;s stage, with the 30th Anniversary Hong Kong flag</li>
+<li>EX CONFIGURATION in the operator menu: Japanese or international names; ORIGINAL, 30TH ANNIVERSARY or ULTRA SF2 artwork; and BONUS STAGE on or off. 30TH ANNIVERSARY, the default, uses the 30th Anniversary Collection&#x27;s Hong Kong flag, Chun-Li&#x27;s storefront signs and Guile&#x27;s stage, with the red-winged runway emblem. Settings are saved between sessions. On EXIT, press 1P Start to save and return</li>
+<li>ULTRA SF2 artwork follows Ultra Street Fighter II&#x27;s stages: its runway emblem and a gold can on Guile&#x27;s stage, Chun-Li&#x27;s storefront without its signs, a red sun on E. Honda&#x27;s bathhouse mural and a plain floor on Zangief&#x27;s stage, with the 30th Anniversary Hong Kong flag and RUSSIA for Zangief&#x27;s country</li>
 <li>Tournament Battle: with the link adapter, eight players and three matches across linked cabinets, with the Akuma and random-select cells on its select screen; without it, the game plays normally</li>
 <li>A new title screen with an EX mark</li>
 <li>Two more colors for every fighter: pick with two punches or two kicks, or hold Start as well for the Old version in those colors. The VS screen and the fight portrait show the color you picked</li>
@@ -80,15 +80,15 @@
 
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/ssf2-ex-rc6-ips.zip?v=fcd2301162">ssf2-ex-rc6-ips.zip</a>
+  <div class="file"><a href="../downloads/ssf2-ex-rc7-ips.zip?v=b90e853754">ssf2-ex-rc7-ips.zip</a>
   (1.0 MB)</div>
-  <div class="hash">SHA-256: fcd2301162c6c58a7326925c948fbf4aaa0bb38d67b70a027b23110648b20c72</div>
+  <div class="hash">SHA-256: b90e853754c4a9d839af9be5583e506cabf63751fa303a84dd62351f83e43423</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
-  <div class="file"><a href="../downloads/ssf2-ex-rc6-mra.zip?v=f594304c5a">ssf2-ex-rc6-mra.zip</a>
+  <div class="file"><a href="../downloads/ssf2-ex-rc7-mra.zip?v=5fe179bc62">ssf2-ex-rc7-mra.zip</a>
   (604 KB)</div>
-  <div class="hash">SHA-256: f594304c5a41db98b239ac50cba7fa871d1dcd3b364317b61cf4ced7e930d35d</div>
+  <div class="hash">SHA-256: 5fe179bc62dbb2936854627279e4695c3101f04e2eaa4d29df358b8ed0a4b754</div>
 </div>
 <p>You need your own dump of <strong>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</strong> as the MAME
 set <code>ssf2xj.zip</code>. Every build is made from that one set.
@@ -100,7 +100,7 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <tr><td>USA (English)</td><td class="mono">usa</td><td class="mono">ssf2tuc</td><td class="mono">ssf2tuc</td></tr><tr><td>Japan (Japanese)</td><td class="mono">japan</td><td class="mono">ssf2xuc</td><td class="mono">ssf2xuc</td></tr>
 </table>
 <h2>How to apply</h2>
-<pre><code>unzip ssf2-ex-rc6-ips.zip -d ssf2xj-patch
+<pre><code>unzip ssf2-ex-rc7-ips.zip -d ssf2xj-patch
 cd ssf2xj-patch
 python3 apply.py /path/to/ssf2xj.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -138,14 +138,15 @@ so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</c
 <p>Shared by every build:</p>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
-<tr><td class="mono">sfx.14m</td><td>1.0 MB</td><td class="mono">b7cc32e7</td><td class="mono">03618e46</td></tr>
-<tr><td class="mono">sfx.16m</td><td>1.0 MB</td><td class="mono">8376ad18</td><td class="mono">992763ca</td></tr>
-<tr><td class="mono">sfx.18m</td><td>1.0 MB</td><td class="mono">f5b1b336</td><td class="mono">7d2d760f</td></tr>
-<tr><td class="mono">sfx.20m</td><td>1.0 MB</td><td class="mono">459d5c6b</td><td class="mono">ec8aa170</td></tr>
-<tr><td class="mono">sfx.21m</td><td>1.0 MB</td><td class="mono">e32854af</td><td class="mono">94b141da</td></tr>
-<tr><td class="mono">sfx.23m</td><td>1.0 MB</td><td class="mono">760f2927</td><td class="mono">359e2c32</td></tr>
-<tr><td class="mono">sfx.25m</td><td>1.0 MB</td><td class="mono">1ee90208</td><td class="mono">99008d5f</td></tr>
-<tr><td class="mono">sfx.27m</td><td>1.0 MB</td><td class="mono">f814400f</td><td class="mono">164bbf8b</td></tr>
+<tr><td class="mono">sfx.09</td><td>512 KB</td><td class="mono">642fae3f</td><td class="mono">f37642c4</td></tr>
+<tr><td class="mono">sfx.14m</td><td>1.0 MB</td><td class="mono">b7cc32e7</td><td class="mono">ab206f6b</td></tr>
+<tr><td class="mono">sfx.16m</td><td>1.0 MB</td><td class="mono">8376ad18</td><td class="mono">9a62078f</td></tr>
+<tr><td class="mono">sfx.18m</td><td>1.0 MB</td><td class="mono">f5b1b336</td><td class="mono">55f01bdb</td></tr>
+<tr><td class="mono">sfx.20m</td><td>1.0 MB</td><td class="mono">459d5c6b</td><td class="mono">e4bb346d</td></tr>
+<tr><td class="mono">sfx.21m</td><td>1.0 MB</td><td class="mono">e32854af</td><td class="mono">b1bf51a0</td></tr>
+<tr><td class="mono">sfx.23m</td><td>1.0 MB</td><td class="mono">760f2927</td><td class="mono">982694f0</td></tr>
+<tr><td class="mono">sfx.25m</td><td>1.0 MB</td><td class="mono">1ee90208</td><td class="mono">706f24a9</td></tr>
+<tr><td class="mono">sfx.27m</td><td>1.0 MB</td><td class="mono">f814400f</td><td class="mono">529d32bf</td></tr>
 <tr><td class="mono">sfxj.05</td><td>512 KB</td><td class="mono">f4ff18f5</td><td class="mono">477b0a5e</td></tr>
 <tr><td class="mono">sfxj.08</td><td>512 KB</td><td class="mono">2de76f10</td><td class="mono">ea0d1d90</td></tr>
 </table>
@@ -176,8 +177,8 @@ so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</c
 <p><code>sfxj.03d</code> (512 KB, original CRC32 <code>50b52b37</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">a828cd5b</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">dd0bcd25</td></tr>
+<tr><td>USA (English)</td><td class="mono">efc1f540</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">9ae2f53e</td></tr>
 </table>
 <p><code>sfxj.04a</code> (512 KB, original CRC32 <code>af7767b4</code>) differs per build:</p>
 <table>
@@ -188,16 +189,23 @@ so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</c
 <p><code>sfxj.06b</code> (512 KB, original CRC32 <code>413477c2</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">c8986040</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">fd491e78</td></tr>
+<tr><td>USA (English)</td><td class="mono">470a42da</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">72db3ce2</td></tr>
 </table>
 <p><code>sfxj.07a</code> (512 KB, original CRC32 <code>a18b3d83</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">36377a5e</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">d51c94ea</td></tr>
+<tr><td>USA (English)</td><td class="mono">408e88fb</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">a3a5664f</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc7 (2026-10-15)</h3><ul>
+<li>Cammy&#x27;s stage no longer flashes gaps at the aurora boundary or beside the right-hand pillar, while retaining the floor&#x27;s perspective and the game&#x27;s timing.</li>
+<li>JAMAICA&#x27;s final A now has a complete outline.</li>
+<li>ULTRA SF2 artwork shows RUSSIA for Zangief&#x27;s country. ORIGINAL and 30TH ANNIVERSARY keep U.S.S.R.</li>
+<li>EX CONFIGURATION&#x27;s EXIT shows the 1P Start prompt and uses 1P Start to save and return, like SYSTEM CONFIGURATION.</li>
+<li>Both regional builds have new checksums; rebuild them with the rc7 kit.</li>
+</ul>
 <h3>rc6 (2026-10-09)</h3><ul>
 <li>A third ARTWORK choice, ULTRA SF2, uses Ultra Street Fighter II&#x27;s stage art: its runway emblem and a gold can on Guile&#x27;s stage, Chun-Li&#x27;s storefront without its signs, a red sun on E. Honda&#x27;s bathhouse mural and a plain floor on Zangief&#x27;s stage, with the 30th Anniversary Hong Kong flag.</li>
 <li>The 30th Anniversary art now shows Guile&#x27;s runway emblem with red wings, as in the collection.</li>
