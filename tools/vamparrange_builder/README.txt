@@ -51,16 +51,30 @@ Copy the contents of out/mister/ to the root of the MiSTer SD card:
     _Arcade/_Arcade Patches/_Restorations/_Japan/<name>.mra   Japan
     _Arcade/cores/jtcps2-cpsplus_20261006.rbf                  the CPS+ core
     games/hbmame/<set>.zip                                     the sets
+    games/CPS+/vampire_arrange.zip                          the music pack
 
 These sets need the CPS+ core included here, not the standard jtCPS2 core,
 and 128 MB of SDRAM. MiSTer uses the newest dated CPS+ core it finds.
 If QSound was absent from your input, keep qsound.zip or qsound_hle.zip in
 games/mame.
 
+The MiSTer entries load the shared Vampire Arrange music pack. Dee uses the
+Collection music; the other music remains the arcade game's own. This is the
+same pack used by Vampire Savior Arrange, so it can be shared by all three
+games. The kit copies the original stereo ADX frames and their loop points
+from your disc; no music recordings are included in this download.
+
+To build just the shared pack:
+
+    python3 music.py --iso <collection.iso> --out vampire_arrange.cpk
+
+The normal apply.py command builds it and installs it in the correct ZIP.
+
 ON HBMAME
 ---------
 
 The sets need HBMAME's CPS+ machine driver. Start them by set name.
+HBMAME uses native QSound music; the external pack plays on MiSTer.
 
 LEGAL
 -----

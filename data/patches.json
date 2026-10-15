@@ -3985,8 +3985,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc2",
-      "date": "2026-10-13",
+      "version": "rc3",
+      "date": "2026-10-14",
       "game": "Vampire Savior 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
@@ -4003,7 +4003,7 @@
         "It keeps Vampire Savior 2's game system, with Jedah as the final boss, and brings back Jon Talbain, Rikuo and Sasquatch (Gallon, Aulbath and Sasquatch in Japan) with their Vampire Hunter 2 move sets, so every fighter is selectable. Dee, the fighter Capcom made for the Arrange, has his own cell at the bottom of the select screen, and Pyron becomes an ordinary opponent.",
         "Hidden fighters are picked from the bottom cell: press Down to spin the roulette, Start five times for Shadow, or Start seven times for Marionette. Hold Start while confirming Bishamon for Oboro Bishamon, or Jon Talbain for his dark form.",
         "The operator menu adds a ninth difficulty, NIGHTMARE. At NIGHTMARE, a player who wins the secret Oboro Bishamon fight then faces Dee.",
-        "B.B. Hood's spoken intro against Jon Talbain is back, from the original Vampire Savior, and Dee has his own voice. The music is the arcade game's own.",
+        "B.B. Hood's spoken intro against Jon Talbain is back, from the original Vampire Savior, and Dee has his own voice. On MiSTer, Dee uses the Collection music and the other music remains the arcade game's own.",
         "The USA build is in English, with our translation; the Japan build keeps the Japanese.",
         "This is a release candidate."
       ],
@@ -4014,6 +4014,7 @@
         "NIGHTMARE difficulty, and a secret fight with Dee",
         "Pyron as an ordinary opponent",
         "B.B. Hood's spoken intro against Jon Talbain",
+        "The Collection\u2019s Dee music on MiSTer, with the shared music pack built from your disc",
         "USA (English) and Japan builds"
       ],
       "builds": [
@@ -4049,7 +4050,7 @@
         ],
         "kit_dir": "tools/vamparrange_builder",
         "kit_command": "python3 apply.py --iso \"Vampire Darkstalkers Collection.iso\" \\\n                 --rompath roms --out-dir out",
-        "how": "A small tool reads the Arrange edition from your PlayStation 2 disc image, combines it with your arcade romsets, and writes out the finished sets for MiSTer and HBMAME, with the CPS+ core for MiSTer.",
+        "how": "A small tool reads the Arrange edition from your PlayStation 2 disc image, combines it with your arcade romsets, and writes out the finished sets for MiSTer and HBMAME, with the CPS+ core for MiSTer. It also builds the shared Vampire Arrange music pack for MiSTer.",
         "sizes_note": "",
         "columns": [
           [
@@ -4080,6 +4081,13 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc3",
+          "date": "2026-10-14",
+          "items": [
+            "The kit now builds the shared Vampire Arrange music pack from your Collection disc and includes it in the MiSTer entries. Dee uses the Collection music; the other music remains the arcade game\u2019s own."
+          ]
+        },
         {
           "version": "rc2",
           "date": "2026-10-13",

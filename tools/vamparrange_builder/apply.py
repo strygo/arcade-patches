@@ -19,6 +19,7 @@ from pathlib import Path
 
 import arrange
 import collection
+import music
 from rom_sources import Resolver, RomError, QSOUND, search_paths, publish_tree, write_zip
 
 HERE = Path(__file__).resolve().parent
@@ -89,6 +90,11 @@ def main():
         folder = stage.joinpath("mister", *KIT["mra_root"], KIT["mra_dir"][region])
         folder.mkdir(parents=True, exist_ok=True)
         (folder / f"{meta['mra']}.mra").write_text(mra)
+    print("Building the shared Collection music pack...")
+    pack = stage / "vampire_arrange.cpk"
+    music.build(disc, json.loads((HERE / "music.json").read_text()), pack)
+    write_zip(stage / "mister/games/CPS+/vampire_arrange.zip", {pack.name: pack.read_bytes()})
+    pack.unlink()
     cores = stage / "mister" / "_Arcade" / "cores"
     cores.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(HERE / "core" / KIT["core"], cores / KIT["core"])
