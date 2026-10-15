@@ -3867,8 +3867,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-10-13",
+      "version": "rc2",
+      "date": "2026-10-14",
       "game": "Vampire Savior Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
@@ -3930,7 +3930,7 @@
           "your own Japanese arcade romsets: vsavj (Vampire Savior) and vsav2 (Vampire Savior 2)"
         ],
         "kit_dir": "tools/vsa_arrange_builder",
-        "kit_command": "python3 apply.py --disc collection.iso --rompath roms --out-dir out",
+        "kit_command": "python3 apply.py --iso collection.iso --rompath roms --out-dir out",
         "how": "A small tool combines your Collection disc image and arcade romsets, and writes the finished HBMAME sets and MiSTer files, including the CPS+ core.",
         "sizes_note": "",
         "columns": [
@@ -3962,6 +3962,14 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-10-14",
+          "items": [
+            "Fixed resets before character endings.",
+            "Corrected Huitzil\u2019s laser effects and ending graphics."
+          ]
+        },
         {
           "version": "rc1",
           "date": "2026-10-13",
