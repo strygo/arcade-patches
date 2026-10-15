@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Night Warriors 2 Arrange</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Vampire Hunter 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-10-13</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire Hunter 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-10-14</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/vhunt2-arrange/title_us.png?v=cc4a5cd4ec" alt="Night Warriors 2 Arrange (USA) title screen"><figcaption><strong>Night Warriors 2 Arrange</strong><br>USA · <code>vhunt2s02</code></figcaption></figure><figure class="build"><img src="../img/vhunt2-arrange/title_jp.png?v=be34fced08" alt="Vampire Hunter 2 Arrange (Japan) title screen"><figcaption><strong>Vampire Hunter 2 Arrange</strong><br>Japan · <code>vhunt2s03</code></figcaption></figure></div>
 <h2>About</h2>
@@ -45,7 +45,7 @@
 <p>Night Warriors 2 Arrange (Vampire Hunter 2 Arrange in Japan) is one of the arranged editions in Capcom&#x27;s 2005 PlayStation 2 Vampire: Darkstalkers Collection, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.</p>
 <p>It keeps Vampire Hunter 2&#x27;s presentation, with Pyron as the final boss, and adds the four Vampire Savior fighters it lacked: Jedah, Lilith, Q-Bee and B.B. Hood (Bulleta in Japan). Dee, the fighter Capcom made for the Arrange, joins them on his own select cell.</p>
 <p>The game system follows the Arrange: rounds without recoverable health, revised damage and Dark Force, counter hits that flash white and can force a knockdown, equal hits that trade, timed blocks that stop chip damage, and slow-motion KOs. Every CPU route ends with Huitzil and Pyron.</p>
-<p>The four added fighters bring their themes from Vampire Savior 2&#x27;s arcade music, two each.</p>
+<p>The four added fighters bring their themes from Vampire Savior 2&#x27;s arcade music, two each. On MiSTer, Dee uses the Collection music.</p>
 <p>Hidden fighters are picked from the bottom cell: press Down to spin the roulette, Start five times for Shadow, or Start seven times for Marionette. Hold Start while confirming Bishamon for Oboro Bishamon, or Jon Talbain for his dark form.</p>
 <p>The operator menu adds a ninth difficulty, NIGHTMARE. At NIGHTMARE, a player who wins the secret Oboro Bishamon fight then faces Dee.</p>
 <p>B.B. Hood&#x27;s spoken intro against Jon Talbain is back, from the original Vampire Savior.</p>
@@ -59,6 +59,7 @@
 <li>Roulette, Shadow and Marionette from the bottom cell; Oboro Bishamon and Jon Talbain&#x27;s dark form with Start</li>
 <li>NIGHTMARE difficulty, and a secret fight with Dee</li>
 <li>B.B. Hood&#x27;s spoken intro against Jon Talbain</li>
+<li>The Collection’s Dee music on MiSTer, with the shared music pack built from your disc</li>
 <li>USA (Night Warriors 2 Arrange, English) and Japan (Vampire Hunter 2 Arrange) builds</li>
 </ul>
 <h2>Screenshots</h2>
@@ -67,7 +68,7 @@
 <p>Each build is put together on your own machine from files you already own.
 You need:</p>
 <ul><li>your own PlayStation 2 disc image: Vampire: Darkstalkers Collection (Japan)</li><li>your own arcade romsets, all Japanese: vhunt2 (Vampire Hunter 2), vsav2 (Vampire Savior 2) and vsavj (Vampire Savior)</li></ul>
-<p>A small tool reads the Arrange edition from your PlayStation 2 disc image, combines it with your arcade romsets, and writes out the finished sets for MiSTer and HBMAME, with the CPS+ core for MiSTer.</p>
+<p>A small tool reads the Arrange edition from your PlayStation 2 disc image, combines it with your arcade romsets, and writes out the finished sets for MiSTer and HBMAME, with the CPS+ core for MiSTer. It also builds the shared Vampire Arrange music pack for MiSTer.</p>
 <h3>The builds</h3>
 <table>
 <tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer</th></tr>
@@ -78,21 +79,24 @@ You need:</p>
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/vhunt2-arrange-rc2-kit.zip?v=f0c276fd61">vhunt2-arrange-rc2-kit.zip</a>
+  <div class="file"><a href="../downloads/vhunt2-arrange-rc3-kit.zip?v=201dac454c">vhunt2-arrange-rc3-kit.zip</a>
   (1.9 MB)</div>
-  <div class="hash">SHA-256: f0c276fd616adfd815a1577e7bd94ed3c79fb9c119d7c7929bdbb76942204dea</div>
+  <div class="hash">SHA-256: 201dac454cf9cb21b0505c0ee29ead41167367116778aa527dade15c9ee5254f</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
 <ul><li>your own PlayStation 2 disc image: Vampire: Darkstalkers Collection (Japan)</li><li>your own arcade romsets, all Japanese: vhunt2 (Vampire Hunter 2), vsav2 (Vampire Savior 2) and vsavj (Vampire Savior)</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip vhunt2-arrange-rc2-kit.zip -d vhunt2-arrange
+<pre><code>unzip vhunt2-arrange-rc3-kit.zip -d vhunt2-arrange
 cd vhunt2-arrange
 python3 apply.py --iso &quot;Vampire Darkstalkers Collection.iso&quot; \
                  --rompath roms --out-dir out</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc3 (2026-10-14)</h3><ul>
+<li>The kit now builds the shared Vampire Arrange music pack from your Collection disc and includes it in the MiSTer entries. Dee uses the Collection music; the other music remains the arcade game’s own.</li>
+</ul>
 <h3>rc2 (2026-10-13)</h3><ul>
 <li>Equal hits now trade, and a well-timed block stops chip damage, as in the Arrange.</li>
 <li>The health bars, names and timer now show in every round.</li>
