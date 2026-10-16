@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Super Street Fighter II EX</h1>
 <p class="subtitle">Enhanced version</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc7</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>ssf2xj</dd><dt>Version</dt><dd>rc7</dd><dt>Updated</dt><dd>2026-10-15</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc8</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>ssf2xj</dd><dt>Version</dt><dd>rc8</dd><dt>Updated</dt><dd>2026-10-15</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/ssf2-ex/00_single.png?v=7592b76ccd" alt="The new title screen, with the EX mark. USA build."><figcaption>The new title screen, with the EX mark. USA build.</figcaption></figure>
 <figure class="shot single"><img src="../img/ssf2-ex/01_single.png?v=c8d66af5db" alt="The Japan build keeps the big X."><figcaption>The Japan build keeps the big X.</figcaption></figure>
@@ -80,15 +80,15 @@
 
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/ssf2-ex-rc7-ips.zip?v=b90e853754">ssf2-ex-rc7-ips.zip</a>
+  <div class="file"><a href="../downloads/ssf2-ex-rc8-ips.zip?v=dfc10c215a">ssf2-ex-rc8-ips.zip</a>
   (1.0 MB)</div>
-  <div class="hash">SHA-256: b90e853754c4a9d839af9be5583e506cabf63751fa303a84dd62351f83e43423</div>
+  <div class="hash">SHA-256: dfc10c215ad7f242859c78961c2d51226caa935b3d6cb320bd9b9361ba094054</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
-  <div class="file"><a href="../downloads/ssf2-ex-rc7-mra.zip?v=5fe179bc62">ssf2-ex-rc7-mra.zip</a>
+  <div class="file"><a href="../downloads/ssf2-ex-rc8-mra.zip?v=83f3a5a0fb">ssf2-ex-rc8-mra.zip</a>
   (604 KB)</div>
-  <div class="hash">SHA-256: 5fe179bc62dbb2936854627279e4695c3101f04e2eaa4d29df358b8ed0a4b754</div>
+  <div class="hash">SHA-256: 83f3a5a0fb0215b46777f8911af5566cff8dc20f1896d28789b41890e374198c</div>
 </div>
 <p>You need your own dump of <strong>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</strong> as the MAME
 set <code>ssf2xj.zip</code>. Every build is made from that one set.
@@ -100,7 +100,7 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <tr><td>USA (English)</td><td class="mono">usa</td><td class="mono">ssf2tuc</td><td class="mono">ssf2tuc</td></tr><tr><td>Japan (Japanese)</td><td class="mono">japan</td><td class="mono">ssf2xuc</td><td class="mono">ssf2xuc</td></tr>
 </table>
 <h2>How to apply</h2>
-<pre><code>unzip ssf2-ex-rc7-ips.zip -d ssf2xj-patch
+<pre><code>unzip ssf2-ex-rc8-ips.zip -d ssf2xj-patch
 cd ssf2xj-patch
 python3 apply.py /path/to/ssf2xj.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -177,8 +177,8 @@ so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</c
 <p><code>sfxj.03d</code> (512 KB, original CRC32 <code>50b52b37</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">efc1f540</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">9ae2f53e</td></tr>
+<tr><td>USA (English)</td><td class="mono">73cdf90e</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">218a0966</td></tr>
 </table>
 <p><code>sfxj.04a</code> (512 KB, original CRC32 <code>af7767b4</code>) differs per build:</p>
 <table>
@@ -189,8 +189,8 @@ so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</c
 <p><code>sfxj.06b</code> (512 KB, original CRC32 <code>413477c2</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">470a42da</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">72db3ce2</td></tr>
+<tr><td>USA (English)</td><td class="mono">6b142f5d</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">5ec55165</td></tr>
 </table>
 <p><code>sfxj.07a</code> (512 KB, original CRC32 <code>a18b3d83</code>) differs per build:</p>
 <table>
@@ -199,6 +199,11 @@ so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</c
 <tr><td>Japan (Japanese)</td><td class="mono">a3a5664f</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc8 (2026-10-15)</h3><ul>
+<li>Akuma, Shin Akuma and Ten Akuma keep their portraits after a win and when another player joins, including their extra colors.</li>
+<li>Fighter names are centered beside the VS emblem without running beneath it.</li>
+<li>Both regional builds have new checksums; rebuild them with the rc8 kit.</li>
+</ul>
 <h3>rc7 (2026-10-15)</h3><ul>
 <li>Cammy&#x27;s stage no longer flashes gaps at the aurora boundary or beside the right-hand pillar, while retaining the floor&#x27;s perspective and the game&#x27;s timing.</li>
 <li>JAMAICA&#x27;s final A now has a complete outline.</li>
