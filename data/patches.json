@@ -3761,7 +3761,7 @@
       ],
       "reconstruction": {
         "requires": [
-          "your own PlayStation 2 anthology disc image: Street Fighter Alpha Anthology for the USA set, or Street Fighter Zero — Fighter's Generation for the Japan set",
+          "your own PlayStation 2 anthology disc image: Street Fighter Alpha Anthology for the USA set, or Street Fighter Zero \u2014 Fighter's Generation for the Japan set",
           "your own arcade Street Fighter Zero 2 Alpha romset: sfz2al for the USA set, sfz2alj for the Japan set"
         ],
         "kit_dir": "tools/sfa2ex_builder",
@@ -3790,7 +3790,7 @@
             "Gold rc7's fixes: Cammy's Hooligan Combination leaps properly, her throws and a computer-controlled Cammy no longer freeze the game, and her Psycho Streak finishes are corrected.",
             "The USA build gains Japan's held-button win-quote pick, computer opponents, two-player damage and factory settings.",
             "A new REGULATION operator setting; OFF, the default, keeps the red blood.",
-            "The USA next-stage maps show the Japanese place names in English, with a darker banner stripe, and Cammy’s full story lines are restored.",
+            "The USA next-stage maps show the Japanese place names in English, with a darker banner stripe, and Cammy\u2019s full story lines are restored.",
             "Every set has new checksums, so rebuild them with the rc2 kit."
           ]
         },
@@ -3822,7 +3822,7 @@
           ],
           [
             "Cammy as a CPU opponent in Arcade",
-            "—",
+            "\u2014",
             "No",
             "Yes"
           ],
@@ -4253,6 +4253,131 @@
           "date": "2026-10-07",
           "items": [
             "First public release."
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "usf2-backport",
+      "title": "Ultra Street Fighter II",
+      "subtitle": "Arcade backport",
+      "section": "restorations",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-10-16",
+      "game": "Ultra Street Fighter II: The Final Challengers (Nintendo Switch)",
+      "hardware": "Capcom CPS-2 with the CPS+ core",
+      "thumbnail_build": "us",
+      "requirements": {
+        "text": "On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. In MAME or HBMAME they need the set definitions the kit writes compiled in, since the stock emulators don't know these sets.",
+        "link": {
+          "label": "About CPS-2+ hardware",
+          "url": "../cps2-plus/"
+        }
+      },
+      "summary": "Ultra Street Fighter II: The Final Challengers as a CPS-2 game: Akuma gets his own select cell, Evil Ryu and Violent Ken join the roster, and the Switch edition's title, color select and sound come along. USA and Japan builds.",
+      "description": [
+        "Ultra Street Fighter II: The Final Challengers is the 2017 Nintendo Switch edition of Super Street Fighter II Turbo, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.",
+        "Akuma has his own select cell, and Evil Ryu and Violent Ken join the original sixteen fighters with their Ultra moves, colors and endings. Shin Akuma stays hidden, for twenty fighters in all.",
+        "Ultra's presentation comes with them: the Ultra title and intro, \"The Final Challengers\" lettering, a color select for the new fighters, and a choice of sixteen stages or Random once you have picked a fighter.",
+        "The Switch edition's sound effects play in every build, and on MiSTer its arranged music plays too. The ULTRA CONFIGURATION page in Test Mode switches the sound effects and, on MiSTer, the music between MODERN and CLASSIC.",
+        "The USA build is in English; the Japan build keeps the Japanese.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "Akuma on his own select cell, with Evil Ryu and Violent Ken: twenty fighters with the hidden Shin Akuma",
+        "Ultra's classic colors for the new fighters, chosen on a color select screen",
+        "Sixteen stages and Random to choose from after you pick a fighter",
+        "The Ultra title and intro, and ULTRA on the VS, Continue and Game Over screens",
+        "The Switch edition's sound effects, and its arranged music on MiSTer; MODERN or CLASSIC for each in ULTRA CONFIGURATION",
+        "USA (English) and Japan builds"
+      ],
+      "builds": [
+        {
+          "key": "us",
+          "region": "USA",
+          "title": "Ultra Street Fighter II",
+          "hbmame_set": "usf2t8",
+          "mame_set": "usf2t4",
+          "title_screen": "data/screenshots/usf2-backport/title_us.png"
+        },
+        {
+          "key": "jp",
+          "region": "Japan",
+          "title": "Ultra Street Fighter II",
+          "hbmame_set": "usf2j8",
+          "mame_set": "usf2j4",
+          "title_screen": "data/screenshots/usf2-backport/title_jp.png"
+        }
+      ],
+      "screenshots": [
+        {
+          "single": "data/screenshots/usf2-backport/attract_evil_ryu.png",
+          "caption": "Evil Ryu closes the intro."
+        },
+        {
+          "single": "data/screenshots/usf2-backport/select_evil_ryu.png",
+          "caption": "Evil Ryu on the select screen."
+        },
+        {
+          "single": "data/screenshots/usf2-backport/ending_evil_ryu.png",
+          "caption": "Evil Ryu's ending."
+        }
+      ],
+      "reconstruction": {
+        "requires": [
+          "your own Nintendo Switch game files: the USA base game of Ultra Street Fighter II for the USA set, the Japanese base game for the Japan set",
+          "your own Switch prod.keys",
+          "your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)"
+        ],
+        "kit_dir": "backports/usf2/kit",
+        "kit_command": "python3 apply.py --rompath roms --nsp-us usa.nsp --nsp-jp japan.nsp \\\n                 --keys prod.keys --out-dir out",
+        "how": "A small tool opens your Switch game files with your own keys, combines them with your arcade romsets, and writes out the finished MAME and HBMAME sets, the MiSTer files, and the music pack.",
+        "sizes_note": "",
+        "columns": [
+          [
+            "MAME",
+            "mame_set"
+          ],
+          [
+            "HBMAME / MiSTer",
+            "hbmame_set"
+          ]
+        ]
+      },
+      "notes": [
+        "The 4 MB builds run in MAME and the 8 MB builds run in HBMAME and on MiSTer. MAME and HBMAME need the kit's set definitions compiled in; the kit includes an installer for them.",
+        "Credits: Akuma's imported artwork is Tyrone's, from Super Street Fighter II Turbo: New Legacy.",
+        "This is a fan backport, unaffiliated with Capcom. The sets are built from game files you already own; the kit ships only our own code and patches, plus the CPS+ core with its source and licenses."
+      ],
+      "related": [
+        {
+          "label": "Super Street Fighter II Turbo: Grand Master Challenge",
+          "url": "../ssf2t-gmc/",
+          "note": "the English restoration of the game Ultra is built on"
+        },
+        {
+          "label": "Super Street Fighter II EX",
+          "url": "../ssf2-ex/",
+          "note": "another enhanced Super Turbo"
+        },
+        {
+          "label": "CPS-2+ hardware",
+          "url": "../cps2-plus/",
+          "note": "how the extended system these sets need works"
+        },
+        {
+          "label": "Super Street Fighter II Turbo: New Legacy",
+          "url": "https://newlegacy.fr/credits.html",
+          "note": "Tyrone's Akuma artwork comes from this project"
+        }
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-10-16",
+          "items": [
+            "First release candidate."
           ]
         }
       ]

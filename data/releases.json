@@ -3411,6 +3411,58 @@
         }
       }
     },
+    "usf2-backport": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-10-16",
+          "files": {
+            "kit": {
+              "archive": "archive/788307f1c4c452df9e063a4d71c56a51db4752286c5165c566843235ae9b0aa3/usf2-backport-rc1-kit.zip",
+              "name": "usf2-backport-rc1-kit.zip",
+              "sha256": "788307f1c4c452df9e063a4d71c56a51db4752286c5165c566843235ae9b0aa3",
+              "size": 19783144
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc1-candidate.6",
+            "capcom_source_commit": "1229f9591a4bdf0cdb62410bb540906cdd19d241",
+            "ready_record_sha256": "7fff410d3d3ead2bfdd87d1e78ab2540c010c0fc541962b8455da238eb78fb97",
+            "release_sha256": "8cfc0f25e3d132e1d4118997fd735eca961ec9ad27542a6119f91056131f4876",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-16",
+              "files": {
+                "kit": {
+                  "archive": "archive/788307f1c4c452df9e063a4d71c56a51db4752286c5165c566843235ae9b0aa3/usf2-backport-rc1-kit.zip",
+                  "name": "usf2-backport-rc1-kit.zip",
+                  "sha256": "788307f1c4c452df9e063a4d71c56a51db4752286c5165c566843235ae9b0aa3",
+                  "size": 19783144
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc1-candidate.6",
+                "capcom_source_commit": "1229f9591a4bdf0cdb62410bb540906cdd19d241",
+                "ready_record_sha256": "7fff410d3d3ead2bfdd87d1e78ab2540c010c0fc541962b8455da238eb78fb97",
+                "release_sha256": "8cfc0f25e3d132e1d4118997fd735eca961ec9ad27542a6119f91056131f4876",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        }
+      }
+    },
     "vhunt2-arrange": {
       "current": "rc3",
       "versions": {
