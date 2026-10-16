@@ -30,7 +30,7 @@ USAGE (recommended — build every platform for one region)
 
 This creates:
 
-    out/mame/<region>/<set>.zip  4MB — stock MAME or real CPS-2 hardware
+    out/mame/<region>/<set>.zip  4MB — stock MAME
     out/hbmame/<set>.zip         8MB — HBMAME, with every sound uncompressed
     out/mister/                  8MB — ready to copy to a MiSTer SD card
 
@@ -82,10 +82,15 @@ operator menu.
 CONSOLE FIGHTS
 --------------
 
-Hold START for about half a second to open Continue / Quit. UP and DOWN
-select a row, LP confirms, and START resumes. Quit returns to the title menu.
-A short START tap still taunts. Either joined player can pause; the player
-who opened the menu controls it. Music and sound resume with the fight.
+Press Coin to open Pause / Back during fights or character selection.
+UP and DOWN select a row, LP confirms, and Coin or START resumes. Quit asks
+for confirmation before returning to the title menu. Either joined player
+can pause; the player who opened the menu controls it. START keeps its native
+taunt and stage-selection behavior. Holding START during a fight also opens
+pause. Music and sound resume with the fight.
+Arcade mode keeps its normal coin behavior.
+
+On Gen's character-select cell, START alternates his two starting stances.
 
 TRAINING
 --------
@@ -94,7 +99,8 @@ Choose TRAINING after VERSUS on the title menu. Select your fighter, then
 the computer. NORMAL MODE is endless practice; RECORDING MODE records one
 round, and REPLAY plays it from the saved setup and settings.
 
-Hold START to open the practice menu. Training Settings controls the gauge,
+Press Coin to open Pause, then choose TRAINING MENU. Training Settings
+controls the gauge,
 stun, attack data and input history. Computer Settings controls movement,
 guard, roll and throw escape. LP confirms menu rows; LEFT and RIGHT change
 settings. RESTART keeps your chosen stage. Character Change returns to
@@ -103,6 +109,22 @@ selection; Quit returns to the title menu.
 For a different stage, highlight its fighter during COMPUTER SELECT, hold
 START for one second, move to the desired computer and confirm while still
 holding START. Otherwise the computer's usual stage is used.
+
+EX CONFIGURATION
+----------------
+
+The service menu's EX CONFIGURATION page has two independent choices:
+
+  BACKGROUNDS  JAPAN / INTERNATIONAL (default JAPAN)
+    JAPAN uses Sodom's Japanese truck lettering, Sakura's calligraphy and
+    Dan's red-lettered upper sign. INTERNATIONAL uses English truck
+    lettering, Sakura's Mt. Fuji plaque and Dan's plain sign.
+
+  ARTWORK      ORIGINAL / 30TH ANNIVERSARY (default ORIGINAL)
+    Selects the original or collection billboard artwork on Nash's stage.
+
+LEFT and RIGHT change a setting. Return to the service root and use
+SAVE & EXIT to keep it. DEFAULT restores JAPAN / ORIGINAL.
 
 REGULATION
 ----------
@@ -120,7 +142,8 @@ own the disc and romset used as inputs. The recipes carry a few pieces of
 Capcom data: about 4 KB of Cammy's theme score from X-Men vs. Street Fighter
 (Capcom, 1996), which her stage music is built from; the infinity and star
 symbols from Street Fighter Zero 2 Dash for the Sega Saturn; a few bytes of
-projectile data from Super Street Fighter II Turbo; and EX's mirrored and
+projectile data from Super Street Fighter II Turbo; the altered billboard
+artwork from Street Fighter 30th Anniversary Collection; and EX's mirrored and
 recolored versions of the game's own art. Do not sell this kit or distribute
 it applied to game images.
 
