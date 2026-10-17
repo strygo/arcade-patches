@@ -36,12 +36,12 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Ultra Street Fighter II</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-10-16</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-10-17</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/usf2-backport/title_us.png?v=b9dadeae9b" alt="Ultra Street Fighter II (USA) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>USA · <code>usf2t8</code></figcaption></figure><figure class="build"><img src="../img/usf2-backport/title_jp.png?v=f07aac6707" alt="Ultra Street Fighter II (Japan) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>Japan · <code>usf2j8</code></figcaption></figure></div>
 <h2>About</h2>
-<div class="requirements"><p>On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. In MAME or HBMAME they need the set definitions the kit writes compiled in, since the stock emulators don&#x27;t know these sets. <a href="../cps2-plus/">About CPS-2+ hardware</a></p></div>
+<div class="requirements"><p>On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. The MAME sets run in unmodified MAME using its Hyper Street Fighter II loader. HBMAME needs the set definitions the kit writes compiled in. <a href="../cps2-plus/">About CPS-2+ hardware</a></p></div>
 <p>Ultra Street Fighter II: The Final Challengers is the 2017 Nintendo Switch edition of Super Street Fighter II Turbo, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.</p>
 <p>Akuma has his own select cell, and Evil Ryu and Violent Ken join the original sixteen fighters with their Ultra moves, colors and endings. Shin Akuma stays hidden, for twenty fighters in all.</p>
 <p>Ultra&#x27;s presentation comes with them: the Ultra title and intro, &quot;The Final Challengers&quot; lettering, a color select for the new fighters, and a choice of sixteen stages or Random once you have picked a fighter.</p>
@@ -68,34 +68,39 @@ You need:</p>
 <h3>The builds</h3>
 <table>
 <tr><th>Region</th><th>Title</th><th>MAME</th><th>HBMAME / MiSTer</th></tr>
-<tr><td>USA</td><td>Ultra Street Fighter II</td><td class="mono">usf2t4</td><td class="mono">usf2t8</td></tr><tr><td>Japan</td><td>Ultra Street Fighter II</td><td class="mono">usf2j4</td><td class="mono">usf2j8</td></tr>
+<tr><td>USA</td><td>Ultra Street Fighter II</td><td class="mono">hsf2</td><td class="mono">usf2t8</td></tr><tr><td>Japan</td><td>Ultra Street Fighter II</td><td class="mono">hsf2j</td><td class="mono">usf2j8</td></tr>
 </table>
 <h2>Download</h2>
 
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/usf2-backport-rc1-kit.zip?v=788307f1c4">usf2-backport-rc1-kit.zip</a>
+  <div class="file"><a href="../downloads/usf2-backport-rc2-kit.zip?v=1ab636b62a">usf2-backport-rc2-kit.zip</a>
   (18.9 MB)</div>
-  <div class="hash">SHA-256: 788307f1c4c452df9e063a4d71c56a51db4752286c5165c566843235ae9b0aa3</div>
+  <div class="hash">SHA-256: 1ab636b62a3456facaec33a790666edcb76db24c338eb1338b9cfad6a852b5af</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
 <ul><li>your own Nintendo Switch game files: the USA base game of Ultra Street Fighter II for the USA set, the Japanese base game for the Japan set</li><li>your own Switch prod.keys</li><li>your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip usf2-backport-rc1-kit.zip -d usf2-backport
+<pre><code>unzip usf2-backport-rc2-kit.zip -d usf2-backport
 cd usf2-backport
 python3 apply.py --rompath roms --nsp-us usa.nsp --nsp-jp japan.nsp \
                  --keys prod.keys --out-dir out</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc2 (2026-10-17)</h3><ul>
+<li>MAME output now runs in unmodified MAME; launch instructions are included.</li>
+<li>Improved Windows setup and extraction of your Switch game files.</li>
+<li>Accepts matching arcade ROMs packaged with different ZIP compression.</li>
+</ul>
 <h3>rc1 (2026-10-16)</h3><ul>
 <li>First release candidate.</li>
 </ul>
 <h2>Related projects</h2><ul><li><a href="../ssf2t-gmc/">Super Street Fighter II Turbo: Grand Master Challenge</a>, the English restoration of the game Ultra is built on</li><li><a href="../ssf2-ex/">Super Street Fighter II EX</a>, another enhanced Super Turbo</li><li><a href="../cps2-plus/">CPS-2+ hardware</a>, how the extended system these sets need works</li><li><a href="https://newlegacy.fr/credits.html">Super Street Fighter II Turbo: New Legacy</a>, Tyrone&#x27;s Akuma artwork comes from this project</li></ul>
 <h2>Notes</h2><ul class="notes">
-<li>The 4 MB builds run in MAME and the 8 MB builds run in HBMAME and on MiSTer. MAME and HBMAME need the kit&#x27;s set definitions compiled in; the kit includes an installer for them.</li>
+<li>The 4 MB audio builds run in stock MAME as hsf2 (USA) and hsf2j (Japan), with expected checksum warnings. Keep them separate from original Hyper Street Fighter II ROMs. The 8 MB audio builds run in HBMAME and on MiSTer; HBMAME needs the included set definitions compiled in.</li>
 <li>Credits: Akuma&#x27;s imported artwork is Tyrone&#x27;s, from Super Street Fighter II Turbo: New Legacy.</li>
 <li>This is a fan backport, unaffiliated with Capcom. The sets are built from game files you already own; the kit ships only our own code and patches, plus the CPS+ core with its source and licenses.</li>
 </ul>
