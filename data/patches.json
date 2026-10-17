@@ -4453,8 +4453,8 @@
       "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc2",
-      "date": "2026-10-13",
+      "version": "rc3",
+      "date": "2026-10-17",
       "game": "Street Fighter Zero 3 (Japan 980904)",
       "set": "sfz3j",
       "hardware": "Capcom CPS-2",
@@ -4477,7 +4477,7 @@
         "Japanese Regulation OFF by default, with its operator switch and uncensored effects",
         "Japanese 980904 gameplay, difficulty, Turbo 1 defaults and secret-character access",
         "Alpha branding in the intro, selection, player introductions and win screens; English A/X/V-ISM descriptions and score rankings, Western names, title and entry announcements, and operator menus",
-        "Corrected ending backgrounds, framing and colors for Adon, Akuma, Dhalsim, Gen, R. Mika, Sakura and Vega",
+        "Corrected ending backgrounds, framing and colors, including cleaner picture edges and character placement in E. Honda\u2019s ending",
         "An optional Japanese edition with original Japanese text and names, Zero branding and Z-ISM, and the same ending corrections"
       ],
       "feedback": true,
@@ -4543,6 +4543,15 @@
         "region": "USA"
       },
       "release_history": [
+        {
+          "version": "rc3",
+          "date": "2026-10-17",
+          "items": [
+            "Corrected ending background edges, framing and colors for Blanka, Cammy, Karin and Sodom, with cleaner picture edges in the other endings.",
+            "Raised E. Honda and his trainees to their correct positions in his ending.",
+            "Fixed the picture corruption where Dhalsim's ending cuts to Chun-Li."
+          ]
+        },
         {
           "version": "rc2",
           "date": "2026-10-13",
