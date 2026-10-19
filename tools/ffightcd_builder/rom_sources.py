@@ -253,8 +253,17 @@ def self_test():
     print("ROM resolver self-test passed")
 
 
+def is_os_metadata(name):
+    """macOS bookkeeping, never a kit output. On exFAT/FAT volumes (SD cards)
+    macOS keeps file attributes in ._<name> sidecars that move with their file,
+    so a tree walk picks them up and they vanish before they are published."""
+    base = name.replace("\\", "/").rsplit("/", 1)[-1]
+    return base.startswith("._") or base == ".DS_Store"
+
+
 def publish_tree(destination, outputs):
     """Stage all artifacts, then replace with rollback on ordinary I/O failures."""
+    outputs = {name: value for name, value in outputs.items() if not is_os_metadata(name)}
     destination = Path(destination)
     if destination.is_symlink():
         raise RomError("Output directory must not be a symlink")

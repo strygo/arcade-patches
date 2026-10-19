@@ -242,7 +242,7 @@ def main():
     for manifest, patches in bundles:
         key = manifest.get("variant", {}).get("key")
         if platform in ("all", "mame") and base.get("mame_build", True):
-            name = str(Path("mame") / (key or "") / (base["set"] + ".zip"))
+            name = "/".join(part for part in ("mame", key, base["set"] + ".zip") if part)
             outputs[name] = build_members(manifest, patches, source) | devices
         if manifest.get("hbmame") and (platform in ("all", "hbmame") or (platform == "mister" and base.get("mister_hbmame"))):
             name = "hbmame/" + manifest["hbmame"]["setname"] + ".zip"
@@ -267,7 +267,8 @@ def main():
     if platform in ("all", "hbmame"):
         print("HBMAME needs QSound in your ROM path; compact clones also need the stock game archives.")
     if platform in ("all", "mister"):
-        print("MiSTer MRAs use stock archives on the card; renamed input archives are not installed automatically.")
+        print("MiSTer needs only the MRAs: they patch the stock archives already on the card, so no game zip is written for it.")
+        print("Copy the _Arcade folder from the output's mister folder to the root of your SD card.")
 
 
 if __name__ == "__main__":
