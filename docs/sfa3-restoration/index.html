@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 3</h1>
 <p class="subtitle">English restoration</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 3 (Japan 980904)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>sfz3j</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-10-17</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 3 (Japan 980904)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>sfz3j</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-10-21</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/sfa3-restoration/00_single.png?v=7021faea24" alt="An opponent-specific win quote."><figcaption>An opponent-specific win quote.</figcaption></figure>
 <figure class="shot single"><img src="../img/sfa3-restoration/01_single.png?v=85e60e6077" alt="English A/X/V-ISM selection."><figcaption>English A/X/V-ISM selection.</figcaption></figure>
@@ -47,16 +47,17 @@
 <p>Detailed stage locations return in English, in the original stage panels. Biographies, rival dialogue and endings follow the Japanese script in natural English that fits each character. Capcom&#x27;s English stays where it was accurate, and Alpha 3 MAX&#x27;s official wording is used where it fits.</p>
 <p>The game uses the Japanese 980904 revision&#x27;s gameplay and secret-character access, with its original difficulty and Turbo 1 defaults. Regulation starts OFF, restoring red hit blood and the full defeat and ending effects; the operator can still switch it ON. The arcade ending sequences are retained, with corrected backgrounds and colors.</p>
 <p>Alpha branding in the animated intro, character selection, player introductions and win screens, English A/X/V-ISM labels, descriptions and score rankings, Western names in the intro and fights, title and entry announcements, and English operator menus retain the USA presentation. It runs in MAME and on MiSTer with the jtcps2 core. Supply your own original Japanese sfz3j romset; split sets also need their sfa3 parent and QSound firmware.</p>
-<p>The optional Japanese edition keeps the original Japanese text and names, Zero branding and Z-ISM, with the same ending background and color corrections.</p>
+<p>The optional Japanese edition keeps the original Japanese text and names, Zero branding and Z-ISM, with the same ending and portrait color corrections.</p>
 <p>This is a release candidate.</p>
 <h2>What's changed</h2><ul>
 <li>All 825 Japanese win quotes in English, including 625 opponent-specific quotes the US arcade version left out</li>
-<li>All 24 detailed stage locations in English, centered in the original panels</li>
+<li>All 24 detailed stage locations in English, centered in the original panels with Capcom’s per-panel text colors</li>
 <li>Biographies, rival and boss dialogue, and endings that follow the Japanese script, keeping Capcom&#x27;s wording where it was accurate</li>
 <li>Japanese Regulation OFF by default, with its operator switch and uncensored effects</li>
 <li>Japanese 980904 gameplay, difficulty, Turbo 1 defaults and secret-character access</li>
 <li>Alpha branding in the intro, selection, player introductions and win screens; English A/X/V-ISM descriptions and score rankings, Western names, title and entry announcements, and operator menus</li>
 <li>Corrected ending backgrounds, framing and colors, including cleaner picture edges and character placement in E. Honda’s ending</li>
+<li>Corrected Sodom portrait colors, including a blue X-ISM mask and the original gray V-ISM mask in the rankings</li>
 <li>An optional Japanese edition with original Japanese text and names, Zero branding and Z-ISM, and the same ending corrections</li>
 </ul>
 <h2>Spot a difference we missed?</h2>
@@ -64,18 +65,18 @@
 something this one still doesn't, whether a line of text, a scene, a screen or a small detail,
 please <a href="https://x.com/strygo">let us know</a>. Anything you find goes into the next release.</p>
 <h2>Downloads</h2>
-<p>Tools updated 2026-10-19. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/sfa3-restoration-rc3-ips.zip?v=9656c11a51">sfa3-restoration-rc3-ips.zip</a>
-  (481 KB)</div>
-  <div class="hash">SHA-256: 9656c11a513bb444b48d42e4feea093c50a45f9243fb59661ec39c3f1a53783f</div>
+  <div class="file"><a href="../downloads/sfa3-restoration-rc4-ips.zip?v=ef7e978994">sfa3-restoration-rc4-ips.zip</a>
+  (482 KB)</div>
+  <div class="hash">SHA-256: ef7e978994880f5da09f36f27fe2702347a7414d2b76ad60d1c6b1806fe8f971</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
-  <div class="file"><a href="../downloads/sfa3-restoration-rc3-mra.zip?v=418f991ec6">sfa3-restoration-rc3-mra.zip</a>
-  (279 KB)</div>
-  <div class="hash">SHA-256: 418f991ec6b91eef0e21230a30bdd1e2494a2d038e674f59e566420351447476</div>
+  <div class="file"><a href="../downloads/sfa3-restoration-rc4-mra.zip?v=dcff02f535">sfa3-restoration-rc4-mra.zip</a>
+  (280 KB)</div>
+  <div class="hash">SHA-256: dcff02f53596a82a2126560d8b23f748f4dbfaa5ac4de6a8204a28140e850c4b</div>
 </div>
 <p>You need your own dump of <strong>Street Fighter Zero 3 (Japan 980904)</strong> as the MAME
 set <code>sfz3j.zip</code>. Every build is made from that one set.
@@ -87,7 +88,7 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <tr><td>English restoration</td><td class="mono">english</td><td class="mono">sfa3r</td></tr><tr><td>Japanese restoration</td><td class="mono">japanese</td><td class="mono">sfz3jr</td></tr>
 </table>
 <h2>How to apply</h2>
-<pre><code>unzip sfa3-restoration-rc3-ips.zip -d sfz3j-patch
+<pre><code>unzip sfa3-restoration-rc4-ips.zip -d sfz3j-patch
 cd sfz3j-patch
 python3 apply.py /path/to/sfz3j.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -121,8 +122,8 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p><code>sz3.09c</code> (512 KB, original CRC32 <code>b29e5199</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>English restoration</td><td class="mono">7e0db66f</td></tr>
-<tr><td>Japanese restoration</td><td class="mono">72b49e35</td></tr>
+<tr><td>English restoration</td><td class="mono">3b9e4187</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">91aa1312</td></tr>
 </table>
 <p><code>sz3.10b</code> (512 KB, original CRC32 <code>deb2ff52</code>) differs per build:</p>
 <table>
@@ -181,8 +182,8 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p><code>sz3j.03c</code> (512 KB, original CRC32 <code>cadf4a51</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>English restoration</td><td class="mono">5a63772b</td></tr>
-<tr><td>Japanese restoration</td><td class="mono">320d141e</td></tr>
+<tr><td>English restoration</td><td class="mono">cb2367cb</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">70f049e5</td></tr>
 </table>
 <p><code>sz3j.04c</code> (512 KB, original CRC32 <code>fcb31228</code>) differs per build:</p>
 <table>
@@ -191,6 +192,10 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <tr><td>Japanese restoration</td><td class="mono">faf7c4aa</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc4 (2026-10-21)</h3><ul>
+<li>Restored Capcom’s per-panel text colors for the English stage locations.</li>
+<li>Corrected Sodom’s mask, eye and mouth colors in portraits and rankings, including his X-ISM ranking portrait.</li>
+</ul>
 <h3>rc3 (2026-10-17)</h3><ul>
 <li>Corrected ending background edges, framing and colors for Blanka, Cammy, Karin and Sodom, with cleaner picture edges in the other endings.</li>
 <li>Raised E. Honda and his trainees to their correct positions in his ending.</li>
