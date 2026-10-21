@@ -2419,8 +2419,8 @@
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc8",
-      "date": "2026-10-15",
+      "version": "rc9",
+      "date": "2026-10-21",
       "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
       "set": "ssf2xj",
       "hardware": "Capcom CPS-2",
@@ -2683,6 +2683,15 @@
         "Fan work, unaffiliated with Capcom."
       ],
       "release_history": [
+        {
+          "version": "rc9",
+          "date": "2026-10-21",
+          "items": [
+            "Fight HUD portraits better match the selected fighter colors, and Zangief's large portraits keep consistent skin and beard colors.",
+            "Stage edges are filled in on Vega's, Dee Jay's and Cammy's stages, and Fei Long's background stays covered during airborne hits.",
+            "Moving between fighters on the select screen no longer briefly shows the next portrait in the previous fighter's colors."
+          ]
+        },
         {
           "version": "rc8",
           "date": "2026-10-15",
