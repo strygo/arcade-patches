@@ -2212,8 +2212,8 @@
       "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc2",
-      "date": "2026-09-17",
+      "version": "rc3",
+      "date": "2026-10-21",
       "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
       "set": "ssf2xj",
       "hardware": "Capcom CPS-2",
@@ -2337,7 +2337,16 @@
           "sfx.13m": "sfx.13m",
           "sfx.15m": "sfx.15m",
           "sfx.17m": "sfx.17m",
-          "sfx.19m": "sfx.19m"
+          "sfx.19m": "sfx.19m",
+          "sfx.09": "sfx.09",
+          "sfx.14m": "sfx.14m",
+          "sfx.16m": "sfx.16m",
+          "sfx.18m": "sfx.18m",
+          "sfx.20m": "sfx.20m",
+          "sfx.21m": "sfx.21m",
+          "sfx.23m": "sfx.23m",
+          "sfx.25m": "sfx.25m",
+          "sfx.27m": "sfx.27m"
         }
       },
       "screenshots": [
@@ -2388,10 +2397,19 @@
         }
       ],
       "notes": [
-        "MAME shows checksum warnings for the seven patched files. That's expected; the game plays normally. HBMAME with the ssf2tgmc set definition loads it without them.",
+        "MAME shows checksum warnings for the patched files. That's expected; the game plays normally. HBMAME with the ssf2tgmc set definition loads it without them.",
         "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
       ],
       "release_history": [
+        {
+          "version": "rc3",
+          "date": "2026-10-21",
+          "items": [
+            "Stage edges are filled in on Vega's, Dee Jay's and Cammy's stages, and Fei Long's background stays covered during airborne hits.",
+            "Zangief's large portraits keep consistent skin and beard colors.",
+            "Moving between fighters on the select screen no longer briefly shows the next portrait in the previous fighter's colors."
+          ]
+        },
         {
           "version": "rc2",
           "date": "2026-09-17",

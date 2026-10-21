@@ -36,8 +36,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Super Street Fighter II Turbo: Grand Master Challenge</h1>
 <p class="subtitle">English restoration</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>ssf2xj</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-09-17</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>ssf2xj</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-10-21</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/ssf2t-gmc/00_single.png?v=027b7f8858" alt="Super Turbo, Grand Master Challenge: Japan&#x27;s version of the game, under the US name."><figcaption>Super Turbo, Grand Master Challenge: Japan&#x27;s version of the game, under the US name.</figcaption></figure>
 <figure class="shot"><div class="pair"><div><p class="label">US Super Turbo</p><img src="../img/ssf2t-gmc/01_before.png?v=4833c0b7c5" alt="US Super Turbo: Where it comes from. The US version on the left, the Japanese version on the right."></div><div><p class="label">Japanese Super Turbo X</p><img src="../img/ssf2t-gmc/01_after.png?v=8ed6c71bdf" alt="Japanese Super Turbo X: Where it comes from. The US version on the left, the Japanese version on the right."></div></div><figcaption>Where it comes from. The US version on the left, the Japanese version on the right.</figcaption></figure>
@@ -67,25 +67,25 @@
 something this one still doesn't, whether a line of text, a scene, a screen or a small detail,
 please <a href="https://x.com/strygo">let us know</a>. Anything you find goes into the next release.</p>
 <h2>Downloads</h2>
-<p>Tools updated 2026-10-19. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware</div>
-  <div class="file"><a href="../downloads/ssf2t-gmc-rc2-ips.zip?v=3dd4c97cff">ssf2t-gmc-rc2-ips.zip</a>
-  (56 KB)</div>
-  <div class="hash">SHA-256: 3dd4c97cff2f0bbc788bd138980c9669225766f75f29dd61ea80a093a950a5f7</div>
+  <div class="file"><a href="../downloads/ssf2t-gmc-rc3-ips.zip?v=2e597d2529">ssf2t-gmc-rc3-ips.zip</a>
+  (61 KB)</div>
+  <div class="hash">SHA-256: 2e597d2529894f074a40ace910590e43a17fdd6e886c11c9396c580e26a6fdb1</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRA only</div>
-  <div class="file"><a href="../downloads/ssf2t-gmc-rc2-mra.zip?v=8627035a29">ssf2t-gmc-rc2-mra.zip</a>
-  (28 KB)</div>
-  <div class="hash">SHA-256: 8627035a29e73dfca048f5524b39e6ddfe5a8ea12ba35a8fe04830ef305e41b9</div>
+  <div class="file"><a href="../downloads/ssf2t-gmc-rc3-mra.zip?v=fc7afaa4ee">ssf2t-gmc-rc3-mra.zip</a>
+  (30 KB)</div>
+  <div class="hash">SHA-256: fc7afaa4eeccfa8d879b25724820e1d8a3b5128efbffeca0c489a4ae1310afef</div>
 </div>
 <p>You need your own dump of <strong>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</strong> as the MAME
 set <code>ssf2xj.zip</code>.
 Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
 <h2>How to apply</h2>
-<pre><code>unzip ssf2t-gmc-rc2-ips.zip -d ssf2xj-patch
+<pre><code>unzip ssf2t-gmc-rc3-ips.zip -d ssf2xj-patch
 cd ssf2xj-patch
 python3 apply.py /path/to/ssf2xj.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -116,15 +116,29 @@ so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</c
 <h3>Changed ROMs</h3>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
+<tr><td class="mono">sfx.09</td><td>512 KB</td><td class="mono">642fae3f</td><td class="mono">95718f1e</td></tr>
 <tr><td class="mono">sfx.13m</td><td>2.0 MB</td><td class="mono">cf94d275</td><td class="mono">75dac0eb</td></tr>
+<tr><td class="mono">sfx.14m</td><td>1.0 MB</td><td class="mono">b7cc32e7</td><td class="mono">1f8dd3ca</td></tr>
 <tr><td class="mono">sfx.15m</td><td>2.0 MB</td><td class="mono">5eb703af</td><td class="mono">84dcc039</td></tr>
+<tr><td class="mono">sfx.16m</td><td>1.0 MB</td><td class="mono">8376ad18</td><td class="mono">8033c95d</td></tr>
 <tr><td class="mono">sfx.17m</td><td>2.0 MB</td><td class="mono">ffa60e0f</td><td class="mono">bfcaf206</td></tr>
+<tr><td class="mono">sfx.18m</td><td>1.0 MB</td><td class="mono">f5b1b336</td><td class="mono">dd6cdee2</td></tr>
 <tr><td class="mono">sfx.19m</td><td>2.0 MB</td><td class="mono">34e825c5</td><td class="mono">13a55fd3</td></tr>
-<tr><td class="mono">sfxj.03d</td><td>512 KB</td><td class="mono">50b52b37</td><td class="mono">b8a10ee0</td></tr>
-<tr><td class="mono">sfxj.04a</td><td>512 KB</td><td class="mono">af7767b4</td><td class="mono">86104c3a</td></tr>
+<tr><td class="mono">sfx.20m</td><td>1.0 MB</td><td class="mono">459d5c6b</td><td class="mono">4dacc976</td></tr>
+<tr><td class="mono">sfx.21m</td><td>1.0 MB</td><td class="mono">e32854af</td><td class="mono">34f361da</td></tr>
+<tr><td class="mono">sfx.23m</td><td>1.0 MB</td><td class="mono">760f2927</td><td class="mono">279f2671</td></tr>
+<tr><td class="mono">sfx.25m</td><td>1.0 MB</td><td class="mono">1ee90208</td><td class="mono">1fbd5b9e</td></tr>
+<tr><td class="mono">sfx.27m</td><td>1.0 MB</td><td class="mono">f814400f</td><td class="mono">11725784</td></tr>
+<tr><td class="mono">sfxj.03d</td><td>512 KB</td><td class="mono">50b52b37</td><td class="mono">ee8e9e9b</td></tr>
+<tr><td class="mono">sfxj.04a</td><td>512 KB</td><td class="mono">af7767b4</td><td class="mono">c9df66cd</td></tr>
 <tr><td class="mono">sfxj.08</td><td>512 KB</td><td class="mono">2de76f10</td><td class="mono">ea0d1d90</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc3 (2026-10-21)</h3><ul>
+<li>Stage edges are filled in on Vega&#x27;s, Dee Jay&#x27;s and Cammy&#x27;s stages, and Fei Long&#x27;s background stays covered during airborne hits.</li>
+<li>Zangief&#x27;s large portraits keep consistent skin and beard colors.</li>
+<li>Moving between fighters on the select screen no longer briefly shows the next portrait in the previous fighter&#x27;s colors.</li>
+</ul>
 <h3>rc2 (2026-09-17)</h3><ul>
 <li>The English was checked line by line against Capcom&#x27;s own US script. Wherever Capcom&#x27;s wording kept the Japanese meaning, it&#x27;s now used: 54 lines across the win quotes, the endings and the Tournament Battle rules. Chun-Li&#x27;s &quot;Men are no challenge at all&quot;, for one, is now &quot;You&#x27;re no challenge at all&quot;. The Japanese story points stay, like Shoryuken instead of Sheng Long, and Cammy&#x27;s spy story.</li>
 <li>Every ending now plays out exactly as it does in Japan. Some scenes were being skipped under the US region, like Jane and Amy arriving to stop Guile.</li>
@@ -138,7 +152,7 @@ so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</c
 </ul>
 <h2>Related projects</h2><ul><li><a href="https://www.arcade-projects.com/threads/project-request-cps2-super-street-fighter-ii-x-japan-complete-english-restoration-patch.38233/">arcade-projects request thread</a>, the request this project set out to answer</li><li><a href="../cps-plus/">CPS+</a>, companion project: the arranged Anniversary Edition and HD Remix soundtracks for Super Turbo on MiSTer</li></ul>
 <h2>Notes</h2><ul class="notes">
-<li>MAME shows checksum warnings for the seven patched files. That&#x27;s expected; the game plays normally. HBMAME with the ssf2tgmc set definition loads it without them.</li>
+<li>MAME shows checksum warnings for the patched files. That&#x27;s expected; the game plays normally. HBMAME with the ssf2tgmc set definition loads it without them.</li>
 <li>Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set.</li>
 </ul>
 </main>
