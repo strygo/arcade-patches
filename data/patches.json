@@ -3972,8 +3972,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc2",
-      "date": "2026-10-14",
+      "version": "rc3",
+      "date": "2026-10-21",
       "game": "Vampire Savior Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
@@ -4067,6 +4067,17 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc3",
+          "date": "2026-10-21",
+          "items": [
+            "Restored Huitzil\u2019s air dashes and floating, and corrected mine contact and missing animations.",
+            "Fixed Dee\u2019s jumping light-kick special cancels, repeated teleports and Dark Force sword behavior.",
+            "Corrected Donovan\u2019s artwork, animations, sword effects and special-move colors.",
+            "Corrected Pyron\u2019s special-move commands, animation timing and jumping shadows.",
+            "Fixed Dee\u2019s sword colors when returning from a special move."
+          ]
+        },
         {
           "version": "rc2",
           "date": "2026-10-14",
