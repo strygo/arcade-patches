@@ -37,6 +37,8 @@ before/after screenshots, download bundles, checksums, and apply instructions.
 - `data/screenshots/` — screenshots captured for the site that have no home
   in the work repo (e.g. region-lock proof shots).
 - `site/style.css` — the stylesheet, copied into `docs/` at build time.
+- `site/logo.png`, `favicon.*`, `apple-touch-icon.png` — the AP emblem cut to
+  size by `tools/make_logo.py` from `site/src/ap-emblem.png`; copied likewise.
 - `docs/` — generated output, committed, served by GitHub Pages.
 
 ## Building

@@ -214,7 +214,7 @@ def page(site: dict, title: str, body: str, depth: int = 0, social: dict | None 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>{social_tags(site, social)}
-<link rel="icon" href="{rel}favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{rel}favicon.png" type="image/png" sizes="64x64">
 <link rel="alternate icon" href="{rel}favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="apple-touch-icon" href="{rel}apple-touch-icon.png">
 <link rel="stylesheet" href="{rel}style.css">
@@ -222,8 +222,12 @@ def page(site: dict, title: str, body: str, depth: int = 0, social: dict | None 
 <body>
 <header class="site">
   <div class="inner">
-    <a class="home" href="{rel or './'}">{esc(site['title'])}</a>
-    <div class="tagline">{esc(site['tagline'])}</div>
+    <a class="brand" href="{rel or './'}">
+      <img class="logo" src="{rel}logo.png" width="48" height="48" alt="">
+      <span><span class="home">{esc(site['title'])}</span>
+      <span class="tagline">{esc(site['tagline'])}</span></span>
+    </a>
+    <nav>{site_nav(site, rel)}</nav>
   </div>
 </header>
 <main>
@@ -234,12 +238,31 @@ def page(site: dict, title: str, body: str, depth: int = 0, social: dict | None 
     <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
     by Capcom. All game titles, characters, and artwork remain the property of their
     respective owners. No ROMs or other copyrighted game data are hosted here.</p>
-    <p><a href="{rel}legal.html">Legal &amp; disclaimers</a>{repo_link(site)}</p>
+    <p>{footer_links(site, rel)}</p>
   </div>
 </footer>
 </body>
 </html>
 """, depth)
+
+
+def site_nav(site: dict, rel: str) -> str:
+    links = [(f"{rel}about/", "About")]
+    if site.get("forum_url"):
+        links.append((site["forum_url"], "Forum"))
+    if site.get("x_url"):
+        links.append((site["x_url"], "X"))
+    return "".join(f'<a href="{esc(url)}">{label}</a>' for url, label in links)
+
+
+def footer_links(site: dict, rel: str) -> str:
+    links = [f'<a href="{rel}about/">About</a>']
+    if site.get("forum_url"):
+        links.append(f'<a href="{esc(site["forum_url"])}">Support forum</a>')
+    if site.get("x_url"):
+        links.append(f'<a href="{esc(site["x_url"])}">{esc(site["x_account"])} on X</a>')
+    links.append(f'<a href="{rel}legal.html">Legal &amp; disclaimers</a>')
+    return " · ".join(links) + repo_link(site)
 
 
 def repo_link(site: dict) -> str:
@@ -352,16 +375,32 @@ def render_changelog_entry(ev: dict, depth: int = 0, with_items: bool = False) -
 
 
 def render_contact_section(site: dict) -> str:
-    """Where to send a correction.  The site has no issue tracker, so this is
-    the one place a reader is pointed at."""
-    url = site.get("author_url")
-    if not url:
+    """Where to ask for help or send a correction: the support forum, and X
+    for news."""
+    forum, x_url = site.get("forum_url"), site.get("x_url")
+    if not (forum or x_url):
         return ""
-    handle = url.rstrip("/").rsplit("/", 1)[-1]
+    lines = []
+    if forum:
+        lines.append(f'Questions, a correction, or a patch that needs a hand? '
+                     f'The <a href="{esc(forum)}">support forum</a> is the place.')
+    if x_url:
+        lines.append(f'News of new releases is posted on X as '
+                     f'<a href="{esc(x_url)}">{esc(site["x_account"])}</a>.')
     return f"""<section class="contact" id="contact">
-<h2 class="kind">Contact</h2>
-<p>Spotted something wrong, or got a patch working on real hardware?
-Say so to <a href="{esc(url)}">@{esc(handle)}</a> on X.</p>
+<h2 class="kind">Support</h2>
+<p>{" ".join(lines)}</p>
+</section>"""
+
+
+def render_about_section(site: dict) -> str:
+    """The home page's short About; the full story is on the About page."""
+    return f"""<section class="about" id="about">
+<h2 class="kind">About</h2>
+<p>I have loved Capcom&rsquo;s 1990s arcade games since they came out, and these
+patches aim to make each one the definitive way to play it, borrowing the best
+of Capcom&rsquo;s own ports while staying faithful to their approach.
+<a href="about/">More about the author and the site</a>.</p>
 </section>"""
 
 
@@ -474,7 +513,7 @@ def render_index(site: dict, patches: list, thumbs: dict,
 </section>""")
     changes = render_changelog_section(site, changelog_days(patches, projects))
     body = (f"{intro}\n" + "\n".join(sections)
-            + f"\n{changes}\n{render_contact_section(site)}")
+            + f"\n{changes}\n{render_about_section(site)}\n{render_contact_section(site)}")
     return page(site, site["title"], body, social=social)
 
 
@@ -735,7 +774,7 @@ def render_feedback(patch: dict) -> str:
     """Restorations ask players to report differences the patch missed."""
     if not patch.get("feedback"):
         return ""
-    url = SITE.get("author_url")
+    url = SITE.get("forum_url") or SITE.get("author_url")
     contact = (f'<a href="{esc(url)}">let us know</a>' if url else "let us know")
     return f"""<h2>Spot a difference we missed?</h2>
 <p>A restoration is only as complete as its list of differences. If the Japanese version does
@@ -1177,6 +1216,54 @@ def render_article(site: dict, article: dict, social: dict | None = None) -> str
                 social=social)
 
 
+def render_about(site: dict, social: dict | None = None) -> str:
+    forum, x_url = site["forum_url"], site["x_url"]
+    body = f"""<a class="back" href="../">&larr; All patches</a>
+<h1>About</h1>
+<p class="subtitle">By {esc(site['author'])}</p>
+
+<h2>The author</h2>
+<p>I have been a fan of Capcom&rsquo;s 1990s games for as long as they have
+existed. Back then I imported the latest releases on the Sega Saturn, because
+that was the closest I could get to the arcade experience at home.</p>
+<p>I bought my first arcade cabinet in 1998, a Final Fight, off eBay for $125.
+It was two hours away, and I had to bring my dad along to pick it up. I have
+been collecting ever since and now have every CPS-2 game. The English release
+of Mega Man: The Power Battle took the longest to track down, because the US
+version only ever had a location test and was never a full release. I am still
+looking for an English Puzz Loop. Final Fight still has a special place in my
+heart.</p>
+
+<h2>How the project started</h2>
+<p>In 2018 I wondered whether the games inside Capcom&rsquo;s PS2 anthologies
+could be pulled out and run on real arcade hardware. Street Fighter Zero 2 Dash,
+which never had an arcade release, was the one I wanted most. I
+<a href="{esc(site['origin_post_url'])}">asked about it on Arcade Projects</a>,
+and nobody had an answer.</p>
+<p>I came back to it in 2020 and started to learn what was on those discs: the
+arcade games themselves with Capcom&rsquo;s extras built in, hidden options for
+choosing between versions, and a lot of re-recorded music. Then I came back
+again this summer. Some of the console versions, such as Hyper Street Fighter
+Alpha, were more than arcade hardware could carry, but Zero 2 Dash fit.
+It became <a href="../sfa2-gold/">Street Fighter Alpha 2 Gold</a>, a native
+arcade game in four regional versions, and the rest of this site grew around
+it.</p>
+
+<h2>This site</h2>
+<p>The aim is the definitive experience of each game. That means borrowing the
+features from Capcom&rsquo;s various ports while remaining faithful to
+their approach, and retranslating wherever they cut corners.</p>
+<p>Everything here is free and runs against your own copy of the game. No game
+data is hosted on this site; see <a href="../legal.html">Legal &amp;
+disclaimers</a>.</p>
+
+<h2>Support and news</h2>
+<p>For help with a patch, questions or corrections, visit the
+<a href="{esc(forum)}">Strygo Conversions forum</a> on Arcade Projects. News of
+new releases is posted on X as <a href="{esc(x_url)}">{esc(site['x_account'])}</a>.</p>"""
+    return page(site, f"About · {site['title']}", body, depth=1, social=social)
+
+
 def render_legal(site: dict, social: dict | None = None) -> str:
     contact = esc(site.get("contact_note", ""))
     body = f"""<h1>Legal &amp; disclaimers</h1>
@@ -1242,7 +1329,7 @@ def main() -> None:
     DOCS.mkdir(exist_ok=True)
     (DOCS / ".nojekyll").write_text("")
     shutil.copyfile(ROOT / "site" / "style.css", DOCS / "style.css")
-    for icon in ("favicon.svg", "favicon.ico", "apple-touch-icon.png"):
+    for icon in ("logo.png", "favicon.png", "favicon.ico", "apple-touch-icon.png"):
         shutil.copyfile(ROOT / "site" / icon, DOCS / icon)
 
     # sort_title (page-only) orders a series where plain titles would not,
@@ -1329,6 +1416,9 @@ def main() -> None:
                      social=home))
     (DOCS / "legal.html").write_text(render_legal(
         site, dict(home, title=f"Legal · {site['title']}", path="legal.html")))
+    (DOCS / "about").mkdir(parents=True, exist_ok=True)
+    (DOCS / "about" / "index.html").write_text(render_about(
+        site, dict(home, title=f"About · {site['title']}", path="about/")))
     for article in config.get("articles", []):
         if article.get("hidden"):
             continue
