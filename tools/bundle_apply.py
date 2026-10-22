@@ -70,6 +70,7 @@ def load_bundle(variant=None):
         manifest["members"] = chosen["members"]
         manifest["hbmame"] = chosen.get("hbmame")
         manifest["mra"] = chosen.get("mra")
+        manifest["darksoft"] = chosen.get("darksoft")
         manifest["variant"] = {"key": chosen["key"], "label": chosen["label"]}
         ips_dir = os.path.join(ips_dir, chosen["key"])
     elif variant:
@@ -171,7 +172,7 @@ def main():
     parser.add_argument("--out-dir")
     parser.add_argument("-o", "--output")
     parser.add_argument("--hbmame", action="store_true")
-    parser.add_argument("--platform", choices=("all", "mame", "hbmame", "mister"))
+    parser.add_argument("--platform", choices=("all", "mame", "hbmame", "mister", "darksoft"))
     parser.add_argument("--variant")
     parser.add_argument("--list-variants", action="store_true")
     parser.add_argument("--include-devices", action="store_true")
@@ -193,7 +194,7 @@ def main():
     if args.hbmame and args.platform not in (None, "hbmame"):
         parser.error("--hbmame conflicts with --platform")
     platform = args.platform or ("hbmame" if args.hbmame else "all" if args.out_dir or args.check or args.check_runtime else "mame")
-    if platform in ("all", "mister") and not args.out_dir and not (args.check or args.check_runtime):
+    if platform in ("all", "mister", "darksoft") and not args.out_dir and not (args.check or args.check_runtime):
         parser.error("this platform needs --out-dir")
     if args.target and os.path.isdir(args.target) and not args.out_dir and not args.rompath and not (args.check or args.check_runtime):
         if platform != "mame" or args.output:
@@ -217,7 +218,10 @@ def main():
                         exclude=[output], progress=print)
     needed = {}
     for manifest, _ in bundles:
-        need_full = platform in ("mame", "all") and base.get("mame_build", True)
+        need_darksoft = platform in ("darksoft", "all") and bool(manifest.get("darksoft"))
+        if platform == "darksoft" and not need_darksoft:
+            raise RomError("Darksoft is unavailable: this kit has no declared compatible CPS-2 output")
+        need_full = (platform in ("mame", "all") and base.get("mame_build", True)) or need_darksoft
         need_hb = (platform in ("hbmame", "all") or (platform == "mister" and base.get("mister_hbmame"))) and bool(manifest.get("hbmame"))
         if platform == "mame" and not base.get("mame_build", True):
             raise RomError("This kit has no MAME build; select HBMAME or MiSTer")
@@ -241,9 +245,17 @@ def main():
     outputs = {}
     for manifest, patches in bundles:
         key = manifest.get("variant", {}).get("key")
+        full = None
         if platform in ("all", "mame") and base.get("mame_build", True):
             name = "/".join(part for part in ("mame", key, base["set"] + ".zip") if part)
-            outputs[name] = build_members(manifest, patches, source) | devices
+            full = build_members(manifest, patches, source)
+            outputs[name] = full | devices
+        if platform in ("all", "darksoft") and manifest.get("darksoft"):
+            from darksoft import tree
+            spec = manifest["darksoft"]
+            if full is None:
+                full = build_members(manifest, patches, source)
+            outputs.update(tree(full, spec["profile"], folder=spec["folder"], menu=spec["menu"]))
         if manifest.get("hbmame") and (platform in ("all", "hbmame") or (platform == "mister" and base.get("mister_hbmame"))):
             name = "hbmame/" + manifest["hbmame"]["setname"] + ".zip"
             members = build_members(manifest, patches, source, compact=True)
@@ -262,6 +274,9 @@ def main():
     else:
         write_zip(output, next(iter(outputs.values())))
     print(f"Built game files: {output}")
+    if any(m.get("darksoft") for m, _ in bundles) and platform in ("all", "darksoft"):
+        print("Darksoft: copy the game's folder from darksoft/games to your card's games folder.")
+        print("Original-key CPS-2 output only; expanded hardware and streamed audio are unsupported.")
     if platform in ("all", "mame") and not devices and not base.get("mame_include_devices", True):
         print("MAME needs your unmodified qsound.zip in its ROM path.")
     if platform in ("all", "hbmame"):

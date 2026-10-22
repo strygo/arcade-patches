@@ -31,6 +31,11 @@ USAGE (recommended — build every platform for one region)
 This creates:
 
     out/mame/<region>/<set>.zip  4MB — stock MAME
+    out/darksoft/games/<game>/   8MB — best native samples, Darksoft flash format
+
+    Use --platform darksoft --out-dir out for Darksoft only. Copy the game
+    folder to the card games folder. This matches HBMAME's best native
+    sample version. No duplicate 4 MiB alternative or streamed audio is exported.
     out/hbmame/<set>.zip         8MB — HBMAME, with every sound uncompressed
     out/mister/                  8MB — ready to copy to a MiSTer SD card
 

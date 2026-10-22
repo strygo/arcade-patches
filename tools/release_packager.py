@@ -247,6 +247,12 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
         if hb and patch.get("mister_hbmame"):
             lines.append(f"{pad}                          out/mister/games/hbmame/{hb}.zip")
     # The shared ROM discovery (manifest input_schema); the page says the same.
+    if patch['slug'] in json.loads(Path(__file__).with_name('darksoft_kits.json').read_text())['ips']:
+        lines += ['', 'DARKSOFT', '',
+                  'Use --platform darksoft --out-dir out to build only Darksoft files.',
+                  'The default all-platform build includes them too. Copy the selected',
+                  'folder from out/darksoft/games to your card games folder.',
+                  'Expanded hardware and streamed audio are not supported.']
     lines += [
         "",
         "Merged, split and complete sets work, including nested or renamed ROMs.",
@@ -616,6 +622,8 @@ def build_rom_downloads(patch: dict) -> dict:
             manifest["mra"] = f"mister/{mra_by_cfg[id(e['mra'])]}"
 
     ips_path.parent.mkdir(parents=True, exist_ok=True)
+    from darksoft import configure_ips
+    configure_ips(manifest, slug)
     stamp = tuple(int(x) for x in patch["date"].split("-")) + (0, 0, 0)
     variants = [e for e, _ in results] if specs else None
     members = results[0][0]["members"]
@@ -625,6 +633,8 @@ def build_rom_downloads(patch: dict) -> dict:
         write(z, "manifest.json", json.dumps(manifest, indent=2).encode())
         write(z, "apply.py", (ROOT / "tools" / "bundle_apply.py").read_bytes())
         write(z, "rom_sources.py", (ROOT / "tools" / "rom_sources.py").read_bytes())
+        for name in ('darksoft.py', 'darksoft_profiles.json', 'darksoft_kits.json'):
+            write(z, name, (ROOT / 'tools' / name).read_bytes())
         if patch.get('hbmame_driver'):
             driver = patch['hbmame_driver']
             source = resolve(driver['source'])

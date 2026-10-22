@@ -264,6 +264,9 @@ def is_os_metadata(name):
 def publish_tree(destination, outputs):
     """Stage all artifacts, then replace with rollback on ordinary I/O failures."""
     outputs = {name: value for name, value in outputs.items() if not is_os_metadata(name)}
+    if any(name.startswith('darksoft/games/') for name in outputs):
+        from darksoft import check_destination
+        check_destination(destination, outputs)
     destination = Path(destination)
     if destination.is_symlink():
         raise RomError("Output directory must not be a symlink")

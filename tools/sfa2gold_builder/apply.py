@@ -121,12 +121,14 @@ def main():
     ap.add_argument("--include-devices", action="store_true")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--check-runtime", action="store_true")
-    ap.add_argument("--platform", choices=("all", "mame", "hbmame", "mister"), default="all")
+    ap.add_argument("--platform", choices=("all", "mame", "hbmame", "mister", "darksoft"), default="all")
     ap.add_argument("--region", required=True, choices=tuple(SETS))
     ap.add_argument("--out-dir", help="build every platform into this folder")
     ap.add_argument("--size", choices=("4mb", "8mb"), help="single-file mode: capacity")
     ap.add_argument("--out", help="single-file mode: output zip path")
     args = ap.parse_args()
+    if args.platform == 'darksoft' and (args.out or args.size == '4mb'):
+        fail('Darksoft uses the best 8 MiB native-sample version and requires --out-dir')
     if not (args.check or args.check_runtime) and not args.out_dir and not (args.size and args.out):
         fail("give --out-dir, or both --size and --out")
 
@@ -165,10 +167,14 @@ def main():
         "entry531": z6["entry531"], "comp2": z6["comp2"], "audio": audio,
     })
 
+    reconstructed = {}
     def reconstruct(size):
+        if size in reconstructed:
+            return reconstructed[size]
         entry = data["sizes"][size]
         recipes = {k: base64.b64decode(v) for k, v in entry["recipes"].items()}
-        return assemble.reconstruct(inp, recipes), entry["md5"]
+        reconstructed[size] = assemble.reconstruct(inp, recipes), entry["md5"]
+        return reconstructed[size]
 
     if args.out:  # single-file mode
         print("Reconstructing and verifying...")
@@ -183,11 +189,38 @@ def main():
     stage_context = tempfile.TemporaryDirectory(prefix=".gold-export-", dir=Path(args.out_dir).parent)
     out = Path(stage_context.name)
     names = SETS[args.region]
-    print("Reconstructing 4MB (MAME / hardware)...")
-    m4, w4 = reconstruct("4mb")
-    # 4MB set in a per-region subfolder: US/EU/Asia share the arcade name
-    # sfz2al, so this keeps all regions side by side in one out/.
-    write_set(m4, w4, out / "mame" / args.region / f"{names['4mb']}.zip")
+    if args.platform != 'darksoft':
+        print("Reconstructing 4MB (MAME / hardware)...")
+        m4, w4 = reconstruct("4mb")
+        # The MAME version is a separate product, never a Darksoft alternate.
+        write_set(m4, w4, out / "mame" / args.region / f"{names['4mb']}.zip")
+    if args.platform in ('all', 'darksoft'):
+        from darksoft import tree, native_menu
+        m8, w8 = reconstruct('8mb')
+        best = out / 'best.zip'
+        write_set(m8, w8, best)
+        members = zread(best)
+        edition = 'sfa2-ex' if (HERE / 'kit.json').is_file() else 'sfa2-gold'
+        menu = native_menu(edition, args.region)
+        publish_tree(out, tree(members, names['4mb'] + '_qsound8', folder=edition + '_' + args.region, menu=menu))
+        best.unlink()
+    if args.platform != 'darksoft':
+        export_large(reconstruct, out, names, args.region)
+    files = {}
+    for path in out.rglob("*"):
+        if path.is_file():
+            name = path.relative_to(out).as_posix()
+            if args.platform == "all" or name.startswith(args.platform + "/"):
+                files[name] = path.read_bytes()
+    publish_tree(Path(args.out_dir), files)
+    stage_context.cleanup()
+    print(f'Built {args.region} {args.platform} outputs into {args.out_dir}')
+    if args.platform in ('all', 'darksoft'):
+        print('Darksoft: copy darksoft/games/<game> to the card games folder. Best native samples; no streamed audio.')
+
+
+def export_large(reconstruct, out, names, region):
+    """Existing 8 MiB HBMAME/MiSTer products, separate from Darksoft hardware."""
     print("Reconstructing 8MB (HBMAME / MiSTer)...")
     m8, w8 = reconstruct("8mb")
     write_set(m8, w8, out / "hbmame" / f"{names['8mb']}.zip")
@@ -198,29 +231,12 @@ def main():
     write_set(m8, w8, out / "mister" / "games" / "hbmame" / f"{names['8mb']}.zip")
     mra = HERE / "mras" / f"{names['mra']}.mra"
     if mra.exists():
-        arcade = out.joinpath("mister", *MRA_ROOT, MRA_DIR[args.region])
+        arcade = out.joinpath("mister", *MRA_ROOT, MRA_DIR[region])
         arcade.mkdir(parents=True, exist_ok=True)
         text = mra.read_text()
         text = re.sub(r'zip="(/hbmame/[^"|]+\.zip)"',
                       r'zip="\1|qsound.zip|qsound_hle.zip"', text)
         (arcade / mra.name).write_text(text)
-    files = {}
-    for path in out.rglob("*"):
-        if path.is_file():
-            name = path.relative_to(out).as_posix()
-            if args.platform == "all" or name.startswith(args.platform + "/"):
-                files[name] = path.read_bytes()
-    publish_tree(Path(args.out_dir), files)
-    stage_context.cleanup()
-    out = Path(args.out_dir)
-    print(f"\nBuilt {args.region} into {out}/ — every game member checksum-verified:")
-    print(f"  mame/{args.region}/{names['4mb']}.zip   (stock MAME, real hardware)")
-    print(f"  hbmame/{names['8mb']}.zip     (HBMAME)")
-    mra_path = "/".join(filter(None, ("/".join(MRA_ROOT), MRA_DIR[args.region], names["mra"])))
-    print(f"  mister/ -> copy to SD root: {mra_path}.mra "
-          f"+ games/hbmame/{names['8mb']}.zip   (MiSTer jtcps2)")
-    print("Point other regions at the same out/ to collect all builds together.")
-    print("\nMAME/HBMAME will warn about checksums (unofficial build); it runs normally.")
 
 
 if __name__ == "__main__":

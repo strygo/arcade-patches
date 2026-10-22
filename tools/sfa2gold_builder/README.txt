@@ -32,6 +32,7 @@ USAGE (recommended — build every platform for one region)
 This creates:
 
     out/mame/<region>/<set>.zip  4MB — stock MAME or real CPS-2 hardware
+    out/darksoft/games/<game>/   8MB — best native samples, Darksoft flash format
     out/hbmame/<set>.zip         8MB — HBMAME, with every sound uncompressed
     out/mister/                  8MB — ready to copy to a MiSTer SD card
 
@@ -91,6 +92,9 @@ Use --rompath DIR (repeatable) to search a collection. Names may differ;
 required contents are verified by strong hashes. 7z needs installed 7-Zip.
 Use --check to preflight arcade inputs without supplying the disc.
 --out-dir builds all supported platforms; --platform selects just one.
+Use --platform darksoft --out-dir out for Darksoft only. Copy the selected
+game folder to the card games folder. This uses the best 8 MiB sample version,
+matching HBMAME. No duplicate 4 MiB alternative or streamed audio is exported.
 Source archives are never modified.
 QSound is optional when building. Valid embedded firmware is preserved.
 --include-devices requires and includes firmware from any supplied archive.

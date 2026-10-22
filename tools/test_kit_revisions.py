@@ -50,6 +50,38 @@ class KitRevisionTests(ReleaseInventoryTests):
         rollback(self.root, 'demo', 'rc2', 2)
         validate_inventory(self.root, load_inventory(self.root / 'data/releases.json'))
 
+    def contract_candidate(self, additive):
+        ready, candidate, old = self.revision_candidate()
+        inv = json.loads((self.root / 'data/releases.json').read_text())
+        item = inv['releases']['demo']['versions']['rc2']
+        item['game_contract_sha256'] = 'a' * 64
+        for revision in item.get('revisions', {}).values():
+            revision['game_contract_sha256'] = 'a' * 64
+        write_json(self.root / 'data/releases.json', inv)
+        if additive:
+            release = json.loads((candidate / 'release.json').read_text())
+            release['plan']['add_darksoft'] = True
+            write_json(candidate / 'release.json', release)
+            record = json.loads(ready.read_text())
+            digest = sha256_file(candidate / 'release.json')
+            record['release'], record['release_sha256'] = release, digest
+            record['reproduction']['release_sha256'] = digest
+            record['qa']['release_sha256'] = digest
+            record['tooling_parity'].update(release_sha256=digest, qa_sha256=identity(record['qa']))
+            write_json(ready, record)
+        return ready, candidate
+
+    def test_changed_game_contract_needs_a_declared_additive_revision(self):
+        ready, candidate = self.contract_candidate(False)
+        with self.assertRaisesRegex(ReleaseInventoryError, 'game contract differs'):
+            import_candidate(self.root, ready, candidate)
+
+    def test_declared_additive_revision_starts_a_new_game_contract(self):
+        ready, candidate = self.contract_candidate(True)
+        import_candidate(self.root, ready, candidate)
+        item = load_inventory(self.root / 'data/releases.json')['releases']['demo']['versions']['rc2']
+        self.assertEqual('b' * 64, item['game_contract_sha256'])
+
     def test_stale_baseline_or_qa_is_rejected(self):
         ready, candidate, old = self.revision_candidate()
         record = json.loads(ready.read_text())

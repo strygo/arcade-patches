@@ -72,7 +72,8 @@ def validate_revisions(root, slug, version, item):
     require(isinstance(events, list) and events and events[-1].get("revision") == current,
             "missing kit promotion history")
     require(all(str(e.get("revision")) in revisions and e.get("reason") for e in events), "invalid promotion event")
-    for number, revision in revisions.items():
+    previous_contract = None
+    for number, revision in sorted(revisions.items(), key=lambda row: int(row[0])):
         validate_qualification(slug, version, revision.get("qualification"))
         require(set(revision["files"]) == set(item["files"]), "revision download roles changed")
         for record in revision["files"].values():
@@ -84,8 +85,13 @@ def validate_revisions(root, slug, version, item):
         if int(number) > 1:
             require(isinstance(revision.get("game_contract_sha256"), str)
                     and re.fullmatch(r"[0-9a-f]{64}", revision["game_contract_sha256"]), "invalid game contract")
-            require(revision.get("game_contract_sha256") == item.get("game_contract_sha256"),
-                    "kit revision game contract changed")
+            # Only a declared additive-output revision (Darksoft flash files) starts a new contract.
+            require(previous_contract is None or revision["game_contract_sha256"] == previous_contract
+                    or revision.get("additive_output") == "darksoft", "kit revision game contract changed")
+            previous_contract = revision["game_contract_sha256"]
+    if current > 1:
+        require(selected.get("game_contract_sha256") == item.get("game_contract_sha256"),
+                "kit revision game contract changed")
 
 
 def migrate(root, inventory):
@@ -184,7 +190,11 @@ def import_revision(root, ready_path, candidate, ready, release):
     contract = evidence.get("game_contract_sha256")
     require(isinstance(contract, str) and len(contract) == 64 and all(c in "0123456789abcdef" for c in contract),
             "missing game contract")
-    require(not old.get("game_contract_sha256") or old["game_contract_sha256"] == contract,
+    # A declared additive-output revision (Darksoft flash files) passed the additive gate: every
+    # existing output equals the baseline and every new file is a verified export. Its contract is the
+    # identity of its own outputs, which later revisions then hold constant.
+    additive = plan.get("add_darksoft") is True and old.get("game_contract_sha256") != contract
+    require(not old.get("game_contract_sha256") or old["game_contract_sha256"] == contract or additive,
             "game contract differs; use a new game version")
     require(set(release["downloads"]) == {r["name"] for r in old["files"].values()},
             "tooling revision must keep every public filename")
@@ -192,6 +202,7 @@ def import_revision(root, ready_path, candidate, ready, release):
     item = updated["releases"][slug]["versions"][version]
     new = {"date": plan["date"], "kind": old["kind"], "files": {},
            "game_contract_sha256": contract, "tooling_baseline": baseline,
+           **({"additive_output": "darksoft"} if additive else {}),
            "qualification": {"type": "qualified-candidate", "candidate": plan["candidate"],
                              "capcom_source_commit": plan["sources"]["capcom"],
                              "ready_record_sha256": sha256_file(ready_path),
