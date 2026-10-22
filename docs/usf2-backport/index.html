@@ -36,16 +36,16 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Ultra Street Fighter II</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-10-17</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-10-21</dd></dl>
 <h2>The two builds</h2>
-<div class="build-gallery"><figure class="build"><img src="../img/usf2-backport/title_us.png?v=b9dadeae9b" alt="Ultra Street Fighter II (USA) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>USA · <code>usf2t8</code></figcaption></figure><figure class="build"><img src="../img/usf2-backport/title_jp.png?v=f07aac6707" alt="Ultra Street Fighter II (Japan) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>Japan · <code>usf2j8</code></figcaption></figure></div>
+<div class="build-gallery"><figure class="build"><img src="../img/usf2-backport/title_us.png?v=b9dadeae9b" alt="Ultra Street Fighter II (USA) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>USA · <code>usf2t8</code></figcaption></figure><figure class="build"><img src="../img/usf2-backport/title_jp.png?v=c0da914e2c" alt="Ultra Street Fighter II (Japan) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>Japan · <code>usf2j8</code></figcaption></figure></div>
 <h2>About</h2>
 <div class="requirements"><p>On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. The MAME sets run in unmodified MAME using its Hyper Street Fighter II loader. HBMAME needs the set definitions the kit writes compiled in. <a href="../cps2-plus/">About CPS-2+ hardware</a></p></div>
 <p>Ultra Street Fighter II: The Final Challengers is the 2017 Nintendo Switch edition of Super Street Fighter II Turbo, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.</p>
 <p>Akuma has his own select cell, and Evil Ryu and Violent Ken join the original sixteen fighters with their Ultra moves, colors and endings. Shin Akuma stays hidden, for twenty fighters in all.</p>
 <p>Ultra&#x27;s presentation comes with them: the Ultra title and intro, &quot;The Final Challengers&quot; lettering, a color select for the new fighters, and a choice of sixteen stages or Random once you have picked a fighter.</p>
-<p>The Switch edition&#x27;s sound effects play in every build, and on MiSTer its arranged music plays too. The ULTRA CONFIGURATION page in Test Mode switches the sound effects and, on MiSTer, the music between MODERN and CLASSIC.</p>
+<p>The Switch edition&#x27;s sound effects play in every build, and on MiSTer its arranged music plays too. The 8 MB audio builds retain more sound detail and let you choose MODERN or CLASSIC sound effects in ULTRA CONFIGURATION; on MiSTer you can choose the music there too. The 4 MB audio builds use MODERN sound effects, prioritizing common attacks and defeat voices; some less frequent speech has reduced detail.</p>
 <p>The USA build is in English; the Japan build keeps the Japanese.</p>
 <p>This is a release candidate.</p>
 <h2>What's included</h2><ul>
@@ -53,17 +53,17 @@
 <li>Ultra&#x27;s classic colors for the new fighters, chosen on a color select screen</li>
 <li>Sixteen stages and Random to choose from after you pick a fighter</li>
 <li>The Ultra title and intro, and ULTRA on the VS, Continue and Game Over screens</li>
-<li>The Switch edition&#x27;s sound effects, and its arranged music on MiSTer; MODERN or CLASSIC for each in ULTRA CONFIGURATION</li>
+<li>The Switch edition&#x27;s sound effects, and its arranged music on MiSTer; MODERN or CLASSIC options in the 8 MB audio builds</li>
 <li>USA (English) and Japan builds</li>
 </ul>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/usf2-backport/00_single.png?v=9d9f4c37f8" alt="Evil Ryu in the intro."><figcaption>Evil Ryu in the intro.</figcaption></figure>
-<figure class="shot single"><img src="../img/usf2-backport/01_single.png?v=6a77ae64f3" alt="Evil Ryu on the select screen."><figcaption>Evil Ryu on the select screen.</figcaption></figure>
+<figure class="shot single"><img src="../img/usf2-backport/01_single.png?v=7ed2275b4f" alt="Evil Ryu on the select screen."><figcaption>Evil Ryu on the select screen.</figcaption></figure>
 <figure class="shot single"><img src="../img/usf2-backport/02_single.png?v=3b8f2471e0" alt="Evil Ryu&#x27;s ending."><figcaption>Evil Ryu&#x27;s ending.</figcaption></figure>
 <h2>How it's distributed</h2>
 <p>Each build is put together on your own machine from files you already own.
 You need:</p>
-<ul><li>your own Nintendo Switch game files: the USA base game of Ultra Street Fighter II for the USA set, the Japanese base game for the Japan set</li><li>your own Switch prod.keys</li><li>your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)</li></ul>
+<ul><li>your own Nintendo Switch base game files: a USA NSP or XCI for the USA set, or a Japanese NSP for the Japan set</li><li>your own Switch prod.keys</li><li>your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)</li></ul>
 <p>A small tool opens your Switch game files with your own keys, combines them with your arcade romsets, and writes out the finished MAME and HBMAME sets, the MiSTer files, and the music pack.</p>
 <h3>The builds</h3>
 <table>
@@ -75,21 +75,44 @@ You need:</p>
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/usf2-backport-rc2-kit.zip?v=1ab636b62a">usf2-backport-rc2-kit.zip</a>
-  (18.9 MB)</div>
-  <div class="hash">SHA-256: 1ab636b62a3456facaec33a790666edcb76db24c338eb1338b9cfad6a852b5af</div>
+  <div class="file"><a href="../downloads/usf2-backport-rc3-kit.zip?v=76328d6fbf">usf2-backport-rc3-kit.zip</a>
+  (19.2 MB)</div>
+  <div class="hash">SHA-256: 76328d6fbf59f4c4036e4378f522fec57d109d5e0077aa9d59fa3f3c3ac7ddac</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
-<ul><li>your own Nintendo Switch game files: the USA base game of Ultra Street Fighter II for the USA set, the Japanese base game for the Japan set</li><li>your own Switch prod.keys</li><li>your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)</li></ul>
+<ul><li>your own Nintendo Switch base game files: a USA NSP or XCI for the USA set, or a Japanese NSP for the Japan set</li><li>your own Switch prod.keys</li><li>your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip usf2-backport-rc2-kit.zip -d usf2-backport
+<pre><code>unzip usf2-backport-rc3-kit.zip -d usf2-backport
 cd usf2-backport
 python3 apply.py --rompath roms --nsp-us usa.nsp --nsp-jp japan.nsp \
                  --keys prod.keys --out-dir out</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc3 (2026-10-21)</h3><ul>
+<li>Restored CPU opponents and portraits after a challenger, and the return to attract mode after endings.</li>
+<li>Restored the normal Insert Coin and Free Play positions outside the title screen.</li>
+<li>Corrected Violent Ken’s super meter checks and close-range six-hit sequence.</li>
+<li>Restored Violent Ken’s dash trails and victory animations, with purple fist flames and orange burn reactions.</li>
+<li>Corrected Continue portraits and revival animations for Evil Ryu and Violent Ken, and Evil Ryu’s pose orientation.</li>
+<li>Restored Demon super-finish effects and bonus.</li>
+<li>Added dedicated Evil Ryu and Violent Ken ending music on MiSTer and their full winner captions.</li>
+<li>Restored later ending-music changes for Ken and Chun-Li, including Ken’s fades.</li>
+<li>Corrected intro sprite display and the Japanese title copyright.</li>
+<li>Restored Ryu’s intro fireball startup, poses and travel, and animated backgrounds between rounds.</li>
+<li>Removed stray player markers during travel, smoothed the stage-selection airplane and corrected the mirrored Spain flag.</li>
+<li>Improved Modern attack sounds and defeat voices in the 4 MB build.</li>
+<li>Updated Evil Ryu and Violent Ken portraits, including their selected faces and animated defeated portraits.</li>
+<li>Corrected portrait colors after selection and Continue, missing portrait blocks, HUD lettering and Guile/Cammy HUD colors.</li>
+<li>Added Evil Ryu and Violent Ken to Random character selection.</li>
+<li>Restored Evil Ryu’s white background during the Demon combo and the correct variant winner announcements.</li>
+<li>Corrected background gaps in Cammy, Claw, Dee Jay and Fei Long stages, and Zangief’s portrait shading.</li>
+<li>Fixed INPUT and OUTPUT service-menu navigation.</li>
+<li>Sped up the STREET FIGHTER title entrance.</li>
+<li>Accepts repackaged Switch files with matching game content and adds USA XCI input support.</li>
+<li>Expanded setup instructions with FFmpeg prerequisites and MAME, HBMAME and MiSTer command examples.</li>
+</ul>
 <h3>rc2 (2026-10-17)</h3><ul>
 <li>MAME output now runs in unmodified MAME; launch instructions are included.</li>
 <li>Improved Windows setup and extraction of your Switch game files.</li>

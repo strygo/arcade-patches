@@ -4357,8 +4357,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc2",
-      "date": "2026-10-17",
+      "version": "rc3",
+      "date": "2026-10-21",
       "game": "Ultra Street Fighter II: The Final Challengers (Nintendo Switch)",
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
@@ -4374,7 +4374,7 @@
         "Ultra Street Fighter II: The Final Challengers is the 2017 Nintendo Switch edition of Super Street Fighter II Turbo, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.",
         "Akuma has his own select cell, and Evil Ryu and Violent Ken join the original sixteen fighters with their Ultra moves, colors and endings. Shin Akuma stays hidden, for twenty fighters in all.",
         "Ultra's presentation comes with them: the Ultra title and intro, \"The Final Challengers\" lettering, a color select for the new fighters, and a choice of sixteen stages or Random once you have picked a fighter.",
-        "The Switch edition's sound effects play in every build, and on MiSTer its arranged music plays too. The ULTRA CONFIGURATION page in Test Mode switches the sound effects and, on MiSTer, the music between MODERN and CLASSIC.",
+        "The Switch edition's sound effects play in every build, and on MiSTer its arranged music plays too. The 8 MB audio builds retain more sound detail and let you choose MODERN or CLASSIC sound effects in ULTRA CONFIGURATION; on MiSTer you can choose the music there too. The 4 MB audio builds use MODERN sound effects, prioritizing common attacks and defeat voices; some less frequent speech has reduced detail.",
         "The USA build is in English; the Japan build keeps the Japanese.",
         "This is a release candidate."
       ],
@@ -4383,7 +4383,7 @@
         "Ultra's classic colors for the new fighters, chosen on a color select screen",
         "Sixteen stages and Random to choose from after you pick a fighter",
         "The Ultra title and intro, and ULTRA on the VS, Continue and Game Over screens",
-        "The Switch edition's sound effects, and its arranged music on MiSTer; MODERN or CLASSIC for each in ULTRA CONFIGURATION",
+        "The Switch edition's sound effects, and its arranged music on MiSTer; MODERN or CLASSIC options in the 8 MB audio builds",
         "USA (English) and Japan builds"
       ],
       "builds": [
@@ -4420,7 +4420,7 @@
       ],
       "reconstruction": {
         "requires": [
-          "your own Nintendo Switch game files: the USA base game of Ultra Street Fighter II for the USA set, the Japanese base game for the Japan set",
+          "your own Nintendo Switch base game files: a USA NSP or XCI for the USA set, or a Japanese NSP for the Japan set",
           "your own Switch prod.keys",
           "your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)"
         ],
@@ -4467,6 +4467,33 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc3",
+          "date": "2026-10-21",
+          "items": [
+            "Restored CPU opponents and portraits after a challenger, and the return to attract mode after endings.",
+            "Restored the normal Insert Coin and Free Play positions outside the title screen.",
+            "Corrected Violent Ken\u2019s super meter checks and close-range six-hit sequence.",
+            "Restored Violent Ken\u2019s dash trails and victory animations, with purple fist flames and orange burn reactions.",
+            "Corrected Continue portraits and revival animations for Evil Ryu and Violent Ken, and Evil Ryu\u2019s pose orientation.",
+            "Restored Demon super-finish effects and bonus.",
+            "Added dedicated Evil Ryu and Violent Ken ending music on MiSTer and their full winner captions.",
+            "Restored later ending-music changes for Ken and Chun-Li, including Ken\u2019s fades.",
+            "Corrected intro sprite display and the Japanese title copyright.",
+            "Restored Ryu\u2019s intro fireball startup, poses and travel, and animated backgrounds between rounds.",
+            "Removed stray player markers during travel, smoothed the stage-selection airplane and corrected the mirrored Spain flag.",
+            "Improved Modern attack sounds and defeat voices in the 4 MB build.",
+            "Updated Evil Ryu and Violent Ken portraits, including their selected faces and animated defeated portraits.",
+            "Corrected portrait colors after selection and Continue, missing portrait blocks, HUD lettering and Guile/Cammy HUD colors.",
+            "Added Evil Ryu and Violent Ken to Random character selection.",
+            "Restored Evil Ryu\u2019s white background during the Demon combo and the correct variant winner announcements.",
+            "Corrected background gaps in Cammy, Claw, Dee Jay and Fei Long stages, and Zangief\u2019s portrait shading.",
+            "Fixed INPUT and OUTPUT service-menu navigation.",
+            "Sped up the STREET FIGHTER title entrance.",
+            "Accepts repackaged Switch files with matching game content and adds USA XCI input support.",
+            "Expanded setup instructions with FFmpeg prerequisites and MAME, HBMAME and MiSTer command examples."
+          ]
+        },
         {
           "version": "rc2",
           "date": "2026-10-17",
