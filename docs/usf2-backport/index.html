@@ -40,8 +40,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Ultra Street Fighter II</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-10-21</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-10-23</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/usf2-backport/title_us.png?v=b9dadeae9b" alt="Ultra Street Fighter II (USA) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>USA · <code>usf2t8</code></figcaption></figure><figure class="build"><img src="../img/usf2-backport/title_jp.png?v=c0da914e2c" alt="Ultra Street Fighter II (Japan) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>Japan · <code>usf2j8</code></figcaption></figure></div>
 <h2>About</h2>
@@ -49,7 +49,7 @@
 <p>Ultra Street Fighter II: The Final Challengers is the 2017 Nintendo Switch edition of Super Street Fighter II Turbo, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.</p>
 <p>Akuma has his own select cell, and Evil Ryu and Violent Ken join the original sixteen fighters with their Ultra moves, colors and endings. Shin Akuma stays hidden, for twenty fighters in all.</p>
 <p>Ultra&#x27;s presentation comes with them: the Ultra title and intro, &quot;The Final Challengers&quot; lettering, a color select for the new fighters, and a choice of sixteen stages or Random once you have picked a fighter.</p>
-<p>The Switch edition&#x27;s sound effects play in every build, and on MiSTer its arranged music plays too. The 8 MB audio builds retain more sound detail and let you choose MODERN or CLASSIC sound effects in ULTRA CONFIGURATION; on MiSTer you can choose the music there too. The 4 MB audio builds use MODERN sound effects, prioritizing common attacks and defeat voices; some less frequent speech has reduced detail.</p>
+<p>The Switch edition&#x27;s sound effects play in every build, and on MiSTer its arranged music plays too. Choose MODERN or CLASSIC sound effects in ULTRA CONFIGURATION; on MiSTer you can choose the music there too.</p>
 <p>The USA build is in English; the Japan build keeps the Japanese.</p>
 <p>This is a release candidate.</p>
 <h2>What's included</h2><ul>
@@ -57,7 +57,7 @@
 <li>Ultra&#x27;s classic colors for the new fighters, chosen on a color select screen</li>
 <li>Sixteen stages and Random to choose from after you pick a fighter</li>
 <li>The Ultra title and intro, and ULTRA on the VS, Continue and Game Over screens</li>
-<li>The Switch edition&#x27;s sound effects, and its arranged music on MiSTer; MODERN or CLASSIC options in the 8 MB audio builds</li>
+<li>The Switch edition&#x27;s sound effects, and its arranged music on MiSTer; MODERN or CLASSIC options</li>
 <li>USA (English) and Japan builds</li>
 </ul>
 <h2>Screenshots</h2>
@@ -67,7 +67,7 @@
 <h2>How it's distributed</h2>
 <p>Each build is put together on your own machine from files you already own.
 You need:</p>
-<ul><li>your own Nintendo Switch base game files: a USA NSP or XCI for the USA set, or a Japanese NSP for the Japan set</li><li>your own Switch prod.keys</li><li>your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)</li></ul>
+<ul><li>your own Nintendo Switch base game files: a USA NSP or XCI for the USA set, or a Japanese NSP for the Japan set</li><li>your own Switch prod.keys</li><li>your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)</li><li>Python 3.10 or newer; extraction and audio tools download automatically</li></ul>
 <p>A small tool opens your Switch game files with your own keys, combines them with your arcade romsets, and writes out the finished MAME and HBMAME sets, the MiSTer files, and the music pack.</p>
 <h3>The builds</h3>
 <table>
@@ -75,25 +75,36 @@ You need:</p>
 <tr><td>USA</td><td>Ultra Street Fighter II</td><td class="mono">hsf2</td><td class="mono">usf2t8</td></tr><tr><td>Japan</td><td>Ultra Street Fighter II</td><td class="mono">hsf2j</td><td class="mono">usf2j8</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-10-22. Game version unchanged.</p>
+
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/usf2-backport-rc3-kit.zip?v=d5b15aee6a">usf2-backport-rc3-kit.zip</a>
-  (19.2 MB)</div>
-  <div class="hash">SHA-256: d5b15aee6a1fd9d5903c4d2899df090d991c7d62dfe7d8a4846e6a5c5b02b4e5</div>
+  <div class="file"><a href="../downloads/usf2-backport-rc4-kit.zip?v=528b187f39">usf2-backport-rc4-kit.zip</a>
+  (19.3 MB)</div>
+  <div class="hash">SHA-256: 528b187f39a000dde2c37a6bef263b6070bf0b6c85d7858da5b2abe751060b9d</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
-<ul><li>your own Nintendo Switch base game files: a USA NSP or XCI for the USA set, or a Japanese NSP for the Japan set</li><li>your own Switch prod.keys</li><li>your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)</li></ul>
+<ul><li>your own Nintendo Switch base game files: a USA NSP or XCI for the USA set, or a Japanese NSP for the Japan set</li><li>your own Switch prod.keys</li><li>your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)</li><li>Python 3.10 or newer; extraction and audio tools download automatically</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip usf2-backport-rc3-kit.zip -d usf2-backport
+<pre><code>unzip usf2-backport-rc4-kit.zip -d usf2-backport
 cd usf2-backport
-python3 apply.py --rompath roms --nsp-us usa.nsp --nsp-jp japan.nsp \
-                 --keys prod.keys --out-dir out</code></pre>
+python3 apply.py --rompath roms --nsp-us usa.nsp --nsp-jp japan.nsp --keys prod.keys --work scratch --out-dir out</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc4 (2026-10-23)</h3><ul>
+<li>Fix: Boxer and Dee Jay now select the correct fighter from their character-select icons.</li>
+<li>Fix: Corrected move inputs and animations, including Evil Ryu’s reverse teleport, Violent Ken’s forward kick, Sagat’s Tiger Knee and Dhalsim’s fire specials.</li>
+<li>Fix: Free Play supports starting and continuing from either player.</li>
+<li>Fix: Corrected rapid-attack sound overlap and release for Dee Jay, Honda and Chun-Li, reducing cut-off and repeatedly restarted sounds.</li>
+<li>Fix: Modern blocking sounds now play correctly for both players.</li>
+<li>New: The default MAME output uses the 8 MB audio build with selectable Modern and Classic sound effects, replacing the earlier 4 MB Modern-only output. It runs in unmodified MAME under the same hsf2 and hsf2j names.</li>
+<li>Improved: Only Python 3.10 or newer is needed for standard ZIP/NSP/XCI installation. Extraction and audio tools download automatically; no compiler, Git, CMake, NumPy or separate FFmpeg setup is required. An offline tools bundle can be used instead.</li>
+<li>Improved: Defeat voices and crowd audio, with fewer repeated attack-sound restarts.</li>
+<li>Fix: Corrected portrait colors after continuing, defeated portrait shading and Game Over grayscale.</li>
+<li>Improved: Violent Ken’s defeated portraits, including the shoulder shading in the later animation frames.</li>
+</ul>
 <h3>rc3 (2026-10-21)</h3><ul>
 <li>Restored CPU opponents and portraits after a challenger, and the return to attract mode after endings.</li>
 <li>Restored the normal Insert Coin and Free Play positions outside the title screen.</li>
@@ -127,9 +138,10 @@ python3 apply.py --rompath roms --nsp-us usa.nsp --nsp-jp japan.nsp \
 </ul>
 <h2>Related projects</h2><ul><li><a href="../ssf2t-gmc/">Super Street Fighter II Turbo: Grand Master Challenge</a>, the English restoration of the game Ultra is built on</li><li><a href="../ssf2-ex/">Super Street Fighter II EX</a>, another enhanced Super Turbo</li><li><a href="../cps2-plus/">CPS-2+ hardware</a>, how the extended system these sets need works</li><li><a href="https://newlegacy.fr/credits.html">Super Street Fighter II Turbo: New Legacy</a>, Tyrone&#x27;s Akuma artwork comes from this project</li></ul>
 <h2>Notes</h2><ul class="notes">
-<li>The 4 MB audio builds run in stock MAME as hsf2 (USA) and hsf2j (Japan), with expected checksum warnings. Keep them separate from original Hyper Street Fighter II ROMs. The 8 MB audio builds run in HBMAME and on MiSTer; HBMAME needs the included set definitions compiled in.</li>
+<li>MAME: RC4 replaces the previous default 4 MB, Modern-only audio build with an 8 MB audio build containing both Modern and Classic sound effects. It still runs in unmodified MAME as hsf2 (USA) or hsf2j (Japan); no custom MAME build is needed. Choose MODERN or CLASSIC in ULTRA CONFIGURATION. Use the newly generated ZIPs and keep them separate from original Hyper Street Fighter II ROMs. Checksum warnings are expected. HBMAME still needs the included set definitions compiled in.</li>
+<li>Installation: install Python 3.10 or newer, extract the kit and run apply.py with your arcade ROMs, Switch game files and prod.keys. Git, CMake, a C/C++ compiler, NumPy and a separate FFmpeg installation are no longer needed. The kit downloads the extraction and audio tools it needs on first use and reuses them on later runs. For offline setup, keep cpsplus-tools-v2-offline.zip zipped and add --tools-bundle cpsplus-tools-v2-offline.zip --offline to your command. Optional 7z inputs still need 7-Zip.</li>
 <li>Credits: Akuma&#x27;s imported artwork is Tyrone&#x27;s, from Super Street Fighter II Turbo: New Legacy.</li>
-<li>Special thanks to Gachichan! for extensive testing, bug reports, and improvements to the Evil Ryu and Violent Ken profile pictures.</li>
+<li>Special thanks to Gachichan! for bug reports and improvements to the Evil Ryu and Violent Ken profile pictures.</li>
 <li>This is a fan backport, unaffiliated with Capcom. The sets are built from game files you already own; the kit ships only our own code and patches, plus the CPS+ core with its source and licenses.</li>
 </ul>
 </main>

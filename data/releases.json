@@ -4765,7 +4765,7 @@
       }
     },
     "usf2-backport": {
-      "current": "rc3",
+      "current": "rc4",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -4946,6 +4946,53 @@
               "kit": "76328d6fbf59f4c4036e4378f522fec57d109d5e0077aa9d59fa3f3c3ac7ddac"
             },
             "revision": 1
+          }
+        },
+        "rc4": {
+          "current_revision": 1,
+          "date": "2026-10-23",
+          "files": {
+            "kit": {
+              "archive": "archive/528b187f39a000dde2c37a6bef263b6070bf0b6c85d7858da5b2abe751060b9d/usf2-backport-rc4-kit.zip",
+              "name": "usf2-backport-rc4-kit.zip",
+              "sha256": "528b187f39a000dde2c37a6bef263b6070bf0b6c85d7858da5b2abe751060b9d",
+              "size": 20194740
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc4-candidate.5",
+            "capcom_source_commit": "94c1a704d03eadbaf84585c6cb8a6ccac1996fda",
+            "ready_record_sha256": "104aa968536acf212f4adc544c2e9c94f47a7e7b6947c5a6a67122655682d20b",
+            "release_sha256": "b2d0c23362185cbbb68b3474cb9d8cb4a3e8b6fa1466902303768aa2d3bcfdcc",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-23",
+              "files": {
+                "kit": {
+                  "archive": "archive/528b187f39a000dde2c37a6bef263b6070bf0b6c85d7858da5b2abe751060b9d/usf2-backport-rc4-kit.zip",
+                  "name": "usf2-backport-rc4-kit.zip",
+                  "sha256": "528b187f39a000dde2c37a6bef263b6070bf0b6c85d7858da5b2abe751060b9d",
+                  "size": 20194740
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc4-candidate.5",
+                "capcom_source_commit": "94c1a704d03eadbaf84585c6cb8a6ccac1996fda",
+                "ready_record_sha256": "104aa968536acf212f4adc544c2e9c94f47a7e7b6947c5a6a67122655682d20b",
+                "release_sha256": "b2d0c23362185cbbb68b3474cb9d8cb4a3e8b6fa1466902303768aa2d3bcfdcc",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }

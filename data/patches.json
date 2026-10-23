@@ -4360,8 +4360,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc3",
-      "date": "2026-10-21",
+      "version": "rc4",
+      "date": "2026-10-23",
       "game": "Ultra Street Fighter II: The Final Challengers (Nintendo Switch)",
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
@@ -4377,7 +4377,7 @@
         "Ultra Street Fighter II: The Final Challengers is the 2017 Nintendo Switch edition of Super Street Fighter II Turbo, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.",
         "Akuma has his own select cell, and Evil Ryu and Violent Ken join the original sixteen fighters with their Ultra moves, colors and endings. Shin Akuma stays hidden, for twenty fighters in all.",
         "Ultra's presentation comes with them: the Ultra title and intro, \"The Final Challengers\" lettering, a color select for the new fighters, and a choice of sixteen stages or Random once you have picked a fighter.",
-        "The Switch edition's sound effects play in every build, and on MiSTer its arranged music plays too. The 8 MB audio builds retain more sound detail and let you choose MODERN or CLASSIC sound effects in ULTRA CONFIGURATION; on MiSTer you can choose the music there too. The 4 MB audio builds use MODERN sound effects, prioritizing common attacks and defeat voices; some less frequent speech has reduced detail.",
+        "The Switch edition's sound effects play in every build, and on MiSTer its arranged music plays too. Choose MODERN or CLASSIC sound effects in ULTRA CONFIGURATION; on MiSTer you can choose the music there too.",
         "The USA build is in English; the Japan build keeps the Japanese.",
         "This is a release candidate."
       ],
@@ -4386,7 +4386,7 @@
         "Ultra's classic colors for the new fighters, chosen on a color select screen",
         "Sixteen stages and Random to choose from after you pick a fighter",
         "The Ultra title and intro, and ULTRA on the VS, Continue and Game Over screens",
-        "The Switch edition's sound effects, and its arranged music on MiSTer; MODERN or CLASSIC options in the 8 MB audio builds",
+        "The Switch edition's sound effects, and its arranged music on MiSTer; MODERN or CLASSIC options",
         "USA (English) and Japan builds"
       ],
       "builds": [
@@ -4425,10 +4425,11 @@
         "requires": [
           "your own Nintendo Switch base game files: a USA NSP or XCI for the USA set, or a Japanese NSP for the Japan set",
           "your own Switch prod.keys",
-          "your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)"
+          "your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)",
+          "Python 3.10 or newer; extraction and audio tools download automatically"
         ],
         "kit_dir": "backports/usf2/kit",
-        "kit_command": "python3 apply.py --rompath roms --nsp-us usa.nsp --nsp-jp japan.nsp \\\n                 --keys prod.keys --out-dir out",
+        "kit_command": "python3 apply.py --rompath roms --nsp-us usa.nsp --nsp-jp japan.nsp --keys prod.keys --work scratch --out-dir out",
         "how": "A small tool opens your Switch game files with your own keys, combines them with your arcade romsets, and writes out the finished MAME and HBMAME sets, the MiSTer files, and the music pack.",
         "sizes_note": "",
         "columns": [
@@ -4443,9 +4444,10 @@
         ]
       },
       "notes": [
-        "The 4 MB audio builds run in stock MAME as hsf2 (USA) and hsf2j (Japan), with expected checksum warnings. Keep them separate from original Hyper Street Fighter II ROMs. The 8 MB audio builds run in HBMAME and on MiSTer; HBMAME needs the included set definitions compiled in.",
+        "MAME: RC4 replaces the previous default 4 MB, Modern-only audio build with an 8 MB audio build containing both Modern and Classic sound effects. It still runs in unmodified MAME as hsf2 (USA) or hsf2j (Japan); no custom MAME build is needed. Choose MODERN or CLASSIC in ULTRA CONFIGURATION. Use the newly generated ZIPs and keep them separate from original Hyper Street Fighter II ROMs. Checksum warnings are expected. HBMAME still needs the included set definitions compiled in.",
+        "Installation: install Python 3.10 or newer, extract the kit and run apply.py with your arcade ROMs, Switch game files and prod.keys. Git, CMake, a C/C++ compiler, NumPy and a separate FFmpeg installation are no longer needed. The kit downloads the extraction and audio tools it needs on first use and reuses them on later runs. For offline setup, keep cpsplus-tools-v2-offline.zip zipped and add --tools-bundle cpsplus-tools-v2-offline.zip --offline to your command. Optional 7z inputs still need 7-Zip.",
         "Credits: Akuma's imported artwork is Tyrone's, from Super Street Fighter II Turbo: New Legacy.",
-        "Special thanks to Gachichan! for extensive testing, bug reports, and improvements to the Evil Ryu and Violent Ken profile pictures.",
+        "Special thanks to Gachichan! for bug reports and improvements to the Evil Ryu and Violent Ken profile pictures.",
         "This is a fan backport, unaffiliated with Capcom. The sets are built from game files you already own; the kit ships only our own code and patches, plus the CPS+ core with its source and licenses."
       ],
       "related": [
@@ -4471,6 +4473,22 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc4",
+          "date": "2026-10-23",
+          "items": [
+            "Fix: Boxer and Dee Jay now select the correct fighter from their character-select icons.",
+            "Fix: Corrected move inputs and animations, including Evil Ryu\u2019s reverse teleport, Violent Ken\u2019s forward kick, Sagat\u2019s Tiger Knee and Dhalsim\u2019s fire specials.",
+            "Fix: Free Play supports starting and continuing from either player.",
+            "Fix: Corrected rapid-attack sound overlap and release for Dee Jay, Honda and Chun-Li, reducing cut-off and repeatedly restarted sounds.",
+            "Fix: Modern blocking sounds now play correctly for both players.",
+            "New: The default MAME output uses the 8 MB audio build with selectable Modern and Classic sound effects, replacing the earlier 4 MB Modern-only output. It runs in unmodified MAME under the same hsf2 and hsf2j names.",
+            "Improved: Only Python 3.10 or newer is needed for standard ZIP/NSP/XCI installation. Extraction and audio tools download automatically; no compiler, Git, CMake, NumPy or separate FFmpeg setup is required. An offline tools bundle can be used instead.",
+            "Improved: Defeat voices and crowd audio, with fewer repeated attack-sound restarts.",
+            "Fix: Corrected portrait colors after continuing, defeated portrait shading and Game Over grayscale.",
+            "Improved: Violent Ken\u2019s defeated portraits, including the shoulder shading in the later animation frames."
+          ]
+        },
         {
           "version": "rc3",
           "date": "2026-10-21",
