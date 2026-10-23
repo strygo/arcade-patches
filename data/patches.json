@@ -4535,7 +4535,7 @@
         "Street Fighter Alpha 3's US arcade version cut each character's win quotes down to eight generic lines. The Japanese game also has a quote for each opponent. This restoration brings back all 625 opponent-specific quotes, with all 825 of the Japanese game's win quotes in English.",
         "Detailed stage locations return in English, in the original stage panels. Biographies, rival dialogue and endings follow the Japanese script in natural English that fits each character. Capcom's English stays where it was accurate, and Alpha 3 MAX's official wording is used where it fits.",
         "The game uses the Japanese 980904 revision's gameplay and secret-character access, with its original difficulty and Turbo 1 defaults. Regulation starts OFF, restoring red hit blood and the full defeat and ending effects; the operator can still switch it ON. The arcade ending sequences are retained, with corrected backgrounds and colors.",
-        "Alpha branding in the animated intro, character selection, player introductions and win screens, English A/X/V-ISM labels, descriptions and score rankings, Western names in the intro and fights, title and entry announcements, and English operator menus retain the USA presentation. It runs in MAME and on MiSTer with the jtcps2 core. Supply your own original Japanese sfz3j romset; split sets also need their sfa3 parent and QSound firmware.",
+        "Alpha branding in the animated intro, character selection, player introductions and win screens, English A/X/V-ISM labels, descriptions and score rankings, Western names in the intro and fights, title and entry announcements, and English operator menus retain the USA presentation. It runs in MAME and HBMAME and on MiSTer with the jtcps2 core. Supply your own original Japanese sfz3j romset; split sets also need their sfa3 parent and QSound firmware.",
         "The optional Japanese edition keeps the original Japanese text and names, Zero branding and Z-ISM, with the same ending and portrait color corrections.",
         "This is a release candidate."
       ],
@@ -4579,6 +4579,24 @@
               "catver": "Fighter / Versus",
               "mraauthor": "jotego,strygo",
               "region": "USA"
+            },
+            "hbmame": {
+              "setname": "sfa3ru",
+              "renames": {
+                "sz3.08c": "sz3.08c",
+                "sz3.09c": "sz3.09c",
+                "sz3.10b": "sz3.10b",
+                "sz3.13m": "sz3.13m",
+                "sz3.14m": "sz3.14m",
+                "sz3.15m": "sz3.15m",
+                "sz3.16m": "sz3.16m",
+                "sz3.17m": "sz3.17m",
+                "sz3.18m": "sz3.18m",
+                "sz3.19m": "sz3.19m",
+                "sz3.20m": "sz3.20m",
+                "sz3j.03c": "sz3j.03c",
+                "sz3j.04c": "sz3j.04c"
+              }
             }
           },
           {
@@ -4596,6 +4614,19 @@
               "catver": "Fighter / Versus",
               "mraauthor": "jotego,strygo",
               "region": "Japan"
+            },
+            "hbmame": {
+              "setname": "sfz3rj",
+              "renames": {
+                "sz3.09c": "sz3.09c",
+                "sz3.10b": "sz3.10b",
+                "sz3.13m": "sz3.13m",
+                "sz3.15m": "sz3.15m",
+                "sz3.17m": "sz3.17m",
+                "sz3.19m": "sz3.19m",
+                "sz3j.03c": "sz3j.03c",
+                "sz3j.04c": "sz3j.04c"
+              }
             }
           }
         ]

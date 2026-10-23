@@ -60,7 +60,7 @@ class KitRevisionTests(ReleaseInventoryTests):
         write_json(self.root / 'data/releases.json', inv)
         if additive:
             release = json.loads((candidate / 'release.json').read_text())
-            release['plan']['add_darksoft'] = True
+            release['plan']['add_hbmame' if additive == 'hbmame' else 'add_darksoft'] = True
             write_json(candidate / 'release.json', release)
             record = json.loads(ready.read_text())
             digest = sha256_file(candidate / 'release.json')
@@ -81,6 +81,14 @@ class KitRevisionTests(ReleaseInventoryTests):
         import_candidate(self.root, ready, candidate)
         item = load_inventory(self.root / 'data/releases.json')['releases']['demo']['versions']['rc2']
         self.assertEqual('b' * 64, item['game_contract_sha256'])
+
+    def test_declared_hbmame_revision_starts_a_new_game_contract(self):
+        ready, candidate = self.contract_candidate('hbmame')
+        import_candidate(self.root, ready, candidate)
+        inv = load_inventory(self.root / 'data/releases.json')
+        item = inv['releases']['demo']['versions']['rc2']
+        self.assertEqual('hbmame', item['revisions']['2']['additive_output'])
+        validate_inventory(self.root, inv)
 
     def test_stale_baseline_or_qa_is_rejected(self):
         ready, candidate, old = self.revision_candidate()

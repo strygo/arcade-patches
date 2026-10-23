@@ -50,7 +50,7 @@
 <p>Street Fighter Alpha 3&#x27;s US arcade version cut each character&#x27;s win quotes down to eight generic lines. The Japanese game also has a quote for each opponent. This restoration brings back all 625 opponent-specific quotes, with all 825 of the Japanese game&#x27;s win quotes in English.</p>
 <p>Detailed stage locations return in English, in the original stage panels. Biographies, rival dialogue and endings follow the Japanese script in natural English that fits each character. Capcom&#x27;s English stays where it was accurate, and Alpha 3 MAX&#x27;s official wording is used where it fits.</p>
 <p>The game uses the Japanese 980904 revision&#x27;s gameplay and secret-character access, with its original difficulty and Turbo 1 defaults. Regulation starts OFF, restoring red hit blood and the full defeat and ending effects; the operator can still switch it ON. The arcade ending sequences are retained, with corrected backgrounds and colors.</p>
-<p>Alpha branding in the animated intro, character selection, player introductions and win screens, English A/X/V-ISM labels, descriptions and score rankings, Western names in the intro and fights, title and entry announcements, and English operator menus retain the USA presentation. It runs in MAME and on MiSTer with the jtcps2 core. Supply your own original Japanese sfz3j romset; split sets also need their sfa3 parent and QSound firmware.</p>
+<p>Alpha branding in the animated intro, character selection, player introductions and win screens, English A/X/V-ISM labels, descriptions and score rankings, Western names in the intro and fights, title and entry announcements, and English operator menus retain the USA presentation. It runs in MAME and HBMAME and on MiSTer with the jtcps2 core. Supply your own original Japanese sfz3j romset; split sets also need their sfa3 parent and QSound firmware.</p>
 <p>The optional Japanese edition keeps the original Japanese text and names, Zero branding and Z-ISM, with the same ending and portrait color corrections.</p>
 <p>This is a release candidate.</p>
 <h2>What's changed</h2><ul>
@@ -69,12 +69,12 @@
 something this one still doesn't, whether a line of text, a scene, a screen or a small detail,
 please <a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">let us know</a>. Anything you find goes into the next release.</p>
 <h2>Downloads</h2>
-<p>Tools updated 2026-10-22. Game version unchanged.</p>
+<p>Tools updated 2026-10-23. Game version unchanged.</p>
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/sfa3-restoration-rc4-ips.zip?v=f0502aa753">sfa3-restoration-rc4-ips.zip</a>
-  (490 KB)</div>
-  <div class="hash">SHA-256: f0502aa753c4c5fd816c92f08d51288c48cd845c850237711ede8f7dac8940ff</div>
+  <div class="file"><a href="../downloads/sfa3-restoration-rc4-ips.zip?v=64013c756c">sfa3-restoration-rc4-ips.zip</a>
+  (491 KB)</div>
+  <div class="hash">SHA-256: 64013c756cf8ca562b561b42e033709c7f66d13cc4540f4e5adfe735802381bc</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
@@ -88,8 +88,8 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
 <h3>The builds</h3>
 <table>
-<tr><th>Build</th><th><code>--variant</code></th><th>MiSTer setname</th></tr>
-<tr><td>English restoration</td><td class="mono">english</td><td class="mono">sfa3r</td></tr><tr><td>Japanese restoration</td><td class="mono">japanese</td><td class="mono">sfz3jr</td></tr>
+<tr><th>Build</th><th><code>--variant</code></th><th>MiSTer setname</th><th>HBMAME set</th></tr>
+<tr><td>English restoration</td><td class="mono">english</td><td class="mono">sfa3r</td><td class="mono">sfa3ru</td></tr><tr><td>Japanese restoration</td><td class="mono">japanese</td><td class="mono">sfz3jr</td><td class="mono">sfz3rj</td></tr>
 </table>
 <h2>How to apply</h2>
 <pre><code>unzip sfa3-restoration-rc4-ips.zip -d sfz3j-patch
@@ -99,15 +99,20 @@ python3 apply.py /path/to/sfz3j.zip --out-dir out</code></pre>
 checks the result, and writes the files for every platform in one go: (add <code>--variant english</code> to make just one build)</p>
 <pre><code>English restoration:
   out/mame/english/sfz3j.zip
+  out/hbmame/sfa3ru.zip
   out/mister/_Arcade/_Arcade Patches/_Restorations/Street Fighter Alpha 3 (USA) [Restoration].mra
 Japanese restoration:
   out/mame/japanese/sfz3j.zip
+  out/hbmame/sfz3rj.zip
   out/mister/_Arcade/_Arcade Patches/_Restorations/Street Fighter Zero 3 (Japan) [Restoration].mra</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
 stock set in your MAME rompath (it keeps the name <code>sfz3j.zip</code>, so use one build at a time), or burn its ROM
 files. MAME's game menu won't start a set with patched ROMs, so start it from the command line:
 <code>mame sfz3j</code>. MAME shows checksum warnings for the patched ROMs. That's expected, and the
-game runs normally.</p>
+game runs normally. To start it from a menu, use the HBMAME build.</p>
+<p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
+<code>roms/</code> folder next to your stock <code>sfz3j.zip</code>. It loads with no checksum
+warnings. The <a href="https://github.com/Robbbert/hbmame">HBMAME</a> set definition (<code>sfa3ru</code> and <code>sfz3rj</code>) is generated with the restoration; an upstream submission is pending, so for now you add it to your own HBMAME build.</p>
 <p><strong>MiSTer.</strong> Copy the <code>_Arcade</code> folder from
 <code>out/mister/</code> to the root of your SD card, and keep the stock, unmodified romset at
 <code>games/mame/sfz3j.zip</code> (split MAME sets also need <code>qsound.zip</code>). You need
