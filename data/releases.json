@@ -798,6 +798,58 @@
         }
       }
     },
+    "final-fight-ex-cps2": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-10-23",
+          "files": {
+            "kit": {
+              "archive": "archive/0f548d056ab7f5fcd5e8ec5f3b7e92f81b9f4da9403aeb61a5aef9e7108728ba/final-fight-ex-cps2-rc1-kit.zip",
+              "name": "final-fight-ex-cps2-rc1-kit.zip",
+              "sha256": "0f548d056ab7f5fcd5e8ec5f3b7e92f81b9f4da9403aeb61a5aef9e7108728ba",
+              "size": 38436655
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc1-candidate.5",
+            "capcom_source_commit": "c74639e60866f8c00b6326e75fe61a7ec01bc806",
+            "ready_record_sha256": "3e78d4d8241c10771bb77027edf514f468d1501da664f469cd2d10280566a5b2",
+            "release_sha256": "ca23f593961e454587a7babe253c0ab709412af0c89955da75ac588eb616c087",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-23",
+              "files": {
+                "kit": {
+                  "archive": "archive/0f548d056ab7f5fcd5e8ec5f3b7e92f81b9f4da9403aeb61a5aef9e7108728ba/final-fight-ex-cps2-rc1-kit.zip",
+                  "name": "final-fight-ex-cps2-rc1-kit.zip",
+                  "sha256": "0f548d056ab7f5fcd5e8ec5f3b7e92f81b9f4da9403aeb61a5aef9e7108728ba",
+                  "size": 38436655
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc1-candidate.5",
+                "capcom_source_commit": "c74639e60866f8c00b6326e75fe61a7ec01bc806",
+                "ready_record_sha256": "3e78d4d8241c10771bb77027edf514f468d1501da664f469cd2d10280566a5b2",
+                "release_sha256": "ca23f593961e454587a7babe253c0ab709412af0c89955da75ac588eb616c087",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        }
+      }
+    },
     "mshvsf-ex": {
       "current": "rc4",
       "versions": {

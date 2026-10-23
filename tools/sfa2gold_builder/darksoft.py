@@ -3,6 +3,8 @@
 
 Mappings are explicit byte placements, never inferred from ROM filenames.
 Callers must verify reconstructed ROM identities before calling export().
+A kit built as a Phoenix (dead-key, plaintext) set exports only through its
+explicit darksoft_kits.json "dead_key" declaration; see dead_key_profile().
 """
 import argparse
 import hashlib
@@ -111,17 +113,35 @@ def check_members(members, mapping):
                 'incorrect QSound device firmware')
 
 
-def export(members, setname, *, menu):
+def dead_key_profile(kit):
+    """The declaration of a kit whose sets are built as Phoenix (dead-key) sets.
+
+    Such a set's program is already plaintext, so the all-FF key is its own.
+    Only kits darksoft_kits.json lists under "dead_key" qualify; every other
+    caller keeps the original-key requirement.
+    """
+    row = json.loads((HERE / 'darksoft_kits.json').read_text()).get('dead_key', {}).get(kit)
+    require(row is not None, 'Phoenix/dead-key sets are unsupported; the original key is required')
+    return row
+
+
+def export(members, setname, *, menu, dead_key_kit=None):
     """Return flat flash/key/NAME files plus a separate hash-bound receipt.
 
     menu is an explicitly supplied ASCII menu label of at most 16 characters.
     No re-keying, decryption, byte swapping or game modification takes place.
+    dead_key_kit names a kit declared for Phoenix (dead-key) sets; its set must
+    carry the dead key and the layout the kit declares.
     """
     mapping = profile(setname)
     check_members(members, mapping)
     require(isinstance(menu, str) and re.fullmatch(r'[\x20-\x7e]{1,16}', menu),
             'menu label must be 1..16 printable ASCII characters')
-    require(members[mapping['key']] != b'\xff' * 20, 'Phoenix/dead-key sets are unsupported; the original key is required')
+    if dead_key_kit is None:
+        require(members[mapping['key']] != b'\xff' * 20, 'Phoenix/dead-key sets are unsupported; the original key is required')
+    else:
+        require(dead_key_profile(dead_key_kit)['profile'] == setname, 'kit declares a different dead-key layout')
+        require(members[mapping['key']] == b'\xff' * 20, 'dead-key kit set does not carry the dead key')
     files = {'key': members[mapping['key']]}
     for flash, spans in mapping['files'].items():
         data = bytearray(b'\xff' * FLASH_SIZE)
@@ -136,13 +156,17 @@ def export(members, setname, *, menu):
                'files': {n: {'size': len(b), 'sha256': sha(b)} for n, b in sorted(files.items())},
                'hardware_review': False,
                'limitations': 'Original-key CPS-2 layout only. No expanded hardware or streamed audio.'}
+    if dead_key_kit is not None:
+        receipt['dead_key_kit'] = dead_key_kit
+        receipt['limitations'] = ('Phoenix (dead-key, plaintext program) CPS-2 layout, declared for this kit only. '
+                                  'No expanded hardware or streamed audio.')
     return files, receipt
 
 
-def tree(members, setname, *, folder, menu):
+def tree(members, setname, *, folder, menu, dead_key_kit=None):
     """Files ready for the existing transactional kit publisher."""
     require(re.fullmatch(r'[A-Za-z0-9_-]+', folder), 'unsafe game folder')
-    files, receipt = export(members, setname, menu=menu)
+    files, receipt = export(members, setname, menu=menu, dead_key_kit=dead_key_kit)
     result = {f'darksoft/games/{folder}/{n}': b for n, b in files.items()}
     result[f'darksoft/receipts/{folder}.json'] = (json.dumps(receipt, indent=2, sort_keys=True) + '\n').encode()
     return result

@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "ips": {
+    "sfa-restoration": {
+      "profile": "sfzj",
+      "menus": {
+        "usa": "SFAlpha R     =U",
+        "asia": "SFAlpha R     =A",
+        "japan": "SFZero R      =J"
+      }
+    },
+    "sfa3-restoration": {
+      "profile": "sfz3j",
+      "menus": {
+        "english": "SFAlpha 3 R   =U",
+        "japanese": "SFZero 3 R    =J"
+      }
+    },
+    "vhunt2-english": {
+      "profile": "vhunt2",
+      "menus": {
+        "default": "NightWarrior2T=U"
+      }
+    },
+    "vsav2-english": {
+      "profile": "vsav2",
+      "menus": {
+        "default": "VampSavior2 T =U"
+      }
+    },
+    "ssf2t-gmc": {
+      "profile": "ssf2xj",
+      "menus": {
+        "default": "SSFII T GMC   =U"
+      }
+    },
+    "ssf2-ex": {
+      "profile": "ssf2xj",
+      "menus": {
+        "usa": "SSFII EX      =U",
+        "japan": "SSFII EX      =J"
+      }
+    },
+    "sfz2al-restoration": {
+      "profile": "sfz2al",
+      "menus": {
+        "default": "SFZero2Alpha R=A"
+      }
+    },
+    "mshvsf-restoration": {
+      "profile": "mshvsfj",
+      "menus": {
+        "usa": "MSH vs SF R   =U",
+        "japan": "MSH vs SF R   =J"
+      }
+    },
+    "mshvsf-ex": {
+      "profile": "mshvsfj",
+      "menus": {
+        "usa": "MSH vs SF EX  =U",
+        "japan": "MSH vs SF EX  =J"
+      }
+    },
+    "vsav-restoration": {
+      "profile": "vsavj",
+      "menus": {
+        "default": "VampSavior R  =U"
+      }
+    },
+    "dstlk-restoration": {
+      "profile": "vampj",
+      "menus": {
+        "default": "Darkstalkers R=U"
+      }
+    },
+    "nwarr-restoration": {
+      "profile": "vhuntj",
+      "menus": {
+        "default": "NightWarrior R=U"
+      }
+    },
+    "sfa2-restoration": {
+      "profile": "sfz2j",
+      "menus": {
+        "usa": "SFAlpha 2 R   =U",
+        "asia": "SFAlpha 2 R   =A",
+        "japan": "SFZero 2 R    =J"
+      }
+    }
+  },
+  "native": {
+    "sfa2-gold": "Best 8 MiB native-sample version, matching HBMAME; no duplicate 4 MiB alternative.",
+    "sfa2-ex": "Best 8 MiB native-sample version, matching HBMAME; no duplicate 4 MiB alternative.",
+    "usf2-backport": "Best 8 MiB CLASSIC/MODERN audio via stock HSF2 packing, matching HBMAME; native music only."
+  },
+  "dead_key": {
+    "final-fight-ex-cps2": {
+      "profile": "sfa3ud",
+      "note": "Built as Phoenix sets: plaintext program, all-FF key. DarkSoft CPS-2 multi runs Phoenix sets (2026-10-22); a DarkSoft hardware test is the proof.",
+      "menus": {
+        "usa": "Final Fight EX=U",
+        "japan": "Final Fight EX=J",
+        "english": "FinalFightEX R=U"
+      }
+    }
+  },
+  "exceptions": {
+    "vsav-arrange": "Expanded graphics/audio and CPS+ music require separate hardware assessment.",
+    "vsav2-arrange": "Evolved hardware is required; no stock Darksoft version.",
+    "vhunt2-arrange": "Expanded program/graphics/audio; no stock Darksoft version.",
+    "cps-plus": "Streamed replacement audio requires CPS+ hardware.",
+    "ng-plus": "Streamed replacement audio requires NG+ hardware; Neo Geo Darksoft input support does not imply output hardware support.",
+    "final-fight-ex": "CPS-1 requires a separate mapper and capacity assessment.",
+    "sfz3ugd-multiregion": "NAOMI disc product; outside the CPS-2 Darksoft format."
+  }
+}

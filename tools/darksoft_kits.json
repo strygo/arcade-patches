@@ -93,6 +93,17 @@
     "sfa2-ex": "Best 8 MiB native-sample version, matching HBMAME; no duplicate 4 MiB alternative.",
     "usf2-backport": "Best 8 MiB CLASSIC/MODERN audio via stock HSF2 packing, matching HBMAME; native music only."
   },
+  "dead_key": {
+    "final-fight-ex-cps2": {
+      "profile": "sfa3ud",
+      "note": "Built as Phoenix sets: plaintext program, all-FF key. DarkSoft CPS-2 multi runs Phoenix sets (2026-10-22); a DarkSoft hardware test is the proof.",
+      "menus": {
+        "usa": "Final Fight EX=U",
+        "japan": "Final Fight EX=J",
+        "english": "FinalFightEX R=U"
+      }
+    }
+  },
   "exceptions": {
     "vsav-arrange": "Expanded graphics/audio and CPS+ music require separate hardware assessment.",
     "vsav2-arrange": "Evolved hardware is required; no stock Darksoft version.",

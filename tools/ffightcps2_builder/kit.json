@@ -1,0 +1,43 @@
+{
+ "title": "Final Fight EX (CPS-2)",
+ "slug": "final-fight-ex-cps2",
+ "description": "Build Final Fight EX (CPS-2) from your own Final Fight CD discs and arcade romsets. See README.txt.",
+ "romsets": [
+  "ffight",
+  "ffightu",
+  "ffightj",
+  "sfa3u"
+ ],
+ "editions": {
+  "english": {
+   "disc": "jp",
+   "set": "ffex2r",
+   "mra": "Final Fight EX CPS2 (English Restoration)",
+   "pack": "ffightcps2_ex_arrange_en"
+  },
+  "usa": {
+   "disc": "us",
+   "set": "ffex2u",
+   "mra": "Final Fight EX CPS2 (USA)",
+   "pack": "ffightcps2_ex_arrange"
+  },
+  "japan": {
+   "disc": "jp",
+   "set": "ffex2j",
+   "mra": "Final Fight EX CPS2 (Japan)",
+   "pack": "ffightcps2_ex_arrange_jp"
+  }
+ },
+ "mra_root": [
+  "_Arcade",
+  "_Arcade Patches",
+  "_Enhanced Versions"
+ ],
+ "mra_dir": {
+  "english": "",
+  "usa": "_USA",
+  "japan": "_Japan"
+ },
+ "core": "jtcps2-cpsplus_20261006.rbf",
+ "darksoft": "final-fight-ex-cps2"
+}

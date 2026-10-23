@@ -810,7 +810,11 @@ def copy_build_titles(patch: dict) -> list:
     slug = patch["slug"]
     img_dir = DOCS / "img" / slug
     out = []
+    shared = {}                       # title_screen -> the first build's copy of it
     for b in patch["builds"]:
+        if b["title_screen"] in shared:
+            out.append({**b, "img": shared[b["title_screen"]]})
+            continue
         target = img_dir / f"title_{b['key']}.png"
         src = resolve(b["title_screen"])
         if src.exists() and (live(slug) or not target.exists()):
@@ -820,10 +824,23 @@ def copy_build_titles(patch: dict) -> list:
             print(f"{slug}: WARNING: build title missing: {b['title_screen']}")
             continue
         out.append({**b, "img": f"../img/{slug}/{target.name}"})
+        shared[b["title_screen"]] = out[-1]["img"]
     return out
 
 
-def render_builds_gallery(builds: list) -> str:
+def render_builds_gallery(builds: list, heading: str | None = None) -> str:
+    count = {2: "two", 3: "three", 4: "four"}.get(len(builds), str(len(builds)))
+    heading = esc(heading) if heading else f"The {count} builds"
+    if len(builds) > 1 and len({b["img"] for b in builds}) == 1:
+        # Every build shows the same title screen (Final Fight EX (CPS-2)): one picture, sized
+        # as a single screenshot, with every build in its caption.
+        same = len({b["title"] for b in builds}) == 1
+        lines = "<br>".join(("" if same else f'{esc(b["title"])}, ')
+                            + f'{esc(b["region"])} · <code>{esc(b["hbmame_set"])}</code>' for b in builds)
+        head = f'<strong>{esc(builds[0]["title"])}</strong><br>' if same else ""
+        return (f'<h2>{heading}</h2>\n<figure class="shot single">'
+                f'<img src="{esc(builds[0]["img"])}" alt="{esc(builds[0]["title"])} title screen">'
+                f'<figcaption>{head}{lines}</figcaption></figure>')
     cells = []
     for b in builds:
         cells.append(
@@ -833,8 +850,7 @@ def render_builds_gallery(builds: list) -> str:
             f'{esc(b["region"])} · <code>{esc(b["hbmame_set"])}</code></figcaption>'
             f'</figure>'
         )
-    count = {2: "two", 3: "three", 4: "four"}.get(len(cells), str(len(cells)))
-    return f'<h2>The {count} builds</h2>\n<div class="build-gallery">{"".join(cells)}</div>'
+    return f'<h2>{heading}</h2>\n<div class="build-gallery">{"".join(cells)}</div>'
 
 
 def render_kit_download(patch: dict, kit: dict) -> str:
@@ -948,7 +964,7 @@ def render_builds_page(site: dict, patch: dict, builds: list, bundle: dict | Non
         + "</dl>"
     )
 
-    parts.append(render_builds_gallery(builds))
+    parts.append(render_builds_gallery(builds, patch.get("builds_heading")))
     parts.append("<h2>About</h2>")
     parts.append(render_requirements(patch))
     parts.extend(f"<p>{esc(p)}</p>" for p in patch["description"])

@@ -1,0 +1,482 @@
+{
+  "schema": 1,
+  "sets": {
+    "ffight": {
+      "ff-1m.3a": {
+        "crc32": "0b605e44",
+        "name": "ff-1m.3a",
+        "role": "game",
+        "sha256": "e5d9bf0282dada21d4a8ab50a9f51dab47a8209a93db11973fcbfe6396b0f1ac",
+        "size": 524288
+      },
+      "ff-32m.8h": {
+        "crc32": "c747696e",
+        "name": "ff-32m.8h",
+        "role": "game",
+        "sha256": "86da0d2884a5407f67ac490ce366f5887f80ac6da343c1a86a9489129b63fbc7",
+        "size": 524288
+      },
+      "ff-3m.5a": {
+        "crc32": "52291cd2",
+        "name": "ff-3m.5a",
+        "role": "game",
+        "sha256": "d8660712fc0a7f6e0ebcebd67966e5d0852d214054d8794c2e23a6b174bfb923",
+        "size": 524288
+      },
+      "ff-5m.7a": {
+        "crc32": "9c284108",
+        "name": "ff-5m.7a",
+        "role": "game",
+        "sha256": "dce4a9b9f28b7e7f8eb8d7f03251b6c24318f8b4b686d6f2a6b0f2dcb5918acd",
+        "size": 524288
+      },
+      "ff-7m.9a": {
+        "crc32": "a7584dfb",
+        "name": "ff-7m.9a",
+        "role": "game",
+        "sha256": "75aaeae98b4a89fe4db75dc2c8b75916392c2decb226f2158950a4731535c8db",
+        "size": 524288
+      },
+      "ff_09.12b": {
+        "crc32": "b8367eb5",
+        "name": "ff_09.12b",
+        "role": "game",
+        "sha256": "07c0fdf83581da618a730a3de88aa44f7fedea1c283979ac73a1449b1b39ee17",
+        "size": 65536
+      },
+      "ff_18.11c": {
+        "crc32": "375c66e7",
+        "name": "ff_18.11c",
+        "role": "game",
+        "sha256": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+        "size": 131072
+      },
+      "ff_19.12c": {
+        "crc32": "1ef137f9",
+        "name": "ff_19.12c",
+        "role": "game",
+        "sha256": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+        "size": 131072
+      },
+      "ff_36.11f": {
+        "crc32": "f9a5ce83",
+        "name": "ff_36.11f",
+        "role": "game",
+        "sha256": "0763a7b2a150334423bc0e90d3977dd155a9676003204fb16bf5c49b86887126",
+        "size": 131072
+      },
+      "ff_37.12f": {
+        "crc32": "e1033784",
+        "name": "ff_37.12f",
+        "role": "game",
+        "sha256": "34a36b617c0be4244fe86326350cf986a38145361987875f24fa71991450fbcd",
+        "size": 131072
+      },
+      "ff_42.11h": {
+        "crc32": "65f11215",
+        "name": "ff_42.11h",
+        "role": "game",
+        "sha256": "a6a287ee9eb1952af93cdc3e0612005b15bcbba9c8697d974ad6285b303b3f7a",
+        "size": 131072
+      }
+    },
+    "ffightu": {
+      "ff-1m.3a": {
+        "crc32": "0b605e44",
+        "name": "ff-1m.3a",
+        "role": "game",
+        "sha256": "e5d9bf0282dada21d4a8ab50a9f51dab47a8209a93db11973fcbfe6396b0f1ac",
+        "size": 524288
+      },
+      "ff-32m.8h": {
+        "crc32": "c747696e",
+        "name": "ff-32m.8h",
+        "role": "game",
+        "sha256": "86da0d2884a5407f67ac490ce366f5887f80ac6da343c1a86a9489129b63fbc7",
+        "size": 524288
+      },
+      "ff-3m.5a": {
+        "crc32": "52291cd2",
+        "name": "ff-3m.5a",
+        "role": "game",
+        "sha256": "d8660712fc0a7f6e0ebcebd67966e5d0852d214054d8794c2e23a6b174bfb923",
+        "size": 524288
+      },
+      "ff-5m.7a": {
+        "crc32": "9c284108",
+        "name": "ff-5m.7a",
+        "role": "game",
+        "sha256": "dce4a9b9f28b7e7f8eb8d7f03251b6c24318f8b4b686d6f2a6b0f2dcb5918acd",
+        "size": 524288
+      },
+      "ff-7m.9a": {
+        "crc32": "a7584dfb",
+        "name": "ff-7m.9a",
+        "role": "game",
+        "sha256": "75aaeae98b4a89fe4db75dc2c8b75916392c2decb226f2158950a4731535c8db",
+        "size": 524288
+      },
+      "ff_36.11f": {
+        "crc32": "f9a5ce83",
+        "name": "ff_36.11f",
+        "role": "game",
+        "sha256": "0763a7b2a150334423bc0e90d3977dd155a9676003204fb16bf5c49b86887126",
+        "size": 131072
+      },
+      "ff_37.12f": {
+        "crc32": "e1033784",
+        "name": "ff_37.12f",
+        "role": "game",
+        "sha256": "34a36b617c0be4244fe86326350cf986a38145361987875f24fa71991450fbcd",
+        "size": 131072
+      },
+      "ff_42.11h": {
+        "crc32": "65f11215",
+        "name": "ff_42.11h",
+        "role": "game",
+        "sha256": "a6a287ee9eb1952af93cdc3e0612005b15bcbba9c8697d974ad6285b303b3f7a",
+        "size": 131072
+      },
+      "ffu_43.12h": {
+        "crc32": "4ca65947",
+        "name": "ffu_43.12h",
+        "role": "game",
+        "sha256": "ce221b5d9db9beeca876d1f5920acfe0949d4050cb54b4855ae81627d4548f5b",
+        "size": 131072
+      }
+    },
+    "ffightj": {
+      "ff36.bin": {
+        "crc32": "f9a5ce83",
+        "name": "ff36.bin",
+        "role": "game",
+        "sha256": "0763a7b2a150334423bc0e90d3977dd155a9676003204fb16bf5c49b86887126",
+        "size": 131072
+      },
+      "ff37.bin": {
+        "crc32": "e1033784",
+        "name": "ff37.bin",
+        "role": "game",
+        "sha256": "34a36b617c0be4244fe86326350cf986a38145361987875f24fa71991450fbcd",
+        "size": 131072
+      },
+      "ff42.bin": {
+        "crc32": "65f11215",
+        "name": "ff42.bin",
+        "role": "game",
+        "sha256": "a6a287ee9eb1952af93cdc3e0612005b15bcbba9c8697d974ad6285b303b3f7a",
+        "size": 131072
+      },
+      "ff43.bin": {
+        "crc32": "b6dee1c3",
+        "name": "ff43.bin",
+        "role": "game",
+        "sha256": "1bc247d5bc756ed797cb7c65c2ec0eef2a388e02a6472dd09afbcaa0bd013c56",
+        "size": 131072
+      },
+      "ffj_01.4a": {
+        "crc32": "815b1797",
+        "name": "ffj_01.4a",
+        "role": "game",
+        "sha256": "875c00651821c163d5a99da1aca344f711a8cd12428ec950d25f8f885475610f",
+        "size": 131072
+      },
+      "ffj_02.5a": {
+        "crc32": "5d91f694",
+        "name": "ffj_02.5a",
+        "role": "game",
+        "sha256": "a08c9f2d8cf0c0ef3ed64a852e05146aa4880b0cfc1ccca5292ec17829133c2d",
+        "size": 131072
+      },
+      "ffj_05.9a": {
+        "crc32": "d0fcd4b5",
+        "name": "ffj_05.9a",
+        "role": "game",
+        "sha256": "62e2e94ff15e4d2b0f2f6e615cb441312f7305e2f788f50d7c5b7f87fad45738",
+        "size": 131072
+      },
+      "ffj_06.10a": {
+        "crc32": "1c18f042",
+        "name": "ffj_06.10a",
+        "role": "game",
+        "sha256": "fac30feffb36c00025ddc6640322fce5f041589426cff89564e7da76ef2cfb3a",
+        "size": 131072
+      },
+      "ffj_09.4b": {
+        "crc32": "5b116d0d",
+        "name": "ffj_09.4b",
+        "role": "game",
+        "sha256": "d35ff7bc039bc6cd5c9677c87ce4167ab0ed6117788597ee03f44db9a1fb3d78",
+        "size": 131072
+      },
+      "ffj_10.5b": {
+        "crc32": "624a924a",
+        "name": "ffj_10.5b",
+        "role": "game",
+        "sha256": "cf86ed0f9faa212043a201152337182d8c10767bb44ebc64338e9a6b8cb6744f",
+        "size": 131072
+      },
+      "ffj_13.9b": {
+        "crc32": "8721a7da",
+        "name": "ffj_13.9b",
+        "role": "game",
+        "sha256": "eaca37867b6fa2a51723bf1209e4f0e2f8c233f941ce1ee0270f8687ff273b70",
+        "size": 131072
+      },
+      "ffj_14.10b": {
+        "crc32": "0a2e9101",
+        "name": "ffj_14.10b",
+        "role": "game",
+        "sha256": "5acd4407f2ee03642ff2e06af72b3462673c640881450d8a123dcf4f9741d48a",
+        "size": 131072
+      },
+      "ffj_17.5c": {
+        "crc32": "2dc18cf4",
+        "name": "ffj_17.5c",
+        "role": "game",
+        "sha256": "902b8850e99a62913d9088cebf3a3d96b7e1d6fc8af886e2e0fe32abeccb063b",
+        "size": 131072
+      },
+      "ffj_18.7c": {
+        "crc32": "b19ede59",
+        "name": "ffj_18.7c",
+        "role": "game",
+        "sha256": "bf8bfe8d32b4eabb2580f72fd3db1dda3018a86f71454196f911597823c0a83f",
+        "size": 131072
+      },
+      "ffj_24.5e": {
+        "crc32": "a1ab607a",
+        "name": "ffj_24.5e",
+        "role": "game",
+        "sha256": "7ae492882290a768d84ede25191930b1f691f515ba7805e95f01a1a461864ad7",
+        "size": 131072
+      },
+      "ffj_25.7e": {
+        "crc32": "6e8181ea",
+        "name": "ffj_25.7e",
+        "role": "game",
+        "sha256": "051df1f81f98a04685bb729b9613a1513ea511d2b4c9bdcb5f6ddb77efe3f29a",
+        "size": 131072
+      },
+      "ffj_30.bin": {
+        "crc32": "375c66e7",
+        "name": "ffj_30.bin",
+        "role": "game",
+        "sha256": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+        "size": 131072
+      },
+      "ffj_31.bin": {
+        "crc32": "1ef137f9",
+        "name": "ffj_31.bin",
+        "role": "game",
+        "sha256": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+        "size": 131072
+      },
+      "ffj_32.8f": {
+        "crc32": "c8bc4a57",
+        "name": "ffj_32.8f",
+        "role": "game",
+        "sha256": "c4e8786a1c283c624c26a60e458b18ddd9147acd278f47eff6fe7d292ccc3e22",
+        "size": 131072
+      },
+      "ffj_33.9f": {
+        "crc32": "7369fa07",
+        "name": "ffj_33.9f",
+        "role": "game",
+        "sha256": "c381c318a2dd36c620031dea1ff059596e99b534c531ecdbd6c221f8d2fc66d6",
+        "size": 131072
+      },
+      "ffj_34.10f": {
+        "crc32": "0c8dc3fc",
+        "name": "ffj_34.10f",
+        "role": "game",
+        "sha256": "56a9f9ed1c7d849e7d23b7c1d423a32b764f83729339441d5ccb650b80fb235d",
+        "size": 131072
+      },
+      "ffj_35.11f": {
+        "crc32": "4a934121",
+        "name": "ffj_35.11f",
+        "role": "game",
+        "sha256": "af2dda9f0036db35e56e61ee1008af5014e763594c622940a1f860729e4e5db6",
+        "size": 131072
+      },
+      "ffj_38.8h": {
+        "crc32": "6535a57f",
+        "name": "ffj_38.8h",
+        "role": "game",
+        "sha256": "1b837e362281b897312e4504e36ec2914acde72d1a47315c321b7ff32da3c42f",
+        "size": 131072
+      },
+      "ffj_39.9h": {
+        "crc32": "9416b477",
+        "name": "ffj_39.9h",
+        "role": "game",
+        "sha256": "419a7042935dd3e3a6e58d5bf8a7bd9724a86e9bfa18c824d3111024d398838c",
+        "size": 131072
+      },
+      "ffj_40.10h": {
+        "crc32": "8075bab9",
+        "name": "ffj_40.10h",
+        "role": "game",
+        "sha256": "02f4022a329ef172e0739c9bc25b754700c49a586cd42dc4886e88377bf7d8c5",
+        "size": 131072
+      },
+      "ffj_41.11h": {
+        "crc32": "2af68154",
+        "name": "ffj_41.11h",
+        "role": "game",
+        "sha256": "33932950756ec4d2734666d5afade2fef8a08cad87700c971250a7784a9f0e8b",
+        "size": 131072
+      }
+    },
+    "sfa3u": {
+      "sfa3u.key": {
+        "crc32": "4a8f98c1",
+        "name": "sfa3u.key",
+        "role": "game",
+        "sha256": "c8a17a4bd0726f896e9f403f0e5984365bafda6364d3b18db0d8f7a8086b31d1",
+        "size": 20
+      },
+      "sz3.01": {
+        "crc32": "de810084",
+        "name": "sz3.01",
+        "role": "game",
+        "sha256": "a9e36a8822f84145ac631ac48c4cdb39d04ff40d86189c8d1a6df86a785acf93",
+        "size": 131072
+      },
+      "sz3.02": {
+        "crc32": "72445dc4",
+        "name": "sz3.02",
+        "role": "game",
+        "sha256": "a4b0b4edb38a8b89122829a5cb879b3c10b823aee4a7e77da018b8270549a076",
+        "size": 131072
+      },
+      "sz3.05c": {
+        "crc32": "57fd0a40",
+        "name": "sz3.05c",
+        "role": "game",
+        "sha256": "8a6b29435cdbad9316bbaec21bd6afc7a6aa477ae697b9c5d1dcc22eb62af597",
+        "size": 524288
+      },
+      "sz3.06c": {
+        "crc32": "f6305f8b",
+        "name": "sz3.06c",
+        "role": "game",
+        "sha256": "bf18c48cdff4f763eb2b7a17b948db99e4cf85092d63aa53f1356c69cdb85e4c",
+        "size": 524288
+      },
+      "sz3.07c": {
+        "crc32": "6eab0f6f",
+        "name": "sz3.07c",
+        "role": "game",
+        "sha256": "62341a6cc7aa7a2e7db91111b40d244c2e97ba8e3e15449ff4d2ef20acfd02ca",
+        "size": 524288
+      },
+      "sz3.08c": {
+        "crc32": "910c4a3b",
+        "name": "sz3.08c",
+        "role": "game",
+        "sha256": "13572160c616147e10d2f233d83cc3beee45124afd5e1fc2566606c12c1f66a4",
+        "size": 524288
+      },
+      "sz3.09c": {
+        "crc32": "b29e5199",
+        "name": "sz3.09c",
+        "role": "game",
+        "sha256": "cbaf65b8c45a1cc6e46e4100c22670a930511afdf31bc5e7c956014705f5e1ac",
+        "size": 524288
+      },
+      "sz3.10b": {
+        "crc32": "deb2ff52",
+        "name": "sz3.10b",
+        "role": "game",
+        "sha256": "59054c279b444df0d04aef8c596b83092a73ee68434f64706711a61d08bdba32",
+        "size": 524288
+      },
+      "sz3.11m": {
+        "crc32": "1c89eed1",
+        "name": "sz3.11m",
+        "role": "game",
+        "sha256": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+        "size": 4194304
+      },
+      "sz3.12m": {
+        "crc32": "f392b13a",
+        "name": "sz3.12m",
+        "role": "game",
+        "sha256": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+        "size": 4194304
+      },
+      "sz3.13m": {
+        "crc32": "0f7a60d9",
+        "name": "sz3.13m",
+        "role": "game",
+        "sha256": "607cc7ae7ad9f2e75bba789e4445486fcdab9aa60c19da442b17317cf41934eb",
+        "size": 4194304
+      },
+      "sz3.14m": {
+        "crc32": "5ff98297",
+        "name": "sz3.14m",
+        "role": "game",
+        "sha256": "9123efcf41b1108ae11a699cacb5e133b3958c40be98eb33674d3878257a7c7c",
+        "size": 4194304
+      },
+      "sz3.15m": {
+        "crc32": "8e933741",
+        "name": "sz3.15m",
+        "role": "game",
+        "sha256": "8ee7453b186d586475429b8caf23dae69f88fdcd709a3752fc9d8afa4451548d",
+        "size": 4194304
+      },
+      "sz3.16m": {
+        "crc32": "52b5bdee",
+        "name": "sz3.16m",
+        "role": "game",
+        "sha256": "9bef2913ef07035376ce9db1121a6a298c93f14045ece5751f444d19919117ff",
+        "size": 4194304
+      },
+      "sz3.17m": {
+        "crc32": "d6e98147",
+        "name": "sz3.17m",
+        "role": "game",
+        "sha256": "2bfd9d1ba38addcb4a94bd0e169ac5f4b8f3542acc4092de6cdf98f952f940c9",
+        "size": 4194304
+      },
+      "sz3.18m": {
+        "crc32": "40631ed5",
+        "name": "sz3.18m",
+        "role": "game",
+        "sha256": "df31e61932e7ba0111045978b13ec258760a03fcbd41c3594b892006ae2c9ec0",
+        "size": 4194304
+      },
+      "sz3.19m": {
+        "crc32": "f31a728a",
+        "name": "sz3.19m",
+        "role": "game",
+        "sha256": "7f475ffe1fe39940d354bb591adb4f560e01ce85a9a70d3c32d8d8f9a3532a1d",
+        "size": 4194304
+      },
+      "sz3.20m": {
+        "crc32": "763409b4",
+        "name": "sz3.20m",
+        "role": "game",
+        "sha256": "8e915ceffc3c20f887ecf65940e85816b94ee221a8f8149c0bd4d9b727c250d4",
+        "size": 4194304
+      },
+      "sz3u.03c": {
+        "crc32": "e007da2e",
+        "name": "sz3u.03c",
+        "role": "game",
+        "sha256": "2d113d10c279b1bb026a60cc716411def746adc077b1301dafe01d7face760a3",
+        "size": 524288
+      },
+      "sz3u.04c": {
+        "crc32": "5f78f0e7",
+        "name": "sz3u.04c",
+        "role": "game",
+        "sha256": "98285084aa328b61edc1373283e6854b73904fdb5cd08a50b52172cffbd2f8a0",
+        "size": 524288
+      }
+    }
+  }
+}
