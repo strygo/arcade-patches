@@ -75,13 +75,13 @@ You need:</p>
 <tr><td>USA</td><td>Ultra Street Fighter II</td><td class="mono">hsf2</td><td class="mono">usf2t8</td></tr><tr><td>Japan</td><td>Ultra Street Fighter II</td><td class="mono">hsf2j</td><td class="mono">usf2j8</td></tr>
 </table>
 <h2>Download</h2>
-
+<p>Tools updated 2026-10-24. Game version unchanged.</p>
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/usf2-backport-rc4-kit.zip?v=528b187f39">usf2-backport-rc4-kit.zip</a>
+  <div class="file"><a href="../downloads/usf2-backport-rc4-kit.zip?v=5fb139734e">usf2-backport-rc4-kit.zip</a>
   (19.3 MB)</div>
-  <div class="hash">SHA-256: 528b187f39a000dde2c37a6bef263b6070bf0b6c85d7858da5b2abe751060b9d</div>
+  <div class="hash">SHA-256: 5fb139734e61d8641b1f576a858b58e99a10361b2f09fd0e44171e0b0214ef8a</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
@@ -90,7 +90,7 @@ Everything else is rebuilt on your machine from files you already own.</p>
 <h2>How to build</h2>
 <pre><code>unzip usf2-backport-rc4-kit.zip -d usf2-backport
 cd usf2-backport
-python3 apply.py --rompath roms --nsp-us usa.nsp --nsp-jp japan.nsp --keys prod.keys --work scratch --out-dir out</code></pre>
+python3 apply.py --rompath roms --source-us usa.nsp --keys prod.keys --platform mame</code></pre>
 
 <h2 id="history">Release history</h2>
 <h3>rc4 (2026-10-23)</h3><ul>
@@ -139,7 +139,7 @@ python3 apply.py --rompath roms --nsp-us usa.nsp --nsp-jp japan.nsp --keys prod.
 <h2>Related projects</h2><ul><li><a href="../ssf2t-gmc/">Super Street Fighter II Turbo: Grand Master Challenge</a>, the English restoration of the game Ultra is built on</li><li><a href="../ssf2-ex/">Super Street Fighter II EX</a>, another enhanced Super Turbo</li><li><a href="../cps2-plus/">CPS-2+ hardware</a>, how the extended system these sets need works</li><li><a href="https://newlegacy.fr/credits.html">Super Street Fighter II Turbo: New Legacy</a>, Tyrone&#x27;s Akuma artwork comes from this project</li></ul>
 <h2>Notes</h2><ul class="notes">
 <li>MAME: RC4 replaces the previous default 4 MB, Modern-only audio build with an 8 MB audio build containing both Modern and Classic sound effects. It still runs in unmodified MAME as hsf2 (USA) or hsf2j (Japan); no custom MAME build is needed. Choose MODERN or CLASSIC in ULTRA CONFIGURATION. Use the newly generated ZIPs and keep them separate from original Hyper Street Fighter II ROMs. Checksum warnings are expected. HBMAME still needs the included set definitions compiled in.</li>
-<li>Installation: install Python 3.10 or newer, extract the kit and run apply.py with your arcade ROMs, Switch game files and prod.keys. Git, CMake, a C/C++ compiler, NumPy and a separate FFmpeg installation are no longer needed. The kit downloads the extraction and audio tools it needs on first use and reuses them on later runs. For offline setup, keep cpsplus-tools-v2-offline.zip zipped and add --tools-bundle cpsplus-tools-v2-offline.zip --offline to your command. Optional 7z inputs still need 7-Zip.</li>
+<li>Installation: install Python 3.10 or newer, extract the kit and run apply.py with your arcade ROMs, Switch game files and prod.keys. The region follows the game files you supply. Scratch and output folders are selected automatically unless you specify them. The installer checks paths before downloading tools, reports setup errors without a traceback, and groups the finished files and instructions by target. No compiler, Git, CMake, NumPy or separate FFmpeg installation is needed. For offline setup, keep cpsplus-tools-v2-offline.zip zipped and add --tools-bundle cpsplus-tools-v2-offline.zip --offline. Optional 7z inputs still need 7-Zip.</li>
 <li>Credits: Akuma&#x27;s imported artwork is Tyrone&#x27;s, from Super Street Fighter II Turbo: New Legacy.</li>
 <li>Special thanks to Gachichan! for bug reports and improvements to the Evil Ryu and Violent Ken profile pictures.</li>
 <li>This is a fan backport, unaffiliated with Capcom. The sets are built from game files you already own; the kit ships only our own code and patches, plus the CPS+ core with its source and licenses.</li>
