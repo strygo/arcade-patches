@@ -5287,10 +5287,10 @@
       "title": "CPS-2+ hardware",
       "subtitle": "An extended CPS-2 system for MiSTer and HBMAME",
       "section": "hardware",
-      "summary": "Capcom's CPS-2 with more program memory, graphics, QSound samples and sound program. Vampire Savior 2 Arrange and Night Warriors 2 Arrange need it.",
+      "summary": "Capcom's CPS-2 with more program memory, graphics, QSound samples and sound program. The Vampire Savior, Vampire Savior 2 and Night Warriors 2 Arrange editions need it.",
       "intro": [
         "CPS-2+ is an extended version of Capcom's CPS-2 arcade system. It gives a game more program memory, more graphics, more sound samples and a larger sound program.",
-        "We made CPS-2+ for the Arrange editions of Vampire Savior 2 and Vampire Hunter 2. These editions come from Capcom's 2005 PlayStation 2 collection. Their added fighters, art and voices do not fit in the original CPS-2 memory.",
+        "We made CPS-2+ for the Arrange editions of Vampire Savior, Vampire Savior 2 and Vampire Hunter 2. These editions come from Capcom's 2005 PlayStation 2 collection. Their added fighters, art and voices do not fit in the original CPS-2 memory.",
         "Stock CPS-2 games run on CPS-2+ without change. A game uses the extensions only when it asks for them."
       ],
       "sections": [
@@ -5369,11 +5369,11 @@
           "heading": "Where it runs",
           "list": [
             "MiSTer: the CPS+ core, jtcps2-cpsplus_20261006.rbf. It needs a 128 MB SDRAM module. The core also plays the CPS+ arranged soundtracks.",
-            "HBMAME: the CPS+ driver, cps2plus. It runs the sets vsav2s05, vsav2s06, vhunt2s02 and vhunt2s03.",
+            "HBMAME: the CPS+ driver, cps2plus. It runs the sets vsavs01, vsavs02, vsav2s05, vsav2s06, vhunt2s02 and vhunt2s03.",
             "CPS-2+ games do not run on the standard jtCPS2 core or in stock MAME."
           ],
           "after": [
-            "Our Arrange kits include the CPS+ core. You do not have to get it separately."
+            "Our Arrange kits include the CPS+ core, and so do the Ultra Street Fighter II and Final Fight EX (CPS-2) kits. You do not have to get it separately."
           ]
         },
         {
@@ -5387,6 +5387,13 @@
               "Sound program"
             ],
             "rows": [
+              [
+                "Vampire Savior Arrange",
+                "4 MB",
+                "64 MB",
+                "16 MB",
+                "512 KB"
+              ],
               [
                 "Vampire Savior 2 Arrange",
                 "4 MB",
@@ -5427,6 +5434,11 @@
       ],
       "related": [
         {
+          "label": "Vampire Savior Arrange",
+          "url": "../vsav-arrange/",
+          "note": "a CPS-2+ game"
+        },
+        {
           "label": "Vampire Savior 2 Arrange",
           "url": "../vsav2-arrange/",
           "note": "a CPS-2+ game"
@@ -5440,6 +5452,16 @@
           "label": "CPS+",
           "url": "../cps-plus/",
           "note": "arranged soundtracks on the same core"
+        },
+        {
+          "label": "Ultra Street Fighter II",
+          "url": "../usf2-backport/",
+          "note": "also uses the CPS+ core on MiSTer"
+        },
+        {
+          "label": "Final Fight EX (CPS-2)",
+          "url": "../final-fight-ex-cps2/",
+          "note": "also uses the CPS+ core on MiSTer"
         }
       ]
     }
