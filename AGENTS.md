@@ -33,6 +33,10 @@ All work is on `master`, and other sessions commit to it while you work.
 
 ## Release candidates: the page is part of the kit
 
+Capcom's [RELEASING.md](../capcom/release/RELEASING.md) walks the whole process,
+page to push, with the exact commands. The sections below are the rules it
+refers to.
+
 Capcom's candidate factory (`../capcom/release/CANDIDATES.md`) packages each
 download from a **pinned, committed** revision of this repository.
 `tools/release_packager.py` copies these `data/patches.json` fields into the
