@@ -35,19 +35,73 @@ def verify(data, spec):
 
 
 def find_7z():
-    for name in ("7zz", "7z", "7za", "7zr"):
-        found = shutil.which(name)
-        if found:
-            return found
-    for key in ("ProgramW6432", "ProgramFiles", "ProgramFiles(x86)"):
-        if os.environ.get(key):
-            path = Path(os.environ[key]) / "7-Zip/7z.exe"
-            if path.is_file():
-                return str(path)
-    return None
+    # Fetch only when the resolver actually encounters a .7z archive.
+    from fetch_optional_tools import disc_tool
+    return disc_tool('sevenzip')
+
+
+def require_path(value, label="input", *, file=False):
+    """Validate explicit inputs, retaining the spelling that caused an error."""
+    path = Path(value).expanduser().resolve()
+    if not (path.is_file() if file else path.exists()):
+        hint = ("\nOn Windows, /inputs/file means the drive root. Use a full path "
+                "such as C:\\Games\\inputs\\file, or inputs/file relative to this folder."
+                if os.name == "nt" and str(value).startswith(("/", "\\")) and not Path(value).drive else "")
+        raise RomError(f"{label}: {value!s} is not {'a file' if file else 'an existing file or folder'}."
+                       f"\nResolved path: {path}\nCurrent folder: {Path.cwd()}{hint}")
+    return path
+
+
+def default_output(name):
+    """Choose an unused destination; never replace a previous default build."""
+    path = Path.cwd() / name
+    index = 2
+    while path.exists() or path.is_symlink():
+        path = Path.cwd() / f"{name}-{index}"
+        index += 1
+    return path
+
+
+def check_output(value, inputs=(), *, directory=True):
+    """Reject type conflicts and source/output overlap before expensive work."""
+    out = Path(value).expanduser().resolve()
+    for source in inputs:
+        src = Path(source).expanduser().resolve()
+        if out == src or out in src.parents:
+            raise RomError(f"Output must be separate from input: {out} overlaps {src}")
+    if out.exists() and out.is_dir() != directory:
+        raise RomError(f"Output must be {'a folder' if directory else 'a file'}: {out}")
+    parent = out.parent
+    while not parent.exists():
+        parent = parent.parent
+    if not parent.is_dir():
+        raise RomError(f"Output parent is not a folder: {parent}")
+    return out
+
+
+def print_completion(out, files):
+    """Report only delivered targets, with their actual ZIP/MRA inventory."""
+    labels = {"mame": "MAME", "hbmame": "HBMAME", "mister": "MiSTer", "darksoft": "Darksoft"}
+    for target, label in labels.items():
+        names = sorted(str(n) for n in files if Path(n).parts[0] == target)
+        if not names:
+            continue
+        inventory = [str(Path(out) / n) for n in names if n.endswith((".zip", ".mra"))]
+        print(f"{label}: " + (", ".join(inventory) or str(Path(out) / target)))
+        if target in ("mame", "hbmame"):
+            print(f"{label}: add the ZIPs to your ROM path; keep the stock parent and QSound archives available.")
+        elif target == "mister":
+            print(f"MiSTer: copy the contents of {Path(out) / target} to the SD card root.")
+            if not any(n.endswith('.zip') for n in names):
+                print("MiSTer: these MRAs patch your installed stock archives; no game ZIP is produced.")
+        else:
+            print(f"Darksoft: copy each folder under {Path(out) / 'darksoft/games'} to the card's games folder.")
 
 
 def search_paths(target=None, rompaths=(), kit=None):
+    rompaths = list(rompaths)
+    for value in ([target] if target else []) + rompaths:
+        require_path(value, "ROM source")
     paths = ([Path(target)] if target else []) + [Path(p) for p in rompaths]
     if target and Path(target).is_file():
         paths.append(Path(target).parent)

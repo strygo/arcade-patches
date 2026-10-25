@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "hosts": {
+    "macos-arm64-cp312": [
+      {
+        "project": "numpy",
+        "version": "2.2.6",
+        "filename": "numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/66/ee/560deadcdde6c2f90200450d5938f63a34b37e27ebff162810f716f6a230/numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl",
+        "sha256": "de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c",
+        "bytes": 14119362
+      },
+      {
+        "project": "Pillow",
+        "version": "11.3.0",
+        "filename": "pillow-11.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+        "url": "https://files.pythonhosted.org/packages/2c/32/7e2ac19b5713657384cec55f89065fb306b06af008cfd87e572035b27119/pillow-11.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+        "sha256": "921bd305b10e82b4d1f5e802b6850677f965d8394203d182f078873851dada69",
+        "bytes": 4686296
+      }
+    ],
+    "windows-x86_64-cp313": [
+      {
+        "project": "numpy",
+        "version": "2.2.6",
+        "filename": "numpy-2.2.6-cp313-cp313-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/cb/3b/d58c12eafcb298d4e6d0d40216866ab15f59e55d148a5658bb3132311fcf/numpy-2.2.6-cp313-cp313-win_amd64.whl",
+        "sha256": "b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c",
+        "bytes": 12610885
+      },
+      {
+        "project": "Pillow",
+        "version": "11.3.0",
+        "filename": "pillow-11.3.0-cp313-cp313-win_amd64.whl",
+        "url": "https://files.pythonhosted.org/packages/23/85/397c73524e0cd212067e0c969aa245b01d50183439550d24d9f55781b776/pillow-11.3.0-cp313-cp313-win_amd64.whl",
+        "sha256": "0bce5c4fd0921f99d2e858dc4d4d64193407e1b99478bc5cacecba2311abde51",
+        "bytes": 6978450
+      }
+    ]
+  }
+}

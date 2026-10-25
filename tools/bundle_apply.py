@@ -11,7 +11,7 @@ import sys
 import shutil
 import tempfile
 from pathlib import Path
-from rom_sources import Resolver, RomError, search_paths, write_zip, verify
+from rom_sources import Resolver, RomError, search_paths, write_zip, verify, default_output, check_output, print_completion
 
 import zlib
 
@@ -167,9 +167,9 @@ def build_members(manifest, patches, source, compact=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("target", nargs="?")
+    parser.add_argument("target", nargs="?", help="source archive; a directory alone selects legacy IN-PLACE patching")
     parser.add_argument("--rompath", action="append", default=[])
-    parser.add_argument("--out-dir")
+    parser.add_argument("--out-dir", help="output folder (default: unused output-<set> folder)")
     parser.add_argument("-o", "--output")
     parser.add_argument("--hbmame", action="store_true")
     parser.add_argument("--platform", choices=("all", "mame", "hbmame", "mister", "darksoft"))
@@ -179,7 +179,11 @@ def main():
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--check-runtime", action="store_true")
     parser.add_argument("--self-test", action="store_true")
+    parser.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
+    from tool_controls import add_arguments, configure
+    add_arguments(parser)
     args = parser.parse_args()
+    configure(sys.argv[1:])
     if args.self_test:
         assert apply_ips(b"PATCH\x00\x00\x00\x00\x01ZEOF", b"ABC") == b"ZBC"
         print("IPS applier self-test passed")
@@ -194,8 +198,11 @@ def main():
     if args.hbmame and args.platform not in (None, "hbmame"):
         parser.error("--hbmame conflicts with --platform")
     platform = args.platform or ("hbmame" if args.hbmame else "all" if args.out_dir or args.check or args.check_runtime else "mame")
+    if not args.out_dir and not args.output and not (args.check or args.check_runtime) and not (args.target and os.path.isdir(args.target) and not args.rompath):
+        args.out_dir = str(default_output("output-" + base["set"]))
+        platform = args.platform or ("hbmame" if args.hbmame else "all")
     if platform in ("all", "mister", "darksoft") and not args.out_dir and not (args.check or args.check_runtime):
-        parser.error("this platform needs --out-dir")
+        parser.error("this platform needs --out-dir (omit --output to choose a safe default folder)")
     if args.target and os.path.isdir(args.target) and not args.out_dir and not args.rompath and not (args.check or args.check_runtime):
         if platform != "mame" or args.output:
             parser.error("use --rompath for directory discovery; positional directory mode patches in place")
@@ -211,8 +218,9 @@ def main():
     default_name = (bundles[0][0].get("hbmame", {}).get("setname", base["set"])
                     if platform == "hbmame" else base["set"] + "_patched") + ".zip"
     output = Path(args.out_dir or args.output or default_name).resolve()
-    if args.target and Path(args.target).resolve() == output:
-        parser.error("output must differ from input")
+    if not (args.check or args.check_runtime):
+        check_output(output, ([args.target] if args.target else []) + args.rompath, directory=bool(args.out_dir))
+    print("[1/3] Checking arcade inputs...")
     resolver = Resolver(search_paths(args.target, args.rompath, HERE),
                         hints=[base["set"], *base.get("parents", []), "qsound", "qsound_hle"],
                         exclude=[output], progress=print)
@@ -241,6 +249,7 @@ def main():
     if args.check or args.check_runtime:
         print("Build inputs verified")
         return
+    print("[2/3] Building and verifying selected outputs...")
     # Build and verify every selected result before publishing any file.
     outputs = {}
     for manifest, patches in bundles:
@@ -267,6 +276,7 @@ def main():
             outputs[manifest["mra"]] = (Path(HERE) / manifest["mra"]).read_bytes()
     if not outputs:
         raise RomError("No output is available for the selected platform")
+    print("[3/3] Writing verified outputs...")
     if args.out_dir:
         # A staging/backup transaction protects existing destinations on failure.
         from rom_sources import publish_tree
@@ -274,20 +284,17 @@ def main():
     else:
         write_zip(output, next(iter(outputs.values())))
     print(f"Built game files: {output}")
-    if any(m.get("darksoft") for m, _ in bundles) and platform in ("all", "darksoft"):
-        print("Darksoft: copy the game's folder from darksoft/games to your card's games folder.")
-        print("Original-key CPS-2 output only; expanded hardware and streamed audio are unsupported.")
-    if platform in ("all", "mame") and not devices and not base.get("mame_include_devices", True):
-        print("MAME needs your unmodified qsound.zip in its ROM path.")
-    if platform in ("all", "hbmame"):
-        print("HBMAME needs QSound in your ROM path; compact clones also need the stock game archives.")
-    if platform in ("all", "mister"):
-        print("MiSTer needs only the MRAs: they patch the stock archives already on the card, so no game zip is written for it.")
-        print("Copy the _Arcade folder from the output's mister folder to the root of your SD card.")
+    if args.out_dir:
+        print_completion(output, outputs)
+    else:
+        print(f"{'HBMAME' if platform == 'hbmame' else 'MAME'}: {output}; add it to your ROM path with the stock parent and QSound archives.")
+
 
 
 if __name__ == "__main__":
     try:
         main()
     except (RomError, OSError, ValueError) as exc:
+        if "--debug" in sys.argv:
+            raise
         raise SystemExit(f"ERROR: {exc}")

@@ -1,0 +1,30 @@
+
+PYTHON PACKAGES
+
+When a build needs NumPy or Pillow and it is not already installed, the kit
+downloads its pinned prebuilt package from PyPI into your user cache. No pip,
+compiler, administrator rights or changes to system Python are needed.
+Patch-only builds and --help do not download Python packages.
+
+Automatic package installation is qualified for CPython 3.12 on Apple Silicon
+Macs and CPython 3.13 x64 on Windows (including x64 Python on Windows ARM).
+Other interpreters can still use manually installed NumPy/Pillow. There is
+no automatic source compilation or selection of an unqualified package.
+
+Cache: ~/Library/Caches/ArcadePatches/python on Mac, or
+%LOCALAPPDATA%/ArcadePatches/python on Windows. You can choose another location
+with --python-cache PATH (or ARCADE_PYTHON_CACHE). --tools-cache PATH places
+the Python cache under PATH/python unless --python-cache is also supplied.
+You may delete this cache when no installer is running; it is recreated later.
+
+Offline: add --python-wheels PATH --offline. PATH may name the matching
+python-wheels-v1-*.zip, a folder of unzipped wheels, or a folder containing
+the wheel ZIPs. The existing wheel bundles work without modification.
+You can also supply --tools-bundle for the other helpers in the same command.
+ARCADE_PYTHON_WHEELS is the equivalent environment variable. A warm cache
+works offline without a bundle. --offline prohibits package downloads too.
+Every wheel is checked against the kit's hash; cached extracted files are
+verified before use. Existing manually installed packages remain supported.
+
+The installer and its Python subprocesses share the cache. Your shell profile,
+global site-packages and unrelated Python applications are not changed.

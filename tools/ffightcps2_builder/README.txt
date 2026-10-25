@@ -30,8 +30,8 @@ WHAT YOU NEED
        - Final Fight: ffight (World), ffightu (USA) and ffightj (Japan)
        - Street Fighter Alpha 3: sfa3u (USA), for the CPS-2 sound
 
-  3. Python 3.11 or newer with numpy and Pillow, and for the MiSTer music
-     packs ffmpeg on PATH. .7z romsets and discs also need 7-Zip (7zz, 7z,
+  3. Python 3.11 or newer with numpy and Pillow, with FFmpeg fetched on demand for the
+     MiSTer music packs. .7z romsets and discs also need 7-Zip (7zz, 7z,
      or 7-Zip's normal Windows install); a .chd disc needs MAME's chdman.
      No emulator, no assembler.
 
@@ -146,3 +146,10 @@ differ; required contents are verified by strong hashes. 7z needs installed
 7-Zip. Use --check to preflight arcade inputs without supplying the discs.
 --include-devices puts the QSound firmware into the sets. Source archives are
 never modified.
+
+MEDIA TOOLS
+
+FFmpeg/ffprobe are fetched as pinned verified binaries. No separate FFmpeg
+installation is needed. To work offline, add --tools-bundle
+cpsplus-tools-v2-offline.zip --offline. Use --tools-cache to choose the cache.
+NumPy and Pillow remain required.

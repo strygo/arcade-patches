@@ -45,6 +45,8 @@ import assemble
 import extract as ex
 from rom_sources import Resolver, RomError, QSOUND, search_paths, verify, publish_tree, write_zip
 
+from rom_sources import require_path, default_output, check_output, print_completion
+
 HERE = Path(__file__).resolve().parent
 PROFILES = {"jp": ex.JP, "us": ex.US, "eu": ex.EU, "asia": ex.ASIA}
 
@@ -126,7 +128,25 @@ def main():
     ap.add_argument("--out-dir", help="build every platform into this folder")
     ap.add_argument("--size", choices=("4mb", "8mb"), help="single-file mode: capacity")
     ap.add_argument("--out", help="single-file mode: output zip path")
+    ap.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
+    from tool_controls import add_arguments, configure
+    add_arguments(ap)
     args = ap.parse_args()
+    configure(sys.argv[1:])
+    if args.iso:
+        args.iso = require_path(args.iso, "--iso", file=True)
+    if not (args.check or args.check_runtime):
+        if not args.iso:
+            fail("--iso is required to reconstruct " + TITLE)
+        if bool(args.size) != bool(args.out):
+            fail("single-file mode needs both --size and --out")
+        if args.out_dir and args.out:
+            fail("choose --out-dir or --out, not both")
+        if not args.out_dir and not args.out:
+            args.out_dir = str(default_output("output-sfa2"))
+    if not args.check and not args.check_runtime:
+        check_output(args.out_dir or args.out, [p for p in [args.iso, args.romset, *args.rompath] if p], directory=bool(args.out_dir))
+
     if args.platform == 'darksoft' and (args.out or args.size == '4mb'):
         fail('Darksoft uses the best 8 MiB native-sample version and requires --out-dir')
     if not (args.check or args.check_runtime) and not args.out_dir and not (args.size and args.out):
@@ -213,6 +233,7 @@ def main():
             if args.platform == "all" or name.startswith(args.platform + "/"):
                 files[name] = path.read_bytes()
     publish_tree(Path(args.out_dir), files)
+    print_completion(args.out_dir, files)
     stage_context.cleanup()
     print(f'Built {args.region} {args.platform} outputs into {args.out_dir}')
     if args.platform in ('all', 'darksoft'):
@@ -242,5 +263,7 @@ def export_large(reconstruct, out, names, region):
 if __name__ == "__main__":
     try:
         main()
-    except RomError as exc:
+    except (OSError, ValueError, zipfile.BadZipFile) as exc:
+        if "--debug" in sys.argv:
+            raise
         fail(str(exc))

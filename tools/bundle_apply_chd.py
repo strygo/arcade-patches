@@ -23,6 +23,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from pathlib import Path
 
 
 def fail(msg: str) -> None:
@@ -66,9 +67,22 @@ def main():
     )
     ap.add_argument("chd", help="your dump of the game (gdl-0002.chd)")
     ap.add_argument("-o", "--output", help="output CHD path (default: <name>-patched.chd)")
-    ap.add_argument("--chdman", default="chdman", help="path to the chdman executable")
+    ap.add_argument("--chdman", help="path to chdman (default: installed or verified download)")
     ap.add_argument("--tmp", help="directory for ~2.5 GB of temporary files")
+    ap.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
+    from tool_controls import add_arguments, configure
+    add_arguments(ap)
     args = ap.parse_args()
+    configure(sys.argv[1:])
+    source = Path(args.chd).expanduser().resolve()
+    if not source.is_file():
+        hint = ("\nOn Windows, /inputs is at the drive root; use a full drive path or a relative path."
+                if os.name == "nt" and args.chd.startswith("/") else "")
+        fail(f"Input CHD not found: {args.chd}\nResolved path: {source}\nCurrent folder: {Path.cwd()}{hint}")
+    args.chd = str(source)
+    if args.tmp and not Path(args.tmp).expanduser().is_dir():
+        fail(f"--tmp must be an existing folder: {args.tmp}")
+
 
     here = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(here, "manifest.json"), encoding="utf-8") as f:
@@ -78,18 +92,28 @@ def main():
     print(f"{m['title']} ({m['version']})")
     print(f"Target: MAME set '{m['set']}' - {m['game']}\n")
 
-    if not shutil.which(args.chdman):
-        fail(
-            "chdman not found. It ships with MAME - install MAME or pass "
-            "--chdman /path/to/chdman"
-        )
-
     out_path = args.output
     if not out_path:
         base, ext = os.path.splitext(args.chd)
         out_path = base + "-patched" + (ext or ".chd")
+        index = 2
+        while os.path.lexists(out_path):
+            out_path = base + f"-patched-{index}" + (ext or ".chd")
+            index += 1
     if os.path.abspath(out_path) == os.path.abspath(args.chd):
         fail("output path must differ from input path")
+
+    if os.path.lexists(out_path):
+        fail(f"Output already exists: {out_path}. Choose a new --output path.")
+    Path(out_path).expanduser().resolve().parent.mkdir(parents=True, exist_ok=True)
+    out_path = str(Path(out_path).expanduser().resolve())
+
+    from fetch_optional_tools import disc_tool
+    if args.chdman:
+        if not shutil.which(args.chdman):
+            fail(f"chdman not found: {args.chdman}")
+    else:
+        args.chdman = disc_tool('chdman')
 
     # 1. Verify the input dump. The CHD SHA1 covers the decompressed data and
     #    metadata, so this check is independent of which chdman version made
@@ -145,8 +169,6 @@ def main():
 
         # 4. Rebuild the CHD.
         print("Rebuilding CHD (this takes a few minutes)...")
-        if os.path.exists(out_path):
-            os.remove(out_path)
         run_chdman(args.chdman, ["createcd", "-i", gdi, "-o", out_path])
 
         # 5. Verify the result.
@@ -169,4 +191,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (OSError, ValueError) as exc:
+        if "--debug" in sys.argv:
+            raise
+        fail(str(exc))

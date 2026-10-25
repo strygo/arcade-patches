@@ -29,7 +29,7 @@ collides):
     mister/games/hbmame/<set>.zip     MiSTer, laid out like the SD card, so
                                       you can copy mister/'s contents to the root
 
-Requires Python 3.10+, numpy, Pillow, and 7zz (or 7z) for the romset.
+Requires Python 3.10+, numpy and Pillow. Optional 7-Zip is fetched on demand.
 The first build runs the scene player over both bundles and takes several
 minutes; it prints each stage as it goes.
 """
@@ -46,6 +46,8 @@ import sys
 import zipfile
 import zlib
 from pathlib import Path
+
+from rom_sources import require_path, default_output, check_output, print_completion
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -255,12 +257,30 @@ def main() -> int:
     ap.add_argument("--rompath", type=Path, action="append", default=[])
     ap.add_argument("--check", action="store_true", help="verify arcade inputs without reconstructing discs")
     ap.add_argument("--platform", choices=("all", "hbmame", "mister"), default="all")
-    ap.add_argument("--out-dir", type=Path, default=Path("out"))
+    ap.add_argument("--out-dir", type=Path)
     ap.add_argument("--cache", action="store_true",
                     help="keep work/ after a successful build, to inspect the "
                          "renders and intermediates (a re-run rebuilds them "
                          "either way)")
+    ap.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
+    from tool_controls import add_arguments, configure
+    add_arguments(ap)
     a = ap.parse_args()
+    configure(sys.argv[1:])
+    if a.disc_us:
+        a.disc_us = require_path(a.disc_us, "--disc-us", file=True)
+    if a.disc_jp:
+        a.disc_jp = require_path(a.disc_jp, "--disc-jp", file=True)
+    if a.romset:
+        require_path(a.romset, "--romset")
+    for root in a.rompath:
+        require_path(root, "--rompath")
+    if not a.check and not (a.disc_us or a.disc_jp):
+        raise SystemExit("supply --disc-us and/or --disc-jp")
+    a.out_dir = a.out_dir or default_output("output-ffight-ex")
+    if not a.check:
+        check_output(a.out_dir, [p for p in [a.disc_us, a.disc_jp] if p] + ([a.romset] if a.romset else []) + a.rompath)
+
     if a.rompath:
         os.environ["CAPCOM_ARCADE_ROM_PATH"] = os.pathsep.join(map(str, a.rompath)) + (
             os.pathsep + os.environ["CAPCOM_ARCADE_ROM_PATH"] if os.environ.get("CAPCOM_ARCADE_ROM_PATH") else "")
@@ -404,9 +424,7 @@ def main() -> int:
     publish_tree(final_out, outputs)
     export_context.cleanup()
     a.out_dir = final_out
-    print(f"\nCopy the contents of {a.out_dir / 'mister'} to your MiSTer SD "
-          f"card root.\nHBMAME and MAME warn about checksums -- this is an "
-          f"unofficial build, and those warnings are expected.")
+    print_completion(final_out, outputs)
 
     # The sets are copied out by now, so work/ is spent: renders, convs and the
     # assembled sets, none of which the user needs.  paths.json goes with it --
@@ -428,5 +446,7 @@ def main() -> int:
 if __name__ == "__main__":
     try:
         raise SystemExit(main())
-    except RomError as exc:
+    except (OSError, ValueError) as exc:
+        if "--debug" in sys.argv:
+            raise
         raise SystemExit(str(exc))

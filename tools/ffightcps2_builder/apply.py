@@ -21,6 +21,8 @@ import xml.etree.ElementTree as ET
 import zlib
 from pathlib import Path
 
+from rom_sources import require_path, default_output, check_output, print_completion
+
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))         # the kit's own folder only: ffex_kit, packs and their modules
 from rom_sources import Resolver, RomError, QSOUND, search_paths, publish_tree  # noqa: E402
@@ -73,7 +75,25 @@ def main():
     ap.add_argument("--include-devices", action="store_true", help="put the QSound firmware into the sets")
     ap.add_argument("--check", action="store_true", help="verify the arcade inputs only")
     ap.add_argument("--out-dir", help="build into this folder")
+    ap.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
+    ap.add_argument('--tools-cache', type=Path, help='verified helper cache')
+    ap.add_argument('--tools-bundle', type=Path, help='offline tools ZIP or directory')
+    ap.add_argument('--offline', action='store_true', help='never download helpers')
     args = ap.parse_args()
+    if args.tools_cache or args.tools_bundle or args.offline:
+        sys.path.insert(0, str(HERE/'cpsplus/tools'))
+        kit_module('ffmpeg_runtime').configure(sys.argv[1:])
+    if args.disc_us:
+        args.disc_us = require_path(args.disc_us, "--disc-us", file=True)
+    if args.disc_jp:
+        args.disc_jp = require_path(args.disc_jp, "--disc-jp", file=True)
+    if not args.check and not (args.disc_us or args.disc_jp):
+        fail("give --disc-us and/or --disc-jp")
+    if not args.check and not args.out_dir:
+        args.out_dir = str(default_output("output-" + HERE.name))
+    if not args.check:
+        check_output(args.out_dir, [p for p in [args.disc_us, args.disc_jp] if p] + args.romset + args.rompath)
+
     if not args.check and not args.out_dir:
         fail("give --out-dir")
     catalog = json.loads((HERE / "rom_inputs.json").read_text())["sets"]
@@ -151,17 +171,13 @@ def main():
         if "mister" in platforms:
             files[f"mister/_Arcade/cores/{KIT['core']}"] = (HERE / "core" / KIT["core"]).read_bytes()
         publish_tree(out, files)
-    print(f"\nBuilt {', '.join(editions)} into {args.out_dir}/ — every member checksum-verified:")
-    if "hbmame" in platforms:
-        print("  hbmame/ -> the HBMAME sets, and definitions/ to compile into HBMAME")
-    if "mister" in platforms:
-        print(f"  mister/ -> copy to the SD card root (MRAs, games/hbmame/, games/CPS+/, _Arcade/cores/{KIT['core']})")
-    if "darksoft" in platforms:
-        print("  darksoft/games/ -> copy each game folder to the card's games folder")
+    print_completion(out, files)
 
 
 if __name__ == "__main__":
     try:
         main()
-    except ValueError as exc:         # RomError, and the Darksoft exporter's refusals
+    except (OSError, ValueError) as exc:
+        if "--debug" in sys.argv:
+            raise
         fail(str(exc))

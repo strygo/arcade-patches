@@ -143,7 +143,7 @@ class ApplyTests(unittest.TestCase):
                                 "--platform", "mister", "--out-dir", str(out))
         self.assertEqual(result.returncode, 0, result.stderr)
         root = out / "mister/_Arcade/_Arcade Patches/_Enhanced Versions"
-        self.assertEqual(sorted(str(p.relative_to(root)) for p in root.rglob("*.mra")),
+        self.assertEqual(sorted(p.relative_to(root).as_posix() for p in root.rglob("*.mra")),
                          ["Final Fight EX CPS2 (English Restoration).mra",
                           "_Japan/Final Fight EX CPS2 (Japan).mra", "_USA/Final Fight EX CPS2 (USA).mra"])
         text = (root / "_USA/Final Fight EX CPS2 (USA).mra").read_text()
@@ -206,6 +206,21 @@ class ApplyTests(unittest.TestCase):
         result = self.run_apply("--check")
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("sfa3u.bin", result.stderr)
+
+    def test_default_output_is_unique_and_matches_explicit_output(self):
+        self.write_mras(True)
+        explicit = self.kit.parent / "explicit"
+        args = ("--disc-us", str(self.discs[1]), "--platform", "hbmame")
+        result = self.run_apply(*args, "--out-dir", str(explicit))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        first = self.kit.parent / "output-kit"
+        for output in (first, self.kit.parent / "output-kit-2"):
+            result = self.run_apply(*args)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("HBMAME:", result.stdout)
+            self.assertNotIn("MiSTer:", result.stdout)
+            self.assertEqual((explicit / "hbmame/ffex2u.zip").read_bytes(),
+                             (output / "hbmame/ffex2u.zip").read_bytes())
 
 
 if __name__ == "__main__":

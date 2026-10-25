@@ -631,8 +631,15 @@ def build_rom_downloads(patch: dict) -> dict:
     with zipfile.ZipFile(ips_path, "w") as z:
         write(z, "readme.txt", make_readme(patch, members, "ips", variants).encode())
         write(z, "manifest.json", json.dumps(manifest, indent=2).encode())
-        write(z, "apply.py", (ROOT / "tools" / "bundle_apply.py").read_bytes())
+        import python_kit
+        python_files = {"apply.py": (ROOT / "tools" / "bundle_apply.py").read_bytes()}
+        python_kit.overlay(python_files, 'apply.py')
+        python_files['PYTHON-DEPENDENCIES.txt'] = (ROOT/'tools/PYTHON-DEPENDENCIES.txt').read_bytes()
+        for python_name, python_data in sorted(python_files.items()):
+            write(z, python_name, python_data)
         write(z, "rom_sources.py", (ROOT / "tools" / "rom_sources.py").read_bytes())
+        for name in ('fetch_switch_tools.py', 'fetch_optional_tools.py', 'tool_controls.py', 'optional_helpers.json'):
+            write(z, name, (ROOT/'tools'/name).read_bytes())
         for name in ('darksoft.py', 'darksoft_profiles.json', 'darksoft_kits.json'):
             write(z, name, (ROOT / 'tools' / name).read_bytes())
         if patch.get('hbmame_driver'):

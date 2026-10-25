@@ -22,6 +22,8 @@ import collection
 import music
 from rom_sources import Resolver, RomError, QSOUND, search_paths, publish_tree, write_zip
 
+from rom_sources import require_path, default_output, check_output, print_completion
+
 HERE = Path(__file__).resolve().parent
 KIT = json.loads((HERE / "kit.json").read_text())
 
@@ -41,7 +43,17 @@ def main():
     ap.add_argument("--include-devices", action="store_true")
     ap.add_argument("--check", action="store_true", help="verify the arcade inputs only")
     ap.add_argument("--out-dir", help="build into this folder")
+    ap.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
     args = ap.parse_args()
+    if args.iso:
+        args.iso = require_path(args.iso, "--iso", file=True)
+    if not args.check and not args.iso:
+        fail("--iso is required to build " + KIT["title"])
+    if not args.check and not args.out_dir:
+        args.out_dir = str(default_output("output-" + HERE.name))
+    if not args.check:
+        check_output(args.out_dir, [p for p in [args.iso] if p] + args.romset + args.rompath)
+
     if not args.check and not args.out_dir:
         fail("give --out-dir")
     catalog = json.loads((HERE / "rom_inputs.json").read_text())["sets"]
@@ -69,6 +81,7 @@ def main():
     if QSOUND["name"] in firmware:
         roms[base][QSOUND["name"]] = firmware[QSOUND["name"]]
     regions = list(KIT["regions"]) if args.region == "all" else [args.region]
+    Path(args.out_dir).resolve().parent.mkdir(parents=True, exist_ok=True)
     stage_context = tempfile.TemporaryDirectory(prefix=".arrange-", dir=Path(args.out_dir).resolve().parent)
     stage = Path(stage_context.name)
     for region in regions:
@@ -100,16 +113,15 @@ def main():
     shutil.copyfile(HERE / "core" / KIT["core"], cores / KIT["core"])
     files = {p.relative_to(stage).as_posix(): p.read_bytes() for p in stage.rglob("*") if p.is_file()}
     publish_tree(Path(args.out_dir), files)
+    print_completion(args.out_dir, files)
     stage_context.cleanup()
-    print(f"\nBuilt {', '.join(regions)} into {args.out_dir}/ — every member checksum-verified:")
-    for region in regions:
-        meta = KIT["regions"][region]
-        print(f"  hbmame/{meta['set']}.zip")
-    print(f"  mister/ -> copy to the SD card root (MRAs, games/hbmame/, _Arcade/cores/{KIT['core']})")
+
 
 
 if __name__ == "__main__":
     try:
         main()
-    except RomError as exc:
+    except (OSError, ValueError) as exc:
+        if "--debug" in sys.argv:
+            raise
         fail(str(exc))
