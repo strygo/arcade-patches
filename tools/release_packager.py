@@ -299,8 +299,8 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
                 lines += ["", f"HBMAME: this {noun} is an official HBMAME set ({hb_sets[0]}),",
                           "so full HBMAME collections may already carry it."]
         else:
-            lines += ["", f"HBMAME: the set definition ({', '.join(hb_sets)}) ships with the project;",
-                      "an upstream HBMAME submission is pending."]
+            lines += ["", f"HBMAME: use a build containing the {', '.join(hb_sets)} set definitions.",
+                      "Upstream HBMAME support is pending."]
         if patch.get('hbmame_driver'):
             lines += ["The matching driver declarations are included in " +
                       patch['hbmame_driver']['filename'] + "."]
@@ -408,7 +408,11 @@ def generate_mras(patch: dict, stock_path: Path, entries: list) -> list:
 
     texts = []
     for mra_cfg, patched_path, members in entries:
-        overlay_base = target_base = base_text
+        variant_base = resolve(mra_cfg['base']).read_text() if mra_cfg.get('base') else base_text
+        variant_md5 = mralib.declared_asm_md5(variant_base)
+        if variant_md5 and hashlib.md5(mralib.assemble(variant_base, stock_src)).hexdigest() != variant_md5:
+            raise ValueError('regional base MRA assembly differs')
+        overlay_base = target_base = variant_base
         added = [(m["name"], m["patched_crc32"], m["size"]) for m in members if m["action"] == "add"]
         if added:
             # Program ROMs the stock set lacks: the target layout names them;
@@ -417,8 +421,8 @@ def generate_mras(patch: dict, stock_path: Path, entries: list) -> list:
             after = patch["mra"].get("insert_after")
             if not after:
                 raise SystemExit(f"{patch['slug']}: added ROMs need mra.insert_after")
-            target_base = mralib.insert_program_parts(base_text, after, added, placeholder=False)
-            overlay_base = mralib.insert_program_parts(base_text, after, added, placeholder=True)
+            target_base = mralib.insert_program_parts(variant_base, after, added, placeholder=False)
+            overlay_base = mralib.insert_program_parts(variant_base, after, added, placeholder=True)
         patched_rom = mralib.assemble(target_base, mralib.ZipSource([patched_path, *auxiliary], check_crc=False))
         runs = mralib.diff_runs(mralib.assemble(overlay_base, stock_src), patched_rom)
         text = mralib.make_patch_mra(

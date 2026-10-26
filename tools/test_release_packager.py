@@ -9,6 +9,7 @@ import subprocess
 import tempfile
 import unittest
 import zipfile
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -16,6 +17,30 @@ import release_packager as packager
 
 
 class ReleasePackagerTests(unittest.TestCase):
+    def test_regional_mra_bases_keep_their_own_nvram_defaults(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            stock, target = root / 'stock.zip', root / 'target.zip'
+            for path, data in [(stock, b'stock'), (target, b'fixed')]:
+                with zipfile.ZipFile(path, 'w') as z:
+                    z.writestr('game.03', data)
+            bases = []
+            for seed in ['11', '22']:
+                p = root / (seed + '.mra')
+                p.write_text('<misterromdescription><name>Fixture</name><setname>demo</setname>'
+                             '<region>World</region><rom index="0" zip="stock.zip" asm_md5="">'
+                             '<part name="game.03" crc="' + packager.crc32(b'stock') + '"/>'
+                             '\n    </rom><rom index="2"><part>' + seed + '</part></rom></misterromdescription>')
+                bases.append(p)
+            patch = {'slug': 'demo', 'title': 'Demo', 'version': 'rc1', 'game': 'Demo', 'set': 'demo',
+                     'mra': {'base': str(bases[0])}}
+            entries = [({'base': str(p), 'name': p.stem, 'setname': 'demo' + p.stem,
+                         'filename': p.stem + '.mra'}, target, []) for p in bases]
+            result = packager.generate_mras(patch, stock, entries)
+            for (_, text, _), wanted in zip(result, ['11', '22']):
+                self.assertEqual(wanted, ET.fromstring(text).find("rom[@index='2']/part").text)
+                self.assertEqual(b'fixed', packager.mralib.assemble(text, packager.mralib.ZipSource([stock])))
+
     def test_full_stock_device_member_is_optional_and_hash_checked(self):
         firmware = b'fixture device firmware'
         game = {'game.03': b'stock', 'dl-1425.bin': firmware}

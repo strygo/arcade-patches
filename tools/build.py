@@ -912,8 +912,10 @@ You need:</p>"""]
 original CPS-2 limits and runs on real hardware and stock MAME. It carries all of Cammy's
 voices and sound effects, with some downsampled to fit. An <strong>8&nbsp;MB</strong> set
 carries the same audio at full quality, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>""")
-    heads = "".join(f"<th>{label}</th>" for label, _ in columns)
-    parts.append(f"""<h3>The builds</h3>
+    # Multi-build ROM downloads already render the complete release build list.
+    if not (bundle and bundle["kind"] == "rom" and bundle.get("variants")):
+        heads = "".join(f"<th>{label}</th>" for label, _ in columns)
+        parts.append(f"""<h3>The builds</h3>
 <table>
 <tr><th>Region</th><th>Title</th>{heads}</tr>
 {rows}
