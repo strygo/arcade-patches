@@ -5051,7 +5051,7 @@
       }
     },
     "ssf2t-gmc": {
-      "current": "rc3",
+      "current": "rc4",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -5432,6 +5432,65 @@
               "mra": "fc7afaa4eeccfa8d879b25724820e1d8a3b5128efbffeca0c489a4ae1310afef"
             },
             "revision": 2
+          }
+        },
+        "rc4": {
+          "current_revision": 1,
+          "date": "2026-10-25",
+          "files": {
+            "ips": {
+              "archive": "archive/3c91be4248fd0c060591d578273fa2a229784f2fc8642db80b439ba7c010ce5c/ssf2t-gmc-rc4-ips.zip",
+              "name": "ssf2t-gmc-rc4-ips.zip",
+              "sha256": "3c91be4248fd0c060591d578273fa2a229784f2fc8642db80b439ba7c010ce5c",
+              "size": 116245
+            },
+            "mra": {
+              "archive": "archive/c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9/ssf2t-gmc-rc4-mra.zip",
+              "name": "ssf2t-gmc-rc4-mra.zip",
+              "sha256": "c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9",
+              "size": 36422
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc4-candidate.4",
+            "capcom_source_commit": "f73f11b1b1c9dc4ba6dffc0a5f084b04a0101d85",
+            "ready_record_sha256": "893ac5c039305e83de0fbfe6e8611f87dc643f9b564700ca1978b6b14ae7a364",
+            "release_sha256": "ee9daabccb94cf5d82ded86b9cde2e832a2333d53ad0203ed902977a8cbb8427",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-25",
+              "files": {
+                "ips": {
+                  "archive": "archive/3c91be4248fd0c060591d578273fa2a229784f2fc8642db80b439ba7c010ce5c/ssf2t-gmc-rc4-ips.zip",
+                  "name": "ssf2t-gmc-rc4-ips.zip",
+                  "sha256": "3c91be4248fd0c060591d578273fa2a229784f2fc8642db80b439ba7c010ce5c",
+                  "size": 116245
+                },
+                "mra": {
+                  "archive": "archive/c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9/ssf2t-gmc-rc4-mra.zip",
+                  "name": "ssf2t-gmc-rc4-mra.zip",
+                  "sha256": "c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9",
+                  "size": 36422
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc4-candidate.4",
+                "capcom_source_commit": "f73f11b1b1c9dc4ba6dffc0a5f084b04a0101d85",
+                "ready_record_sha256": "893ac5c039305e83de0fbfe6e8611f87dc643f9b564700ca1978b6b14ae7a364",
+                "release_sha256": "ee9daabccb94cf5d82ded86b9cde2e832a2333d53ad0203ed902977a8cbb8427",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }

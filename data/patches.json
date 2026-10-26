@@ -2215,8 +2215,8 @@
       "subtitle": "English restoration",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc3",
-      "date": "2026-10-21",
+      "version": "rc4",
+      "date": "2026-10-25",
       "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
       "set": "ssf2xj",
       "hardware": "Capcom CPS-2",
@@ -2228,7 +2228,7 @@
       "description": [
         "Super Turbo came in two versions. Japan got Super Street Fighter II X, the one competitive players swear by. The rest of the world got a slightly different game: it plays differently, the continue screen is bare, most of the win quotes are gone, the endings are shorter, and Akuma's story is missing. Japan's version, of course, was in Japanese.",
         "Grand Master Challenge is Japan's game in English. The fighting is untouched. Everything you read is new: all 136 win quotes, the strategy tips on the continue screen, the full endings, and Akuma's dialogue, translated fresh from the Japanese with Capcom's own English as the style guide.",
-        "It runs anywhere Super Turbo does: MAME, HBMAME, MiSTer, or original CPS-2 hardware. The patch keeps the ROM's original sizes and key, so it drops in over the stock Japanese set."
+        "It runs in MAME and HBMAME and on MiSTer. The patch keeps the original ROM sizes and key and applies to the stock Japanese set."
       ],
       "changes": [
         "Japan's game, exactly as it plays in Japan",
@@ -2404,6 +2404,13 @@
         "Fan work, unaffiliated with Capcom. The patch contains no ROM data; you need your own dump of the Japanese set."
       ],
       "release_history": [
+        {
+          "version": "rc4",
+          "date": "2026-10-25",
+          "items": [
+            "Background details are corrected on Ryu's, E. Honda's, Blanka's, Guile's, Ken's, Chun-Li's, Zangief's, Boxer's and Cammy's stages."
+          ]
+        },
         {
           "version": "rc3",
           "date": "2026-10-21",

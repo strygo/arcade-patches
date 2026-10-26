@@ -40,8 +40,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Super Street Fighter II Turbo: Grand Master Challenge</h1>
 <p class="subtitle">English restoration</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>ssf2xj</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-10-21</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>ssf2xj</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-10-25</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/ssf2t-gmc/00_single.png?v=027b7f8858" alt="Super Turbo, Grand Master Challenge: Japan&#x27;s version of the game, under the US name."><figcaption>Super Turbo, Grand Master Challenge: Japan&#x27;s version of the game, under the US name.</figcaption></figure>
 <figure class="shot"><div class="pair"><div><p class="label">US Super Turbo</p><img src="../img/ssf2t-gmc/01_before.png?v=4833c0b7c5" alt="US Super Turbo: Where it comes from. The US version on the left, the Japanese version on the right."></div><div><p class="label">Japanese Super Turbo X</p><img src="../img/ssf2t-gmc/01_after.png?v=8ed6c71bdf" alt="Japanese Super Turbo X: Where it comes from. The US version on the left, the Japanese version on the right."></div></div><figcaption>Where it comes from. The US version on the left, the Japanese version on the right.</figcaption></figure>
@@ -53,7 +53,7 @@
 
 <p>Super Turbo came in two versions. Japan got Super Street Fighter II X, the one competitive players swear by. The rest of the world got a slightly different game: it plays differently, the continue screen is bare, most of the win quotes are gone, the endings are shorter, and Akuma&#x27;s story is missing. Japan&#x27;s version, of course, was in Japanese.</p>
 <p>Grand Master Challenge is Japan&#x27;s game in English. The fighting is untouched. Everything you read is new: all 136 win quotes, the strategy tips on the continue screen, the full endings, and Akuma&#x27;s dialogue, translated fresh from the Japanese with Capcom&#x27;s own English as the style guide.</p>
-<p>It runs anywhere Super Turbo does: MAME, HBMAME, MiSTer, or original CPS-2 hardware. The patch keeps the ROM&#x27;s original sizes and key, so it drops in over the stock Japanese set.</p>
+<p>It runs in MAME and HBMAME and on MiSTer. The patch keeps the original ROM sizes and key and applies to the stock Japanese set.</p>
 <h2>What's changed</h2><ul>
 <li>Japan&#x27;s game, exactly as it plays in Japan</li>
 <li>The Grand Master Challenge title, and a US region</li>
@@ -71,25 +71,25 @@
 something this one still doesn't, whether a line of text, a scene, a screen or a small detail,
 please <a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">let us know</a>. Anything you find goes into the next release.</p>
 <h2>Downloads</h2>
-<p>Tools updated 2026-10-25. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware</div>
-  <div class="file"><a href="../downloads/ssf2t-gmc-rc3-ips.zip?v=d6ae7b5acd">ssf2t-gmc-rc3-ips.zip</a>
-  (106 KB)</div>
-  <div class="hash">SHA-256: d6ae7b5acd0689f1fe3e70c8e0a2978decacd989abbc8100b0d7a023f1153e18</div>
+  <div class="file"><a href="../downloads/ssf2t-gmc-rc4-ips.zip?v=3c91be4248">ssf2t-gmc-rc4-ips.zip</a>
+  (114 KB)</div>
+  <div class="hash">SHA-256: 3c91be4248fd0c060591d578273fa2a229784f2fc8642db80b439ba7c010ce5c</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRA only</div>
-  <div class="file"><a href="../downloads/ssf2t-gmc-rc3-mra.zip?v=fc7afaa4ee">ssf2t-gmc-rc3-mra.zip</a>
-  (30 KB)</div>
-  <div class="hash">SHA-256: fc7afaa4eeccfa8d879b25724820e1d8a3b5128efbffeca0c489a4ae1310afef</div>
+  <div class="file"><a href="../downloads/ssf2t-gmc-rc4-mra.zip?v=c6447c1abb">ssf2t-gmc-rc4-mra.zip</a>
+  (36 KB)</div>
+  <div class="hash">SHA-256: c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9</div>
 </div>
 <p>You need your own dump of <strong>Super Street Fighter II X: Grand Master Challenge (Japan 940311)</strong> as the MAME
 set <code>ssf2xj.zip</code>.
 Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
 <h2>How to apply</h2>
-<pre><code>unzip ssf2t-gmc-rc3-ips.zip -d ssf2xj-patch
+<pre><code>unzip ssf2t-gmc-rc4-ips.zip -d ssf2xj-patch
 cd ssf2xj-patch
 python3 apply.py /path/to/ssf2xj.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -120,24 +120,27 @@ so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</c
 <h3>Changed ROMs</h3>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
-<tr><td class="mono">sfx.09</td><td>512 KB</td><td class="mono">642fae3f</td><td class="mono">95718f1e</td></tr>
+<tr><td class="mono">sfx.09</td><td>512 KB</td><td class="mono">642fae3f</td><td class="mono">9a6ae34e</td></tr>
 <tr><td class="mono">sfx.13m</td><td>2.0 MB</td><td class="mono">cf94d275</td><td class="mono">75dac0eb</td></tr>
-<tr><td class="mono">sfx.14m</td><td>1.0 MB</td><td class="mono">b7cc32e7</td><td class="mono">1f8dd3ca</td></tr>
+<tr><td class="mono">sfx.14m</td><td>1.0 MB</td><td class="mono">b7cc32e7</td><td class="mono">a821a895</td></tr>
 <tr><td class="mono">sfx.15m</td><td>2.0 MB</td><td class="mono">5eb703af</td><td class="mono">84dcc039</td></tr>
-<tr><td class="mono">sfx.16m</td><td>1.0 MB</td><td class="mono">8376ad18</td><td class="mono">8033c95d</td></tr>
+<tr><td class="mono">sfx.16m</td><td>1.0 MB</td><td class="mono">8376ad18</td><td class="mono">f4dd5566</td></tr>
 <tr><td class="mono">sfx.17m</td><td>2.0 MB</td><td class="mono">ffa60e0f</td><td class="mono">bfcaf206</td></tr>
-<tr><td class="mono">sfx.18m</td><td>1.0 MB</td><td class="mono">f5b1b336</td><td class="mono">dd6cdee2</td></tr>
+<tr><td class="mono">sfx.18m</td><td>1.0 MB</td><td class="mono">f5b1b336</td><td class="mono">6ac0a5bd</td></tr>
 <tr><td class="mono">sfx.19m</td><td>2.0 MB</td><td class="mono">34e825c5</td><td class="mono">13a55fd3</td></tr>
-<tr><td class="mono">sfx.20m</td><td>1.0 MB</td><td class="mono">459d5c6b</td><td class="mono">4dacc976</td></tr>
-<tr><td class="mono">sfx.21m</td><td>1.0 MB</td><td class="mono">e32854af</td><td class="mono">34f361da</td></tr>
-<tr><td class="mono">sfx.23m</td><td>1.0 MB</td><td class="mono">760f2927</td><td class="mono">279f2671</td></tr>
-<tr><td class="mono">sfx.25m</td><td>1.0 MB</td><td class="mono">1ee90208</td><td class="mono">1fbd5b9e</td></tr>
-<tr><td class="mono">sfx.27m</td><td>1.0 MB</td><td class="mono">f814400f</td><td class="mono">11725784</td></tr>
-<tr><td class="mono">sfxj.03d</td><td>512 KB</td><td class="mono">50b52b37</td><td class="mono">ee8e9e9b</td></tr>
+<tr><td class="mono">sfx.20m</td><td>1.0 MB</td><td class="mono">459d5c6b</td><td class="mono">3942554d</td></tr>
+<tr><td class="mono">sfx.21m</td><td>1.0 MB</td><td class="mono">e32854af</td><td class="mono">c507ee10</td></tr>
+<tr><td class="mono">sfx.23m</td><td>1.0 MB</td><td class="mono">760f2927</td><td class="mono">d0bd63db</td></tr>
+<tr><td class="mono">sfx.25m</td><td>1.0 MB</td><td class="mono">1ee90208</td><td class="mono">2a8193c4</td></tr>
+<tr><td class="mono">sfx.27m</td><td>1.0 MB</td><td class="mono">f814400f</td><td class="mono">3c6e0a1a</td></tr>
+<tr><td class="mono">sfxj.03d</td><td>512 KB</td><td class="mono">50b52b37</td><td class="mono">cfc87616</td></tr>
 <tr><td class="mono">sfxj.04a</td><td>512 KB</td><td class="mono">af7767b4</td><td class="mono">c9df66cd</td></tr>
-<tr><td class="mono">sfxj.08</td><td>512 KB</td><td class="mono">2de76f10</td><td class="mono">ea0d1d90</td></tr>
+<tr><td class="mono">sfxj.08</td><td>512 KB</td><td class="mono">2de76f10</td><td class="mono">f7587a54</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc4 (2026-10-25)</h3><ul>
+<li>Background details are corrected on Ryu&#x27;s, E. Honda&#x27;s, Blanka&#x27;s, Guile&#x27;s, Ken&#x27;s, Chun-Li&#x27;s, Zangief&#x27;s, Boxer&#x27;s and Cammy&#x27;s stages.</li>
+</ul>
 <h3>rc3 (2026-10-21)</h3><ul>
 <li>Stage edges are filled in on Vega&#x27;s, Dee Jay&#x27;s and Cammy&#x27;s stages, and Fei Long&#x27;s background stays covered during airborne hits.</li>
 <li>Zangief&#x27;s large portraits keep consistent skin and beard colors.</li>
