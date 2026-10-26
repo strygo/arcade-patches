@@ -40,8 +40,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Ultra Street Fighter II</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-10-23</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc5</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc5</dd><dt>Updated</dt><dd>2026-10-28</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/usf2-backport/title_us.png?v=b9dadeae9b" alt="Ultra Street Fighter II (USA) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>USA · <code>usf2t8</code></figcaption></figure><figure class="build"><img src="../img/usf2-backport/title_jp.png?v=c0da914e2c" alt="Ultra Street Fighter II (Japan) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>Japan · <code>usf2j8</code></figcaption></figure></div>
 <h2>About</h2>
@@ -49,7 +49,7 @@
 <p>Ultra Street Fighter II: The Final Challengers is the 2017 Nintendo Switch edition of Super Street Fighter II Turbo, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.</p>
 <p>Akuma has his own select cell, and Evil Ryu and Violent Ken join the original sixteen fighters with their Ultra moves, colors and endings. Shin Akuma stays hidden, for twenty fighters in all.</p>
 <p>Ultra&#x27;s presentation comes with them: the Ultra title and intro, &quot;The Final Challengers&quot; lettering, a color select for the new fighters, and a choice of sixteen stages or Random once you have picked a fighter.</p>
-<p>The Switch edition&#x27;s sound effects play in every build, and on MiSTer its arranged music plays too. Choose MODERN or CLASSIC sound effects in ULTRA CONFIGURATION; on MiSTer you can choose the music there too.</p>
+<p>The Switch edition&#x27;s sound effects play in every build, and on MiSTer its arranged music plays too. Choose MODERN or CLASSIC sound effects in ULTRA CONFIGURATION; on MiSTer you can choose the music there too. MODERN controls are the default; choose CLASSIC in ULTRA CONFIGURATION to retain the earlier command inputs.</p>
 <p>The USA build is in English; the Japan build keeps the Japanese.</p>
 <p>This is a release candidate.</p>
 <h2>What's included</h2><ul>
@@ -58,12 +58,13 @@
 <li>Sixteen stages and Random to choose from after you pick a fighter</li>
 <li>The Ultra title and intro, and ULTRA on the VS, Continue and Game Over screens</li>
 <li>The Switch edition&#x27;s sound effects, and its arranged music on MiSTer; MODERN or CLASSIC options</li>
+<li>MODERN command inputs with more forgiving motions, or CLASSIC inputs, selected in ULTRA CONFIGURATION</li>
 <li>USA (English) and Japan builds</li>
 </ul>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/usf2-backport/00_single.png?v=9d9f4c37f8" alt="Evil Ryu in the intro."><figcaption>Evil Ryu in the intro.</figcaption></figure>
 <figure class="shot single"><img src="../img/usf2-backport/01_single.png?v=7ed2275b4f" alt="Evil Ryu on the select screen."><figcaption>Evil Ryu on the select screen.</figcaption></figure>
-<figure class="shot single"><img src="../img/usf2-backport/02_single.png?v=3b8f2471e0" alt="Evil Ryu&#x27;s ending."><figcaption>Evil Ryu&#x27;s ending.</figcaption></figure>
+<figure class="shot single"><img src="../img/usf2-backport/02_single.png?v=ac2b9bda2f" alt="Evil Ryu&#x27;s ending."><figcaption>Evil Ryu&#x27;s ending.</figcaption></figure>
 <h2>How it's distributed</h2>
 <p>Each build is put together on your own machine from files you already own.
 You need:</p>
@@ -75,24 +76,44 @@ You need:</p>
 <tr><td>USA</td><td>Ultra Street Fighter II</td><td class="mono">hsf2</td><td class="mono">usf2t8</td></tr><tr><td>Japan</td><td>Ultra Street Fighter II</td><td class="mono">hsf2j</td><td class="mono">usf2j8</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-10-25. Game version unchanged.</p>
+
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/usf2-backport-rc4-kit.zip?v=5571a67f0a">usf2-backport-rc4-kit.zip</a>
-  (19.3 MB)</div>
-  <div class="hash">SHA-256: 5571a67f0ae16cf40949afeedef2de34c6f23128af09213ceca7a4628bfde7c3</div>
+  <div class="file"><a href="../downloads/usf2-backport-rc5-kit.zip?v=208587597d">usf2-backport-rc5-kit.zip</a>
+  (20.6 MB)</div>
+  <div class="hash">SHA-256: 208587597d9d65374d57d413822e924819ed929089707dc61b9faeb18ee67343</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
 <ul><li>your own Nintendo Switch base game files: a USA NSP or XCI for the USA set, or a Japanese NSP for the Japan set</li><li>your own Switch prod.keys</li><li>your own arcade romset ssf2xj (with its parent ssf2t if yours is a split set) and the QSound firmware (qsound)</li><li>Python 3.10 or newer; extraction and audio tools download automatically</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip usf2-backport-rc4-kit.zip -d usf2-backport
+<pre><code>unzip usf2-backport-rc5-kit.zip -d usf2-backport
 cd usf2-backport
 python3 apply.py --rompath roms --source-us usa.nsp --keys prod.keys --platform mame</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc5 (2026-10-28)</h3><ul>
+<li>Improved: A new 30th-anniversary logo in the intro.</li>
+<li>Fix: Sky details stay stable during Evil Ryu and Violent Ken’s intro fight.</li>
+<li>Fix: Throw breaks now use the correct poses, recovery, invincibility and separation for both players.</li>
+<li>Fix: Player 2 can start a solo game correctly.</li>
+<li>New: MODERN controls add the Switch command shortcuts and input windows across the roster. CLASSIC preserves the previous command behavior; MODERN is the default.</li>
+<li>Fix: Violent Ken’s fireballs use their purple colors.</li>
+<li>Fix: Corrected background details in Honda, Guile, Blanka, Chun-Li, Zangief, Ryu, Ken, Cammy and Boxer stages.</li>
+<li>Fix: Cammy’s aurora stays aligned during throw screen shake.</li>
+<li>Fix: Honda’s HUD mouth keeps its red color across costumes.</li>
+<li>Fix: Corrected Blanka, Dee Jay, Dictator and Akuma portrait colors, with character-select icons matching their large portraits.</li>
+<li>Fix: Color 2 now appears correctly in large portraits on character select, VS, defeat and Continue screens across the roster.</li>
+<li>Fix: Corrected a video-memory conflict during the service-menu Memory Test.</li>
+<li>Improved: The VS screen hides the speed caption, matching the Switch presentation.</li>
+<li>Fix: Dhalsim&#x27;s Modern Yoga Fire and defeat voices play the correct phrases.</li>
+<li>Improved: The hidden Shin Akuma button chord accepts overlapping presses across the six attack buttons.</li>
+<li>Fix: Demon finishes keep the fighters grounded and restore the background and effects correctly.</li>
+<li>Fix: Player-select cursors stay visible over the selection heading.</li>
+<li>Improved: Ending illustrations keep their pixel-art detail and corrected proportions on a 4:3 display.</li>
+</ul>
 <h3>rc4 (2026-10-23)</h3><ul>
 <li>Fix: Boxer and Dee Jay now select the correct fighter from their character-select icons.</li>
 <li>Fix: Corrected move inputs and animations, including Evil Ryu’s reverse teleport, Violent Ken’s forward kick, Sagat’s Tiger Knee and Dhalsim’s fire specials.</li>

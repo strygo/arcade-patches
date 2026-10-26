@@ -5837,7 +5837,7 @@
       }
     },
     "usf2-backport": {
-      "current": "rc4",
+      "current": "rc5",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -6134,6 +6134,53 @@
               "kit": "5fb139734e61d8641b1f576a858b58e99a10361b2f09fd0e44171e0b0214ef8a"
             },
             "revision": 2
+          }
+        },
+        "rc5": {
+          "current_revision": 1,
+          "date": "2026-10-28",
+          "files": {
+            "kit": {
+              "archive": "archive/208587597d9d65374d57d413822e924819ed929089707dc61b9faeb18ee67343/usf2-backport-rc5-kit.zip",
+              "name": "usf2-backport-rc5-kit.zip",
+              "sha256": "208587597d9d65374d57d413822e924819ed929089707dc61b9faeb18ee67343",
+              "size": 21565304
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc5-candidate.17",
+            "capcom_source_commit": "51674815b42e9f8470313622815324597499e860",
+            "ready_record_sha256": "2d4b1088e1bc743d69114f3ab1d425ca23f447742a7242117eaddf8ce63f2eb4",
+            "release_sha256": "772fca6f7b7fbe890c9681c3d9646486a25638c733780da75daff87cc44a4950",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-28",
+              "files": {
+                "kit": {
+                  "archive": "archive/208587597d9d65374d57d413822e924819ed929089707dc61b9faeb18ee67343/usf2-backport-rc5-kit.zip",
+                  "name": "usf2-backport-rc5-kit.zip",
+                  "sha256": "208587597d9d65374d57d413822e924819ed929089707dc61b9faeb18ee67343",
+                  "size": 21565304
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc5-candidate.17",
+                "capcom_source_commit": "51674815b42e9f8470313622815324597499e860",
+                "ready_record_sha256": "2d4b1088e1bc743d69114f3ab1d425ca23f447742a7242117eaddf8ce63f2eb4",
+                "release_sha256": "772fca6f7b7fbe890c9681c3d9646486a25638c733780da75daff87cc44a4950",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }
