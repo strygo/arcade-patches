@@ -664,7 +664,7 @@
       }
     },
     "final-fight-ex": {
-      "current": "rc3",
+      "current": "rc4",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -908,6 +908,53 @@
               "kit": "c78024a4a3c619d2781d50d6ed4a3d80424434299f0cba45a059ff0afab4856a"
             },
             "revision": 1
+          }
+        },
+        "rc4": {
+          "current_revision": 1,
+          "date": "2026-10-24",
+          "files": {
+            "kit": {
+              "archive": "archive/313711d86ccb5b8f30448a41d3ddab8237c9bd6c7410a90b28e42edcafb8f85b/final-fight-ex-rc4-kit.zip",
+              "name": "final-fight-ex-rc4-kit.zip",
+              "sha256": "313711d86ccb5b8f30448a41d3ddab8237c9bd6c7410a90b28e42edcafb8f85b",
+              "size": 1882159
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc4-candidate.2",
+            "capcom_source_commit": "5f74f0efe7c0a92ccf3f8df30546bd2a76599564",
+            "ready_record_sha256": "0c6e9a36d0b715f8e1ef3ac592b8263d725b5e92e501377fc9c180bdf0a29569",
+            "release_sha256": "fb5570f417b826f78d7fcdb294c3434828091006fa0d65b5c57fda4e059244cf",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-10-24",
+              "files": {
+                "kit": {
+                  "archive": "archive/313711d86ccb5b8f30448a41d3ddab8237c9bd6c7410a90b28e42edcafb8f85b/final-fight-ex-rc4-kit.zip",
+                  "name": "final-fight-ex-rc4-kit.zip",
+                  "sha256": "313711d86ccb5b8f30448a41d3ddab8237c9bd6c7410a90b28e42edcafb8f85b",
+                  "size": 1882159
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc4-candidate.2",
+                "capcom_source_commit": "5f74f0efe7c0a92ccf3f8df30546bd2a76599564",
+                "ready_record_sha256": "0c6e9a36d0b715f8e1ef3ac592b8263d725b5e92e501377fc9c180bdf0a29569",
+                "release_sha256": "fb5570f417b826f78d7fcdb294c3434828091006fa0d65b5c57fda4e059244cf",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }

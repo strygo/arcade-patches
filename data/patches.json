@@ -2095,26 +2095,26 @@
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc3",
-      "date": "2026-10-10",
+      "version": "rc4",
+      "date": "2026-10-24",
       "game": "Final Fight (arcade, Capcom CPS-1)",
       "set": "\u2014",
       "hardware": "Capcom CPS-1",
-      "summary": "The Sega CD version of Final Fight opened with a proper animated cutscene. Final Fight EX puts it back on the arcade game, running as native CPS-1 graphics, with a new EX title, for HBMAME and MiSTer.",
+      "summary": "Final Fight EX brings the Sega CD opening and extended ending to the arcade game, with an EX title and a hidden stage select. On MiSTer, choose arcade audio or the Sega CD soundtrack and regional voices.",
       "description": [
-        "The 1993 Sega CD port replaced the arcade's brief story block with a fully animated opening and a soundtrack with spoken dialogue. Final Fight EX reproduces that cutscene as native CPS-1 presentation on the arcade Final Fight, driven by a new 68K cutscene engine added to the game's program ROM, and gives it a new EX title screen. A hidden code on the title screen opens a stage select. The stock game, its timing, and its gameplay are left intact.",
-        "The cutscene art needs far more room than the original Final Fight hardware has, so the graphics region is grown from 2 MB to 6 MB. Original CPS-1 hardware and stock MAME cannot address that extra ROM, so this runs only on HBMAME and on MiSTer's jtcps1 core.",
-        "There are two regional builds, USA (ffightus01) and Japan (ffightjs01), each matched to its own disc. You supply the arcade Final Fight romset and your own Final Fight CD, and the build is put together on your machine.",
-        "This is the visual half. The cutscenes play over the arcade game's own music and effects. The Sega CD's soundtrack and spoken dialogue are a separate release, the CPS+ arrange packs, which ship their own MiSTer MRA combining the two. Install this on its own and you get the cutscenes with arcade audio."
+        "The 1993 Sega CD port gave Final Fight an animated opening and an extended ending. Final Fight EX brings those scenes to the arcade game as native CPS-1 graphics, with an EX title and a hidden stage select. The original combat and timing stay intact.",
+        "There are two regional builds, USA (ffightus01) and Japan (ffightjs01), each matched to its own disc's dialogue and artwork. It runs in HBMAME and on MiSTer; stock MAME is not supported.",
+        "On MiSTer, choose the arcade game's music and effects or the CPS+ Arrange version with the Sega CD soundtrack and regional spoken dialogue. Both options are included in this kit.",
+        "Supply your arcade Final Fight ROMs and the matching Final Fight CD disc for each region you build. This is a release candidate."
       ],
       "changes": [
-        "The Sega CD opening cutscene rebuilt as native CPS-1 graphics: the Metro City map, the Mad Gear line-up, Damnd's sketch and the knife, Haggar's phone call, and the Cody & Guy montage",
-        "The ending's reunion scene between Haggar and Jessica, redrawn from the Sega CD",
-        "A new Final Fight EX title screen",
-        "A hidden stage select: hold attack and jump and press Start on the title screen",
-        "A new 68K cutscene engine, leaving the stock story, timing, and gameplay unchanged",
-        "USA (ffightus01) and Japan (ffightjs01) builds, each matched to its region's disc dialogue and artwork",
-        "Delivered as an HBMAME set and a MiSTer jtcps1 MRA that sit alongside the stock game"
+        "The Sega CD opening, including the Metro City map, Mad Gear line-up, Haggar's phone call, and the Cody and Guy montage",
+        "The extended ending, including Haggar and Jessica's reunion and Cody's farewell",
+        "A Final Fight EX title screen",
+        "A hidden stage select: hold attack and jump and press Start on the title screen to choose a round or the ending",
+        "USA (ffightus01) and Japan (ffightjs01) builds, each with its regional dialogue and artwork",
+        "Arcade audio or the Sega CD soundtrack and regional voices through CPS+ on MiSTer",
+        "Corrections to English spelling and the Japanese ending artwork"
       ],
       "screenshots": [
         {
@@ -2143,20 +2143,21 @@
         }
       ],
       "notes": [
-        "Because it grows the graphics ROM, this runs only on HBMAME and MiSTer (jtcps1), not stock MAME or original CPS-1 hardware.",
+        "Runs in HBMAME and on MiSTer with jtcps1 or the included CPS+ core. Stock MAME is not supported.",
         "The cutscene art and audio derive from Capcom's Final Fight CD. This is an unofficial fan project, unaffiliated with Capcom or Sega."
       ],
       "related": [
         {
           "label": "CPS+",
           "url": "../cps-plus/",
-          "note": "the \u2018Final Fight EX (Arrange)\u2019 MRA in the CPS+ kit pairs this set with the Sega CD arranged soundtrack on MiSTer"
+          "note": "CPS+ provides the arranged soundtrack and voices; this kit builds the same Final Fight EX Arrange launchers and packs"
         }
       ],
       "reconstruction": {
         "requires": [
-          "your own Final Fight CD disc image for each region you build: the USA disc for ffightus01, the Japan disc for ffightjs01",
-          "your own arcade Final Fight romset: ffight, ffightu and ffightj (MAME 0.260-era, .zip or .7z)"
+          "your own complete Final Fight CD disc rip for each region you build, including its cue and audio tracks: USA for ffightus01, Japan for ffightjs01",
+          "your own canonical arcade Final Fight ROMs: ffight, ffightu and ffightj (MAME 0.260-era, ZIP or 7z)",
+          "Python 3.10 or later with NumPy and Pillow; media helpers are downloaded automatically for CPS+ audio"
         ],
         "kit_dir": "tools/ffightcd_builder",
         "kit_include": [
@@ -2173,14 +2174,35 @@
           "assets/native_ex/*",
           "assets/arcade_ex_alternative/*",
           "control/*.key",
-          "mras/*.mra"
+          "mras/*.mra",
+          "cpsplus_audio.py",
+          "outputs.json",
+          "kit.json",
+          "TOOLS.md",
+          "sound/**/*.py",
+          "sound/manifests/*",
+          "sound/tools/ffmpeg_helpers.json",
+          "core/*"
         ],
-        "kit_command": "python3 apply.py --disc-jp \"Final Fight CD (JP).img\" \\\n                 --disc-us \"Final Fight CD (USA) (Track 01).bin\" \\\n                 --romset /path/to/roms --out-dir out"
+        "kit_command": "python3 apply.py --disc-jp \"Final Fight CD (JP).cue\" \\\n                 --disc-us \"Final Fight CD (USA).cue\" \\\n                 --romset /path/to/roms --out-dir out"
       },
       "redirect_from": [
         "final-fight-cd"
       ],
       "release_history": [
+        {
+          "version": "rc4",
+          "date": "2026-10-24",
+          "items": [
+            "Fixed the colors on Cody's back during the Japanese ending.",
+            "Restored the original CODY ! spacing in the ending.",
+            "Corrected spelling and word spacing in the English introduction and the GRENADE item name.",
+            "Cleaned up the stage select's title-screen prompt, added an ending shortcut, and stopped it reopening during attract play.",
+            "The native ending music now starts with the USA reunion and lasts longer for the Japanese CD ending.",
+            "Removed a brief artwork flash after the farewell.",
+            "The kit now builds the CPS+ Sega CD soundtrack and regional voices alongside the game, with automatic media-tool setup."
+          ]
+        },
         {
           "version": "rc3",
           "date": "2026-10-10",
