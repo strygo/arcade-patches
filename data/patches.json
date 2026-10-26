@@ -5154,13 +5154,13 @@
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-10-23",
+      "version": "rc2",
+      "date": "2026-10-25",
       "game": "Final Fight (arcade, Capcom CPS-1)",
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "en",
       "requirements": {
-        "text": "On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. HBMAME needs the set definitions the kit writes compiled in.",
+        "text": "On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. Stock MAME uses the separate sfa3ud.zip written for each edition. HBMAME needs the set definitions the kit writes compiled in.",
         "link": {
           "label": "About CPS-2+ hardware",
           "url": "../cps2-plus/"
@@ -5239,7 +5239,7 @@
         ],
         "kit_dir": "tools/ffightcps2_builder",
         "kit_command": "python3 apply.py --disc-jp \"Final Fight CD (JP).cue\" \\\n                 --disc-us \"Final Fight CD (USA).cue\" \\\n                 --romset /path/to/roms --out-dir out",
-        "how": "A small tool reads the cutscenes and soundtrack from your Final Fight CD discs, combines them with your arcade romsets, and writes out the finished HBMAME sets, the MiSTer files and the music packs. Give it either disc on its own to build just that disc's builds.",
+        "how": "A small tool reads the cutscenes and soundtrack from your Final Fight CD discs, combines them with your arcade romsets, and writes out the finished MAME and HBMAME sets, the MiSTer files and the music packs. Give it either disc on its own to build just that disc's builds.",
         "columns": [
           [
             "HBMAME / MiSTer",
@@ -5270,6 +5270,17 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-10-25",
+          "items": [
+            "The service switch opens the test menu directly, including brief button presses.",
+            "Operator settings saved in FBNeo survive restarting the game and emulator.",
+            "Stage select stays closed during attract play after watching the ending.",
+            "Separate stock MAME outputs for all three editions.",
+            "The kit fetches verified media and disc tools when needed."
+          ]
+        },
         {
           "version": "rc1",
           "date": "2026-10-23",

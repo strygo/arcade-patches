@@ -3,7 +3,7 @@
 
 Version:      (stamped at release)
 Hardware:     Capcom CPS-2 (on MiSTer, with the CPS+ extensions)
-Target:       MiSTer (CPS+ core, included), HBMAME and Darksoft —
+Target:       MiSTer (CPS+ core, included), stock MAME, HBMAME and Darksoft —
               English restoration, USA and Japan
 Backport by:  Steve Gordon (https://x.com/strygo)
 Website:      https://arcadepatches.com/{SLUG}/
@@ -30,10 +30,10 @@ WHAT YOU NEED
        - Final Fight: ffight (World), ffightu (USA) and ffightj (Japan)
        - Street Fighter Alpha 3: sfa3u (USA), for the CPS-2 sound
 
-  3. Python 3.11 or newer with numpy and Pillow, with FFmpeg fetched on demand for the
-     MiSTer music packs. .7z romsets and discs also need 7-Zip (7zz, 7z,
-     or 7-Zip's normal Windows install); a .chd disc needs MAME's chdman.
-     No emulator, no assembler.
+  3. Python 3.11 or newer with numpy and Pillow. FFmpeg for the MiSTer
+     music packs, 7-Zip for .7z archives and chdman for .chd discs are
+     fetched as verified packages when needed. Installed 7-Zip and chdman
+     can also be used. No emulator or assembler is needed.
 
 
 USAGE
@@ -48,12 +48,13 @@ in Command Prompt or ` in PowerShell instead of \.)
 
 This builds every set your discs allow and writes:
 
+    out/mame/<edition>/sfa3ud.zip for stock MAME (english, usa, japan)
     out/hbmame/<set>.zip         for HBMAME
     out/hbmame/definitions/      the sets' HBMAME definitions
     out/mister/                  laid out like the MiSTer SD card
     out/darksoft/games/          one game folder per build, for Darksoft
 
-Add --platform mister, hbmame or darksoft to build for one target only. The
+Add --platform mister, mame, hbmame or darksoft to build for one target only. The
 kit verifies every finished file automatically. It stops with an error if a
 disc or a romset does not match.
 
@@ -91,6 +92,29 @@ cutscenes: the USA build with the US disc's voices, the Japan build with the
 Japanese disc's, and the English restoration with a new English voice track.
 The music packs are built from your discs. MUSIC on the test menu's EX page
 switches back to the arcade music.
+
+
+ON STOCK MAME
+-------------
+
+Build with --platform mame to produce only the stock MAME sets. No custom
+MAME build or driver definitions are needed. Each edition is named
+sfa3ud.zip and lives in its own folder; keep the folders separate and use
+the ROM path for the edition you want:
+
+    mame sfa3ud -rompath out/mame/english -window -nomaximize -nvram_directory out/mame/english/nvram -cfg_directory out/mame/english/cfg
+    mame sfa3ud -rompath out/mame/usa -window -nomaximize -nvram_directory out/mame/usa/nvram -cfg_directory out/mame/usa/cfg
+    mame sfa3ud -rompath out/mame/japan -window -nomaximize -nvram_directory out/mame/japan/nvram -cfg_directory out/mame/japan/cfg
+
+Run these commands from the folder containing out/ (on Windows, use
+mame.exe). The separate NVRAM and configuration folders keep each edition's
+settings independent. MAME identifies the game as Street Fighter Alpha 3
+(USA 980904 Phoenix Edition), because that is the set used to load it.
+Warnings about incorrect checksums are expected for the replaced ROMs;
+missing files are errors. If MAME requests QSound firmware, add your device
+ROM folder to -rompath, for example "out/mame/usa;/path/to/device-roms".
+Stock MAME plays the arcade music; cutscenes retain their captions. The
+Sega CD arranged soundtrack and voiced playback require the MiSTer output.
 
 
 ON HBMAME
@@ -142,8 +166,9 @@ ROM COLLECTIONS
 ---------------
 Merged, split and complete ZIP/7z sets and extracted folders are accepted.
 Use --rompath DIR (repeatable) or --romset FILE (repeatable). Names may
-differ; required contents are verified by strong hashes. 7z needs installed
-7-Zip. Use --check to preflight arcade inputs without supplying the discs.
+differ; required contents are verified by strong hashes. 7z uses installed
+7-Zip or a verified package fetched on demand. Use --check to preflight
+arcade inputs without supplying the discs.
 --include-devices puts the QSound firmware into the sets. Source archives are
 never modified.
 
@@ -152,4 +177,5 @@ MEDIA TOOLS
 FFmpeg/ffprobe are fetched as pinned verified binaries. No separate FFmpeg
 installation is needed. To work offline, add --tools-bundle
 cpsplus-tools-v2-offline.zip --offline. Use --tools-cache to choose the cache.
+The same controls cover the optional 7-Zip and chdman packages.
 NumPy and Pillow remain required.

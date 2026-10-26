@@ -40,12 +40,12 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Final Fight EX (CPS-2)</h1>
 <p class="subtitle">Enhanced version</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Final Fight (arcade, Capcom CPS-1)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-10-23</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Final Fight (arcade, Capcom CPS-1)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-10-25</dd></dl>
 <h2>Title screen</h2>
 <figure class="shot single"><img src="../img/final-fight-ex-cps2/title_en.png?v=12afd6eff5" alt="Final Fight EX title screen"><figcaption><strong>Final Fight EX</strong><br>English restoration · <code>ffex2r</code><br>USA · <code>ffex2u</code><br>Japan · <code>ffex2j</code></figcaption></figure>
 <h2>About</h2>
-<div class="requirements"><p>On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. HBMAME needs the set definitions the kit writes compiled in. <a href="../cps2-plus/">About CPS-2+ hardware</a></p></div>
+<div class="requirements"><p>On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. Stock MAME uses the separate sfa3ud.zip written for each edition. HBMAME needs the set definitions the kit writes compiled in. <a href="../cps2-plus/">About CPS-2+ hardware</a></p></div>
 <p>This kit brings Final Fight EX to Capcom&#x27;s CPS-2 with every enhancement from the CPS-1 version. It includes a restored English version with added scenes, an improved translation and uncensored content. The test menu switches between the arcade and Sega CD cutscenes, and on MiSTer between the arranged and arcade soundtracks.</p>
 <p>The 1993 Sega CD port of Final Fight opened with a fully animated cutscene and closed with new ending scenes, over a soundtrack with spoken dialogue. Final Fight EX brings them to the arcade game. On the CPS-2 the arcade&#x27;s music and sound effects play through QSound.</p>
 <p>The opening shows the Metro City map, the Mad Gear line-up, Damnd&#x27;s sketch and the knife, Haggar&#x27;s phone call and Cody and Guy. The ending adds Haggar and Jessica&#x27;s reunion and Cody&#x27;s farewell, and the builds made from the Japanese disc add Cody and Guy&#x27;s talk in the mansion hall. CUT SCENES in the test menu switches back to the arcade&#x27;s own story and ending.</p>
@@ -76,33 +76,40 @@
 <p>Each build is put together on your own machine from files you already own.
 You need:</p>
 <ul><li>your own Final Fight CD disc for each build you make, as its .cue sheet, a CD .chd, or a .zip or .7z holding one: the USA disc for ffex2u, the Japan disc for ffex2j and ffex2r</li><li>your own arcade Final Fight romset: ffight, ffightu and ffightj (MAME 0.260-era, .zip or .7z)</li><li>your own arcade Street Fighter Alpha 3 romset, sfa3u, for the CPS-2 sound (and qsound, if your sfa3u leaves out the QSound firmware)</li></ul>
-<p>A small tool reads the cutscenes and soundtrack from your Final Fight CD discs, combines them with your arcade romsets, and writes out the finished HBMAME sets, the MiSTer files and the music packs. Give it either disc on its own to build just that disc&#x27;s builds.</p>
+<p>A small tool reads the cutscenes and soundtrack from your Final Fight CD discs, combines them with your arcade romsets, and writes out the finished MAME and HBMAME sets, the MiSTer files and the music packs. Give it either disc on its own to build just that disc&#x27;s builds.</p>
 <h3>The builds</h3>
 <table>
 <tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer</th></tr>
 <tr><td>English restoration</td><td>Final Fight EX</td><td class="mono">ffex2r</td></tr><tr><td>USA</td><td>Final Fight EX</td><td class="mono">ffex2u</td></tr><tr><td>Japan</td><td>Final Fight EX</td><td class="mono">ffex2j</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-10-25. Game version unchanged.</p>
+
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/final-fight-ex-cps2-rc1-kit.zip?v=27359db966">final-fight-ex-cps2-rc1-kit.zip</a>
-  (36.8 MB)</div>
-  <div class="hash">SHA-256: 27359db9667176a6406553c1ee3da0747db28813e270191817d42963179934a8</div>
+  <div class="file"><a href="../downloads/final-fight-ex-cps2-rc2-kit.zip?v=eaa33072aa">final-fight-ex-cps2-rc2-kit.zip</a>
+  (36.7 MB)</div>
+  <div class="hash">SHA-256: eaa33072aada4e5d79da067a4b1a361c639a65cd0aa01d79a1511a7e01dc7914</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
 <ul><li>your own Final Fight CD disc for each build you make, as its .cue sheet, a CD .chd, or a .zip or .7z holding one: the USA disc for ffex2u, the Japan disc for ffex2j and ffex2r</li><li>your own arcade Final Fight romset: ffight, ffightu and ffightj (MAME 0.260-era, .zip or .7z)</li><li>your own arcade Street Fighter Alpha 3 romset, sfa3u, for the CPS-2 sound (and qsound, if your sfa3u leaves out the QSound firmware)</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip final-fight-ex-cps2-rc1-kit.zip -d final-fight-ex-cps2
+<pre><code>unzip final-fight-ex-cps2-rc2-kit.zip -d final-fight-ex-cps2
 cd final-fight-ex-cps2
 python3 apply.py --disc-jp &quot;Final Fight CD (JP).cue&quot; \
                  --disc-us &quot;Final Fight CD (USA).cue&quot; \
                  --romset /path/to/roms --out-dir out</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc2 (2026-10-25)</h3><ul>
+<li>The service switch opens the test menu directly, including brief button presses.</li>
+<li>Operator settings saved in FBNeo survive restarting the game and emulator.</li>
+<li>Stage select stays closed during attract play after watching the ending.</li>
+<li>Separate stock MAME outputs for all three editions.</li>
+<li>The kit fetches verified media and disc tools when needed.</li>
+</ul>
 <h3>rc1 (2026-10-23)</h3><ul>
 <li>First release candidate.</li>
 </ul>

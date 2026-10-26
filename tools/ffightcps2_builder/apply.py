@@ -28,7 +28,7 @@ sys.path.insert(0, str(HERE))         # the kit's own folder only: ffex_kit, pac
 from rom_sources import Resolver, RomError, QSOUND, search_paths, publish_tree  # noqa: E402
 
 KIT = json.loads((HERE / "kit.json").read_text())
-PLATFORMS = ("mister", "hbmame", "darksoft")
+PLATFORMS = ("mister", "hbmame", "mame", "darksoft")
 
 
 def fail(msg):
@@ -146,6 +146,11 @@ def main():
             except ValueError as exc:
                 fail(f"{meta['mra']}: {exc}")
             zip_name = f"{meta['set']}.zip"
+            if "mame" in platforms:
+                # Stock MAME loads these bytes through its existing Phoenix SFA3 set.
+                # Each edition needs its own ROM path because the set name is shared.
+                layout = {meta.get("layout_names", {}).get(n, n): data for n, data in members.items()}
+                files[f"mame/{edition}/sfa3ud.zip"] = layout
             if "hbmame" in platforms:
                 files[f"hbmame/{zip_name}"] = members
                 files[f"hbmame/definitions/{meta['set']}.cpp.inc"] = \

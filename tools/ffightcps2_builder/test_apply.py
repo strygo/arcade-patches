@@ -136,6 +136,40 @@ class ApplyTests(unittest.TestCase):
             self.assertEqual({n: z.read(n) for n in z.namelist()}, self.small[("english", True)])
         self.assertFalse((out / "mister").exists() or (out / "darksoft").exists())
 
+    def test_stock_mame_editions_are_isolated_and_need_no_other_targets(self):
+        shutil.rmtree(self.kit / "mras")
+        shutil.rmtree(self.kit / "definitions")
+        shutil.rmtree(self.kit / "core")
+        (self.kit / "packs.py").unlink()
+        (self.kit / "darksoft.py").unlink()
+        # Future public set filenames may differ from MAME's stock layout names.
+        config = json.loads((self.kit / "kit.json").read_text())
+        config["editions"]["english"]["layout_names"] = {"sz3ud.03c": "stock.03"}
+        (self.kit / "kit.json").write_text(json.dumps(config))
+        out = self.kit.parent / "out"
+        result = self.run_apply("--disc-jp", str(self.discs[0]), "--platform", "mame", "--out-dir", str(out))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("MAME:", result.stdout)
+        self.assertEqual(sorted(p.relative_to(out).as_posix() for p in out.rglob("*zip")),
+                         ["mame/english/sfa3ud.zip", "mame/japan/sfa3ud.zip"])
+        for edition in ("english", "japan"):
+            expected = dict(self.small[(edition, True)])
+            if edition == "english":
+                expected["stock.03"] = expected.pop("sz3ud.03c")
+            with zipfile.ZipFile(out / f"mame/{edition}/sfa3ud.zip") as z:
+                self.assertEqual({n: z.read(n) for n in z.namelist()}, expected)
+        self.assertEqual(sorted(p.name for p in out.iterdir()), ["mame"])
+
+    def test_all_targets_preserve_the_same_game_bytes(self):
+        self.write_mras(False)
+        out = self.kit.parent / "out"
+        result = self.run_apply("--disc-us", str(self.discs[1]), "--out-dir", str(out), small=False)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(sorted(p.name for p in out.iterdir()), ["darksoft", "hbmame", "mame", "mister"])
+        for name in ("mame/usa/sfa3ud.zip", "hbmame/ffex2u.zip", "mister/games/hbmame/ffex2u.zip"):
+            with zipfile.ZipFile(out / name) as z:
+                self.assertEqual({n: z.read(n) for n in z.namelist()}, self.small[("usa", False)])
+
     def test_mister_layout(self):
         self.write_mras(True)
         out = self.kit.parent / "out"
