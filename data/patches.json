@@ -5555,6 +5555,103 @@
         }
       ],
       "builds_heading": "Title screen"
+    },
+    {
+      "slug": "strider-ex",
+      "title": "Strider EX",
+      "subtitle": "Enhanced version",
+      "section": "enhanced",
+      "status": "release-candidate",
+      "hidden": false,
+      "version": "rc1",
+      "date": "2026-10-27",
+      "game": "Strider (arcade, Capcom CPS-1)",
+      "set": "\u2014",
+      "hardware": "Capcom CPS-1",
+      "summary": "Strider EX is the definitive version of Strider, combining the best of the arcade and PC Engine releases with English voices and text for the first time.",
+      "description": [
+        "Strider EX brings the PC Engine CD version\u2019s opening, mission briefings, boss dialogue and extended ending to the arcade game, alongside its additional desert stage. Cutscenes and boss portraits retain their original pixel width.",
+        "USA and Japanese builds include a hidden stage select, revised stage transitions and corrections to desert ledges, poles and camera movement. The USA build includes English boss voices through the original arcade sound hardware, with a new native FM score during the cinematics.",
+        "On MiSTer, the CPS+ Arrange launchers add the PC Engine soundtrack and voiced cinematics, with English and Japanese voice options and new full-quality English boss recordings. The required Strider EX CPS+ core is included.",
+        "Supply your own arcade ROMs, PC Engine CD, System Card BIOS and X68000 game disks. It runs in HBMAME and on MiSTer; stock MAME is used only to reconstruct the source scenes. This is a release candidate."
+      ],
+      "changes": [
+        "PC Engine CD opening, mission briefings and extended ending, with English or Japanese captions",
+        "The extra Kyzylkum Desert stage, including its enemies and bosses",
+        "Boss dialogue scenes with native-size portraits and English or Japanese text",
+        "A Strider EX title and hidden stage select: hold attack and jump while pressing Start on the credited title screen",
+        "USA and Japanese arcade builds",
+        "A new native FM cinematic score and embedded English boss voices in the USA build",
+        "CPS+ arranged soundtrack and voiced cinematics on MiSTer, with English and Japanese voice options",
+        "Revised stage-clear transitions, desert ledge and pole contacts, and camera movement",
+        "Longer reading time for cinematic captions and a pause after high-score initials"
+      ],
+      "notes": [
+        "All MiSTer launchers require the included Strider EX CPS+ core for the expanded graphics mapper. Its separate filename preserves an installed generic CPS+ core.",
+        "HBMAME uses native audio. Stock MAME does not run the enhanced arcade sets.",
+        "This is an unofficial fan project, unaffiliated with Capcom or NEC. Original game media is not included."
+      ],
+      "reconstruction": {
+        "requires": [
+          "your own canonical MAME USA (striderua) and Japan (striderjr) arcade ROMs (ZIP, 7z or loose files); split sets also need the shared files in their strider parent archive",
+          "your own Strider Hiryuu (Japan) PC Engine CD as a complete Redump split-bin CUE rip or ZIP/7z archive",
+          "your own unheadered Japanese Super CD-ROM System v3.0 BIOS",
+          "your own Strider Hiryuu X68000 disk archive, used to restore the Aerial Battleship intro and ending music",
+          "Python 3.11 or later with NumPy, Pillow and SciPy; MAME 0.288 with Lua; 7-Zip for 7z inputs"
+        ],
+        "kit_dir": "tools/striderex_builder",
+        "kit_include": [
+          "apply.py",
+          "verify.py",
+          "README.txt",
+          "TOOLS.md",
+          "LICENSES.txt",
+          "kit.json",
+          "outputs.json",
+          "rom_inputs.json",
+          "disc_inputs.json",
+          "hbmame_parents.json",
+          "release-material.json",
+          "builder/**/*",
+          "data/**/*",
+          "core/*",
+          "hash/*"
+        ],
+        "kit_command": "python3 apply.py --disc /path/to/strider-pce.cue --romset /path/to/roms --bios /path/to/system-card.pce --x68k /path/to/strider-x68000.zip --out-dir out"
+      },
+      "screenshots": [
+        {
+          "caption": "USA and Japanese title screens",
+          "before": "data/screenshots/strider-ex/title-us.png",
+          "after": "data/screenshots/strider-ex/title-jp.png",
+          "before_label": "USA",
+          "after_label": "Japan"
+        },
+        {
+          "caption": "The extra Kyzylkum Desert stage",
+          "single": "data/screenshots/strider-ex/desert.png"
+        },
+        {
+          "caption": "Grandmaster in the opening cinematic",
+          "single": "data/screenshots/strider-ex/grandmaster-intro.png"
+        }
+      ],
+      "related": [
+        {
+          "label": "CPS+",
+          "url": "../cps-plus/",
+          "note": "CPS+ plays the arranged soundtrack and voiced scenes on MiSTer"
+        }
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-10-27",
+          "items": [
+            "First release candidate of Strider EX for CPS-1, with the PC Engine CD scenes, extra desert stage, native audio and optional CPS+ soundtrack."
+          ]
+        }
+      ]
     }
   ],
   "articles": [

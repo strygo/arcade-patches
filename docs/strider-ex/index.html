@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Strider EX · Arcade Patches</title>
+<meta name="description" content="Strider EX is the definitive version of Strider, combining the best of the arcade and PC Engine releases with English voices and text for the first time.">
+<link rel="canonical" href="https://arcadepatches.com/strider-ex/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arcade Patches">
+<meta property="og:title" content="Strider EX">
+<meta property="og:description" content="Strider EX is the definitive version of Strider, combining the best of the arcade and PC Engine releases with English voices and text for the first time.">
+<meta property="og:url" content="https://arcadepatches.com/strider-ex/">
+<meta property="og:image" content="https://arcadepatches.com/img/social/strider-ex-ef84cce8c6.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Strider EX">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ArcadePatches">
+<meta name="twitter:title" content="Strider EX">
+<meta name="twitter:description" content="Strider EX is the definitive version of Strider, combining the best of the arcade and PC Engine releases with English voices and text for the first time.">
+<meta name="twitter:image" content="https://arcadepatches.com/img/social/strider-ex-ef84cce8c6.png">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="64x64">
+<link rel="alternate icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css?v=db88feff37">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="../">
+      <img class="logo" src="../logo.png" width="48" height="48" alt="">
+      <span><span class="home">Arcade Patches</span>
+      <span class="tagline">Translations, restorations and arranged soundtracks for classic arcade games.</span></span>
+    </a>
+    <nav><a href="../about/">About</a><a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">Forum</a><a href="https://x.com/ArcadePatches">X</a></nav>
+  </div>
+</header>
+<main>
+<a class="back" href="../">&larr; All patches</a>
+<h1>Strider EX</h1>
+<p class="subtitle">Enhanced version</p>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-1</span></div>
+<dl class="meta"><dt>Game</dt><dd>Strider (arcade, Capcom CPS-1)</dd><dt>Hardware</dt><dd>Capcom CPS-1</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-10-27</dd></dl>
+<h2>Screenshots</h2>
+<figure class="shot"><div class="pair"><div><p class="label">USA</p><img src="../img/strider-ex/00_before.png?v=ed12e66dbb" alt="USA: USA and Japanese title screens"></div><div><p class="label">Japan</p><img src="../img/strider-ex/00_after.png?v=ef84cce8c6" alt="Japan: USA and Japanese title screens"></div></div><figcaption>USA and Japanese title screens</figcaption></figure>
+<figure class="shot single"><img src="../img/strider-ex/01_single.png?v=5d792a1ae1" alt="The extra Kyzylkum Desert stage"><figcaption>The extra Kyzylkum Desert stage</figcaption></figure>
+<figure class="shot single"><img src="../img/strider-ex/02_single.png?v=558d39da41" alt="Grandmaster in the opening cinematic"><figcaption>Grandmaster in the opening cinematic</figcaption></figure>
+<h2>About this patch</h2>
+
+<p>Strider EX brings the PC Engine CD version’s opening, mission briefings, boss dialogue and extended ending to the arcade game, alongside its additional desert stage. Cutscenes and boss portraits retain their original pixel width.</p>
+<p>USA and Japanese builds include a hidden stage select, revised stage transitions and corrections to desert ledges, poles and camera movement. The USA build includes English boss voices through the original arcade sound hardware, with a new native FM score during the cinematics.</p>
+<p>On MiSTer, the CPS+ Arrange launchers add the PC Engine soundtrack and voiced cinematics, with English and Japanese voice options and new full-quality English boss recordings. The required Strider EX CPS+ core is included.</p>
+<p>Supply your own arcade ROMs, PC Engine CD, System Card BIOS and X68000 game disks. It runs in HBMAME and on MiSTer; stock MAME is used only to reconstruct the source scenes. This is a release candidate.</p>
+<h2>What's changed</h2><ul>
+<li>PC Engine CD opening, mission briefings and extended ending, with English or Japanese captions</li>
+<li>The extra Kyzylkum Desert stage, including its enemies and bosses</li>
+<li>Boss dialogue scenes with native-size portraits and English or Japanese text</li>
+<li>A Strider EX title and hidden stage select: hold attack and jump while pressing Start on the credited title screen</li>
+<li>USA and Japanese arcade builds</li>
+<li>A new native FM cinematic score and embedded English boss voices in the USA build</li>
+<li>CPS+ arranged soundtrack and voiced cinematics on MiSTer, with English and Japanese voice options</li>
+<li>Revised stage-clear transitions, desert ledge and pole contacts, and camera movement</li>
+<li>Longer reading time for cinematic captions and a pause after high-score initials</li>
+</ul>
+<h2>Download</h2>
+<p>Tools updated 2026-10-27. Game version unchanged.</p>
+
+<div class="download">
+  <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
+  <div class="file"><a href="../downloads/strider-ex-rc1-kit.zip?v=fb380a91a9">strider-ex-rc1-kit.zip</a>
+  (21.9 MB)</div>
+  <div class="hash">SHA-256: fb380a91a94d3662b4aedd0c63fc9464b7de76fbf8a2311ef818087d40fbe5b4</div>
+</div>
+<p>The kit is our reconstruction code and a short list of byte patches.
+Everything else is rebuilt on your machine from files you already own.</p>
+<h3>What you supply</h3>
+<ul><li>your own canonical MAME USA (striderua) and Japan (striderjr) arcade ROMs (ZIP, 7z or loose files); split sets also need the shared files in their strider parent archive</li><li>your own Strider Hiryuu (Japan) PC Engine CD as a complete Redump split-bin CUE rip or ZIP/7z archive</li><li>your own unheadered Japanese Super CD-ROM System v3.0 BIOS</li><li>your own Strider Hiryuu X68000 disk archive, used to restore the Aerial Battleship intro and ending music</li><li>Python 3.11 or later with NumPy, Pillow and SciPy; MAME 0.288 with Lua; 7-Zip for 7z inputs</li></ul>
+<h2>How to build</h2>
+<pre><code>unzip strider-ex-rc1-kit.zip -d strider-ex
+cd strider-ex
+python3 apply.py --disc /path/to/strider-pce.cue --romset /path/to/roms --bios /path/to/system-card.pce --x68k /path/to/strider-x68000.zip --out-dir out</code></pre>
+
+<h2 id="history">Release history</h2>
+<h3>rc1 (2026-10-27)</h3><ul>
+<li>First release candidate of Strider EX for CPS-1, with the PC Engine CD scenes, extra desert stage, native audio and optional CPS+ soundtrack.</li>
+</ul>
+<h2>Related projects</h2><ul><li><a href="../cps-plus/">CPS+</a>, CPS+ plays the arranged soundtrack and voiced scenes on MiSTer</li></ul>
+<h2>Notes</h2><ul class="notes">
+<li>All MiSTer launchers require the included Strider EX CPS+ core for the expanded graphics mapper. Its separate filename preserves an installed generic CPS+ core.</li>
+<li>HBMAME uses native audio. Stock MAME does not run the enhanced arcade sets.</li>
+<li>This is an unofficial fan project, unaffiliated with Capcom or NEC. Original game media is not included.</li>
+</ul>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
+    by Capcom. All game titles, characters, and artwork remain the property of their
+    respective owners. No ROMs or other copyrighted game data are hosted here.</p>
+    <p><a href="../about/">About</a> · <a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">Support forum</a> · <a href="https://x.com/ArcadePatches">@ArcadePatches on X</a> · <a href="../legal.html">Legal &amp; disclaimers</a></p>
+  </div>
+</footer>
+</body>
+</html>
