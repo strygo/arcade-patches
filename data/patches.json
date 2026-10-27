@@ -4004,8 +4004,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc3",
-      "date": "2026-10-21",
+      "version": "rc4",
+      "date": "2026-10-27",
       "game": "Vampire Savior Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)",
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
@@ -4079,6 +4079,7 @@
       },
       "notes": [
         "These sets require the CPS+ core and 128 MB of SDRAM on MiSTer.",
+        "Special thanks to Cerulean for their detailed notes, testing and deep knowledge of Vampire Savior.",
         "This is a fan backport, unaffiliated with Capcom. The kit reconstructs the sets and music from the disc and romsets you already own."
       ],
       "related": [
@@ -4099,6 +4100,22 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc4",
+          "date": "2026-10-27",
+          "items": [
+            "Fixed KO resets and crashes in Lilith\u2019s Puppet Show, Anakaris\u2019s copied projectiles and attacks on restored fighters.",
+            "Corrected grabbed and transformed opponents\u2019 sprites and positions.",
+            "Corrected Huitzil\u2019s Dark Force recovery and floating after air specials.",
+            "Corrected Dee\u2019s sword hit handling, dash attacks and Press of Death effects.",
+            "Restored Lilith\u2019s Puppet Show button cues and Dee\u2019s dash particles.",
+            "Corrected Dee\u2019s guard and special-move colors, and Oboro Bishamon\u2019s victory colors.",
+            "Corrected guard and ground-dash collision settings.",
+            "Restored Anakaris\u2019s command priority for overlapping special inputs.",
+            "Restored adult Anita in Dee\u2019s ending.",
+            "Corrected the direction opponents move when hit by Dee\u2019s and Donovan\u2019s sword attacks."
+          ]
+        },
         {
           "version": "rc3",
           "date": "2026-10-21",

@@ -40,8 +40,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Vampire Savior Arrange</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Vampire Savior Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-10-21</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire Savior Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-10-27</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/vsav-arrange/title_us.png?v=327c8edcdf" alt="Vampire Savior Arrange (USA) title screen"><figcaption><strong>Vampire Savior Arrange</strong><br>USA · <code>vsavs01</code></figcaption></figure><figure class="build"><img src="../img/vsav-arrange/title_jp.png?v=ea35ffa888" alt="Vampire Savior Arrange (Japan) title screen"><figcaption><strong>Vampire Savior Arrange</strong><br>Japan · <code>vsavs02</code></figcaption></figure></div>
 <h2>About</h2>
@@ -76,24 +76,36 @@ You need:</p>
 <tr><td>USA</td><td>Vampire Savior Arrange</td><td class="mono">vsavs01</td></tr><tr><td>Japan</td><td>Vampire Savior Arrange</td><td class="mono">vsavs02</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-10-25. Game version unchanged.</p>
+
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/vsav-arrange-rc3-kit.zip?v=261b50a248">vsav-arrange-rc3-kit.zip</a>
+  <div class="file"><a href="../downloads/vsav-arrange-rc4-kit.zip?v=75ad38e664">vsav-arrange-rc4-kit.zip</a>
   (2.2 MB)</div>
-  <div class="hash">SHA-256: 261b50a248d1aec45a87cb328c180d3f66f04033363913b86f2b9cec72a2bf19</div>
+  <div class="hash">SHA-256: 75ad38e664a9c96acd50ceac37a8b5e050a9444abb131aa8a98e561b2f08a641</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
 <h3>What you supply</h3>
 <ul><li>your own PlayStation 2 disc image: Vampire: Darkstalkers Collection (Japan)</li><li>your own Japanese arcade romsets: vsavj (Vampire Savior) and vsav2 (Vampire Savior 2)</li></ul>
 <h2>How to build</h2>
-<pre><code>unzip vsav-arrange-rc3-kit.zip -d vsav-arrange
+<pre><code>unzip vsav-arrange-rc4-kit.zip -d vsav-arrange
 cd vsav-arrange
 python3 apply.py --iso collection.iso --rompath roms --out-dir out</code></pre>
 
 <h2 id="history">Release history</h2>
+<h3>rc4 (2026-10-27)</h3><ul>
+<li>Fixed KO resets and crashes in Lilith’s Puppet Show, Anakaris’s copied projectiles and attacks on restored fighters.</li>
+<li>Corrected grabbed and transformed opponents’ sprites and positions.</li>
+<li>Corrected Huitzil’s Dark Force recovery and floating after air specials.</li>
+<li>Corrected Dee’s sword hit handling, dash attacks and Press of Death effects.</li>
+<li>Restored Lilith’s Puppet Show button cues and Dee’s dash particles.</li>
+<li>Corrected Dee’s guard and special-move colors, and Oboro Bishamon’s victory colors.</li>
+<li>Corrected guard and ground-dash collision settings.</li>
+<li>Restored Anakaris’s command priority for overlapping special inputs.</li>
+<li>Restored adult Anita in Dee’s ending.</li>
+<li>Corrected the direction opponents move when hit by Dee’s and Donovan’s sword attacks.</li>
+</ul>
 <h3>rc3 (2026-10-21)</h3><ul>
 <li>Restored Huitzil’s air dashes and floating, and corrected mine contact and missing animations.</li>
 <li>Fixed Dee’s jumping light-kick special cancels, repeated teleports and Dark Force sword behavior.</li>
@@ -111,6 +123,7 @@ python3 apply.py --iso collection.iso --rompath roms --out-dir out</code></pre>
 <h2>Related projects</h2><ul><li><a href="../vsav-restoration/">Vampire Savior</a>, our English restoration</li><li><a href="../vsav2-arrange/">Vampire Savior 2 Arrange</a>, the Savior 2 Arrange backport</li><li><a href="../vhunt2-arrange/">Night Warriors 2 Arrange</a>, the Hunter 2 Arrange backport</li></ul>
 <h2>Notes</h2><ul class="notes">
 <li>These sets require the CPS+ core and 128 MB of SDRAM on MiSTer.</li>
+<li>Special thanks to Cerulean for their detailed notes, testing and deep knowledge of Vampire Savior.</li>
 <li>This is a fan backport, unaffiliated with Capcom. The kit reconstructs the sets and music from the disc and romsets you already own.</li>
 </ul>
 </main>
