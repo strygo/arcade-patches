@@ -40,8 +40,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>CPS+</h1>
 <p class="subtitle">Arranged CD-era soundtracks for CPS-1 &amp; CPS-2 arcade games on MiSTer</p>
-<div class="badges"><span class="badge plain">v1.6</span><span class="badge plain">MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)</span></div>
-<dl class="meta"><dt>Hardware</dt><dd>MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)</dd><dt>Version</dt><dd>1.6</dd><dt>Updated</dt><dd>2026-10-15</dd></dl>
+<div class="badges"><span class="badge plain">v1.7</span><span class="badge plain">MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)</span></div>
+<dl class="meta"><dt>Hardware</dt><dd>MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)</dd><dt>Version</dt><dd>1.7</dd><dt>Updated</dt><dd>2026-10-28</dd></dl>
 <p>From Final Fight CD onward, Capcom kept sending its arcade soundtracks back to the studio. Every CD-based home port got a full re-recording of the music, the &#x27;arrange&#x27; versions, produced by the original composers&#x27; teams. For thirty years those recordings stayed locked to the home versions. CPS+ puts them where they always belonged, under the arcade games themselves.</p>
 <p>On a MiSTer, the real CPS-1 or CPS-2 hardware logic runs the game while the CD-era soundtrack plays the music, started, looped and faded by the game itself, exactly the way Capcom&#x27;s own console releases timed it. Hit sounds, voices and the announcer stay pure arcade. It sounds like the arcade machine grew a CD drive.</p>
 <p>Super Street Fighter II, Super Street Fighter II Turbo and Hyper Street Fighter II each have ten soundtracks, from the Anniversary Edition arrange to the remixed score of Ultra Street Fighter II and, new in version 1.6, the music the X68000&#x27;s own FM chip played.</p>
@@ -55,9 +55,9 @@
 <h2>Get started</h2>
 <div class="download">
   <div class="kind">CPS+ MiSTer kit: cores, MRAs and the pack builder</div>
-  <div class="file"><a href="../downloads/cps-plus-1.6-kit.zip?v=55ee860968">cps-plus-1.6-kit.zip</a>
+  <div class="file"><a href="../downloads/cps-plus-1.7-kit.zip?v=498510c73b">cps-plus-1.7-kit.zip</a>
   (5.0 MB)</div>
-  <div class="hash">SHA-256: 55ee8609688c81df035d104abe7886773da48241941594b9abafbda69c396b2a</div>
+  <div class="hash">SHA-256: 498510c73bb03f542719caf43c19fcaeb2960a57f01e992d452cbc7d0e45bce8</div>
 </div>
 <ol>
 <li>Download and unzip the kit.</li>
@@ -250,6 +250,9 @@
 <details class="faq"><summary>I built the 1.2 packs. Do I need to rebuild them for 1.3?</summary><p>No. Every pack you built with 1.2 still works with 1.3. Three packs (the two Double Impact remixes and HD Remix) have new reference hashes, because they now build to the same bytes on every computer, but the difference is inaudible and the files are the same size. Copy the new MRAs to your card.</p><p>If you use the Gold, Final Fight EX or Grand Master Challenge MRAs, rebuild those sets with their projects&#x27; latest kits: the MRAs now expect the new sets.</p></details>
 <details class="faq"><summary>I built the 1.1 packs. Do I need to rebuild them for 1.2?</summary><p>Six packs changed. The three Final Fight soundtrack packs (SNES, X68000 FM and X68000 MIDI) now start their opening where the arcade&#x27;s own song starts, in both regions, and leave the phone ring to the arcade game. The three Super Street Fighter II packs (Arrange, Turbo Arrange and X68000 MIDI) now let the QSound logo jingle play from the arcade game. Ten SSF2-family MRAs also changed, carrying each region&#x27;s factory EEPROM defaults.</p><p>Drop the 1.2 kit over your old one, add the new sources to discs.toml, and run make_packs.py again. Every pack it builds is checked against the published hashes, so the six changed ones come out corrected and the rest come out identical, and out/mister/ picks up the new MRAs. The other 17 packs and the three cores are unchanged, hash for hash.</p></details>
 <h2 id="history">Release history</h2>
+<h3>1.7 (2026-10-28)</h3><ul>
+<li>The shared CPS1+ core now also supports Strider EX. The kit includes its dated core alongside the existing CPS-1.5 and CPS-2 cores. Existing soundtracks and launchers are unchanged.</li>
+</ul>
 <h3>1.6 (2026-10-15)</h3><ul>
 <li>New: the X68000 FM soundtrack of Super Street Fighter II, the music the port&#x27;s own FM chip played, for Super Street Fighter II, Super Street Fighter II Turbo (with Super Street Fighter II X, Grand Master Challenge and EX) and Hyper Street Fighter II, in twelve new MRAs. It builds from your disk images and MAME; the kit&#x27;s X68000.md explains what it reads.</li>
 <li>New: the X68000 MIDI soundtrack also plays in Street Fighter II: The World Warrior and Street Fighter II&#x27;: Hyper Fighting, in four new MRAs.</li>
