@@ -4448,7 +4448,7 @@
           "key": "us",
           "region": "USA",
           "title": "Ultra Street Fighter II",
-          "hbmame_set": "usf2t8",
+          "hbmame_set": "usf2u",
           "mame_set": "hsf2",
           "title_screen": "data/screenshots/usf2-backport/title_us.png"
         },
@@ -4456,7 +4456,7 @@
           "key": "jp",
           "region": "Japan",
           "title": "Ultra Street Fighter II",
-          "hbmame_set": "usf2j8",
+          "hbmame_set": "usf2j",
           "mame_set": "hsf2j",
           "title_screen": "data/screenshots/usf2-backport/title_jp.png"
         }
@@ -4532,7 +4532,7 @@
           "date": "2026-10-28",
           "items": [
             "Improved: A new 30th-anniversary logo in the intro.",
-            "Fix: Sky details stay stable during Evil Ryu and Violent Ken’s intro fight.",
+            "Fix: Sky details stay stable during Evil Ryu and Violent Ken\u2019s intro fight.",
             "Fix: Throw breaks now use the correct poses, recovery, invincibility and separation for both players.",
             "Fix: Player 2 can start a solo game correctly.",
             "New: MODERN controls add the Switch command shortcuts and input windows across the roster. CLASSIC preserves the previous command behavior; MODERN is the default.",
