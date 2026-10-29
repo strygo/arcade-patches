@@ -5047,8 +5047,8 @@
       "section": "enhanced",
       "hidden": false,
       "status": "release-candidate",
-      "version": "rc1",
-      "date": "2026-10-26",
+      "version": "rc2",
+      "date": "2026-10-29",
       "game": "Street Fighter Zero (Japan 950727)",
       "set": "sfzj",
       "hardware": "Capcom CPS-2",
@@ -5218,7 +5218,7 @@
         }
       ],
       "notes": [
-        "To open the mode menu in MAME or HBMAME, set GAME MODE to CONSOLE in SYSTEM CONFIGURATION, then save and exit.",
+        "To open the mode menu in MAME or HBMAME, set GAME MODE to CONSOLE in EX CONFIGURATION, then save and exit.",
         "You need your own Japanese sfzj arcade set and QSound device ROMs. The downloads contain patches and portable application tools, not complete game ROMs.",
         "Fan work, unaffiliated with Capcom."
       ],
@@ -5230,6 +5230,16 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc2",
+          "date": "2026-10-29",
+          "items": [
+            "Character-select and victory portraits now match your chosen fighter color, including the extra Alpha 2 colors.",
+            "Simplified and centered Versus and Training setup: LP/START confirms from any setting; LK/Coin returns.",
+            "Moved GAME MODE to the first row of EX CONFIGURATION and localized the Japanese EX menu and help.",
+            "Added the console infinity symbol during unlimited Training practice."
+          ]
+        },
         {
           "version": "rc1",
           "date": "2026-10-26",
@@ -5647,7 +5657,7 @@
           "your own unheadered Japanese Super CD-ROM System v3.0 BIOS",
           "your own Strider Hiryuu X68000 disk archive, used to restore the Aerial Battleship intro and ending music",
           "Python 3.11 or later with NumPy, Pillow and SciPy; 7-Zip for 7z inputs",
-        "Linux: included MAME replay helper for Ubuntu 24.04 or compatible glibc 2.39 systems; Windows and macOS: MAME 0.288 with Lua"
+          "Linux: included MAME replay helper for Ubuntu 24.04 or compatible glibc 2.39 systems; Windows and macOS: MAME 0.288 with Lua"
         ],
         "kit_dir": "tools/striderex_builder",
         "kit_include": [

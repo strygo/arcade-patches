@@ -40,8 +40,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha EX</h1>
 <p class="subtitle">Enhanced version</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero (Japan 950727)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-10-26</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero (Japan 950727)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-10-29</dd></dl>
 <h2>Title screens</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/sfa-ex/title_usa.png?v=20114cb170" alt="Street Fighter Alpha EX (USA) title screen"><figcaption><strong>Street Fighter Alpha EX</strong><br>USA · <code>sfaexu</code></figcaption></figure><figure class="build"><img src="../img/sfa-ex/title_japan.png?v=d740a51552" alt="Street Fighter Zero EX (Japan) title screen"><figcaption><strong>Street Fighter Zero EX</strong><br>Japan · <code>sfzexj</code></figcaption></figure></div>
 <h2>About</h2>
@@ -70,7 +70,7 @@
 <figure class="shot single"><img src="../img/sfa-ex/00_single.png?v=d0c2d1acd5" alt="All thirteen fighters and Random on character select."><figcaption>All thirteen fighters and Random on character select.</figcaption></figure>
 <figure class="shot single"><img src="../img/sfa-ex/01_single.png?v=b138808125" alt="Ryu and Ken team up against Adon in EX Dramatic Battle."><figcaption>Ryu and Ken team up against Adon in EX Dramatic Battle.</figcaption></figure>
 <figure class="shot single"><img src="../img/sfa-ex/02_single.png?v=8efeae6e3c" alt="Difficulty, timer, rounds, damage, speed and sound in OPTIONS."><figcaption>Difficulty, timer, rounds, damage, speed and sound in OPTIONS.</figcaption></figure>
-<figure class="shot single"><img src="../img/sfa-ex/03_single.png?v=82b085577d" alt="Training with computer controls and recording."><figcaption>Training with computer controls and recording.</figcaption></figure>
+<figure class="shot single"><img src="../img/sfa-ex/03_single.png?v=66e3359a91" alt="Training with computer controls and recording."><figcaption>Training with computer controls and recording.</figcaption></figure>
 <h2>How it's distributed</h2>
 <p>Each build is put together on your own machine from files you already own.
 You need:</p>
@@ -80,15 +80,15 @@ You need:</p>
 
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 3 builds</div>
-  <div class="file"><a href="../downloads/sfa-ex-rc1-ips.zip?v=0fbcdf95a4">sfa-ex-rc1-ips.zip</a>
+  <div class="file"><a href="../downloads/sfa-ex-rc2-ips.zip?v=0075cd57ac">sfa-ex-rc2-ips.zip</a>
   (1.0 MB)</div>
-  <div class="hash">SHA-256: 0fbcdf95a4de84c1738020fed72513b0abfb34f1dad349dcb9e976ea710727f0</div>
+  <div class="hash">SHA-256: 0075cd57ac14f3136179087e7ce9eb0dbaec1de4d99b5a2e39f68ca966c04c42</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 3 builds</div>
-  <div class="file"><a href="../downloads/sfa-ex-rc1-mra.zip?v=64d42455ac">sfa-ex-rc1-mra.zip</a>
-  (590 KB)</div>
-  <div class="hash">SHA-256: 64d42455ac84a92c39d98d42a773106c02dd85cf5b48b4de4b4259b77f938ad5</div>
+  <div class="file"><a href="../downloads/sfa-ex-rc2-mra.zip?v=ca77c1987c">sfa-ex-rc2-mra.zip</a>
+  (593 KB)</div>
+  <div class="hash">SHA-256: ca77c1987c9d5238e4834f1b35e33cce95262ab50af6058c0ac8142cf9d399e2</div>
 </div>
 <p>You need your own dump of <strong>Street Fighter Zero (Japan 950727)</strong> as the MAME
 set <code>sfzj.zip</code>. Every build is made from that one set.
@@ -100,7 +100,7 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <tr><td>USA (English)</td><td class="mono">usa</td><td class="mono">sfaexu</td><td class="mono">sfaexu</td></tr><tr><td>Japan (Japanese)</td><td class="mono">japan</td><td class="mono">sfzexj</td><td class="mono">sfzexj</td></tr><tr><td>Asia (English)</td><td class="mono">asia</td><td class="mono">sfzexa</td><td class="mono">sfzexa</td></tr>
 </table>
 <h2>How to apply</h2>
-<pre><code>unzip sfa-ex-rc1-ips.zip -d sfzj-patch
+<pre><code>unzip sfa-ex-rc2-ips.zip -d sfzj-patch
 cd sfzj-patch
 python3 apply.py /path/to/sfzj.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -150,52 +150,58 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p><code>sfz.06</code> (512 KB, original CRC32 <code>806e8f38</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">9b5fc006</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">995752fb</td></tr>
-<tr><td>Asia (English)</td><td class="mono">4185da04</td></tr>
+<tr><td>USA (English)</td><td class="mono">fe2560d3</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">734c626f</td></tr>
+<tr><td>Asia (English)</td><td class="mono">24ff7ad1</td></tr>
 </table>
 <p><code>sfz.14m</code> (2.0 MB, original CRC32 <code>90fefdb3</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">5e90868c</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">0a7de3b8</td></tr>
-<tr><td>Asia (English)</td><td class="mono">31318783</td></tr>
+<tr><td>USA (English)</td><td class="mono">64daf202</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">a539aa8c</td></tr>
+<tr><td>Asia (English)</td><td class="mono">d2fa804e</td></tr>
 </table>
 <p><code>sfz.16m</code> (2.0 MB, original CRC32 <code>5354c948</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">97ac2170</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">c1b36217</td></tr>
-<tr><td>Asia (English)</td><td class="mono">b905c57d</td></tr>
+<tr><td>USA (English)</td><td class="mono">b2271b64</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">e55eaadc</td></tr>
+<tr><td>Asia (English)</td><td class="mono">265039b7</td></tr>
 </table>
 <p><code>sfz.18m</code> (2.0 MB, original CRC32 <code>41a1e790</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">5e414b4f</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">8f468f11</td></tr>
-<tr><td>Asia (English)</td><td class="mono">0ed47cd2</td></tr>
+<tr><td>USA (English)</td><td class="mono">640b3fc1</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">44a07ddd</td></tr>
+<tr><td>Asia (English)</td><td class="mono">ed1f7b1f</td></tr>
 </table>
 <p><code>sfz.20m</code> (2.0 MB, original CRC32 <code>a549df98</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">f29757b8</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">37c3c380</td></tr>
-<tr><td>Asia (English)</td><td class="mono">688f9434</td></tr>
+<tr><td>USA (English)</td><td class="mono">d71c6dac</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">a9891558</td></tr>
+<tr><td>Asia (English)</td><td class="mono">f7da68fe</td></tr>
 </table>
 <p><code>sfzj.03c</code> (512 KB, original CRC32 <code>f5444120</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">a0c070cb</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">7eb7adce</td></tr>
-<tr><td>Asia (English)</td><td class="mono">14c3e640</td></tr>
+<tr><td>USA (English)</td><td class="mono">e1537ea0</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">a6849999</td></tr>
+<tr><td>Asia (English)</td><td class="mono">5550e82b</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc2 (2026-10-29)</h3><ul>
+<li>Character-select and victory portraits now match your chosen fighter color, including the extra Alpha 2 colors.</li>
+<li>Simplified and centered Versus and Training setup: LP/START confirms from any setting; LK/Coin returns.</li>
+<li>Moved GAME MODE to the first row of EX CONFIGURATION and localized the Japanese EX menu and help.</li>
+<li>Added the console infinity symbol during unlimited Training practice.</li>
+</ul>
 <h3>rc1 (2026-10-26)</h3><ul>
 <li>First public release candidate.</li>
 </ul>
 <h2>Related projects</h2><ul><li><a href="../sfa-restoration/">Street Fighter Alpha regional restoration</a>, the regional foundation EX builds on</li></ul>
 <h2>Notes</h2><ul class="notes">
-<li>To open the mode menu in MAME or HBMAME, set GAME MODE to CONSOLE in SYSTEM CONFIGURATION, then save and exit.</li>
+<li>To open the mode menu in MAME or HBMAME, set GAME MODE to CONSOLE in EX CONFIGURATION, then save and exit.</li>
 <li>You need your own Japanese sfzj arcade set and QSound device ROMs. The downloads contain patches and portable application tools, not complete game ROMs.</li>
 <li>Fan work, unaffiliated with Capcom.</li>
 </ul>
