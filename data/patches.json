@@ -2476,7 +2476,7 @@
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc11",
+      "version": "rc12",
       "date": "2026-10-30",
       "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
       "set": "ssf2xj",
@@ -2762,7 +2762,7 @@
       ],
       "release_history": [
         {
-          "version": "rc11",
+          "version": "rc12",
           "date": "2026-10-30",
           "items": [
             "Console mode with Arcade, Versus, Training and Options on the title screen; GAME MODE in EX CONFIGURATION selects Console or Arcade",
@@ -2773,7 +2773,9 @@
             "Dee Jay's, Blanka's, M. Bison's and Akuma's portraits better match their fighter colors, including Dee Jay's necklace and Akuma's hair.",
             "Player-select grid portraits use selectable fighter colors. Honda, Blanka, Boxer, Claw and Dee Jay use their two-punch colors; Akuma keeps his classic three-punch color.",
             "Continue animations keep the selected portrait colors, including Blanka, Dee Jay, Zangief and the added colors.",
-            "Akuma’s large portrait appears in its intended colors immediately when the player-select cursor lands on him."
+            "Akuma’s large portrait appears in its intended colors immediately when the player-select cursor lands on him.",
+            "Ten Akuma’s Raging Demon accepts forward and LK remaining held while you complete the command. The two LP presses still need separate taps.",
+            "The player-select heading no longer covers the selection cursor in Arcade mode."
           ]
         },
         {
