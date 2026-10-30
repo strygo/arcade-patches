@@ -1,14 +1,14 @@
 """Link-preview images (Open Graph / X cards) for the site's pages.
 
-Screenshots are native arcade resolution (384x224), which link previews would
-blur. Each card is the page's own image scaled to fill a 1200x630 canvas:
-whole-pixel nearest-neighbour first, so the pixel art stays crisp, then one
-smooth step to the exact size, on the site's background colour. A page with
-no image of its own gets a 2x2 mosaic of other pages' images.
+Screenshots use a 4:3 display aspect regardless of their native capture size.
+Each card fits the complete image into a 1200x630 canvas, with side padding:
+whole-pixel nearest-neighbour first, then one smooth step to the corrected
+size, on the site's background colour. A page with no image of its own gets
+a 2x2 mosaic whose cells also display at 4:3.
 
-Cards are named by a hash of their sources, so an unchanged page keeps its
-card (and preview caches stay valid) while a changed screenshot gets a new
-URL. Needs Pillow; build.py only imports this module when a card is missing.
+Cards are named by a hash of their sources and rendering recipe, so an
+unchanged page keeps its card (and preview caches stay valid) while a changed
+screenshot or recipe gets a new URL. Needs Pillow; build.py only imports this module when a card is missing.
 """
 from __future__ import annotations
 
@@ -21,7 +21,7 @@ BACKGROUND = (0x10, 0x10, 0x14)  # --bg in style.css
 
 
 def card_name(key: str, sources: list[Path]) -> str:
-    digest = hashlib.sha256()
+    digest = hashlib.sha256(b"social-card-4x3-v1")
     for src in sources:
         digest.update(src.read_bytes())
     return f"{key}-{digest.hexdigest()[:10]}.png"
@@ -30,10 +30,12 @@ def card_name(key: str, sources: list[Path]) -> str:
 def _fit(image, width, height):
     from PIL import Image
 
-    scale = min(width / image.width, height / image.height)
+    display_ratio = 4 / 3
+    fitted_height = min(height, width / display_ratio)
+    size = (round(fitted_height * display_ratio), round(fitted_height))
+    scale = max(size[0] / image.width, size[1] / image.height)
     whole = max(1, math.ceil(scale))
     big = image.resize((image.width * whole, image.height * whole), Image.NEAREST)
-    size = (round(image.width * scale), round(image.height * scale))
     return big if big.size == size else big.resize(size, Image.LANCZOS)
 
 

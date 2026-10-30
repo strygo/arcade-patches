@@ -167,6 +167,14 @@ dl.meta {
 dl.meta dt { color: var(--text-dim); }
 dl.meta dd { margin: 0; }
 
+/* Arcade screenshots use a 4:3 display aspect, independent of capture pixels. */
+.card img.thumb,
+figure.shot img,
+figure.build img {
+  aspect-ratio: 4 / 3;
+  object-fit: fill;
+}
+
 /* screenshots */
 figure.shot { margin: 26px 0; }
 figure.shot .pair {
