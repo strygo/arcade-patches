@@ -6521,14 +6521,14 @@
           }
         },
         "rc5": {
-          "current_revision": 3,
+          "current_revision": 4,
           "date": "2026-10-30",
           "files": {
             "kit": {
-              "archive": "archive/4dc2c207d64ebf448b036abcb739c9b4e1a8fbfc85170c55cf7d5cb8aa000d2a/usf2-backport-rc5-kit.zip",
+              "archive": "archive/37ec32f17fc1de7bec0c483bd624d28cd686712bef031c8224ffd004ac829c75/usf2-backport-rc5-kit.zip",
               "name": "usf2-backport-rc5-kit.zip",
-              "sha256": "4dc2c207d64ebf448b036abcb739c9b4e1a8fbfc85170c55cf7d5cb8aa000d2a",
-              "size": 21595290
+              "sha256": "37ec32f17fc1de7bec0c483bd624d28cd686712bef031c8224ffd004ac829c75",
+              "size": 21607433
             }
           },
           "game_contract_sha256": "94d2c16da58af1a0f2de6f70935deb9a5d9c6edfeda4ae5d4a71fc4f17faedf3",
@@ -6547,13 +6547,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-10-30",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "qualification": {
-            "candidate": "rc5-tools-r3-candidate.1",
-            "capcom_source_commit": "b09cbd79e3eef091273ab87dc8ce22ca91908e92",
-            "ready_record_sha256": "76d27c13a55872e995a0dea54b51e3dbc9c3c7b92257b6b57ee395fe258b56e1",
-            "release_sha256": "d2d8cf59bdc5236fb9296a8cbc7816b15e3db50944612395ce15a4e3c42f068f",
+            "candidate": "rc5-tools-r4-candidate.2",
+            "capcom_source_commit": "a2d549edb1c0e574a1984742266a1ac22c268081",
+            "ready_record_sha256": "de5ef5e0d7358163d27d5e261dc0e85d5e38d2e19a97f3aa9a2dc27c20fd7a56",
+            "release_sha256": "6c01d3260e233a5f25153c3bfbc0186f405375d150110ea9dedc8c14fca50cf1",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -6627,13 +6632,39 @@
                 },
                 "revision": 2
               }
+            },
+            "4": {
+              "date": "2026-10-30",
+              "files": {
+                "kit": {
+                  "archive": "archive/37ec32f17fc1de7bec0c483bd624d28cd686712bef031c8224ffd004ac829c75/usf2-backport-rc5-kit.zip",
+                  "name": "usf2-backport-rc5-kit.zip",
+                  "sha256": "37ec32f17fc1de7bec0c483bd624d28cd686712bef031c8224ffd004ac829c75",
+                  "size": 21607433
+                }
+              },
+              "game_contract_sha256": "94d2c16da58af1a0f2de6f70935deb9a5d9c6edfeda4ae5d4a71fc4f17faedf3",
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc5-tools-r4-candidate.2",
+                "capcom_source_commit": "a2d549edb1c0e574a1984742266a1ac22c268081",
+                "ready_record_sha256": "de5ef5e0d7358163d27d5e261dc0e85d5e38d2e19a97f3aa9a2dc27c20fd7a56",
+                "release_sha256": "6c01d3260e233a5f25153c3bfbc0186f405375d150110ea9dedc8c14fca50cf1",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "kit": "4dc2c207d64ebf448b036abcb739c9b4e1a8fbfc85170c55cf7d5cb8aa000d2a"
+                },
+                "revision": 3
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "kit": "52e4e883fe889cab0ac5f3539fe7f0894552ea60665ab8c131b14fb082309d48"
+              "kit": "4dc2c207d64ebf448b036abcb739c9b4e1a8fbfc85170c55cf7d5cb8aa000d2a"
             },
-            "revision": 2
+            "revision": 3
           }
         }
       }
