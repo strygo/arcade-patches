@@ -600,8 +600,15 @@ def build_rom_downloads(patch: dict) -> dict:
             entry["hbmame"] = check_hbmame(tag, b["hbmame"], members, patched)
         if b.get('fbneo'):
             fb = b['fbneo']
-            if set(fb) != {'setname'} or not re.fullmatch(r'[a-z0-9_]+', fb['setname']):
+            if set(fb) not in ({'setname'}, {'setname', 'renames'}) or not re.fullmatch(r'[a-z0-9_]+', fb['setname']):
                 raise SystemExit(f'{tag}: invalid FBNeo set declaration')
+            if 'renames' in fb:
+                names = fb['renames']
+                expected = {m['name'] for m in members if m.get('role') != 'device' and m['name'] != 'dl-1425.bin'}
+                if (not isinstance(names, dict) or set(names) != expected
+                        or any(not isinstance(n, str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]*', n) for n in names.values())
+                        or len(set(names.values())) != len(names)):
+                    raise SystemExit(f'{tag}: invalid FBNeo member-name map')
             entry['fbneo'] = dict(fb)
         results.append((entry, ips_files))
     texts = generate_mras(patch, stock_path, mra_entries) if mra_zipname else []

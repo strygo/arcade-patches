@@ -266,9 +266,16 @@ def main():
         if platform in ("all", "fbneo") and manifest.get("fbneo"):
             if full is None:
                 full = build_members(manifest, patches, source)
-            # FBNeo uses the canonical physical game members, without QSound
-            # device firmware. Only the archive's registered short name differs.
-            outputs["fbneo/" + manifest["fbneo"]["setname"] + ".zip"] = full
+            # Existing FBNeo families retain their member names. A declared map
+            # must cover every game member exactly once; only filenames change.
+            names = manifest["fbneo"].get("renames", {n: n for n in full})
+            import re
+            if (not isinstance(names, dict) or set(names) != set(full)
+                    or any(not isinstance(n, str) or not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_.-]*", n)
+                           for n in names.values())
+                    or len(set(names.values())) != len(names)):
+                raise RomError("Invalid or incomplete FBNeo member-name mapping")
+            outputs["fbneo/" + manifest["fbneo"]["setname"] + ".zip"] = {names[n]: b for n, b in full.items()}
         if platform in ("all", "darksoft") and manifest.get("darksoft"):
             from darksoft import tree
             spec = manifest["darksoft"]

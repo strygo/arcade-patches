@@ -194,7 +194,7 @@ class ReleasePackagerTests(unittest.TestCase):
             patch = {'slug': 'fbfixture', 'title': 'Demo', 'subtitle': 'Fixture', 'version': 'rc1',
                      'date': '2026-10-30', 'game': 'Demo', 'hardware': 'Fixture', 'set': 'demo',
                      'description': [], 'changes': [], 'artifact': {'stock_zip': str(stock),
-                     'patched_zip': str(patched)}, 'fbneo': {'setname': 'existingfb'}}
+                     'patched_zip': str(patched)}, 'fbneo': {'setname': 'existingfb', 'renames': {'game.03': 'legacy.03', 'game.04': 'legacy.04'}}}
             packager.build_rom_downloads(patch)
             with zipfile.ZipFile(root / 'published/downloads/fbfixture-rc1-ips.zip') as z:
                 z.extractall(root / 'kit')
@@ -204,7 +204,7 @@ class ReleasePackagerTests(unittest.TestCase):
             subprocess.run([sys.executable, str(root / 'kit/apply.py'), str(stock),
                             '--platform', 'fbneo', '--out-dir', str(root / 'out')], check=True, capture_output=True)
             with zipfile.ZipFile(root / 'out/fbneo/existingfb.zip') as z:
-                self.assertEqual({'game.03': b'fixed', 'game.04': b'unchanged'}, {n: z.read(n) for n in z.namelist()})
+                self.assertEqual({'legacy.03': b'fixed', 'legacy.04': b'unchanged'}, {n: z.read(n) for n in z.namelist()})
 
     def test_builds_round_trip_checked_ips_without_the_site_renderer(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

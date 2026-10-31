@@ -60,7 +60,9 @@ class KitRevisionTests(ReleaseInventoryTests):
         write_json(self.root / 'data/releases.json', inv)
         if additive:
             release = json.loads((candidate / 'release.json').read_text())
-            if additive == 'fbneo':
+            if additive == 'fbneo-names':
+                release['plan']['fbneo_member_names'] = {'fbneo/demo.zip': {'game.03': 'legacy.03'}}
+            elif additive == 'fbneo':
                 release['plan']['add_fbneo'] = {'mame/usa/stock.zip': 'fbneo/demo.zip'}
             else:
                 release['plan']['add_hbmame' if additive == 'hbmame' else 'add_darksoft'] = True
@@ -91,6 +93,15 @@ class KitRevisionTests(ReleaseInventoryTests):
         inv = load_inventory(self.root / 'data/releases.json')
         item = inv['releases']['demo']['versions']['rc2']
         self.assertEqual('hbmame', item['revisions']['2']['additive_output'])
+        validate_inventory(self.root, inv)
+
+    def test_fbneo_member_names_start_a_new_filename_contract(self):
+        ready, candidate = self.contract_candidate('fbneo-names')
+        import_candidate(self.root, ready, candidate)
+        inv = load_inventory(self.root / 'data/releases.json')
+        item = inv['releases']['demo']['versions']['rc2']
+        self.assertEqual('fbneo', item['revisions']['2']['member_names'])
+        self.assertNotIn('additive_output', item['revisions']['2'])
         validate_inventory(self.root, inv)
 
     def test_stale_baseline_or_qa_is_rejected(self):

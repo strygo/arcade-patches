@@ -87,7 +87,8 @@ def validate_revisions(root, slug, version, item):
                     and re.fullmatch(r"[0-9a-f]{64}", revision["game_contract_sha256"]), "invalid game contract")
             # Only a declared additive-output revision (Darksoft flash files, HBMAME sets) starts a new contract.
             require(previous_contract is None or revision["game_contract_sha256"] == previous_contract
-                    or revision.get("additive_output") in ("darksoft", "hbmame", "fbneo"), "kit revision game contract changed")
+                    or revision.get("additive_output") in ("darksoft", "hbmame", "fbneo")
+                    or revision.get("member_names") == "fbneo", "kit revision game contract changed")
             previous_contract = revision["game_contract_sha256"]
     if current > 1:
         require(selected.get("game_contract_sha256") == item.get("game_contract_sha256"),
@@ -195,8 +196,9 @@ def import_revision(root, ready_path, candidate, ready, release):
     # identity of its own outputs, which later revisions then hold constant.
     declared = ("darksoft" if plan.get("add_darksoft") is True else "hbmame" if plan.get("add_hbmame") is True
                 else "fbneo" if isinstance(plan.get("add_fbneo"), dict) and plan["add_fbneo"] else None)
+    member_names = isinstance(plan.get("fbneo_member_names"), dict) and bool(plan["fbneo_member_names"])
     additive = declared is not None and old.get("game_contract_sha256") != contract
-    require(not old.get("game_contract_sha256") or old["game_contract_sha256"] == contract or additive,
+    require(not old.get("game_contract_sha256") or old["game_contract_sha256"] == contract or additive or member_names,
             "game contract differs; use a new game version")
     require(set(release["downloads"]) == {r["name"] for r in old["files"].values()},
             "tooling revision must keep every public filename")
@@ -205,6 +207,7 @@ def import_revision(root, ready_path, candidate, ready, release):
     new = {"date": plan["date"], "kind": old["kind"], "files": {},
            "game_contract_sha256": contract, "tooling_baseline": baseline,
            **({"additive_output": declared} if additive else {}),
+           **({"member_names": "fbneo"} if member_names else {}),
            "qualification": {"type": "qualified-candidate", "candidate": plan["candidate"],
                              "capcom_source_commit": plan["sources"]["capcom"],
                              "ready_record_sha256": sha256_file(ready_path),

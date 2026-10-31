@@ -2617,7 +2617,33 @@
               "base": "data/mra/ssf2-ex-usa.mra"
             },
             "fbneo": {
-              "setname": "ssf2tuc"
+              "setname": "ssf2tuc",
+              "renames": {
+                "sfxj.03d": "sfxuc.03d",
+                "sfxj.04a": "sfxuc.04a",
+                "sfxj.05": "sfxuc.05",
+                "sfxj.06b": "sfxuc.06b",
+                "sfxj.07a": "sfxuc.07a",
+                "sfxj.08": "sfxuc.08",
+                "sfx.09": "sfxuc.09",
+                "sfx.13m": "sfxuc.13m",
+                "sfx.15m": "sfxuc.15m",
+                "sfx.17m": "sfxuc.17m",
+                "sfx.19m": "sfxuc.19m",
+                "sfx.14m": "sfxuc.14m",
+                "sfx.16m": "sfxuc.16m",
+                "sfx.18m": "sfxuc.18m",
+                "sfx.20m": "sfxuc.20m",
+                "sfx.21m": "sfxuc.21m",
+                "sfx.23m": "sfxuc.23m",
+                "sfx.25m": "sfxuc.25m",
+                "sfx.27m": "sfxuc.27m",
+                "sfx.01": "sfx.01",
+                "sfx.02": "sfx.02",
+                "sfx.11m": "sfx.11m",
+                "sfx.12m": "sfx.12m",
+                "ssf2xj.key": "ssf2xj.key"
+              }
             },
             "hbmame": {
               "setname": "ssf2tuc",
@@ -2659,7 +2685,33 @@
               "base": "data/mra/ssf2-ex-japan.mra"
             },
             "fbneo": {
-              "setname": "ssf2xucj"
+              "setname": "ssf2xucj",
+              "renames": {
+                "sfxj.03d": "sfxucj.03d",
+                "sfxj.04a": "sfxucj.04a",
+                "sfxj.05": "sfxuc.05",
+                "sfxj.06b": "sfxucj.06b",
+                "sfxj.07a": "sfxucj.07a",
+                "sfxj.08": "sfxuc.08",
+                "sfx.09": "sfxuc.09",
+                "sfx.13m": "sfxucj.13m",
+                "sfx.15m": "sfxucj.15m",
+                "sfx.17m": "sfxucj.17m",
+                "sfx.19m": "sfxucj.19m",
+                "sfx.14m": "sfxuc.14m",
+                "sfx.16m": "sfxuc.16m",
+                "sfx.18m": "sfxuc.18m",
+                "sfx.20m": "sfxuc.20m",
+                "sfx.21m": "sfxuc.21m",
+                "sfx.23m": "sfxuc.23m",
+                "sfx.25m": "sfxuc.25m",
+                "sfx.27m": "sfxuc.27m",
+                "sfx.01": "sfx.01",
+                "sfx.02": "sfx.02",
+                "sfx.11m": "sfx.11m",
+                "sfx.12m": "sfx.12m",
+                "ssf2xj.key": "ssf2xj.key"
+              }
             },
             "hbmame": {
               "setname": "ssf2xuc",
@@ -2779,8 +2831,8 @@
             "Dee Jay's, Blanka's, M. Bison's and Akuma's portraits better match their fighter colors, including Dee Jay's necklace and Akuma's hair.",
             "Player-select grid portraits use selectable fighter colors. Honda, Blanka, Boxer, Claw and Dee Jay use their two-punch colors; Akuma keeps his classic three-punch color.",
             "Continue animations keep the selected portrait colors, including Blanka, Dee Jay, Zangief and the added colors.",
-            "Akuma’s large portrait appears in its intended colors immediately when the player-select cursor lands on him.",
-            "Ten Akuma’s Raging Demon accepts forward and LK remaining held while you complete the command. The two LP presses still need separate taps.",
+            "Akuma\u2019s large portrait appears in its intended colors immediately when the player-select cursor lands on him.",
+            "Ten Akuma\u2019s Raging Demon accepts forward and LK remaining held while you complete the command. The two LP presses still need separate taps.",
             "The player-select heading no longer covers the selection cursor in Arcade mode."
           ]
         },
@@ -5147,7 +5199,22 @@
               "base": "data/mra/sfa-ex-usa.mra"
             },
             "fbneo": {
-              "setname": "sfaex"
+              "setname": "sfaex",
+              "renames": {
+                "sfzj.03c": "sfzex.03c",
+                "sfz.04b": "sfzre.04b",
+                "sfz.05a": "sfzre.05a",
+                "sfz.06": "sfzex.06",
+                "sfz.14m": "sfzex.14m",
+                "sfz.16m": "sfzex.16m",
+                "sfz.18m": "sfzex.18m",
+                "sfz.20m": "sfzex.20m",
+                "sfz.01": "sfzex.01",
+                "sfz.02": "sfz.02",
+                "sfz.11m": "sfz.11m",
+                "sfz.12m": "sfz.12m",
+                "sfzj.key": "sfzj.key"
+              }
             },
             "hbmame": {
               "setname": "sfaexu",
@@ -5182,7 +5249,22 @@
               "base": "data/mra/sfa-ex-japan.mra"
             },
             "fbneo": {
-              "setname": "sfzexj"
+              "setname": "sfzexj",
+              "renames": {
+                "sfzj.03c": "sfzexj.03c",
+                "sfz.04b": "sfzex.04b",
+                "sfz.05a": "sfzrej.05a",
+                "sfz.06": "sfzexj.06",
+                "sfz.14m": "sfzexj.14m",
+                "sfz.16m": "sfzexj.16m",
+                "sfz.18m": "sfzexj.18m",
+                "sfz.20m": "sfzexj.20m",
+                "sfz.01": "sfzex.01",
+                "sfz.02": "sfz.02",
+                "sfz.11m": "sfz.11m",
+                "sfz.12m": "sfz.12m",
+                "sfzj.key": "sfzj.key"
+              }
             },
             "hbmame": {
               "setname": "sfzexj",
@@ -5217,7 +5299,22 @@
               "base": "data/mra/sfa-ex-asia.mra"
             },
             "fbneo": {
-              "setname": "sfzexa"
+              "setname": "sfzexa",
+              "renames": {
+                "sfzj.03c": "sfzexa.03c",
+                "sfz.04b": "sfzre.04b",
+                "sfz.05a": "sfzre.05a",
+                "sfz.06": "sfzexa.06",
+                "sfz.14m": "sfzexa.14m",
+                "sfz.16m": "sfzexa.16m",
+                "sfz.18m": "sfzexa.18m",
+                "sfz.20m": "sfzexa.20m",
+                "sfz.01": "sfzex.01",
+                "sfz.02": "sfz.02",
+                "sfz.11m": "sfz.11m",
+                "sfz.12m": "sfz.12m",
+                "sfzj.key": "sfzj.key"
+              }
             },
             "hbmame": {
               "setname": "sfzexa",

@@ -255,7 +255,7 @@ def _rom_bundle(root: Path, patch: dict, files: dict) -> dict:
                 entry["hbmame"] = item["hbmame"]
             if item.get("fbneo"):
                 fb = item["fbneo"]
-                require(isinstance(fb, dict) and set(fb) == {"setname"}
+                require(isinstance(fb, dict) and set(fb) in ({"setname"}, {"setname", "renames"})
                         and isinstance(fb["setname"], str) and re.fullmatch(r"[a-z0-9_]+", fb["setname"]),
                         f"invalid FBNeo metadata in {ips['zipname']}")
                 require(config.get("fbneo") == fb, f"FBNeo metadata mismatch for {item['key']} in {ips['zipname']}")
