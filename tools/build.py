@@ -618,8 +618,13 @@ def render_rom_download(patch: dict, bundle: dict) -> str:
     mra_info = bundle.get("mra")
     n = len(variants) if variants else 1
     mame_build = patch.get("mame_build", True)
+    fb_builds = variants or [{"fbneo": bundle.get("fbneo")}]
+    fb_sets = [(v.get("fbneo") or {}).get("setname") for v in fb_builds]
+    has_fb = any(fb_sets)
     kit = ("Patch kit for MAME, HBMAME, MiSTer and original hardware" if mame_build
            else "Patch kit for HBMAME and MiSTer")
+    if has_fb:
+        kit = kit.replace("HBMAME", "HBMAME, FBNeo")
     parts = ["<h2>Downloads</h2>", tools_notice(bundle)]
     if variants:
         parts.append(download_box(f"{kit}, all {n} builds", ips))
@@ -644,6 +649,7 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>""")
         head = "<tr><th>Build</th><th><code>--variant</code></th>"
         head += "<th>MiSTer setname</th>" if mra_info else ""
         head += "<th>HBMAME set</th>" if has_hb else ""
+        head += "<th>FBNeo set</th>" if has_fb else ""
         rows = []
         for v in variants:
             row = f'<tr><td>{esc(v["label"])}</td><td class="mono">{esc(v["key"])}</td>'
@@ -651,12 +657,14 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>""")
                 row += f'<td class="mono">{esc(v["mra"]["setname"]) if v.get("mra") else "—"}</td>'
             if has_hb:
                 row += f'<td class="mono">{esc(v["hbmame"]["setname"]) if v.get("hbmame") else "—"}</td>'
+            if has_fb:
+                row += f'<td class="mono">{esc(v["fbneo"]["setname"]) if v.get("fbneo") else "—"}</td>'
             rows.append(row + "</tr>")
         parts.append(f"<h3>The builds</h3>\n<table>\n{head}</tr>\n{''.join(rows)}\n</table>")
 
     outputs = build_outputs(patch, variants)
     listing = []
-    for label, mame, hb, mra in outputs:
+    for position, (label, mame, hb, mra) in enumerate(outputs):
         if label:
             listing.append(f"{label}:")
         pad = "  " if label else ""
@@ -664,6 +672,8 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>""")
             listing.append(f"{pad}out/{mame}")
         if hb:
             listing.append(f"{pad}out/hbmame/{hb}.zip")
+        if fb_sets[position]:
+            listing.append(f"{pad}out/fbneo/{fb_sets[position]}.zip")
         if mra:
             listing.append(f"{pad}out/{mra}")
         if hb and patch.get("mister_hbmame"):
@@ -712,6 +722,13 @@ program ROM, so on a computer, play it in HBMAME.</p>""")
         parts.append(f"""<p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
 <code>roms/</code> folder {where}. It loads with no checksum
 warnings. {status}</p>""")
+
+    if has_fb:
+        sets = ", ".join(f"<code>{esc(s)}</code>" for s in fb_sets if s)
+        parts.append(f"""<p><strong>FBNeo.</strong> The kit produces the sets {sets}.
+Put the ZIPs from <code>out/fbneo/</code> in your FBNeo ROM folder, keeping their ZIP and ROM filenames.
+These contain the complete game ROMs. Use an FBNeo version with definitions matching this game release.
+To build only the FBNeo sets, use <code>--platform fbneo --out-dir out</code>.</p>""")
 
     if mra_info:
         parts.append(f"""<p><strong>MiSTer.</strong> Copy the <code>_Arcade</code> folder from

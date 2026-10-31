@@ -234,7 +234,7 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
     else:
         lines += ["the result, and writes everything you need for each platform:"]
     lines.append("")
-    for label, mame, hb, mra in outputs:
+    for position, (label, mame, hb, mra) in enumerate(outputs):
         pad = "    " if label else "  "
         if label:
             lines.append(f"  {label}:")
@@ -242,10 +242,17 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
             lines.append(f"{pad}MAME:                     out/{mame}")
         if hb:
             lines.append(f"{pad}HBMAME:                   out/hbmame/{hb}.zip")
+        fb = ((variants[position] if variants else patch).get('fbneo') or {}).get('setname')
+        if fb:
+            lines.append(f"{pad}FBNeo:                    out/fbneo/{fb}.zip")
         if mra:
             lines.append(f"{pad}MiSTer:                   out/{mra}")
         if hb and patch.get("mister_hbmame"):
             lines.append(f"{pad}                          out/mister/games/hbmame/{hb}.zip")
+    if any(v.get('fbneo') for v in (variants or [patch])):
+        lines += ['', 'FBNeo: use --platform fbneo --out-dir out for complete game ZIPs.',
+                  'Keep their ZIP and member names. Use an FBNeo version with definitions',
+                  'matching this game release; older versions may reject its checksums.', '']
     # The shared ROM discovery (manifest input_schema); the page says the same.
     if patch['slug'] in json.loads(Path(__file__).with_name('darksoft_kits.json').read_text())['ips']:
         lines += ['', 'DARKSOFT', '',
@@ -571,7 +578,7 @@ def build_rom_downloads(patch: dict) -> dict:
     stock_path = resolve(art["stock_zip"])
     builds = specs or [{"key": None, "patched_zip": art["patched_zip"],
                         "mra": patch.get("mra") if patch.get("mra") else None,
-                        "hbmame": patch.get("hbmame")}]
+                        "hbmame": patch.get("hbmame"), "fbneo": patch.get("fbneo")}]
     if not stock_path.is_file():
         raise SystemExit(f"{slug}: stock archive is missing: {stock_path}")
     missing = [str(resolve(b["patched_zip"])) for b in builds
@@ -591,6 +598,11 @@ def build_rom_downloads(patch: dict) -> dict:
             mra_entries.append((b["mra"], resolve(b["patched_zip"]), members))
         if b.get("hbmame"):
             entry["hbmame"] = check_hbmame(tag, b["hbmame"], members, patched)
+        if b.get('fbneo'):
+            fb = b['fbneo']
+            if set(fb) != {'setname'} or not re.fullmatch(r'[a-z0-9_]+', fb['setname']):
+                raise SystemExit(f'{tag}: invalid FBNeo set declaration')
+            entry['fbneo'] = dict(fb)
         results.append((entry, ips_files))
     texts = generate_mras(patch, stock_path, mra_entries) if mra_zipname else []
     mra_by_cfg = {id(cfg): path for (cfg, _, _), (path, _, _) in zip(mra_entries, texts)}
@@ -614,6 +626,7 @@ def build_rom_downloads(patch: dict) -> dict:
         manifest["variants"] = [
             {k: e[k] for k in ("key", "label", "members") if k in e}
             | ({"hbmame": e["hbmame"]} if e.get("hbmame") else {})
+            | ({"fbneo": e["fbneo"]} if e.get("fbneo") else {})
             | ({"mra_setname": e["mra"]["setname"], "mra": f"mister/{mra_by_cfg[id(e['mra'])]}"}
                if e.get("mra") else {})
             for e, _ in results]
@@ -622,6 +635,8 @@ def build_rom_downloads(patch: dict) -> dict:
         manifest["members"] = e["members"]
         if e.get("hbmame"):
             manifest["hbmame"] = e["hbmame"]
+        if e.get('fbneo'):
+            manifest['fbneo'] = e['fbneo']
         if e.get("mra"):
             manifest["mra"] = f"mister/{mra_by_cfg[id(e['mra'])]}"
 

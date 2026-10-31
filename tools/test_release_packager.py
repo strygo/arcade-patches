@@ -180,6 +180,32 @@ class ReleasePackagerTests(unittest.TestCase):
         self.assertIn("next to your stock demo.zip.", text)
         self.assertNotIn("checksum", text.split("HBMAME:", 1)[1].split("\n\n", 1)[0])
 
+    def test_fbneo_export_keeps_members_and_uses_registered_name(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            stock, patched = root / 'stock.zip', root / 'patched.zip'
+            for path, program in [(stock, b'stock'), (patched, b'fixed')]:
+                with zipfile.ZipFile(path, 'w') as z:
+                    z.writestr('game.03', program)
+                    z.writestr('game.04', b'unchanged')
+            old = packager.DOCS, packager.SITE
+            self.addCleanup(lambda: (setattr(packager, 'DOCS', old[0]), setattr(packager, 'SITE', old[1])))
+            packager.DOCS, packager.SITE = root / 'published', {'title': 'Fixture'}
+            patch = {'slug': 'fbfixture', 'title': 'Demo', 'subtitle': 'Fixture', 'version': 'rc1',
+                     'date': '2026-10-30', 'game': 'Demo', 'hardware': 'Fixture', 'set': 'demo',
+                     'description': [], 'changes': [], 'artifact': {'stock_zip': str(stock),
+                     'patched_zip': str(patched)}, 'fbneo': {'setname': 'existingfb'}}
+            packager.build_rom_downloads(patch)
+            with zipfile.ZipFile(root / 'published/downloads/fbfixture-rc1-ips.zip') as z:
+                z.extractall(root / 'kit')
+            readme = (root / 'kit/readme.txt').read_text()
+            self.assertIn('out/fbneo/existingfb.zip', readme)
+            self.assertIn('matching this game release', readme)
+            subprocess.run([sys.executable, str(root / 'kit/apply.py'), str(stock),
+                            '--platform', 'fbneo', '--out-dir', str(root / 'out')], check=True, capture_output=True)
+            with zipfile.ZipFile(root / 'out/fbneo/existingfb.zip') as z:
+                self.assertEqual({'game.03': b'fixed', 'game.04': b'unchanged'}, {n: z.read(n) for n in z.namelist()})
+
     def test_builds_round_trip_checked_ips_without_the_site_renderer(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

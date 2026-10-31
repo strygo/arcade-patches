@@ -77,12 +77,12 @@ You need:</p>
 <ul><li>Your own original Street Fighter Zero (Japan 950727) arcade romset: sfzj.</li></ul>
 <p>The patch tool verifies your original ROMs, applies the selected EX edition, and writes the MAME and HBMAME archives and MiSTer MRAs. No console disc is needed.</p>
 <h2>Downloads</h2>
-
+<p>Tools updated 2026-10-30. Game version unchanged.</p>
 <div class="download">
-  <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 3 builds</div>
-  <div class="file"><a href="../downloads/sfa-ex-rc2-ips.zip?v=0075cd57ac">sfa-ex-rc2-ips.zip</a>
+  <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware, all 3 builds</div>
+  <div class="file"><a href="../downloads/sfa-ex-rc2-ips.zip?v=3f22976110">sfa-ex-rc2-ips.zip</a>
   (1.0 MB)</div>
-  <div class="hash">SHA-256: 0075cd57ac14f3136179087e7ce9eb0dbaec1de4d99b5a2e39f68ca966c04c42</div>
+  <div class="hash">SHA-256: 3f229761104f0a6d4ecb34a06e8e68ddc69b43009dea03a5fa0d2224c5fc94f8</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 3 builds</div>
@@ -96,8 +96,8 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
 <h3>The builds</h3>
 <table>
-<tr><th>Build</th><th><code>--variant</code></th><th>MiSTer setname</th><th>HBMAME set</th></tr>
-<tr><td>USA (English)</td><td class="mono">usa</td><td class="mono">sfaexu</td><td class="mono">sfaexu</td></tr><tr><td>Japan (Japanese)</td><td class="mono">japan</td><td class="mono">sfzexj</td><td class="mono">sfzexj</td></tr><tr><td>Asia (English)</td><td class="mono">asia</td><td class="mono">sfzexa</td><td class="mono">sfzexa</td></tr>
+<tr><th>Build</th><th><code>--variant</code></th><th>MiSTer setname</th><th>HBMAME set</th><th>FBNeo set</th></tr>
+<tr><td>USA (English)</td><td class="mono">usa</td><td class="mono">sfaexu</td><td class="mono">sfaexu</td><td class="mono">sfaex</td></tr><tr><td>Japan (Japanese)</td><td class="mono">japan</td><td class="mono">sfzexj</td><td class="mono">sfzexj</td><td class="mono">sfzexj</td></tr><tr><td>Asia (English)</td><td class="mono">asia</td><td class="mono">sfzexa</td><td class="mono">sfzexa</td><td class="mono">sfzexa</td></tr>
 </table>
 <h2>How to apply</h2>
 <pre><code>unzip sfa-ex-rc2-ips.zip -d sfzj-patch
@@ -108,14 +108,17 @@ checks the result, and writes the files for every platform in one go: (add <code
 <pre><code>USA (English):
   out/mame/usa/sfzj.zip
   out/hbmame/sfaexu.zip
+  out/fbneo/sfaex.zip
   out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/Street Fighter Alpha EX (USA).mra
 Japan (Japanese):
   out/mame/japan/sfzj.zip
   out/hbmame/sfzexj.zip
+  out/fbneo/sfzexj.zip
   out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Street Fighter Zero EX (Japan).mra
 Asia (English):
   out/mame/asia/sfzj.zip
   out/hbmame/sfzexa.zip
+  out/fbneo/sfzexa.zip
   out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Asia/Street Fighter Zero EX (Asia).mra</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
 stock set in your MAME rompath (it keeps the name <code>sfzj.zip</code>, so use one build at a time), or burn its ROM
@@ -125,6 +128,10 @@ game runs normally. To start it from a menu, use the HBMAME build.</p>
 <p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
 <code>roms/</code> folder together with <code>qsound.zip</code>; it holds the complete set. It loads with no checksum
 warnings. The <a href="https://github.com/Robbbert/hbmame">HBMAME</a> set definition (<code>sfaexu</code>, <code>sfzexj</code> and <code>sfzexa</code>) is generated with the edition; an upstream submission is pending, so for now you add it to your own HBMAME build.</p>
+<p><strong>FBNeo.</strong> The kit produces the sets <code>sfaex</code>, <code>sfzexj</code>, <code>sfzexa</code>.
+Put the ZIPs from <code>out/fbneo/</code> in your FBNeo ROM folder, keeping their ZIP and ROM filenames.
+These contain the complete game ROMs. Use an FBNeo version with definitions matching this game release.
+To build only the FBNeo sets, use <code>--platform fbneo --out-dir out</code>.</p>
 <p><strong>MiSTer.</strong> Copy the <code>_Arcade</code> folder from
 <code>out/mister/</code> to the root of your SD card, and keep the stock, unmodified romset at
 <code>games/mame/sfzj.zip</code> (split MAME sets also need <code>qsound.zip</code>). You need

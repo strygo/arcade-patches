@@ -69,6 +69,7 @@ def load_bundle(variant=None):
         manifest = dict(manifest)
         manifest["members"] = chosen["members"]
         manifest["hbmame"] = chosen.get("hbmame")
+        manifest["fbneo"] = chosen.get("fbneo")
         manifest["mra"] = chosen.get("mra")
         manifest["darksoft"] = chosen.get("darksoft")
         manifest["variant"] = {"key": chosen["key"], "label": chosen["label"]}
@@ -172,7 +173,7 @@ def main():
     parser.add_argument("--out-dir", help="output folder (default: unused output-<set> folder)")
     parser.add_argument("-o", "--output")
     parser.add_argument("--hbmame", action="store_true")
-    parser.add_argument("--platform", choices=("all", "mame", "hbmame", "mister", "darksoft"))
+    parser.add_argument("--platform", choices=("all", "mame", "hbmame", "fbneo", "mister", "darksoft"))
     parser.add_argument("--variant")
     parser.add_argument("--list-variants", action="store_true")
     parser.add_argument("--include-devices", action="store_true")
@@ -215,8 +216,8 @@ def main():
     elif not args.out_dir and not (args.check or args.check_runtime):
         parser.error("choose --variant or use --out-dir for all builds")
     bundles = [load_bundle(key) for key in keys]
-    default_name = (bundles[0][0].get("hbmame", {}).get("setname", base["set"])
-                    if platform == "hbmame" else base["set"] + "_patched") + ".zip"
+    default_name = ((bundles[0][0].get(platform) or {}).get("setname", base["set"])
+                    if platform in ("hbmame", "fbneo") else base["set"] + "_patched") + ".zip"
     output = Path(args.out_dir or args.output or default_name).resolve()
     if not (args.check or args.check_runtime):
         check_output(output, ([args.target] if args.target else []) + args.rompath, directory=bool(args.out_dir))
@@ -229,7 +230,10 @@ def main():
         need_darksoft = platform in ("darksoft", "all") and bool(manifest.get("darksoft"))
         if platform == "darksoft" and not need_darksoft:
             raise RomError("Darksoft is unavailable: this kit has no declared compatible CPS-2 output")
-        need_full = (platform in ("mame", "all") and base.get("mame_build", True)) or need_darksoft
+        need_fbneo = platform in ("fbneo", "all") and bool(manifest.get("fbneo"))
+        if platform == "fbneo" and not need_fbneo:
+            raise RomError("This kit has no FBNeo mapping")
+        need_full = (platform in ("mame", "all") and base.get("mame_build", True)) or need_darksoft or need_fbneo
         need_hb = (platform in ("hbmame", "all") or (platform == "mister" and base.get("mister_hbmame"))) and bool(manifest.get("hbmame"))
         if platform == "mame" and not base.get("mame_build", True):
             raise RomError("This kit has no MAME build; select HBMAME or MiSTer")
@@ -259,6 +263,12 @@ def main():
             name = "/".join(part for part in ("mame", key, base["set"] + ".zip") if part)
             full = build_members(manifest, patches, source)
             outputs[name] = full | devices
+        if platform in ("all", "fbneo") and manifest.get("fbneo"):
+            if full is None:
+                full = build_members(manifest, patches, source)
+            # FBNeo uses the canonical physical game members, without QSound
+            # device firmware. Only the archive's registered short name differs.
+            outputs["fbneo/" + manifest["fbneo"]["setname"] + ".zip"] = full
         if platform in ("all", "darksoft") and manifest.get("darksoft"):
             from darksoft import tree
             spec = manifest["darksoft"]
@@ -287,7 +297,10 @@ def main():
     if args.out_dir:
         print_completion(output, outputs)
     else:
-        print(f"{'HBMAME' if platform == 'hbmame' else 'MAME'}: {output}; add it to your ROM path with the stock parent and QSound archives.")
+        if platform == "fbneo":
+            print(f"FBNeo: {output}; add it to your ROM path using a version with this game's matching definitions.")
+        else:
+            print(f"{'HBMAME' if platform == 'hbmame' else 'MAME'}: {output}; add it to your ROM path with the stock parent and QSound archives.")
 
 
 

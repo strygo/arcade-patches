@@ -253,6 +253,13 @@ def _rom_bundle(root: Path, patch: dict, files: dict) -> dict:
                     f"incomplete variant in {ips['zipname']}")
             if item.get("hbmame"):
                 entry["hbmame"] = item["hbmame"]
+            if item.get("fbneo"):
+                fb = item["fbneo"]
+                require(isinstance(fb, dict) and set(fb) == {"setname"}
+                        and isinstance(fb["setname"], str) and re.fullmatch(r"[a-z0-9_]+", fb["setname"]),
+                        f"invalid FBNeo metadata in {ips['zipname']}")
+                require(config.get("fbneo") == fb, f"FBNeo metadata mismatch for {item['key']} in {ips['zipname']}")
+                entry["fbneo"] = dict(fb)
             if item.get("mra"):
                 mra = config.get("mra")
                 require(isinstance(mra, dict) and mra.get("setname") == item.get("mra_setname"),
@@ -266,6 +273,9 @@ def _rom_bundle(root: Path, patch: dict, files: dict) -> dict:
     else:
         require(isinstance(manifest.get("members"), list), f"no members in {ips['zipname']}")
         result["members"] = manifest["members"]
+        if manifest.get("fbneo"):
+            require(patch.get("fbneo") == manifest["fbneo"], f"FBNeo metadata mismatch in {ips['zipname']}")
+            result["fbneo"] = dict(manifest["fbneo"])
     if "mra" in files:
         result["mra"] = validate_file_record(
             root, patch["slug"], patch["version"], "mra", files["mra"])

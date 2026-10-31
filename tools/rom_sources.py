@@ -81,7 +81,7 @@ def check_output(value, inputs=(), *, directory=True):
 
 def print_completion(out, files):
     """Report only delivered targets, with their actual ZIP/MRA inventory."""
-    labels = {"mame": "MAME", "hbmame": "HBMAME", "mister": "MiSTer", "darksoft": "Darksoft"}
+    labels = {"mame": "MAME", "hbmame": "HBMAME", "fbneo": "FBNeo", "mister": "MiSTer", "darksoft": "Darksoft"}
     for target, label in labels.items():
         names = sorted(str(n) for n in files if Path(n).parts[0] == target)
         if not names:
@@ -90,6 +90,8 @@ def print_completion(out, files):
         print(f"{label}: " + (", ".join(inventory) or str(Path(out) / target)))
         if target in ("mame", "hbmame"):
             print(f"{label}: add the ZIPs to your ROM path; keep the stock parent and QSound archives available.")
+        elif target == "fbneo":
+            print("FBNeo: add the ZIPs to your ROM path using a version with these games' matching definitions.")
         elif target == "mister":
             print(f"MiSTer: copy the contents of {Path(out) / target} to the SD card root.")
             if not any(n.endswith('.zip') for n in names):

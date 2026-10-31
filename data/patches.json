@@ -2616,6 +2616,9 @@
               "region": "USA",
               "base": "data/mra/ssf2-ex-usa.mra"
             },
+            "fbneo": {
+              "setname": "ssf2tuc"
+            },
             "hbmame": {
               "setname": "ssf2tuc",
               "pr_url": "https://github.com/Robbbert/hbmame/pull/56",
@@ -2654,6 +2657,9 @@
               "subdir": "_Japan",
               "region": "Japan",
               "base": "data/mra/ssf2-ex-japan.mra"
+            },
+            "fbneo": {
+              "setname": "ssf2xucj"
             },
             "hbmame": {
               "setname": "ssf2xuc",
@@ -5140,6 +5146,9 @@
               "region": "USA",
               "base": "data/mra/sfa-ex-usa.mra"
             },
+            "fbneo": {
+              "setname": "sfaex"
+            },
             "hbmame": {
               "setname": "sfaexu",
               "complete": true,
@@ -5172,6 +5181,9 @@
               "subdir": "_Japan",
               "base": "data/mra/sfa-ex-japan.mra"
             },
+            "fbneo": {
+              "setname": "sfzexj"
+            },
             "hbmame": {
               "setname": "sfzexj",
               "complete": true,
@@ -5203,6 +5215,9 @@
               "region": "Asia",
               "subdir": "_Asia",
               "base": "data/mra/sfa-ex-asia.mra"
+            },
+            "fbneo": {
+              "setname": "sfzexa"
             },
             "hbmame": {
               "setname": "sfzexa",

@@ -86,12 +86,12 @@
 <p>How EX compares with Japan&#x27;s Super Turbo and with Grand Master Challenge.</p>
 <table class="compare"><thead><tr><th></th><th>Japan</th><th>Grand Master Challenge</th><th>EX</th></tr></thead><tbody><tr><th scope="row">Gameplay</th><td>Japanese version</td><td>Japanese version</td><td>Japanese version</td></tr><tr><th scope="row">Game modes</th><td>Arcade</td><td>Arcade</td><td>Arcade, Versus and Training</td></tr><tr><th scope="row">Pause</th><td>No</td><td>No</td><td>Coin in Console mode</td></tr><tr><th scope="row">Language</th><td>Japanese</td><td>English</td><td>English (USA build) or Japanese (Japan build)</td></tr><tr><th scope="row">Artwork</th><td>Original</td><td>Original</td><td>30th Anniversary flag, signs and Guile stage by default, Ultra Street Fighter II stages, or Original</td></tr><tr><th scope="row">Shin Akuma</th><td>Hidden boss</td><td>Hidden boss</td><td>Playable from the start</td></tr><tr><th scope="row">Ten Akuma</th><td>No</td><td>No</td><td>Playable, with the Raging Demon</td></tr><tr><th scope="row">Bonus stages</th><td>No</td><td>No</td><td>Car, barrels, oil drums</td></tr><tr><th scope="row">Tournament Battle</th><td>No</td><td>No</td><td>Yes, with the link adapter</td></tr><tr><th scope="row">Colors per fighter</th><td>8</td><td>8</td><td>10</td></tr><tr><th scope="row">Free Play</th><td>No</td><td>Yes</td><td>Yes</td></tr><tr><th scope="row">Runs in stock MAME</th><td>Yes</td><td>Yes</td><td>Yes</td></tr></tbody></table>
 <h2>Downloads</h2>
-
+<p>Tools updated 2026-10-30. Game version unchanged.</p>
 <div class="download">
-  <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/ssf2-ex-rc12-ips.zip?v=4c64684194">ssf2-ex-rc12-ips.zip</a>
+  <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware, all 2 builds</div>
+  <div class="file"><a href="../downloads/ssf2-ex-rc12-ips.zip?v=1956a5bd04">ssf2-ex-rc12-ips.zip</a>
   (1.3 MB)</div>
-  <div class="hash">SHA-256: 4c6468419460bdb6f4f5187113f390958e9b569d66961f1a99c65c58e8b0326a</div>
+  <div class="hash">SHA-256: 1956a5bd0492d298ec72625d79df777e4025e743316a8f646fdd655fb473f6bc</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
@@ -105,8 +105,8 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
 <h3>The builds</h3>
 <table>
-<tr><th>Build</th><th><code>--variant</code></th><th>MiSTer setname</th><th>HBMAME set</th></tr>
-<tr><td>USA (English)</td><td class="mono">usa</td><td class="mono">ssf2tuc</td><td class="mono">ssf2tuc</td></tr><tr><td>Japan (Japanese)</td><td class="mono">japan</td><td class="mono">ssf2xuc</td><td class="mono">ssf2xuc</td></tr>
+<tr><th>Build</th><th><code>--variant</code></th><th>MiSTer setname</th><th>HBMAME set</th><th>FBNeo set</th></tr>
+<tr><td>USA (English)</td><td class="mono">usa</td><td class="mono">ssf2tuc</td><td class="mono">ssf2tuc</td><td class="mono">ssf2tuc</td></tr><tr><td>Japan (Japanese)</td><td class="mono">japan</td><td class="mono">ssf2xuc</td><td class="mono">ssf2xuc</td><td class="mono">ssf2xucj</td></tr>
 </table>
 <h2>How to apply</h2>
 <pre><code>unzip ssf2-ex-rc12-ips.zip -d ssf2xj-patch
@@ -117,11 +117,13 @@ checks the result, and writes the files for every platform in one go: (add <code
 <pre><code>USA (English):
   out/mame/usa/ssf2xj.zip
   out/hbmame/ssf2tuc.zip
+  out/fbneo/ssf2tuc.zip
   out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/Super Street Fighter II EX (USA).mra
   out/mister/games/hbmame/ssf2tuc.zip
 Japan (Japanese):
   out/mame/japan/ssf2xj.zip
   out/hbmame/ssf2xuc.zip
+  out/fbneo/ssf2xucj.zip
   out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Super Street Fighter II EX (Japan).mra
   out/mister/games/hbmame/ssf2xuc.zip</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
@@ -132,6 +134,10 @@ game runs normally. To start it from a menu, use the HBMAME build.</p>
 <p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
 <code>roms/</code> folder next to your stock <code>ssf2xj.zip</code>. It loads with no checksum
 warnings. This edition's builds are official <a href="https://github.com/Robbbert/hbmame">HBMAME</a> sets, <code>ssf2tuc</code> and <code>ssf2xuc</code> (<a href="https://github.com/Robbbert/hbmame/pull/56">merged upstream</a>), so full HBMAME collections may already carry them.</p>
+<p><strong>FBNeo.</strong> The kit produces the sets <code>ssf2tuc</code>, <code>ssf2xucj</code>.
+Put the ZIPs from <code>out/fbneo/</code> in your FBNeo ROM folder, keeping their ZIP and ROM filenames.
+These contain the complete game ROMs. Use an FBNeo version with definitions matching this game release.
+To build only the FBNeo sets, use <code>--platform fbneo --out-dir out</code>.</p>
 <p><strong>MiSTer.</strong> Copy the <code>_Arcade</code> folder from
 <code>out/mister/</code> to the root of your SD card, and keep the stock, unmodified romset at
 <code>games/mame/ssf2xj.zip</code> (split MAME sets also need <code>qsound.zip</code>). You need
