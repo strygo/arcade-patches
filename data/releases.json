@@ -1095,28 +1095,34 @@
           }
         },
         "rc2": {
-          "current_revision": 1,
-          "date": "2026-10-25",
+          "current_revision": 2,
+          "date": "2026-10-30",
           "files": {
             "kit": {
-              "archive": "archive/eaa33072aada4e5d79da067a4b1a361c639a65cd0aa01d79a1511a7e01dc7914/final-fight-ex-cps2-rc2-kit.zip",
+              "archive": "archive/7aecf3717de46fbb2d685ef6259595d114ad4d9d58b1182bae416c9409e3b980/final-fight-ex-cps2-rc2-kit.zip",
               "name": "final-fight-ex-cps2-rc2-kit.zip",
-              "sha256": "eaa33072aada4e5d79da067a4b1a361c639a65cd0aa01d79a1511a7e01dc7914",
-              "size": 38506900
+              "sha256": "7aecf3717de46fbb2d685ef6259595d114ad4d9d58b1182bae416c9409e3b980",
+              "size": 38507641
             }
           },
+          "game_contract_sha256": "6e5a226ea90dbc5a3db47384826974e2e821556d355c39793a0b1ed3e32b3a4e",
           "kind": "kit",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-10-30",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "qualification": {
-            "candidate": "rc2-candidate.4",
-            "capcom_source_commit": "660cf33a67a475585107c443e706ac1e384f5d4c",
-            "ready_record_sha256": "da8bb07eb00d597699e7a16fba1e469b92ea2868cabc8d9e866d66930b19d771",
-            "release_sha256": "3a171cab4f3133ccaf6b119b40ea36a6ad70e28c1d9866fd4170cdc6e668341d",
+            "candidate": "rc2-tools-r2-candidate.1",
+            "capcom_source_commit": "3e9c6aae987860369b6e2850dce96a49e73c323f",
+            "ready_record_sha256": "af03a6b6cadaa2af1a34a24e6d1d0ab5d5b37a67bdb7dc73353d90301e24c2c9",
+            "release_sha256": "a45c8196f19264f7bd6d2acc0faede62cb39b00345269f2aa6754f058b5cf9fd",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -1138,7 +1144,39 @@
                 "release_sha256": "3a171cab4f3133ccaf6b119b40ea36a6ad70e28c1d9866fd4170cdc6e668341d",
                 "type": "qualified-candidate"
               }
+            },
+            "2": {
+              "date": "2026-10-30",
+              "files": {
+                "kit": {
+                  "archive": "archive/7aecf3717de46fbb2d685ef6259595d114ad4d9d58b1182bae416c9409e3b980/final-fight-ex-cps2-rc2-kit.zip",
+                  "name": "final-fight-ex-cps2-rc2-kit.zip",
+                  "sha256": "7aecf3717de46fbb2d685ef6259595d114ad4d9d58b1182bae416c9409e3b980",
+                  "size": 38507641
+                }
+              },
+              "game_contract_sha256": "6e5a226ea90dbc5a3db47384826974e2e821556d355c39793a0b1ed3e32b3a4e",
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc2-tools-r2-candidate.1",
+                "capcom_source_commit": "3e9c6aae987860369b6e2850dce96a49e73c323f",
+                "ready_record_sha256": "af03a6b6cadaa2af1a34a24e6d1d0ab5d5b37a67bdb7dc73353d90301e24c2c9",
+                "release_sha256": "a45c8196f19264f7bd6d2acc0faede62cb39b00345269f2aa6754f058b5cf9fd",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "kit": "eaa33072aada4e5d79da067a4b1a361c639a65cd0aa01d79a1511a7e01dc7914"
+                },
+                "revision": 1
+              }
             }
+          },
+          "tooling_baseline": {
+            "files": {
+              "kit": "eaa33072aada4e5d79da067a4b1a361c639a65cd0aa01d79a1511a7e01dc7914"
+            },
+            "revision": 1
           }
         }
       }

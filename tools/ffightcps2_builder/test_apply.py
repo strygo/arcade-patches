@@ -83,6 +83,11 @@ class ApplyTests(unittest.TestCase):
             shutil.copyfile(HERE / name, self.kit / name)
         (self.kit / "ffex_kit.py").write_text(STUB_KIT)
         (self.kit / "packs.py").write_text(STUB_PACKS)
+        # Dependency checks stay independent of the host's installed packages.
+        (self.kit / "numpy.py").write_text("")
+        (self.kit / "PIL").mkdir()
+        (self.kit / "PIL/__init__.py").write_text("")
+        (self.kit / "PIL/Image.py").write_text("")
         (self.kit / "core").mkdir()
         (self.kit / "core" / KIT["core"]).write_bytes(b"core")
         (self.kit / "keyed").mkdir()
@@ -117,9 +122,36 @@ class ApplyTests(unittest.TestCase):
                               cwd=self.kit.parent, env=env, capture_output=True, text=True)
 
     def test_check_needs_only_the_romsets(self):
+        (self.kit / "numpy.py").write_text("raise ModuleNotFoundError(name='numpy')\n")
+        (self.kit / "PIL/__init__.py").write_text("raise ModuleNotFoundError(name='PIL')\n")
         result = self.run_apply("--check")
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("arcade inputs verified", result.stdout)
+
+    def test_missing_python_packages_fail_before_reading_romsets(self):
+        for missing in (("Pillow",), ("numpy",), ("numpy", "Pillow")):
+            with self.subTest(missing=missing):
+                (self.kit / "numpy.py").write_text(
+                    "raise ModuleNotFoundError(name='numpy')\n" if "numpy" in missing else "")
+                (self.kit / "PIL/__init__.py").write_text(
+                    "raise ModuleNotFoundError(name='PIL')\n" if "Pillow" in missing else "")
+                out = self.kit.parent / "out"
+                result = self.run_apply("--disc-jp", str(self.discs[0]), "--out-dir", str(out))
+                self.assertEqual(result.returncode, 1, result.stderr)
+                self.assertIn(f"Missing required Python packages: {', '.join(missing)}.", result.stderr)
+                self.assertIn(sys.executable, result.stderr)
+                self.assertIn(f"-m pip install {' '.join(missing)}", result.stderr)
+                self.assertIn("Then run the build command again.", result.stderr)
+                self.assertNotIn("Traceback", result.stderr)
+                self.assertNotIn("Reading your arcade romsets", result.stdout)
+                self.assertFalse((self.kit / "calls.json").exists() or out.exists())
+
+    def test_dependency_import_errors_are_not_misreported_as_missing_packages(self):
+        (self.kit / "numpy.py").write_text("raise ModuleNotFoundError(name='unexpected_internal_module')\n")
+        result = self.run_apply("--disc-jp", str(self.discs[0]))
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("Traceback", result.stderr)
+        self.assertNotIn("Missing required Python packages", result.stderr)
 
     def test_only_the_editions_whose_disc_is_given(self):
         self.write_mras(True)

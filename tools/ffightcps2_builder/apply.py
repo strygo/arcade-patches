@@ -14,7 +14,10 @@ checksum-verified against the known build.  See README.txt.
 import argparse
 import importlib
 import json
+import os
 import re
+import shlex
+import subprocess
 import sys
 import tempfile
 import xml.etree.ElementTree as ET
@@ -34,6 +37,24 @@ PLATFORMS = ("mister", "hbmame", "mame", "darksoft")
 def fail(msg):
     print(f"ERROR: {msg}", file=sys.stderr)
     sys.exit(1)
+
+
+def check_python_dependencies():
+    """Check the disc chain's Python packages before reading ROMs or building."""
+    missing = []
+    for module, package in (("numpy", "numpy"), ("PIL.Image", "Pillow")):
+        try:
+            importlib.import_module(module)
+        except ModuleNotFoundError as exc:
+            if exc.name not in (module, module.split(".")[0]):
+                raise
+            missing.append(package)
+    if missing:
+        command = [sys.executable, "-m", "pip", "install", *missing]
+        install = subprocess.list2cmdline(command) if os.name == "nt" else shlex.join(command)
+        fail(f"Missing required Python packages: {', '.join(missing)}.\n"
+             f"Install them with:\n  {install}\n"
+             "Then run the build command again.")
 
 
 def kit_module(name):
@@ -96,6 +117,8 @@ def main():
 
     if not args.check and not args.out_dir:
         fail("give --out-dir")
+    if not args.check:
+        check_python_dependencies()
     catalog = json.loads((HERE / "rom_inputs.json").read_text())["sets"]
     print("Reading your arcade romsets...")
     paths = []

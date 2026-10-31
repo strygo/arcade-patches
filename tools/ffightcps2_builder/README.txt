@@ -35,6 +35,14 @@ WHAT YOU NEED
      fetched as verified packages when needed. Installed 7-Zip and chdman
      can also be used. No emulator or assembler is needed.
 
+     Install the Python packages using the same Python as the build:
+
+       Windows:       py -m pip install numpy Pillow
+       macOS / Linux: python3 -m pip install numpy Pillow
+
+     If either package is missing, the kit stops before reading romsets
+     and shows an install command for the Python you are running.
+
 
 USAGE
 -----
