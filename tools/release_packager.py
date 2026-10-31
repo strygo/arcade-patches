@@ -598,6 +598,15 @@ def build_rom_downloads(patch: dict) -> dict:
             mra_entries.append((b["mra"], resolve(b["patched_zip"]), members))
         if b.get("hbmame"):
             entry["hbmame"] = check_hbmame(tag, b["hbmame"], members, patched)
+        hb = entry.get('hbmame')
+        if hb:
+            import fbneo_names
+            canonical = {m['name']: hb.get('renames', {}).get(m['name'], m['name'])
+                         for m in members if m.get('role') != 'device' and m['name'] != 'dl-1425.bin'}
+            registered = fbneo_names.declaration(hb['setname'], canonical)
+            if b.get('fbneo') and registered and b['fbneo'] != registered:
+                raise SystemExit(f'{tag}: FBNeo declaration differs from established names')
+            if registered: b['fbneo'] = registered
         if b.get('fbneo'):
             fb = b['fbneo']
             if set(fb) not in ({'setname'}, {'setname', 'renames'}) or not re.fullmatch(r'[a-z0-9_]+', fb['setname']):
@@ -655,7 +664,7 @@ def build_rom_downloads(patch: dict) -> dict:
     members = results[0][0]["members"]
     write = zip_writer(ips_path, stamp)
     with zipfile.ZipFile(ips_path, "w") as z:
-        write(z, "readme.txt", make_readme(patch, members, "ips", variants).encode())
+        write(z, "readme.txt", make_readme(dict(patch, fbneo=results[0][0].get("fbneo")), members, "ips", variants).encode())
         write(z, "manifest.json", json.dumps(manifest, indent=2).encode())
         import python_kit
         python_files = {"apply.py": (ROOT / "tools" / "bundle_apply.py").read_bytes()}

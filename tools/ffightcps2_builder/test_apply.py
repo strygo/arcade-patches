@@ -20,7 +20,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 KIT = json.loads((HERE / "kit.json").read_text())
-SHARED = ("apply.py", "rom_sources.py", "darksoft.py", "darksoft_profiles.json", "darksoft_kits.json", "kit.json")
+SHARED = ("fbneo_names.py", "fbneo_names.json", "apply.py", "rom_sources.py", "darksoft.py", "darksoft_profiles.json", "darksoft_kits.json", "kit.json")
 
 STUB_KIT = '''
 import json, os
@@ -192,12 +192,26 @@ class ApplyTests(unittest.TestCase):
                 self.assertEqual({n: z.read(n) for n in z.namelist()}, expected)
         self.assertEqual(sorted(p.name for p in out.iterdir()), ["mame"])
 
+    def test_fbneo_selection_preserves_registered_names_and_every_game_byte(self):
+        out = self.kit.parent / 'fb-out'
+        result = self.run_apply('--disc-jp', str(self.discs[0]), '--platform', 'fbneo', '--out-dir', str(out))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual([p.name for p in out.iterdir()], ['fbneo'])
+        declarations = json.loads((self.kit/'fbneo_names.json').read_text())['sets']
+        for edition in ('japan','english'):
+            name = KIT['editions'][edition]['set']
+            mapping = declarations[name]['renames']
+            expected = {mapping[n]:b for n,b in self.small[(edition,True)].items()}
+            with zipfile.ZipFile(out/'fbneo'/(name+'.zip')) as z:
+                self.assertEqual(expected,{n:z.read(n) for n in z.namelist()})
+                self.assertIn('phoenix.key',z.namelist())
+
     def test_all_targets_preserve_the_same_game_bytes(self):
         self.write_mras(False)
         out = self.kit.parent / "out"
         result = self.run_apply("--disc-us", str(self.discs[1]), "--out-dir", str(out), small=False)
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(sorted(p.name for p in out.iterdir()), ["darksoft", "hbmame", "mame", "mister"])
+        self.assertEqual(sorted(p.name for p in out.iterdir()), ["darksoft", "fbneo", "hbmame", "mame", "mister"])
         for name in ("mame/usa/sfa3ud.zip", "hbmame/ffex2u.zip", "mister/games/hbmame/ffex2u.zip"):
             with zipfile.ZipFile(out / name) as z:
                 self.assertEqual({n: z.read(n) for n in z.namelist()}, self.small[("usa", False)])

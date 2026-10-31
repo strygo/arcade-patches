@@ -12,6 +12,7 @@ Only the builds whose disc you give are made.  Every member is
 checksum-verified against the known build.  See README.txt.
 """
 import argparse
+import fbneo_names
 import importlib
 import json
 import os
@@ -31,7 +32,7 @@ sys.path.insert(0, str(HERE))         # the kit's own folder only: ffex_kit, pac
 from rom_sources import Resolver, RomError, QSOUND, search_paths, publish_tree  # noqa: E402
 
 KIT = json.loads((HERE / "kit.json").read_text())
-PLATFORMS = ("mister", "hbmame", "mame", "darksoft")
+PLATFORMS = ("mister", "hbmame", "fbneo", "mame", "darksoft")
 
 
 def fail(msg):
@@ -174,6 +175,8 @@ def main():
                 # Each edition needs its own ROM path because the set name is shared.
                 layout = {meta.get("layout_names", {}).get(n, n): data for n, data in members.items()}
                 files[f"mame/{edition}/sfa3ud.zip"] = layout
+            if "fbneo" in platforms:
+                files.update(fbneo_names.tree(meta['set'], members))
             if "hbmame" in platforms:
                 files[f"hbmame/{zip_name}"] = members
                 files[f"hbmame/definitions/{meta['set']}.cpp.inc"] = \

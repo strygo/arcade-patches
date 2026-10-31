@@ -258,7 +258,7 @@ def _rom_bundle(root: Path, patch: dict, files: dict) -> dict:
                 require(isinstance(fb, dict) and set(fb) in ({"setname"}, {"setname", "renames"})
                         and isinstance(fb["setname"], str) and re.fullmatch(r"[a-z0-9_]+", fb["setname"]),
                         f"invalid FBNeo metadata in {ips['zipname']}")
-                require(config.get("fbneo") == fb, f"FBNeo metadata mismatch for {item['key']} in {ips['zipname']}")
+                require((config.get("fbneo") or registered_fbneo(item)) == fb, f"FBNeo metadata mismatch for {item['key']} in {ips['zipname']}")
                 entry["fbneo"] = dict(fb)
             if item.get("mra"):
                 mra = config.get("mra")
@@ -274,7 +274,7 @@ def _rom_bundle(root: Path, patch: dict, files: dict) -> dict:
         require(isinstance(manifest.get("members"), list), f"no members in {ips['zipname']}")
         result["members"] = manifest["members"]
         if manifest.get("fbneo"):
-            require(patch.get("fbneo") == manifest["fbneo"], f"FBNeo metadata mismatch in {ips['zipname']}")
+            require((patch.get("fbneo") or registered_fbneo(manifest)) == manifest["fbneo"], f"FBNeo metadata mismatch in {ips['zipname']}")
             result["fbneo"] = dict(manifest["fbneo"])
     if "mra" in files:
         result["mra"] = validate_file_record(
@@ -303,7 +303,37 @@ def _published_bundle(root: Path, patch: dict, inventory: dict) -> dict:
         return {"kind": "chd", "chd": info, "manifest": manifest}
     with zipfile.ZipFile(Path(root) / "docs" / "downloads" / info["zipname"]) as archive:
         rom_inputs = any(Path(name).name == "rom_sources.py" for name in archive.namelist())
-    return {"kind": "kit", **info, "regions": [], "rom_inputs": rom_inputs}
+        fbneo = native_fbneo_sets(archive, patch)
+    return {"kind": "kit", **info, "regions": [], "rom_inputs": rom_inputs,
+            **({"fbneo_sets": fbneo} if fbneo else {})}
+
+
+def native_fbneo_sets(archive, patch):
+    """Advertise only native exports declared by the selected published kit."""
+    if 'fbneo-exports.json' not in archive.namelist(): return {}
+    marker = json.loads(archive.read('fbneo-exports.json'))
+    data = archive.read('fbneo_names.json')
+    require(marker == {'schema':1, 'registry_sha256':hashlib.sha256(data).hexdigest()},
+            'native FBNeo registry marker mismatch')
+    import fbneo_names
+    stored = json.loads(data)
+    require(stored.get('schema') == 1 and isinstance(stored.get('sets'), dict), 'invalid native FBNeo registry')
+    family = {n:r for n,r in stored['sets'].items() if r['slug'] == patch['slug']}
+    required = {b['hbmame_set'] for b in patch.get('builds', [])}
+    require(required and set(family) == required, 'native FBNeo build coverage differs')
+    current = fbneo_names.registry()
+    require(all(current.get(n) == spec for n,spec in family.items()),
+            'native FBNeo declarations differ from established names')
+    return {n:r['setname'] for n,r in family.items()}
+
+
+def registered_fbneo(item):
+    hb = item.get('hbmame')
+    if not hb or not item.get('members'): return None
+    import fbneo_names
+    names = {m['name']:hb.get('renames', {}).get(m['name'],m['name']) for m in item['members']
+             if m.get('role') != 'device' and m['name'] != 'dl-1425.bin'}
+    return fbneo_names.declaration(hb['setname'],names)
 
 
 def published_bundle(root: Path, patch: dict, inventory: dict) -> dict:

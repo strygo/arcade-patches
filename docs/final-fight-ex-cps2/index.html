@@ -79,17 +79,18 @@ You need:</p>
 <p>A small tool reads the cutscenes and soundtrack from your Final Fight CD discs, combines them with your arcade romsets, and writes out the finished MAME and HBMAME sets, the MiSTer files and the music packs. Give it either disc on its own to build just that disc&#x27;s builds.</p>
 <h3>The builds</h3>
 <table>
-<tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer</th></tr>
-<tr><td>English restoration</td><td>Final Fight EX</td><td class="mono">ffex2r</td></tr><tr><td>USA</td><td>Final Fight EX</td><td class="mono">ffex2u</td></tr><tr><td>Japan</td><td>Final Fight EX</td><td class="mono">ffex2j</td></tr>
+<tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer</th><th>FBNeo</th></tr>
+<tr><td>English restoration</td><td>Final Fight EX</td><td class="mono">ffex2r</td><td class="mono">ffex2r</td></tr><tr><td>USA</td><td>Final Fight EX</td><td class="mono">ffex2u</td><td class="mono">ffex2u</td></tr><tr><td>Japan</td><td>Final Fight EX</td><td class="mono">ffex2j</td><td class="mono">ffex2j</td></tr>
 </table>
 <h2>Download</h2>
 <p>Tools updated 2026-10-30. Game version unchanged.</p>
+<p><strong>FBNeo.</strong> The kit also writes the complete sets <code>ffex2j</code>, <code>ffex2r</code>, <code>ffex2u</code> under <code>out/fbneo/</code>, preserving their FBNeo ZIP and ROM filenames. Copy those ZIPs to your FBNeo ROM folder. Use an FBNeo version with definitions matching this game release. To build only these sets, add <code>--platform fbneo</code> to the build command.</p>
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/final-fight-ex-cps2-rc2-kit.zip?v=7aecf3717d">final-fight-ex-cps2-rc2-kit.zip</a>
-  (36.7 MB)</div>
-  <div class="hash">SHA-256: 7aecf3717de46fbb2d685ef6259595d114ad4d9d58b1182bae416c9409e3b980</div>
+  <div class="file"><a href="../downloads/final-fight-ex-cps2-rc2-kit.zip?v=75c1661ceb">final-fight-ex-cps2-rc2-kit.zip</a>
+  (36.8 MB)</div>
+  <div class="hash">SHA-256: 75c1661cebc1747421f5eccc6c6ba772ddea90832bf47698a49ab320f437b2a2</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>

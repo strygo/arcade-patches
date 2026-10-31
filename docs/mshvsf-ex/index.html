@@ -73,12 +73,12 @@
 <p>How EX compares with the original Japanese and US releases.</p>
 <table class="compare"><thead><tr><th></th><th>Japan</th><th>USA</th><th>EX</th></tr></thead><tbody><tr><th scope="row">Norimaro</th><td>Yes</td><td>No</td><td>Yes</td></tr><tr><th scope="row">Norimaro&#x27;s ending</th><td>His own</td><td>None</td><td>His own</td></tr><tr><th scope="row">Mech-Zangief, Shadow, Dark Sakura endings</th><td>Yes, Japanese</td><td>Generic</td><td>Yes, in both languages</td></tr><tr><th scope="row">English win quotes per fighter</th><td>None</td><td>8</td><td>16, translated from the Japanese</td></tr><tr><th scope="row">Hidden characters</th><td>Codes</td><td>Codes</td><td>Two-second hold, or codes</td></tr><tr><th scope="row">Cyber-Akuma</th><td>Boss only</td><td>Boss only</td><td>Playable, hold Start on Akuma</td></tr><tr><th scope="row">Apocalypse</th><td>Boss only</td><td>Boss only</td><td>Playable, hold Start on Norimaro</td></tr><tr><th scope="row">Same fighter twice</th><td>No</td><td>No</td><td>Yes</td></tr><tr><th scope="row">Colors per fighter</th><td>2</td><td>2</td><td>4</td></tr><tr><th scope="row">HUD names for U.S. Agent, Mephisto, Shadow</th><td>Blank</td><td>Blank</td><td>Yes</td></tr><tr><th scope="row">Game speeds</th><td>3</td><td>3</td><td>8</td></tr><tr><th scope="row">Free Play</th><td>Yes</td><td>Some regions</td><td>Yes</td></tr><tr><th scope="row">Gameplay</th><td>Original</td><td>Original</td><td>Original</td></tr></tbody></table>
 <h2>Downloads</h2>
-<p>Tools updated 2026-10-25. Game version unchanged.</p>
+<p>Tools updated 2026-10-30. Game version unchanged.</p>
 <div class="download">
-  <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/mshvsf-ex-rc4-ips.zip?v=0538283fad">mshvsf-ex-rc4-ips.zip</a>
-  (483 KB)</div>
-  <div class="hash">SHA-256: 0538283fadac65d19904f51ce8cf91b0bf3fe9d89dbbe2bbfa3b934a9128735a</div>
+  <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware, all 2 builds</div>
+  <div class="file"><a href="../downloads/mshvsf-ex-rc4-ips.zip?v=9ff6f64ed7">mshvsf-ex-rc4-ips.zip</a>
+  (489 KB)</div>
+  <div class="hash">SHA-256: 9ff6f64ed7b2abf0de513bf3b87f8c9f2232a5d88246d362422ed70daee5e4ed</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
@@ -92,8 +92,8 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <p>Merged, split and complete sets work, including nested or renamed ROMs. Use <code>--rompath /path/to/roms</code> to search a collection (repeatable), and <code>--check</code> to check inputs before building. ZIPs and extracted folders need no extra software; 7z archives require 7-Zip. QSound can stay in your emulator's ROM path; valid firmware already embedded in a source set is kept in complete outputs.</p>
 <h3>The builds</h3>
 <table>
-<tr><th>Build</th><th><code>--variant</code></th><th>MiSTer setname</th><th>HBMAME set</th></tr>
-<tr><td>USA</td><td class="mono">usa</td><td class="mono">mshvsfex</td><td class="mono">mshvsfex</td></tr><tr><td>Japan</td><td class="mono">japan</td><td class="mono">mshvsfej</td><td class="mono">mshvsfej</td></tr>
+<tr><th>Build</th><th><code>--variant</code></th><th>MiSTer setname</th><th>HBMAME set</th><th>FBNeo set</th></tr>
+<tr><td>USA</td><td class="mono">usa</td><td class="mono">mshvsfex</td><td class="mono">mshvsfex</td><td class="mono">mshvsfex</td></tr><tr><td>Japan</td><td class="mono">japan</td><td class="mono">mshvsfej</td><td class="mono">mshvsfej</td><td class="mono">mshvsfexj</td></tr>
 </table>
 <h2>How to apply</h2>
 <pre><code>unzip mshvsf-ex-rc4-ips.zip -d mshvsfj-patch
@@ -104,10 +104,12 @@ checks the result, and writes the files for every platform in one go: (add <code
 <pre><code>USA:
   out/mame/usa/mshvsfj.zip
   out/hbmame/mshvsfex.zip
+  out/fbneo/mshvsfex.zip
   out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/Marvel Super Heroes Vs. Street Fighter EX (USA).mra
 Japan:
   out/mame/japan/mshvsfj.zip
   out/hbmame/mshvsfej.zip
+  out/fbneo/mshvsfexj.zip
   out/mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Marvel Super Heroes Vs. Street Fighter EX (Japan).mra</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
 stock set in your MAME rompath (it keeps the name <code>mshvsfj.zip</code>, so use one build at a time), or burn its ROM
@@ -117,6 +119,10 @@ game runs normally. To start it from a menu, use the HBMAME build.</p>
 <p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
 <code>roms/</code> folder next to your stock <code>mshvsfj.zip</code>. It loads with no checksum
 warnings. This patch's builds are official <a href="https://github.com/Robbbert/hbmame">HBMAME</a> sets, <code>mshvsfex</code> and <code>mshvsfej</code> (<a href="https://github.com/Robbbert/hbmame/pull/56">merged upstream</a>), so full HBMAME collections may already carry them.</p>
+<p><strong>FBNeo.</strong> The kit produces the sets <code>mshvsfex</code>, <code>mshvsfexj</code>.
+Put the ZIPs from <code>out/fbneo/</code> in your FBNeo ROM folder, keeping their ZIP and ROM filenames.
+These contain the complete game ROMs. Use an FBNeo version with definitions matching this game release.
+To build only the FBNeo sets, use <code>--platform fbneo --out-dir out</code>.</p>
 <p><strong>MiSTer.</strong> Copy the <code>_Arcade</code> folder from
 <code>out/mister/</code> to the root of your SD card, and keep the stock, unmodified romset at
 <code>games/mame/mshvsfj.zip</code> (split MAME sets also need <code>qsound.zip</code>). You need

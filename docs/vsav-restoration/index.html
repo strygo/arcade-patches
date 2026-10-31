@@ -73,12 +73,12 @@
 something this one still doesn't, whether a line of text, a scene, a screen or a small detail,
 please <a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">let us know</a>. Anything you find goes into the next release.</p>
 <h2>Downloads</h2>
-<p>Tools updated 2026-10-25. Game version unchanged.</p>
+<p>Tools updated 2026-10-30. Game version unchanged.</p>
 <div class="download">
-  <div class="kind">Patch kit for MAME, HBMAME, MiSTer and original hardware</div>
-  <div class="file"><a href="../downloads/vsav-restoration-rc2-ips.zip?v=e3034ce9b0">vsav-restoration-rc2-ips.zip</a>
-  (112 KB)</div>
-  <div class="hash">SHA-256: e3034ce9b098464e161ecb5212eef93b5294a75a793f725e20cfcb757a031251</div>
+  <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware</div>
+  <div class="file"><a href="../downloads/vsav-restoration-rc2-ips.zip?v=1404dc8835">vsav-restoration-rc2-ips.zip</a>
+  (128 KB)</div>
+  <div class="hash">SHA-256: 1404dc8835f9dda9a3677375ad1c85da0a3d5e0670acea35a9bfe512c7665693</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRA only</div>
@@ -98,6 +98,7 @@ python3 apply.py /path/to/vsavj.zip --out-dir out</code></pre>
 checks the result, and writes the files for every platform in one go:</p>
 <pre><code>out/mame/vsavj.zip
 out/hbmame/vsavru.zip
+out/fbneo/vsavre.zip
 out/mister/_Arcade/_Arcade Patches/_Restorations/Vampire Savior The Lord of Vampire (USA) [English Restoration].mra</code></pre>
 <p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
 stock set in your MAME rompath (it keeps the name <code>vsavj.zip</code>), or burn its ROM
@@ -107,6 +108,10 @@ game runs normally. To start it from a menu, use the HBMAME build.</p>
 <p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
 <code>roms/</code> folder next to your stock <code>vsavj.zip</code>. It loads with no checksum
 warnings. This restoration is an official <a href="https://github.com/Robbbert/hbmame">HBMAME</a> set, <code>vsavru</code> (<a href="https://github.com/Robbbert/hbmame/pull/56">merged upstream</a>), so full HBMAME collections may already carry it.</p>
+<p><strong>FBNeo.</strong> The kit produces the sets <code>vsavre</code>.
+Put the ZIPs from <code>out/fbneo/</code> in your FBNeo ROM folder, keeping their ZIP and ROM filenames.
+These contain the complete game ROMs. Use an FBNeo version with definitions matching this game release.
+To build only the FBNeo sets, use <code>--platform fbneo --out-dir out</code>.</p>
 <p><strong>MiSTer.</strong> Copy the <code>_Arcade</code> folder from
 <code>out/mister/</code> to the root of your SD card, and keep the stock, unmodified romset at
 <code>games/mame/vsavj.zip</code> (split MAME sets also need <code>qsound.zip</code>). You need

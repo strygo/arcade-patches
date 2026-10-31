@@ -42,6 +42,7 @@ import zipfile
 from pathlib import Path
 
 import assemble
+import fbneo_names
 import extract as ex
 from rom_sources import Resolver, RomError, QSOUND, search_paths, verify, publish_tree, write_zip
 
@@ -123,7 +124,7 @@ def main():
     ap.add_argument("--include-devices", action="store_true")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--check-runtime", action="store_true")
-    ap.add_argument("--platform", choices=("all", "mame", "hbmame", "mister", "darksoft"), default="all")
+    ap.add_argument("--platform", choices=("all", "mame", "hbmame", "fbneo", "mister", "darksoft"), default="all")
     ap.add_argument("--region", required=True, choices=tuple(SETS))
     ap.add_argument("--out-dir", help="build every platform into this folder")
     ap.add_argument("--size", choices=("4mb", "8mb"), help="single-file mode: capacity")
@@ -147,8 +148,8 @@ def main():
     if not args.check and not args.check_runtime:
         check_output(args.out_dir or args.out, [p for p in [args.iso, args.romset, *args.rompath] if p], directory=bool(args.out_dir))
 
-    if args.platform == 'darksoft' and (args.out or args.size == '4mb'):
-        fail('Darksoft uses the best 8 MiB native-sample version and requires --out-dir')
+    if args.platform in ('darksoft', 'fbneo') and (args.out or args.size == '4mb'):
+        fail(f'{args.platform} uses the best 8 MiB native-sample version and requires --out-dir')
     if not (args.check or args.check_runtime) and not args.out_dir and not (args.size and args.out):
         fail("give --out-dir, or both --size and --out")
 
@@ -209,7 +210,7 @@ def main():
     stage_context = tempfile.TemporaryDirectory(prefix=".gold-export-", dir=Path(args.out_dir).parent)
     out = Path(stage_context.name)
     names = SETS[args.region]
-    if args.platform != 'darksoft':
+    if args.platform not in ('darksoft', 'fbneo'):
         print("Reconstructing 4MB (MAME / hardware)...")
         m4, w4 = reconstruct("4mb")
         # The MAME version is a separate product, never a Darksoft alternate.
@@ -232,6 +233,8 @@ def main():
             name = path.relative_to(out).as_posix()
             if args.platform == "all" or name.startswith(args.platform + "/"):
                 files[name] = path.read_bytes()
+    if args.platform in ('all', 'fbneo'):
+        files.update(fbneo_names.tree(names['8mb'], zread(out / 'hbmame' / (names['8mb'] + '.zip'))))
     publish_tree(Path(args.out_dir), files)
     print_completion(args.out_dir, files)
     stage_context.cleanup()

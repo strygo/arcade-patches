@@ -887,8 +887,17 @@ def render_kit_download(patch: dict, kit: dict) -> str:
                    "Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> "
                    "to verify arcade inputs before rebuilding from your disc. "
                    "7z needs installed 7-Zip; ZIP does not.</p>" if kit.get("rom_inputs") else "")
+    fbneo_note = ''
+    if kit.get('fbneo_sets'):
+        names = ', '.join(f'<code>{esc(n)}</code>' for n in kit['fbneo_sets'].values())
+        fbneo_note = (f'<p><strong>FBNeo.</strong> The kit also writes the complete sets {names} '
+                      'under <code>out/fbneo/</code>, preserving their FBNeo ZIP and ROM filenames. '
+                      'Copy those ZIPs to your FBNeo ROM folder. Use an FBNeo version with definitions '
+                      'matching this game release. To build only these sets, add '
+                      '<code>--platform fbneo</code> to the build command.</p>')
     return f"""<h2>Download</h2>
 {tools_notice(kit)}
+{fbneo_note}
 {inputs_note}
 {download_box("Reconstruction kit, rebuilds from your own disc + romset", kit)}
 <p>The kit is our reconstruction code and a short list of byte patches.
@@ -907,6 +916,9 @@ def render_reconstruction(patch: dict, builds: list, bundle: dict | None) -> str
     # Gold's sets come in two sizes; a page can name its own set columns.
     columns = ([(esc(label), key) for label, key in rec["columns"]] if "columns" in rec else
                [("HBMAME / MiSTer (8&nbsp;MB)", "hbmame_set"), ("Hardware / MAME (4&nbsp;MB)", "mame_set")])
+    if bundle and bundle.get('fbneo_sets'):
+        columns.append(('FBNeo', 'fbneo_set'))
+        builds = [{**b, 'fbneo_set':bundle['fbneo_sets'][b['hbmame_set']]} for b in builds]
     rows = "".join(
         f'<tr><td>{esc(b["region"])}</td>'
         f'<td>{esc(b["title"])}</td>'

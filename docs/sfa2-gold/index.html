@@ -79,19 +79,20 @@ voices and sound effects, with some downsampled to fit. An <strong>8&nbsp;MB</st
 carries the same audio at full quality, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>
 <h3>The builds</h3>
 <table>
-<tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer (8&nbsp;MB)</th><th>Hardware / MAME (4&nbsp;MB)</th></tr>
-<tr><td>USA</td><td>Street Fighter Alpha 2 Gold</td><td class="mono">sfa2g</td><td class="mono">sfz2al</td></tr><tr><td>Europe</td><td>Street Fighter Alpha 2 Dash</td><td class="mono">sfa2d</td><td class="mono">sfz2al</td></tr><tr><td>Japan</td><td>Street Fighter Zero 2 Dash</td><td class="mono">sfz2d</td><td class="mono">sfz2alj</td></tr><tr><td>Asia (English)</td><td>Street Fighter Zero 2 Dash</td><td class="mono">sfz2da</td><td class="mono">sfz2al</td></tr>
+<tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer (8&nbsp;MB)</th><th>Hardware / MAME (4&nbsp;MB)</th><th>FBNeo</th></tr>
+<tr><td>USA</td><td>Street Fighter Alpha 2 Gold</td><td class="mono">sfa2g</td><td class="mono">sfz2al</td><td class="mono">sfa2gl</td></tr><tr><td>Europe</td><td>Street Fighter Alpha 2 Dash</td><td class="mono">sfa2d</td><td class="mono">sfz2al</td><td class="mono">sfa2ds</td></tr><tr><td>Japan</td><td>Street Fighter Zero 2 Dash</td><td class="mono">sfz2d</td><td class="mono">sfz2alj</td><td class="mono">sfz2dsj</td></tr><tr><td>Asia (English)</td><td>Street Fighter Zero 2 Dash</td><td class="mono">sfz2da</td><td class="mono">sfz2al</td><td class="mono">sfz2dsa</td></tr>
 </table>
 <p>The HBMAME builds are official <a href="https://github.com/Robbbert/hbmame">HBMAME</a>
 sets, <code>sfa2g</code>, <code>sfa2d</code>, <code>sfz2d</code> and <code>sfz2da</code> (<a href="https://github.com/Robbbert/hbmame/pull/56">merged upstream</a>), so full HBMAME collections may already carry them.</p>
 <h2>Download</h2>
-<p>Tools updated 2026-10-25. Game version unchanged.</p>
+<p>Tools updated 2026-10-30. Game version unchanged.</p>
+<p><strong>FBNeo.</strong> The kit also writes the complete sets <code>sfa2ds</code>, <code>sfa2gl</code>, <code>sfz2dsj</code>, <code>sfz2dsa</code> under <code>out/fbneo/</code>, preserving their FBNeo ZIP and ROM filenames. Copy those ZIPs to your FBNeo ROM folder. Use an FBNeo version with definitions matching this game release. To build only these sets, add <code>--platform fbneo</code> to the build command.</p>
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/sfa2-gold-rc7-kit.zip?v=0630d0fadc">sfa2-gold-rc7-kit.zip</a>
+  <div class="file"><a href="../downloads/sfa2-gold-rc7-kit.zip?v=9e05289a30">sfa2-gold-rc7-kit.zip</a>
   (1.6 MB)</div>
-  <div class="hash">SHA-256: 0630d0fadc23bdab7d8e9292b388db7bce0cbd84302ab8967d12f4782cd43273</div>
+  <div class="hash">SHA-256: 9e05289a30922fb9aa1fc71fa9508b03e3b74ef338c3f8db29c8a89abec8616e</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>

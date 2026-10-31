@@ -87,19 +87,20 @@ voices and sound effects, with some downsampled to fit. An <strong>8&nbsp;MB</st
 carries the same audio at full quality, for HBMAME and MiSTer (Jotego's <code>jtcps2</code> core).</p>
 <h3>The builds</h3>
 <table>
-<tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer (8&nbsp;MB)</th><th>Hardware / MAME (4&nbsp;MB)</th></tr>
-<tr><td>USA</td><td>Street Fighter Alpha 2 EX</td><td class="mono">sfa2ex</td><td class="mono">sfz2al</td></tr><tr><td>Japan</td><td>Street Fighter Zero 2 EX</td><td class="mono">sfz2ex</td><td class="mono">sfz2alj</td></tr>
+<tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer (8&nbsp;MB)</th><th>Hardware / MAME (4&nbsp;MB)</th><th>FBNeo</th></tr>
+<tr><td>USA</td><td>Street Fighter Alpha 2 EX</td><td class="mono">sfa2ex</td><td class="mono">sfz2al</td><td class="mono">sfa2ex</td></tr><tr><td>Japan</td><td>Street Fighter Zero 2 EX</td><td class="mono">sfz2ex</td><td class="mono">sfz2alj</td><td class="mono">sfz2exj</td></tr>
 </table>
 <p>The HBMAME builds are official <a href="https://github.com/Robbbert/hbmame">HBMAME</a>
 sets, <code>sfa2ex</code> and <code>sfz2ex</code> (<a href="https://github.com/Robbbert/hbmame/pull/56">merged upstream</a>), so full HBMAME collections may already carry them.</p>
 <h2>Download</h2>
-<p>Tools updated 2026-10-25. Game version unchanged.</p>
+<p>Tools updated 2026-10-30. Game version unchanged.</p>
+<p><strong>FBNeo.</strong> The kit also writes the complete sets <code>sfa2ex</code>, <code>sfz2exj</code> under <code>out/fbneo/</code>, preserving their FBNeo ZIP and ROM filenames. Copy those ZIPs to your FBNeo ROM folder. Use an FBNeo version with definitions matching this game release. To build only these sets, add <code>--platform fbneo</code> to the build command.</p>
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/sfa2-ex-rc3-kit.zip?v=9fafb59bd2">sfa2-ex-rc3-kit.zip</a>
-  (995 KB)</div>
-  <div class="hash">SHA-256: 9fafb59bd2f11a6a679c20bfd479fe2c07ae917a3592130f92dc1bc240270275</div>
+  <div class="file"><a href="../downloads/sfa2-ex-rc3-kit.zip?v=4adf818c37">sfa2-ex-rc3-kit.zip</a>
+  (1006 KB)</div>
+  <div class="hash">SHA-256: 4adf818c37c7a67ae18678cca103f46c5973f27dceb15874ad807d69434dfaed</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
