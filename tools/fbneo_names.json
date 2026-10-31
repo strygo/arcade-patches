@@ -755,7 +755,7 @@
     "ssf2tuc": {
       "ignored": {},
       "renames": {
-        "sfx.01": "sfx.01",
+        "sfx.01": "sfxuc.01",
         "sfx.02": "sfx.02",
         "sfx.09": "sfxuc.09",
         "sfx.11m": "sfx.11m",
@@ -786,7 +786,7 @@
     "ssf2xuc": {
       "ignored": {},
       "renames": {
-        "sfx.01": "sfx.01",
+        "sfx.01": "sfxuc.01",
         "sfx.02": "sfx.02",
         "sfx.09": "sfxuc.09",
         "sfx.11m": "sfx.11m",

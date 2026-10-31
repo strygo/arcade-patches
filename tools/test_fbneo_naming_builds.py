@@ -14,6 +14,15 @@ import release_packager as packager
 
 
 class FutureNamesTests(unittest.TestCase):
+    def test_newly_modified_stock_member_requires_custom_name(self):
+        stock={'sfx.01': b'stock', 'sfx.02': b'unchanged'}
+        modified={'sfx.01': b'patched', 'sfx.02': b'unchanged'}
+        with self.assertRaisesRegex(SystemExit, 'modified FBNeo member retains stock filename'):
+            packager.check_fbneo_stock_names('example', {'setname':'example'}, stock, modified)
+        packager.check_fbneo_stock_names('example', {'setname':'example'}, stock, stock)
+        packager.check_fbneo_stock_names('example', {'setname':'example',
+            'renames': {'sfx.01':'sfxuc.01'}}, stock, modified)
+
     def test_all_audited_ips_families_package_and_reconstruct_registered_names(self):
         site=Path(__file__).resolve().parents[1]
         pages=json.loads((site/'data/patches.json').read_text())['patches']
@@ -41,7 +50,14 @@ class FutureNamesTests(unittest.TestCase):
                 wanted={}
                 for i,(build,manifest) in enumerate(zip(builds,manifests)):
                     build.pop('mra',None);build.pop('fbneo',None)
-                    hb=build['hbmame'];changed=hb['renames']
+                    hb=build['hbmame'];declaration=registry[hb['setname']]
+                    # This fixture models future content changes only under
+                    # custom exported names. A separate negative control
+                    # exercises newly modified members retaining stock names.
+                    changed={n:target for n,target in hb['renames'].items()
+                             if declaration['renames'][target] != n}
+                    if not hb.get('complete'):
+                        hb['renames']=changed
                     payload={n:(b'NEW'+b[3:] if n in changed else b) for n,b in stock.items()}
                     target=root/(str(i)+'.zip');write(target,payload)
                     (build if art.get('variants') else art)['patched_zip']=str(target)

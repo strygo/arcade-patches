@@ -560,6 +560,14 @@ def read_zip(path: Path) -> dict:
         return {i.filename: z.read(i.filename) for i in z.infolist()}
 
 
+def check_fbneo_stock_names(tag, declaration, stock, patched):
+    """A modified stock member must have a distinct exported name."""
+    for source, payload in patched.items():
+        target = declaration.get('renames', {}).get(source, source)
+        if target in stock and payload != stock[target]:
+            raise SystemExit(f'{tag}: modified FBNeo member retains stock filename: {target}')
+
+
 def build_rom_downloads(patch: dict) -> dict:
     """Build the IPS and MRA downloads from explicit source archives.
 
@@ -609,6 +617,7 @@ def build_rom_downloads(patch: dict) -> dict:
             if registered: b['fbneo'] = registered
         if b.get('fbneo'):
             fb = b['fbneo']
+            check_fbneo_stock_names(tag, fb, stock, patched)
             if set(fb) not in ({'setname'}, {'setname', 'renames'}) or not re.fullmatch(r'[a-z0-9_]+', fb['setname']):
                 raise SystemExit(f'{tag}: invalid FBNeo set declaration')
             if 'renames' in fb:
