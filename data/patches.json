@@ -1323,6 +1323,7 @@
   "patches": [
     {
       "slug": "vhunt2-english",
+      "collection_api": 1,
       "title": "Night Warriors 2",
       "subtitle": "English translation",
       "section": "restorations",
@@ -1436,6 +1437,7 @@
     },
     {
       "slug": "vsav2-english",
+      "collection_api": 1,
       "title": "Vampire Savior 2",
       "subtitle": "English translation",
       "section": "restorations",
@@ -1891,6 +1893,7 @@
     },
     {
       "slug": "sfz2al-restoration",
+      "collection_api": 1,
       "title": "Street Fighter Zero 2 Alpha",
       "subtitle": "English restoration",
       "section": "restorations",
@@ -2240,6 +2243,7 @@
     },
     {
       "slug": "ssf2t-gmc",
+      "collection_api": 1,
       "title": "Super Street Fighter II Turbo: Grand Master Challenge",
       "subtitle": "English restoration",
       "section": "restorations",
@@ -2472,6 +2476,7 @@
     },
     {
       "slug": "ssf2-ex",
+      "collection_api": 1,
       "title": "Super Street Fighter II EX",
       "subtitle": "Enhanced version",
       "section": "enhanced",
@@ -2934,6 +2939,7 @@
     },
     {
       "slug": "mshvsf-restoration",
+      "collection_api": 1,
       "title": "Marvel Super Heroes vs. Street Fighter",
       "subtitle": "English restoration",
       "section": "restorations",
@@ -3159,6 +3165,7 @@
     },
     {
       "slug": "mshvsf-ex",
+      "collection_api": 1,
       "title": "Marvel Super Heroes vs. Street Fighter EX",
       "subtitle": "Enhanced version",
       "section": "enhanced",
@@ -3441,6 +3448,7 @@
     },
     {
       "slug": "vsav-restoration",
+      "collection_api": 1,
       "title": "Vampire Savior",
       "subtitle": "English restoration",
       "section": "restorations",
@@ -3648,6 +3656,7 @@
     },
     {
       "slug": "dstlk-restoration",
+      "collection_api": 1,
       "title": "Darkstalkers: The Night Warriors",
       "subtitle": "English restoration",
       "section": "restorations",
@@ -3769,6 +3778,7 @@
     },
     {
       "slug": "nwarr-restoration",
+      "collection_api": 1,
       "title": "Night Warriors: Darkstalkers' Revenge",
       "sort_title": "Night Warriors 1",
       "subtitle": "English restoration",
@@ -4710,6 +4720,7 @@
     },
     {
       "slug": "sfa3-restoration",
+      "collection_api": 1,
       "title": "Street Fighter Alpha 3",
       "subtitle": "English restoration",
       "section": "restorations",
@@ -4894,6 +4905,7 @@
     },
     {
       "slug": "sfa2-restoration",
+      "collection_api": 1,
       "title": "Street Fighter Alpha 2",
       "subtitle": "English restoration",
       "section": "restorations",
@@ -5137,6 +5149,7 @@
     },
     {
       "slug": "sfa-ex",
+      "collection_api": 1,
       "title": "Street Fighter Alpha EX",
       "sort_title": "Street Fighter Alpha 1 EX",
       "subtitle": "Enhanced version",
@@ -5437,6 +5450,7 @@
     },
     {
       "slug": "sfa-restoration",
+      "collection_api": 1,
       "title": "Street Fighter Alpha: Warriors' Dreams",
       "sort_title": "Street Fighter Alpha 1",
       "subtitle": "English restoration",

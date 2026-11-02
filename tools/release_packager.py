@@ -682,6 +682,7 @@ def build_rom_downloads(patch: dict) -> dict:
         for python_name, python_data in sorted(python_files.items()):
             write(z, python_name, python_data)
         write(z, "rom_sources.py", (ROOT / "tools" / "rom_sources.py").read_bytes())
+        write(z, "kit_collection.py", (ROOT / "tools" / "kit_collection.py").read_bytes())
         for name in ('fetch_switch_tools.py', 'fetch_optional_tools.py', 'tool_controls.py', 'optional_helpers.json'):
             write(z, name, (ROOT/'tools'/name).read_bytes())
         for name in ('darksoft.py', 'darksoft_profiles.json', 'darksoft_kits.json'):
@@ -701,6 +702,11 @@ def build_rom_downloads(patch: dict) -> dict:
                 write(z, f"{prefix}{name}.ips", ips)
         for path, text, _ in texts:
             write(z, f"mister/{path}", text.encode())
+    if patch.get('collection_api', 1) != 1:
+        raise ValueError('Unknown native collection API')
+    from kit_collection import package_archive
+    package_archive(ips_path, slug, [stock_path, stock_path.parent,
+        *[resolve(p) for p in (patch.get('mra') or {}).get('auxiliary_zips', [])]])
     if texts:
         write_mra_zip(patch, texts, DOCS / "downloads" / mra_zipname, stamp, members, variants)
 

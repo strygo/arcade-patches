@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 from test_release_inventory import ReleaseInventoryTests, write_json
 from release_inventory import import_candidate, load_inventory, sha256_file, ReleaseInventoryError, validate_inventory
-from kit_revisions import identity, rollback, recover
+from kit_revisions import identity, recover
 
 
 class KitRevisionTests(ReleaseInventoryTests):
@@ -35,7 +35,13 @@ class KitRevisionTests(ReleaseInventoryTests):
         write_json(ready, record)
         return ready, candidate, old
 
-    def test_revision_and_rollback_preserve_names_and_archived_bytes(self):
+    def test_tooling_revision_still_requires_its_own_page_version(self):
+        ready, candidate, _ = self.revision_candidate()
+        self.set_page_version('rc3')
+        with self.assertRaisesRegex(ReleaseInventoryError, 'target page differs'):
+            import_candidate(self.root, ready, candidate)
+
+    def test_forward_revision_preserves_names_and_archived_bytes(self):
         ready, candidate, old = self.revision_candidate()
         import_candidate(self.root, ready, candidate)
         inv = load_inventory(self.root / 'data/releases.json')
@@ -44,11 +50,11 @@ class KitRevisionTests(ReleaseInventoryTests):
         self.assertEqual(2, item['current_revision'])
         self.assertEqual(old['files']['ips']['name'], item['files']['ips']['name'])
         validate_inventory(self.root, inv)
-        rollback(self.root, 'demo', 'rc2', 1)
-        restored = load_inventory(self.root / 'data/releases.json')
-        self.assertEqual(old['files']['ips']['sha256'], restored['releases']['demo']['versions']['rc2']['files']['ips']['sha256'])
-        rollback(self.root, 'demo', 'rc2', 2)
-        validate_inventory(self.root, load_inventory(self.root / 'data/releases.json'))
+        original = self.root / 'docs/downloads' / item['revisions']['1']['files']['ips']['archive']
+        self.assertEqual(old['files']['ips']['sha256'], sha256_file(original))
+        with self.assertRaisesRegex(ReleaseInventoryError, 'already exists or skips'):
+            import_candidate(self.root, ready, candidate)
+        self.assertEqual(2, load_inventory(self.root / 'data/releases.json')['releases']['demo']['versions']['rc2']['current_revision'])
 
     def contract_candidate(self, additive):
         ready, candidate, old = self.revision_candidate()

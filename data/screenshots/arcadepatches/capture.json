@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "launcher_sha256": "8451c65172ec68aa362c87f4d58bc681cf5a2f972212eb26b7b9de56545d8f03",
+  "method": "actual PTY prompts rendered as ANSI terminal cells; example folders and explicitly simulated previous-run state for the update notice; no game builds",
+  "captures": {
+    "menu": {
+      "sha256": "c9b3fdd4bbecc8e41eb06a2b999e3b4a8fec315901aa00a102ccaefa63fb76f2",
+      "terminal_sha256": "0f594533e5c1bf265632ea42b1ed148c36402c4cfc4fbf4d16eb1ead1016d1da"
+    },
+    "regions": {
+      "sha256": "54502eed591343da2bfd4f66d4f6c95dc790d91e87f2aef09b85fb2a50893903",
+      "terminal_sha256": "7b85d847606e728a99d34beb7966c3f7a21ac28f4712d87859197aad06b90db1"
+    },
+    "prerequisites": {
+      "sha256": "bcb5da590d0f3a3b59e9bb0074d931a7463bf2bbc9fbbd03cba2d3b316b332ab",
+      "terminal_sha256": "80fabdaa18094d8360f3fe42c811df828d132c839084c3d3fdefc7db88f9e6d0"
+    },
+    "updates": {
+      "sha256": "48baa53742509b400eb2494c4737df2fed1f502e1bcb28fa255473964d426862",
+      "terminal_sha256": "8a12d0b030775e6e3f5d64959f1791011a6def570a750162cf8ae66a5db7cc33"
+    }
+  }
+}

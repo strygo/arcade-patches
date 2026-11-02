@@ -128,11 +128,11 @@ def recover(root):
     inventory_path = root / "data/releases.json"
     inventory_path.with_name(inventory_path.name + ".tmp").unlink(missing_ok=True)
     write_json_atomic(inventory_path, state["previous"])
-    validate_inventory(root, state["previous"])
+    validate_inventory(root, state["previous"], require_page_current=not state.get("pending_pages", False))
     journal.unlink()
 
 
-def promote(root, previous, updated, files, restore):
+def promote(root, previous, updated, files, restore, *, pending_pages=False):
     root = Path(root)
     journal = root / JOURNAL
     # Atomically install a complete exclusive recovery record before any alias changes.
@@ -140,7 +140,7 @@ def promote(root, previous, updated, files, restore):
     temporary = Path(name)
     try:
         with os.fdopen(fd, "w") as stream:
-            json.dump({"previous": previous, "restore": restore}, stream)
+            json.dump({"previous": previous, "restore": restore, "pending_pages": pending_pages}, stream)
             stream.flush()
             os.fsync(stream.fileno())
         try:
@@ -155,9 +155,11 @@ def promote(root, previous, updated, files, restore):
     try:
         for record in files.values():
             _replace(root / "docs/downloads" / record["archive"], root / "docs/downloads" / record["name"])
-        validate_inventory(root, updated)
+        validate_inventory(root, updated, require_page_current=not pending_pages)
         for entry in load_site_entries(root).values():
             if entry.get("version") and not entry.get("hidden"):
+                selected = updated["releases"][entry["slug"]]["current"]
+                if pending_pages and entry["version"] != selected:continue
                 published_bundle(root, entry, updated)
         write_json_atomic(root / "data/releases.json", updated)
     except BaseException:
@@ -169,9 +171,10 @@ def promote(root, previous, updated, files, restore):
 def import_revision(root, ready_path, candidate, ready, release):
     root = Path(root)
     previous = load_inventory(root / "data/releases.json")
-    validate_inventory(root, previous)
+    validate_inventory(root, previous, require_page_current=False)
     plan = release["plan"]
     slug, version, number = plan["kit"], plan["version"], plan["kit_revision"]
+    require(load_site_entries(root)[slug]["version"] == version, "target page differs from tooling revision")
     require(type(number) is int and number > 1, "tooling revision must be an integer greater than 1")
     require(slug in previous["releases"] and version in previous["releases"][slug]["versions"],
             "tooling revision needs an existing game release")
@@ -220,23 +223,5 @@ def import_revision(root, ready_path, candidate, ready, release):
     item["revisions"][str(number)] = copy.deepcopy(new)
     item.update(new, current_revision=number)
     item["promotions"].append({"revision": number, "reason": "tooling update", "date": plan["date"]})
-    promote(root, previous, updated, new["files"], list(old["files"].values()))
+    promote(root, previous, updated, new["files"], list(old["files"].values()), pending_pages=True)
     return new
-
-
-def rollback(root, slug, version, revision):
-    root = Path(root)
-    require(not (root / JOURNAL).exists(), "unfinished publication; run import_release.py --recover")
-    previous = load_inventory(root / "data/releases.json")
-    validate_inventory(root, previous)
-    require(slug in previous["releases"] and version in previous["releases"][slug]["versions"], "unknown game release")
-    updated = copy.deepcopy(previous)
-    item = updated["releases"][slug]["versions"][version]
-    require(str(revision) in item.get("revisions", {}), "unknown kit revision")
-    restore = list(item["files"].values())
-    selected = item["revisions"][str(revision)]
-    for field in ("date", "kind", "files", "qualification"):
-        item[field] = copy.deepcopy(selected[field])
-    item["current_revision"] = revision
-    item["promotions"].append({"revision": revision, "reason": "rollback"})
-    promote(root, previous, updated, item["files"], restore)

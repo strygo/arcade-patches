@@ -396,3 +396,9 @@ ul.changes > li > a { font-weight: 600; }
 ul.changes ul { margin: 0.35rem 0 0.5rem 1.1rem; color: var(--text-dim); }
 ul.changes ul li { padding: 0.1rem 0; }
 section.changelog .more { margin: 0.4rem 0 0; }
+
+/* Terminal captures keep their native proportions and smooth text. */
+.card.tool .thumb { image-rendering: auto; object-fit: contain; aspect-ratio: auto; height: auto; }
+.tool-shots .shot.single img { image-rendering: auto; width: 100%; max-width: 100%; height: auto; aspect-ratio: auto; }
+.tool-shots .shot { max-width: 100%; }
+header.site nav { flex-wrap: wrap; }

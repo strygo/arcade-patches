@@ -15,6 +15,13 @@ The whole pipeline is checksummed end to end: if anything does not match the
 expected original, nothing is written.
 """
 
+import sys as _native_sys
+from pathlib import Path as _NativePath
+if __name__ == '__main__' and ('--collection-layout' in _native_sys.argv or '--describe-json' in _native_sys.argv):
+    _native_sys.path.insert(0, str(_NativePath(__file__).resolve().parent))
+    from chd_collection import main as _native_main
+    raise SystemExit(_native_main(_NativePath(__file__).resolve().parent))
+
 import argparse
 import hashlib
 import json
@@ -115,11 +122,24 @@ def main():
     else:
         args.chdman = disc_tool('chdman')
 
+    apply_chd(m, args.chd, out_path, args.chdman, args.tmp or os.path.dirname(out_path))
+
+    print(f"\nWrote {out_path}")
+    print(f"  SHA1: {m['target']['chd_sha1']} (verified)")
+    print(f"\nPlace it as {m['set']}/{m['chd']} in a MAME rompath ahead of the")
+    print(f"stock set, keeping {m['set']}.zip available. MAME will report a")
+    print("checksum warning for the CHD; that is expected and the game runs")
+    print("on Japanese, USA, and Export BIOS regions.")
+
+
+def apply_chd(m, source, out_path, chdman, tmp_parent):
+    """The single patch pipeline shared by standalone and collection execution."""
+    patch = m['patch']
     # 1. Verify the input dump. The CHD SHA1 covers the decompressed data and
     #    metadata, so this check is independent of which chdman version made
     #    the container.
     print("Checking your dump...")
-    sha1, data_sha1 = chd_hashes(args.chdman, args.chd)
+    sha1, data_sha1 = chd_hashes(chdman, source)
     if sha1 == m["target"]["chd_sha1"]:
         fail("this CHD is already patched")
     if sha1 != m["source"]["chd_sha1"] and data_sha1 != m["source"]["data_sha1"]:
@@ -130,13 +150,12 @@ def main():
             f"You need the unmodified {m['set']} GD-ROM dump ({m['chd']})."
         )
 
-    tmp_parent = args.tmp or os.path.dirname(os.path.abspath(out_path)) or "."
     tmpdir = tempfile.mkdtemp(prefix="chdpatch-", dir=tmp_parent)
     try:
         # 2. Unpack the disc image.
         print("Extracting disc image (this takes a minute)...")
         gdi = os.path.join(tmpdir, "disc.gdi")
-        run_chdman(args.chdman, ["extractcd", "-i", args.chd, "-o", gdi])
+        run_chdman(chdman, ["extractcd", "-i", source, "-o", gdi])
 
         # 3. Locate the track file and apply the byte patch.
         with open(gdi, encoding="ascii") as f:
@@ -169,10 +188,10 @@ def main():
 
         # 4. Rebuild the CHD.
         print("Rebuilding CHD (this takes a few minutes)...")
-        run_chdman(args.chdman, ["createcd", "-i", gdi, "-o", out_path])
+        run_chdman(chdman, ["createcd", "-i", gdi, "-o", out_path])
 
         # 5. Verify the result.
-        out_sha1, _ = chd_hashes(args.chdman, out_path)
+        out_sha1, _ = chd_hashes(chdman, out_path)
         if out_sha1 != m["target"]["chd_sha1"]:
             os.remove(out_path)
             fail(
@@ -182,12 +201,6 @@ def main():
     finally:
         shutil.rmtree(tmpdir, ignore_errors=True)
 
-    print(f"\nWrote {out_path}")
-    print(f"  SHA1: {m['target']['chd_sha1']} (verified)")
-    print(f"\nPlace it as {m['set']}/{m['chd']} in a MAME rompath ahead of the")
-    print(f"stock set, keeping {m['set']}.zip available. MAME will report a")
-    print("checksum warning for the CHD; that is expected and the game runs")
-    print("on Japanese, USA, and Export BIOS regions.")
 
 
 if __name__ == "__main__":

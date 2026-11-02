@@ -9,6 +9,13 @@ already own:
 
 Every member is checksum-verified against the known build.  See README.txt.
 """
+
+import sys as _native_sys
+from pathlib import Path as _NativePath
+if __name__ == '__main__' and ('--collection-layout' in _native_sys.argv or '--describe-json' in _native_sys.argv):
+    _native_sys.path.insert(0, str(_NativePath(__file__).resolve().parent))
+    from arrange_collection import main as _native_main
+    raise SystemExit(_native_main(_NativePath(__file__).resolve().parent))
 import argparse
 import json
 import re
@@ -77,12 +84,23 @@ def main():
         disc = collection.Disc(args.iso)
     except (OSError, ValueError) as exc:
         fail(f"{exc}\n       looked for: {Path(args.iso).absolute()}")
+    files = build_native_outputs(args.iso, roms, firmware.get(QSOUND['name']), args.region)
+    publish_tree(Path(args.out_dir), files)
+    print_completion(args.out_dir, files)
+
+
+def check_native_disc(iso):
+    return collection.Disc(str(iso))
+
+
+def build_native_outputs(iso, roms, firmware, region):
+    disc = check_native_disc(iso)
+    roms = {name: dict(members) for name, members in roms.items()}
     base = KIT["base"]
-    if QSOUND["name"] in firmware:
-        roms[base][QSOUND["name"]] = firmware[QSOUND["name"]]
-    regions = list(KIT["regions"]) if args.region == "all" else [args.region]
-    Path(args.out_dir).resolve().parent.mkdir(parents=True, exist_ok=True)
-    stage_context = tempfile.TemporaryDirectory(prefix=".arrange-", dir=Path(args.out_dir).resolve().parent)
+    if firmware is not None:
+        roms[base][QSOUND["name"]] = firmware
+    regions = list(KIT["regions"]) if region == "all" else [region]
+    stage_context = tempfile.TemporaryDirectory(prefix=".arrange-", )
     stage = Path(stage_context.name)
     for region in regions:
         meta = KIT["regions"][region]
@@ -102,7 +120,7 @@ def main():
         mra = re.sub(r'zip="(/hbmame/[^"|]+\.zip)"', r'zip="\1|qsound.zip|qsound_hle.zip"', mra)
         folder = stage.joinpath("mister", *KIT["mra_root"], KIT["mra_dir"][region])
         folder.mkdir(parents=True, exist_ok=True)
-        (folder / f"{meta['mra']}.mra").write_text(mra)
+        (folder / f"{meta['mra']}.mra").write_bytes(mra.encode())
     print("Building the shared Collection music pack...")
     pack = stage / "vampire_arrange.cpk"
     music.build(disc, json.loads((HERE / "music.json").read_text()), pack)
@@ -111,10 +129,10 @@ def main():
     cores = stage / "mister" / "_Arcade" / "cores"
     cores.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(HERE / "core" / KIT["core"], cores / KIT["core"])
-    files = {p.relative_to(stage).as_posix(): p.read_bytes() for p in stage.rglob("*") if p.is_file()}
-    publish_tree(Path(args.out_dir), files)
-    print_completion(args.out_dir, files)
+    from arrange_collection import tree_outputs
+    files = tree_outputs(stage)
     stage_context.cleanup()
+    return files
 
 
 

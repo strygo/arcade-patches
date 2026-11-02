@@ -87,8 +87,7 @@ def load_bundle(variant=None):
 
 
 def fail(msg: str) -> None:
-    print(f"ERROR: {msg}", file=sys.stderr)
-    sys.exit(1)
+    raise RomError(msg)
 
 
 
@@ -166,95 +165,7 @@ def build_members(manifest, patches, source, compact=False):
     return result
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("target", nargs="?", help="source archive; a directory alone selects legacy IN-PLACE patching")
-    parser.add_argument("--rompath", action="append", default=[])
-    parser.add_argument("--out-dir", help="output folder (default: unused output-<set> folder)")
-    parser.add_argument("-o", "--output")
-    parser.add_argument("--hbmame", action="store_true")
-    parser.add_argument("--platform", choices=("all", "mame", "hbmame", "fbneo", "mister", "darksoft"))
-    parser.add_argument("--variant")
-    parser.add_argument("--list-variants", action="store_true")
-    parser.add_argument("--include-devices", action="store_true")
-    parser.add_argument("--check", action="store_true")
-    parser.add_argument("--check-runtime", action="store_true")
-    parser.add_argument("--self-test", action="store_true")
-    parser.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
-    from tool_controls import add_arguments, configure
-    add_arguments(parser)
-    args = parser.parse_args()
-    configure(sys.argv[1:])
-    if args.self_test:
-        assert apply_ips(b"PATCH\x00\x00\x00\x00\x01ZEOF", b"ABC") == b"ZBC"
-        print("IPS applier self-test passed")
-        return
-    base = read_manifest()
-    if args.list_variants:
-        for variant in base.get("variants", []):
-            print(f"{variant['key']}: {variant['label']}")
-        return
-    if args.out_dir and args.output:
-        parser.error("choose --out-dir or --output")
-    if args.hbmame and args.platform not in (None, "hbmame"):
-        parser.error("--hbmame conflicts with --platform")
-    platform = args.platform or ("hbmame" if args.hbmame else "all" if args.out_dir or args.check or args.check_runtime else "mame")
-    if not args.out_dir and not args.output and not (args.check or args.check_runtime) and not (args.target and os.path.isdir(args.target) and not args.rompath):
-        args.out_dir = str(default_output("output-" + base["set"]))
-        platform = args.platform or ("hbmame" if args.hbmame else "all")
-    if platform in ("all", "mister", "darksoft") and not args.out_dir and not (args.check or args.check_runtime):
-        parser.error("this platform needs --out-dir (omit --output to choose a safe default folder)")
-    if args.target and os.path.isdir(args.target) and not args.out_dir and not args.rompath and not (args.check or args.check_runtime):
-        if platform != "mame" or args.output:
-            parser.error("use --rompath for directory discovery; positional directory mode patches in place")
-        manifest, patches = load_bundle(args.variant)
-        patch_dir(manifest, patches, args.target)
-        return
-    keys = [v["key"] for v in base.get("variants", [])]
-    if args.variant or not keys:
-        keys = [args.variant]
-    elif not args.out_dir and not (args.check or args.check_runtime):
-        parser.error("choose --variant or use --out-dir for all builds")
-    bundles = [load_bundle(key) for key in keys]
-    default_name = ((bundles[0][0].get(platform) or {}).get("setname", base["set"])
-                    if platform in ("hbmame", "fbneo") else base["set"] + "_patched") + ".zip"
-    output = Path(args.out_dir or args.output or default_name).resolve()
-    if not (args.check or args.check_runtime):
-        check_output(output, ([args.target] if args.target else []) + args.rompath, directory=bool(args.out_dir))
-    print("[1/3] Checking arcade inputs...")
-    resolver = Resolver(search_paths(args.target, args.rompath, HERE),
-                        hints=[base["set"], *base.get("parents", []), "qsound", "qsound_hle"],
-                        exclude=[output], progress=print)
-    needed = {}
-    for manifest, _ in bundles:
-        need_darksoft = platform in ("darksoft", "all") and bool(manifest.get("darksoft"))
-        if platform == "darksoft" and not need_darksoft:
-            raise RomError("Darksoft is unavailable: this kit has no declared compatible CPS-2 output")
-        need_fbneo = platform in ("fbneo", "all") and bool(manifest.get("fbneo"))
-        if platform == "fbneo" and not need_fbneo:
-            raise RomError("This kit has no FBNeo mapping")
-        need_full = (platform in ("mame", "all") and base.get("mame_build", True)) or need_darksoft or need_fbneo
-        need_hb = (platform in ("hbmame", "all") or (platform == "mister" and base.get("mister_hbmame"))) and bool(manifest.get("hbmame"))
-        if platform == "mame" and not base.get("mame_build", True):
-            raise RomError("This kit has no MAME build; select HBMAME or MiSTer")
-        if platform == "hbmame" and not need_hb:
-            raise RomError("This kit has no HBMAME mapping")
-        if need_full or need_hb or args.check_runtime:
-            for spec in requirements(manifest, compact=not (need_full or args.check_runtime)):
-                if spec["name"] in needed and needed[spec["name"]] != spec:
-                    raise RomError("Variants require conflicting stock identities")
-                needed[spec["name"]] = spec
-    source = resolver.resolve(needed.values())
-    include_game_devices = base.get("mame_include_devices", True) or args.include_devices
-    devices = resolver.devices(include=args.include_devices) if needed and include_game_devices else {}
-    if args.check_runtime:
-        resolver.devices(include=True)
-        print("Game and firmware content verified; MiSTer also needs its MRA-named archive paths on the card.")
-    if args.check or args.check_runtime:
-        print("Build inputs verified")
-        return
-    print("[2/3] Building and verifying selected outputs...")
-    # Build and verify every selected result before publishing any file.
+def build_outputs(base, bundles, source, devices, platform):
     outputs = {}
     for manifest, patches in bundles:
         key = manifest.get("variant", {}).get("key")
@@ -293,6 +204,142 @@ def main():
             outputs[manifest["mra"]] = (Path(HERE) / manifest["mra"]).read_bytes()
     if not outputs:
         raise RomError("No output is available for the selected platform")
+    return outputs
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("target", nargs="?", help="source archive; a directory alone selects legacy IN-PLACE patching")
+    parser.add_argument("--rompath", action="append", default=[])
+    parser.add_argument("--out-dir", help="output folder (default: unused output-<set> folder)")
+    parser.add_argument("-o", "--output")
+    parser.add_argument("--hbmame", action="store_true")
+    parser.add_argument("--platform", choices=("all", "mame", "hbmame", "fbneo", "mister", "darksoft"))
+    parser.add_argument("--variant")
+    parser.add_argument("--list-variants", action="store_true")
+    parser.add_argument("--include-devices", action="store_true")
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--check-runtime", action="store_true")
+    parser.add_argument("--self-test", action="store_true")
+    parser.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
+    from tool_controls import add_arguments, configure
+    add_arguments(parser)
+    parser.add_argument('--describe-json', action='store_true')
+    parser.add_argument('--emit-definition', metavar='PROJECT', help=argparse.SUPPRESS)
+    parser.add_argument('--inputs-json', type=Path)
+    parser.add_argument('--collection-layout', action='store_true')
+    parser.add_argument('--report-json', type=Path)
+    args = parser.parse_args()
+    global REPORT_ARGS
+    REPORT_ARGS = args
+    if args.describe_json:
+        from kit_collection import describe
+        print(json.dumps(describe(HERE), sort_keys=True))
+        return
+    if args.collection_layout and (not args.out_dir or args.platform in (None, 'all')):
+        parser.error('collection layout needs --out-dir and one --platform')
+    if args.emit_definition:
+        args.platform = 'all'
+        args.check = True
+    configure(sys.argv[1:])
+    if args.self_test:
+        assert apply_ips(b"PATCH\x00\x00\x00\x00\x01ZEOF", b"ABC") == b"ZBC"
+        print("IPS applier self-test passed")
+        return
+    base = read_manifest()
+    if args.list_variants:
+        for variant in base.get("variants", []):
+            print(f"{variant['key']}: {variant['label']}")
+        return
+    if args.out_dir and args.output:
+        parser.error("choose --out-dir or --output")
+    if args.hbmame and args.platform not in (None, "hbmame"):
+        parser.error("--hbmame conflicts with --platform")
+    platform = args.platform or ("hbmame" if args.hbmame else "all" if args.out_dir or args.check or args.check_runtime else "mame")
+    if not args.out_dir and not args.output and not (args.check or args.check_runtime) and not (args.target and os.path.isdir(args.target) and not args.rompath):
+        args.out_dir = str(default_output("output-" + base["set"]))
+        platform = args.platform or ("hbmame" if args.hbmame else "all")
+    if platform in ("all", "mister", "darksoft") and not args.out_dir and not (args.check or args.check_runtime):
+        parser.error("this platform needs --out-dir (omit --output to choose a safe default folder)")
+    if args.target and os.path.isdir(args.target) and not args.out_dir and not args.rompath and not (args.check or args.check_runtime):
+        if platform != "mame" or args.output:
+            parser.error("use --rompath for directory discovery; positional directory mode patches in place")
+        manifest, patches = load_bundle(args.variant)
+        patch_dir(manifest, patches, args.target)
+        return
+    keys = [v["key"] for v in base.get("variants", [])]
+    if args.variant or not keys:
+        keys = [args.variant]
+    elif not args.out_dir and not (args.check or args.check_runtime):
+        parser.error("choose --variant or use --out-dir for all builds")
+    bundles = [load_bundle(key) for key in keys]
+    default_name = ((bundles[0][0].get(platform) or {}).get("setname", base["set"])
+                    if platform in ("hbmame", "fbneo") else base["set"] + "_patched") + ".zip"
+    output = Path(args.out_dir or args.output or default_name).resolve()
+    bound_paths = []
+    if args.inputs_json:
+        from kit_collection import load_bindings
+        bound_paths = [row['path'] for row in load_bindings(args.inputs_json)]
+    if not (args.check or args.check_runtime):
+        check_output(output, ([args.target] if args.target else []) + args.rompath + bound_paths, directory=bool(args.out_dir))
+    print("[1/3] Checking arcade inputs...")
+    resolver = Resolver(search_paths(args.target, args.rompath, HERE),
+                        hints=[base["set"], *base.get("parents", []), "qsound", "qsound_hle"],
+                        exclude=[output], progress=print, bindings=args.inputs_json)
+    needed = {}
+    for manifest, _ in bundles:
+        need_darksoft = platform in ("darksoft", "all") and bool(manifest.get("darksoft"))
+        if platform == "darksoft" and not need_darksoft:
+            raise RomError("Darksoft is unavailable: this kit has no declared compatible CPS-2 output")
+        need_fbneo = platform in ("fbneo", "all") and bool(manifest.get("fbneo"))
+        if platform == "fbneo" and not need_fbneo:
+            raise RomError("This kit has no FBNeo mapping")
+        need_full = (platform in ("mame", "all") and base.get("mame_build", True)) or need_darksoft or need_fbneo
+        need_hb = (platform in ("hbmame", "all") or (platform == "mister" and base.get("mister_hbmame"))) and bool(manifest.get("hbmame"))
+        if platform == "mame" and not base.get("mame_build", True):
+            raise RomError("This kit has no MAME build; select HBMAME or MiSTer")
+        if platform == "hbmame" and not need_hb:
+            raise RomError("This kit has no HBMAME mapping")
+        if need_full or need_hb or args.check_runtime or args.collection_layout:
+            for spec in requirements(manifest, compact=not (need_full or args.check_runtime or args.collection_layout)):
+                if spec["name"] in needed and needed[spec["name"]] != spec:
+                    raise RomError("Variants require conflicting stock identities")
+                needed[spec["name"]] = spec
+    source = resolver.resolve(needed.values())
+    firmware = {}
+    definition = None
+    collection_target = (args.variant or 'default') + '-' + platform
+    if args.collection_layout or args.emit_definition:
+        firmware = resolver.devices(include=True) if args.emit_definition or platform in ('mame', 'hbmame', 'mister') else {}
+        if args.collection_layout:
+            from kit_collection import describe
+            definition = describe(HERE)
+            if collection_target not in definition['targets']:
+                raise RomError('Unknown collection target')
+    if args.emit_definition:
+        from kit_collection import define
+        value = define(HERE, args.emit_definition, base, bundles, source | firmware, build_outputs)
+        Path(HERE, 'collection.json').write_text(json.dumps(value, indent=2, sort_keys=True) + '\n')
+        print('Prepared native collection definition')
+        return
+    include_game_devices = base.get("mame_include_devices", True) or args.include_devices
+    devices = resolver.devices(include=args.include_devices) if needed and include_game_devices else {}
+    if args.check_runtime:
+        resolver.devices(include=True)
+        print("Game and firmware content verified; MiSTer also needs its MRA-named archive paths on the card.")
+    if args.check or args.check_runtime:
+        if args.collection_layout:
+            from kit_collection import report
+            report(args.report_json, 'check', collection_target)
+        print("Build inputs verified")
+        return
+    print("[2/3] Building and verifying selected outputs...")
+    # Build and verify every selected result before publishing any file.
+    outputs = build_outputs(base, bundles, source, devices, platform)
+    if args.collection_layout:
+        from kit_collection import complete_outputs, verify_outputs
+        outputs = complete_outputs(base, bundles[0][0], platform, outputs, source | firmware)
+        verify_outputs(outputs, definition['targets'][collection_target]['outputs'])
     print("[3/3] Writing verified outputs...")
     if args.out_dir:
         # A staging/backup transaction protects existing destinations on failure.
@@ -300,6 +347,9 @@ def main():
         publish_tree(output, outputs)
     else:
         write_zip(output, next(iter(outputs.values())))
+    if args.collection_layout:
+        from kit_collection import report, contracts
+        report(args.report_json, 'build', collection_target, outputs=contracts(outputs))
     print(f"Built game files: {output}")
     if args.out_dir:
         print_completion(output, outputs)
@@ -311,10 +361,17 @@ def main():
 
 
 
+REPORT_ARGS = None
+
+
 if __name__ == "__main__":
     try:
         main()
     except (RomError, OSError, ValueError) as exc:
+        if REPORT_ARGS is not None and REPORT_ARGS.collection_layout:
+            from kit_collection import report
+            report(REPORT_ARGS.report_json, 'check' if REPORT_ARGS.check else 'build',
+                   (REPORT_ARGS.variant or 'default') + '-' + str(REPORT_ARGS.platform), status='failed', message=str(exc))
         if "--debug" in sys.argv:
             raise
         raise SystemExit(f"ERROR: {exc}")

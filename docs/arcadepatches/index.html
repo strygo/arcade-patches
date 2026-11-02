@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArcadePatches · Tools</title>
+<meta name="description" content="Build and update your Arcade Patches collection from media you own. Choose your games, platforms and regions, then copy the completed folders to your setup.">
+<link rel="canonical" href="https://arcadepatches.com/arcadepatches/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arcade Patches">
+<meta property="og:title" content="ArcadePatches">
+<meta property="og:description" content="Build and update your Arcade Patches collection from media you own. Choose your games, platforms and regions, then copy the completed folders to your setup.">
+<meta property="og:url" content="https://arcadepatches.com/arcadepatches/">
+<meta property="og:image" content="https://arcadepatches.com/img/arcadepatches/00_single.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ArcadePatches">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ArcadePatches">
+<meta name="twitter:title" content="ArcadePatches">
+<meta name="twitter:description" content="Build and update your Arcade Patches collection from media you own. Choose your games, platforms and regions, then copy the completed folders to your setup.">
+<meta name="twitter:image" content="https://arcadepatches.com/img/arcadepatches/00_single.png">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="64x64">
+<link rel="alternate icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css?v=3c47e56187">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="../">
+      <img class="logo" src="../logo.png" width="48" height="48" alt="">
+      <span><span class="home">Arcade Patches</span>
+      <span class="tagline">Translations, restorations and arranged soundtracks for classic arcade games.</span></span>
+    </a>
+    <nav><a href="../tools/">Tools</a><a href="../about/">About</a><a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">Forum</a><a href="https://x.com/ArcadePatches">X</a></nav>
+  </div>
+</header>
+<main>
+<a class="back" href="../tools/">← Tools</a>
+<h1>ArcadePatches</h1><p class="subtitle">Collection builder · v0.1</p>
+<p>Build and update your Arcade Patches collection from media you own. Choose your games, platforms and regions, then copy the completed folders to your setup.</p>
+<div class="download"><div class="kind">Python launcher · Windows, macOS and Linux</div>
+<div class="file"><a href="../tools/downloads/archive/5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1/ArcadePatches-0.1.zip">Download ArcadePatches 0.1</a> (42 KB)</div>
+<div class="hash">SHA-256: 5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1</div></div>
+<p>Free download. Python is required. No ROMs or game data are included.</p>
+<h2>What it does</h2><ul><li>Point it at your ROM and media folders. Loose files, ZIPs and 7z archives are identified by content, without renaming them.</li><li>Choose individual games, platforms and regions, or keep everything selected to include future catalog additions.</li><li>Check requirements using archive details without unpacking ROMs. Source contents are verified when building, and ready games can update while others wait for missing media.</li><li>Required patches, helpers and Python packages are downloaded and prepared privately when needed.</li><li>Run it again to pick up catalog updates. Completed output is grouped by platform, ready to copy.</li></ul>
+<div class="tool-shots"><h2>Inside the terminal</h2>
+<figure class="shot single"><a href="../img/arcadepatches/00_single.png?v=c9b3fdd4bb"><img src="../img/arcadepatches/00_single.png?v=c9b3fdd4bb" alt="Saved folders and the main menu. Example folder names are shown."></a><figcaption>Saved folders and the main menu. Example folder names are shown.</figcaption></figure>
+<figure class="shot single"><a href="../img/arcadepatches/01_single.png?v=54502eed59"><img src="../img/arcadepatches/01_single.png?v=54502eed59" alt="Keep all regions, including future additions, or choose a smaller selection."></a><figcaption>Keep all regions, including future additions, or choose a smaller selection.</figcaption></figure>
+<figure class="shot single"><a href="../img/arcadepatches/02_single.png?v=bcb5da590d"><img src="../img/arcadepatches/02_single.png?v=bcb5da590d" alt="Missing ROM files share one base-set instruction; separate media requirements remain visible. This example uses an empty folder."></a><figcaption>Missing ROM files share one base-set instruction; separate media requirements remain visible. This example uses an empty folder.</figcaption></figure>
+<figure class="shot single"><a href="../img/arcadepatches/03_single.png?v=48baa53742"><img src="../img/arcadepatches/03_single.png?v=48baa53742" alt="Example of a new game and a version update. View all release changes opens the complete list."></a><figcaption>Example of a new game and a version update. View all release changes opens the complete list.</figcaption></figure></div>
+<p>Open a screenshot to view it at full size.</p>
+<h2>Before you start</h2><p>Install Python first. Use Python 3.12 on an Apple Silicon Mac or x64 Python 3.13 on Windows for the full catalog. Windows ARM users can use x64 Python 3.13.</p><p>The launcher requires Python 3.10 or newer. Linux and other Python/host combinations support a subset of builds; the plan identifies unsupported targets before building.</p><p>You need your own canonical MAME-format arcade ROMs. Some games also need discs, firmware or other media. ArcadePatches names what is missing; it does not download source ROMs or private keys.</p><p>Strider EX additionally requires MAME 0.288 on PATH. On Windows, keep the tool&#x27;s state/cache folder on a local NTFS disk.</p>
+<h2>Get started</h2><ol><li>Extract the download and open a terminal in that folder. Launch it with the command for your system below.</li><li>Enter your ROM/media folders and an export folder. All games, platforms and regions are selected initially; option 2 lets you narrow them.</li><li>Choose Build (shown as Update after your first completed build). It checks your media and builds the ready games; a separate requirements check is optional. Follow the instructions for anything missing.</li><li>Read INSTALL.txt in the export folder and copy the platform folders to your device or emulator setup. Later launches check for new releases without scanning your ROM folders; choose Update when you want them.</li></ol>
+<pre><code># Windows
+py -3.13 arcadepatches.py
+
+# Apple Silicon Mac
+python3.12 arcadepatches.py
+
+# Linux
+python3 arcadepatches.py</code></pre>
+<p>The included QUICKSTART.txt covers command-line filters, offline updates, cache limits and recovery.</p>
+<h2>Updates and output</h2>
+<p>At startup, the launcher checks for new games, versions and changed requirements without scanning your ROM folders. Choose Build (shown as Update after your first completed build) to check your media and build the ready games. Keeping “all” selected includes future matching games, platforms and regions. It does not run in the background.</p>
+<p>Copying to MiSTer, HBMAME or another destination is manual. Some soundtrack exports are overlays that need the named game files already installed; follow INSTALL.txt. Changing a selection keeps existing exports.</p>
+<p>Prefer to build one game directly? Each game's page still has its standalone download and instructions.</p>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
+    by Capcom. All game titles, characters, and artwork remain the property of their
+    respective owners. No ROMs or other copyrighted game data are hosted here.</p>
+    <p><a href="../about/">About</a> · <a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">Support forum</a> · <a href="https://x.com/ArcadePatches">@ArcadePatches on X</a> · <a href="../legal.html">Legal &amp; disclaimers</a></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -8,6 +8,7 @@ import sys
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -17,6 +18,11 @@ import release_packager as packager
 
 
 class ReleasePackagerTests(unittest.TestCase):
+    def setUp(self):
+        # This suite isolates the producer's ROM/device rules with fake firmware.
+        # Native generation/execution has its own real shared-helper test suite.
+        self.native_package = self.enterContext(patch('kit_collection.package_archive'))
+
     def test_regional_mra_bases_keep_their_own_nvram_defaults(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -83,6 +89,8 @@ class ReleasePackagerTests(unittest.TestCase):
                      'hbmame': {'setname': 'demorest', 'complete': True,
                                 'renames': {'game.03': 'game.03', 'game.04': 'game.04'}}}
             packager.build_rom_downloads(patch)
+            self.native_package.assert_called_once()
+            self.assertEqual(self.native_package.call_args.args[1], 'device')
             kit = root / 'kit'
             with zipfile.ZipFile(root / 'published/downloads/device-rc1-ips.zip') as z:
                 self.assertIs(json.loads(z.read('manifest.json'))['mame_include_devices'], False)

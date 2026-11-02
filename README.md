@@ -105,20 +105,16 @@ then import its readiness record with the same command above. Keep the page's
 game version and the public download filename. The inventory records a separate
 kit revision and tools date, with immutable copies under
 `docs/downloads/archive/<sha256>/<filename>`. Existing entries migrate to
-revision 1 without changing their bytes. Every original remains recoverable.
+revision 1 without changing their bytes. Original archives remain hash-verifiable.
 
 The importer requires the exact current baseline, the next revision number,
 unchanged public names, clean reproduction and a matching game-content contract.
 Promotion stages the replacements and uses an exclusive recovery journal. To
 restore an interrupted promotion, run `python3 tools/import_release.py --recover`.
-To select a previous kit revision, run:
+Updates move forward through newly qualified revisions; there is no command to
+select an earlier publication. Archived downloads remain available for provenance.
 
-```bash
-python3 tools/import_release.py --rollback <kit> <game-version> <revision>
-python3 tools/build.py
-```
-
-The whole revision history is retained. After deployment,
+Published download records are retained for provenance. After deployment,
 `python3 tools/verify_hosted_releases.py --archives` also checks the immutable
 copies. The renderer's existing content-hash URL query updates automatically
 when the stable filename's contents change.
@@ -148,3 +144,74 @@ branch and the `/docs` folder. To show a "Source on GitHub" footer link, set
 ```bash
 python3 -m http.server 8734 --directory docs
 ```
+
+## Tools and the ArcadePatches catalog
+
+`data/tools.json` supplies the Tools landing page, home-page section and launcher
+page. Tools have their own inventory, `data/tool-releases.json`; they are not
+ROM candidates and do not alter the game-release inventory. Terminal screenshots
+are captures of real launcher prompts, rendered from a PTY transcript. The
+recipe is `release/collection/capture_terminal.py` in the Capcom repository;
+`data/screenshots/arcadepatches/capture.json` records their identities.
+
+Prepare the launcher ZIP with Capcom's `release/collection/package_launcher.py`.
+Prepare a complete catalog with `release/collection/build_catalog.py`, pinning a
+**qualified site inventory commit**, and qualify its metadata with
+`release/collection/qualify_release.py`. Run Capcom producers through its storage
+wrapper as documented in that repository. Then import here:
+
+```sh
+python3 tools/import_tool.py --archive <ArcadePatches-0.1.zip> \
+  --receipt <package-receipt.json> --catalog <prepared-catalog-directory> \
+  --qualification <catalog-qualification.json>
+python3 tools/build.py
+```
+
+The importer verifies the ZIP receipt and catalog qualification, preflights all
+dependency hashes, and reuses existing game downloads by hash. New helpers,
+adapters and wheels go under `docs/catalog/v1/artifacts/`. The launcher ZIP goes
+under `docs/tools/downloads/archive/<sha256>/`, separate from the strict game
+inventory; its selected path is recorded in `data/tool-releases.json`. The
+catalog's live pointer is `docs/catalog/v1/index.json`; the default launcher URL
+must be deployed in the same publication as the initial tool download. The site
+build verifies the complete tool inventory and download closure.
+
+The public index uses schema 2: discovery metadata and hash-pinned definition
+references. `tools/catalog_index.py` extracts native `collection.json` files
+byte-for-byte from their qualified kits into `catalog/v1/definitions/<sha>.json`.
+These sidecars are generated delivery copies. The remaining adapter families
+use generated `adapter-release-v1` sidecars. Neither has a separately authored
+public recipe. The full schema 1 model is an internal qualification input;
+`import_tool.py` converts it automatically after validating its receipt.
+The launcher verifies and caches definitions before presenting prerequisites,
+without fetching kit ZIPs, and reuses them offline.
+
+
+All 14 IPS projects use native kit definitions. Their `collection_api: 1` page
+metadata makes normal kit packaging generate `collection.json`. Qualified
+`tools/import_release.py` imports refresh that project's catalog entry and
+increment the generation automatically. `--recover` reconciles an interrupted
+kit/catalog transaction. Native tooling revisions must increase; the importer
+stores only the selected collection definition and creates no revision-selection
+snapshots.
+
+Other producer families retain their current adapters and need an explicit
+catalog refresh until migrated. Keep the launcher ZIP unchanged when its code
+and instructions have not changed. Retain published content-addressed artifacts
+for cached catalogs; the removed IPS adapter ZIPs were never published.
+
+To render imported pages while unrelated page drafts remain pending, use
+`tools/build.py --render-only <comma-separated game slugs>,arcadepatches`.
+This preserves other pages and site-wide indexes. Full site generation still
+requires all page versions to match the release inventory.
+
+After deployment, run `python3 tools/verify_tool.py --base-url https://arcadepatches.com/`
+to verify the catalog, launcher and every referenced dependency over HTTP. For
+staging, pass the local server URL instead. This supplements the game-only
+`verify_hosted_releases.py`; neither runs game builders.
+
+The initial Capcom qualifier deliberately pins 26 projects/293 targets. New
+integrations need an updated acceptance contract; they do not inherently need
+a new launcher.
+
+Publishing remains a separate, explicitly authorized push.

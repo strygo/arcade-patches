@@ -247,7 +247,7 @@ def page(site: dict, title: str, body: str, depth: int = 0, social: dict | None 
 
 
 def site_nav(site: dict, rel: str) -> str:
-    links = [(f"{rel}about/", "About")]
+    links = [(f"{rel}tools/", "Tools"), (f"{rel}about/", "About")]
     if site.get("forum_url"):
         links.append((site["forum_url"], "Forum"))
     if site.get("x_url"):
@@ -440,7 +440,7 @@ def render_changelog_page(site: dict, days: list, social: dict | None = None) ->
 
 def render_index(site: dict, patches: list, thumbs: dict,
                  projects: list = (), project_thumbs: dict = {}, articles: list = (),
-                 social: dict | None = None) -> str:
+                 social: dict | None = None, tools_section: str = "") -> str:
     """The home page: the intro, then one section per kind of project (site
     `sections`, in order), each with its description and its cards.  Every
     patch and project names its section; an entry without one fails the
@@ -512,7 +512,7 @@ def render_index(site: dict, patches: list, thumbs: dict,
 {''.join(cards)}
 </section>""")
     changes = render_changelog_section(site, changelog_days(patches, projects))
-    body = (f"{intro}\n" + "\n".join(sections)
+    body = (f"{intro}\n" + "\n".join(sections) + tools_section
             + f"\n{changes}\n{render_about_section(site)}\n{render_contact_section(site)}")
     return page(site, site["title"], body, social=social)
 
@@ -1356,17 +1356,58 @@ fan-work practice, please get in touch and it will be addressed promptly.
 # ------------------------------------------------------------------ main
 
 
+def render_selection(config, inventory, tool, selected):
+    """Refresh named imported pages while other page drafts remain pending."""
+    global SITE
+    SITE = config['site']
+    known = {p['slug'] for group in ('patches', 'projects') for p in config.get(group, [])}
+    if selected - known - {'tools', 'arcadepatches'}:
+        raise ValueError('Unknown selected page')
+    for group in ('patches', 'projects'):
+        for entry in config.get(group, []):
+            if entry['slug'] not in selected:continue
+            if entry.get('hidden'):raise ValueError('Selected page is hidden')
+            bundle = published_bundle(ROOT, entry, inventory)
+            shots = copy_screenshots(entry)
+            builds = copy_build_titles(entry) if entry.get('builds') else []
+            chosen = next((b for b in builds if b['key'] == entry.get('thumbnail_build')), builds[0]) if builds else None
+            image = chosen['img'] if chosen else next((shot.get('after') or shot.get('single')
+                    for shot in shots if shot.get('after') or shot.get('single')), None)
+            social = {'title': entry['title'], 'description': entry.get('summary', ''),
+                'path': entry['slug'] + '/', 'image': social_card(entry['slug'], [image.replace('../', '')])
+                if image else 'img/arcadepatches/00_single.png'}
+            if builds:html = render_builds_page(SITE, entry, builds, bundle, shots, social)
+            elif group == 'projects':html = render_project_page(SITE, entry, bundle, shots, social)
+            else:html = render_patch_page(SITE, entry, bundle, shots, social)
+            directory = DOCS / entry['slug'];directory.mkdir(parents=True, exist_ok=True)
+            (directory / 'index.html').write_text(html)
+            print(entry['slug'] + ': imported page refreshed')
+    if selected & {'tools', 'arcadepatches'}:
+        if not tool:raise ValueError('Tool is not imported')
+        import tool_pages
+        tool_pages.render(sys.modules[__name__], SITE, tool)
+        print('Tools pages refreshed')
+
+
 def main() -> None:
     import argparse
     ap = argparse.ArgumentParser(description="Build the site into docs/.")
     ap.add_argument("--only", help="comma-separated slugs to rebuild from sources; "
                     "everything else reuses what is committed")
+    ap.add_argument('--render-only', help='comma-separated imported game/tool pages to render; leave other pages and site-wide indexes unchanged')
     args = ap.parse_args()
+    if args.only and args.render_only:ap.error('choose --only or --render-only')
     if args.only:
         ONLY.update(x.strip() for x in args.only.split(",") if x.strip())
     config = json.loads((ROOT / "data" / "patches.json").read_text())
     validate_pages(config)
+    import tool_pages
+    tool = tool_pages.load(ROOT)
     inventory = load_inventory(ROOT / "data" / "releases.json")
+    if args.render_only:
+        validate_inventory(ROOT, inventory, require_page_current=False)
+        render_selection(config, inventory, tool, {s.strip() for s in args.render_only.split(',') if s.strip()})
+        return
     validate_inventory(ROOT, inventory)
     site, patches = config["site"], config["patches"]
     projects = [p for p in config.get("projects", []) if not p.get("hidden")]
@@ -1460,7 +1501,7 @@ def main() -> None:
     (DOCS / "index.html").write_text(
         render_index(site, patches, thumbs, projects, project_thumbs,
                      [a for a in config.get("articles", []) if not a.get("hidden")],
-                     social=home))
+                     social=home, tools_section=tool_pages.section(tool[0]) if tool else ""))
     (DOCS / "legal.html").write_text(render_legal(
         site, dict(home, title=f"Legal · {site['title']}", path="legal.html")))
     (DOCS / "about").mkdir(parents=True, exist_ok=True)
@@ -1479,6 +1520,8 @@ def main() -> None:
     (DOCS / "changelog" / "index.html").write_text(render_changelog_page(site, days, dict(
         home, title=f"Changelog · {site['title']}", path="changelog/",
         description="Every release of every Arcade Patches project, newest first.")))
+    if tool:
+        tool_pages.render(sys.modules[__name__], site, tool)
     prune_social_cards()
     print(f"changelog: {sum(len(d['events']) for d in days)} releases over {len(days)} days")
     print(f"\nSite built into {DOCS}")

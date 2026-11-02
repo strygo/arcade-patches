@@ -18,28 +18,30 @@ def main() -> None:
     parser.add_argument("--candidate", type=Path,
                         help="immutable Capcom candidate directory containing release.json")
     parser.add_argument("--recover", action="store_true", help="restore an interrupted kit revision transaction")
-    parser.add_argument("--rollback", nargs=3, metavar=("KIT", "VERSION", "REVISION"))
     args = parser.parse_args()
     try:
         if args.recover:
-            if args.rollback or args.ready or args.candidate:
+            if args.ready or args.candidate:
                 parser.error("--recover cannot be combined with other operations")
             from kit_revisions import recover
-            recover(ROOT)
+            from collection_catalog import recover as recover_collection, JOURNAL
+            pending = (ROOT / JOURNAL).exists()
+            if (ROOT / 'data/kit-revision-transaction.json').exists():
+                recover(ROOT)
+            elif not pending:
+                raise ValueError('no interrupted publication to recover')
+            recover_collection(ROOT)
             print("Recovered previous publication")
-            return
-        if args.rollback:
-            if args.ready or args.candidate:
-                parser.error("--rollback cannot be combined with import")
-            from kit_revisions import rollback
-            rollback(ROOT, args.rollback[0], args.rollback[1], int(args.rollback[2]))
-            print("Restored selected kit revision")
             return
         if not args.ready or not args.candidate:
             parser.error("import requires --ready and --candidate")
+        from collection_catalog import prepare, begin, recover as finish_collection
+        pending = prepare(ROOT, args.ready.resolve(), args.candidate.resolve())
+        begin(ROOT, pending)
         imported = import_candidate(ROOT, args.ready.resolve(), args.candidate.resolve())
+        if pending:finish_collection(ROOT)
     except (ReleaseInventoryError, ValueError, OSError) as exc:
-        raise SystemExit(f"import rejected: {exc}") from exc
+        raise SystemExit(f"import rejected: {exc}. If a transaction remains, run --recover before retrying") from exc
     names = ", ".join(record["name"] for record in imported["files"].values())
     print(f"imported: {names}")
 

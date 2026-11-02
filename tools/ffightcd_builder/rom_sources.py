@@ -15,7 +15,7 @@ import zlib
 from pathlib import Path
 
 QSOUND = {"name": "dl-1425.bin", "size": 24576, "crc32": "d6cf5ef5",
-          "sha1": "555f50fe5cdf127619da7d854c03f4a244a0c501", "role": "device"}
+          "sha1": "555f50fe5cdf127619da7d854c03f4a244a0c501", "role": "device", "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"}
 
 
 class RomError(ValueError):
@@ -116,7 +116,11 @@ def search_paths(target=None, rompaths=(), kit=None):
 class Resolver:
     """Resolve by identity, never by first matching basename. No persistent cache."""
 
-    def __init__(self, paths, hints=(), exclude=(), progress=None):
+    def __init__(self, paths, hints=(), exclude=(), progress=None, bindings=None):
+        self.bindings = None
+        if bindings is not None:
+            from kit_collection import load_bindings
+            self.bindings = load_bindings(bindings)
         self.paths = list(dict.fromkeys(Path(p).expanduser().resolve() for p in paths))
         self.hints = tuple(h.lower() for h in hints)
         self.exclude = [Path(p).resolve() for p in exclude]
@@ -206,6 +210,9 @@ class Resolver:
         return path.read_bytes()
 
     def resolve(self, requirements, optional=False, embedded_only=False):
+        if self.bindings is not None:
+            from kit_collection import resolve_bound
+            return resolve_bound(requirements, self.bindings, verify, optional)
         specs = {}
         for spec in requirements:
             name = spec["name"]

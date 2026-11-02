@@ -41,6 +41,13 @@ import sys
 import zipfile
 from pathlib import Path
 
+if sys.argv[1:] == ["--describe-json"]:
+    from kit_identity import describe
+    if (Path(__file__).resolve().parent / "collection.json").is_file():
+        from gold_collection import describe
+    print(json.dumps(describe(Path(__file__).resolve().parent), sort_keys=True))
+    raise SystemExit(0)
+
 import assemble
 import fbneo_names
 import extract as ex
@@ -51,35 +58,15 @@ from rom_sources import require_path, default_output, check_output, print_comple
 HERE = Path(__file__).resolve().parent
 PROFILES = {"jp": ex.JP, "us": ex.US, "eu": ex.EU, "asia": ex.ASIA}
 
-# region -> set names (4MB for MAME/hardware, 8MB for HBMAME/MiSTer) and the
-# friendly MiSTer MRA filename (title and region; no date).
-SETS = {
-    "us": {"4mb": "sfz2al", "8mb": "sfa2g",
-           "mra": "Street Fighter Alpha 2 Gold (USA) [Backport]"},
-    "eu": {"4mb": "sfz2al", "8mb": "sfa2d",
-           "mra": "Street Fighter Alpha 2 Dash (Europe) [Backport]"},
-    "jp": {"4mb": "sfz2alj", "8mb": "sfz2d",
-           "mra": "Street Fighter Zero 2 Dash (Japan) [Backport]"},
-    "asia": {"4mb": "sfz2al", "8mb": "sfz2da",
-             "mra": "Street Fighter Zero 2 Dash (Asia) [Backport]"},
-}
-# MiSTer folder: every project of ours lives under _Arcade/_Arcade Patches,
-# sorted the way the website is.  USA sits at the top of its section and every
-# other region in its own subfolder.
-MRA_ROOT = ("_Arcade", "_Arcade Patches", "_Restorations")
-MRA_DIR = {"us": "", "eu": "_Europe", "asia": "_Asia", "jp": "_Japan"}
-# Another edition rebuilt the same way (Street Fighter Alpha 2 EX) ships a
-# kit.json naming its own sets, MRAs and folder; Gold's kit has none.
-TITLE, DESCRIPTION = "Gold", __doc__
-if (HERE / "kit.json").is_file():
-    _KIT = json.loads((HERE / "kit.json").read_text())
-    TITLE, SETS, MRA_DIR = _KIT["title"], _KIT["sets"], _KIT["mra_dir"]
-    MRA_ROOT, DESCRIPTION = tuple(_KIT["mra_root"]), _KIT["description"]
+# Both editions explicitly declare their identity and platform names.
+from kit_identity import load_config, PLATFORMS
+_KIT = load_config(HERE)
+TITLE, SETS, MRA_DIR = _KIT["title"], _KIT["sets"], _KIT["mra_dir"]
+MRA_ROOT, DESCRIPTION = tuple(_KIT["mra_root"]), _KIT["description"]
 
 
 def fail(msg):
-    print(f"ERROR: {msg}", file=sys.stderr)
-    sys.exit(1)
+    raise RomError(msg)
 
 
 def zread(path):
@@ -87,7 +74,7 @@ def zread(path):
         return {i.filename: z.read(i.filename) for i in z.infolist()}
 
 
-def write_set(members, want, out_path):
+def checked_members(members, want):
     """Verify every member against the known-good build, then write the zip.
 
     The reconstruction starts from your romset, so a zip that carries more
@@ -112,7 +99,11 @@ def write_set(members, want, out_path):
     for m in want:
         if hashlib.md5(members[m]).hexdigest() != want[m]:
             fail(f"{m}: checksum mismatch — wrong disc or romset for this region")
-    write_zip(out_path, members)
+    return members
+
+
+def write_set(members, want, out_path):
+    write_zip(out_path, checked_members(members, want))
 
 
 def main():
@@ -124,19 +115,29 @@ def main():
     ap.add_argument("--include-devices", action="store_true")
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--check-runtime", action="store_true")
-    ap.add_argument("--platform", choices=("all", "mame", "hbmame", "fbneo", "mister", "darksoft"), default="all")
-    ap.add_argument("--region", required=True, choices=tuple(SETS))
+    ap.add_argument("--platform", choices=("all", *PLATFORMS), default="all")
+    ap.add_argument("--region", "--variant", dest="region", required=True, choices=tuple(SETS))
     ap.add_argument("--out-dir", help="build every platform into this folder")
     ap.add_argument("--size", choices=("4mb", "8mb"), help="single-file mode: capacity")
     ap.add_argument("--out", help="single-file mode: output zip path")
     ap.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
     from tool_controls import add_arguments, configure
     add_arguments(ap)
+    ap.add_argument("--inputs-json", help="exact discovered ROM bindings; disables folder discovery")
+    ap.add_argument("--check-disc", action="store_true", help="verify arcade ROMs and both consumed disc resources without building")
+    ap.add_argument("--collection-layout", action="store_true")
+    ap.add_argument("--report-json", type=Path)
     args = ap.parse_args()
+    if args.collection_layout:
+        from gold_collection import run
+        run(HERE, args, build_outputs)
+        return
     configure(sys.argv[1:])
+    if args.check_disc and not args.iso:
+        ap.error("--check-disc requires --iso")
     if args.iso:
         args.iso = require_path(args.iso, "--iso", file=True)
-    if not (args.check or args.check_runtime):
+    if not (args.check or args.check_runtime or args.check_disc):
         if not args.iso:
             fail("--iso is required to reconstruct " + TITLE)
         if bool(args.size) != bool(args.out):
@@ -145,27 +146,27 @@ def main():
             fail("choose --out-dir or --out, not both")
         if not args.out_dir and not args.out:
             args.out_dir = str(default_output("output-sfa2"))
-    if not args.check and not args.check_runtime:
+    if not (args.check or args.check_runtime or args.check_disc):
         check_output(args.out_dir or args.out, [p for p in [args.iso, args.romset, *args.rompath] if p], directory=bool(args.out_dir))
 
     if args.platform in ('darksoft', 'fbneo') and (args.out or args.size == '4mb'):
         fail(f'{args.platform} uses the best 8 MiB native-sample version and requires --out-dir')
-    if not (args.check or args.check_runtime) and not args.out_dir and not (args.size and args.out):
+    if not (args.check or args.check_runtime or args.check_disc) and not args.out_dir and not (args.size and args.out):
         fail("give --out-dir, or both --size and --out")
 
     data = json.loads((HERE / "recipes" / f"{args.region}.json").read_text())
     profile = PROFILES[args.region]
     print("Reading your arcade romset...")
     catalog = json.loads((HERE / "rom_inputs.json").read_text())["sets"]
-    source_set = "sfz2alj" if args.region == "jp" else "sfz2al"
+    source_set = SETS[args.region]['4mb']
     resolver = Resolver(search_paths(args.romset, args.rompath, HERE),
                         hints=[source_set, "sfz2al", "qsound", "qsound_hle"],
-                        exclude=[Path(args.out_dir or args.out or "out"), HERE / "work"], progress=print)
+                        exclude=[Path(args.out_dir or args.out or "out"), HERE / "work"], progress=print, bindings=args.inputs_json)
     arc = resolver.resolve([s for s in catalog[source_set].values() if s["role"] == "game"])
     arc.update(resolver.devices(include=args.include_devices))
     if args.check_runtime:
         resolver.devices(include=True)
-    if args.check or args.check_runtime:
+    if (args.check or args.check_runtime) and not args.check_disc:
         print(f"{TITLE} stock ROM inputs verified")
         return
     if not args.iso:
@@ -184,89 +185,76 @@ def main():
         fail(f"could not extract from the disc — is this the {args.region.upper()} "
              f"anthology ISO? ({exc})\n"
              f"       looked for: {Path(args.iso).absolute()}")
+    if args.check_disc:
+        print(f"{TITLE} arcade ROMs and disc resources verified")
+        return
     inp = assemble.prepare_inputs(arc, {
         "entry531": z6["entry531"], "comp2": z6["comp2"], "audio": audio,
     })
 
-    reconstructed = {}
-    def reconstruct(size):
-        if size in reconstructed:
-            return reconstructed[size]
-        entry = data["sizes"][size]
-        recipes = {k: base64.b64decode(v) for k, v in entry["recipes"].items()}
-        reconstructed[size] = assemble.reconstruct(inp, recipes), entry["md5"]
-        return reconstructed[size]
-
-    if args.out:  # single-file mode
-        print("Reconstructing and verifying...")
-        members, want = reconstruct(args.size)
-        write_set(members, want, Path(args.out))
-        print(f"\nWrote {args.out} — all {len(members)} members checksum-verified.")
+    if args.out:
+        data = json.loads((HERE / "recipes" / f"{args.region}.json").read_text())
+        entry = data['sizes'][args.size]
+        members = assemble.reconstruct(inp, {k: base64.b64decode(v) for k, v in entry['recipes'].items()})
+        write_set(members, entry['md5'], Path(args.out))
+        print(f"Wrote {args.out} — all members checksum-verified.")
         return
-
-    # Publish all selected outputs only after reconstruction/verification finishes.
-    import tempfile
-    Path(args.out_dir).parent.mkdir(parents=True, exist_ok=True)
-    stage_context = tempfile.TemporaryDirectory(prefix=".gold-export-", dir=Path(args.out_dir).parent)
-    out = Path(stage_context.name)
-    names = SETS[args.region]
-    if args.platform not in ('darksoft', 'fbneo'):
-        print("Reconstructing 4MB (MAME / hardware)...")
-        m4, w4 = reconstruct("4mb")
-        # The MAME version is a separate product, never a Darksoft alternate.
-        write_set(m4, w4, out / "mame" / args.region / f"{names['4mb']}.zip")
-    if args.platform in ('all', 'darksoft'):
-        from darksoft import tree, native_menu
-        m8, w8 = reconstruct('8mb')
-        best = out / 'best.zip'
-        write_set(m8, w8, best)
-        members = zread(best)
-        edition = 'sfa2-ex' if (HERE / 'kit.json').is_file() else 'sfa2-gold'
-        menu = native_menu(edition, args.region)
-        publish_tree(out, tree(members, names['4mb'] + '_qsound8', folder=edition + '_' + args.region, menu=menu))
-        best.unlink()
-    if args.platform != 'darksoft':
-        export_large(reconstruct, out, names, args.region)
-    files = {}
-    for path in out.rglob("*"):
-        if path.is_file():
-            name = path.relative_to(out).as_posix()
-            if args.platform == "all" or name.startswith(args.platform + "/"):
-                files[name] = path.read_bytes()
-    if args.platform in ('all', 'fbneo'):
-        files.update(fbneo_names.tree(names['8mb'], zread(out / 'hbmame' / (names['8mb'] + '.zip'))))
+    files = export_outputs(args.region, inp, args.platform)
     publish_tree(Path(args.out_dir), files)
     print_completion(args.out_dir, files)
-    stage_context.cleanup()
-    print(f'Built {args.region} {args.platform} outputs into {args.out_dir}')
-    if args.platform in ('all', 'darksoft'):
-        print('Darksoft: copy darksoft/games/<game> to the card games folder. Best native samples; no streamed audio.')
 
 
-def export_large(reconstruct, out, names, region):
-    """Existing 8 MiB HBMAME/MiSTer products, separate from Darksoft hardware."""
-    print("Reconstructing 8MB (HBMAME / MiSTer)...")
-    m8, w8 = reconstruct("8mb")
-    write_set(m8, w8, out / "hbmame" / f"{names['8mb']}.zip")
-    # MiSTer: mirror the SD-card layout so out/mister/ can be copied to the root.
-    # games/hbmame, not games/mame: these are hbmame sets, the MRA asks for
-    # /hbmame/<set>.zip, and the CPS+ MRAs for the same sets look there too --
-    # so a user running both kits keeps one copy of the 8 MB zip, not two.
-    write_set(m8, w8, out / "mister" / "games" / "hbmame" / f"{names['8mb']}.zip")
-    mra = HERE / "mras" / f"{names['mra']}.mra"
-    if mra.exists():
-        arcade = out.joinpath("mister", *MRA_ROOT, MRA_DIR[region])
-        arcade.mkdir(parents=True, exist_ok=True)
-        text = mra.read_text()
-        text = re.sub(r'zip="(/hbmame/[^"|]+\.zip)"',
-                      r'zip="\1|qsound.zip|qsound_hle.zip"', text)
-        (arcade / mra.name).write_text(text)
+def build_outputs(region, arc, iso, platform='all'):
+    """The same reconstruction and exports serve standalone and collection runs."""
+    z6 = ex.extract_zero6(str(iso), PROFILES[region])
+    audio = ex.extract_audio(str(iso), PROFILES[region])
+    inp = assemble.prepare_inputs(arc, {'entry531': z6['entry531'], 'comp2': z6['comp2'], 'audio': audio})
+    return export_outputs(region, inp, platform)
+
+
+def export_outputs(region, inp, platform='all'):
+    data = json.loads((HERE / 'recipes' / (region + '.json')).read_text())
+    names, reconstructed, outputs = SETS[region], {}, {}
+    def reconstruct(size):
+        if size not in reconstructed:
+            print('Reconstructing ' + size + '...')
+            entry = data['sizes'][size]
+            members = assemble.reconstruct(inp, {k: base64.b64decode(v) for k, v in entry['recipes'].items()})
+            reconstructed[size] = checked_members(members, entry['md5'])
+        return reconstructed[size]
+    if platform in ('all', 'mame'):
+        outputs[f"mame/{region}/{names['4mb']}.zip"] = reconstruct('4mb')
+    if platform in ('all', 'hbmame', 'mister', 'fbneo'):
+        members = reconstruct('8mb')
+        if platform in ('all', 'hbmame'):
+            outputs[f"hbmame/{names['8mb']}.zip"] = members
+        if platform in ('all', 'mister'):
+            outputs[f"mister/games/hbmame/{names['8mb']}.zip"] = members
+            mra = HERE / 'mras' / (names['mra'] + '.mra')
+            if not mra.is_file():
+                fail('Missing regional MRA: ' + mra.name)
+            text = re.sub(r'zip="(/hbmame/[^"|]+\.zip)"',
+                          r'zip="\1|qsound.zip|qsound_hle.zip"', mra.read_text())
+            folder = '/'.join(('mister', *MRA_ROOT, *([MRA_DIR[region]] if MRA_DIR[region] else [])))
+            outputs[folder + '/' + mra.name] = text.encode()
+        if platform in ('all', 'fbneo'):
+            outputs.update(fbneo_names.tree(names['8mb'], members))
+    if platform in ('all', 'darksoft'):
+        from darksoft import tree, native_menu
+        outputs.update(tree(reconstruct('8mb'), names['4mb'] + '_qsound8',
+                            folder=_KIT['edition'] + '_' + region, menu=native_menu(_KIT['edition'], region)))
+    return outputs
 
 
 if __name__ == "__main__":
     try:
-        main()
+        if '--emit-definition' in sys.argv:
+            from gold_collection import package_main
+            package_main(HERE, sys.argv[1:], build_outputs)
+        else:
+            main()
     except (OSError, ValueError, zipfile.BadZipFile) as exc:
         if "--debug" in sys.argv:
             raise
-        fail(str(exc))
+        print("ERROR: " + str(exc), file=sys.stderr)
+        sys.exit(1)

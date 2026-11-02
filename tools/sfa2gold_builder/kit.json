@@ -1,0 +1,38 @@
+{
+  "edition": "sfa2-gold",
+  "title": "Gold",
+  "description": "Rebuild Street Fighter Alpha 2 Gold / Zero 2 Dash from your own copies.\n\nThis tool ships NO game data. It reconstructs the CPS-2 build entirely from\nfiles you already own:\n  * your PlayStation 2 Alpha Anthology / Fighter's Generation disc image, and\n  * your arcade Street Fighter Zero 2 Alpha romset (sfz2al or sfz2alj).\n\nEvery graphic, sample, and program byte is copied or mechanically transformed\nfrom those sources; only a small amount of our own new code is included as\ndata. Output is checksum-verified against the known-good build.\n\nUsage (recommended \u2014 build everything for one region):\n    python3 apply.py --iso <anthology.iso> --romset <sfz2al.zip>                      --region us --out-dir out\n\n  Produces, under out/ \u2014 point every region at the SAME out/ and nothing\n  collides (the 8MB sets and MRAs have distinct names; the 4MB sets go in a\n  per-region subfolder because US/EU/Asia all share the arcade name sfz2al):\n    mame/<region>/<set>.zip   4MB set for stock MAME and real CPS-2 hardware\n    hbmame/<set>.zip          8MB set for HBMAME\n    mister/                   MiSTer (Jotego jtcps2), laid out like the SD card\n                              so you can copy its contents to the card root:\n                                _Arcade/_Arcade Patches/_Restorations/\n                                  <name>.mra               USA\n                                  _<Region>/<name>.mra     Europe, Asia, Japan\n                                games/hbmame/<set>.zip\n\nUsage (single file):\n    python3 apply.py --iso ... --romset ... --region us --size 8mb --out sfa2g.zip\n\nRequires only Python 3.10+ \u2014 no emulator, no assembler.",
+  "sets": {
+    "us": {
+      "4mb": "sfz2al",
+      "8mb": "sfa2g",
+      "mra": "Street Fighter Alpha 2 Gold (USA) [Backport]"
+    },
+    "eu": {
+      "4mb": "sfz2al",
+      "8mb": "sfa2d",
+      "mra": "Street Fighter Alpha 2 Dash (Europe) [Backport]"
+    },
+    "jp": {
+      "4mb": "sfz2alj",
+      "8mb": "sfz2d",
+      "mra": "Street Fighter Zero 2 Dash (Japan) [Backport]"
+    },
+    "asia": {
+      "4mb": "sfz2al",
+      "8mb": "sfz2da",
+      "mra": "Street Fighter Zero 2 Dash (Asia) [Backport]"
+    }
+  },
+  "mra_root": [
+    "_Arcade",
+    "_Arcade Patches",
+    "_Restorations"
+  ],
+  "mra_dir": {
+    "us": "",
+    "eu": "_Europe",
+    "asia": "_Asia",
+    "jp": "_Japan"
+  }
+}

@@ -489,14 +489,14 @@
       "versions": {
         "rc1": {
           "additive_output": "fbneo",
-          "current_revision": 6,
-          "date": "2026-10-30",
+          "current_revision": 7,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/ff49e6a9ef322c437eccbeb28459a84625a9278b1fb706604e4a9cbbc9b49a89/dstlk-restoration-rc1-ips.zip",
+              "archive": "archive/8744770f4dc922271c216366f4474be955f093db263ad9ba0391961270a8d1d0/dstlk-restoration-rc1-ips.zip",
               "name": "dstlk-restoration-rc1-ips.zip",
-              "sha256": "ff49e6a9ef322c437eccbeb28459a84625a9278b1fb706604e4a9cbbc9b49a89",
-              "size": 128975
+              "sha256": "8744770f4dc922271c216366f4474be955f093db263ad9ba0391961270a8d1d0",
+              "size": 137113
             },
             "mra": {
               "archive": "archive/fff34a93e9893bd51d48cad6cae202018320cb87a655903dbdaa302e545a8c49/dstlk-restoration-rc1-mra.zip",
@@ -536,13 +536,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 6
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 7
             }
           ],
           "qualification": {
-            "candidate": "rc1-tools-r6-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "99e99a92d3f6a7b327ab1f8cd2fbd4d20c557da2f52c54185b534974d126d184",
-            "release_sha256": "7da5e75db909a93e09eedf0bc4dd308db3fb839b9cbe2efc76029da5a760e0ea",
+            "candidate": "rc1-tools-r7-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "05efa69ba104046448c55b97d8b361db5044907083d7940dfb7debe2482f1643",
+            "release_sha256": "523eff8c9c7825ecd4a2766fb9133294b61b2e9a2efe70e8e495b413af874596",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -737,14 +742,47 @@
                 },
                 "revision": 5
               }
+            },
+            "7": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/8744770f4dc922271c216366f4474be955f093db263ad9ba0391961270a8d1d0/dstlk-restoration-rc1-ips.zip",
+                  "name": "dstlk-restoration-rc1-ips.zip",
+                  "sha256": "8744770f4dc922271c216366f4474be955f093db263ad9ba0391961270a8d1d0",
+                  "size": 137113
+                },
+                "mra": {
+                  "archive": "archive/fff34a93e9893bd51d48cad6cae202018320cb87a655903dbdaa302e545a8c49/dstlk-restoration-rc1-mra.zip",
+                  "name": "dstlk-restoration-rc1-mra.zip",
+                  "sha256": "fff34a93e9893bd51d48cad6cae202018320cb87a655903dbdaa302e545a8c49",
+                  "size": 33854
+                }
+              },
+              "game_contract_sha256": "b814347139819944e46a772b247d8438af118eb43609fd11f6faff243a8d5d48",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc1-tools-r7-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "05efa69ba104046448c55b97d8b361db5044907083d7940dfb7debe2482f1643",
+                "release_sha256": "523eff8c9c7825ecd4a2766fb9133294b61b2e9a2efe70e8e495b413af874596",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "ff49e6a9ef322c437eccbeb28459a84625a9278b1fb706604e4a9cbbc9b49a89",
+                  "mra": "fff34a93e9893bd51d48cad6cae202018320cb87a655903dbdaa302e545a8c49"
+                },
+                "revision": 6
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "6d36fad38589e85ce38ed6d5d1d0ff16ed3478e2cddbeacec38edfe5eaa8f070",
+              "ips": "ff49e6a9ef322c437eccbeb28459a84625a9278b1fb706604e4a9cbbc9b49a89",
               "mra": "fff34a93e9893bd51d48cad6cae202018320cb87a655903dbdaa302e545a8c49"
             },
-            "revision": 5
+            "revision": 6
           }
         }
       }
@@ -1575,14 +1613,14 @@
         },
         "rc4": {
           "additive_output": "fbneo",
-          "current_revision": 5,
-          "date": "2026-10-30",
+          "current_revision": 6,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/9ff6f64ed7b2abf0de513bf3b87f8c9f2232a5d88246d362422ed70daee5e4ed/mshvsf-ex-rc4-ips.zip",
+              "archive": "archive/457697f22c18f8b281e5fb78ece34cd8a614c922be641448340deaf5add163dd/mshvsf-ex-rc4-ips.zip",
               "name": "mshvsf-ex-rc4-ips.zip",
-              "sha256": "9ff6f64ed7b2abf0de513bf3b87f8c9f2232a5d88246d362422ed70daee5e4ed",
-              "size": 500432
+              "sha256": "457697f22c18f8b281e5fb78ece34cd8a614c922be641448340deaf5add163dd",
+              "size": 509514
             },
             "mra": {
               "archive": "archive/e7f0987c9fd1d23c2e19c69a738a1c84277fef114c09766c0aa85589de52c7e1/mshvsf-ex-rc4-mra.zip",
@@ -1617,13 +1655,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "qualification": {
-            "candidate": "rc4-tools-r5-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "23c8c7da8f2abe4c0c0aace6bf94b7b3c29d4ea0573c7d757deea0bc2112542b",
-            "release_sha256": "456fcdb62f42a63098fb005627eaef7928fb0aec81084f14d4ae840b9a088682",
+            "candidate": "rc4-tools-r6-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "d6062f87549820c21688b13405cdc997033aa368198f573664550c13f5552a82",
+            "release_sha256": "74d8ec9cd2c29107887cc9d8a01330a421979cfbc01653d49c4c77ec0e2a1060",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -1785,14 +1828,47 @@
                 },
                 "revision": 4
               }
+            },
+            "6": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/457697f22c18f8b281e5fb78ece34cd8a614c922be641448340deaf5add163dd/mshvsf-ex-rc4-ips.zip",
+                  "name": "mshvsf-ex-rc4-ips.zip",
+                  "sha256": "457697f22c18f8b281e5fb78ece34cd8a614c922be641448340deaf5add163dd",
+                  "size": 509514
+                },
+                "mra": {
+                  "archive": "archive/e7f0987c9fd1d23c2e19c69a738a1c84277fef114c09766c0aa85589de52c7e1/mshvsf-ex-rc4-mra.zip",
+                  "name": "mshvsf-ex-rc4-mra.zip",
+                  "sha256": "e7f0987c9fd1d23c2e19c69a738a1c84277fef114c09766c0aa85589de52c7e1",
+                  "size": 242154
+                }
+              },
+              "game_contract_sha256": "8beccd563b441e7f54efd0138dbc99cc6fc275e1c1abbd61b68845cab9389a0f",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc4-tools-r6-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "d6062f87549820c21688b13405cdc997033aa368198f573664550c13f5552a82",
+                "release_sha256": "74d8ec9cd2c29107887cc9d8a01330a421979cfbc01653d49c4c77ec0e2a1060",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "9ff6f64ed7b2abf0de513bf3b87f8c9f2232a5d88246d362422ed70daee5e4ed",
+                  "mra": "e7f0987c9fd1d23c2e19c69a738a1c84277fef114c09766c0aa85589de52c7e1"
+                },
+                "revision": 5
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "0538283fadac65d19904f51ce8cf91b0bf3fe9d89dbbe2bbfa3b934a9128735a",
+              "ips": "9ff6f64ed7b2abf0de513bf3b87f8c9f2232a5d88246d362422ed70daee5e4ed",
               "mra": "e7f0987c9fd1d23c2e19c69a738a1c84277fef114c09766c0aa85589de52c7e1"
             },
-            "revision": 4
+            "revision": 5
           }
         }
       }
@@ -1802,14 +1878,14 @@
       "versions": {
         "rc1": {
           "additive_output": "fbneo",
-          "current_revision": 7,
-          "date": "2026-10-30",
+          "current_revision": 8,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/94942d245c6e64ad4f34cf88c92a4d474c89727fd73085b29435ecdf6faade85/mshvsf-restoration-rc1-ips.zip",
+              "archive": "archive/ff35b59d5982bd3fbacbec0a2bb77231ab9b7958a79c984fa624e71adeb43c8e/mshvsf-restoration-rc1-ips.zip",
               "name": "mshvsf-restoration-rc1-ips.zip",
-              "sha256": "94942d245c6e64ad4f34cf88c92a4d474c89727fd73085b29435ecdf6faade85",
-              "size": 163292
+              "sha256": "ff35b59d5982bd3fbacbec0a2bb77231ab9b7958a79c984fa624e71adeb43c8e",
+              "size": 172039
             },
             "mra": {
               "archive": "archive/1bbc7a50c928773ec41fb0b271d98e9afff031a06d73e5ed2e76ad7ad9227519/mshvsf-restoration-rc1-mra.zip",
@@ -1854,13 +1930,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 7
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 8
             }
           ],
           "qualification": {
-            "candidate": "rc1-tools-r7-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "77299f3e252fa7ac2a6f095d20035a69a9b0429b4d7beb1a0ed975f15f59681a",
-            "release_sha256": "524191923b27b423f084168ab2c1b9077ba4893166b8eb3f265ce4e058021c5b",
+            "candidate": "rc1-tools-r8-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "d4bf3cb91b2f85822d71a4bc4ded27999048e06ffaab4a318ea4183935dde746",
+            "release_sha256": "3e887a481217f990502c05ffe412573fbbf952941465e8d5637e0c189cb73608",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -2090,14 +2171,47 @@
                 },
                 "revision": 6
               }
+            },
+            "8": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/ff35b59d5982bd3fbacbec0a2bb77231ab9b7958a79c984fa624e71adeb43c8e/mshvsf-restoration-rc1-ips.zip",
+                  "name": "mshvsf-restoration-rc1-ips.zip",
+                  "sha256": "ff35b59d5982bd3fbacbec0a2bb77231ab9b7958a79c984fa624e71adeb43c8e",
+                  "size": 172039
+                },
+                "mra": {
+                  "archive": "archive/1bbc7a50c928773ec41fb0b271d98e9afff031a06d73e5ed2e76ad7ad9227519/mshvsf-restoration-rc1-mra.zip",
+                  "name": "mshvsf-restoration-rc1-mra.zip",
+                  "sha256": "1bbc7a50c928773ec41fb0b271d98e9afff031a06d73e5ed2e76ad7ad9227519",
+                  "size": 55248
+                }
+              },
+              "game_contract_sha256": "461e8c2fa7d8866e3af37afe5a333446c1436afa3239bf8fc6ac0487a197a041",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc1-tools-r8-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "d4bf3cb91b2f85822d71a4bc4ded27999048e06ffaab4a318ea4183935dde746",
+                "release_sha256": "3e887a481217f990502c05ffe412573fbbf952941465e8d5637e0c189cb73608",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "94942d245c6e64ad4f34cf88c92a4d474c89727fd73085b29435ecdf6faade85",
+                  "mra": "1bbc7a50c928773ec41fb0b271d98e9afff031a06d73e5ed2e76ad7ad9227519"
+                },
+                "revision": 7
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "9fab131b31ea9512c3474f43d4d6959efe1b49d7e9fbb7efccba884263b4681f",
+              "ips": "94942d245c6e64ad4f34cf88c92a4d474c89727fd73085b29435ecdf6faade85",
               "mra": "1bbc7a50c928773ec41fb0b271d98e9afff031a06d73e5ed2e76ad7ad9227519"
             },
-            "revision": 6
+            "revision": 7
           }
         }
       }
@@ -2282,14 +2396,14 @@
       "versions": {
         "rc1": {
           "additive_output": "fbneo",
-          "current_revision": 6,
-          "date": "2026-10-30",
+          "current_revision": 7,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/abc886e1b81c14aca0cd07dc0d10eeed74168999aa6dda56461b6ab11c666d24/nwarr-restoration-rc1-ips.zip",
+              "archive": "archive/6956284fa00afd05d3080ddb34a69d8b08338514f31efcf15f46b71204ca3f1e/nwarr-restoration-rc1-ips.zip",
               "name": "nwarr-restoration-rc1-ips.zip",
-              "sha256": "abc886e1b81c14aca0cd07dc0d10eeed74168999aa6dda56461b6ab11c666d24",
-              "size": 154847
+              "sha256": "6956284fa00afd05d3080ddb34a69d8b08338514f31efcf15f46b71204ca3f1e",
+              "size": 162864
             },
             "mra": {
               "archive": "archive/afd8f14af1ff61a2116ac94d2aff494a28a269169cd2a40fef5e658aea2beb5d/nwarr-restoration-rc1-mra.zip",
@@ -2329,13 +2443,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 6
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 7
             }
           ],
           "qualification": {
-            "candidate": "rc1-tools-r6-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "945d8339e2c7e3d3a4fd55c5104e057aace3d8e9bc716d26a1eb5fec48a41701",
-            "release_sha256": "40435456c9187d236ab8eac94f97ba8e4e42c5d432bda3c048d9af5ceca8b7f3",
+            "candidate": "rc1-tools-r7-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "fa758f2c25aef722f621da1deed8141120b31b8ca3520e140cbc8bae3fe2e1fe",
+            "release_sha256": "f1ec16f1c9c81c9703ef19736c399805b3639989c2a403e7bc9fadf94a53f415",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -2530,14 +2649,47 @@
                 },
                 "revision": 5
               }
+            },
+            "7": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/6956284fa00afd05d3080ddb34a69d8b08338514f31efcf15f46b71204ca3f1e/nwarr-restoration-rc1-ips.zip",
+                  "name": "nwarr-restoration-rc1-ips.zip",
+                  "sha256": "6956284fa00afd05d3080ddb34a69d8b08338514f31efcf15f46b71204ca3f1e",
+                  "size": 162864
+                },
+                "mra": {
+                  "archive": "archive/afd8f14af1ff61a2116ac94d2aff494a28a269169cd2a40fef5e658aea2beb5d/nwarr-restoration-rc1-mra.zip",
+                  "name": "nwarr-restoration-rc1-mra.zip",
+                  "sha256": "afd8f14af1ff61a2116ac94d2aff494a28a269169cd2a40fef5e658aea2beb5d",
+                  "size": 50510
+                }
+              },
+              "game_contract_sha256": "8381462572c53e7bb386108567706d515d0444dc5322ac7cb4523ef4b3b9d5ee",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc1-tools-r7-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "fa758f2c25aef722f621da1deed8141120b31b8ca3520e140cbc8bae3fe2e1fe",
+                "release_sha256": "f1ec16f1c9c81c9703ef19736c399805b3639989c2a403e7bc9fadf94a53f415",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "abc886e1b81c14aca0cd07dc0d10eeed74168999aa6dda56461b6ab11c666d24",
+                  "mra": "afd8f14af1ff61a2116ac94d2aff494a28a269169cd2a40fef5e658aea2beb5d"
+                },
+                "revision": 6
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "9d5cb126c675d28d808eb44c819df4bf179b87d86386c146bc171d1f40245155",
+              "ips": "abc886e1b81c14aca0cd07dc0d10eeed74168999aa6dda56461b6ab11c666d24",
               "mra": "afd8f14af1ff61a2116ac94d2aff494a28a269169cd2a40fef5e658aea2beb5d"
             },
-            "revision": 5
+            "revision": 6
           }
         }
       }
@@ -2606,14 +2758,14 @@
         },
         "rc2": {
           "additive_output": "fbneo",
-          "current_revision": 3,
-          "date": "2026-10-30",
+          "current_revision": 4,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/b12c802c97f627c4b0d0d7d39b28b61b255f49e6369e50f98d8a1a1b818e70a0/sfa-ex-rc2-ips.zip",
+              "archive": "archive/8460290615cd37c5f8cee509eca1bc6c7ed5e95313a0d5e0452358227e2fb983/sfa-ex-rc2-ips.zip",
               "name": "sfa-ex-rc2-ips.zip",
-              "sha256": "b12c802c97f627c4b0d0d7d39b28b61b255f49e6369e50f98d8a1a1b818e70a0",
-              "size": 1085970
+              "sha256": "8460290615cd37c5f8cee509eca1bc6c7ed5e95313a0d5e0452358227e2fb983",
+              "size": 1099944
             },
             "mra": {
               "archive": "archive/ca77c1987c9d5238e4834f1b35e33cce95262ab50af6058c0ac8142cf9d399e2/sfa-ex-rc2-mra.zip",
@@ -2639,13 +2791,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "qualification": {
-            "candidate": "rc2-tools-r3-candidate.2",
-            "capcom_source_commit": "0d7408917aee1eafffb2ca4f966e488502ed83dd",
-            "ready_record_sha256": "b4c779224f7a63bce3a849d71f3104d033101ca4ede648df3c92140ca38f7832",
-            "release_sha256": "f377417533d3fd14cb0f039c038b7348e1fe398b078b2bf850b795166b7f09e0",
+            "candidate": "rc2-tools-r4-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "33fc896d3f18c18ea8ec40f7f8e08edb9916be8b49276cd61715a95ae3995d5f",
+            "release_sha256": "8da81808c929e8850bb662cf3aff9083830141efd7d5feed16299cd54592e3d6",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -2741,14 +2898,47 @@
                 },
                 "revision": 2
               }
+            },
+            "4": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/8460290615cd37c5f8cee509eca1bc6c7ed5e95313a0d5e0452358227e2fb983/sfa-ex-rc2-ips.zip",
+                  "name": "sfa-ex-rc2-ips.zip",
+                  "sha256": "8460290615cd37c5f8cee509eca1bc6c7ed5e95313a0d5e0452358227e2fb983",
+                  "size": 1099944
+                },
+                "mra": {
+                  "archive": "archive/ca77c1987c9d5238e4834f1b35e33cce95262ab50af6058c0ac8142cf9d399e2/sfa-ex-rc2-mra.zip",
+                  "name": "sfa-ex-rc2-mra.zip",
+                  "sha256": "ca77c1987c9d5238e4834f1b35e33cce95262ab50af6058c0ac8142cf9d399e2",
+                  "size": 607395
+                }
+              },
+              "game_contract_sha256": "455786c9c6f99da6002a8d37248494a2482db8fc0007ffe65bac5d4dc666c770",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc2-tools-r4-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "33fc896d3f18c18ea8ec40f7f8e08edb9916be8b49276cd61715a95ae3995d5f",
+                "release_sha256": "8da81808c929e8850bb662cf3aff9083830141efd7d5feed16299cd54592e3d6",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "b12c802c97f627c4b0d0d7d39b28b61b255f49e6369e50f98d8a1a1b818e70a0",
+                  "mra": "ca77c1987c9d5238e4834f1b35e33cce95262ab50af6058c0ac8142cf9d399e2"
+                },
+                "revision": 3
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "3f229761104f0a6d4ecb34a06e8e68ddc69b43009dea03a5fa0d2224c5fc94f8",
+              "ips": "b12c802c97f627c4b0d0d7d39b28b61b255f49e6369e50f98d8a1a1b818e70a0",
               "mra": "ca77c1987c9d5238e4834f1b35e33cce95262ab50af6058c0ac8142cf9d399e2"
             },
-            "revision": 2
+            "revision": 3
           }
         }
       }
@@ -2758,14 +2948,14 @@
       "versions": {
         "rc1": {
           "additive_output": "fbneo",
-          "current_revision": 5,
-          "date": "2026-10-30",
+          "current_revision": 6,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/89c0e96018dbce8e90ce023c5b23686303aa10016eece835c012da526d4a7a3e/sfa-restoration-rc1-ips.zip",
+              "archive": "archive/000daf15314412e2c899f2dd42d3e80f4d099e2398bcc2a5bd3aa596235e3fca/sfa-restoration-rc1-ips.zip",
               "name": "sfa-restoration-rc1-ips.zip",
-              "sha256": "89c0e96018dbce8e90ce023c5b23686303aa10016eece835c012da526d4a7a3e",
-              "size": 430467
+              "sha256": "000daf15314412e2c899f2dd42d3e80f4d099e2398bcc2a5bd3aa596235e3fca",
+              "size": 439767
             },
             "mra": {
               "archive": "archive/ada406123e1a66b4807eef38b56738d3d313dc10dd7079265607b11a384fc895/sfa-restoration-rc1-mra.zip",
@@ -2800,13 +2990,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "qualification": {
-            "candidate": "rc1-tools-r5-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "5ad5c7a079b4556ff2be3a9fd149f672234c5c857c2a46d5fda81be8969f2238",
-            "release_sha256": "af86256eaefd642fd67d803bc83c8116734a7f44f1049f076619594fbcfb4c27",
+            "candidate": "rc1-tools-r6-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "3146dc0c628f6d48d677e2d4d66a86d5dd6325dcaef812bac07830fe1a058b21",
+            "release_sha256": "5326f217c8da874b8c9866bd23ca5c170d764b0a8ea3ec386864a38e0a7738da",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -2968,14 +3163,47 @@
                 },
                 "revision": 4
               }
+            },
+            "6": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/000daf15314412e2c899f2dd42d3e80f4d099e2398bcc2a5bd3aa596235e3fca/sfa-restoration-rc1-ips.zip",
+                  "name": "sfa-restoration-rc1-ips.zip",
+                  "sha256": "000daf15314412e2c899f2dd42d3e80f4d099e2398bcc2a5bd3aa596235e3fca",
+                  "size": 439767
+                },
+                "mra": {
+                  "archive": "archive/ada406123e1a66b4807eef38b56738d3d313dc10dd7079265607b11a384fc895/sfa-restoration-rc1-mra.zip",
+                  "name": "sfa-restoration-rc1-mra.zip",
+                  "sha256": "ada406123e1a66b4807eef38b56738d3d313dc10dd7079265607b11a384fc895",
+                  "size": 213321
+                }
+              },
+              "game_contract_sha256": "1100d52be17e95e7dc5f8b64c78608fa15b3ddfb6911af0a6f423710f3bc0044",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc1-tools-r6-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "3146dc0c628f6d48d677e2d4d66a86d5dd6325dcaef812bac07830fe1a058b21",
+                "release_sha256": "5326f217c8da874b8c9866bd23ca5c170d764b0a8ea3ec386864a38e0a7738da",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "89c0e96018dbce8e90ce023c5b23686303aa10016eece835c012da526d4a7a3e",
+                  "mra": "ada406123e1a66b4807eef38b56738d3d313dc10dd7079265607b11a384fc895"
+                },
+                "revision": 5
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "e3762ff6d95c88c10e264f50e83d055ab216ef5f9a5955b12be6f204b0db1386",
+              "ips": "89c0e96018dbce8e90ce023c5b23686303aa10016eece835c012da526d4a7a3e",
               "mra": "ada406123e1a66b4807eef38b56738d3d313dc10dd7079265607b11a384fc895"
             },
-            "revision": 4
+            "revision": 5
           }
         }
       }
@@ -3834,14 +4062,14 @@
         },
         "rc2": {
           "additive_output": "fbneo",
-          "current_revision": 5,
-          "date": "2026-10-30",
+          "current_revision": 6,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/48f4ca6e83c25bd26e263cf2bdf69b404ca6d6f509fdfc1d1e5766f69241247e/sfa2-restoration-rc2-ips.zip",
+              "archive": "archive/24bcfb5bfcc6fdbacfa150cdeb03392f9e9bc3bd36af12200388e46c4d03a102/sfa2-restoration-rc2-ips.zip",
               "name": "sfa2-restoration-rc2-ips.zip",
-              "sha256": "48f4ca6e83c25bd26e263cf2bdf69b404ca6d6f509fdfc1d1e5766f69241247e",
-              "size": 1336736
+              "sha256": "24bcfb5bfcc6fdbacfa150cdeb03392f9e9bc3bd36af12200388e46c4d03a102",
+              "size": 1346553
             },
             "mra": {
               "archive": "archive/c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a/sfa2-restoration-rc2-mra.zip",
@@ -3876,13 +4104,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "qualification": {
-            "candidate": "rc2-tools-r5-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "70965ee5d7a5123b3381e18fa77ed523d8badaab6e891b1fab02da0faf81a6fe",
-            "release_sha256": "c36d4c860b30e41f932d5689b5c085916afe376c720cfeb84f86a0b056a72170",
+            "candidate": "rc2-tools-r6-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "81add7a40f1843cf03b63d74477feaf3ab6c72071072a87556a219294de922e9",
+            "release_sha256": "8dec83e88653bb91a0cb9b4e6f1ef044b6e26bfa3c188b758332221d58724926",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -4044,14 +4277,47 @@
                 },
                 "revision": 4
               }
+            },
+            "6": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/24bcfb5bfcc6fdbacfa150cdeb03392f9e9bc3bd36af12200388e46c4d03a102/sfa2-restoration-rc2-ips.zip",
+                  "name": "sfa2-restoration-rc2-ips.zip",
+                  "sha256": "24bcfb5bfcc6fdbacfa150cdeb03392f9e9bc3bd36af12200388e46c4d03a102",
+                  "size": 1346553
+                },
+                "mra": {
+                  "archive": "archive/c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a/sfa2-restoration-rc2-mra.zip",
+                  "name": "sfa2-restoration-rc2-mra.zip",
+                  "sha256": "c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a",
+                  "size": 725877
+                }
+              },
+              "game_contract_sha256": "d1ef2e7ce95752dbda005b3aa43649c6242c990c241ffdf9afac1ae79c9b7e8a",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc2-tools-r6-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "81add7a40f1843cf03b63d74477feaf3ab6c72071072a87556a219294de922e9",
+                "release_sha256": "8dec83e88653bb91a0cb9b4e6f1ef044b6e26bfa3c188b758332221d58724926",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "48f4ca6e83c25bd26e263cf2bdf69b404ca6d6f509fdfc1d1e5766f69241247e",
+                  "mra": "c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a"
+                },
+                "revision": 5
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "2f423398cff34340dbee212670e6a780fd06eca79556b714c738da01215d0e7e",
+              "ips": "48f4ca6e83c25bd26e263cf2bdf69b404ca6d6f509fdfc1d1e5766f69241247e",
               "mra": "c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a"
             },
-            "revision": 4
+            "revision": 5
           }
         }
       }
@@ -4284,14 +4550,14 @@
         },
         "rc4": {
           "additive_output": "fbneo",
-          "current_revision": 5,
-          "date": "2026-10-30",
+          "current_revision": 6,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/148adb0c32a83c16d7a20d486891bf05db50b0ea8f417c18ce22a65f43542fe8/sfa3-restoration-rc4-ips.zip",
+              "archive": "archive/854f2c181f69037dbdd86c986b1403eaa877fc3f5623d38274a1285fdd25fe3f/sfa3-restoration-rc4-ips.zip",
               "name": "sfa3-restoration-rc4-ips.zip",
-              "sha256": "148adb0c32a83c16d7a20d486891bf05db50b0ea8f417c18ce22a65f43542fe8",
-              "size": 556891
+              "sha256": "854f2c181f69037dbdd86c986b1403eaa877fc3f5623d38274a1285fdd25fe3f",
+              "size": 566691
             },
             "mra": {
               "archive": "archive/dcff02f53596a82a2126560d8b23f748f4dbfaa5ac4de6a8204a28140e850c4b/sfa3-restoration-rc4-mra.zip",
@@ -4326,13 +4592,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "qualification": {
-            "candidate": "rc4-tools-r5-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "20b31a0876d4a752f2a239f4b33f91e48c38445906edf030d92ff48f34aefb54",
-            "release_sha256": "af5905aee7ef9a8a5930fbd617e98144563f6e75f45bcad8ce54bc06ddd29794",
+            "candidate": "rc4-tools-r6-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "c784474b13abea12ef43c45544a4f07fff25b67697fde104b41b351088f5527c",
+            "release_sha256": "7d0d8b790a5a06f38b3b87ad9b565dae406ef95a6459c6625260fea48063dfd1",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -4495,14 +4766,47 @@
                 },
                 "revision": 4
               }
+            },
+            "6": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/854f2c181f69037dbdd86c986b1403eaa877fc3f5623d38274a1285fdd25fe3f/sfa3-restoration-rc4-ips.zip",
+                  "name": "sfa3-restoration-rc4-ips.zip",
+                  "sha256": "854f2c181f69037dbdd86c986b1403eaa877fc3f5623d38274a1285fdd25fe3f",
+                  "size": 566691
+                },
+                "mra": {
+                  "archive": "archive/dcff02f53596a82a2126560d8b23f748f4dbfaa5ac4de6a8204a28140e850c4b/sfa3-restoration-rc4-mra.zip",
+                  "name": "sfa3-restoration-rc4-mra.zip",
+                  "sha256": "dcff02f53596a82a2126560d8b23f748f4dbfaa5ac4de6a8204a28140e850c4b",
+                  "size": 286611
+                }
+              },
+              "game_contract_sha256": "acf53f2789c10e85d56832768a57861ef21a5e5ea7975ebb06fb3a32691b1880",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc4-tools-r6-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "c784474b13abea12ef43c45544a4f07fff25b67697fde104b41b351088f5527c",
+                "release_sha256": "7d0d8b790a5a06f38b3b87ad9b565dae406ef95a6459c6625260fea48063dfd1",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "148adb0c32a83c16d7a20d486891bf05db50b0ea8f417c18ce22a65f43542fe8",
+                  "mra": "dcff02f53596a82a2126560d8b23f748f4dbfaa5ac4de6a8204a28140e850c4b"
+                },
+                "revision": 5
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "9781da0f7028f3da30e8d94f668ca6b6c3f663aa69e84706db96a477c5f4abd1",
+              "ips": "148adb0c32a83c16d7a20d486891bf05db50b0ea8f417c18ce22a65f43542fe8",
               "mra": "dcff02f53596a82a2126560d8b23f748f4dbfaa5ac4de6a8204a28140e850c4b"
             },
-            "revision": 4
+            "revision": 5
           }
         }
       }
@@ -4657,14 +4961,14 @@
         },
         "rc2": {
           "additive_output": "fbneo",
-          "current_revision": 5,
-          "date": "2026-10-30",
+          "current_revision": 6,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/91d0c2ad1cdf8c80cd282eb53f37a9ab596cf25af22547cfc4b79ed5de11542a/sfz2al-restoration-rc2-ips.zip",
+              "archive": "archive/02701c5ca0909efa3b316ca3641ac982464226ff8b9fee3617b7a7416d79b753/sfz2al-restoration-rc2-ips.zip",
               "name": "sfz2al-restoration-rc2-ips.zip",
-              "sha256": "91d0c2ad1cdf8c80cd282eb53f37a9ab596cf25af22547cfc4b79ed5de11542a",
-              "size": 254318
+              "sha256": "02701c5ca0909efa3b316ca3641ac982464226ff8b9fee3617b7a7416d79b753",
+              "size": 262466
             },
             "mra": {
               "archive": "archive/b3c16c684899059c1fa5a9a5cd708b96face10d2a53b68dc5d784a0488f86293/sfz2al-restoration-rc2-mra.zip",
@@ -4699,13 +5003,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "qualification": {
-            "candidate": "rc2-tools-r5-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "caaa2644904057369e5a0e3a11c159980644145ea487a6a2dfba658ac0a43089",
-            "release_sha256": "3b5aec4e26d1d6597325f88a20d32966705462db4f919d88b7489125940ea19d",
+            "candidate": "rc2-tools-r6-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "94b8838c3d9e64fb7716442020791d3dcd3eb7a16aa3d030c8cfe600301228cd",
+            "release_sha256": "b146c8ba5e2b6b4372dd5fa2493a9c5e99e80f059d18ea9929b97b9b2bc6590c",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -4867,14 +5176,47 @@
                 },
                 "revision": 4
               }
+            },
+            "6": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/02701c5ca0909efa3b316ca3641ac982464226ff8b9fee3617b7a7416d79b753/sfz2al-restoration-rc2-ips.zip",
+                  "name": "sfz2al-restoration-rc2-ips.zip",
+                  "sha256": "02701c5ca0909efa3b316ca3641ac982464226ff8b9fee3617b7a7416d79b753",
+                  "size": 262466
+                },
+                "mra": {
+                  "archive": "archive/b3c16c684899059c1fa5a9a5cd708b96face10d2a53b68dc5d784a0488f86293/sfz2al-restoration-rc2-mra.zip",
+                  "name": "sfz2al-restoration-rc2-mra.zip",
+                  "sha256": "b3c16c684899059c1fa5a9a5cd708b96face10d2a53b68dc5d784a0488f86293",
+                  "size": 98724
+                }
+              },
+              "game_contract_sha256": "ba24295ff0062248e5067f78fd33553a5ab28cd6f49af9c3949bb4af2f16bbfb",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc2-tools-r6-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "94b8838c3d9e64fb7716442020791d3dcd3eb7a16aa3d030c8cfe600301228cd",
+                "release_sha256": "b146c8ba5e2b6b4372dd5fa2493a9c5e99e80f059d18ea9929b97b9b2bc6590c",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "91d0c2ad1cdf8c80cd282eb53f37a9ab596cf25af22547cfc4b79ed5de11542a",
+                  "mra": "b3c16c684899059c1fa5a9a5cd708b96face10d2a53b68dc5d784a0488f86293"
+                },
+                "revision": 5
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "b589e125bbdcd623da0355b12d5f6b1865ba6eb0a1f72b2e59d8007e00539370",
+              "ips": "91d0c2ad1cdf8c80cd282eb53f37a9ab596cf25af22547cfc4b79ed5de11542a",
               "mra": "b3c16c684899059c1fa5a9a5cd708b96face10d2a53b68dc5d784a0488f86293"
             },
-            "revision": 4
+            "revision": 5
           }
         }
       }
@@ -5173,14 +5515,14 @@
         },
         "rc12": {
           "additive_output": "fbneo",
-          "current_revision": 4,
-          "date": "2026-10-31",
+          "current_revision": 5,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/d58e8e69c7e5867e31236a387e2e8f18df019c50136094715b1134ccf516293d/ssf2-ex-rc12-ips.zip",
+              "archive": "archive/70560e32d19444b552bd97144471c8614a2f50d8974b28c87d147a33959e4ed6/ssf2-ex-rc12-ips.zip",
               "name": "ssf2-ex-rc12-ips.zip",
-              "sha256": "d58e8e69c7e5867e31236a387e2e8f18df019c50136094715b1134ccf516293d",
-              "size": 1385291
+              "sha256": "70560e32d19444b552bd97144471c8614a2f50d8974b28c87d147a33959e4ed6",
+              "size": 1396246
             },
             "mra": {
               "archive": "archive/9ecfc4c0dc9ced1e0976180dd5a1106483a46adb97b862fb8da5a1be431256e2/ssf2-ex-rc12-mra.zip",
@@ -5211,13 +5553,18 @@
               "date": "2026-10-31",
               "reason": "tooling update",
               "revision": 4
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 5
             }
           ],
           "qualification": {
-            "candidate": "rc12-tools-r4-candidate.1",
-            "capcom_source_commit": "ee385a7cea8d0e6e2e29fba79d7d8d772efda7cb",
-            "ready_record_sha256": "ef7e96b4776b8ea54bedbafa671e6c4209cd6728289aa3067b7b9694f8e4fe64",
-            "release_sha256": "42dded6b03d9bea96c51c224a194fdc2f735cd05a0df323245945623de0c8f09",
+            "candidate": "rc12-tools-r5-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "84e45cb03c1b08cacfb97e66263659185e64542cb6fadd1c7284b6cd21e9de48",
+            "release_sha256": "00d4c29c0373c5d4eba6c542649483c6c98f2d9698d8e5204f95d4dab0897384",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -5347,14 +5694,47 @@
                 },
                 "revision": 3
               }
+            },
+            "5": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/70560e32d19444b552bd97144471c8614a2f50d8974b28c87d147a33959e4ed6/ssf2-ex-rc12-ips.zip",
+                  "name": "ssf2-ex-rc12-ips.zip",
+                  "sha256": "70560e32d19444b552bd97144471c8614a2f50d8974b28c87d147a33959e4ed6",
+                  "size": 1396246
+                },
+                "mra": {
+                  "archive": "archive/9ecfc4c0dc9ced1e0976180dd5a1106483a46adb97b862fb8da5a1be431256e2/ssf2-ex-rc12-mra.zip",
+                  "name": "ssf2-ex-rc12-mra.zip",
+                  "sha256": "9ecfc4c0dc9ced1e0976180dd5a1106483a46adb97b862fb8da5a1be431256e2",
+                  "size": 767323
+                }
+              },
+              "game_contract_sha256": "c58c8b760bf55d439b7717f23425fc23f91bdfa74ac8588882d27e7d9de19b6c",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc12-tools-r5-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "84e45cb03c1b08cacfb97e66263659185e64542cb6fadd1c7284b6cd21e9de48",
+                "release_sha256": "00d4c29c0373c5d4eba6c542649483c6c98f2d9698d8e5204f95d4dab0897384",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "d58e8e69c7e5867e31236a387e2e8f18df019c50136094715b1134ccf516293d",
+                  "mra": "9ecfc4c0dc9ced1e0976180dd5a1106483a46adb97b862fb8da5a1be431256e2"
+                },
+                "revision": 4
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "0948475dc3de349c0a8657afbd47577a6fd10b9405d24827daee6e4400463700",
+              "ips": "d58e8e69c7e5867e31236a387e2e8f18df019c50136094715b1134ccf516293d",
               "mra": "9ecfc4c0dc9ced1e0976180dd5a1106483a46adb97b862fb8da5a1be431256e2"
             },
-            "revision": 3
+            "revision": 4
           }
         },
         "rc2": {
@@ -6433,14 +6813,14 @@
         },
         "rc4": {
           "additive_output": "fbneo",
-          "current_revision": 2,
-          "date": "2026-10-30",
+          "current_revision": 3,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/48a8548ae05cb7dfd491c7c4a22b398774ef821dcba01e157111875aad12393e/ssf2t-gmc-rc4-ips.zip",
+              "archive": "archive/02927da8710e8c996dbb841e405b6d0c4bf76d8e2d7c3a2a090ece5b4abc46fd/ssf2t-gmc-rc4-ips.zip",
               "name": "ssf2t-gmc-rc4-ips.zip",
-              "sha256": "48a8548ae05cb7dfd491c7c4a22b398774ef821dcba01e157111875aad12393e",
-              "size": 135864
+              "sha256": "02927da8710e8c996dbb841e405b6d0c4bf76d8e2d7c3a2a090ece5b4abc46fd",
+              "size": 144664
             },
             "mra": {
               "archive": "archive/c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9/ssf2t-gmc-rc4-mra.zip",
@@ -6460,13 +6840,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 2
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 3
             }
           ],
           "qualification": {
-            "candidate": "rc4-tools-r2-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "6fd50a4908e1c7d7013fc718df7c80f1bbe2171b549b1f60b7040f50bb77590a",
-            "release_sha256": "0be27dbb6d6e599c131e02dc3066a401f4d1b410eec9af1dc98fadf7c2c3975b",
+            "candidate": "rc4-tools-r3-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "31c56387846daafff946c408d21599b25a0934a1a8a6c6c66bf62e2884204c87",
+            "release_sha256": "c3df723883c891b29b52f6e9d508f9a8624ddb037d430d7978bd62006a0cc756",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -6528,14 +6913,47 @@
                 },
                 "revision": 1
               }
+            },
+            "3": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/02927da8710e8c996dbb841e405b6d0c4bf76d8e2d7c3a2a090ece5b4abc46fd/ssf2t-gmc-rc4-ips.zip",
+                  "name": "ssf2t-gmc-rc4-ips.zip",
+                  "sha256": "02927da8710e8c996dbb841e405b6d0c4bf76d8e2d7c3a2a090ece5b4abc46fd",
+                  "size": 144664
+                },
+                "mra": {
+                  "archive": "archive/c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9/ssf2t-gmc-rc4-mra.zip",
+                  "name": "ssf2t-gmc-rc4-mra.zip",
+                  "sha256": "c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9",
+                  "size": 36422
+                }
+              },
+              "game_contract_sha256": "aafdbf23efc052ab4ef84a50cc4dddff59b3760592e6024a19c3a462f76473eb",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc4-tools-r3-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "31c56387846daafff946c408d21599b25a0934a1a8a6c6c66bf62e2884204c87",
+                "release_sha256": "c3df723883c891b29b52f6e9d508f9a8624ddb037d430d7978bd62006a0cc756",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "48a8548ae05cb7dfd491c7c4a22b398774ef821dcba01e157111875aad12393e",
+                  "mra": "c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9"
+                },
+                "revision": 2
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "3c91be4248fd0c060591d578273fa2a229784f2fc8642db80b439ba7c010ce5c",
+              "ips": "48a8548ae05cb7dfd491c7c4a22b398774ef821dcba01e157111875aad12393e",
               "mra": "c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9"
             },
-            "revision": 1
+            "revision": 2
           }
         }
       }
@@ -7666,14 +8084,14 @@
         },
         "rc3": {
           "additive_output": "fbneo",
-          "current_revision": 5,
-          "date": "2026-10-30",
+          "current_revision": 6,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/5d4ce5f8bf5ca10f54357759ccd5dc153868f9e8821c76c4db83594a89f09000/vhunt2-english-rc3-ips.zip",
+              "archive": "archive/fcf330aa18de34a9ceffcd50189084bc00b3320be9e711754cf9af06561bb15f/vhunt2-english-rc3-ips.zip",
               "name": "vhunt2-english-rc3-ips.zip",
-              "sha256": "5d4ce5f8bf5ca10f54357759ccd5dc153868f9e8821c76c4db83594a89f09000",
-              "size": 106437
+              "sha256": "fcf330aa18de34a9ceffcd50189084bc00b3320be9e711754cf9af06561bb15f",
+              "size": 114490
             },
             "mra": {
               "archive": "archive/f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb/vhunt2-english-rc3-mra.zip",
@@ -7708,13 +8126,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "qualification": {
-            "candidate": "rc3-tools-r5-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "f6e48e0465da7109897b757d898dcf889fcf05fb05a227f518399d6be145f565",
-            "release_sha256": "15764b2e7adc8180a5b97035c21e441b3dd0abb2c0fadf999196146de486fba9",
+            "candidate": "rc3-tools-r6-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "0d7e40e491298032ae8fd4bc6a12044060b75055d0522e094073b2f8e34b1a87",
+            "release_sha256": "449c01f763bc9bbe5b392ddf0ec322a0fa0a39484fd0c3fe7f7fab56459535c7",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -7876,14 +8299,47 @@
                 },
                 "revision": 4
               }
+            },
+            "6": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/fcf330aa18de34a9ceffcd50189084bc00b3320be9e711754cf9af06561bb15f/vhunt2-english-rc3-ips.zip",
+                  "name": "vhunt2-english-rc3-ips.zip",
+                  "sha256": "fcf330aa18de34a9ceffcd50189084bc00b3320be9e711754cf9af06561bb15f",
+                  "size": 114490
+                },
+                "mra": {
+                  "archive": "archive/f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb/vhunt2-english-rc3-mra.zip",
+                  "name": "vhunt2-english-rc3-mra.zip",
+                  "sha256": "f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb",
+                  "size": 20149
+                }
+              },
+              "game_contract_sha256": "5b34e90d9d88ab451d92b1c5e2ba1d53e4385976fa953f9a066b410a83ede88a",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc3-tools-r6-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "0d7e40e491298032ae8fd4bc6a12044060b75055d0522e094073b2f8e34b1a87",
+                "release_sha256": "449c01f763bc9bbe5b392ddf0ec322a0fa0a39484fd0c3fe7f7fab56459535c7",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "5d4ce5f8bf5ca10f54357759ccd5dc153868f9e8821c76c4db83594a89f09000",
+                  "mra": "f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb"
+                },
+                "revision": 5
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "170087c3796038044c482860078ab50aa0c3b6b5653c6c5d57e9f5e40297c80f",
+              "ips": "5d4ce5f8bf5ca10f54357759ccd5dc153868f9e8821c76c4db83594a89f09000",
               "mra": "f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb"
             },
-            "revision": 4
+            "revision": 5
           }
         }
       }
@@ -8343,14 +8799,14 @@
         },
         "rc2": {
           "additive_output": "fbneo",
-          "current_revision": 5,
-          "date": "2026-10-30",
+          "current_revision": 6,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/1404dc8835f9dda9a3677375ad1c85da0a3d5e0670acea35a9bfe512c7665693/vsav-restoration-rc2-ips.zip",
+              "archive": "archive/deb96e668a15c5b971db61e046240a013766d9b6264a9d4dc45e87c2e431aea8/vsav-restoration-rc2-ips.zip",
               "name": "vsav-restoration-rc2-ips.zip",
-              "sha256": "1404dc8835f9dda9a3677375ad1c85da0a3d5e0670acea35a9bfe512c7665693",
-              "size": 130737
+              "sha256": "deb96e668a15c5b971db61e046240a013766d9b6264a9d4dc45e87c2e431aea8",
+              "size": 138752
             },
             "mra": {
               "archive": "archive/4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7/vsav-restoration-rc2-mra.zip",
@@ -8385,13 +8841,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "qualification": {
-            "candidate": "rc2-tools-r5-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "c24c3bf23d4600de91b8a18ae8ff67963add3cf9e1c8f537a2976be3134724a2",
-            "release_sha256": "0c77496cbaab795062d0f50c97b53851f63e48deb6de28f43230894d3b46e49e",
+            "candidate": "rc2-tools-r6-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "a6a9941f8327953e8c2f26ea131f59ecc10f6f8ba9c1edf5126db08c64f3f77b",
+            "release_sha256": "e550e0f4e432f03bd7e3cf26829e7c244c44545a2b8205c02b99e8913e8c4a4b",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -8553,14 +9014,47 @@
                 },
                 "revision": 4
               }
+            },
+            "6": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/deb96e668a15c5b971db61e046240a013766d9b6264a9d4dc45e87c2e431aea8/vsav-restoration-rc2-ips.zip",
+                  "name": "vsav-restoration-rc2-ips.zip",
+                  "sha256": "deb96e668a15c5b971db61e046240a013766d9b6264a9d4dc45e87c2e431aea8",
+                  "size": 138752
+                },
+                "mra": {
+                  "archive": "archive/4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7/vsav-restoration-rc2-mra.zip",
+                  "name": "vsav-restoration-rc2-mra.zip",
+                  "sha256": "4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7",
+                  "size": 35392
+                }
+              },
+              "game_contract_sha256": "0995fcfcb9fe9654709a50c0719b11b9f2385773c6289433db549310596b4dd8",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc2-tools-r6-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "a6a9941f8327953e8c2f26ea131f59ecc10f6f8ba9c1edf5126db08c64f3f77b",
+                "release_sha256": "e550e0f4e432f03bd7e3cf26829e7c244c44545a2b8205c02b99e8913e8c4a4b",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "1404dc8835f9dda9a3677375ad1c85da0a3d5e0670acea35a9bfe512c7665693",
+                  "mra": "4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7"
+                },
+                "revision": 5
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "e3034ce9b098464e161ecb5212eef93b5294a75a793f725e20cfcb757a031251",
+              "ips": "1404dc8835f9dda9a3677375ad1c85da0a3d5e0670acea35a9bfe512c7665693",
               "mra": "4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7"
             },
-            "revision": 4
+            "revision": 5
           }
         }
       }
@@ -9028,14 +9522,14 @@
         },
         "rc3": {
           "additive_output": "fbneo",
-          "current_revision": 5,
-          "date": "2026-10-30",
+          "current_revision": 6,
+          "date": "2026-11-02",
           "files": {
             "ips": {
-              "archive": "archive/2d09985078f1582f6fd302b9199433feaabb7dded6d2cfe719d1111dd261dac2/vsav2-english-rc3-ips.zip",
+              "archive": "archive/50b80df67e50676c4812bf7feaeb3ea94bacb8b5492c3e6fbb9fda0a13bf99c7/vsav2-english-rc3-ips.zip",
               "name": "vsav2-english-rc3-ips.zip",
-              "sha256": "2d09985078f1582f6fd302b9199433feaabb7dded6d2cfe719d1111dd261dac2",
-              "size": 109026
+              "sha256": "50b80df67e50676c4812bf7feaeb3ea94bacb8b5492c3e6fbb9fda0a13bf99c7",
+              "size": 117058
             },
             "mra": {
               "archive": "archive/a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8/vsav2-english-rc3-mra.zip",
@@ -9070,13 +9564,18 @@
               "date": "2026-10-30",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-02",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "qualification": {
-            "candidate": "rc3-tools-r5-candidate.2",
-            "capcom_source_commit": "e1f2eb84401e919cc63a8a7da613d974011b1158",
-            "ready_record_sha256": "8c26e8d3b0f4c7146e4de78c1fb50f9be6e6b3260a75aeb69c138598e7d2367f",
-            "release_sha256": "4c5dc9d5c766649ae5b915c8b98bb34bcda1c6c98cc054d822f7df834cf1ebc7",
+            "candidate": "rc3-tools-r6-native-candidate.1",
+            "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+            "ready_record_sha256": "c83596f0dfe7f36a7424b8f322a4955dd37a90e12452461fe46847dabd9b6830",
+            "release_sha256": "9bff89ac10f042bc1f09fd2b7a3e48a603def757520f59c24d45e64f180da755",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -9238,14 +9737,47 @@
                 },
                 "revision": 4
               }
+            },
+            "6": {
+              "date": "2026-11-02",
+              "files": {
+                "ips": {
+                  "archive": "archive/50b80df67e50676c4812bf7feaeb3ea94bacb8b5492c3e6fbb9fda0a13bf99c7/vsav2-english-rc3-ips.zip",
+                  "name": "vsav2-english-rc3-ips.zip",
+                  "sha256": "50b80df67e50676c4812bf7feaeb3ea94bacb8b5492c3e6fbb9fda0a13bf99c7",
+                  "size": 117058
+                },
+                "mra": {
+                  "archive": "archive/a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8/vsav2-english-rc3-mra.zip",
+                  "name": "vsav2-english-rc3-mra.zip",
+                  "sha256": "a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8",
+                  "size": 21763
+                }
+              },
+              "game_contract_sha256": "bb3ad3e385204cf7be9b0a63a3947e3b17afc1fb23d4190ef5c0143f61d69345",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc3-tools-r6-native-candidate.1",
+                "capcom_source_commit": "e1663d74df1b94e3799699bc4a23894d1954136e",
+                "ready_record_sha256": "c83596f0dfe7f36a7424b8f322a4955dd37a90e12452461fe46847dabd9b6830",
+                "release_sha256": "9bff89ac10f042bc1f09fd2b7a3e48a603def757520f59c24d45e64f180da755",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "2d09985078f1582f6fd302b9199433feaabb7dded6d2cfe719d1111dd261dac2",
+                  "mra": "a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8"
+                },
+                "revision": 5
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "8275051c51b8eb79363896080bc4994e0da1c1bae28536cb881b824dd1d9caf7",
+              "ips": "2d09985078f1582f6fd302b9199433feaabb7dded6d2cfe719d1111dd261dac2",
               "mra": "a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8"
             },
-            "revision": 4
+            "revision": 5
           }
         }
       }

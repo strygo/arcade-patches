@@ -62,6 +62,8 @@ def _builds(entry: dict, say) -> None:
 
 def problems(entry: dict, kind: str = "page") -> list[str]:
     slug = entry.get("slug", "?")
+    if "collection_api" in entry and (type(entry["collection_api"]) is not int or entry["collection_api"] != 1):
+        return [f"{slug}: unknown native collection API"]
     out = []
     say = lambda message: out.append(f"{slug}: {message}")
     if kind == "page":
