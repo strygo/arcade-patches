@@ -41,9 +41,9 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/08f8251afda9695f3744cff088edac361e14959e91cb7b4918348d3ec1ac3a05-nwarr-restoration-native-kit.zip"
     },
     "sfa-ex-kit": {
-      "sha256": "062d7abdb21d2336e3478673816bec3b5a30e13075521ca2d651f468783cf3ef",
-      "size": 1121677,
-      "url": "https://arcadepatches.com/catalog/v1/artifacts/062d7abdb21d2336e3478673816bec3b5a30e13075521ca2d651f468783cf3ef-sfa-ex-native-kit.zip"
+      "sha256": "f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e",
+      "size": 1103705,
+      "url": "https://arcadepatches.com/downloads/archive/f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e/sfa-ex-rc3-ips.zip"
     },
     "sfa-restoration-kit": {
       "sha256": "89be0699510b4f438dc898a52167da281ebe7bde25c8332d41f47ab36310151d",
@@ -187,7 +187,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
     }
   },
-  "generation": 39,
+  "generation": 40,
   "not_integrated": [],
   "projects": {
     "cps-plus": {
@@ -223,7 +223,7 @@
       "title": "Night Warriors: Darkstalkers' Revenge"
     },
     "sfa-ex": {
-      "current": "sfa-ex-rc2-r4",
+      "current": "sfa-ex-rc3-r1",
       "title": "Street Fighter Alpha EX"
     },
     "sfa-restoration": {
@@ -388,16 +388,16 @@
       "kit": "nwarr-restoration-kit",
       "kit_revision": 7
     },
-    "sfa-ex-rc2-r4": {
+    "sfa-ex-rc3-r1": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "674799fa19bbbd0a3a43a0ffd63a8777acae0c7dca82530b882eb85eb2098d92",
-        "size": 45232,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/674799fa19bbbd0a3a43a0ffd63a8777acae0c7dca82530b882eb85eb2098d92.json"
+        "sha256": "62a0e4cc8d37c59adcd215d1ac6ea1a66563fbe20ab670df60cf7f9c48a0b43a",
+        "size": 44798,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/62a0e4cc8d37c59adcd215d1ac6ea1a66563fbe20ab670df60cf7f9c48a0b43a.json"
       },
-      "game_version": "rc2",
+      "game_version": "rc3",
       "kit": "sfa-ex-kit",
-      "kit_revision": 4
+      "kit_revision": 1
     },
     "sfa-restoration-rc1-r6": {
       "definition": {

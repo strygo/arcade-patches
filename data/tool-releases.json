@@ -2486,25 +2486,6 @@
         "ready_record_sha256": "fa758f2c25aef722f621da1deed8141120b31b8ca3520e140cbc8bae3fe2e1fe",
         "targets": 5
       },
-      "sfa-ex": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "8460290615cd37c5f8cee509eca1bc6c7ed5e95313a0d5e0452358227e2fb983",
-        "game_version": "rc2",
-        "isolated_metadata": "passed",
-        "kit_revision": 4,
-        "kit_sha256": "062d7abdb21d2336e3478673816bec3b5a30e13075521ca2d651f468783cf3ef",
-        "metadata_crc_enrichment": {
-          "added": 14,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "8460290615cd37c5f8cee509eca1bc6c7ed5e95313a0d5e0452358227e2fb983"
-        },
-        "native_outputs_sha256": "92f34bb5177518c5adb0b715c14f9c02105dd9792e88ad279862ac3ceaa4ed11",
-        "ready_record_sha256": "33fc896d3f18c18ea8ec40f7f8e08edb9916be8b49276cd61715a95ae3995d5f",
-        "targets": 12
-      },
       "sfa-restoration": {
         "accepted_export_contracts": "unchanged",
         "baseline_kit_sha256": "000daf15314412e2c899f2dd42d3e80f4d099e2398bcc2a5bd3aa596235e3fca",
@@ -2976,6 +2957,10 @@
       "sha256": "58cfbbb5c71d4175e042c286a35b6457ce0f866360c8d538e2657e0812598416",
       "size": 34805
     },
+    "catalog/v1/definitions/62a0e4cc8d37c59adcd215d1ac6ea1a66563fbe20ab670df60cf7f9c48a0b43a.json": {
+      "sha256": "62a0e4cc8d37c59adcd215d1ac6ea1a66563fbe20ab670df60cf7f9c48a0b43a",
+      "size": 44798
+    },
     "catalog/v1/definitions/674799fa19bbbd0a3a43a0ffd63a8777acae0c7dca82530b882eb85eb2098d92.json": {
       "sha256": "674799fa19bbbd0a3a43a0ffd63a8777acae0c7dca82530b882eb85eb2098d92",
       "size": 45232
@@ -3049,16 +3034,30 @@
       "size": 127219
     },
     "catalog/v1/index.json": {
-      "sha256": "62db17426a777b30ce6658ba457ea5cd85c1b1518d0287e4a57d8ee221d17cdf",
-      "size": 26536
+      "sha256": "4242dfc0d3956adff0809f484d0378f029615b8a57fe33327a4d95fe431afb13",
+      "size": 26530
+    },
+    "downloads/archive/f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e/sfa-ex-rc3-ips.zip": {
+      "sha256": "f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e",
+      "size": 1103705
     },
     "tools/downloads/archive/5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1/ArcadePatches-0.1.zip": {
       "sha256": "5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1",
       "size": 43091
     }
   },
-  "generation": 39,
+  "generation": 40,
   "launcher": "tools/downloads/archive/5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1/ArcadePatches-0.1.zip",
+  "native_updates": [
+    {
+      "game_version": "rc3",
+      "kit_revision": 1,
+      "kit_sha256": "f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e",
+      "project": "sfa-ex",
+      "ready_sha256": "0cc0c57d1d9a365175ca0a650572a8a4656b18387d6eda8c3d1d2d683c7be202",
+      "release_sha256": "70b3bf72f1cfbf630fbd9bee5216f7719bccecae2a9839d06070da9dd624a9e9"
+    }
+  ],
   "package_receipt": {
     "archive": "ArcadePatches-0.1.zip",
     "features": [

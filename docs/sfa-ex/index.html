@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha EX</h1>
 <p class="subtitle">Enhanced version</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero (Japan 950727)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-10-29</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero (Japan 950727)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-11-03</dd></dl>
 <h2>Title screens</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/sfa-ex/title_usa.png?v=20114cb170" alt="Street Fighter Alpha EX (USA) title screen"><figcaption><strong>Street Fighter Alpha EX</strong><br>USA · <code>sfaexu</code></figcaption></figure><figure class="build"><img src="../img/sfa-ex/title_japan.png?v=d740a51552" alt="Street Fighter Zero EX (Japan) title screen"><figcaption><strong>Street Fighter Zero EX</strong><br>Japan · <code>sfzexj</code></figcaption></figure></div>
 <h2>About</h2>
@@ -86,18 +86,18 @@ You need:</p>
 <ul><li>Your own original Street Fighter Zero (Japan 950727) arcade romset: sfzj.</li></ul>
 <p>The patch tool verifies your original ROMs, applies the selected EX edition, and writes the MAME and HBMAME archives and MiSTer MRAs. No console disc is needed.</p>
 <h2>Downloads</h2>
-<p>Tools updated 2026-11-02. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware, all 3 builds</div>
-  <div class="file"><a href="../downloads/sfa-ex-rc2-ips.zip?v=8460290615">sfa-ex-rc2-ips.zip</a>
-  (1.0 MB)</div>
-  <div class="hash">SHA-256: 8460290615cd37c5f8cee509eca1bc6c7ed5e95313a0d5e0452358227e2fb983</div>
+  <div class="file"><a href="../downloads/sfa-ex-rc3-ips.zip?v=f9936a02f0">sfa-ex-rc3-ips.zip</a>
+  (1.1 MB)</div>
+  <div class="hash">SHA-256: f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 3 builds</div>
-  <div class="file"><a href="../downloads/sfa-ex-rc2-mra.zip?v=ca77c1987c">sfa-ex-rc2-mra.zip</a>
-  (593 KB)</div>
-  <div class="hash">SHA-256: ca77c1987c9d5238e4834f1b35e33cce95262ab50af6058c0ac8142cf9d399e2</div>
+  <div class="file"><a href="../downloads/sfa-ex-rc3-mra.zip?v=0df443db78">sfa-ex-rc3-mra.zip</a>
+  (594 KB)</div>
+  <div class="hash">SHA-256: 0df443db78fcd6538b429cce867d330372ddfe585206eac9a5bc44e2d6faa2d0</div>
 </div>
 <p>You need your own dump of <strong>Street Fighter Zero (Japan 950727)</strong> as the MAME
 set <code>sfzj.zip</code>. Every build is made from that one set.
@@ -109,7 +109,7 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <tr><td>USA (English)</td><td class="mono">usa</td><td class="mono">sfaexu</td><td class="mono">sfaexu</td><td class="mono">sfaex</td></tr><tr><td>Japan (Japanese)</td><td class="mono">japan</td><td class="mono">sfzexj</td><td class="mono">sfzexj</td><td class="mono">sfzexj</td></tr><tr><td>Asia (English)</td><td class="mono">asia</td><td class="mono">sfzexa</td><td class="mono">sfzexa</td><td class="mono">sfzexa</td></tr>
 </table>
 <h2>How to apply</h2>
-<pre><code>unzip sfa-ex-rc2-ips.zip -d sfzj-patch
+<pre><code>unzip sfa-ex-rc3-ips.zip -d sfzj-patch
 cd sfzj-patch
 python3 apply.py /path/to/sfzj.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -153,7 +153,7 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p>Shared by every build:</p>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
-<tr><td class="mono">sfz.01</td><td>128 KB</td><td class="mono">ffffec7d</td><td class="mono">e52887c9</td></tr>
+<tr><td class="mono">sfz.01</td><td>128 KB</td><td class="mono">ffffec7d</td><td class="mono">01af54e8</td></tr>
 <tr><td class="mono">sfz.04b</td><td>512 KB</td><td class="mono">8b73b0e5</td><td class="mono">8d9b2480</td></tr>
 </table>
 <p><code>sfz.05a</code> (512 KB, original CRC32 <code>0810544d</code>) differs per build:</p>
@@ -201,11 +201,14 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p><code>sfzj.03c</code> (512 KB, original CRC32 <code>f5444120</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA (English)</td><td class="mono">e1537ea0</td></tr>
-<tr><td>Japan (Japanese)</td><td class="mono">a6849999</td></tr>
-<tr><td>Asia (English)</td><td class="mono">5550e82b</td></tr>
+<tr><td>USA (English)</td><td class="mono">c5af217d</td></tr>
+<tr><td>Japan (Japanese)</td><td class="mono">57e23cad</td></tr>
+<tr><td>Asia (English)</td><td class="mono">71acb7f6</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc3 (2026-11-03)</h3><ul>
+<li>Fixed the corrupted SCORE RANKING heading, and set the default ranking initials to CHN for Chun-Li and to CHL for Charlie in the USA and Asia builds.</li>
+</ul>
 <h3>rc2 (2026-10-29)</h3><ul>
 <li>Character-select and victory portraits now match your chosen fighter color, including the extra Alpha 2 colors.</li>
 <li>Simplified and centered Versus and Training setup: LP/START confirms from any setting; LK/Coin returns.</li>
