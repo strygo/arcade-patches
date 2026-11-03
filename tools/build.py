@@ -22,6 +22,17 @@ from release_inventory import load_inventory, published_bundle, validate_invento
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 
+# Google Analytics tag, loaded in every page head.
+GOOGLE_TAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-14XT5KXKKH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-14XT5KXKKH');
+</script>"""
+
 # Set from the site config at the start of main().
 SITE: dict = {}
 # `--only slug,...` refreshes only those screenshots/title images from their
@@ -211,6 +222,7 @@ def page(site: dict, title: str, body: str, depth: int = 0, social: dict | None 
     return versioned(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+{GOOGLE_TAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>{social_tags(site, social)}
@@ -1221,6 +1233,7 @@ def write_redirects(site: dict, patch: dict) -> None:
         (out_dir / "index.html").write_text(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
+{GOOGLE_TAG}
 <meta charset="utf-8">
 <title>{esc(patch['title'])} · {esc(site['title'])}</title>
 <meta http-equiv="refresh" content="0; url={target}">
