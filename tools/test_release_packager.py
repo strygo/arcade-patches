@@ -243,6 +243,12 @@ class ReleasePackagerTests(unittest.TestCase):
                 self.assertEqual(["parentdemo"], manifest["parents"])
                 self.assertIn("ips/game.03.ips", archive.namelist())
                 self.assertIn("rom_sources.py", archive.namelist())
+                for name in ('fbneo_names.py', 'fbneo_names.json', 'switch_helpers.json'):
+                    self.assertEqual(archive.read(name), (packager.ROOT/'tools'/name).read_bytes())
+                info = json.loads(archive.read('build-info.json'))
+                self.assertEqual(info['kit_revision'], 1)
+                self.assertEqual(info['tools_updated'], patch['date'])
+                self.assertEqual(info['resolver_sha256'], hashlib.sha256(archive.read('rom_sources.py')).hexdigest())
                 archive.extractall(root / "kit")
             self.assertEqual("patch", manifest["members"][0]["action"])
             self.assertEqual(64, len(manifest["members"][0]["stock_sha256"]))

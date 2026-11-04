@@ -683,8 +683,13 @@ def build_rom_downloads(patch: dict) -> dict:
             write(z, python_name, python_data)
         write(z, "rom_sources.py", (ROOT / "tools" / "rom_sources.py").read_bytes())
         write(z, "kit_collection.py", (ROOT / "tools" / "kit_collection.py").read_bytes())
-        for name in ('fetch_switch_tools.py', 'fetch_optional_tools.py', 'tool_controls.py', 'optional_helpers.json'):
+        for name in ('fetch_switch_tools.py', 'fetch_optional_tools.py', 'tool_controls.py',
+                     'optional_helpers.json', 'switch_helpers.json', 'fbneo_names.py', 'fbneo_names.json'):
             write(z, name, (ROOT/'tools'/name).read_bytes())
+        write(z, 'build-info.json', json.dumps({
+            'kit_revision': manifest.get('kit_revision', 1), 'tools_updated': patch['date'],
+            'resolver_sha256': hashlib.sha256((ROOT/'tools/rom_sources.py').read_bytes()).hexdigest(),
+        }, indent=2).encode())
         for name in ('darksoft.py', 'darksoft_profiles.json', 'darksoft_kits.json'):
             write(z, name, (ROOT / 'tools' / name).read_bytes())
         if patch.get('hbmame_driver'):
