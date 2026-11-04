@@ -66,9 +66,9 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/3ca40dd13d816bbf3c331de7193ef421a942ed6c9efb987326135487651a58f3-sfa2-restoration-native-kit.zip"
     },
     "sfa3-restoration-kit": {
-      "sha256": "de767ffde4b755d331f3ea736a44bf4050a966a04cec103c439e6524c09cd9ee",
-      "size": 584283,
-      "url": "https://arcadepatches.com/catalog/v1/artifacts/de767ffde4b755d331f3ea736a44bf4050a966a04cec103c439e6524c09cd9ee-sfa3-restoration-native-kit.zip"
+      "sha256": "188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed",
+      "size": 563986,
+      "url": "https://arcadepatches.com/downloads/archive/188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed/sfa3-restoration-rc5-ips.zip"
     },
     "sfz2al-restoration-kit": {
       "sha256": "e363df76b8c491c9795066fcafa57eef302e3bcb6e0759d1df41773e32bae01c",
@@ -187,7 +187,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
     }
   },
-  "generation": 42,
+  "generation": 43,
   "not_integrated": [],
   "projects": {
     "cps-plus": {
@@ -243,7 +243,7 @@
       "title": "Street Fighter Alpha 2"
     },
     "sfa3-restoration": {
-      "current": "sfa3-restoration-rc4-r6",
+      "current": "sfa3-restoration-rc5-r1",
       "title": "Street Fighter Alpha 3"
     },
     "sfz2al-restoration": {
@@ -443,16 +443,16 @@
       "kit": "sfa2-restoration-kit",
       "kit_revision": 6
     },
-    "sfa3-restoration-rc4-r6": {
+    "sfa3-restoration-rc5-r1": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "8e1da071159ce7e0bff49052bb40d9b0b7419e2008fea1ece6d6f8213c5bc9fb",
-        "size": 60618,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/8e1da071159ce7e0bff49052bb40d9b0b7419e2008fea1ece6d6f8213c5bc9fb.json"
+        "sha256": "4686fcc734cf994163811b5282c1a608fe8db169188efc12d8a28b53ec34dd16",
+        "size": 59936,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/4686fcc734cf994163811b5282c1a608fe8db169188efc12d8a28b53ec34dd16.json"
       },
-      "game_version": "rc4",
+      "game_version": "rc5",
       "kit": "sfa3-restoration-kit",
-      "kit_revision": 6
+      "kit_revision": 1
     },
     "sfz2al-restoration-rc2-r6": {
       "definition": {

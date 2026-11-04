@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 3</h1>
 <p class="subtitle">English restoration</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 3 (Japan 980904)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>sfz3j</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-10-21</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc5</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 3 (Japan 980904)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>sfz3j</dd><dt>Version</dt><dd>rc5</dd><dt>Updated</dt><dd>2026-11-03</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/sfa3-restoration/00_single.png?v=7021faea24" alt="An opponent-specific win quote."><figcaption>An opponent-specific win quote.</figcaption></figure>
 <figure class="shot single"><img src="../img/sfa3-restoration/01_single.png?v=85e60e6077" alt="English A/X/V-ISM selection."><figcaption>English A/X/V-ISM selection.</figcaption></figure>
@@ -68,9 +68,9 @@
 <li>Biographies, rival and boss dialogue, and endings that follow the Japanese script, keeping Capcom&#x27;s wording where it was accurate</li>
 <li>Japanese Regulation OFF by default, with its operator switch and uncensored effects</li>
 <li>Japanese 980904 gameplay, difficulty, Turbo 1 defaults and secret-character access</li>
-<li>Alpha branding in the intro, selection, player introductions and win screens; English A/X/V-ISM descriptions and score rankings, Western names, title and entry announcements, and operator menus</li>
+<li>Alpha branding in the intro, selection, player introductions and win screens; English A/X/V-ISM descriptions and score rankings with Capcom’s USA default initials, Western names, title and entry announcements, and operator menus</li>
 <li>Corrected ending backgrounds, framing and colors, including cleaner picture edges and character placement in E. Honda’s ending</li>
-<li>Corrected Sodom portrait colors, including a blue X-ISM mask and the original gray V-ISM mask in the rankings</li>
+<li>Corrected Sodom portrait colors, including black eyes on his small select portrait, a blue X-ISM mask and the original gray V-ISM mask in the rankings</li>
 <li>An optional Japanese edition with original Japanese text and names, Zero branding and Z-ISM, and the same ending corrections</li>
 </ul>
 <h2>Spot a difference we missed?</h2>
@@ -78,18 +78,18 @@
 something this one still doesn't, whether a line of text, a scene, a screen or a small detail,
 please <a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">let us know</a>. Anything you find goes into the next release.</p>
 <h2>Downloads</h2>
-<p>Tools updated 2026-11-02. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/sfa3-restoration-rc4-ips.zip?v=854f2c181f">sfa3-restoration-rc4-ips.zip</a>
-  (553 KB)</div>
-  <div class="hash">SHA-256: 854f2c181f69037dbdd86c986b1403eaa877fc3f5623d38274a1285fdd25fe3f</div>
+  <div class="file"><a href="../downloads/sfa3-restoration-rc5-ips.zip?v=188a4ed0c7">sfa3-restoration-rc5-ips.zip</a>
+  (551 KB)</div>
+  <div class="hash">SHA-256: 188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
-  <div class="file"><a href="../downloads/sfa3-restoration-rc4-mra.zip?v=dcff02f535">sfa3-restoration-rc4-mra.zip</a>
+  <div class="file"><a href="../downloads/sfa3-restoration-rc5-mra.zip?v=f5377f443b">sfa3-restoration-rc5-mra.zip</a>
   (280 KB)</div>
-  <div class="hash">SHA-256: dcff02f53596a82a2126560d8b23f748f4dbfaa5ac4de6a8204a28140e850c4b</div>
+  <div class="hash">SHA-256: f5377f443b70ea96b367ee18f158a7a0b7b72e0ab354c94e7d821b21616c809f</div>
 </div>
 <p>You need your own dump of <strong>Street Fighter Zero 3 (Japan 980904)</strong> as the MAME
 set <code>sfz3j.zip</code>. Every build is made from that one set.
@@ -101,7 +101,7 @@ Each zip includes a <code>readme.txt</code> with full instructions.</p>
 <tr><td>English restoration</td><td class="mono">english</td><td class="mono">sfa3r</td><td class="mono">sfa3ru</td><td class="mono">sfa3re</td></tr><tr><td>Japanese restoration</td><td class="mono">japanese</td><td class="mono">sfz3jr</td><td class="mono">sfz3rj</td><td class="mono">sfz3rej</td></tr>
 </table>
 <h2>How to apply</h2>
-<pre><code>unzip sfa3-restoration-rc4-ips.zip -d sfz3j-patch
+<pre><code>unzip sfa3-restoration-rc5-ips.zip -d sfz3j-patch
 cd sfz3j-patch
 python3 apply.py /path/to/sfz3j.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -146,8 +146,8 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p><code>sz3.09c</code> (512 KB, original CRC32 <code>b29e5199</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>English restoration</td><td class="mono">3b9e4187</td></tr>
-<tr><td>Japanese restoration</td><td class="mono">91aa1312</td></tr>
+<tr><td>English restoration</td><td class="mono">65bc5e7b</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">cf880cee</td></tr>
 </table>
 <p><code>sz3.10b</code> (512 KB, original CRC32 <code>deb2ff52</code>) differs per build:</p>
 <table>
@@ -206,8 +206,8 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p><code>sz3j.03c</code> (512 KB, original CRC32 <code>cadf4a51</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>English restoration</td><td class="mono">cb2367cb</td></tr>
-<tr><td>Japanese restoration</td><td class="mono">70f049e5</td></tr>
+<tr><td>English restoration</td><td class="mono">44fa43f4</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">b0730b33</td></tr>
 </table>
 <p><code>sz3j.04c</code> (512 KB, original CRC32 <code>fcb31228</code>) differs per build:</p>
 <table>
@@ -216,6 +216,11 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <tr><td>Japanese restoration</td><td class="mono">faf7c4aa</td></tr>
 </table>
 <h2 id="history">Release history</h2>
+<h3>rc5 (2026-11-03)</h3><ul>
+<li>Set the default score-ranking initials for Charlie, M. Bison, Akuma, Vega and Balrog to Capcom’s USA defaults in the English edition.</li>
+<li>Gave Sodom black eyes on his small character-select portrait in both editions.</li>
+<li>The test menu’s MEMORY CHECK now reports OK for every program ROM bank.</li>
+</ul>
 <h3>rc4 (2026-10-21)</h3><ul>
 <li>Restored Capcom’s per-panel text colors for the English stage locations.</li>
 <li>Corrected Sodom’s mask, eye and mouth colors in portraits and rankings, including his X-ISM ranking portrait.</li>

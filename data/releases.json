@@ -4441,7 +4441,7 @@
       }
     },
     "sfa3-restoration": {
-      "current": "rc4",
+      "current": "rc5",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -4925,6 +4925,65 @@
               "mra": "dcff02f53596a82a2126560d8b23f748f4dbfaa5ac4de6a8204a28140e850c4b"
             },
             "revision": 5
+          }
+        },
+        "rc5": {
+          "current_revision": 1,
+          "date": "2026-11-03",
+          "files": {
+            "ips": {
+              "archive": "archive/188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed/sfa3-restoration-rc5-ips.zip",
+              "name": "sfa3-restoration-rc5-ips.zip",
+              "sha256": "188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed",
+              "size": 563986
+            },
+            "mra": {
+              "archive": "archive/f5377f443b70ea96b367ee18f158a7a0b7b72e0ab354c94e7d821b21616c809f/sfa3-restoration-rc5-mra.zip",
+              "name": "sfa3-restoration-rc5-mra.zip",
+              "sha256": "f5377f443b70ea96b367ee18f158a7a0b7b72e0ab354c94e7d821b21616c809f",
+              "size": 286763
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc5-candidate.3",
+            "capcom_source_commit": "2178db81ad77f704bbce4eeb9fab763be8d220ce",
+            "ready_record_sha256": "f4584088bc67778bc7be32ccf975baeb2cfb577db90add3552190442330d9937",
+            "release_sha256": "189bd3c429eada977a2be7b1bae8e87d258b55c79397a40a8c01f31322aad588",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-11-03",
+              "files": {
+                "ips": {
+                  "archive": "archive/188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed/sfa3-restoration-rc5-ips.zip",
+                  "name": "sfa3-restoration-rc5-ips.zip",
+                  "sha256": "188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed",
+                  "size": 563986
+                },
+                "mra": {
+                  "archive": "archive/f5377f443b70ea96b367ee18f158a7a0b7b72e0ab354c94e7d821b21616c809f/sfa3-restoration-rc5-mra.zip",
+                  "name": "sfa3-restoration-rc5-mra.zip",
+                  "sha256": "f5377f443b70ea96b367ee18f158a7a0b7b72e0ab354c94e7d821b21616c809f",
+                  "size": 286763
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc5-candidate.3",
+                "capcom_source_commit": "2178db81ad77f704bbce4eeb9fab763be8d220ce",
+                "ready_record_sha256": "f4584088bc67778bc7be32ccf975baeb2cfb577db90add3552190442330d9937",
+                "release_sha256": "189bd3c429eada977a2be7b1bae8e87d258b55c79397a40a8c01f31322aad588",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }
