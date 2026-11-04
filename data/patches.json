@@ -4586,7 +4586,7 @@
       "hardware": "Capcom CPS-2 with the CPS+ core",
       "thumbnail_build": "us",
       "requirements": {
-        "text": "On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. The MAME sets run in unmodified MAME using its Hyper Street Fighter II loader. HBMAME needs the set definitions the kit writes compiled in.",
+        "text": "On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. The MAME sets run in unmodified MAME using its Hyper Street Fighter II loader. HBMAME needs a build that includes the Ultra Street Fighter II sets.",
         "link": {
           "label": "About CPS-2+ hardware",
           "url": "../cps2-plus/"
@@ -4665,7 +4665,7 @@
         ]
       },
       "notes": [
-        "MAME: RC4 replaces the previous default 4 MB, Modern-only audio build with an 8 MB audio build containing both Modern and Classic sound effects. It still runs in unmodified MAME as hsf2 (USA) or hsf2j (Japan); no custom MAME build is needed. Choose MODERN or CLASSIC in ULTRA CONFIGURATION. Use the newly generated ZIPs and keep them separate from original Hyper Street Fighter II ROMs. Checksum warnings are expected. HBMAME still needs the included set definitions compiled in.",
+        "MAME: RC4 replaces the previous default 4 MB, Modern-only audio build with an 8 MB audio build containing both Modern and Classic sound effects. It still runs in unmodified MAME as hsf2 (USA) or hsf2j (Japan); no custom MAME build is needed. Choose MODERN or CLASSIC in ULTRA CONFIGURATION. Use the newly generated ZIPs and keep them separate from original Hyper Street Fighter II ROMs. Checksum warnings are expected. HBMAME needs a build that includes the Ultra Street Fighter II sets.",
         "Installation: install Python 3.10 or newer, extract the kit and run apply.py with your arcade ROMs, Switch game files and prod.keys. The region follows the game files you supply. Scratch and output folders are selected automatically unless you specify them. The installer checks paths before downloading tools, reports setup errors without a traceback, and groups the finished files and instructions by target. No compiler, Git, CMake, NumPy or separate FFmpeg installation is needed. For offline setup, keep cpsplus-tools-v2-offline.zip zipped and add --tools-bundle cpsplus-tools-v2-offline.zip --offline. Optional 7z inputs still need 7-Zip.",
         "Credits: Akuma's imported artwork is Tyrone's, from Super Street Fighter II Turbo: New Legacy.",
         "Special thanks to Gachichan! for bug reports and improvements to the Evil Ryu and Violent Ken profile pictures.",
@@ -5686,10 +5686,6 @@
         "catver": "Fighter / Versus",
         "mraauthor": "jotego,strygo"
       },
-      "hbmame_driver": {
-        "source": "data/hbmame/sfa-restoration.cpp.inc",
-        "filename": "hbmame/sfarest.cpp.inc"
-      },
       "screenshots": [
         {
           "single": "data/screenshots/sfa-restoration/win_quote.png",
@@ -5709,7 +5705,7 @@
         }
       ],
       "notes": [
-        "MAME shows checksum warnings for the patched files. HBMAME with the included set definitions loads the three regional builds.",
+        "MAME shows checksum warnings for the patched files. An HBMAME build that includes the three regional sets loads them.",
         "Fan work, unaffiliated with Capcom. You need your own dump of the Japanese arcade set; the downloads contain patches, not complete game ROMs."
       ]
     },
@@ -5725,7 +5721,7 @@
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "en",
       "requirements": {
-        "text": "On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. Stock MAME uses the separate sfa3ud.zip written for each edition. HBMAME needs the set definitions the kit writes compiled in.",
+        "text": "On MiSTer these need a 128 MB SDRAM module and the CPS+ core, which the kit includes. Stock MAME uses the separate sfa3ud.zip written for each edition. HBMAME needs a build that includes the Final Fight EX sets.",
         "link": {
           "label": "About CPS-2+ hardware",
           "url": "../cps2-plus/"

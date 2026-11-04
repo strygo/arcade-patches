@@ -2456,25 +2456,6 @@
         "ready_record_sha256": "fa758f2c25aef722f621da1deed8141120b31b8ca3520e140cbc8bae3fe2e1fe",
         "targets": 5
       },
-      "sfa-restoration": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "000daf15314412e2c899f2dd42d3e80f4d099e2398bcc2a5bd3aa596235e3fca",
-        "game_version": "rc1",
-        "isolated_metadata": "passed",
-        "kit_revision": 6,
-        "kit_sha256": "89be0699510b4f438dc898a52167da281ebe7bde25c8332d41f47ab36310151d",
-        "metadata_crc_enrichment": {
-          "added": 14,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "000daf15314412e2c899f2dd42d3e80f4d099e2398bcc2a5bd3aa596235e3fca"
-        },
-        "native_outputs_sha256": "bf0aaf0270792b1ef57b69aeafc2325f475c8c4896c538f78b736d0a9b538f3d",
-        "ready_record_sha256": "3146dc0c628f6d48d677e2d4d66a86d5dd6325dcaef812bac07830fe1a058b21",
-        "targets": 15
-      },
       "sfa2-ex": {
         "accepted_export_contracts": "unchanged",
         "baseline_kit_sha256": "4adf818c37c7a67ae18678cca103f46c5973f27dceb15874ad807d69434dfaed",
@@ -2594,28 +2575,6 @@
         "ready_record_sha256": "bfa393479375745bb7799dc351071a5c03f14449af0b428b819830ad6486e47a",
         "targets": 4
       },
-      "usf2-backport": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "37ec32f17fc1de7bec0c483bd624d28cd686712bef031c8224ffd004ac829c75",
-        "game_version": "rc5",
-        "isolated_metadata": "passed",
-        "kit_revision": 5,
-        "kit_sha256": "9c1a009a2423022c3bb12da67d68305dc65bb69641ec5387561da222abe81f7a",
-        "native_outputs_sha256": "130db42fd3ad1d045e979d28060f5b34525121923322afdd177d32002c34c43a",
-        "ready_record_sha256": "de5ef5e0d7358163d27d5e261dc0e85d5e38d2e19a97f3aa9a2dc27c20fd7a56",
-        "targets": 8
-      },
-      "vhunt2-arrange": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "0b5c9c818cee8c491fce8b6a51f7acfe3a6f24ed1cecef3545243d78b1467138",
-        "game_version": "rc3",
-        "isolated_metadata": "passed",
-        "kit_revision": 3,
-        "kit_sha256": "3391bd1c544a7754277a77fa50765532d539219c685ddd8f28909d44bef128fa",
-        "native_outputs_sha256": "58cf034e8cfa93a1948b4bc9f95e576a58e4cd78b68dbf7664ed3fefe6abaa87",
-        "ready_record_sha256": "f13f3d0f376bb5ee66260939bdd8e6b8955bf43ed794cabac2908b2c9ce6c174",
-        "targets": 4
-      },
       "vhunt2-english": {
         "accepted_export_contracts": "unchanged",
         "baseline_kit_sha256": "fcf330aa18de34a9ceffcd50189084bc00b3320be9e711754cf9af06561bb15f",
@@ -2635,17 +2594,6 @@
         "ready_record_sha256": "0d7e40e491298032ae8fd4bc6a12044060b75055d0522e094073b2f8e34b1a87",
         "targets": 5
       },
-      "vsav-arrange": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "428c1cb54d0f0ac8b3e9c4c9e4d15acbaabc8eab7fef93dd650cc78a8e2a7888",
-        "game_version": "rc4",
-        "isolated_metadata": "passed",
-        "kit_revision": 3,
-        "kit_sha256": "f20f9157e2eef1e6a859c1580868a6e83c15c5fba62778ebff4a9ba08a0d145c",
-        "native_outputs_sha256": "0e7c21ee145a1f0c55099d632330f5f8bcd71d1e7f639be1bfbd4c19d80ec48d",
-        "ready_record_sha256": "0cad87f4d6809c1346ac7e188b0591419310f538a3b73ff831a7ca167072a9b9",
-        "targets": 4
-      },
       "vsav-restoration": {
         "accepted_export_contracts": "unchanged",
         "baseline_kit_sha256": "deb96e668a15c5b971db61e046240a013766d9b6264a9d4dc45e87c2e431aea8",
@@ -2664,17 +2612,6 @@
         "native_outputs_sha256": "7131ea65d2498250550cbf4491edb80737b9dae9670ef76eada7e1050d14a194",
         "ready_record_sha256": "a6a9941f8327953e8c2f26ea131f59ecc10f6f8ba9c1edf5126db08c64f3f77b",
         "targets": 5
-      },
-      "vsav2-arrange": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "d06bc913d5141d6dad5f6553b8110bf208599b1086280881017537eb351269b1",
-        "game_version": "rc3",
-        "isolated_metadata": "passed",
-        "kit_revision": 3,
-        "kit_sha256": "51ac732bf10745ab539f29276e251dfc65fa6445ef2e51877db56a4127331a42",
-        "native_outputs_sha256": "f855d2aefcf93cc5628c115e1fa78f9cc57ea6c89cabe53e671b1ae923eb5b5c",
-        "ready_record_sha256": "480f0e7e13ca6172914ad1087ee18cf4263f975e3cbb1b49b9a2a5d8e4e34b28",
-        "targets": 4
       },
       "vsav2-english": {
         "accepted_export_contracts": "unchanged",
@@ -2869,6 +2806,10 @@
       "sha256": "0a29e9c9046f366796c0f2167179525dc4a79de5a498776725cc8cf7d35ee558",
       "size": 74470
     },
+    "catalog/v1/definitions/17a4641145945e30d4c63cced1d454dce37f79f4e51492e3fcc257b09aeac9f9.json": {
+      "sha256": "17a4641145945e30d4c63cced1d454dce37f79f4e51492e3fcc257b09aeac9f9",
+      "size": 511780
+    },
     "catalog/v1/definitions/25e27020c4f9a899064dd4bcc114701dec102351ecfb6cd493c0275a09577d04.json": {
       "sha256": "25e27020c4f9a899064dd4bcc114701dec102351ecfb6cd493c0275a09577d04",
       "size": 105262
@@ -2889,6 +2830,10 @@
       "sha256": "4686fcc734cf994163811b5282c1a608fe8db169188efc12d8a28b53ec34dd16",
       "size": 59936
     },
+    "catalog/v1/definitions/47e977e7363297bf75a1903e519a4320a009b12b7ad5fbf55af046f1e60c927b.json": {
+      "sha256": "47e977e7363297bf75a1903e519a4320a009b12b7ad5fbf55af046f1e60c927b",
+      "size": 58093
+    },
     "catalog/v1/definitions/4c2d3162206a0a5cdfc04e4f556765e171111f6d618d8b9d221e15bbf29d3c91.json": {
       "sha256": "4c2d3162206a0a5cdfc04e4f556765e171111f6d618d8b9d221e15bbf29d3c91",
       "size": 34888
@@ -2896,6 +2841,10 @@
     "catalog/v1/definitions/560b9bcdd79d606ca1a0a9abe800d2b115a7c27daa58257d246076863cd47d5b.json": {
       "sha256": "560b9bcdd79d606ca1a0a9abe800d2b115a7c27daa58257d246076863cd47d5b",
       "size": 60182
+    },
+    "catalog/v1/definitions/56667cce944941f9aebbc1f83d9edf2c24854d9b26e4223b0646100e5d59b783.json": {
+      "sha256": "56667cce944941f9aebbc1f83d9edf2c24854d9b26e4223b0646100e5d59b783",
+      "size": 59664
     },
     "catalog/v1/definitions/58cfbbb5c71d4175e042c286a35b6457ce0f866360c8d538e2657e0812598416.json": {
       "sha256": "58cfbbb5c71d4175e042c286a35b6457ce0f866360c8d538e2657e0812598416",
@@ -2916,6 +2865,10 @@
     "catalog/v1/definitions/7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b.json": {
       "sha256": "7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b",
       "size": 514282
+    },
+    "catalog/v1/definitions/81c9ef214e004311b78dfa0385924b374e2260b1c352ddef2f969c1e560107b6.json": {
+      "sha256": "81c9ef214e004311b78dfa0385924b374e2260b1c352ddef2f969c1e560107b6",
+      "size": 118524
     },
     "catalog/v1/definitions/838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91.json": {
       "sha256": "838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91",
@@ -2969,6 +2922,14 @@
       "sha256": "c3a4feb7510d3b98050d208129eb4a4c1f383ae5aeda58637c5367034e95736a",
       "size": 574446
     },
+    "catalog/v1/definitions/c95f0f99e339b4ef96fbc05c80e3d932761195558d75c76e9540e4542d23ceb3.json": {
+      "sha256": "c95f0f99e339b4ef96fbc05c80e3d932761195558d75c76e9540e4542d23ceb3",
+      "size": 56446
+    },
+    "catalog/v1/definitions/d99490483005e1d13f86a52bb077536d1a2e53b6e837d75e79bd1fc787e1a3ea.json": {
+      "sha256": "d99490483005e1d13f86a52bb077536d1a2e53b6e837d75e79bd1fc787e1a3ea",
+      "size": 57527
+    },
     "catalog/v1/definitions/da3e208b43732b6c953ca4cd6c3bca24d2b2ab9aae011a68eb27262b0e62bf3a.json": {
       "sha256": "da3e208b43732b6c953ca4cd6c3bca24d2b2ab9aae011a68eb27262b0e62bf3a",
       "size": 34937
@@ -2982,8 +2943,8 @@
       "size": 127219
     },
     "catalog/v1/index.json": {
-      "sha256": "0d2fbf4e4eba573a8398d6eb4ee99e0ffe4fc633ea556ec2865482d20a7bd5d8",
-      "size": 26507
+      "sha256": "1960e609b3ce769e44d9bbe9d8244be8754a0f620039beb2bcb273b6d0198fcf",
+      "size": 26477
     },
     "downloads/archive/0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5/mshvsf-ex-rc5-ips.zip": {
       "sha256": "0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5",
@@ -2993,6 +2954,18 @@
       "sha256": "188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed",
       "size": 563986
     },
+    "downloads/archive/1df5dde39e1d18a1fc249a78d378bab88680157dfce406a58c6b82c2bfc8f7b7/vhunt2-arrange-rc3-kit.zip": {
+      "sha256": "1df5dde39e1d18a1fc249a78d378bab88680157dfce406a58c6b82c2bfc8f7b7",
+      "size": 2053195
+    },
+    "downloads/archive/51f116c2ea8c6e41c9cb263fbe245d0227706b14238f4026afc25edef5bd7c74/vsav-arrange-rc4-kit.zip": {
+      "sha256": "51f116c2ea8c6e41c9cb263fbe245d0227706b14238f4026afc25edef5bd7c74",
+      "size": 2354143
+    },
+    "downloads/archive/9c5ea94612996b14ec857fcf5356409e7f82371950a2056868efabf95e6d82ce/sfa-restoration-rc1-ips.zip": {
+      "sha256": "9c5ea94612996b14ec857fcf5356409e7f82371950a2056868efabf95e6d82ce",
+      "size": 439071
+    },
     "downloads/archive/c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09/ssf2-ex-rc13-ips.zip": {
       "sha256": "c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09",
       "size": 1416374
@@ -3000,6 +2973,18 @@
     "downloads/archive/d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd/final-fight-ex-cps2-rc3-kit.zip": {
       "sha256": "d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd",
       "size": 39361961
+    },
+    "downloads/archive/daba6d9cb00e77bc07fed2b35d6c827a504c5c789ce7a749cff11255e26e80e4/final-fight-ex-cps2-rc3-kit.zip": {
+      "sha256": "daba6d9cb00e77bc07fed2b35d6c827a504c5c789ce7a749cff11255e26e80e4",
+      "size": 39357156
+    },
+    "downloads/archive/df87f5de7303902ef81b526bc663ae0caba42eaae06268d2eeafeda92259a5e6/vsav2-arrange-rc3-kit.zip": {
+      "sha256": "df87f5de7303902ef81b526bc663ae0caba42eaae06268d2eeafeda92259a5e6",
+      "size": 1972807
+    },
+    "downloads/archive/dff1e4a1ce7e3d6d2ea5a471c12f77f831d0aceb04d5fad5e1539ec7abf0bac6/usf2-backport-rc5-kit.zip": {
+      "sha256": "dff1e4a1ce7e3d6d2ea5a471c12f77f831d0aceb04d5fad5e1539ec7abf0bac6",
+      "size": 21640464
     },
     "downloads/archive/f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e/sfa-ex-rc3-ips.zip": {
       "sha256": "f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e",
@@ -3010,7 +2995,7 @@
       "size": 43091
     }
   },
-  "generation": 44,
+  "generation": 50,
   "launcher": "tools/downloads/archive/5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1/ArcadePatches-0.1.zip",
   "native_updates": [
     {
@@ -3052,6 +3037,54 @@
       "project": "final-fight-ex-cps2",
       "ready_sha256": "0c77dc2df5fbe98078023fe4133ee8fdd7a62ff2eb1bd6102af5390b84c6f22b",
       "release_sha256": "22ff8dc73d45b7f8b81eb132b7a09a93d54bdd1d4de5b821dc28fa19e33877cf"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 2,
+      "kit_sha256": "daba6d9cb00e77bc07fed2b35d6c827a504c5c789ce7a749cff11255e26e80e4",
+      "project": "final-fight-ex-cps2",
+      "ready_sha256": "fa9a8dcb25c18dd497ba060f35912dd421fb28de6a108e69e58cb6f12c73b10c",
+      "release_sha256": "8063c0a42ba9897ce106919e64cb3b443810a606da9b19858ed43871731b702d"
+    },
+    {
+      "game_version": "rc5",
+      "kit_revision": 5,
+      "kit_sha256": "dff1e4a1ce7e3d6d2ea5a471c12f77f831d0aceb04d5fad5e1539ec7abf0bac6",
+      "project": "usf2-backport",
+      "ready_sha256": "0a89cb42377ddde7c341ceef88118807026e2b8b2c50eae46af3458a598bae61",
+      "release_sha256": "d3bcfbc9a11e83df80014bcbdfc51391be981060b42ade905c6ea198d4f89391"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 7,
+      "kit_sha256": "9c5ea94612996b14ec857fcf5356409e7f82371950a2056868efabf95e6d82ce",
+      "project": "sfa-restoration",
+      "ready_sha256": "2b5ca520c433da67ad5f8ddd1ec3433783522c096ede5ef632f0c1b4eea18682",
+      "release_sha256": "d7dc52f26800fc4852dd28534feb47fa52b8a43e2337911649e729d69d795fec"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 3,
+      "kit_sha256": "1df5dde39e1d18a1fc249a78d378bab88680157dfce406a58c6b82c2bfc8f7b7",
+      "project": "vhunt2-arrange",
+      "ready_sha256": "3f6f2f706a074af8efe0b542ab0bd51f26de54464c3da8be4a44cecfad7fb74d",
+      "release_sha256": "ad950161dbb82278ed9e07b806d6c042a27707a3e0b7e6126d082bd330647a5b"
+    },
+    {
+      "game_version": "rc4",
+      "kit_revision": 3,
+      "kit_sha256": "51f116c2ea8c6e41c9cb263fbe245d0227706b14238f4026afc25edef5bd7c74",
+      "project": "vsav-arrange",
+      "ready_sha256": "7e95681f685d315a1b6776afd51b2c7e1f0d99ecccd319379d2d49af27870aaf",
+      "release_sha256": "f874b159c6f73efd8631ba95085cbc5dfe69412981f9f6624aa8d9bd69f8ffa2"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 3,
+      "kit_sha256": "df87f5de7303902ef81b526bc663ae0caba42eaae06268d2eeafeda92259a5e6",
+      "project": "vsav2-arrange",
+      "ready_sha256": "e136a7a134b81013241a2e43bed71671155d0ee38d548cf531dfbaaeac9fb60b",
+      "release_sha256": "78104fb2bbd1f48b72543156cec0e84905e40c1bed4954ef55ee916d123cbc0a"
     }
   ],
   "package_receipt": {

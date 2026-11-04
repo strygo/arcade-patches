@@ -2,8 +2,8 @@
 """apply.py on synthetic data: no ROMs, discs or builder modules.
 
 A copy of the kit gets a synthetic romset catalog and romsets, stub ffex_kit and
-packs modules (the release stages the real ones), MRAs and definitions made for
-the stub's members, and a placeholder core. The real shared rom_sources.py and
+packs modules (the release stages the real ones), MRAs made for the stub's
+members, and a placeholder core. The real shared rom_sources.py and
 darksoft.py run unchanged.
 """
 import hashlib
@@ -101,10 +101,7 @@ class ApplyTests(unittest.TestCase):
                 z.writestr(f"{s}.bin", data)
         (self.kit / "rom_inputs.json").write_text(json.dumps({"schema": 1, "sets": sets}))
         (self.kit / "mras").mkdir()
-        (self.kit / "definitions").mkdir()
         self.small = stub_members(self.kit)
-        for meta in KIT["editions"].values():
-            (self.kit / "definitions" / f"{meta['set']}.cpp.inc").write_text(f"// {meta['set']}\n")
         self.discs = root / "jp.img", root / "us.bin"
         for disc in self.discs:
             disc.write_bytes(b"disc")
@@ -159,8 +156,9 @@ class ApplyTests(unittest.TestCase):
         result = self.run_apply("--disc-jp", str(self.discs[0]), "--platform", "hbmame", "--out-dir", str(out))
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(sorted(p.name for p in (out / "hbmame").glob("*.zip")), ["ffex2j.zip", "ffex2r.zip"])
-        self.assertEqual(sorted(p.name for p in (out / "hbmame/definitions").iterdir()),
-                         ["ffex2j.cpp.inc", "ffex2r.cpp.inc"])
+        # Emulator definitions are never kit outputs; they belong to the post-release HBMAME rebuild.
+        self.assertEqual([p for p in out.rglob("*") if p.suffix in (".cpp", ".inc")], [])
+        self.assertFalse((out / "hbmame" / "definitions").exists())
         calls = json.loads((self.kit / "calls.json").read_text())
         self.assertEqual([c["edition"] for c in calls], ["english", "japan"])
         self.assertEqual(calls[0]["discs"], {"jp": "jp.img", "us": None})
@@ -170,7 +168,6 @@ class ApplyTests(unittest.TestCase):
 
     def test_stock_mame_editions_are_isolated_and_need_no_other_targets(self):
         shutil.rmtree(self.kit / "mras")
-        shutil.rmtree(self.kit / "definitions")
         shutil.rmtree(self.kit / "core")
         (self.kit / "packs.py").unlink()
         (self.kit / "darksoft.py").unlink()
@@ -263,15 +260,19 @@ class ApplyTests(unittest.TestCase):
         self.assertIn("does not match the built", result.stderr)
         self.assertFalse(out.exists())
 
-    def test_unstaged_mra_or_definitions_fail_before_building(self):
+    def test_unstaged_mra_fails_before_building(self):
         out = self.kit.parent / "out"
         result = self.run_apply("--disc-us", str(self.discs[1]), "--platform", "mister", "--out-dir", str(out))
         self.assertIn("mras/Final Fight EX CPS2 (USA).mra is missing", result.stderr)
-        self.write_mras(True)
-        (self.kit / "definitions/ffex2u.cpp.inc").unlink()
-        result = self.run_apply("--disc-us", str(self.discs[1]), "--platform", "hbmame", "--out-dir", str(out))
-        self.assertIn("definitions/ffex2u.cpp.inc is missing", result.stderr)
         self.assertFalse((self.kit / "calls.json").exists() or out.exists())
+
+    def test_hbmame_needs_and_writes_no_definitions(self):
+        self.write_mras(True)
+        out = self.kit.parent / "out"
+        result = self.run_apply("--disc-us", str(self.discs[1]), "--platform", "hbmame", "--out-dir", str(out))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(sorted(p.relative_to(out).as_posix() for p in out.rglob("*") if p.is_file()),
+                         ["hbmame/ffex2u.zip"])
 
     def test_missing_disc_module_and_inputs_fail_clearly(self):
         out = str(self.kit.parent / "out")

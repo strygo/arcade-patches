@@ -149,11 +149,10 @@ def main():
         dead_key = darksoft.dead_key_profile(KIT["darksoft"])
     if "mister" in platforms and not (HERE / "core" / KIT["core"]).is_file():
         fail(f"this kit is incomplete: core/{KIT['core']} is missing")
-    # Each build's MRA and HBMAME definitions name its members' CRCs; the release stages them with it.
+    # Each build's MRA names its members' CRCs; the release stages it with the kit.
     for edition in editions:
         meta = KIT["editions"][edition]
-        for staged in ((f"mras/{meta['mra']}.mra",) if "mister" in platforms else ()) + \
-                      ((f"definitions/{meta['set']}.cpp.inc",) if "hbmame" in platforms else ()):
+        for staged in ((f"mras/{meta['mra']}.mra",) if "mister" in platforms else ()):
             if not (HERE / staged).is_file():
                 fail(f"this kit is incomplete: {staged} is missing")
     out = Path(args.out_dir)
@@ -178,8 +177,6 @@ def main():
                 files.update(fbneo_names.tree(meta['set'], members))
             if "hbmame" in platforms:
                 files[f"hbmame/{zip_name}"] = members
-                files[f"hbmame/definitions/{meta['set']}.cpp.inc"] = \
-                    (HERE / "definitions" / f"{meta['set']}.cpp.inc").read_bytes()
             if "mister" in platforms:
                 files[f"mister/games/hbmame/{zip_name}"] = members
                 folder = "/".join(["mister", *KIT["mra_root"], KIT["mra_dir"][edition]]).rstrip("/")

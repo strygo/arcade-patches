@@ -70,6 +70,10 @@ class KitRevisionTests(ReleaseInventoryTests):
                 release['plan']['fbneo_member_names'] = {'fbneo/demo.zip': {'game.03': 'legacy.03'}}
             elif additive == 'fbneo':
                 release['plan']['add_fbneo'] = {'mame/usa/stock.zip': 'fbneo/demo.zip'}
+            elif additive == 'definitions':
+                release['plan'].update(remove_definitions=True, remove=['hbmame/definitions/demo.cpp.inc'])
+            elif additive == 'definitions-undeclared':
+                release['plan']['remove_definitions'] = True
             else:
                 release['plan']['add_hbmame' if additive == 'hbmame' else 'add_darksoft'] = True
             write_json(candidate / 'release.json', release)
@@ -109,6 +113,20 @@ class KitRevisionTests(ReleaseInventoryTests):
         self.assertEqual('fbneo', item['revisions']['2']['member_names'])
         self.assertNotIn('additive_output', item['revisions']['2'])
         validate_inventory(self.root, inv)
+
+    def test_declared_definitions_removal_starts_a_new_game_contract(self):
+        ready, candidate = self.contract_candidate('definitions')
+        import_candidate(self.root, ready, candidate)
+        inv = load_inventory(self.root / 'data/releases.json')
+        item = inv['releases']['demo']['versions']['rc2']
+        self.assertEqual('definitions', item['revisions']['2']['removed_output'])
+        self.assertNotIn('additive_output', item['revisions']['2'])
+        validate_inventory(self.root, inv)
+
+    def test_definitions_flag_without_a_declared_removal_keeps_the_contract(self):
+        ready, candidate = self.contract_candidate('definitions-undeclared')
+        with self.assertRaisesRegex(ReleaseInventoryError, 'game contract differs'):
+            import_candidate(self.root, ready, candidate)
 
     def test_stale_baseline_or_qa_is_rejected(self):
         ready, candidate, old = self.revision_candidate()

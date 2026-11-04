@@ -308,9 +308,6 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
         else:
             lines += ["", f"HBMAME: use a build containing the {', '.join(hb_sets)} set definitions.",
                       "Upstream HBMAME support is pending."]
-        if patch.get('hbmame_driver'):
-            lines += ["The matching driver declarations are included in " +
-                      patch['hbmame_driver']['filename'] + "."]
         if hb.get('complete'):
             lines += [f"Put {', '.join(s + '.zip' for s in hb_sets)} and qsound.zip in HBMAME's roms/ folder;",
                       "it holds the complete set."]
@@ -692,15 +689,10 @@ def build_rom_downloads(patch: dict) -> dict:
         }, indent=2).encode())
         for name in ('darksoft.py', 'darksoft_profiles.json', 'darksoft_kits.json'):
             write(z, name, (ROOT / 'tools' / name).read_bytes())
+        # Steve, 2026-11-04: no kit we ship carries HBMAME/FBNeo definitions; they belong
+        # to the post-release emulator rebuild.
         if patch.get('hbmame_driver'):
-            driver = patch['hbmame_driver']
-            source = resolve(driver['source'])
-            filename = Path(driver['filename'])
-            if (not source.is_relative_to(ROOT / 'data/hbmame') or
-                    filename.is_absolute() or '..' in filename.parts or
-                    filename.parts[0] != 'hbmame' or filename.suffix != '.inc'):
-                raise ValueError('unsupported companion source location')
-            write(z, filename.as_posix(), source.read_bytes())
+            raise ValueError('emulator definitions never ship in a kit; remove hbmame_driver from the page')
         for e, ips_files in results:
             prefix = f"ips/{e['key']}/" if e["key"] else "ips/"
             for name, ips in sorted(ips_files.items()):

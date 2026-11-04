@@ -122,6 +122,30 @@ class ReleasePackagerTests(unittest.TestCase):
                     with zipfile.ZipFile(root / str(embedded) / 'mame/demo.zip') as z:
                         self.assertEqual(firmware, z.read('dl-1425.bin'))
 
+    def test_kits_never_carry_emulator_definitions(self):
+        # Steve, 2026-11-04: definitions belong to the post-release HBMAME/FBNeo rebuild.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            stock, patched = root / 'stock.zip', root / 'patched.zip'
+            for path, program in [(stock, b'stock'), (patched, b'fixed')]:
+                with zipfile.ZipFile(path, 'w') as z:
+                    z.writestr('game.03', program)
+            old = packager.DOCS, packager.SITE
+            self.addCleanup(lambda: (setattr(packager, 'DOCS', old[0]), setattr(packager, 'SITE', old[1])))
+            packager.DOCS = root / 'published'
+            packager.SITE = {'title': 'Fixture'}
+            page = {'slug': 'nodefs', 'title': 'No definitions', 'subtitle': 'Fixture',
+                    'version': 'rc1', 'date': '2026-11-04', 'game': 'Demo',
+                    'hardware': 'Fixture', 'set': 'demo', 'description': [], 'changes': [],
+                    'artifact': {'stock_zip': str(stock), 'patched_zip': str(patched)},
+                    'hbmame': {'setname': 'demorest', 'renames': {'game.03': 'game.03'}}}
+            packager.build_rom_downloads(page)
+            with zipfile.ZipFile(root / 'published/downloads/nodefs-rc1-ips.zip') as z:
+                self.assertEqual([n for n in z.namelist() if n.endswith(('.cpp', '.inc'))], [])
+            page['hbmame_driver'] = {'source': 'data/hbmame/demo.cpp.inc', 'filename': 'hbmame/demo.cpp.inc'}
+            with self.assertRaisesRegex(ValueError, 'never ship'):
+                packager.build_rom_downloads(page)
+
     def test_complete_hbmame_set_leaves_embedded_firmware_to_qsound(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

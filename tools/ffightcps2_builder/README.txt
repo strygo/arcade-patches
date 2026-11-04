@@ -58,7 +58,6 @@ This builds every set your discs allow and writes:
 
     out/mame/<edition>/sfa3ud.zip for stock MAME (english, usa, japan)
     out/hbmame/<set>.zip         for HBMAME
-    out/hbmame/definitions/      the sets' HBMAME definitions
     out/mister/                  laid out like the MiSTer SD card
     out/darksoft/games/          one game folder per build, for Darksoft
 
@@ -132,11 +131,9 @@ Sega CD arranged soundtrack and voiced playback require the MiSTer output.
 ON HBMAME
 ---------
 
-The sets need their definitions compiled into HBMAME. Add the ROM_START
-blocks and GAME lines from hbmame/definitions/ to
-src/hbmame/drivers/cps2mis.cpp, add the set names to src/hbmame/hbmame.lst,
-and build HBMAME. Start the games by set name. HBMAME plays the arcade music,
-and the cutscenes keep their captions.
+Use an HBMAME build that includes the Final Fight EX sets. Start the games
+by set name. HBMAME plays the arcade music, and the cutscenes keep their
+captions.
 
 
 ON DARKSOFT
