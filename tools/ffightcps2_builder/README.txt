@@ -86,20 +86,24 @@ Copy the contents of out/mister/ to the root of the MiSTer SD card:
     _Arcade/_Arcade Patches/_Enhanced Versions/         English restoration MRA
     _Arcade/_Arcade Patches/_Enhanced Versions/_USA/    USA MRA
     _Arcade/_Arcade Patches/_Enhanced Versions/_Japan/  Japan MRA
-    _Arcade/cores/jtcps2-cpsplus_20261006.rbf           the CPS+ core
+    _Arcade/cores/jtcps2-cpsplus_20261101.rbf           the CPS+ core
     games/hbmame/<set>.zip                              the sets
     games/CPS+/<pack>.zip                               the music packs
 
 These sets need the CPS+ core included here, not the standard jtCPS2 core,
-and 128 MB of SDRAM. MiSTer uses the newest dated CPS+ core it finds. If
-the QSound firmware was absent from your input, keep qsound.zip or
-qsound_hle.zip in games/mame.
+and 128 MB of SDRAM. MiSTer runs the newest dated jtcps2-cpsplus core on
+the card, so this core also runs your other CPS+ games. If the QSound
+firmware was absent from your input, keep qsound.zip or qsound_hle.zip in
+games/mame.
 
 The MiSTer builds play the Sega CD's arranged soundtrack and voice the
 cutscenes: the USA build with the US disc's voices, the Japan build with the
 Japanese disc's, and the English restoration with a new English voice track.
-The music packs are built from your discs. MUSIC on the test menu's EX page
-switches back to the arcade music.
+Time Attack plays the Sega CD's Time Attack music, and the pause menu holds
+the music until you continue. The music packs are built from your discs.
+MUSIC on the test menu's EX page switches back to the arcade music.
+
+The MiSTer builds start in Console mode (see IN THE GAME).
 
 
 ON STOCK MAME
@@ -148,7 +152,23 @@ card.
 IN THE GAME
 -----------
 
-The test menu's EX page turns the bonus stages on or off, switches CUT SCENES
+GAME MODE, the first row of the test menu's EX page, chooses CONSOLE or
+ARCADE. The MiSTer builds start in Console mode; the HBMAME, stock MAME and
+Darksoft builds start in Arcade mode, which plays as the arcade game does.
+
+In Console mode no coins are needed: press Start to play or to join. The
+title screen offers ARCADE, TIME ATTACK and OPTIONS (Up and Down choose,
+Start selects). OPTIONS sets DIFFICULTY, LIVES and EXTRA LIFE (Left and
+Right change a setting; Start or attack saves and returns). During play,
+Coin pauses the game: CONTINUE resumes and QUIT returns to the title.
+
+TIME ATTACK is the Sega CD's own mode: one fight in your character's arena
+from the Sega CD, against a clock of 99, with a point for every enemy you
+defeat. A second player can join on the select screen. RESULT shows your
+time and defeats beside the record, which is kept until the game is switched
+off. CONTINUE plays again from the select screen; EXIT returns to the title.
+
+The test menu's EX page also turns the bonus stages on or off, switches CUT SCENES
 between the Sega CD's and the arcade's own, and switches ARTWORK to Capcom
 Arcade Stadium's revised soda can and Uptown sign. REGULATION chooses
 Jessica's outfit on Haggar's TV in the opening.

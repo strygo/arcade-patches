@@ -1084,7 +1084,7 @@
       }
     },
     "final-fight-ex-cps2": {
-      "current": "rc2",
+      "current": "rc3",
       "versions": {
         "rc1": {
           "current_revision": 2,
@@ -1287,6 +1287,53 @@
               "kit": "7aecf3717de46fbb2d685ef6259595d114ad4d9d58b1182bae416c9409e3b980"
             },
             "revision": 2
+          }
+        },
+        "rc3": {
+          "current_revision": 1,
+          "date": "2026-11-03",
+          "files": {
+            "kit": {
+              "archive": "archive/d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd/final-fight-ex-cps2-rc3-kit.zip",
+              "name": "final-fight-ex-cps2-rc3-kit.zip",
+              "sha256": "d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd",
+              "size": 39361961
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc3-candidate.6",
+            "capcom_source_commit": "c1a42de1e873a9a4fb9c0f102fecafb038ffa449",
+            "ready_record_sha256": "0c77dc2df5fbe98078023fe4133ee8fdd7a62ff2eb1bd6102af5390b84c6f22b",
+            "release_sha256": "22ff8dc73d45b7f8b81eb132b7a09a93d54bdd1d4de5b821dc28fa19e33877cf",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-11-03",
+              "files": {
+                "kit": {
+                  "archive": "archive/d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd/final-fight-ex-cps2-rc3-kit.zip",
+                  "name": "final-fight-ex-cps2-rc3-kit.zip",
+                  "sha256": "d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd",
+                  "size": 39361961
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc3-candidate.6",
+                "capcom_source_commit": "c1a42de1e873a9a4fb9c0f102fecafb038ffa449",
+                "ready_record_sha256": "0c77dc2df5fbe98078023fe4133ee8fdd7a62ff2eb1bd6102af5390b84c6f22b",
+                "release_sha256": "22ff8dc73d45b7f8b81eb132b7a09a93d54bdd1d4de5b821dc28fa19e33877cf",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }

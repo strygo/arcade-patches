@@ -1,7 +1,7 @@
 CPS+ CPS-2 core — source and license
 ====================================
 
-jtcps2-cpsplus_20261006.rbf is a build of the CPS+ fork of Jose Tejada
+jtcps2-cpsplus_20261101.rbf is a build of the CPS+ fork of Jose Tejada
 (jotego)'s jtcores FPGA arcade cores, released under the same GPL-3.0
 license as upstream (licenses/GPL-3.0.txt, licenses/LICENSE.txt):
 
@@ -9,9 +9,9 @@ license as upstream (licenses/GPL-3.0.txt, licenses/LICENSE.txt):
     upstream:  https://github.com/jotego/jtcores
 
 Complete corresponding source for this binary:
-    https://github.com/strygo/jtcores/tree/9886018dac2c0de37474b9d924765db3aa75da09
-    built by https://github.com/strygo/jtcores/actions/runs/37508715830
-    SHA-256 23c1bd0a685dfe95d0d38a85e9b47f746d6294ae20b31284bc377ade2ba43bd6
+    https://github.com/strygo/jtcores/tree/296a113d7c1c9395bb1e65aa839bf57a899619c9
+    built by https://github.com/strygo/jtcores/actions/runs/41265040592
+    SHA-256 23b23a2a7a38b88d959a2cc3df5d970d3ccb5f16fda6ffc5eb491888244db397
 
 Modules compiled into it carry their own compatible licenses, included under
 licenses/: jtframe, fx68k (Jorge Cwik's 68000), jtdsp16 and jteeprom.

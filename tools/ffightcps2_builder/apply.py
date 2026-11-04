@@ -12,7 +12,6 @@ Only the builds whose disc you give are made.  Every member is
 checksum-verified against the known build.  See README.txt.
 """
 import argparse
-import fbneo_names
 import importlib
 import json
 import os
@@ -25,10 +24,10 @@ import xml.etree.ElementTree as ET
 import zlib
 from pathlib import Path
 
-from rom_sources import require_path, default_output, check_output, print_completion
-
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))         # the kit's own folder only: ffex_kit, packs and their modules
+import fbneo_names                     # noqa: E402  (beside this file)
+from rom_sources import require_path, default_output, check_output, print_completion  # noqa: E402
 from rom_sources import Resolver, RomError, QSOUND, search_paths, publish_tree  # noqa: E402
 
 KIT = json.loads((HERE / "kit.json").read_text())

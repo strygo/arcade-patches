@@ -11,9 +11,9 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/224d77a92abb0c258096acc447df9a2391a0444f49b9f59fa4e167ab6892a848-dstlk-restoration-native-kit.zip"
     },
     "final-fight-ex-cps2-kit": {
-      "sha256": "7e2d634e0d5e219f214aa2844dd39967ff2112b006f9d1cde4dde0db2d270375",
-      "size": 38608089,
-      "url": "https://arcadepatches.com/catalog/v1/artifacts/7e2d634e0d5e219f214aa2844dd39967ff2112b006f9d1cde4dde0db2d270375-final-fight-ex-cps2-native-kit.zip"
+      "sha256": "d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd",
+      "size": 39361961,
+      "url": "https://arcadepatches.com/downloads/archive/d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd/final-fight-ex-cps2-rc3-kit.zip"
     },
     "final-fight-ex-kit": {
       "sha256": "9d9ee7d6649f20a3d7aaa3ee854bcad55b819d5cf1efe39f6f3407d5798dca6f",
@@ -187,7 +187,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
     }
   },
-  "generation": 43,
+  "generation": 44,
   "not_integrated": [],
   "projects": {
     "cps-plus": {
@@ -203,7 +203,7 @@
       "title": "Final Fight EX"
     },
     "final-fight-ex-cps2": {
-      "current": "final-fight-ex-cps2-rc2-r4",
+      "current": "final-fight-ex-cps2-rc3-r1",
       "title": "Final Fight EX (CPS-2)"
     },
     "mshvsf-ex": {
@@ -322,16 +322,16 @@
       "kit": "dstlk-restoration-kit",
       "kit_revision": 7
     },
-    "final-fight-ex-cps2-rc2-r4": {
+    "final-fight-ex-cps2-rc3-r1": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b",
+        "sha256": "30894aebc8f389d6fce7114e9e6555b685ac29aabbdcc64079c11cf5681940f2",
         "size": 514282,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b.json"
+        "url": "https://arcadepatches.com/catalog/v1/definitions/30894aebc8f389d6fce7114e9e6555b685ac29aabbdcc64079c11cf5681940f2.json"
       },
-      "game_version": "rc2",
+      "game_version": "rc3",
       "kit": "final-fight-ex-cps2-kit",
-      "kit_revision": 4
+      "kit_revision": 1
     },
     "final-fight-ex-rc4-r2": {
       "definition": {

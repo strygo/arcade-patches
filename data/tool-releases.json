@@ -2407,17 +2407,6 @@
         "ready_record_sha256": "0c6e9a36d0b715f8e1ef3ac592b8263d725b5e92e501377fc9c180bdf0a29569",
         "targets": 4
       },
-      "final-fight-ex-cps2": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "75c1661cebc1747421f5eccc6c6ba772ddea90832bf47698a49ab320f437b2a2",
-        "game_version": "rc2",
-        "isolated_metadata": "passed",
-        "kit_revision": 4,
-        "kit_sha256": "7e2d634e0d5e219f214aa2844dd39967ff2112b006f9d1cde4dde0db2d270375",
-        "native_outputs_sha256": "9d26e794c12ab81f78d1519218003640870a1cf6933d5f27410f6ac36824fa94",
-        "ready_record_sha256": "1f00c655eee4b0702e383dbdcfc9e43bb116898e5711a4d3c7aadfdedfb19f4d",
-        "targets": 15
-      },
       "mshvsf-restoration": {
         "accepted_export_contracts": "unchanged",
         "baseline_kit_sha256": "ff35b59d5982bd3fbacbec0a2bb77231ab9b7958a79c984fa624e71adeb43c8e",
@@ -2884,6 +2873,10 @@
       "sha256": "25e27020c4f9a899064dd4bcc114701dec102351ecfb6cd493c0275a09577d04",
       "size": 105262
     },
+    "catalog/v1/definitions/30894aebc8f389d6fce7114e9e6555b685ac29aabbdcc64079c11cf5681940f2.json": {
+      "sha256": "30894aebc8f389d6fce7114e9e6555b685ac29aabbdcc64079c11cf5681940f2",
+      "size": 514282
+    },
     "catalog/v1/definitions/386fa1f4b644a9ff3aaebee40c59fc01c6fa3d076f7afc17f96e72a01dd61a09.json": {
       "sha256": "386fa1f4b644a9ff3aaebee40c59fc01c6fa3d076f7afc17f96e72a01dd61a09",
       "size": 74047
@@ -2916,10 +2909,6 @@
       "sha256": "674799fa19bbbd0a3a43a0ffd63a8777acae0c7dca82530b882eb85eb2098d92",
       "size": 45232
     },
-    "catalog/v1/definitions/838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91.json": {
-      "sha256": "838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91",
-      "size": 60224
-    },
     "catalog/v1/definitions/6f7a27b5e4a7bc15b135a01932e75a878cba768f70459c48dff07a4c88f95dce.json": {
       "sha256": "6f7a27b5e4a7bc15b135a01932e75a878cba768f70459c48dff07a4c88f95dce",
       "size": 77696
@@ -2927,6 +2916,10 @@
     "catalog/v1/definitions/7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b.json": {
       "sha256": "7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b",
       "size": 514282
+    },
+    "catalog/v1/definitions/838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91.json": {
+      "sha256": "838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91",
+      "size": 60224
     },
     "catalog/v1/definitions/8692fc6babdc65cb9c1f01b68a1d3c805565322be2537859aec36726bd889494.json": {
       "sha256": "8692fc6babdc65cb9c1f01b68a1d3c805565322be2537859aec36726bd889494",
@@ -2989,20 +2982,24 @@
       "size": 127219
     },
     "catalog/v1/index.json": {
-      "sha256": "5e6eb38360951863dd0e3eb1eb287f134df17d0c9d681e92360817a6773e4fc8",
-      "size": 26513
-    },
-    "downloads/archive/188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed/sfa3-restoration-rc5-ips.zip": {
-      "sha256": "188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed",
-      "size": 563986
+      "sha256": "0d2fbf4e4eba573a8398d6eb4ee99e0ffe4fc633ea556ec2865482d20a7bd5d8",
+      "size": 26507
     },
     "downloads/archive/0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5/mshvsf-ex-rc5-ips.zip": {
       "sha256": "0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5",
       "size": 866446
     },
+    "downloads/archive/188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed/sfa3-restoration-rc5-ips.zip": {
+      "sha256": "188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed",
+      "size": 563986
+    },
     "downloads/archive/c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09/ssf2-ex-rc13-ips.zip": {
       "sha256": "c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09",
       "size": 1416374
+    },
+    "downloads/archive/d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd/final-fight-ex-cps2-rc3-kit.zip": {
+      "sha256": "d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd",
+      "size": 39361961
     },
     "downloads/archive/f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e/sfa-ex-rc3-ips.zip": {
       "sha256": "f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e",
@@ -3013,7 +3010,7 @@
       "size": 43091
     }
   },
-  "generation": 43,
+  "generation": 44,
   "launcher": "tools/downloads/archive/5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1/ArcadePatches-0.1.zip",
   "native_updates": [
     {
@@ -3047,6 +3044,14 @@
       "project": "sfa3-restoration",
       "ready_sha256": "f4584088bc67778bc7be32ccf975baeb2cfb577db90add3552190442330d9937",
       "release_sha256": "189bd3c429eada977a2be7b1bae8e87d258b55c79397a40a8c01f31322aad588"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 1,
+      "kit_sha256": "d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd",
+      "project": "final-fight-ex-cps2",
+      "ready_sha256": "0c77dc2df5fbe98078023fe4133ee8fdd7a62ff2eb1bd6102af5390b84c6f22b",
+      "release_sha256": "22ff8dc73d45b7f8b81eb132b7a09a93d54bdd1d4de5b821dc28fa19e33877cf"
     }
   ],
   "package_receipt": {
