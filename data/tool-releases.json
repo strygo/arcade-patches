@@ -2594,25 +2594,6 @@
         "ready_record_sha256": "0cf9300ff2773c22521dbf681b9eac86d4bccd79b1141439704baa36a0d17208",
         "targets": 1
       },
-      "ssf2-ex": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "70560e32d19444b552bd97144471c8614a2f50d8974b28c87d147a33959e4ed6",
-        "game_version": "rc12",
-        "isolated_metadata": "passed",
-        "kit_revision": 5,
-        "kit_sha256": "38728bd9da4cc0d32e6d29c105f2b9865545253deb18d859d58e236bc703cc78",
-        "metadata_crc_enrichment": {
-          "added": 25,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "70560e32d19444b552bd97144471c8614a2f50d8974b28c87d147a33959e4ed6"
-        },
-        "native_outputs_sha256": "a1905c7e6e7c4660bf68b4e743b4e745c012937748d2ac99796ef9d49d578605",
-        "ready_record_sha256": "84e45cb03c1b08cacfb97e66263659185e64542cb6fadd1c7284b6cd21e9de48",
-        "targets": 10
-      },
       "ssf2t-gmc": {
         "accepted_export_contracts": "unchanged",
         "baseline_kit_sha256": "02927da8710e8c996dbb841e405b6d0c4bf76d8e2d7c3a2a090ece5b4abc46fd",
@@ -2922,6 +2903,10 @@
       "sha256": "25e27020c4f9a899064dd4bcc114701dec102351ecfb6cd493c0275a09577d04",
       "size": 105262
     },
+    "catalog/v1/definitions/386fa1f4b644a9ff3aaebee40c59fc01c6fa3d076f7afc17f96e72a01dd61a09.json": {
+      "sha256": "386fa1f4b644a9ff3aaebee40c59fc01c6fa3d076f7afc17f96e72a01dd61a09",
+      "size": 74047
+    },
     "catalog/v1/definitions/45e56b881a049cb47ecff2a19149a7768cc9effb09e0dc620561e99fc950429c.json": {
       "sha256": "45e56b881a049cb47ecff2a19149a7768cc9effb09e0dc620561e99fc950429c",
       "size": 58347
@@ -2946,6 +2931,10 @@
       "sha256": "674799fa19bbbd0a3a43a0ffd63a8777acae0c7dca82530b882eb85eb2098d92",
       "size": 45232
     },
+    "catalog/v1/definitions/838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91.json": {
+      "sha256": "838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91",
+      "size": 60224
+    },
     "catalog/v1/definitions/6f7a27b5e4a7bc15b135a01932e75a878cba768f70459c48dff07a4c88f95dce.json": {
       "sha256": "6f7a27b5e4a7bc15b135a01932e75a878cba768f70459c48dff07a4c88f95dce",
       "size": 77696
@@ -2953,10 +2942,6 @@
     "catalog/v1/definitions/7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b.json": {
       "sha256": "7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b",
       "size": 514282
-    },
-    "catalog/v1/definitions/838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91.json": {
-      "sha256": "838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91",
-      "size": 60224
     },
     "catalog/v1/definitions/8692fc6babdc65cb9c1f01b68a1d3c805565322be2537859aec36726bd889494.json": {
       "sha256": "8692fc6babdc65cb9c1f01b68a1d3c805565322be2537859aec36726bd889494",
@@ -3019,12 +3004,16 @@
       "size": 127219
     },
     "catalog/v1/index.json": {
-      "sha256": "7b7d03abbac0c460e7ed44c3c0980db6169fbe6924da1df05c14c63c7800750d",
-      "size": 26524
+      "sha256": "0c3482b68f2c6f0fad1ed41e2cd919dc5f799b00ddc917c130719451abbdfd0f",
+      "size": 26519
     },
     "downloads/archive/0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5/mshvsf-ex-rc5-ips.zip": {
       "sha256": "0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5",
       "size": 866446
+    },
+    "downloads/archive/c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09/ssf2-ex-rc13-ips.zip": {
+      "sha256": "c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09",
+      "size": 1416374
     },
     "downloads/archive/f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e/sfa-ex-rc3-ips.zip": {
       "sha256": "f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e",
@@ -3035,7 +3024,7 @@
       "size": 43091
     }
   },
-  "generation": 41,
+  "generation": 42,
   "launcher": "tools/downloads/archive/5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1/ArcadePatches-0.1.zip",
   "native_updates": [
     {
@@ -3053,6 +3042,14 @@
       "project": "mshvsf-ex",
       "ready_sha256": "0c607f185b5645e4d41eb0c770fb7b2bb2b6f5dec70c6a4df1404e779fcabe79",
       "release_sha256": "1d0f6c71b38cf48511b3e608bff9338187503a43fa74faa6f3315bf670773a7b"
+    },
+    {
+      "game_version": "rc13",
+      "kit_revision": 1,
+      "kit_sha256": "c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09",
+      "project": "ssf2-ex",
+      "ready_sha256": "e3d3384aaab96d789697f2ca86fc15669cf261fd6ac4111df4a6670afd5408db",
+      "release_sha256": "d8e90eafb88bb6ca78a19ba68147a720ab0a0b019f26588ba80dda47b3098474"
     }
   ],
   "package_receipt": {

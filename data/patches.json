@@ -2481,8 +2481,8 @@
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc12",
-      "date": "2026-10-30",
+      "version": "rc13",
+      "date": "2026-11-03",
       "game": "Super Street Fighter II X: Grand Master Challenge (Japan 940311)",
       "set": "ssf2xj",
       "hardware": "Capcom CPS-2",
@@ -2510,8 +2510,8 @@
         "Console mode with Arcade, Versus, Training and Options on the title screen; GAME MODE in EX CONFIGURATION selects Console or Arcade",
         "Versus against another player or a computer, with handicaps, stage selection, win counts and match results",
         "Training with computer actions, guard and Super gauge settings, delayed health recovery, Restart and Change Character",
-        "Option Mode for difficulty, game speed, round count and stereo or mono sound; Coin pauses play in Console mode",
-        "EX CONFIGURATION in the operator menu: Console or Arcade mode; Japanese or international names; ORIGINAL, 30TH ANNIVERSARY or ULTRA SF2 artwork; and BONUS STAGE on or off. 30TH ANNIVERSARY, the default, uses the 30th Anniversary Collection's Hong Kong flag, Chun-Li's storefront signs and Guile's stage, with the red-winged runway emblem. Settings are saved between sessions. On EXIT, press 1P Start to save and return",
+        "Option Mode for difficulty, time limit on or off, game speed (including NORMAL, slower than Turbo 1), round count and stereo or mono sound; Coin pauses play in Console mode",
+        "EX CONFIGURATION in the operator menu: Console or Arcade mode; Japanese or international names; ORIGINAL, 30TH ANNIVERSARY or ULTRA SF2 artwork; BONUS STAGE on or off; and TIME LIMIT on or off. 30TH ANNIVERSARY, the default, uses the 30th Anniversary Collection's Hong Kong flag, Chun-Li's storefront signs and Guile's stage, with the red-winged runway emblem. Settings are saved between sessions. On EXIT, press 1P Start to save and return",
         "ULTRA SF2 artwork follows Ultra Street Fighter II's stages: its runway emblem and a gold can on Guile's stage, Chun-Li's storefront without its signs, a red sun on E. Honda's bathhouse mural and a plain floor on Zangief's stage, with the 30th Anniversary Hong Kong flag and RUSSIA for Zangief's country",
         "Tournament Battle: with the link adapter, eight players and three matches across linked cabinets, with the Akuma and random-select cells on its select screen; without it, the game plays normally",
         "A new title screen with an EX mark",
@@ -2644,7 +2644,7 @@
                 "sfx.25m": "sfxuc.25m",
                 "sfx.27m": "sfxuc.27m",
                 "sfx.01": "sfxuc.01",
-                "sfx.02": "sfx.02",
+                "sfx.02": "sfxuc.02",
                 "sfx.11m": "sfx.11m",
                 "sfx.12m": "sfx.12m",
                 "ssf2xj.key": "ssf2xj.key"
@@ -2673,7 +2673,8 @@
                 "sfxj.07a": "sfxj.07a",
                 "sfxj.08": "sfxj.08",
                 "sfx.09": "sfx.09",
-                "sfx.01": "sfx.01"
+                "sfx.01": "sfx.01",
+                "sfx.02": "sfx.02"
               }
             }
           },
@@ -2712,7 +2713,7 @@
                 "sfx.25m": "sfxuc.25m",
                 "sfx.27m": "sfxuc.27m",
                 "sfx.01": "sfxuc.01",
-                "sfx.02": "sfx.02",
+                "sfx.02": "sfxuc.02",
                 "sfx.11m": "sfx.11m",
                 "sfx.12m": "sfx.12m",
                 "ssf2xj.key": "ssf2xj.key"
@@ -2741,7 +2742,8 @@
                 "sfxj.07a": "sfxj.07a",
                 "sfxj.08": "sfxj.08",
                 "sfx.09": "sfx.09",
-                "sfx.01": "sfx.01"
+                "sfx.01": "sfx.01",
+                "sfx.02": "sfx.02"
               }
             }
           }
@@ -2824,6 +2826,25 @@
         "Fan work, unaffiliated with Capcom."
       ],
       "release_history": [
+        {
+          "version": "rc13",
+          "date": "2026-11-03",
+          "items": [
+            "TIME LIMIT in Option Mode and EX CONFIGURATION. With it off, the clock shows \u221e and rounds end only by KO.",
+            "A NORMAL game speed, slower than Turbo 1, in Option Mode, Training and the operator menu.",
+            "Two-player Versus has no countdown on the select screen.",
+            "Versus and Training play the Arcade select theme, and the theme loops its main section instead of restarting.",
+            "LP confirms on the Console title screen as well as Start.",
+            "The first fighter preview shows the EX colors straight away, and the attract-mode previews follow the color setting.",
+            "Player 1\u2019s cursor appears in Training when SPEED SELECT is on.",
+            "Start works again after leaving the operator menu.",
+            "M. Bison\u2019s defeated portrait in Versus uses his own colors.",
+            "Flags no longer cover Fei Long\u2019s and Zangief\u2019s select portraits with the 30th Anniversary and Ultra artwork.",
+            "Versus skips the arcade score tally after a KO.",
+            "Fast music plays at low health in one-round matches.",
+            "Background tiles no longer blink in on Blanka\u2019s and Boxer\u2019s stages."
+          ]
+        },
         {
           "version": "rc12",
           "date": "2026-10-30",
