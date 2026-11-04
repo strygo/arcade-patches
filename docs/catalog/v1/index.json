@@ -21,9 +21,9 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/9d9ee7d6649f20a3d7aaa3ee854bcad55b819d5cf1efe39f6f3407d5798dca6f-final-fight-ex-native-kit.zip"
     },
     "mshvsf-ex-kit": {
-      "sha256": "217020a805f3faaf81363b685820f6ab670a15b4d837bcc9892741e23807c300",
-      "size": 523644,
-      "url": "https://arcadepatches.com/catalog/v1/artifacts/217020a805f3faaf81363b685820f6ab670a15b4d837bcc9892741e23807c300-mshvsf-ex-native-kit.zip"
+      "sha256": "0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5",
+      "size": 866446,
+      "url": "https://arcadepatches.com/downloads/archive/0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5/mshvsf-ex-rc5-ips.zip"
     },
     "mshvsf-restoration-kit": {
       "sha256": "ff8ca8d6632cde077122d4a5f89a52b0d924d8de4369fe382b9862a1cba7bb41",
@@ -187,7 +187,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
     }
   },
-  "generation": 40,
+  "generation": 41,
   "not_integrated": [],
   "projects": {
     "cps-plus": {
@@ -207,7 +207,7 @@
       "title": "Final Fight EX (CPS-2)"
     },
     "mshvsf-ex": {
-      "current": "mshvsf-ex-rc4-r6",
+      "current": "mshvsf-ex-rc5-r1",
       "title": "Marvel Super Heroes vs. Street Fighter EX"
     },
     "mshvsf-restoration": {
@@ -344,16 +344,16 @@
       "kit": "final-fight-ex-kit",
       "kit_revision": 2
     },
-    "mshvsf-ex-rc4-r6": {
+    "mshvsf-ex-rc5-r1": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "560b9bcdd79d606ca1a0a9abe800d2b115a7c27daa58257d246076863cd47d5b",
-        "size": 60182,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/560b9bcdd79d606ca1a0a9abe800d2b115a7c27daa58257d246076863cd47d5b.json"
+        "sha256": "838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91",
+        "size": 60224,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/838772c9aca4ffd68c677e4b7732ea58e441219086d1ff3d1fb204ad5fc7af91.json"
       },
-      "game_version": "rc4",
+      "game_version": "rc5",
       "kit": "mshvsf-ex-kit",
-      "kit_revision": 6
+      "kit_revision": 1
     },
     "mshvsf-restoration-rc1-r8": {
       "definition": {
