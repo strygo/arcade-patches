@@ -26,6 +26,14 @@ class IndexTests(unittest.TestCase):
         self.assertNotIn('targets', pointer);self.assertNotIn('prerequisites', pointer)
         self.assertEqual(ci.expand(index, lambda url: files[url.removeprefix(ci.ORIGIN)]), self.model)
 
+    def test_launcher_notice_survives_expand_and_publish(self):
+        # Game imports re-publish the whole index; the newest-launcher field must ride along.
+        self.model['launcher'] = {'version': '0.1.1', 'url': 'https://arcadepatches.com/arcadepatches/'}
+        index, files = ci.publish(self.model, lambda url: self.kit)
+        self.assertEqual(index['launcher'], self.model['launcher'])
+        again, _ = ci.publish(ci.expand(index, lambda url: files[url.removeprefix(ci.ORIGIN)]), lambda url: self.kit)
+        self.assertEqual(again['launcher'], self.model['launcher'])
+
     def test_native_contract_drift_rejected(self):
         self.model['releases']['game-r1']['targets']['mame']['outputs'] = {}
         with self.assertRaisesRegex(ValueError, 'qualified release'):ci.publish(self.model, lambda url: self.kit)

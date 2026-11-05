@@ -1,6 +1,7 @@
 """Import portable tools and their complete, hash-pinned download catalogs."""
 import hashlib
 import json
+import re
 from pathlib import Path, PurePosixPath
 import shutil
 from urllib.parse import urlsplit
@@ -8,6 +9,18 @@ import zipfile
 import catalog_index
 
 ORIGIN = 'https://arcadepatches.com/'
+LAUNCHER_PAGE = ORIGIN + 'arcadepatches/'
+
+
+def version_tuple(value):
+    require(isinstance(value, str) and re.fullmatch(r'[0-9]+\.[0-9]+\.[0-9]+', value), 'Launcher versions use major.minor.patch')
+    return tuple(int(part) for part in value.split('.'))
+
+
+def display_version(version):
+    """The page and ZIP name of a launcher version: a .0 patch keeps its short name (0.1.0 is 0.1)."""
+    version_tuple(version)
+    return version.removesuffix('.0')
 
 
 def digest(path):
@@ -44,7 +57,8 @@ def check_file(path, spec):
 def validate(root, entry):
     require(not (root / 'data/collection-import-transaction.json').exists(),
             'Unfinished collection import; run import_release.py --recover')
-    require(entry['slug'] == 'arcadepatches' and entry['version'] == '0.1', 'Unknown tool release')
+    require(entry['slug'] == 'arcadepatches' and isinstance(entry.get('version'), str)
+            and re.fullmatch(r'[0-9]+\.[0-9]+(\.[0-9]+)?', entry['version']), 'Unknown tool release')
     for field in ('title', 'summary', 'date'):
         require(isinstance(entry.get(field), str) and entry[field], f'Tool page missing {field}')
     for field in ('requirements', 'features', 'steps'):
@@ -62,8 +76,12 @@ def validate(root, entry):
     docs = root / 'docs'
     for name, spec in record['files'].items():
         check_file(local_path(docs, name), spec)
+    require(display_version(record['package_receipt']['version']) == entry['version'], 'Launcher package version differs')
     index = json.loads((docs / 'catalog/v1/index.json').read_text())
     require(index['generation'] == record['generation'], 'Catalog generation differs')
+    # Launchers from 0.1.1 announce a newer download; the field names the published one.
+    require('launcher' not in index or index['launcher'] == {'version': record['package_receipt']['version'], 'url': LAUNCHER_PAGE},
+            'Catalog launcher notice differs from the published launcher')
     require(all(r.get('definition', {}).get('kind') == 'native-kit-v1' for r in index['releases'].values()),
             'Tool catalog must contain native kit definitions only')
     for artifact in [*index['artifacts'].values(),
@@ -77,20 +95,70 @@ def validate(root, entry):
     return record
 
 
-def import_tool(root, archive, receipt_path, catalog_dir, qualification_path):
-    """Preflight everything before adding immutable blobs and moving the catalog pointer."""
-    entry = json.loads((root / 'data/tools.json').read_text())
+def checked_package(archive, receipt_path, version=None):
+    """The passed package receipt and exactly the ZIP it describes."""
     receipt = json.loads(receipt_path.read_text())
     require(receipt.get('status') == 'passed' and receipt.get('standalone_doctor') == 'passed'
-            and receipt.get('version') == '0.1.0', 'Launcher package receipt is not passed 0.1')
+            and (version is None or receipt.get('version') == version), 'Launcher package receipt is not passed ' + str(version))
     check_file(archive, receipt)
-    require(archive.name == receipt['archive'] == 'ArcadePatches-0.1.zip', 'Unexpected launcher filename')
+    require(archive.name == receipt['archive'] == f"ArcadePatches-{display_version(receipt['version'])}.zip",
+            'Unexpected launcher filename')
     with zipfile.ZipFile(archive) as source:
         require(set(source.namelist()) == set(receipt['files']) == {'arcadepatches.py', 'QUICKSTART.txt'}
                 and len(source.namelist()) == 2, 'Unexpected launcher ZIP members')
         for name, spec in receipt['files'].items():
             data = source.read(name)
             require({'size': len(data), 'sha256': hashlib.sha256(data).hexdigest()} == spec, 'Launcher contents differ')
+    return receipt
+
+
+def write_bytes_once(target, source):
+    if target.exists():
+        check_file(target, contract(source))
+    else:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
+
+
+def import_launcher(root, archive, receipt_path, date):
+    """Publish a newer launcher over the current catalog: its download, the catalog notice and the tool page version."""
+    require(not (root / 'data/collection-import-transaction.json').exists(),
+            'Unfinished collection import; run import_release.py --recover')
+    require(isinstance(date, str) and re.fullmatch(r'[0-9]{4}-[0-9]{2}-[0-9]{2}', date), 'Release date uses YYYY-MM-DD')
+    entry = json.loads((root / 'data/tools.json').read_text())
+    previous = json.loads((root / 'data/tool-releases.json').read_text())
+    validate(root, entry)
+    receipt = checked_package(archive, receipt_path)
+    old = previous['package_receipt']
+    require(version_tuple(receipt['version']) > version_tuple(old['version']), 'Launcher version must increase')
+    require(set(old['features']) <= set(receipt['features']), 'A launcher update cannot drop catalog features')
+    launcher = 'tools/downloads/archive/' + receipt['sha256'] + '/' + archive.name
+    index_path = root / 'docs/catalog/v1/index.json'
+    index = json.loads(index_path.read_text())
+    index['launcher'] = {'version': receipt['version'], 'url': LAUNCHER_PAGE}
+    index['generation'] += 1  # Launchers reject a changed catalog without a new generation.
+    payload = (json.dumps(index, indent=2, sort_keys=True) + '\n').encode()
+    # Every check is done; publish the immutable blob before moving the pointers.
+    write_bytes_once(local_path(root / 'docs', launcher), archive)
+    record = dict(previous, version=display_version(receipt['version']), generation=index['generation'],
+                  launcher=launcher, package_receipt=receipt)
+    record['files'] = dict(previous['files'])
+    record['files'][launcher] = contract(archive)
+    record['files']['catalog/v1/index.json'] = {'size': len(payload), 'sha256': hashlib.sha256(payload).hexdigest()}
+    index_path.with_suffix('.json.tmp').write_bytes(payload)
+    index_path.with_suffix('.json.tmp').replace(index_path)
+    (root / 'data/tool-releases.json').write_text(json.dumps(record, indent=2, sort_keys=True) + '\n')
+    entry.update(version=record['version'], date=date)
+    (root / 'data/tools.json').write_text(json.dumps(entry, indent=2) + '\n')
+    validate(root, entry)
+    return record
+
+
+def import_tool(root, archive, receipt_path, catalog_dir, qualification_path):
+    """Preflight everything before adding immutable blobs and moving the catalog pointer."""
+    entry = json.loads((root / 'data/tools.json').read_text())
+    receipt = checked_package(archive, receipt_path)
+    require(display_version(receipt['version']) == entry['version'], 'Launcher package is not the tool page version')
     catalog = json.loads((catalog_dir / 'index.json').read_text())
     require(catalog['schema'] == 1 and catalog['projects'] and catalog['releases'], 'Empty or unknown catalog')
     qualification = json.loads(qualification_path.read_text())
@@ -134,6 +202,8 @@ def import_tool(root, archive, receipt_path, catalog_dir, qualification_path):
         source = copies.get(name) or local_path(root / 'docs', name)
         return source.read_bytes()
     catalog, sidecars = catalog_index.publish(catalog, read_published)
+    if version_tuple(receipt['version']) > (0, 1, 0):
+        catalog['launcher'] = {'version': receipt['version'], 'url': LAUNCHER_PAGE}
     for relative, raw in sidecars.items():
         source = local_path(catalog_dir, relative)
         source.parent.mkdir(parents=True, exist_ok=True)

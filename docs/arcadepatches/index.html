@@ -47,11 +47,11 @@
 </header>
 <main>
 <a class="back" href="../tools/">← Tools</a>
-<h1>ArcadePatches</h1><p class="subtitle">Collection builder · v0.1</p>
+<h1>ArcadePatches</h1><p class="subtitle">Collection builder · v0.1.1</p>
 <p>Build and update your Arcade Patches collection from media you own. Choose your games, platforms and regions, then copy the completed folders to your setup.</p>
 <div class="download"><div class="kind">Python launcher · Windows, macOS and Linux</div>
-<div class="file"><a href="../tools/downloads/archive/5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1/ArcadePatches-0.1.zip">Download ArcadePatches 0.1</a> (42 KB)</div>
-<div class="hash">SHA-256: 5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1</div></div>
+<div class="file"><a href="../tools/downloads/archive/5f3be6f6034b4dd735b96ec4caf0989dd8275b25649c78a9867f045c08877b81/ArcadePatches-0.1.1.zip">Download ArcadePatches 0.1.1</a> (43 KB)</div>
+<div class="hash">SHA-256: 5f3be6f6034b4dd735b96ec4caf0989dd8275b25649c78a9867f045c08877b81</div></div>
 <p>Free download. Python is required. No ROMs or game data are included.</p>
 <h2>What it does</h2><ul><li>Point it at your ROM and media folders. Loose files, ZIPs and 7z archives are identified by content, without renaming them.</li><li>Choose individual games, platforms and regions, or keep everything selected to include future catalog additions.</li><li>Check requirements using archive details without unpacking ROMs. Source contents are verified when building, and ready games can update while others wait for missing media.</li><li>Required patches, helpers and Python packages are downloaded and prepared privately when needed.</li><li>Run it again to pick up catalog updates. Completed output is grouped by platform, ready to copy.</li></ul>
 <div class="tool-shots"><h2>Inside the terminal</h2>
@@ -72,7 +72,7 @@ python3.12 arcadepatches.py
 python3 arcadepatches.py</code></pre>
 <p>The included QUICKSTART.txt covers command-line filters, offline updates, cache limits and recovery.</p>
 <h2>Updates and output</h2>
-<p>At startup, the launcher checks for new games, versions and changed requirements without scanning your ROM folders. Choose Build (shown as Update after your first completed build) to check your media and build the ready games. Keeping “all” selected includes future matching games, platforms and regions. It does not run in the background.</p>
+<p>At startup, the launcher checks for new games, versions and changed requirements without scanning your ROM folders. Choose Build (shown as Update after your first completed build) to check your media and build the ready games. Keeping “all” selected includes future matching games, platforms and regions. A tooling update rebuilds a game only when its game files change. When a newer ArcadePatches is available, the launcher names it and links to this page. It does not run in the background.</p>
 <p>Copying to MiSTer, HBMAME or another destination is manual. Some soundtrack exports are overlays that need the named game files already installed; follow INSTALL.txt. Changing a selection keeps existing exports.</p>
 <p>Prefer to build one game directly? Each game's page still has its standalone download and instructions.</p>
 </main>

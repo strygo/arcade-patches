@@ -167,6 +167,18 @@ python3 tools/import_tool.py --archive <ArcadePatches-0.1.zip> \
 python3 tools/build.py
 ```
 
+A newer launcher alone (no catalog change) uses the launcher-only import. It
+checks the package receipt, requires a higher version that keeps every catalog
+feature, publishes the ZIP under its own hash, sets the tool page's version and
+date, and adds the catalog's `launcher` field with a new generation. Launchers
+from 0.1.1 on read that field and name the newer download; game imports keep it.
+
+```sh
+python3 tools/import_tool.py --launcher-only --date <YYYY-MM-DD> \
+  --archive <ArcadePatches-X.Y.Z.zip> --receipt <package-receipt.json>
+python3 tools/build.py --render-only arcadepatches
+```
+
 The importer verifies the ZIP receipt and catalog qualification, preflights all
 dependency hashes, and reuses existing game downloads by hash. New helpers,
 adapters and wheels go under `docs/catalog/v1/artifacts/`. The launcher ZIP goes

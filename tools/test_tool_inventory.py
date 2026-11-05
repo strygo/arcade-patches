@@ -5,7 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 import zipfile
-from tool_inventory import contract, import_tool, local_path, validate
+from tool_inventory import contract, import_launcher, import_tool, local_path, validate
 from catalog_index import native_release
 
 
@@ -108,6 +108,65 @@ class ToolImportTests(unittest.TestCase):
         self.assertNotEqual(first['launcher'], second['launcher'])
         self.assertEqual(old_path.read_bytes(), old_bytes)
         self.assertEqual((self.docs / second['launcher']).read_bytes(), self.archive.read_bytes())
+
+    def package(self, version, text='print("next launcher")\n', features=None):
+        name = 'ArcadePatches-' + version.removesuffix('.0') + '.zip'
+        archive = self.root / 'next' / name
+        archive.parent.mkdir(exist_ok=True)
+        with zipfile.ZipFile(archive, 'w') as out:
+            out.writestr('arcadepatches.py', text)
+            out.writestr('QUICKSTART.txt', 'Instructions ' + version + '\n')
+        with zipfile.ZipFile(archive) as source:
+            files = {n: {'size': len(source.read(n)), 'sha256': hashlib.sha256(source.read(n)).hexdigest()} for n in source.namelist()}
+        receipt = self.root / 'next' / (version + '.json')
+        receipt.write_text(json.dumps(dict(contract(archive), status='passed', version=version, standalone_doctor='passed',
+                                           archive=name, files=files, features=features or ['native-kit-v1'])))
+        return archive, receipt
+
+    def test_launcher_only_import_keeps_catalog_and_announces_the_new_version(self):
+        receipt = json.loads((self.root / 'receipt.json').read_text())
+        receipt['features'] = ['native-kit-v1'];self.write('receipt.json', receipt)
+        first = self.run_import()
+        before = json.loads((self.docs / 'catalog/v1/index.json').read_text())
+        old_launcher = (self.docs / first['launcher']).read_bytes()
+        archive, receipt_path = self.package('0.1.1')
+        record = import_launcher(self.root, archive, receipt_path, '2026-11-04')
+        index = json.loads((self.docs / 'catalog/v1/index.json').read_text())
+        self.assertEqual(index['launcher'], {'version': '0.1.1', 'url': 'https://arcadepatches.com/arcadepatches/'})
+        self.assertEqual(index['generation'], before['generation'] + 1)
+        self.assertEqual({k: v for k, v in index.items() if k not in ('launcher', 'generation')},
+                         {k: v for k, v in before.items() if k != 'generation'})
+        entry = json.loads((self.root / 'data/tools.json').read_text())
+        self.assertEqual((entry['version'], entry['date']), ('0.1.1', '2026-11-04'))
+        self.assertEqual(record['launcher'], 'tools/downloads/archive/' + record['package_receipt']['sha256'] + '/ArcadePatches-0.1.1.zip')
+        self.assertEqual(validate(self.root, entry), record)
+        self.assertEqual((self.docs / first['launcher']).read_bytes(), old_launcher)
+        self.assertIn(first['launcher'], record['files'])
+        with self.assertRaisesRegex(ValueError, 'version must increase'):
+            import_launcher(self.root, archive, receipt_path, '2026-11-04')
+
+    def test_launcher_only_import_rejects_dropped_features_before_publication(self):
+        receipt = json.loads((self.root / 'receipt.json').read_text())
+        receipt['features'] = ['native-kit-v1', 'zip-outputs-v1'];self.write('receipt.json', receipt)
+        self.run_import()
+        before = (self.docs / 'catalog/v1/index.json').read_bytes()
+        archive, receipt_path = self.package('0.1.1', features=['native-kit-v1'])
+        with self.assertRaisesRegex(ValueError, 'cannot drop catalog features'):
+            import_launcher(self.root, archive, receipt_path, '2026-11-04')
+        self.assertEqual((self.docs / 'catalog/v1/index.json').read_bytes(), before)
+        self.assertFalse((self.docs / 'tools/downloads/archive' / json.loads(receipt_path.read_text())['sha256']).exists())
+
+    def test_catalog_notice_must_match_the_published_launcher(self):
+        self.run_import()
+        index_path = self.docs / 'catalog/v1/index.json'
+        index = json.loads(index_path.read_text())
+        index['launcher'] = {'version': '9.9.9', 'url': 'https://arcadepatches.com/arcadepatches/'}
+        payload = (json.dumps(index, indent=2, sort_keys=True) + '\n').encode();index_path.write_bytes(payload)
+        record = json.loads((self.root / 'data/tool-releases.json').read_text())
+        record['files']['catalog/v1/index.json'] = {'size': len(payload), 'sha256': hashlib.sha256(payload).hexdigest()}
+        self.write('data/tool-releases.json', record)
+        with self.assertRaisesRegex(ValueError, 'launcher notice differs'):
+            validate(self.root, json.loads((self.root / 'data/tools.json').read_text()))
 
     def test_unsafe_paths_rejected(self):
         for name in ('../outside', '/absolute', 'a/../../escape', 'a\\b'):

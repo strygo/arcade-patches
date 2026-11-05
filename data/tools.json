@@ -1,8 +1,8 @@
 {
   "slug": "arcadepatches",
   "title": "ArcadePatches",
-  "version": "0.1",
-  "date": "2026-11-01",
+  "version": "0.1.1",
+  "date": "2026-11-04",
   "summary": "Build and update your Arcade Patches collection from media you own. Choose your games, platforms and regions, then copy the completed folders to your setup.",
   "features": [
     "Point it at your ROM and media folders. Loose files, ZIPs and 7z archives are identified by content, without renaming them.",

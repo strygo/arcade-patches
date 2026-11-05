@@ -35,6 +35,9 @@ def render(builder, site, loaded):
     steps = '<ol>' + ''.join(f'<li>{esc(p)}</li>' for p in entry['steps']) + '</ol>'
     screenshots = builder.render_shots(shots, 'Inside the terminal')
     screenshots = re.sub(r'<img src="([^"]+)"([^>]+)>', r'<a href="\1"><img src="\1"\2></a>', screenshots)
+    # 0.1 predates both behaviors; describe them only once the page names a newer launcher.
+    notice = (' A tooling update rebuilds a game only when its game files change. When a newer ArcadePatches'
+              ' is available, the launcher names it and links to this page.') if entry['version'] != '0.1' else ''
     archive = record['launcher']
     spec = record['files'][archive]
     body = f'''<a class="back" href="../tools/">← Tools</a>
@@ -52,7 +55,7 @@ def render(builder, site, loaded):
 <pre><code># Windows\npy -3.13 arcadepatches.py\n\n# Apple Silicon Mac\npython3.12 arcadepatches.py\n\n# Linux\npython3 arcadepatches.py</code></pre>
 <p>The included QUICKSTART.txt covers command-line filters, offline updates, cache limits and recovery.</p>
 <h2>Updates and output</h2>
-<p>At startup, the launcher checks for new games, versions and changed requirements without scanning your ROM folders. Choose Build (shown as Update after your first completed build) to check your media and build the ready games. Keeping “all” selected includes future matching games, platforms and regions. It does not run in the background.</p>
+<p>At startup, the launcher checks for new games, versions and changed requirements without scanning your ROM folders. Choose Build (shown as Update after your first completed build) to check your media and build the ready games. Keeping “all” selected includes future matching games, platforms and regions.{notice} It does not run in the background.</p>
 <p>Copying to MiSTer, HBMAME or another destination is manual. Some soundtrack exports are overlays that need the named game files already installed; follow INSTALL.txt. Changing a selection keeps existing exports.</p>
 <p>Prefer to build one game directly? Each game's page still has its standalone download and instructions.</p>'''
     image = 'img/arcadepatches/00_single.png'
