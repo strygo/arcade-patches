@@ -2930,6 +2930,10 @@
       "sha256": "c95f0f99e339b4ef96fbc05c80e3d932761195558d75c76e9540e4542d23ceb3",
       "size": 56446
     },
+    "catalog/v1/definitions/ca26973c57d877ba5c4dd984ca85a3608e16ca55def855d800faa07d26bc8d4b.json": {
+      "sha256": "ca26973c57d877ba5c4dd984ca85a3608e16ca55def855d800faa07d26bc8d4b",
+      "size": 114354
+    },
     "catalog/v1/definitions/d99490483005e1d13f86a52bb077536d1a2e53b6e837d75e79bd1fc787e1a3ea.json": {
       "sha256": "d99490483005e1d13f86a52bb077536d1a2e53b6e837d75e79bd1fc787e1a3ea",
       "size": 57527
@@ -2947,7 +2951,7 @@
       "size": 127219
     },
     "catalog/v1/index.json": {
-      "sha256": "865f92c6ccfce17ab124dabe2e7e48b672921663ef957ca6b5b7ae037a9791f6",
+      "sha256": "fe9d857978ab9d2025840d8671ece86d506831e020b1435a37f4ebd0fd585276",
       "size": 27438
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
@@ -2969,6 +2973,10 @@
     "downloads/archive/51f116c2ea8c6e41c9cb263fbe245d0227706b14238f4026afc25edef5bd7c74/vsav-arrange-rc4-kit.zip": {
       "sha256": "51f116c2ea8c6e41c9cb263fbe245d0227706b14238f4026afc25edef5bd7c74",
       "size": 2354143
+    },
+    "downloads/archive/9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329/sfa3-upper-cps2-rc1-kit.zip": {
+      "sha256": "9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329",
+      "size": 4262109
     },
     "downloads/archive/9c5ea94612996b14ec857fcf5356409e7f82371950a2056868efabf95e6d82ce/sfa-restoration-rc1-ips.zip": {
       "sha256": "9c5ea94612996b14ec857fcf5356409e7f82371950a2056868efabf95e6d82ce",
@@ -3007,7 +3015,7 @@
       "size": 44138
     }
   },
-  "generation": 52,
+  "generation": 53,
   "launcher": "tools/downloads/archive/5f3be6f6034b4dd735b96ec4caf0989dd8275b25649c78a9867f045c08877b81/ArcadePatches-0.1.1.zip",
   "native_updates": [
     {
@@ -3105,6 +3113,14 @@
       "project": "sfa3-upper-cps2",
       "ready_sha256": "6f152313d7972f9d909c5adf759ef99bfa0baa6fb2b363e14535219ef3045afa",
       "release_sha256": "d3abdefb5c9d9d65cd91ea1639f73c58a628a0fd6eebb652d4c6bca08afc9b14"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 2,
+      "kit_sha256": "9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329",
+      "project": "sfa3-upper-cps2",
+      "ready_sha256": "88a5e2fc5f995c10eac7d8ff056839a44213fa374878b9d61b4b9a83e23fcfe9",
+      "release_sha256": "794952c98a9d99ceb7eb29f8019e0305ac94b77bb8b0a6a65033a04ed1cd69ff"
     }
   ],
   "package_receipt": {
