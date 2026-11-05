@@ -5113,6 +5113,58 @@
         }
       }
     },
+    "sfa3-upper-cps2": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-11-04",
+          "files": {
+            "kit": {
+              "archive": "archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip",
+              "name": "sfa3-upper-cps2-rc1-kit.zip",
+              "sha256": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4",
+              "size": 5184203
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc1-candidate.13",
+            "capcom_source_commit": "076c8ff6401e4b2adf7cfc3a85f73e10e8e930ef",
+            "ready_record_sha256": "6f152313d7972f9d909c5adf759ef99bfa0baa6fb2b363e14535219ef3045afa",
+            "release_sha256": "d3abdefb5c9d9d65cd91ea1639f73c58a628a0fd6eebb652d4c6bca08afc9b14",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-11-04",
+              "files": {
+                "kit": {
+                  "archive": "archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip",
+                  "name": "sfa3-upper-cps2-rc1-kit.zip",
+                  "sha256": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4",
+                  "size": 5184203
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc1-candidate.13",
+                "capcom_source_commit": "076c8ff6401e4b2adf7cfc3a85f73e10e8e930ef",
+                "ready_record_sha256": "6f152313d7972f9d909c5adf759ef99bfa0baa6fb2b363e14535219ef3045afa",
+                "release_sha256": "d3abdefb5c9d9d65cd91ea1639f73c58a628a0fd6eebb652d4c6bca08afc9b14",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        }
+      }
+    },
     "sfz2al-restoration": {
       "current": "rc2",
       "versions": {

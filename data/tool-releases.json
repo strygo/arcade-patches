@@ -2826,6 +2826,10 @@
       "sha256": "45e56b881a049cb47ecff2a19149a7768cc9effb09e0dc620561e99fc950429c",
       "size": 58347
     },
+    "catalog/v1/definitions/465a3ba07710c1343ad903731bf4c6fcee3ad5b06a43d257e60480c59568b042.json": {
+      "sha256": "465a3ba07710c1343ad903731bf4c6fcee3ad5b06a43d257e60480c59568b042",
+      "size": 114354
+    },
     "catalog/v1/definitions/4686fcc734cf994163811b5282c1a608fe8db169188efc12d8a28b53ec34dd16.json": {
       "sha256": "4686fcc734cf994163811b5282c1a608fe8db169188efc12d8a28b53ec34dd16",
       "size": 59936
@@ -2943,8 +2947,12 @@
       "size": 127219
     },
     "catalog/v1/index.json": {
-      "sha256": "c4451570f4e7b8dc5e872d0eef260ff5c0277c5faded55f76fc02a9f61178028",
-      "size": 26576
+      "sha256": "865f92c6ccfce17ab124dabe2e7e48b672921663ef957ca6b5b7ae037a9791f6",
+      "size": 27438
+    },
+    "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
+      "sha256": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4",
+      "size": 5184203
     },
     "downloads/archive/0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5/mshvsf-ex-rc5-ips.zip": {
       "sha256": "0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5",
@@ -2999,7 +3007,7 @@
       "size": 44138
     }
   },
-  "generation": 51,
+  "generation": 52,
   "launcher": "tools/downloads/archive/5f3be6f6034b4dd735b96ec4caf0989dd8275b25649c78a9867f045c08877b81/ArcadePatches-0.1.1.zip",
   "native_updates": [
     {
@@ -3089,6 +3097,14 @@
       "project": "vsav2-arrange",
       "ready_sha256": "e136a7a134b81013241a2e43bed71671155d0ee38d548cf531dfbaaeac9fb60b",
       "release_sha256": "78104fb2bbd1f48b72543156cec0e84905e40c1bed4954ef55ee916d123cbc0a"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 1,
+      "kit_sha256": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4",
+      "project": "sfa3-upper-cps2",
+      "ready_sha256": "6f152313d7972f9d909c5adf759ef99bfa0baa6fb2b363e14535219ef3045afa",
+      "release_sha256": "d3abdefb5c9d9d65cd91ea1639f73c58a628a0fd6eebb652d4c6bca08afc9b14"
     }
   ],
   "package_receipt": {

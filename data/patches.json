@@ -5967,6 +5967,90 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "sfa3-upper-cps2",
+      "hidden": false,
+      "title": "Street Fighter Alpha 3 Upper (CPS-2)",
+      "sort_title": "Street Fighter Alpha 3 Upper CPS-2",
+      "subtitle": "Arcade backport",
+      "section": "restorations",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-11-04",
+      "game": "Street Fighter Alpha / Zero 3 Upper",
+      "set": "sfa3up / sfz3up",
+      "hardware": "Capcom CPS-2 with the CPS+ core",
+      "summary": "Upper on CPS-2, with Guile, Fei Long, Dee Jay, T. Hawk, Evil Ryu and Shin Akuma, in USA (English) and Japan builds.",
+      "description": [
+        "Street Fighter Alpha 3 Upper comes to CPS-2 with Guile, Fei Long, Dee Jay, T. Hawk, Evil Ryu and Shin Akuma. The boxer, Juli and Juni have their own cells on the select screen.",
+        "Guile, Fei Long, Dee Jay and T. Hawk bring their stages, music and arcade endings. The USA build includes the Street Fighter Alpha 3 English restoration; the Japan build keeps Japanese text and names.",
+        "This version includes Arcade mode and its two-player challenge. World Tour, Dramatic Battle and the other console modes are not included.",
+        "On MiSTer, it requires the included CPS+ core and 128 MB SDRAM. Computer play requires an HBMAME or FBNeo build that includes the Upper sets. This is a release candidate."
+      ],
+      "changes": [
+        "Guile, Fei Long, Dee Jay, T. Hawk, Evil Ryu and Shin Akuma join the playable roster",
+        "The boxer, Juli and Juni have their own select cells",
+        "Added stages, arcade endings, voices and QSound music",
+        "USA (English) and Japan versions"
+      ],
+      "screenshots": [
+        {
+          "caption": "Choose from the expanded Upper roster.",
+          "single": "data/screenshots/sfa3-upper-cps2/character-select.png"
+        },
+        {
+          "caption": "Guile and Fei Long on Guile\u2019s stage.",
+          "single": "data/screenshots/sfa3-upper-cps2/guile-fei-long.png"
+        }
+      ],
+      "requirements": {
+        "text": "Reconstruction requires your own Alpha 3 / Zero 3 arcade ROMs, the USA Alpha Anthology and Japanese Zero Fighter’s Generation PS2 disc images, and the Zero 3 Upper NAOMI GD-ROM and PIC. MiSTer play requires the CPS+ core and 128 MB SDRAM."
+      },
+      "related": [
+        {
+          "label": "Street Fighter Alpha 3",
+          "url": "../sfa3-restoration/",
+          "note": "English restoration"
+        },
+        {
+          "label": "Street Fighter Alpha 3 Upper (NAOMI)",
+          "url": "../sfz3ugd-multiregion/",
+          "note": "The original NAOMI game"
+        }
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-11-04",
+          "items": [
+            "First release candidate."
+          ]
+        }
+      ],
+      "mister_hbmame": true,
+      "mra": {
+        "name": "Street Fighter Alpha 3 Upper (USA) [Backport]",
+        "setname": "sfa3up",
+        "filename": "Street Fighter Alpha 3 Upper (USA) [Backport].mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "region": "USA",
+        "mraauthor": "jotego,strygo"
+      },
+      "reconstruction": {
+        "requires": [
+          "Your own arcade ROM sets sfa3, sfa3u, sfz3j and qsound in canonical MAME format.",
+          "Your own USA Street Fighter Alpha Anthology and Japanese Street Fighter Zero: Fighter’s Generation PS2 disc images.",
+          "Your own Street Fighter Zero 3 Upper NAOMI GD-ROM CHD and sfz3ugd.zip PIC archive.",
+          "The Arcade Patches builder app prepares Python and its dependencies. To build by hand: Python 3.12 or newer, NumPy 2.2.6, SciPy 1.15.3 and chdman."
+        ],
+        "kit_command": "python3 apply.py --rompath /path/to/roms --ps2-us /path/to/us.chd --ps2-jp /path/to/jp.chd --naomi-chd /path/to/gdl-0002.chd --naomi-pic /path/to/sfz3ugd.zip --chdman /path/to/chdman --work /external/fresh-work --out-dir /external/fresh-output",
+        "how": "Reconstructs the USA and Japan versions from your original game files and writes the HBMAME and FBNeo sets and MiSTer card folders.",
+        "sizes_note": "Use new work and output directories with at least 8 GiB of free storage."
+      }
     }
   ],
   "articles": [

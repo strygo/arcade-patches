@@ -70,6 +70,24 @@ class CatalogImportTests(unittest.TestCase):
         self.assertEqual(index['releases']['game-rc2-r1']['runner']['artifact'], 'game-kit')
         self.assertFalse((self.root / catalog.JOURNAL).exists())
 
+    def test_first_import_takes_the_page_title(self):
+        manifest = {'version': 'rc2', 'kit_revision': 1}
+        raw = catalog.encoded(manifest)
+        with zipfile.ZipFile(self.kit) as old:
+            declaration = json.loads(old.read('collection.json'))
+        declaration['manifest_sha256'] = catalog.hashlib.sha256(raw).hexdigest()
+        with zipfile.ZipFile(self.kit, 'w') as kit:
+            kit.writestr('manifest.json', raw);kit.writestr('collection.json', json.dumps(declaration))
+        self.release['downloads'][self.kit.name] = contract(self.kit)['sha256']
+        del self.index['projects']['game'];self.index['releases'].pop('game-rc1')
+        self.index['artifacts'].pop('game-old-kit');self.write(catalog.INDEX, self.index)
+        self.write('data/patches.json', {'patches': [{'slug': 'game', 'title': 'Game Page'}]})
+        pending = self.prepare()
+        self.assertEqual(pending['index']['projects']['game'], {'title': 'Game Page', 'current': 'game-rc2-r1'})
+        self.write('data/patches.json', {'patches': [{'slug': 'other', 'title': 'Other'}]})
+        with self.assertRaises(ReleaseInventoryError):
+            self.prepare()
+
     def test_thin_index_import_recovers_sidecars_before_pointer(self):
         for release in self.index['releases'].values():
             release.update(game_version='rc1', kit_revision=1)

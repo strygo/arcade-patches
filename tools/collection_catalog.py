@@ -10,7 +10,7 @@ import zipfile
 import base64
 import catalog_index
 
-from release_inventory import (candidate_release, read_json, write_json_atomic, require, sha256_file)
+from release_inventory import (candidate_release, load_site_entries, read_json, write_json_atomic, require, sha256_file)
 from tool_inventory import ORIGIN, contract, local_path
 
 JOURNAL = 'data/collection-import-transaction.json'
@@ -120,7 +120,13 @@ def prepare(root, ready_path, candidate):
         index['artifacts'][dependency] = spec
         record['files'][spec['url'].removeprefix(ORIGIN)] = contract(dependency_path)
     require(native['targets'] and native['prerequisites'], 'empty native collection definition')
-    index['projects'][slug] = {**(previous or {'title': manifest['title']}), 'current': release_id}
+    project = previous
+    if not project:
+        # A project's first catalog entry takes the page title; kit manifests carry no title.
+        title = manifest.get('title') or load_site_entries(root).get(slug, {}).get('title')
+        require(isinstance(title, str) and title, 'new catalog project needs a page title')
+        project = {'title': title}
+    index['projects'][slug] = {**project, 'current': release_id}
     index['releases'][release_id] = native
     if previous and previous['current'] != release_id:
         index['releases'].pop(previous['current'])
