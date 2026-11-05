@@ -5996,6 +5996,13 @@
       ],
       "screenshots": [
         {
+          "before": "data/screenshots/sfa3-upper-cps2/title_us_sfa3up.png",
+          "after": "data/screenshots/sfa3-upper-cps2/title_jp_sfz3up.png",
+          "before_label": "USA",
+          "after_label": "Japan",
+          "caption": "The USA and Japanese title screens."
+        },
+        {
           "caption": "Choose from the expanded Upper roster.",
           "single": "data/screenshots/sfa3-upper-cps2/character-select.png"
         },
