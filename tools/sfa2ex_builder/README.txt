@@ -81,7 +81,7 @@ GAME MODE
 
 The title-screen mode menu, EX Versus and OPTIONS appear in CONSOLE game mode.
 The MiSTer MRAs start in CONSOLE. MAME and HBMAME start in ARCADE, which keeps
-Gold's arcade title; set GAME MODE to CONSOLE on the SYSTEM page of the
+Gold's arcade title; set GAME MODE to CONSOLE on the EX page of the
 operator menu.
 
 CONSOLE FIGHTS
@@ -101,15 +101,17 @@ TRAINING
 --------
 
 Choose TRAINING after VERSUS on the title menu. Select your fighter, then
-the computer. NORMAL MODE is endless practice; RECORDING MODE records one
+the computer to begin practice immediately. NORMAL MODE is endless practice; RECORDING MODE records one
 round, and REPLAY plays it from the saved setup and settings.
 
-Press Coin to open Pause, then choose TRAINING MENU. Training Settings
-controls the gauge,
+Press Coin to open TRAINING MENU, then choose SETUP. Training Settings controls the gauge,
 stun, attack data and input history. Computer Settings controls movement,
 guard, roll and throw escape. LP confirms menu rows; LEFT and RIGHT change
 settings. RESTART keeps your chosen stage. Character Change returns to
 selection; Quit returns to the title menu.
+
+Damage remains visible, but fighters cannot fall below 1 HP. After the hit
+reaction ends and a short delay passes, both health bars refill completely.
 
 For a different stage, highlight its fighter during COMPUTER SELECT, hold
 START for one second, move to the desired computer and confirm while still
@@ -118,7 +120,10 @@ holding START. Otherwise the computer's usual stage is used.
 EX CONFIGURATION
 ----------------
 
-The service menu's EX CONFIGURATION page has two independent choices:
+The service menu's EX CONFIGURATION page has three independent choices:
+
+  GAME MODE    ARCADE / CONSOLE
+    Selects the arcade title or the free-play console mode menu.
 
   BACKGROUNDS  JAPAN / INTERNATIONAL (default JAPAN)
     JAPAN uses Sodom's Japanese truck lettering, Sakura's calligraphy and

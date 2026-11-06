@@ -3978,8 +3978,8 @@
       "subtitle": "Enhanced version",
       "section": "enhanced",
       "status": "release-candidate",
-      "version": "rc3",
-      "date": "2026-10-15",
+      "version": "rc4",
+      "date": "2026-11-06",
       "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "us",
@@ -3989,12 +3989,12 @@
         "In CONSOLE game mode the game plays free, and START at the title opens a mode menu: Arcade, Versus, Survival, Dramatic Battle, Akuma, Training and Options. Versus matches go straight back to the select screen, and Coin opens Pause/Back on selection screens and during fights, with a confirmed Quit to the title menu. Training offers recording and replay, computer behavior and guard settings, input history and attack data. Cammy and a Random cell sit on the select screen, Cammy turns up as a CPU opponent in the other fighters' Arcade runs, and alternate forms take a START press or two instead of five.",
         "Two EX forms join the roster, each one START press away on its fighter's cell: EX Akuma and EX Cammy. Both follow Capcom's own EX rules, with classic moves and no Super Combos.",
         "OPTIONS opens an OPTION MODE page with difficulty, time limit, rounds, damage, turbo and sound. The operator menu adds GAME MODE, REGULATION for red or white blood, eight GAME SPEED levels and a TIME LIMIT of 25, 50, 75, 99 or infinity, and the title has a new EX mark. The USA build is in English; the Japan build, Street Fighter Zero 2 EX, keeps the Japanese. EX CONFIGURATION selects JAPAN or INTERNATIONAL backgrounds and ORIGINAL or 30TH ANNIVERSARY artwork.",
-        "The MiSTer MRAs start in CONSOLE mode. MAME and HBMAME start in ARCADE mode, which keeps Gold's arcade title; set GAME MODE to CONSOLE on the operator menu's SYSTEM page for the mode menu. It runs in MAME and HBMAME and on MiSTer.",
+        "The MiSTer MRAs start in CONSOLE mode. MAME and HBMAME start in ARCADE mode, which keeps Gold's arcade title; set GAME MODE to CONSOLE on the operator menu's EX page for the mode menu. It runs in MAME and HBMAME and on MiSTer.",
         "This is a release candidate."
       ],
       "changes": [
         "In CONSOLE game mode, free play and a title-screen mode menu: Arcade, Versus, Survival, Dramatic Battle, Akuma, Training and Options",
-        "Training, as on the Saturn: recording and replay, computer settings, and action, speed and gauge options",
+        "Training: recording and replay, computer settings, and action, speed and gauge options",
         "Coin opens Pause/Back in CONSOLE mode, including character selection; Quit asks for confirmation",
         "Cammy and Random cells on the select screen, and Cammy as a CPU opponent in Arcade",
         "EX Akuma (EX Gouki in Japan) and EX Cammy, under Capcom's EX rules with no Super Combos and distinct name colors on the select screen",
@@ -4069,6 +4069,26 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc4",
+          "date": "2026-11-06",
+          "items": [
+            "Training restores lost health after a short pause and keeps fighters at 1 HP instead of ending the round.",
+            "Training begins directly in practice; its pause menu opens SETUP for practice settings.",
+            "Corrected Cammy's crouching collision and her poses and positioning when thrown by the rest of the roster.",
+            "Cammy can taunt once per round with START.",
+            "Pausing silences game audio until play resumes.",
+            "GAME MODE is the first EX CONFIGURATION setting, and the EX page is third in the operator menu.",
+            "The named game speeds are NORMAL and TURBO 1\u20137.",
+            "Localized the Japanese EX settings and corrected operator-menu headings, return prompts and bottom help text.",
+            "The USA build names Evil Ryu on the select, VS, fight and map screens, and gives his map portrait distinct colors.",
+            "Fixed Ryu and his alternate forms breaking apart incorrectly as the VS screen ends in the English builds.",
+            "Jessica reacts to Cody looking at Cammy on Guy's stage.",
+            "Charlie and Chun-Li now use CHL and CHN as their default score initials in the USA build.",
+            "Corrected the program-ROM results in MEMORY CHECK.",
+            "Every set has new checksums, so rebuild them with the rc4 kit."
+          ]
+        },
         {
           "version": "rc3",
           "date": "2026-10-15",
