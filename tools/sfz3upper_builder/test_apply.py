@@ -1,8 +1,12 @@
 """Inventory boundaries for the public Upper installer."""
 import copy
+import contextlib
+import io
 import json
 from pathlib import Path
 import tempfile
+import subprocess
+import sys
 import unittest
 import zipfile
 from types import SimpleNamespace
@@ -33,7 +37,7 @@ class InventoryTests(unittest.TestCase):
         with self.assertRaises(ValueError):apply.validate(self.root)
 
     def native(self, **overrides):
-        files={n:apply.pin(self.root/n)['sha256'] for n in ('names.json','core.rbf','final.py','final.json','release-kit.json')}
+        files={n:apply.pin(self.root/n)['sha256'] for n in (*self.record['files'],'release-kit.json')}
         files.update(overrides)
         (self.root/'manifest.json').write_text(json.dumps({'api':1,'files':files}))
         (self.root/'collection.json').write_text('{}')
@@ -49,6 +53,69 @@ class InventoryTests(unittest.TestCase):
         with self.assertRaises(ValueError):apply.validate(self.root)
         self.native();(self.root/'extra').write_bytes(b'x')
         with self.assertRaises(ValueError):apply.validate(self.root)
+
+    def test_inventory_diagnostics_name_missing_and_extra_files(self):
+        for native in (False, True):
+            with self.subTest(native=native):
+                if native:self.native()
+                (self.root/'core.rbf').unlink()
+                (self.root/'notes.txt').write_text('extra')
+                with self.assertRaises(ValueError) as caught:apply.validate(self.root)
+                text=str(caught.exception)
+                self.assertIn('Missing files:\n  core.rbf',text)
+                self.assertIn('Extra files:\n  notes.txt',text)
+                self.assertIn('new, empty folder',text)
+                (self.root/'core.rbf').write_bytes(b'fixture');(self.root/'notes.txt').unlink()
+
+    def test_cli_validation_errors_are_clean_with_optional_debug_traceback(self):
+        import shutil
+        shutil.copyfile(apply.__file__,self.root/'apply.py')
+        self.record['files']['apply.py']=apply.pin(self.root/'apply.py');self.save();self.native()
+        (self.root/'core.rbf').unlink();(self.root/'notes.txt').write_text('extra')
+        command=[sys.executable,'-I','-B',str(self.root/'apply.py'),'--rompath',str(self.root)]
+        for key in ('ps2-us','ps2-jp','naomi-chd','naomi-pic','chdman','work','out-dir'):
+            command += ['--'+key,str(self.root/'unused')]
+        for debug in (False,True):
+            with self.subTest(debug=debug):
+                result=subprocess.run(command+(['--debug'] if debug else []),capture_output=True,text=True,timeout=15)
+                self.assertNotEqual(result.returncode,0)
+                self.assertIn('Missing files:\n  core.rbf',result.stderr)
+                self.assertIn('Extra files:\n  notes.txt',result.stderr)
+                self.assertEqual('Traceback' in result.stderr,debug)
+                self.assertEqual(result.stdout,'')
+
+    def test_reconstruction_errors_keep_bounded_details_out_of_console(self):
+        command=[sys.executable,'-I','-B','-c',
+                 "import sys; sys.stderr.write('x'*70000+'\\n'); raise ValueError('synthetic bad media')"]
+        stream=io.StringIO()
+        with contextlib.redirect_stderr(stream),self.assertRaisesRegex(ValueError,'Reconstruction failed.*Details:'):
+            apply.run_builder(command,self.root)
+        self.assertEqual(stream.getvalue(),'')
+        log=(self.root/'reconstruction-error.log').read_bytes()
+        self.assertLessEqual(len(log),65536)
+        self.assertIn(b'Traceback',log)
+        self.assertIn(b'synthetic bad media',log)
+
+    def test_successful_reconstruction_preserves_exact_command_and_output(self):
+        command=['python','build.py','--rompath','owned-roms']
+        with patch.object(apply.subprocess,'run',return_value=SimpleNamespace(returncode=0,stderr=b'')) as run:
+            apply.run_builder(command,self.root)
+        run.assert_called_once_with(command,stderr=subprocess.PIPE)
+        self.assertFalse((self.root/'reconstruction-error.log').exists())
+
+    def test_incomplete_native_pair_names_missing_definition(self):
+        self.native();(self.root/'collection.json').unlink()
+        with self.assertRaisesRegex(ValueError,'Missing files:\n  collection.json'):
+            apply.validate(self.root)
+
+    def test_inventory_diagnostic_is_sorted_and_bounded(self):
+        names={f'extra-{n:02}.txt' for n in range(25)}
+        with self.assertRaises(ValueError) as caught:
+            apply.require_inventory(set(),names,'Release kit')
+        text=str(caught.exception)
+        self.assertLess(text.index('extra-00.txt'),text.index('extra-19.txt'))
+        self.assertNotIn('extra-20.txt',text)
+        self.assertIn('and 5 more',text)
 
     def test_final_leaf_precedes_platform_naming(self):
         for name in ('names.json','final.json'):(self.root/name).write_text('{}')

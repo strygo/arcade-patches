@@ -1,9 +1,9 @@
 {
   "artifacts": {
     "cps-plus-kit": {
-      "sha256": "2949b2f1d77f94e2fe0ad5ea5ddb374339b635912b38937f082ee79a6c2862ac",
-      "size": 5352772,
-      "url": "https://arcadepatches.com/catalog/v1/artifacts/2949b2f1d77f94e2fe0ad5ea5ddb374339b635912b38937f082ee79a6c2862ac-cps-plus-native-kit.zip"
+      "sha256": "a71f861befc1d82ccde449cae09df513658dcad21836cc602a9a85aff6a8800b",
+      "size": 5389165,
+      "url": "https://arcadepatches.com/downloads/archive/a71f861befc1d82ccde449cae09df513658dcad21836cc602a9a85aff6a8800b/cps-plus-1.7-kit.zip"
     },
     "dstlk-restoration-kit": {
       "sha256": "224d77a92abb0c258096acc447df9a2391a0444f49b9f59fa4e167ab6892a848",
@@ -36,9 +36,9 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/ff8ca8d6632cde077122d4a5f89a52b0d924d8de4369fe382b9862a1cba7bb41-mshvsf-restoration-native-kit.zip"
     },
     "ng-plus-kit": {
-      "sha256": "250075bba0c177f4c9e0caddf1911152f58529d5a9d38caf076e563d42de2721",
-      "size": 1734232,
-      "url": "https://arcadepatches.com/catalog/v1/artifacts/250075bba0c177f4c9e0caddf1911152f58529d5a9d38caf076e563d42de2721-ng-plus-native-kit.zip"
+      "sha256": "a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc",
+      "size": 1746446,
+      "url": "https://arcadepatches.com/downloads/archive/a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc/ng-plus-1.1-kit.zip"
     },
     "nwarr-restoration-kit": {
       "sha256": "08f8251afda9695f3744cff088edac361e14959e91cb7b4918348d3ec1ac3a05",
@@ -76,9 +76,9 @@
       "url": "https://arcadepatches.com/downloads/archive/188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed/sfa3-restoration-rc5-ips.zip"
     },
     "sfa3-upper-cps2-kit": {
-      "sha256": "9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329",
-      "size": 4262109,
-      "url": "https://arcadepatches.com/downloads/archive/9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329/sfa3-upper-cps2-rc1-kit.zip"
+      "sha256": "1ce6ef2eb2dca7563d234dc66f9a74c5194e8969ea3a24b996e51051b4030334",
+      "size": 4291620,
+      "url": "https://arcadepatches.com/downloads/archive/1ce6ef2eb2dca7563d234dc66f9a74c5194e8969ea3a24b996e51051b4030334/sfa3-upper-cps2-rc1-kit.zip"
     },
     "sfz2al-restoration-kit": {
       "sha256": "e363df76b8c491c9795066fcafa57eef302e3bcb6e0759d1df41773e32bae01c",
@@ -121,9 +121,9 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/46824f5eb67eba6d333e87d9a9d10c407690ddb4800cfd3825d9a99837225c11-ssf2t-gmc-native-kit.zip"
     },
     "strider-ex-kit": {
-      "sha256": "2b72058c18df91888de08a75836d140cba8f512040f1985770f6dc9dfc706580",
-      "size": 49527401,
-      "url": "https://arcadepatches.com/catalog/v1/artifacts/2b72058c18df91888de08a75836d140cba8f512040f1985770f6dc9dfc706580-strider-ex-native-kit.zip"
+      "sha256": "d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d",
+      "size": 49595337,
+      "url": "https://arcadepatches.com/downloads/archive/d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d/strider-ex-rc1-kit.zip"
     },
     "usf2-backport-kit": {
       "sha256": "dff1e4a1ce7e3d6d2ea5a471c12f77f831d0aceb04d5fad5e1539ec7abf0bac6",
@@ -197,7 +197,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
     }
   },
-  "generation": 55,
+  "generation": 59,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.2"
@@ -265,7 +265,7 @@
       "title": "Street Fighter Alpha 3"
     },
     "sfa3-upper-cps2": {
-      "current": "sfa3-upper-cps2-rc1-r2",
+      "current": "sfa3-upper-cps2-rc1-r3",
       "title": "Street Fighter Alpha 3 Upper (CPS-2)"
     },
     "sfz2al-restoration": {
@@ -325,9 +325,9 @@
     "cps-plus-1-7-r2": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "c3a4feb7510d3b98050d208129eb4a4c1f383ae5aeda58637c5367034e95736a",
+        "sha256": "0ae75d610b46df6802eb77a31507f709c6c4be260f036198478d6bb5e39153e9",
         "size": 574446,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/c3a4feb7510d3b98050d208129eb4a4c1f383ae5aeda58637c5367034e95736a.json"
+        "url": "https://arcadepatches.com/catalog/v1/definitions/0ae75d610b46df6802eb77a31507f709c6c4be260f036198478d6bb5e39153e9.json"
       },
       "game_version": "1.7",
       "kit": "cps-plus-kit",
@@ -402,9 +402,9 @@
     "ng-plus-1-1-r3": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "0a29e9c9046f366796c0f2167179525dc4a79de5a498776725cc8cf7d35ee558",
+        "sha256": "067aeab41aa3645fe3abd82aeba567d043d1e981cd5fbe275102748cc0308018",
         "size": 74470,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/0a29e9c9046f366796c0f2167179525dc4a79de5a498776725cc8cf7d35ee558.json"
+        "url": "https://arcadepatches.com/catalog/v1/definitions/067aeab41aa3645fe3abd82aeba567d043d1e981cd5fbe275102748cc0308018.json"
       },
       "game_version": "1.1",
       "kit": "ng-plus-kit",
@@ -487,16 +487,16 @@
       "kit": "sfa3-restoration-kit",
       "kit_revision": 1
     },
-    "sfa3-upper-cps2-rc1-r2": {
+    "sfa3-upper-cps2-rc1-r3": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "ca26973c57d877ba5c4dd984ca85a3608e16ca55def855d800faa07d26bc8d4b",
+        "sha256": "d5bdea137fdda4c4f94b0baaa3becdaf0e40607939972e5666d39889445e81fa",
         "size": 114354,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/ca26973c57d877ba5c4dd984ca85a3608e16ca55def855d800faa07d26bc8d4b.json"
+        "url": "https://arcadepatches.com/catalog/v1/definitions/d5bdea137fdda4c4f94b0baaa3becdaf0e40607939972e5666d39889445e81fa.json"
       },
       "game_version": "rc1",
       "kit": "sfa3-upper-cps2-kit",
-      "kit_revision": 2
+      "kit_revision": 3
     },
     "sfz2al-restoration-rc2-r6": {
       "definition": {
@@ -545,9 +545,9 @@
     "strider-ex-rc1-r7": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "25e27020c4f9a899064dd4bcc114701dec102351ecfb6cd493c0275a09577d04",
+        "sha256": "60f43217002578f34df82a1e7e19300f8562a1187c316a068e37f13b51405931",
         "size": 105262,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/25e27020c4f9a899064dd4bcc114701dec102351ecfb6cd493c0275a09577d04.json"
+        "url": "https://arcadepatches.com/catalog/v1/definitions/60f43217002578f34df82a1e7e19300f8562a1187c316a068e37f13b51405931.json"
       },
       "game_version": "rc1",
       "kit": "strider-ex-kit",

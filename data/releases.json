@@ -436,28 +436,34 @@
           }
         },
         "1.7": {
-          "current_revision": 1,
-          "date": "2026-10-28",
+          "current_revision": 2,
+          "date": "2026-11-05",
           "files": {
             "kit": {
-              "archive": "archive/498510c73bb03f542719caf43c19fcaeb2960a57f01e992d452cbc7d0e45bce8/cps-plus-1.7-kit.zip",
+              "archive": "archive/a71f861befc1d82ccde449cae09df513658dcad21836cc602a9a85aff6a8800b/cps-plus-1.7-kit.zip",
               "name": "cps-plus-1.7-kit.zip",
-              "sha256": "498510c73bb03f542719caf43c19fcaeb2960a57f01e992d452cbc7d0e45bce8",
-              "size": 5235523
+              "sha256": "a71f861befc1d82ccde449cae09df513658dcad21836cc602a9a85aff6a8800b",
+              "size": 5389165
             }
           },
+          "game_contract_sha256": "d378baefed1c86df8121d93844e548b28c35be6ba0f045615fb78c8afd6f3939",
           "kind": "kit",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-11-05",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "qualification": {
-            "candidate": "1.7-candidate.4",
-            "capcom_source_commit": "b2ea583d4d6f4c2d6f52f603929f17c4667cf52c",
-            "ready_record_sha256": "7644c1ba9277ba586f1206ca1c0826e5a680bc225385e13a1e2b4e6618859dca",
-            "release_sha256": "18528d6d25b135d8458a6c76746c774f9a8fd2de1ce7055d94e71824c5864fe8",
+            "candidate": "1.7-tools-r2-cli-errors-candidate.1",
+            "capcom_source_commit": "4ea7255ae11a60e6c46581721b4ec3b1038d1922",
+            "ready_record_sha256": "e5bedfecce12afd0ec9b8d09a224ca0f3218c1a28bdf98080db1f90d05b9b5d0",
+            "release_sha256": "323cdf3625f41c2a2c71e759a3f807768db4031d67ca87c17ef8228c00027878",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -479,7 +485,39 @@
                 "release_sha256": "18528d6d25b135d8458a6c76746c774f9a8fd2de1ce7055d94e71824c5864fe8",
                 "type": "qualified-candidate"
               }
+            },
+            "2": {
+              "date": "2026-11-05",
+              "files": {
+                "kit": {
+                  "archive": "archive/a71f861befc1d82ccde449cae09df513658dcad21836cc602a9a85aff6a8800b/cps-plus-1.7-kit.zip",
+                  "name": "cps-plus-1.7-kit.zip",
+                  "sha256": "a71f861befc1d82ccde449cae09df513658dcad21836cc602a9a85aff6a8800b",
+                  "size": 5389165
+                }
+              },
+              "game_contract_sha256": "d378baefed1c86df8121d93844e548b28c35be6ba0f045615fb78c8afd6f3939",
+              "kind": "kit",
+              "qualification": {
+                "candidate": "1.7-tools-r2-cli-errors-candidate.1",
+                "capcom_source_commit": "4ea7255ae11a60e6c46581721b4ec3b1038d1922",
+                "ready_record_sha256": "e5bedfecce12afd0ec9b8d09a224ca0f3218c1a28bdf98080db1f90d05b9b5d0",
+                "release_sha256": "323cdf3625f41c2a2c71e759a3f807768db4031d67ca87c17ef8228c00027878",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "kit": "498510c73bb03f542719caf43c19fcaeb2960a57f01e992d452cbc7d0e45bce8"
+                },
+                "revision": 1
+              }
             }
+          },
+          "tooling_baseline": {
+            "files": {
+              "kit": "498510c73bb03f542719caf43c19fcaeb2960a57f01e992d452cbc7d0e45bce8"
+            },
+            "revision": 1
           }
         }
       }
@@ -2515,14 +2553,14 @@
           }
         },
         "1.1": {
-          "current_revision": 2,
-          "date": "2026-10-25",
+          "current_revision": 3,
+          "date": "2026-11-05",
           "files": {
             "kit": {
-              "archive": "archive/f815152a08d84e0c8764f22a8bd219e4ca413631f001906e507e81125a418987/ng-plus-1.1-kit.zip",
+              "archive": "archive/a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc/ng-plus-1.1-kit.zip",
               "name": "ng-plus-1.1-kit.zip",
-              "sha256": "f815152a08d84e0c8764f22a8bd219e4ca413631f001906e507e81125a418987",
-              "size": 1703592
+              "sha256": "a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc",
+              "size": 1746446
             }
           },
           "game_contract_sha256": "a17a3b59f407dd394c4d1a1593a25e65dd135c959c16f34152783dec30529308",
@@ -2536,13 +2574,18 @@
               "date": "2026-10-25",
               "reason": "tooling update",
               "revision": 2
+            },
+            {
+              "date": "2026-11-05",
+              "reason": "tooling update",
+              "revision": 3
             }
           ],
           "qualification": {
-            "candidate": "dependency-tools-20261025-candidate.2",
-            "capcom_source_commit": "b7f61d0b6d2fd361e357f08c657114f873702af7",
-            "ready_record_sha256": "2038c2378bb0a36b98bc1af9487cb5e5cedeab09a925fdbc72f8320f036313b7",
-            "release_sha256": "dfa182daef10774350db4297f2ac10743e74f6bfdc1aa2a20899983e3b716ccd",
+            "candidate": "1.1-tools-r3-cli-errors-candidate.1",
+            "capcom_source_commit": "4ea7255ae11a60e6c46581721b4ec3b1038d1922",
+            "ready_record_sha256": "e7bf85c3409a6ad5334775d181f2d6be2484aaa833873790a2339d625c7a7ae7",
+            "release_sha256": "a6fe2364f0d0292427dca3a3ff02b04152b77c138e98b8cf2c45f882658d1160",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -2590,13 +2633,39 @@
                 },
                 "revision": 1
               }
+            },
+            "3": {
+              "date": "2026-11-05",
+              "files": {
+                "kit": {
+                  "archive": "archive/a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc/ng-plus-1.1-kit.zip",
+                  "name": "ng-plus-1.1-kit.zip",
+                  "sha256": "a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc",
+                  "size": 1746446
+                }
+              },
+              "game_contract_sha256": "a17a3b59f407dd394c4d1a1593a25e65dd135c959c16f34152783dec30529308",
+              "kind": "kit",
+              "qualification": {
+                "candidate": "1.1-tools-r3-cli-errors-candidate.1",
+                "capcom_source_commit": "4ea7255ae11a60e6c46581721b4ec3b1038d1922",
+                "ready_record_sha256": "e7bf85c3409a6ad5334775d181f2d6be2484aaa833873790a2339d625c7a7ae7",
+                "release_sha256": "a6fe2364f0d0292427dca3a3ff02b04152b77c138e98b8cf2c45f882658d1160",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "kit": "f815152a08d84e0c8764f22a8bd219e4ca413631f001906e507e81125a418987"
+                },
+                "revision": 2
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "kit": "20513a119caaa82364d37508136d69d0af6556a3dded6bb91d4016239107690f"
+              "kit": "f815152a08d84e0c8764f22a8bd219e4ca413631f001906e507e81125a418987"
             },
-            "revision": 1
+            "revision": 2
           }
         }
       }
@@ -5181,14 +5250,14 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 2,
-          "date": "2026-11-04",
+          "current_revision": 3,
+          "date": "2026-11-05",
           "files": {
             "kit": {
-              "archive": "archive/9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329/sfa3-upper-cps2-rc1-kit.zip",
+              "archive": "archive/1ce6ef2eb2dca7563d234dc66f9a74c5194e8969ea3a24b996e51051b4030334/sfa3-upper-cps2-rc1-kit.zip",
               "name": "sfa3-upper-cps2-rc1-kit.zip",
-              "sha256": "9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329",
-              "size": 4262109
+              "sha256": "1ce6ef2eb2dca7563d234dc66f9a74c5194e8969ea3a24b996e51051b4030334",
+              "size": 4291620
             }
           },
           "game_contract_sha256": "01b2fc9158eeeafae22ad081995d013bfcf8350cf682f1fc1bdb67808a717e38",
@@ -5202,13 +5271,18 @@
               "date": "2026-11-04",
               "reason": "tooling update",
               "revision": 2
+            },
+            {
+              "date": "2026-11-05",
+              "reason": "tooling update",
+              "revision": 3
             }
           ],
           "qualification": {
-            "candidate": "rc1-candidate.15",
-            "capcom_source_commit": "01342341d05ebed2114f66fab94ce1047d17de88",
-            "ready_record_sha256": "88a5e2fc5f995c10eac7d8ff056839a44213fa374878b9d61b4b9a83e23fcfe9",
-            "release_sha256": "794952c98a9d99ceb7eb29f8019e0305ac94b77bb8b0a6a65033a04ed1cd69ff",
+            "candidate": "rc1-tools-r3-cli-errors-candidate.1",
+            "capcom_source_commit": "4ea7255ae11a60e6c46581721b4ec3b1038d1922",
+            "ready_record_sha256": "7c652fb8a07a95da6742f0c226ae17cf8c67ee8b2aff80eea6df4f7c1735deb3",
+            "release_sha256": "a042bcd6721ee436b02c28098413aeade411fdf9a2d28a990ea3520daacf014c",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -5256,13 +5330,39 @@
                 },
                 "revision": 1
               }
+            },
+            "3": {
+              "date": "2026-11-05",
+              "files": {
+                "kit": {
+                  "archive": "archive/1ce6ef2eb2dca7563d234dc66f9a74c5194e8969ea3a24b996e51051b4030334/sfa3-upper-cps2-rc1-kit.zip",
+                  "name": "sfa3-upper-cps2-rc1-kit.zip",
+                  "sha256": "1ce6ef2eb2dca7563d234dc66f9a74c5194e8969ea3a24b996e51051b4030334",
+                  "size": 4291620
+                }
+              },
+              "game_contract_sha256": "01b2fc9158eeeafae22ad081995d013bfcf8350cf682f1fc1bdb67808a717e38",
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc1-tools-r3-cli-errors-candidate.1",
+                "capcom_source_commit": "4ea7255ae11a60e6c46581721b4ec3b1038d1922",
+                "ready_record_sha256": "7c652fb8a07a95da6742f0c226ae17cf8c67ee8b2aff80eea6df4f7c1735deb3",
+                "release_sha256": "a042bcd6721ee436b02c28098413aeade411fdf9a2d28a990ea3520daacf014c",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "kit": "9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329"
+                },
+                "revision": 2
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "kit": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4"
+              "kit": "9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329"
             },
-            "revision": 1
+            "revision": 2
           }
         }
       }
@@ -7477,14 +7577,14 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 6,
-          "date": "2026-10-27",
+          "current_revision": 7,
+          "date": "2026-11-05",
           "files": {
             "kit": {
-              "archive": "archive/3700be01a2cf8c9309f1cf25b591cef7779faa44f4110e5cb1fa1750907b6751/strider-ex-rc1-kit.zip",
+              "archive": "archive/d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d/strider-ex-rc1-kit.zip",
               "name": "strider-ex-rc1-kit.zip",
-              "sha256": "3700be01a2cf8c9309f1cf25b591cef7779faa44f4110e5cb1fa1750907b6751",
-              "size": 49464055
+              "sha256": "d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d",
+              "size": 49595337
             }
           },
           "game_contract_sha256": "dcf2a905318d569db2e551eb6e050c5c7ee1afd2829df9c746bb87051ca3859a",
@@ -7518,13 +7618,18 @@
               "date": "2026-10-27",
               "reason": "tooling update",
               "revision": 6
+            },
+            {
+              "date": "2026-11-05",
+              "reason": "tooling update",
+              "revision": 7
             }
           ],
           "qualification": {
-            "candidate": "rc1-r6-candidate.1",
-            "capcom_source_commit": "ad97116aa03483f8100c918f7080bde80ef4c3ed",
-            "ready_record_sha256": "bfa393479375745bb7799dc351071a5c03f14449af0b428b819830ad6486e47a",
-            "release_sha256": "4a11085e77dbe50e9f2ecbb8ce38605d79f9a23e1ad1c2906cd40a8e3d5c0bf3",
+            "candidate": "rc1-tools-r7-cli-errors-candidate.1",
+            "capcom_source_commit": "4ea7255ae11a60e6c46581721b4ec3b1038d1922",
+            "ready_record_sha256": "22b6fd221d0fbb41659ae3ad10d6ff7e8e73e4c703f9c8acf8f6644022276625",
+            "release_sha256": "c6eb1dfc78453e7ad0f247462421396a113d9405744357b55a924eb8f7bb6cbe",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -7676,13 +7781,39 @@
                 },
                 "revision": 5
               }
+            },
+            "7": {
+              "date": "2026-11-05",
+              "files": {
+                "kit": {
+                  "archive": "archive/d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d/strider-ex-rc1-kit.zip",
+                  "name": "strider-ex-rc1-kit.zip",
+                  "sha256": "d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d",
+                  "size": 49595337
+                }
+              },
+              "game_contract_sha256": "dcf2a905318d569db2e551eb6e050c5c7ee1afd2829df9c746bb87051ca3859a",
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc1-tools-r7-cli-errors-candidate.1",
+                "capcom_source_commit": "4ea7255ae11a60e6c46581721b4ec3b1038d1922",
+                "ready_record_sha256": "22b6fd221d0fbb41659ae3ad10d6ff7e8e73e4c703f9c8acf8f6644022276625",
+                "release_sha256": "c6eb1dfc78453e7ad0f247462421396a113d9405744357b55a924eb8f7bb6cbe",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "kit": "3700be01a2cf8c9309f1cf25b591cef7779faa44f4110e5cb1fa1750907b6751"
+                },
+                "revision": 6
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "kit": "ccc66b4578335bc496201451ca52942fc131a640f9b18745b94de91ebcaea281"
+              "kit": "3700be01a2cf8c9309f1cf25b591cef7779faa44f4110e5cb1fa1750907b6751"
             },
-            "revision": 5
+            "revision": 6
           }
         }
       }

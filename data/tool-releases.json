@@ -2366,17 +2366,6 @@
       }
     },
     "native_tooling": {
-      "cps-plus": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "498510c73bb03f542719caf43c19fcaeb2960a57f01e992d452cbc7d0e45bce8",
-        "game_version": "1.7",
-        "isolated_metadata": "passed",
-        "kit_revision": 2,
-        "kit_sha256": "2949b2f1d77f94e2fe0ad5ea5ddb374339b635912b38937f082ee79a6c2862ac",
-        "native_outputs_sha256": "3262a8cc0f0536be5b0064f98fe6d8b874674247e65b0c75e400e348d5932480",
-        "ready_record_sha256": "7644c1ba9277ba586f1206ca1c0826e5a680bc225385e13a1e2b4e6618859dca",
-        "targets": 77
-      },
       "dstlk-restoration": {
         "accepted_export_contracts": "unchanged",
         "baseline_kit_sha256": "8744770f4dc922271c216366f4474be955f093db263ad9ba0391961270a8d1d0",
@@ -2425,17 +2414,6 @@
         "native_outputs_sha256": "70bba5456ee68cbbb0b76297ceadea72b58b4cbe27ed7b2a9b59bdb7f0a30c12",
         "ready_record_sha256": "d4bf3cb91b2f85822d71a4bc4ded27999048e06ffaab4a318ea4183935dde746",
         "targets": 10
-      },
-      "ng-plus": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "f815152a08d84e0c8764f22a8bd219e4ca413631f001906e507e81125a418987",
-        "game_version": "1.1",
-        "isolated_metadata": "passed",
-        "kit_revision": 3,
-        "kit_sha256": "250075bba0c177f4c9e0caddf1911152f58529d5a9d38caf076e563d42de2721",
-        "native_outputs_sha256": "1ca4e74094b9ef4673c4c3ccea77852d1a339f511896d1394afa45d82e903059",
-        "ready_record_sha256": "2038c2378bb0a36b98bc1af9487cb5e5cedeab09a925fdbc72f8320f036313b7",
-        "targets": 25
       },
       "nwarr-restoration": {
         "accepted_export_contracts": "unchanged",
@@ -2563,17 +2541,6 @@
         "native_outputs_sha256": "93eaae20f8b8edcd05280315d9f3909ae9fb1b952c33311f3a84b3b83d0d60c8",
         "ready_record_sha256": "31c56387846daafff946c408d21599b25a0934a1a8a6c6c66bf62e2884204c87",
         "targets": 5
-      },
-      "strider-ex": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "3700be01a2cf8c9309f1cf25b591cef7779faa44f4110e5cb1fa1750907b6751",
-        "game_version": "rc1",
-        "isolated_metadata": "passed",
-        "kit_revision": 7,
-        "kit_sha256": "2b72058c18df91888de08a75836d140cba8f512040f1985770f6dc9dfc706580",
-        "native_outputs_sha256": "d9f3bd77103f29e678887621095e81929f94adcaf32d6defed36ab1cee843cc3",
-        "ready_record_sha256": "bfa393479375745bb7799dc351071a5c03f14449af0b428b819830ad6486e47a",
-        "targets": 4
       },
       "vhunt2-english": {
         "accepted_export_contracts": "unchanged",
@@ -2802,9 +2769,17 @@
       "sha256": "0612f3f12e5b1df9e5638b2a0440f5e3cb89e3a2287ba79e458bfb3797fadd2b",
       "size": 34959
     },
+    "catalog/v1/definitions/067aeab41aa3645fe3abd82aeba567d043d1e981cd5fbe275102748cc0308018.json": {
+      "sha256": "067aeab41aa3645fe3abd82aeba567d043d1e981cd5fbe275102748cc0308018",
+      "size": 74470
+    },
     "catalog/v1/definitions/0a29e9c9046f366796c0f2167179525dc4a79de5a498776725cc8cf7d35ee558.json": {
       "sha256": "0a29e9c9046f366796c0f2167179525dc4a79de5a498776725cc8cf7d35ee558",
       "size": 74470
+    },
+    "catalog/v1/definitions/0ae75d610b46df6802eb77a31507f709c6c4be260f036198478d6bb5e39153e9.json": {
+      "sha256": "0ae75d610b46df6802eb77a31507f709c6c4be260f036198478d6bb5e39153e9",
+      "size": 574446
     },
     "catalog/v1/definitions/17a4641145945e30d4c63cced1d454dce37f79f4e51492e3fcc257b09aeac9f9.json": {
       "sha256": "17a4641145945e30d4c63cced1d454dce37f79f4e51492e3fcc257b09aeac9f9",
@@ -2853,6 +2828,10 @@
     "catalog/v1/definitions/58cfbbb5c71d4175e042c286a35b6457ce0f866360c8d538e2657e0812598416.json": {
       "sha256": "58cfbbb5c71d4175e042c286a35b6457ce0f866360c8d538e2657e0812598416",
       "size": 34805
+    },
+    "catalog/v1/definitions/60f43217002578f34df82a1e7e19300f8562a1187c316a068e37f13b51405931.json": {
+      "sha256": "60f43217002578f34df82a1e7e19300f8562a1187c316a068e37f13b51405931",
+      "size": 105262
     },
     "catalog/v1/definitions/62a0e4cc8d37c59adcd215d1ac6ea1a66563fbe20ab670df60cf7f9c48a0b43a.json": {
       "sha256": "62a0e4cc8d37c59adcd215d1ac6ea1a66563fbe20ab670df60cf7f9c48a0b43a",
@@ -2938,6 +2917,10 @@
       "sha256": "ca26973c57d877ba5c4dd984ca85a3608e16ca55def855d800faa07d26bc8d4b",
       "size": 114354
     },
+    "catalog/v1/definitions/d5bdea137fdda4c4f94b0baaa3becdaf0e40607939972e5666d39889445e81fa.json": {
+      "sha256": "d5bdea137fdda4c4f94b0baaa3becdaf0e40607939972e5666d39889445e81fa",
+      "size": 114354
+    },
     "catalog/v1/definitions/d99490483005e1d13f86a52bb077536d1a2e53b6e837d75e79bd1fc787e1a3ea.json": {
       "sha256": "d99490483005e1d13f86a52bb077536d1a2e53b6e837d75e79bd1fc787e1a3ea",
       "size": 57527
@@ -2955,8 +2938,8 @@
       "size": 127219
     },
     "catalog/v1/index.json": {
-      "sha256": "f3c21af0e4aa8b0de938c75bdb14d9199d0fdc5e43d29c217145a8d7b4f9a969",
-      "size": 28343
+      "sha256": "e50ac7a7f39b657af455f198a2be0b399a5f0f58246f24dbc51d38558432ca28",
+      "size": 28325
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
       "sha256": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4",
@@ -2969,6 +2952,10 @@
     "downloads/archive/188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed/sfa3-restoration-rc5-ips.zip": {
       "sha256": "188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed",
       "size": 563986
+    },
+    "downloads/archive/1ce6ef2eb2dca7563d234dc66f9a74c5194e8969ea3a24b996e51051b4030334/sfa3-upper-cps2-rc1-kit.zip": {
+      "sha256": "1ce6ef2eb2dca7563d234dc66f9a74c5194e8969ea3a24b996e51051b4030334",
+      "size": 4291620
     },
     "downloads/archive/1df5dde39e1d18a1fc249a78d378bab88680157dfce406a58c6b82c2bfc8f7b7/vhunt2-arrange-rc3-kit.zip": {
       "sha256": "1df5dde39e1d18a1fc249a78d378bab88680157dfce406a58c6b82c2bfc8f7b7",
@@ -2990,9 +2977,21 @@
       "sha256": "9c5ea94612996b14ec857fcf5356409e7f82371950a2056868efabf95e6d82ce",
       "size": 439071
     },
+    "downloads/archive/a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc/ng-plus-1.1-kit.zip": {
+      "sha256": "a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc",
+      "size": 1746446
+    },
+    "downloads/archive/a71f861befc1d82ccde449cae09df513658dcad21836cc602a9a85aff6a8800b/cps-plus-1.7-kit.zip": {
+      "sha256": "a71f861befc1d82ccde449cae09df513658dcad21836cc602a9a85aff6a8800b",
+      "size": 5389165
+    },
     "downloads/archive/c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09/ssf2-ex-rc13-ips.zip": {
       "sha256": "c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09",
       "size": 1416374
+    },
+    "downloads/archive/d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d/strider-ex-rc1-kit.zip": {
+      "sha256": "d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d",
+      "size": 49595337
     },
     "downloads/archive/d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd/final-fight-ex-cps2-rc3-kit.zip": {
       "sha256": "d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd",
@@ -3027,7 +3026,7 @@
       "size": 44138
     }
   },
-  "generation": 55,
+  "generation": 59,
   "launcher": "tools/downloads/archive/09bf1e6ec4c9b5b8d4d959e7385b9b49f03497a9cbd3961beb7cd7d045d8b8c2/ArcadePatches-0.1.2.zip",
   "native_updates": [
     {
@@ -3141,6 +3140,38 @@
       "project": "hsf2-restoration",
       "ready_sha256": "78829c7da4e364457c5f7c437a2b6bfdc709a562c6dc26d6fc08fada9496d20a",
       "release_sha256": "bcc58b38cafff17b36580793199b6baef360ee1973501e6b4b4ee094d65aad3f"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 3,
+      "kit_sha256": "1ce6ef2eb2dca7563d234dc66f9a74c5194e8969ea3a24b996e51051b4030334",
+      "project": "sfa3-upper-cps2",
+      "ready_sha256": "7c652fb8a07a95da6742f0c226ae17cf8c67ee8b2aff80eea6df4f7c1735deb3",
+      "release_sha256": "a042bcd6721ee436b02c28098413aeade411fdf9a2d28a990ea3520daacf014c"
+    },
+    {
+      "game_version": "1.7",
+      "kit_revision": 2,
+      "kit_sha256": "a71f861befc1d82ccde449cae09df513658dcad21836cc602a9a85aff6a8800b",
+      "project": "cps-plus",
+      "ready_sha256": "e5bedfecce12afd0ec9b8d09a224ca0f3218c1a28bdf98080db1f90d05b9b5d0",
+      "release_sha256": "323cdf3625f41c2a2c71e759a3f807768db4031d67ca87c17ef8228c00027878"
+    },
+    {
+      "game_version": "1.1",
+      "kit_revision": 3,
+      "kit_sha256": "a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc",
+      "project": "ng-plus",
+      "ready_sha256": "e7bf85c3409a6ad5334775d181f2d6be2484aaa833873790a2339d625c7a7ae7",
+      "release_sha256": "a6fe2364f0d0292427dca3a3ff02b04152b77c138e98b8cf2c45f882658d1160"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 7,
+      "kit_sha256": "d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d",
+      "project": "strider-ex",
+      "ready_sha256": "22b6fd221d0fbb41659ae3ad10d6ff7e8e73e4c703f9c8acf8f6644022276625",
+      "release_sha256": "c6eb1dfc78453e7ad0f247462421396a113d9405744357b55a924eb8f7bb6cbe"
     }
   ],
   "package_receipt": {
