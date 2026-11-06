@@ -1,6 +1,19 @@
 {
   "schema": 1,
   "ips": {
+    "sfa-ex": {
+      "profile": "sfzj",
+      "menus": {
+        "usa": "SFAlpha EX    =U",
+        "japan": "SFZero EX     =J",
+        "asia": "SFZero EX     =A"
+      }
+    },
+    "hsf2-restoration": {
+      "profile": "hsf2j",
+      "mame_build": false,
+      "menus": {"default": "Hyper SFII R  =U"}
+    },
     "sfa-restoration": {
       "profile": "sfzj",
       "menus": {
@@ -105,6 +118,8 @@
     }
   },
   "exceptions": {
+    "sfa3-upper-cps2": "Expanded CPS-2 resources; no stock Darksoft export declared.",
+    "strider-ex": "CPS-1 custom layout requires a separate mapper and capacity assessment.",
     "vsav-arrange": "Expanded graphics/audio and CPS+ music require separate hardware assessment.",
     "vsav2-arrange": "Evolved hardware is required; no stock Darksoft version.",
     "vhunt2-arrange": "Expanded program/graphics/audio; no stock Darksoft version.",

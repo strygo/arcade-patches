@@ -74,7 +74,7 @@ def main():
     )
     ap.add_argument("chd", help="your dump of the game (gdl-0002.chd)")
     ap.add_argument("-o", "--output", help="output CHD path (default: <name>-patched.chd)")
-    ap.add_argument("--chdman", help="path to chdman (default: installed or verified download)")
+    ap.add_argument("--chdman", help="chdman executable, containing folder, or command (default: installed or verified download)")
     ap.add_argument("--tmp", help="directory for ~2.5 GB of temporary files")
     ap.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
     from tool_controls import add_arguments, configure
@@ -117,8 +117,8 @@ def main():
 
     from fetch_optional_tools import disc_tool
     if args.chdman:
-        if not shutil.which(args.chdman):
-            fail(f"chdman not found: {args.chdman}")
+        from tool_controls import executable_path
+        args.chdman = str(executable_path(args.chdman, ('chdman.exe','chdman'), label='chdman'))
     else:
         args.chdman = disc_tool('chdman')
 

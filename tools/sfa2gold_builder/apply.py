@@ -109,7 +109,8 @@ def write_set(members, want, out_path):
 def main():
     ap = argparse.ArgumentParser(description=DESCRIPTION,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--iso", help="your PS2 anthology disc image")
+    ap.add_argument("--iso", "--disc", dest="iso", help="your PS2 anthology DVD ISO or CHD")
+    ap.add_argument("--chdman", help="optional chdman executable or containing folder for DVD CHDs")
     ap.add_argument("--romset", help="your arcade ZIP, 7z, or ROM folder")
     ap.add_argument("--rompath", action="append", default=[])
     ap.add_argument("--include-devices", action="store_true")
@@ -179,11 +180,13 @@ def main():
              + ". Add its parent archive with --rompath.")
     print("Extracting Cammy data from your disc (this takes a minute)...")
     try:
-        z6 = ex.extract_zero6(args.iso, profile)
-        audio = ex.extract_audio(args.iso, profile)
+        from disc_sources import dvd_iso
+        with dvd_iso(args.iso,chdman=args.chdman) as iso:
+            z6 = ex.extract_zero6(iso, profile)
+            audio = ex.extract_audio(iso, profile)
     except Exception as exc:  # noqa: BLE001
         fail(f"could not extract from the disc — is this the {args.region.upper()} "
-             f"anthology ISO? ({exc})\n"
+             f"anthology DVD (ISO or CHD)? ({exc})\n"
              f"       looked for: {Path(args.iso).absolute()}")
     if args.check_disc:
         print(f"{TITLE} arcade ROMs and disc resources verified")

@@ -43,7 +43,8 @@ def fail(msg):
 def main():
     ap = argparse.ArgumentParser(description=KIT["description"],
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--iso", help="your Vampire: Darkstalkers Collection (Japan) disc image")
+    ap.add_argument("--iso", "--disc", dest="iso", help="your Vampire: Darkstalkers Collection (Japan) DVD ISO or CHD")
+    ap.add_argument("--chdman", help="optional chdman executable or containing folder for DVD CHDs")
     ap.add_argument("--romset", action="append", default=[], help="an arcade ZIP, 7z or ROM folder (repeatable)")
     ap.add_argument("--rompath", action="append", default=[], help="a folder to search for romsets (repeatable)")
     ap.add_argument("--region", choices=(*KIT["regions"], "all"), default="all")
@@ -51,7 +52,10 @@ def main():
     ap.add_argument("--check", action="store_true", help="verify the arcade inputs only")
     ap.add_argument("--out-dir", help="build into this folder")
     ap.add_argument("--debug", action="store_true", help="show a traceback for troubleshooting")
+    from tool_controls import add_arguments,configure
+    add_arguments(ap)
     args = ap.parse_args()
+    configure(sys.argv[1:])
     if args.iso:
         args.iso = require_path(args.iso, "--iso", file=True)
     if not args.check and not args.iso:
@@ -81,10 +85,12 @@ def main():
     if not args.iso:
         fail(f"--iso is required to build {KIT['title']}")
     try:
-        disc = collection.Disc(args.iso)
+        from disc_sources import dvd_iso
+        with dvd_iso(args.iso,chdman=args.chdman) as iso:
+            collection.Disc(iso)
+            files = build_native_outputs(iso, roms, firmware.get(QSOUND['name']), args.region)
     except (OSError, ValueError) as exc:
         fail(f"{exc}\n       looked for: {Path(args.iso).absolute()}")
-    files = build_native_outputs(args.iso, roms, firmware.get(QSOUND['name']), args.region)
     publish_tree(Path(args.out_dir), files)
     print_completion(args.out_dir, files)
 

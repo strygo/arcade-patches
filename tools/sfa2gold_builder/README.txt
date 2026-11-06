@@ -23,6 +23,13 @@ WHAT YOU NEED
        - sfz2alj.zip for the Japan set
   3. Python 3.10 or newer. Nothing else — no emulator, no assembler.
 
+The PS2 input may be an ISO or a DVD CHD. Use --disc (or the existing --iso
+option) for either; the correct game and region are still verified. DVD CHDs
+are decoded temporarily with chdman, using an installed copy or a verified
+download. Override it with --chdman <executable-or-folder>. Allow enough extra
+temporary storage for the uncompressed DVD. --offline requires chdman to be
+installed, cached, or supplied in your offline tools bundle.
+
 USAGE (recommended — build every platform for one region)
 ----------------------------------------------------------
 

@@ -2365,201 +2365,7 @@
         "unsupported_targets": []
       }
     },
-    "native_tooling": {
-      "dstlk-restoration": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "8744770f4dc922271c216366f4474be955f093db263ad9ba0391961270a8d1d0",
-        "game_version": "rc1",
-        "isolated_metadata": "passed",
-        "kit_revision": 7,
-        "kit_sha256": "224d77a92abb0c258096acc447df9a2391a0444f49b9f59fa4e167ab6892a848",
-        "metadata_crc_enrichment": {
-          "added": 22,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "8744770f4dc922271c216366f4474be955f093db263ad9ba0391961270a8d1d0"
-        },
-        "native_outputs_sha256": "bb8c16a527e068310038d1b5b6ff81afa29a81cbe3194619c44c3317ea277030",
-        "ready_record_sha256": "05efa69ba104046448c55b97d8b361db5044907083d7940dfb7debe2482f1643",
-        "targets": 5
-      },
-      "final-fight-ex": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "313711d86ccb5b8f30448a41d3ddab8237c9bd6c7410a90b28e42edcafb8f85b",
-        "game_version": "rc4",
-        "isolated_metadata": "passed",
-        "kit_revision": 2,
-        "kit_sha256": "9d9ee7d6649f20a3d7aaa3ee854bcad55b819d5cf1efe39f6f3407d5798dca6f",
-        "native_outputs_sha256": "020523948be5504dcf2bc8ecc2c08e03c8dba27f5329add0a8d6b0253563dfeb",
-        "ready_record_sha256": "0c6e9a36d0b715f8e1ef3ac592b8263d725b5e92e501377fc9c180bdf0a29569",
-        "targets": 4
-      },
-      "mshvsf-restoration": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "ff35b59d5982bd3fbacbec0a2bb77231ab9b7958a79c984fa624e71adeb43c8e",
-        "game_version": "rc1",
-        "isolated_metadata": "passed",
-        "kit_revision": 8,
-        "kit_sha256": "ff8ca8d6632cde077122d4a5f89a52b0d924d8de4369fe382b9862a1cba7bb41",
-        "metadata_crc_enrichment": {
-          "added": 22,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "ff35b59d5982bd3fbacbec0a2bb77231ab9b7958a79c984fa624e71adeb43c8e"
-        },
-        "native_outputs_sha256": "70bba5456ee68cbbb0b76297ceadea72b58b4cbe27ed7b2a9b59bdb7f0a30c12",
-        "ready_record_sha256": "d4bf3cb91b2f85822d71a4bc4ded27999048e06ffaab4a318ea4183935dde746",
-        "targets": 10
-      },
-      "nwarr-restoration": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "6956284fa00afd05d3080ddb34a69d8b08338514f31efcf15f46b71204ca3f1e",
-        "game_version": "rc1",
-        "isolated_metadata": "passed",
-        "kit_revision": 7,
-        "kit_sha256": "08f8251afda9695f3744cff088edac361e14959e91cb7b4918348d3ec1ac3a05",
-        "metadata_crc_enrichment": {
-          "added": 22,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "6956284fa00afd05d3080ddb34a69d8b08338514f31efcf15f46b71204ca3f1e"
-        },
-        "native_outputs_sha256": "9b0e09137fa6afc93d31e57d8dd52cdd72be0e406838cbc3c8ea19bf91187285",
-        "ready_record_sha256": "fa758f2c25aef722f621da1deed8141120b31b8ca3520e140cbc8bae3fe2e1fe",
-        "targets": 5
-      },
-      "sfa2-restoration": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "24bcfb5bfcc6fdbacfa150cdeb03392f9e9bc3bd36af12200388e46c4d03a102",
-        "game_version": "rc2",
-        "isolated_metadata": "passed",
-        "kit_revision": 6,
-        "kit_sha256": "3ca40dd13d816bbf3c331de7193ef421a942ed6c9efb987326135487651a58f3",
-        "metadata_crc_enrichment": {
-          "added": 20,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "24bcfb5bfcc6fdbacfa150cdeb03392f9e9bc3bd36af12200388e46c4d03a102"
-        },
-        "native_outputs_sha256": "821f1073f0f862c6748ee526e2605be94342fc0af46104aa951146015bde66d4",
-        "ready_record_sha256": "81add7a40f1843cf03b63d74477feaf3ab6c72071072a87556a219294de922e9",
-        "targets": 15
-      },
-      "sfz2al-restoration": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "02701c5ca0909efa3b316ca3641ac982464226ff8b9fee3617b7a7416d79b753",
-        "game_version": "rc2",
-        "isolated_metadata": "passed",
-        "kit_revision": 6,
-        "kit_sha256": "e363df76b8c491c9795066fcafa57eef302e3bcb6e0759d1df41773e32bae01c",
-        "metadata_crc_enrichment": {
-          "added": 20,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "02701c5ca0909efa3b316ca3641ac982464226ff8b9fee3617b7a7416d79b753"
-        },
-        "native_outputs_sha256": "acc2967ec8e409e3dc2530ac3254dce96ed126a0834f49edc969e4283f1a46e7",
-        "ready_record_sha256": "94b8838c3d9e64fb7716442020791d3dcd3eb7a16aa3d030c8cfe600301228cd",
-        "targets": 5
-      },
-      "sfz3ugd-multiregion": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "0076c2a4d4edc7b4524e32ea5a4a158c83de6c20c11922db03571802386e17fa",
-        "game_version": "1.0",
-        "isolated_metadata": "passed",
-        "kit_revision": 4,
-        "kit_sha256": "cb859d612a7840005ed2591b08cf1f28e8bb2032ffb3227301a9a3bb74b7bedd",
-        "native_outputs_sha256": "1125c1c5bfe64b02a13f5975db1f94f618684c6a98830cfdc66537e574930ebb",
-        "ready_record_sha256": "0cf9300ff2773c22521dbf681b9eac86d4bccd79b1141439704baa36a0d17208",
-        "targets": 1
-      },
-      "ssf2t-gmc": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "02927da8710e8c996dbb841e405b6d0c4bf76d8e2d7c3a2a090ece5b4abc46fd",
-        "game_version": "rc4",
-        "isolated_metadata": "passed",
-        "kit_revision": 3,
-        "kit_sha256": "46824f5eb67eba6d333e87d9a9d10c407690ddb4800cfd3825d9a99837225c11",
-        "metadata_crc_enrichment": {
-          "added": 25,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "02927da8710e8c996dbb841e405b6d0c4bf76d8e2d7c3a2a090ece5b4abc46fd"
-        },
-        "native_outputs_sha256": "93eaae20f8b8edcd05280315d9f3909ae9fb1b952c33311f3a84b3b83d0d60c8",
-        "ready_record_sha256": "31c56387846daafff946c408d21599b25a0934a1a8a6c6c66bf62e2884204c87",
-        "targets": 5
-      },
-      "vhunt2-english": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "fcf330aa18de34a9ceffcd50189084bc00b3320be9e711754cf9af06561bb15f",
-        "game_version": "rc3",
-        "isolated_metadata": "passed",
-        "kit_revision": 6,
-        "kit_sha256": "a4c47544d6d87fdab3b76b82324d54279e54eb2af4dc563e5c17d3c689849193",
-        "metadata_crc_enrichment": {
-          "added": 22,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "fcf330aa18de34a9ceffcd50189084bc00b3320be9e711754cf9af06561bb15f"
-        },
-        "native_outputs_sha256": "7e8751f5e5b6585adfcd6cc4977a58f260e45af26e0b61cde492a43fb0196b85",
-        "ready_record_sha256": "0d7e40e491298032ae8fd4bc6a12044060b75055d0522e094073b2f8e34b1a87",
-        "targets": 5
-      },
-      "vsav-restoration": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "deb96e668a15c5b971db61e046240a013766d9b6264a9d4dc45e87c2e431aea8",
-        "game_version": "rc2",
-        "isolated_metadata": "passed",
-        "kit_revision": 6,
-        "kit_sha256": "5ec16e91bb9b7d2f2cca3ddbc718602302f11f64ad8d5248b997fda9e28487f5",
-        "metadata_crc_enrichment": {
-          "added": 22,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "deb96e668a15c5b971db61e046240a013766d9b6264a9d4dc45e87c2e431aea8"
-        },
-        "native_outputs_sha256": "7131ea65d2498250550cbf4491edb80737b9dae9670ef76eada7e1050d14a194",
-        "ready_record_sha256": "a6a9941f8327953e8c2f26ea131f59ecc10f6f8ba9c1edf5126db08c64f3f77b",
-        "targets": 5
-      },
-      "vsav2-english": {
-        "accepted_export_contracts": "unchanged",
-        "baseline_kit_sha256": "50b80df67e50676c4812bf7feaeb3ea94bacb8b5492c3e6fbb9fda0a13bf99c7",
-        "game_version": "rc3",
-        "isolated_metadata": "passed",
-        "kit_revision": 6,
-        "kit_sha256": "64abe15e740c2bb7cd209cf2c7b46058d5628459c7cb2d654d880c9c17e18dab",
-        "metadata_crc_enrichment": {
-          "added": 22,
-          "changed_members": [
-            "collection.json"
-          ],
-          "export_contracts": "unchanged",
-          "previous_kit_sha256": "50b80df67e50676c4812bf7feaeb3ea94bacb8b5492c3e6fbb9fda0a13bf99c7"
-        },
-        "native_outputs_sha256": "dacdb7a346e802692ff998cd05904c2335507fde32cb284c4113d0bf8fc940c8",
-        "ready_record_sha256": "c83596f0dfe7f36a7424b8f322a4955dd37a90e12452461fe46847dabd9b6830",
-        "targets": 5
-      }
-    },
+    "native_tooling": {},
     "projects": 26,
     "schema": 1,
     "scope": "catalog version/host eligibility and output-contract parity; simulated host metadata only; no native execution or reconstruction",
@@ -2721,9 +2527,25 @@
       "sha256": "ff8ca8d6632cde077122d4a5f89a52b0d924d8de4369fe382b9862a1cba7bb41",
       "size": 178221
     },
+    "catalog/v1/definitions/0207c7e6222ee9623d1f25df2a34f8125a17c00afa6b99f4bbd9ad34321283c9.json": {
+      "sha256": "0207c7e6222ee9623d1f25df2a34f8125a17c00afa6b99f4bbd9ad34321283c9",
+      "size": 34805
+    },
+    "catalog/v1/definitions/02792434b38c62d6726164008bfdc41e42a631387b2ee37b30cad333ceaa78b4.json": {
+      "sha256": "02792434b38c62d6726164008bfdc41e42a631387b2ee37b30cad333ceaa78b4",
+      "size": 127219
+    },
+    "catalog/v1/definitions/02d5c511f2376c785c3632893323ef2a411c1286d0e6e89a6ceb3a9e342c2447.json": {
+      "sha256": "02d5c511f2376c785c3632893323ef2a411c1286d0e6e89a6ceb3a9e342c2447",
+      "size": 58093
+    },
     "catalog/v1/definitions/04883f22c7ac7f13a9a3f7f6d06a7bb0c51fae4b7992268a9ee597f9b702d6e9.json": {
       "sha256": "04883f22c7ac7f13a9a3f7f6d06a7bb0c51fae4b7992268a9ee597f9b702d6e9",
       "size": 84726
+    },
+    "catalog/v1/definitions/0533d2e72dd342c74fe9d90c2a44b0205426b7ba183b9b008efb5edafcde4ffc.json": {
+      "sha256": "0533d2e72dd342c74fe9d90c2a44b0205426b7ba183b9b008efb5edafcde4ffc",
+      "size": 32689
     },
     "catalog/v1/definitions/0612f3f12e5b1df9e5638b2a0440f5e3cb89e3a2287ba79e458bfb3797fadd2b.json": {
       "sha256": "0612f3f12e5b1df9e5638b2a0440f5e3cb89e3a2287ba79e458bfb3797fadd2b",
@@ -2732,6 +2554,10 @@
     "catalog/v1/definitions/067aeab41aa3645fe3abd82aeba567d043d1e981cd5fbe275102748cc0308018.json": {
       "sha256": "067aeab41aa3645fe3abd82aeba567d043d1e981cd5fbe275102748cc0308018",
       "size": 74470
+    },
+    "catalog/v1/definitions/0a22cc6ceb95cb38eebb535e6b473c0099ec48f22a73089de6fb4f4140fd80c7.json": {
+      "sha256": "0a22cc6ceb95cb38eebb535e6b473c0099ec48f22a73089de6fb4f4140fd80c7",
+      "size": 34937
     },
     "catalog/v1/definitions/0a29e9c9046f366796c0f2167179525dc4a79de5a498776725cc8cf7d35ee558.json": {
       "sha256": "0a29e9c9046f366796c0f2167179525dc4a79de5a498776725cc8cf7d35ee558",
@@ -2745,17 +2571,37 @@
       "sha256": "17a4641145945e30d4c63cced1d454dce37f79f4e51492e3fcc257b09aeac9f9",
       "size": 511780
     },
+    "catalog/v1/definitions/193fcb19c8b1cc85c0192285350a0c526f7b96ee16bb477fece2143b4f80d2f4.json": {
+      "sha256": "193fcb19c8b1cc85c0192285350a0c526f7b96ee16bb477fece2143b4f80d2f4",
+      "size": 59664
+    },
     "catalog/v1/definitions/25e27020c4f9a899064dd4bcc114701dec102351ecfb6cd493c0275a09577d04.json": {
       "sha256": "25e27020c4f9a899064dd4bcc114701dec102351ecfb6cd493c0275a09577d04",
       "size": 105262
+    },
+    "catalog/v1/definitions/25f4d958558518e11171f185a6114211ef0aa413499022a5bfa6fc8d79e9aa66.json": {
+      "sha256": "25f4d958558518e11171f185a6114211ef0aa413499022a5bfa6fc8d79e9aa66",
+      "size": 55860
+    },
+    "catalog/v1/definitions/2c9ada1df94d31d849ebb3f6fdcaa761e1e953b605739d4c8e4b52ae503fb5c5.json": {
+      "sha256": "2c9ada1df94d31d849ebb3f6fdcaa761e1e953b605739d4c8e4b52ae503fb5c5",
+      "size": 41729
     },
     "catalog/v1/definitions/30894aebc8f389d6fce7114e9e6555b685ac29aabbdcc64079c11cf5681940f2.json": {
       "sha256": "30894aebc8f389d6fce7114e9e6555b685ac29aabbdcc64079c11cf5681940f2",
       "size": 514282
     },
+    "catalog/v1/definitions/363da8cb9e19c8eb788a482da91a8da80b09aa9c3cb9640fe87049e7682a16e1.json": {
+      "sha256": "363da8cb9e19c8eb788a482da91a8da80b09aa9c3cb9640fe87049e7682a16e1",
+      "size": 74047
+    },
     "catalog/v1/definitions/386fa1f4b644a9ff3aaebee40c59fc01c6fa3d076f7afc17f96e72a01dd61a09.json": {
       "sha256": "386fa1f4b644a9ff3aaebee40c59fc01c6fa3d076f7afc17f96e72a01dd61a09",
       "size": 74047
+    },
+    "catalog/v1/definitions/421e436fad7d1084db57ecb575fcc9a4aba0e75fbf712c4521f5c4dfe93275ac.json": {
+      "sha256": "421e436fad7d1084db57ecb575fcc9a4aba0e75fbf712c4521f5c4dfe93275ac",
+      "size": 55860
     },
     "catalog/v1/definitions/45e56b881a049cb47ecff2a19149a7768cc9effb09e0dc620561e99fc950429c.json": {
       "sha256": "45e56b881a049cb47ecff2a19149a7768cc9effb09e0dc620561e99fc950429c",
@@ -2777,6 +2623,10 @@
       "sha256": "4c2d3162206a0a5cdfc04e4f556765e171111f6d618d8b9d221e15bbf29d3c91",
       "size": 34888
     },
+    "catalog/v1/definitions/4e85eff854e84008712b22803cc3206eb9c9549fb044ad537aea296ab3fbda56.json": {
+      "sha256": "4e85eff854e84008712b22803cc3206eb9c9549fb044ad537aea296ab3fbda56",
+      "size": 27621
+    },
     "catalog/v1/definitions/560b9bcdd79d606ca1a0a9abe800d2b115a7c27daa58257d246076863cd47d5b.json": {
       "sha256": "560b9bcdd79d606ca1a0a9abe800d2b115a7c27daa58257d246076863cd47d5b",
       "size": 60182
@@ -2797,13 +2647,25 @@
       "sha256": "60f43217002578f34df82a1e7e19300f8562a1187c316a068e37f13b51405931",
       "size": 105262
     },
+    "catalog/v1/definitions/61523b62439a908796555a2a406cf7e0e74283d2457f93bff7d29b4c5f048ea4.json": {
+      "sha256": "61523b62439a908796555a2a406cf7e0e74283d2457f93bff7d29b4c5f048ea4",
+      "size": 1806
+    },
     "catalog/v1/definitions/62a0e4cc8d37c59adcd215d1ac6ea1a66563fbe20ab670df60cf7f9c48a0b43a.json": {
       "sha256": "62a0e4cc8d37c59adcd215d1ac6ea1a66563fbe20ab670df60cf7f9c48a0b43a",
       "size": 44798
     },
+    "catalog/v1/definitions/670887424aeac4a3d68d26f4bc5edb83fad34d090b9a74921d3b0b98421a69a2.json": {
+      "sha256": "670887424aeac4a3d68d26f4bc5edb83fad34d090b9a74921d3b0b98421a69a2",
+      "size": 59936
+    },
     "catalog/v1/definitions/674799fa19bbbd0a3a43a0ffd63a8777acae0c7dca82530b882eb85eb2098d92.json": {
       "sha256": "674799fa19bbbd0a3a43a0ffd63a8777acae0c7dca82530b882eb85eb2098d92",
       "size": 45232
+    },
+    "catalog/v1/definitions/6e71d6a9fcbae3643b4f1e9a28aa019707d21b497300dd1007fd2272c5186fd1.json": {
+      "sha256": "6e71d6a9fcbae3643b4f1e9a28aa019707d21b497300dd1007fd2272c5186fd1",
+      "size": 511780
     },
     "catalog/v1/definitions/6f7a27b5e4a7bc15b135a01932e75a878cba768f70459c48dff07a4c88f95dce.json": {
       "sha256": "6f7a27b5e4a7bc15b135a01932e75a878cba768f70459c48dff07a4c88f95dce",
@@ -2816,6 +2678,10 @@
     "catalog/v1/definitions/7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b.json": {
       "sha256": "7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b",
       "size": 514282
+    },
+    "catalog/v1/definitions/7c0ae052c82e7c9f335a55737aa2af926ab112d497e9686a5ebb6ffa6757251a.json": {
+      "sha256": "7c0ae052c82e7c9f335a55737aa2af926ab112d497e9686a5ebb6ffa6757251a",
+      "size": 34959
     },
     "catalog/v1/definitions/81c9ef214e004311b78dfa0385924b374e2260b1c352ddef2f969c1e560107b6.json": {
       "sha256": "81c9ef214e004311b78dfa0385924b374e2260b1c352ddef2f969c1e560107b6",
@@ -2833,17 +2699,37 @@
       "sha256": "8e1da071159ce7e0bff49052bb40d9b0b7419e2008fea1ece6d6f8213c5bc9fb",
       "size": 60618
     },
+    "catalog/v1/definitions/98a54dc483007cf53d2d6b5cb7eaa4cc80a5334f17c3d831650a51a0473a8db4.json": {
+      "sha256": "98a54dc483007cf53d2d6b5cb7eaa4cc80a5334f17c3d831650a51a0473a8db4",
+      "size": 56446
+    },
+    "catalog/v1/definitions/99ffeb63f8d7f839018d019a16254c6c14e470fde8f2a6a2193a5c8def1fec1d.json": {
+      "sha256": "99ffeb63f8d7f839018d019a16254c6c14e470fde8f2a6a2193a5c8def1fec1d",
+      "size": 77696
+    },
     "catalog/v1/definitions/9b0536f55a2782b3107aabc94923cefee9cf7e1629ff5d15bfdb19284f51e029.json": {
       "sha256": "9b0536f55a2782b3107aabc94923cefee9cf7e1629ff5d15bfdb19284f51e029",
       "size": 21916
+    },
+    "catalog/v1/definitions/9c43d974e51d1a5d810aeed01b9653f8ed722bfed33a5cf702d5656479cd6955.json": {
+      "sha256": "9c43d974e51d1a5d810aeed01b9653f8ed722bfed33a5cf702d5656479cd6955",
+      "size": 58605
     },
     "catalog/v1/definitions/9cdf87698509ea5e0e8916608896ecc6c4e70abf163793b802e7c6740836698c.json": {
       "sha256": "9cdf87698509ea5e0e8916608896ecc6c4e70abf163793b802e7c6740836698c",
       "size": 120476
     },
+    "catalog/v1/definitions/a114fac2ca2c8a4875b353f0e016e4b8ca93c952b8a8bc10dc2c306e85834f7e.json": {
+      "sha256": "a114fac2ca2c8a4875b353f0e016e4b8ca93c952b8a8bc10dc2c306e85834f7e",
+      "size": 60224
+    },
     "catalog/v1/definitions/a1263474dda1b24f780b2e33b2628cf3673be3920739852d09433a1b76cff4a6.json": {
       "sha256": "a1263474dda1b24f780b2e33b2628cf3673be3920739852d09433a1b76cff4a6",
       "size": 35160
+    },
+    "catalog/v1/definitions/a4ff3698b640c772e169e9267410c7ecca58700ebae1f9674edafde3e3e2397b.json": {
+      "sha256": "a4ff3698b640c772e169e9267410c7ecca58700ebae1f9674edafde3e3e2397b",
+      "size": 105262
     },
     "catalog/v1/definitions/a71b8c0982863fc84582f7386e2ecb4a0a039aa8a9a3ffa0f4fd6e2ffdfb68f9.json": {
       "sha256": "a71b8c0982863fc84582f7386e2ecb4a0a039aa8a9a3ffa0f4fd6e2ffdfb68f9",
@@ -2856,6 +2742,10 @@
     "catalog/v1/definitions/b50eb63bd7660a26a3524b1eeb406d9a9c40edec3e2da375c1f133d9dbbdeaeb.json": {
       "sha256": "b50eb63bd7660a26a3524b1eeb406d9a9c40edec3e2da375c1f133d9dbbdeaeb",
       "size": 74110
+    },
+    "catalog/v1/definitions/b924eac6255b454a83f00a2d401c5d1b8cc296f56022384f7698b1caf82990d9.json": {
+      "sha256": "b924eac6255b454a83f00a2d401c5d1b8cc296f56022384f7698b1caf82990d9",
+      "size": 27621
     },
     "catalog/v1/definitions/b944cae073e7f2b7b1b7741327b97398d51aeb25c19587d16645a719cce9b281.json": {
       "sha256": "b944cae073e7f2b7b1b7741327b97398d51aeb25c19587d16645a719cce9b281",
@@ -2877,6 +2767,10 @@
       "sha256": "c3a4feb7510d3b98050d208129eb4a4c1f383ae5aeda58637c5367034e95736a",
       "size": 574446
     },
+    "catalog/v1/definitions/c3c8234c3aec644f0d51a6d3d29c263dd3ad66d64cb32d559419e6c20444b19f.json": {
+      "sha256": "c3c8234c3aec644f0d51a6d3d29c263dd3ad66d64cb32d559419e6c20444b19f",
+      "size": 57527
+    },
     "catalog/v1/definitions/c95f0f99e339b4ef96fbc05c80e3d932761195558d75c76e9540e4542d23ceb3.json": {
       "sha256": "c95f0f99e339b4ef96fbc05c80e3d932761195558d75c76e9540e4542d23ceb3",
       "size": 56446
@@ -2884,6 +2778,18 @@
     "catalog/v1/definitions/ca26973c57d877ba5c4dd984ca85a3608e16ca55def855d800faa07d26bc8d4b.json": {
       "sha256": "ca26973c57d877ba5c4dd984ca85a3608e16ca55def855d800faa07d26bc8d4b",
       "size": 114354
+    },
+    "catalog/v1/definitions/d07b6ad8ff6b59cdab3062ca5d9085bc802ebf7702c45d103807cd3579a98449.json": {
+      "sha256": "d07b6ad8ff6b59cdab3062ca5d9085bc802ebf7702c45d103807cd3579a98449",
+      "size": 85056
+    },
+    "catalog/v1/definitions/d1f952b1b1b122afbc0153173f7b2b79c15babfc6b0c74ea42d6f72859807b5c.json": {
+      "sha256": "d1f952b1b1b122afbc0153173f7b2b79c15babfc6b0c74ea42d6f72859807b5c",
+      "size": 74470
+    },
+    "catalog/v1/definitions/d4778687667a373bf7b3dc19d61662f9147415d30f27690ba79677ee5ddf4fdf.json": {
+      "sha256": "d4778687667a373bf7b3dc19d61662f9147415d30f27690ba79677ee5ddf4fdf",
+      "size": 35160
     },
     "catalog/v1/definitions/d5bdea137fdda4c4f94b0baaa3becdaf0e40607939972e5666d39889445e81fa.json": {
       "sha256": "d5bdea137fdda4c4f94b0baaa3becdaf0e40607939972e5666d39889445e81fa",
@@ -2897,6 +2803,10 @@
       "sha256": "da3e208b43732b6c953ca4cd6c3bca24d2b2ab9aae011a68eb27262b0e62bf3a",
       "size": 34937
     },
+    "catalog/v1/definitions/df19cd283d13c6d1b2120030cb27c46ff8006ca0d42dd6fa7e01d4574fab9007.json": {
+      "sha256": "df19cd283d13c6d1b2120030cb27c46ff8006ca0d42dd6fa7e01d4574fab9007",
+      "size": 156635
+    },
     "catalog/v1/definitions/e104871125ff6d2729798f3050e2f778e44b6635305be28cb025ec505f9bbef0.json": {
       "sha256": "e104871125ff6d2729798f3050e2f778e44b6635305be28cb025ec505f9bbef0",
       "size": 57781
@@ -2905,9 +2815,17 @@
       "sha256": "e20717a476ea698a0d473ba55d33cc5f96e57dde49d522497c966f885f599ac3",
       "size": 127219
     },
+    "catalog/v1/definitions/f059f2a49bab60ed4a5f6c84e616a99073c649649f916b5e1508e3d114215c3c.json": {
+      "sha256": "f059f2a49bab60ed4a5f6c84e616a99073c649649f916b5e1508e3d114215c3c",
+      "size": 34888
+    },
+    "catalog/v1/definitions/fb9c85a053aadfeb8420ae64b3b66f3d79ea9513868c177f08db66a42f253be6.json": {
+      "sha256": "fb9c85a053aadfeb8420ae64b3b66f3d79ea9513868c177f08db66a42f253be6",
+      "size": 114654
+    },
     "catalog/v1/index.json": {
-      "sha256": "fc1f142760648665b139286ed65d3b713072e17891c262f8a96bd656792c78ae",
-      "size": 28313
+      "sha256": "ecfd11fdc4b1510b511afa851ab513dcfa6ff7f9f27c398d36cd77c0bb6222c2",
+      "size": 28247
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
       "sha256": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4",
@@ -2916,6 +2834,10 @@
     "downloads/archive/0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5/mshvsf-ex-rc5-ips.zip": {
       "sha256": "0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5",
       "size": 866446
+    },
+    "downloads/archive/0d82a5bf2b4ee5af95bcafca6a0f3897711449576a689ead9fd84cbeb4db5313/ng-plus-1.1-kit.zip": {
+      "sha256": "0d82a5bf2b4ee5af95bcafca6a0f3897711449576a689ead9fd84cbeb4db5313",
+      "size": 1791085
     },
     "downloads/archive/188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed/sfa3-restoration-rc5-ips.zip": {
       "sha256": "188a4ed0c706e7b86b41d580f59beb6065cfc7fcc71b88891eb69cf5dc20f2ed",
@@ -2929,17 +2851,77 @@
       "sha256": "1df5dde39e1d18a1fc249a78d378bab88680157dfce406a58c6b82c2bfc8f7b7",
       "size": 2053195
     },
+    "downloads/archive/1e420adb8e7da3df3825e0cebadc8dc202a219f56f4dd4300c236c9891962d34/vsav-restoration-rc2-ips.zip": {
+      "sha256": "1e420adb8e7da3df3825e0cebadc8dc202a219f56f4dd4300c236c9891962d34",
+      "size": 146629
+    },
+    "downloads/archive/2fb6cd5a7882775aabaffc5f039fbf01d51cc82e3126ed031acfb395207d1924/hsf2-restoration-rc1-ips.zip": {
+      "sha256": "2fb6cd5a7882775aabaffc5f039fbf01d51cc82e3126ed031acfb395207d1924",
+      "size": 171843
+    },
+    "downloads/archive/4005eb16f1ceede19d22bb36fbbb571165e4c7ef16e694f3503d9b68063a270b/sfa2-restoration-rc2-ips.zip": {
+      "sha256": "4005eb16f1ceede19d22bb36fbbb571165e4c7ef16e694f3503d9b68063a270b",
+      "size": 1381894
+    },
+    "downloads/archive/4ede8beb9952e1d2bcf897d982f8ee2357e8c71b969457365fe4ab0ac09c1c95/sfa-ex-rc3-ips.zip": {
+      "sha256": "4ede8beb9952e1d2bcf897d982f8ee2357e8c71b969457365fe4ab0ac09c1c95",
+      "size": 1130580
+    },
     "downloads/archive/51f116c2ea8c6e41c9cb263fbe245d0227706b14238f4026afc25edef5bd7c74/vsav-arrange-rc4-kit.zip": {
       "sha256": "51f116c2ea8c6e41c9cb263fbe245d0227706b14238f4026afc25edef5bd7c74",
       "size": 2354143
+    },
+    "downloads/archive/529f79bcab4bfafdda226795137634e039ab5b6449991e1a8452455f428efe15/strider-ex-rc1-kit.zip": {
+      "sha256": "529f79bcab4bfafdda226795137634e039ab5b6449991e1a8452455f428efe15",
+      "size": 49640677
+    },
+    "downloads/archive/52ee087a41b41fa491bf195785105343ed6d3cd1002e4d2b95165a2ece75784b/sfa3-restoration-rc5-ips.zip": {
+      "sha256": "52ee087a41b41fa491bf195785105343ed6d3cd1002e4d2b95165a2ece75784b",
+      "size": 580753
+    },
+    "downloads/archive/609a28eef932bac12d316aac0871182c67b16e93c0a98794ccde31a7ba7d59d5/dstlk-restoration-rc1-ips.zip": {
+      "sha256": "609a28eef932bac12d316aac0871182c67b16e93c0a98794ccde31a7ba7d59d5",
+      "size": 143578
     },
     "downloads/archive/6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8/hsf2-restoration-rc1-ips.zip": {
       "sha256": "6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8",
       "size": 170519
     },
+    "downloads/archive/80636d3625dab56d4296ac925d0c3710dc5d919a022c7456d8fe97c872aea6c2/vsav2-english-rc3-ips.zip": {
+      "sha256": "80636d3625dab56d4296ac925d0c3710dc5d919a022c7456d8fe97c872aea6c2",
+      "size": 123814
+    },
+    "downloads/archive/8431c1d2149f74089f42e5f7edf36f9c1e2d623db1fa8a2a2eed55039f7d7b90/sfa-ex-rc3-ips.zip": {
+      "sha256": "8431c1d2149f74089f42e5f7edf36f9c1e2d623db1fa8a2a2eed55039f7d7b90",
+      "size": 1108638
+    },
+    "downloads/archive/86b0eeb339c93ab45a44efe159e185b9057eef3054e7c8b1494402f99f003dcb/vsav-arrange-rc4-kit.zip": {
+      "sha256": "86b0eeb339c93ab45a44efe159e185b9057eef3054e7c8b1494402f99f003dcb",
+      "size": 2374712
+    },
+    "downloads/archive/8847f40e0910aab35405d87957ba65dc677507136fbfab58d153ad2d655ea9a0/sfa2-ex-rc4-kit.zip": {
+      "sha256": "8847f40e0910aab35405d87957ba65dc677507136fbfab58d153ad2d655ea9a0",
+      "size": 1070139
+    },
+    "downloads/archive/8c3649cec17eb80acac458b1a9e24cf4f27549dc3c2c7842ba1ffa4eed40113c/sfz3ugd-multiregion-1.0-chd.zip": {
+      "sha256": "8c3649cec17eb80acac458b1a9e24cf4f27549dc3c2c7842ba1ffa4eed40113c",
+      "size": 62206
+    },
+    "downloads/archive/8c48a2ea596bf52fe3301c7b9e121bddb1d6c0f93c3c693e01b2cd0240abbccd/sfa-restoration-rc1-ips.zip": {
+      "sha256": "8c48a2ea596bf52fe3301c7b9e121bddb1d6c0f93c3c693e01b2cd0240abbccd",
+      "size": 458836
+    },
     "downloads/archive/9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329/sfa3-upper-cps2-rc1-kit.zip": {
       "sha256": "9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329",
       "size": 4262109
+    },
+    "downloads/archive/9662c1db94eb2139b2d8a75a32784acea0025c25b3583d23f8c01ed201e5c8bd/sfa2-gold-rc8-kit.zip": {
+      "sha256": "9662c1db94eb2139b2d8a75a32784acea0025c25b3583d23f8c01ed201e5c8bd",
+      "size": 1724469
+    },
+    "downloads/archive/9c16bb7e0ae96d2fb4c83ec9c7e1ab2ea2e483be86fb25388683c162c646c780/nwarr-restoration-rc1-ips.zip": {
+      "sha256": "9c16bb7e0ae96d2fb4c83ec9c7e1ab2ea2e483be86fb25388683c162c646c780",
+      "size": 171018
     },
     "downloads/archive/9c5ea94612996b14ec857fcf5356409e7f82371950a2056868efabf95e6d82ce/sfa-restoration-rc1-ips.zip": {
       "sha256": "9c5ea94612996b14ec857fcf5356409e7f82371950a2056868efabf95e6d82ce",
@@ -2957,9 +2939,41 @@
       "sha256": "af46bc76d0af317cc09ad44ec248d0be90a72f0c8f38cfe0ba9e52c102055ffd",
       "size": 1052396
     },
+    "downloads/archive/bae4167723d7d54a07eceabfbabcd4f6951563b7b8028a1647a424276b6000d8/ssf2-ex-rc13-ips.zip": {
+      "sha256": "bae4167723d7d54a07eceabfbabcd4f6951563b7b8028a1647a424276b6000d8",
+      "size": 1433084
+    },
+    "downloads/archive/bbf559fa266ad30f1b6206cfbc9744a8fc116536c93ce12cd345b38a2568b5f1/vhunt2-english-rc3-ips.zip": {
+      "sha256": "bbf559fa266ad30f1b6206cfbc9744a8fc116536c93ce12cd345b38a2568b5f1",
+      "size": 121017
+    },
+    "downloads/archive/c0c461cd572649520b0eb77a687925ce7b9c26ffa6c89643f837bd1eabdf6c01/sfa3-upper-cps2-rc1-kit.zip": {
+      "sha256": "c0c461cd572649520b0eb77a687925ce7b9c26ffa6c89643f837bd1eabdf6c01",
+      "size": 4309847
+    },
     "downloads/archive/c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09/ssf2-ex-rc13-ips.zip": {
       "sha256": "c5090c1ec8af26c1be6b01dcdf290897bbdacaedfb49692f9252032cb83e6f09",
       "size": 1416374
+    },
+    "downloads/archive/c88665898f1dd4af3e81786b4521dce89194d608b80a66f3b911e688129d0d67/sfz2al-restoration-rc2-ips.zip": {
+      "sha256": "c88665898f1dd4af3e81786b4521dce89194d608b80a66f3b911e688129d0d67",
+      "size": 272031
+    },
+    "downloads/archive/cb04b213c85e38cf843219d6ad76d0c85bca448ae5451eb9b12e13e3bd992ce6/hsf2-restoration-rc1-ips.zip": {
+      "sha256": "cb04b213c85e38cf843219d6ad76d0c85bca448ae5451eb9b12e13e3bd992ce6",
+      "size": 176773
+    },
+    "downloads/archive/cb4a59b0e37e36fde4240b4de0556d7c40b4418b94cdad4a173e145fc58c7245/final-fight-ex-rc4-kit.zip": {
+      "sha256": "cb4a59b0e37e36fde4240b4de0556d7c40b4418b94cdad4a173e145fc58c7245",
+      "size": 1978135
+    },
+    "downloads/archive/cf54cb8e241be252ddbc3daa21ca9bda1982012d7e3f463eaaca394fb08b263c/mshvsf-restoration-rc1-ips.zip": {
+      "sha256": "cf54cb8e241be252ddbc3daa21ca9bda1982012d7e3f463eaaca394fb08b263c",
+      "size": 181854
+    },
+    "downloads/archive/cfdc2f6c751acfa5de05eaf4f5a8fcf93da5e11579971cc2c8aa04c6eec252c7/final-fight-ex-cps2-rc3-kit.zip": {
+      "sha256": "cfdc2f6c751acfa5de05eaf4f5a8fcf93da5e11579971cc2c8aa04c6eec252c7",
+      "size": 39468278
     },
     "downloads/archive/d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d/strider-ex-rc1-kit.zip": {
       "sha256": "d0f3dccf5127751a47533428ff24d145e3e2f0a584c145291ae75ce8c7ab9f6d",
@@ -2973,6 +2987,10 @@
       "sha256": "d3ca38f9164b0b5bb7b2638514f22aff1819733acd0dcaba62ddd94fad05d2fd",
       "size": 39361961
     },
+    "downloads/archive/d5ab3c60d6ce25828330a26ccfb899f10e53ddc8007f50e4d6a3e65a6bbb8b26/vhunt2-arrange-rc3-kit.zip": {
+      "sha256": "d5ab3c60d6ce25828330a26ccfb899f10e53ddc8007f50e4d6a3e65a6bbb8b26",
+      "size": 2069273
+    },
     "downloads/archive/daba6d9cb00e77bc07fed2b35d6c827a504c5c789ce7a749cff11255e26e80e4/final-fight-ex-cps2-rc3-kit.zip": {
       "sha256": "daba6d9cb00e77bc07fed2b35d6c827a504c5c789ce7a749cff11255e26e80e4",
       "size": 39357156
@@ -2984,6 +3002,18 @@
     "downloads/archive/dff1e4a1ce7e3d6d2ea5a471c12f77f831d0aceb04d5fad5e1539ec7abf0bac6/usf2-backport-rc5-kit.zip": {
       "sha256": "dff1e4a1ce7e3d6d2ea5a471c12f77f831d0aceb04d5fad5e1539ec7abf0bac6",
       "size": 21640464
+    },
+    "downloads/archive/e76a2dc50fb95fe8cc3ee80b7d7881fd5d41eeebb2415c29d1113104441b3712/mshvsf-ex-rc5-ips.zip": {
+      "sha256": "e76a2dc50fb95fe8cc3ee80b7d7881fd5d41eeebb2415c29d1113104441b3712",
+      "size": 883202
+    },
+    "downloads/archive/eb923d4f31c8ac81189ae68ea598974da6911737dc25b486d3cfc0997acf0096/ssf2t-gmc-rc4-ips.zip": {
+      "sha256": "eb923d4f31c8ac81189ae68ea598974da6911737dc25b486d3cfc0997acf0096",
+      "size": 151389
+    },
+    "downloads/archive/ed73e324cb8445f79d3a2e845946c415b13510e2dc0a8363e26ea543a9a84df3/vsav2-arrange-rc3-kit.zip": {
+      "sha256": "ed73e324cb8445f79d3a2e845946c415b13510e2dc0a8363e26ea543a9a84df3",
+      "size": 1988877
     },
     "downloads/archive/f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e/sfa-ex-rc3-ips.zip": {
       "sha256": "f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e",
@@ -3006,7 +3036,7 @@
       "size": 44138
     }
   },
-  "generation": 62,
+  "generation": 90,
   "launcher": "tools/downloads/archive/2ddc294d3b16ecae922e6f5b10da8f11cd66c7c12924915bb225e384830ef830/ArcadePatches-0.1.3.zip",
   "native_updates": [
     {
@@ -3168,6 +3198,230 @@
       "project": "sfa2-ex",
       "ready_sha256": "ed54b5dded0161f7064b35be33bdb01ecdb8ce90c099494805b95a9eb184886d",
       "release_sha256": "9c4a9645f7bdd458dad38692ff921231c3ac6252e7016d798e9219fccd3bb895"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 2,
+      "kit_sha256": "8431c1d2149f74089f42e5f7edf36f9c1e2d623db1fa8a2a2eed55039f7d7b90",
+      "project": "sfa-ex",
+      "ready_sha256": "bd78e0cc6fba1411d017f85c56044986cfaa0ba47798e9e28336f31f3d79ad59",
+      "release_sha256": "d64d07a046e011b2fa8acc84cb8d95d6fd6c0d0131abb6d71db7b41f25ded1f3"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 2,
+      "kit_sha256": "2fb6cd5a7882775aabaffc5f039fbf01d51cc82e3126ed031acfb395207d1924",
+      "project": "hsf2-restoration",
+      "ready_sha256": "98bd4736895cd00a2acfc45e641e33e672e70f4c4d301d011eb28f6f1ef1a5a6",
+      "release_sha256": "864539db917e597660e78f894034b7dd4fc2e972298c3c1576db2d94bbead4c7"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 8,
+      "kit_sha256": "609a28eef932bac12d316aac0871182c67b16e93c0a98794ccde31a7ba7d59d5",
+      "project": "dstlk-restoration",
+      "ready_sha256": "cd60c8ae2edba97c8e74f9209024f915107ae2b02dc223f0292993fc4a17990b",
+      "release_sha256": "683ac9f171f4eec646cab06d4d911be35f395082fc409cc09e64fcc71c8fa9b7"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 3,
+      "kit_sha256": "cb04b213c85e38cf843219d6ad76d0c85bca448ae5451eb9b12e13e3bd992ce6",
+      "project": "hsf2-restoration",
+      "ready_sha256": "f730b51f1bdd9aa23a45c559214fd408623d55361046d0d90a88835fe03750cb",
+      "release_sha256": "1c5115de76197f44448b75764ad65b0b30a4279dec27d2f4c1727f465d38fc30"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 9,
+      "kit_sha256": "cf54cb8e241be252ddbc3daa21ca9bda1982012d7e3f463eaaca394fb08b263c",
+      "project": "mshvsf-restoration",
+      "ready_sha256": "11cc334d7a6481f1eefd47f50ac922698d9040c2a6c6fbca31f9728e717a2c80",
+      "release_sha256": "7ae86dda95689b92541cbf40cf8e5cdf7286de3391c5ba78312bf48c6f1a1773"
+    },
+    {
+      "game_version": "1.1",
+      "kit_revision": 4,
+      "kit_sha256": "0d82a5bf2b4ee5af95bcafca6a0f3897711449576a689ead9fd84cbeb4db5313",
+      "project": "ng-plus",
+      "ready_sha256": "171b38dfe6c8d5e751f9b76a8cfde16f458a8aa2467bc3d94cd9c0317120df32",
+      "release_sha256": "ff13ed815afacb977deef7580efa4380f428dd2bd7137a4b9521fc3a3672595f"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 8,
+      "kit_sha256": "9c16bb7e0ae96d2fb4c83ec9c7e1ab2ea2e483be86fb25388683c162c646c780",
+      "project": "nwarr-restoration",
+      "ready_sha256": "7732f22ec12ec334f87bb81726be743dc46c3fda8efa75a6bc74ad2dca54bb20",
+      "release_sha256": "3a2a991e81a496a2cd91de5df694349ffd5e2571549d3c8c9d8f57e7747feb4a"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 3,
+      "kit_sha256": "4ede8beb9952e1d2bcf897d982f8ee2357e8c71b969457365fe4ab0ac09c1c95",
+      "project": "sfa-ex",
+      "ready_sha256": "d9a0976f88095003d3edea6b40fe98a25d5a3303fe1bd3c24058ffdadcd79bfb",
+      "release_sha256": "01f73b26b4697a876f1d8bfe0284e6c0eca9a040c61971ceb1440f7aa4f1d18b"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 8,
+      "kit_sha256": "8c48a2ea596bf52fe3301c7b9e121bddb1d6c0f93c3c693e01b2cd0240abbccd",
+      "project": "sfa-restoration",
+      "ready_sha256": "267d4a399b72a8f7da47834cf52528ff5808dcf9a555056a39ac8331e0214eef",
+      "release_sha256": "881e1c6861607db0284709ae1e68a15b37b05ef43f26ab02ec37060b806efaa0"
+    },
+    {
+      "game_version": "rc2",
+      "kit_revision": 7,
+      "kit_sha256": "4005eb16f1ceede19d22bb36fbbb571165e4c7ef16e694f3503d9b68063a270b",
+      "project": "sfa2-restoration",
+      "ready_sha256": "15318515c09ebd77befa8876f925bea343f4bb41de43e965caee1d56d7d5d880",
+      "release_sha256": "0ea4de2be7e88579669e6334a861f45aeac5c99bc5e70ca55337c848a77e3106"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 4,
+      "kit_sha256": "c0c461cd572649520b0eb77a687925ce7b9c26ffa6c89643f837bd1eabdf6c01",
+      "project": "sfa3-upper-cps2",
+      "ready_sha256": "ac2300a54cb6de15b1fbddf20f82355b94e5f926a1ac68a6a7190f11e005a211",
+      "release_sha256": "0253c598520ee41f8bba7ef27ad92dab8150f71f8ae51f219635531f4d0f7ee4"
+    },
+    {
+      "game_version": "rc2",
+      "kit_revision": 7,
+      "kit_sha256": "c88665898f1dd4af3e81786b4521dce89194d608b80a66f3b911e688129d0d67",
+      "project": "sfz2al-restoration",
+      "ready_sha256": "6b151670fd7ee5315a1727a5aaa06454d9c6233d212ad94a5116f2979d4f3675",
+      "release_sha256": "fd3e2ab44c15607d7e2b96d68d0730509b9e81c64a04b865ec580b119b956b3a"
+    },
+    {
+      "game_version": "rc4",
+      "kit_revision": 4,
+      "kit_sha256": "eb923d4f31c8ac81189ae68ea598974da6911737dc25b486d3cfc0997acf0096",
+      "project": "ssf2t-gmc",
+      "ready_sha256": "cf15b0e176da278b67764d721759a560bba9a0b0be57e537499ee84969924613",
+      "release_sha256": "de1fb4c06c28dd2235f409faf4037529879e7d2c91c65159a1419f3e6bde6720"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 4,
+      "kit_sha256": "d5ab3c60d6ce25828330a26ccfb899f10e53ddc8007f50e4d6a3e65a6bbb8b26",
+      "project": "vhunt2-arrange",
+      "ready_sha256": "a8bd7027de8d7dc38e470d1f4213ee61ed989d3d442741b73a945955727b8124",
+      "release_sha256": "d4800b7cceaf50c8451cddb7d79ad24648c33269898343de6ffeb8e73f99c656"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 7,
+      "kit_sha256": "bbf559fa266ad30f1b6206cfbc9744a8fc116536c93ce12cd345b38a2568b5f1",
+      "project": "vhunt2-english",
+      "ready_sha256": "0e96d19c37cc2b41571d49e574b38de20f2974a3c26fd9dec00c0ab73b14d11a",
+      "release_sha256": "79ab893a4024be20f2ffeace3b47c3613f6c037ebe7da85a35413492b8398308"
+    },
+    {
+      "game_version": "rc2",
+      "kit_revision": 7,
+      "kit_sha256": "1e420adb8e7da3df3825e0cebadc8dc202a219f56f4dd4300c236c9891962d34",
+      "project": "vsav-restoration",
+      "ready_sha256": "7b3a3e2cd6ce719a20871ea5abd22e8af933bba160d6fff6b659e8b4f437769d",
+      "release_sha256": "0190f87df2681f09070e45d975303a9ab92531f42dc0bc6a9f36bfaac0392eb5"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 7,
+      "kit_sha256": "80636d3625dab56d4296ac925d0c3710dc5d919a022c7456d8fe97c872aea6c2",
+      "project": "vsav2-english",
+      "ready_sha256": "57d6ac9cf7ecff45b3d6310a6e66f19fa6ec87f7f01277ee12c1da0fa18fb9c9",
+      "release_sha256": "a8953e8272d85f61e1c5e37272b65a2ea7ea99681b7da1058130bdee8f5fc566"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 8,
+      "kit_sha256": "529f79bcab4bfafdda226795137634e039ab5b6449991e1a8452455f428efe15",
+      "project": "strider-ex",
+      "ready_sha256": "b996a8eb2bd4390ff127c07fae7dad711c0acab08116cb934f92b64017a10762",
+      "release_sha256": "1b5110089830a9a58b8f7f200ddc1497bc6c5c85810c95e466a75582891355c6"
+    },
+    {
+      "game_version": "1.0",
+      "kit_revision": 4,
+      "kit_sha256": "8c3649cec17eb80acac458b1a9e24cf4f27549dc3c2c7842ba1ffa4eed40113c",
+      "project": "sfz3ugd-multiregion",
+      "ready_sha256": "8956813ec410f4fea5f9211a17c14ca0a6e94f72e5ec69db436a140533b4f7fd",
+      "release_sha256": "da2220dd8c5c47abb4d0add0c33c309f9ef00597f946b78e1d15fdef7f36f77d"
+    },
+    {
+      "game_version": "rc4",
+      "kit_revision": 4,
+      "kit_sha256": "86b0eeb339c93ab45a44efe159e185b9057eef3054e7c8b1494402f99f003dcb",
+      "project": "vsav-arrange",
+      "ready_sha256": "5746e1cca7d913220368eddc520e05f2b94580b77d92cf4a6c19f8d502bfd774",
+      "release_sha256": "63b0f699e36021ee8f53be4729a7438c77a519ee1a525c5da1eed0d77cbb5db9"
+    },
+    {
+      "game_version": "rc5",
+      "kit_revision": 2,
+      "kit_sha256": "e76a2dc50fb95fe8cc3ee80b7d7881fd5d41eeebb2415c29d1113104441b3712",
+      "project": "mshvsf-ex",
+      "ready_sha256": "0672b035f803dddda8b99c9d6f664f1e0b3bd1fb4c684a53ce88ad67f382cfeb",
+      "release_sha256": "cd3b220bdde3fcfa174676c7f4d665b04556b5c026841212ba6ac775fa5726a6"
+    },
+    {
+      "game_version": "rc5",
+      "kit_revision": 2,
+      "kit_sha256": "52ee087a41b41fa491bf195785105343ed6d3cd1002e4d2b95165a2ece75784b",
+      "project": "sfa3-restoration",
+      "ready_sha256": "42387881fafa3efe5e99c0094d88d27c23b9746d7a015e1de939e1b55802842c",
+      "release_sha256": "6421a42985c4ab33f62300b4d430684ec6b4a3de427467bfccdf8fefd41b296a"
+    },
+    {
+      "game_version": "rc13",
+      "kit_revision": 2,
+      "kit_sha256": "bae4167723d7d54a07eceabfbabcd4f6951563b7b8028a1647a424276b6000d8",
+      "project": "ssf2-ex",
+      "ready_sha256": "aa73ab9ae19a4267b6a30b18d35f0c8e80a0f7f6359e1f464c34e3890612c126",
+      "release_sha256": "92f29eb6a8580ece52a871f34eb610840b6f4e19c1683dc960f988d35cd85970"
+    },
+    {
+      "game_version": "rc4",
+      "kit_revision": 2,
+      "kit_sha256": "8847f40e0910aab35405d87957ba65dc677507136fbfab58d153ad2d655ea9a0",
+      "project": "sfa2-ex",
+      "ready_sha256": "f9dea33c1db35f6a2eb8839c253a3503ad936bc3385061fe83a9e1d5f17d9865",
+      "release_sha256": "794f7d2eec56b5682584aa620a498a7640b2e14f2b566b5c4bdbf24e667cefc3"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 4,
+      "kit_sha256": "ed73e324cb8445f79d3a2e845946c415b13510e2dc0a8363e26ea543a9a84df3",
+      "project": "vsav2-arrange",
+      "ready_sha256": "42ef2e7ab2a5ba14dab84f7d5cbb41582af79b8443d00457492bcfb028ac6035",
+      "release_sha256": "710b788eb5d938c4af51b35943eb984ce4be71f528c7d9fb4d0d21ff139d1f83"
+    },
+    {
+      "game_version": "rc8",
+      "kit_revision": 2,
+      "kit_sha256": "9662c1db94eb2139b2d8a75a32784acea0025c25b3583d23f8c01ed201e5c8bd",
+      "project": "sfa2-gold",
+      "ready_sha256": "e342f1f96d47308d4b9e3764891c9da304df14ba3047e2c5059992671d55bb0a",
+      "release_sha256": "813fc43cbc6080ff1ed0a365ec2cf264e624cd0455b16a125dacb62636863472"
+    },
+    {
+      "game_version": "rc4",
+      "kit_revision": 2,
+      "kit_sha256": "cb4a59b0e37e36fde4240b4de0556d7c40b4418b94cdad4a173e145fc58c7245",
+      "project": "final-fight-ex",
+      "ready_sha256": "774e198a8f24e69ccc87d0217d18f82b2352437ac9950b04fe949e071de4c7d0",
+      "release_sha256": "5d4816b082680884c26d1e6d81f99e0d1e819f637ebe49b219c78c076b8a1b58"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 3,
+      "kit_sha256": "cfdc2f6c751acfa5de05eaf4f5a8fcf93da5e11579971cc2c8aa04c6eec252c7",
+      "project": "final-fight-ex-cps2",
+      "ready_sha256": "90060b86a4be009529d8ae89486663a8d2421ed916389ecf5b45d9c059c43b36",
+      "release_sha256": "6af4609e9c7091cf57a1bf9ddeaf18227aefb8ae7012cd963186ca8981699c6f"
     }
   ],
   "package_receipt": {

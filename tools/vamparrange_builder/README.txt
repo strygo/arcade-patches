@@ -23,6 +23,12 @@ WHAT YOU NEED
                      with vsav.zip works too)
   3. Python 3.10 or newer. Nothing else — no emulator, no assembler.
 
+The Collection input may be an ISO or a DVD CHD. --disc and --iso accept either;
+the Japanese disc is still verified. DVD CHDs are decoded temporarily with
+chdman, using an installed copy or a verified download. Use --chdman to select
+its executable or containing folder. Allow extra storage for the uncompressed
+DVD. Offline use needs chdman installed, cached, or in your tools bundle.
+
 USAGE
 -----
 

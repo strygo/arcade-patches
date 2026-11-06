@@ -1,0 +1,2591 @@
+{
+  "api": 1,
+  "artifacts": {
+    "wheel-0bce5c4fd0921f99d2e8": {
+      "filename": "pillow-11.3.0-cp313-cp313-win_amd64.whl",
+      "sha256": "0bce5c4fd0921f99d2e858dc4d4d64193407e1b99478bc5cacecba2311abde51",
+      "size": 6978450,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/0bce5c4fd0921f99d2e858dc4d4d64193407e1b99478bc5cacecba2311abde51-pillow-11.3.0-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-921bd305b10e82b4d1f5": {
+      "filename": "pillow-11.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "921bd305b10e82b4d1f5e802b6850677f965d8394203d182f078873851dada69",
+      "size": 4686296,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/921bd305b10e82b4d1f5e802b6850677f965d8394203d182f078873851dada69-pillow-11.3.0-cp312-cp312-macosx_11_0_arm64.whl"
+    },
+    "wheel-b0544343a702fa80c95a": {
+      "filename": "numpy-2.2.6-cp313-cp313-win_amd64.whl",
+      "sha256": "b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c",
+      "size": 12610885,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c-numpy-2.2.6-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-de749064336d37e340f6": {
+      "filename": "numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c",
+      "size": 14119362,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
+    }
+  },
+  "environments": {
+    "darwin-arm64": {
+      "python": [
+        3,
+        12
+      ],
+      "wheels": [
+        "wheel-de749064336d37e340f6",
+        "wheel-921bd305b10e82b4d1f5"
+      ]
+    },
+    "windows-x86_64": {
+      "python": [
+        3,
+        13
+      ],
+      "wheels": [
+        "wheel-b0544343a702fa80c95a",
+        "wheel-0bce5c4fd0921f99d2e8"
+      ]
+    }
+  },
+  "execution": {
+    "manifest_sha256": "ac0fcce8efffc5e810db29132f0b4447025fe288ee9f2bc885566e4a6a22d59b",
+    "targets": {
+      "jp-hbmame": {
+        "cue": "CATALOG 0000000000000\nFILE \"Final Fight CD (Japan) (Track 01).bin\" BINARY\n  TRACK 01 MODE1/2352\n    INDEX 01 00:00:00\nFILE \"Final Fight CD (Japan) (Track 02).bin\" BINARY\n  TRACK 02 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (Japan) (Track 03).bin\" BINARY\n  TRACK 03 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 04).bin\" BINARY\n  TRACK 04 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 05).bin\" BINARY\n  TRACK 05 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 06).bin\" BINARY\n  TRACK 06 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 07).bin\" BINARY\n  TRACK 07 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 08).bin\" BINARY\n  TRACK 08 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 09).bin\" BINARY\n  TRACK 09 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 10).bin\" BINARY\n  TRACK 10 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 11).bin\" BINARY\n  TRACK 11 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 12).bin\" BINARY\n  TRACK 12 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 13).bin\" BINARY\n  TRACK 13 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 14).bin\" BINARY\n  TRACK 14 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 15).bin\" BINARY\n  TRACK 15 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 16).bin\" BINARY\n  TRACK 16 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 17).bin\" BINARY\n  TRACK 17 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 18).bin\" BINARY\n  TRACK 18 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 19).bin\" BINARY\n  TRACK 19 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 20).bin\" BINARY\n  TRACK 20 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 21).bin\" BINARY\n  TRACK 21 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 22).bin\" BINARY\n  TRACK 22 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 23).bin\" BINARY\n  TRACK 23 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 24).bin\" BINARY\n  TRACK 24 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 25).bin\" BINARY\n  TRACK 25 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 26).bin\" BINARY\n  TRACK 26 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 27).bin\" BINARY\n  TRACK 27 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 28).bin\" BINARY\n  TRACK 28 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 29).bin\" BINARY\n  TRACK 29 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\n",
+        "data_file": "Final Fight CD (Japan) (Track 01).bin",
+        "files": {
+          "Final Fight CD (Japan) (Track 01).bin": "disc-827d003619821e2213fe"
+        },
+        "kit_mapping": {
+          "README.txt": "support/final-fight-ex/README.txt",
+          "TOOLS.md": "support/final-fight-ex/TOOLS.md"
+        },
+        "mapping": {
+          "hbmame/ffightjs01.zip": "roms/ffightjs01.zip"
+        },
+        "original_outputs": {
+          "hbmame/ffightjs01.zip": {
+            "members": {
+              "c07.c01": "756585ed5f8f5ca1fa0b2526b5ad130bdb6104ef1c571654a0721842af5e29ed",
+              "c07.c03": "7c38ea89761f80da8726c339231ea7b31391b8731ef982f49b86be3fffebcb43",
+              "c07.c05": "318f8263e20b08065fa676988e61ff4f7634127dda00b03124539b8469083eb5",
+              "c07.c07": "7ad445b87020a0ac9c88386964305d283471cb563becbc41de12921bba8d91ca",
+              "c07.m1": "454d5454d3c141bffc0de9d204f2a903703b7339d903623834427f49c2376b7f",
+              "c07.p1": "a0472312fbf14e85135483e67dea246a33d0bbc4697db205d45f66147cac2c3c",
+              "c07.p2": "46b8295cbf470960970db3f61321050c599ce5f4b18656af193db021e5a4ae99",
+              "c07.p3": "31d005f041ff7b8c0c207bb07997d401a09872dc4b1a99e560e20e0f1dabd67b",
+              "c07.p5": "0661b86ce4550774e8b18fbd87d19c78eb207e5263f229be45f1e9ad54b7f281",
+              "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+              "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+              "c07j.p4": "02f1c85c307502f94cd89ec704bb2e41e8fdc31510f38b888f7ceb343471dfe6",
+              "c07js01.c09": "bf6c3f4f28d0b71d41a197ef8fb96458fdd20f169b71e720b48be38c82af3dbf",
+              "c07js01.c11": "88483ec8e5ff9404e3ad87019bf9f5aba4937a8cef90013172a5036a4b5658b1",
+              "c07js01.c13": "bf969e7cb7b7fd8d020cc1d63739d8dd8f090c69f3b5873668bcd25b783861db",
+              "c07js01.c15": "45f39135d08e9c1135d48ef28db10fc1c96f74b04ee1c01089fc8c04129024cd",
+              "c07js01.c17": "6fd734b9fc7844c0ea4c4f7678da16b8b66ba58de8c56e522785b6675447e452",
+              "c07js01.c19": "5d077867316c8f9ca7dcaeab11c2f143a09f06fdbb9e7f8355690dd64c48af7f",
+              "c07js01.c21": "51ba55a8ae7ae3029dc394ae8e8af98510436d810e9ac647c72b627c7e46536e",
+              "c07js01.c23": "a159b2e12142f4c92f13e6ce80c468c3257a85752c620f9ac5da9fd8fdcfcb60",
+              "c07js01.p7": "5bbc991b6785acad387f736b74525976e2224c8ba48ad8db4b833c6c08cf84a5",
+              "ffightjs01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+            }
+          }
+        },
+        "outputs": {
+          "roms/ffightjs01.zip": {
+            "members": {
+              "c07.c01": "756585ed5f8f5ca1fa0b2526b5ad130bdb6104ef1c571654a0721842af5e29ed",
+              "c07.c03": "7c38ea89761f80da8726c339231ea7b31391b8731ef982f49b86be3fffebcb43",
+              "c07.c05": "318f8263e20b08065fa676988e61ff4f7634127dda00b03124539b8469083eb5",
+              "c07.c07": "7ad445b87020a0ac9c88386964305d283471cb563becbc41de12921bba8d91ca",
+              "c07.m1": "454d5454d3c141bffc0de9d204f2a903703b7339d903623834427f49c2376b7f",
+              "c07.p1": "a0472312fbf14e85135483e67dea246a33d0bbc4697db205d45f66147cac2c3c",
+              "c07.p2": "46b8295cbf470960970db3f61321050c599ce5f4b18656af193db021e5a4ae99",
+              "c07.p3": "31d005f041ff7b8c0c207bb07997d401a09872dc4b1a99e560e20e0f1dabd67b",
+              "c07.p5": "0661b86ce4550774e8b18fbd87d19c78eb207e5263f229be45f1e9ad54b7f281",
+              "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+              "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+              "c07j.p4": "02f1c85c307502f94cd89ec704bb2e41e8fdc31510f38b888f7ceb343471dfe6",
+              "c07js01.c09": "bf6c3f4f28d0b71d41a197ef8fb96458fdd20f169b71e720b48be38c82af3dbf",
+              "c07js01.c11": "88483ec8e5ff9404e3ad87019bf9f5aba4937a8cef90013172a5036a4b5658b1",
+              "c07js01.c13": "bf969e7cb7b7fd8d020cc1d63739d8dd8f090c69f3b5873668bcd25b783861db",
+              "c07js01.c15": "45f39135d08e9c1135d48ef28db10fc1c96f74b04ee1c01089fc8c04129024cd",
+              "c07js01.c17": "6fd734b9fc7844c0ea4c4f7678da16b8b66ba58de8c56e522785b6675447e452",
+              "c07js01.c19": "5d077867316c8f9ca7dcaeab11c2f143a09f06fdbb9e7f8355690dd64c48af7f",
+              "c07js01.c21": "51ba55a8ae7ae3029dc394ae8e8af98510436d810e9ac647c72b627c7e46536e",
+              "c07js01.c23": "a159b2e12142f4c92f13e6ce80c468c3257a85752c620f9ac5da9fd8fdcfcb60",
+              "c07js01.p7": "5bbc991b6785acad387f736b74525976e2224c8ba48ad8db4b833c6c08cf84a5",
+              "ffightjs01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+            }
+          },
+          "support/final-fight-ex/README.txt": {
+            "sha256": "e8c0bd8b21128c9fd951f3214da076a601226d4b6b8bd89da7bd5aaeda12b766"
+          },
+          "support/final-fight-ex/TOOLS.md": {
+            "sha256": "5dce13a423d0ed87dd8746328d7c9416a8ee1c99ee91a90b521e87069783e8c9"
+          }
+        },
+        "platform": "hbmame",
+        "region": "jp",
+        "sets": {
+          "ffight": {
+            "ff-1m.3a": "rom-e5d9bf0282dada21d4a8",
+            "ff-32m.8h": "rom-86da0d2884a5407f67ac",
+            "ff-3m.5a": "rom-d8660712fc0a7f6e0ebc",
+            "ff-5m.7a": "rom-dce4a9b9f28b7e7f8eb8",
+            "ff-7m.9a": "rom-75aaeae98b4a89fe4db7",
+            "ff_09.12b": "rom-07c0fdf83581da618a73",
+            "ff_36.11f": "rom-0763a7b2a150334423bc",
+            "ff_37.12f": "rom-34a36b617c0be4244fe8",
+            "ff_42.11h": "rom-a6a287ee9eb1952af93c"
+          },
+          "ffightj": {
+            "ff36.bin": "rom-0763a7b2a150334423bc",
+            "ff42.bin": "rom-a6a287ee9eb1952af93c",
+            "ff43.bin": "rom-1bc247d5bc756ed797cb",
+            "ffj_01.4a": "rom-875c00651821c163d5a9",
+            "ffj_02.5a": "rom-a08c9f2d8cf0c0ef3ed6",
+            "ffj_05.9a": "rom-62e2e94ff15e4d2b0f2f",
+            "ffj_06.10a": "rom-fac30feffb36c00025dd",
+            "ffj_09.4b": "rom-d35ff7bc039bc6cd5c96",
+            "ffj_10.5b": "rom-cf86ed0f9faa212043a2",
+            "ffj_13.9b": "rom-eaca37867b6fa2a51723",
+            "ffj_14.10b": "rom-5acd4407f2ee03642ff2",
+            "ffj_17.5c": "rom-902b8850e99a62913d90",
+            "ffj_18.7c": "rom-bf8bfe8d32b4eabb2580",
+            "ffj_24.5e": "rom-7ae492882290a768d84e",
+            "ffj_25.7e": "rom-051df1f81f98a04685bb",
+            "ffj_30.bin": "rom-ce61fd555f583a007ca5",
+            "ffj_31.bin": "rom-dd897bea75f292778631",
+            "ffj_32.8f": "rom-c4e8786a1c283c624c26",
+            "ffj_33.9f": "rom-c381c318a2dd36c62003",
+            "ffj_38.8h": "rom-1b837e362281b897312e",
+            "ffj_39.9h": "rom-419a7042935dd3e3a6e5"
+          }
+        }
+      },
+      "jp-mister": {
+        "cue": "CATALOG 0000000000000\nFILE \"Final Fight CD (Japan) (Track 01).bin\" BINARY\n  TRACK 01 MODE1/2352\n    INDEX 01 00:00:00\nFILE \"Final Fight CD (Japan) (Track 02).bin\" BINARY\n  TRACK 02 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (Japan) (Track 03).bin\" BINARY\n  TRACK 03 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 04).bin\" BINARY\n  TRACK 04 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 05).bin\" BINARY\n  TRACK 05 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 06).bin\" BINARY\n  TRACK 06 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 07).bin\" BINARY\n  TRACK 07 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 08).bin\" BINARY\n  TRACK 08 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 09).bin\" BINARY\n  TRACK 09 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 10).bin\" BINARY\n  TRACK 10 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 11).bin\" BINARY\n  TRACK 11 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 12).bin\" BINARY\n  TRACK 12 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 13).bin\" BINARY\n  TRACK 13 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 14).bin\" BINARY\n  TRACK 14 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 15).bin\" BINARY\n  TRACK 15 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 16).bin\" BINARY\n  TRACK 16 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 17).bin\" BINARY\n  TRACK 17 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 18).bin\" BINARY\n  TRACK 18 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 19).bin\" BINARY\n  TRACK 19 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 20).bin\" BINARY\n  TRACK 20 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 21).bin\" BINARY\n  TRACK 21 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 22).bin\" BINARY\n  TRACK 22 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 23).bin\" BINARY\n  TRACK 23 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 24).bin\" BINARY\n  TRACK 24 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 25).bin\" BINARY\n  TRACK 25 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 26).bin\" BINARY\n  TRACK 26 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 27).bin\" BINARY\n  TRACK 27 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 28).bin\" BINARY\n  TRACK 28 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (Japan) (Track 29).bin\" BINARY\n  TRACK 29 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\n",
+        "data_file": "Final Fight CD (Japan) (Track 01).bin",
+        "files": {
+          "Final Fight CD (Japan) (Track 01).bin": "disc-827d003619821e2213fe",
+          "Final Fight CD (Japan) (Track 02).bin": "disc-b54665afaf110ef1ee2a",
+          "Final Fight CD (Japan) (Track 03).bin": "disc-aba869bbb0f531d5cb03",
+          "Final Fight CD (Japan) (Track 04).bin": "disc-c64bdbdb7c145479aefa",
+          "Final Fight CD (Japan) (Track 05).bin": "disc-919e634b70d5a7f9e552",
+          "Final Fight CD (Japan) (Track 06).bin": "disc-66d3c04a9709f7179e64",
+          "Final Fight CD (Japan) (Track 07).bin": "disc-36378ce42c2bab9a7f06",
+          "Final Fight CD (Japan) (Track 08).bin": "disc-982acea796b6cde67935",
+          "Final Fight CD (Japan) (Track 09).bin": "disc-1c6aa19aa37af167401d",
+          "Final Fight CD (Japan) (Track 10).bin": "disc-431727881fdce0caf257",
+          "Final Fight CD (Japan) (Track 11).bin": "disc-b6ba21f1c5a1a908c52b",
+          "Final Fight CD (Japan) (Track 12).bin": "disc-4cc0a4d608e9e2a3fd97",
+          "Final Fight CD (Japan) (Track 13).bin": "disc-53b1d687eeb012f6a338",
+          "Final Fight CD (Japan) (Track 14).bin": "disc-915b9ab60b1401e17ab2",
+          "Final Fight CD (Japan) (Track 15).bin": "disc-1645db85b475f43f00de",
+          "Final Fight CD (Japan) (Track 16).bin": "disc-1ef304c004ef77bb1425",
+          "Final Fight CD (Japan) (Track 17).bin": "disc-f25bb1c475bfaef5c5a0",
+          "Final Fight CD (Japan) (Track 18).bin": "disc-8b239f426314abd2969c",
+          "Final Fight CD (Japan) (Track 19).bin": "disc-5e9eeb97a7cafee92062",
+          "Final Fight CD (Japan) (Track 20).bin": "disc-71c83f446ac1f9c89c92",
+          "Final Fight CD (Japan) (Track 21).bin": "disc-004b1f988be5d2228a34",
+          "Final Fight CD (Japan) (Track 22).bin": "disc-9f2e26e3ac45b86507bc",
+          "Final Fight CD (Japan) (Track 23).bin": "disc-09be0461e0fed6af9124",
+          "Final Fight CD (Japan) (Track 24).bin": "disc-4e22e1143ff107246370",
+          "Final Fight CD (Japan) (Track 25).bin": "disc-f245a10b193982e19a48",
+          "Final Fight CD (Japan) (Track 26).bin": "disc-77e81c705415dfcd0441",
+          "Final Fight CD (Japan) (Track 27).bin": "disc-54fc4122a32eff39e285",
+          "Final Fight CD (Japan) (Track 28).bin": "disc-c24db563f4e13d006dbf",
+          "Final Fight CD (Japan) (Track 29).bin": "disc-6d2fbe5a7697cc7c600c"
+        },
+        "kit_mapping": {
+          "README.txt": "support/final-fight-ex/README.txt",
+          "TOOLS.md": "support/final-fight-ex/TOOLS.md"
+        },
+        "mapping": {
+          "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Final Fight EX (Japan) [Arrange].mra": "_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Final Fight EX (Japan) [Arrange].mra",
+          "mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Final Fight EX (Japan).mra": "_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Final Fight EX (Japan).mra",
+          "mister/_Arcade/cores/BUILD_PROVENANCE.txt": "_Arcade/cores/BUILD_PROVENANCE.txt",
+          "mister/_Arcade/cores/LICENSE": "_Arcade/cores/LICENSE",
+          "mister/_Arcade/cores/SOURCE_AND_LICENSE.txt": "_Arcade/cores/SOURCE_AND_LICENSE.txt",
+          "mister/_Arcade/cores/jtcps1-cpsplus.rbf": "_Arcade/cores/jtcps1-cpsplus.rbf",
+          "mister/games/CPS+/ffight_arrange_jp.zip": "games/CPS+/ffight_arrange_jp.zip",
+          "mister/games/hbmame/ffightjs01.zip": "games/hbmame/ffightjs01.zip"
+        },
+        "original_outputs": {
+          "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Final Fight EX (Japan) [Arrange].mra": {
+            "sha256": "ac854987a480fe06cf697445b398e0c6a79e5a7d6160f192dc57cfd0b460eee2"
+          },
+          "mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Final Fight EX (Japan).mra": {
+            "sha256": "62f0bb423af5702c5f070724b9a36f9d8e1f7e6fae94d4f66a1278446983837e"
+          },
+          "mister/_Arcade/cores/BUILD_PROVENANCE.txt": {
+            "sha256": "05447531a1b4b301c99115238adda10b43c84730c5ca216cfdbef765e8817f28"
+          },
+          "mister/_Arcade/cores/LICENSE": {
+            "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+          },
+          "mister/_Arcade/cores/SOURCE_AND_LICENSE.txt": {
+            "sha256": "9f63120bd40e3981e91876b87016ea57790dfdb095b73a1f0117493235667316"
+          },
+          "mister/_Arcade/cores/jtcps1-cpsplus.rbf": {
+            "sha256": "402ea11eb64266b804ceb18c4cebb1ba1983d5142c1672d39a454d25a711b65e"
+          },
+          "mister/games/CPS+/ffight_arrange_jp.zip": {
+            "members": {
+              "ffight_arrange_jp.cpk": "5e0ca87e2ab617738c6a3f3f3431b24eccf329fd25d547fdc048886971b442b2"
+            }
+          },
+          "mister/games/hbmame/ffightjs01.zip": {
+            "members": {
+              "c07.c01": "756585ed5f8f5ca1fa0b2526b5ad130bdb6104ef1c571654a0721842af5e29ed",
+              "c07.c03": "7c38ea89761f80da8726c339231ea7b31391b8731ef982f49b86be3fffebcb43",
+              "c07.c05": "318f8263e20b08065fa676988e61ff4f7634127dda00b03124539b8469083eb5",
+              "c07.c07": "7ad445b87020a0ac9c88386964305d283471cb563becbc41de12921bba8d91ca",
+              "c07.m1": "454d5454d3c141bffc0de9d204f2a903703b7339d903623834427f49c2376b7f",
+              "c07.p1": "a0472312fbf14e85135483e67dea246a33d0bbc4697db205d45f66147cac2c3c",
+              "c07.p2": "46b8295cbf470960970db3f61321050c599ce5f4b18656af193db021e5a4ae99",
+              "c07.p3": "31d005f041ff7b8c0c207bb07997d401a09872dc4b1a99e560e20e0f1dabd67b",
+              "c07.p5": "0661b86ce4550774e8b18fbd87d19c78eb207e5263f229be45f1e9ad54b7f281",
+              "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+              "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+              "c07j.p4": "02f1c85c307502f94cd89ec704bb2e41e8fdc31510f38b888f7ceb343471dfe6",
+              "c07js01.c09": "bf6c3f4f28d0b71d41a197ef8fb96458fdd20f169b71e720b48be38c82af3dbf",
+              "c07js01.c11": "88483ec8e5ff9404e3ad87019bf9f5aba4937a8cef90013172a5036a4b5658b1",
+              "c07js01.c13": "bf969e7cb7b7fd8d020cc1d63739d8dd8f090c69f3b5873668bcd25b783861db",
+              "c07js01.c15": "45f39135d08e9c1135d48ef28db10fc1c96f74b04ee1c01089fc8c04129024cd",
+              "c07js01.c17": "6fd734b9fc7844c0ea4c4f7678da16b8b66ba58de8c56e522785b6675447e452",
+              "c07js01.c19": "5d077867316c8f9ca7dcaeab11c2f143a09f06fdbb9e7f8355690dd64c48af7f",
+              "c07js01.c21": "51ba55a8ae7ae3029dc394ae8e8af98510436d810e9ac647c72b627c7e46536e",
+              "c07js01.c23": "a159b2e12142f4c92f13e6ce80c468c3257a85752c620f9ac5da9fd8fdcfcb60",
+              "c07js01.p7": "5bbc991b6785acad387f736b74525976e2224c8ba48ad8db4b833c6c08cf84a5",
+              "ffightjs01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+            }
+          }
+        },
+        "outputs": {
+          "_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Final Fight EX (Japan) [Arrange].mra": {
+            "sha256": "ac854987a480fe06cf697445b398e0c6a79e5a7d6160f192dc57cfd0b460eee2"
+          },
+          "_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Final Fight EX (Japan).mra": {
+            "sha256": "62f0bb423af5702c5f070724b9a36f9d8e1f7e6fae94d4f66a1278446983837e"
+          },
+          "_Arcade/cores/BUILD_PROVENANCE.txt": {
+            "sha256": "05447531a1b4b301c99115238adda10b43c84730c5ca216cfdbef765e8817f28"
+          },
+          "_Arcade/cores/LICENSE": {
+            "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+          },
+          "_Arcade/cores/SOURCE_AND_LICENSE.txt": {
+            "sha256": "9f63120bd40e3981e91876b87016ea57790dfdb095b73a1f0117493235667316"
+          },
+          "_Arcade/cores/jtcps1-cpsplus.rbf": {
+            "sha256": "402ea11eb64266b804ceb18c4cebb1ba1983d5142c1672d39a454d25a711b65e"
+          },
+          "games/CPS+/ffight_arrange_jp.zip": {
+            "members": {
+              "ffight_arrange_jp.cpk": "5e0ca87e2ab617738c6a3f3f3431b24eccf329fd25d547fdc048886971b442b2"
+            }
+          },
+          "games/hbmame/ffightjs01.zip": {
+            "members": {
+              "c07.c01": "756585ed5f8f5ca1fa0b2526b5ad130bdb6104ef1c571654a0721842af5e29ed",
+              "c07.c03": "7c38ea89761f80da8726c339231ea7b31391b8731ef982f49b86be3fffebcb43",
+              "c07.c05": "318f8263e20b08065fa676988e61ff4f7634127dda00b03124539b8469083eb5",
+              "c07.c07": "7ad445b87020a0ac9c88386964305d283471cb563becbc41de12921bba8d91ca",
+              "c07.m1": "454d5454d3c141bffc0de9d204f2a903703b7339d903623834427f49c2376b7f",
+              "c07.p1": "a0472312fbf14e85135483e67dea246a33d0bbc4697db205d45f66147cac2c3c",
+              "c07.p2": "46b8295cbf470960970db3f61321050c599ce5f4b18656af193db021e5a4ae99",
+              "c07.p3": "31d005f041ff7b8c0c207bb07997d401a09872dc4b1a99e560e20e0f1dabd67b",
+              "c07.p5": "0661b86ce4550774e8b18fbd87d19c78eb207e5263f229be45f1e9ad54b7f281",
+              "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+              "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+              "c07j.p4": "02f1c85c307502f94cd89ec704bb2e41e8fdc31510f38b888f7ceb343471dfe6",
+              "c07js01.c09": "bf6c3f4f28d0b71d41a197ef8fb96458fdd20f169b71e720b48be38c82af3dbf",
+              "c07js01.c11": "88483ec8e5ff9404e3ad87019bf9f5aba4937a8cef90013172a5036a4b5658b1",
+              "c07js01.c13": "bf969e7cb7b7fd8d020cc1d63739d8dd8f090c69f3b5873668bcd25b783861db",
+              "c07js01.c15": "45f39135d08e9c1135d48ef28db10fc1c96f74b04ee1c01089fc8c04129024cd",
+              "c07js01.c17": "6fd734b9fc7844c0ea4c4f7678da16b8b66ba58de8c56e522785b6675447e452",
+              "c07js01.c19": "5d077867316c8f9ca7dcaeab11c2f143a09f06fdbb9e7f8355690dd64c48af7f",
+              "c07js01.c21": "51ba55a8ae7ae3029dc394ae8e8af98510436d810e9ac647c72b627c7e46536e",
+              "c07js01.c23": "a159b2e12142f4c92f13e6ce80c468c3257a85752c620f9ac5da9fd8fdcfcb60",
+              "c07js01.p7": "5bbc991b6785acad387f736b74525976e2224c8ba48ad8db4b833c6c08cf84a5",
+              "ffightjs01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+            }
+          },
+          "support/final-fight-ex/README.txt": {
+            "sha256": "e8c0bd8b21128c9fd951f3214da076a601226d4b6b8bd89da7bd5aaeda12b766"
+          },
+          "support/final-fight-ex/TOOLS.md": {
+            "sha256": "5dce13a423d0ed87dd8746328d7c9416a8ee1c99ee91a90b521e87069783e8c9"
+          }
+        },
+        "platform": "mister",
+        "region": "jp",
+        "sets": {
+          "ffight": {
+            "ff-1m.3a": "rom-e5d9bf0282dada21d4a8",
+            "ff-32m.8h": "rom-86da0d2884a5407f67ac",
+            "ff-3m.5a": "rom-d8660712fc0a7f6e0ebc",
+            "ff-5m.7a": "rom-dce4a9b9f28b7e7f8eb8",
+            "ff-7m.9a": "rom-75aaeae98b4a89fe4db7",
+            "ff_09.12b": "rom-07c0fdf83581da618a73",
+            "ff_36.11f": "rom-0763a7b2a150334423bc",
+            "ff_37.12f": "rom-34a36b617c0be4244fe8",
+            "ff_42.11h": "rom-a6a287ee9eb1952af93c"
+          },
+          "ffightj": {
+            "ff36.bin": "rom-0763a7b2a150334423bc",
+            "ff42.bin": "rom-a6a287ee9eb1952af93c",
+            "ff43.bin": "rom-1bc247d5bc756ed797cb",
+            "ffj_01.4a": "rom-875c00651821c163d5a9",
+            "ffj_02.5a": "rom-a08c9f2d8cf0c0ef3ed6",
+            "ffj_05.9a": "rom-62e2e94ff15e4d2b0f2f",
+            "ffj_06.10a": "rom-fac30feffb36c00025dd",
+            "ffj_09.4b": "rom-d35ff7bc039bc6cd5c96",
+            "ffj_10.5b": "rom-cf86ed0f9faa212043a2",
+            "ffj_13.9b": "rom-eaca37867b6fa2a51723",
+            "ffj_14.10b": "rom-5acd4407f2ee03642ff2",
+            "ffj_17.5c": "rom-902b8850e99a62913d90",
+            "ffj_18.7c": "rom-bf8bfe8d32b4eabb2580",
+            "ffj_24.5e": "rom-7ae492882290a768d84e",
+            "ffj_25.7e": "rom-051df1f81f98a04685bb",
+            "ffj_30.bin": "rom-ce61fd555f583a007ca5",
+            "ffj_31.bin": "rom-dd897bea75f292778631",
+            "ffj_32.8f": "rom-c4e8786a1c283c624c26",
+            "ffj_33.9f": "rom-c381c318a2dd36c62003",
+            "ffj_38.8h": "rom-1b837e362281b897312e",
+            "ffj_39.9h": "rom-419a7042935dd3e3a6e5"
+          }
+        }
+      },
+      "us-hbmame": {
+        "cue": "CATALOG 0000000000000\nFILE \"Final Fight CD (USA) (Track 01).bin\" BINARY\n  TRACK 01 MODE1/2352\n    INDEX 01 00:00:00\nFILE \"Final Fight CD (USA) (Track 02).bin\" BINARY\n  TRACK 02 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (USA) (Track 03).bin\" BINARY\n  TRACK 03 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 04).bin\" BINARY\n  TRACK 04 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 05).bin\" BINARY\n  TRACK 05 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 06).bin\" BINARY\n  TRACK 06 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 07).bin\" BINARY\n  TRACK 07 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 08).bin\" BINARY\n  TRACK 08 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 09).bin\" BINARY\n  TRACK 09 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 10).bin\" BINARY\n  TRACK 10 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 11).bin\" BINARY\n  TRACK 11 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 12).bin\" BINARY\n  TRACK 12 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 13).bin\" BINARY\n  TRACK 13 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 14).bin\" BINARY\n  TRACK 14 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 15).bin\" BINARY\n  TRACK 15 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 16).bin\" BINARY\n  TRACK 16 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 17).bin\" BINARY\n  TRACK 17 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 18).bin\" BINARY\n  TRACK 18 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 19).bin\" BINARY\n  TRACK 19 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 20).bin\" BINARY\n  TRACK 20 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 21).bin\" BINARY\n  TRACK 21 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 22).bin\" BINARY\n  TRACK 22 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 23).bin\" BINARY\n  TRACK 23 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 24).bin\" BINARY\n  TRACK 24 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 25).bin\" BINARY\n  TRACK 25 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 26).bin\" BINARY\n  TRACK 26 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\n",
+        "data_file": "Final Fight CD (USA) (Track 01).bin",
+        "files": {
+          "Final Fight CD (USA) (Track 01).bin": "disc-2fbfa7273b9c8f21a524"
+        },
+        "kit_mapping": {
+          "README.txt": "support/final-fight-ex/README.txt",
+          "TOOLS.md": "support/final-fight-ex/TOOLS.md"
+        },
+        "mapping": {
+          "hbmame/ffightus01.zip": "roms/ffightus01.zip"
+        },
+        "original_outputs": {
+          "hbmame/ffightus01.zip": {
+            "members": {
+              "c07.c01": "ad1062a24a47c8bc4f57db1d1ff7a1854811d306bf3aeb03823a1ef9b2235d6e",
+              "c07.c03": "d7641b5679c32272b067a329a3a791e5116a103c46746c1241215a5993a1083c",
+              "c07.c05": "4eb39c1429fd945049e7963615b3671faeba2f4b192bffa17913f7b7346a36e7",
+              "c07.c07": "0218daf0391c3ad0a51fcdb032a749bdd9e782525371cdf3b8562e8e0068f619",
+              "c07.m1": "9ef9aa8c7d236046404003b8900826cc834450ccd7284145fd93660ed3b438a8",
+              "c07.p1": "e42b6cf5713edf550e8ea86e1c3922b33e4d5db3acaa5a18238f3fa3070b4465",
+              "c07.p2": "bea40e48fad9ed554596bd19f44164062e9bcb5bf73eb2fcae7b9f259e699a06",
+              "c07.p3": "356c297b4a55d769856bc1a4af95bd27109bf3371fa22956643b99eb430c0322",
+              "c07.p5": "74d2a2f2dc2cb2e8190620c01a51d420a8dd0fd5f2e627b7a999adb337a687b6",
+              "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+              "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+              "c07u.p4": "1463506b31c5e92b0008998253b717801f183afb10a338bd6cedfc471e3a28d8",
+              "c07us01.c09": "00cbb3be3de2bc25a07649e677203534d3a8131722d84e4e718174373511397c",
+              "c07us01.c11": "7454ed428575512c3614181a33c0fee8356db881a111cb89b0d61b9267ad2686",
+              "c07us01.c13": "1c4b90de66d223b41ff26861bfcce7feb896df3c5db78938e97a6fe71009d637",
+              "c07us01.c15": "52c51beb4b2f0123f2a38db718a84e001233d1ab010133e6f14ada644032f772",
+              "c07us01.c17": "58872c892d3970b7c9fbed81223ea0ff4a7fa5fafdeacdbb9f533ed74954bfde",
+              "c07us01.c19": "f19010c7ef703ff68d4df4023b2b6239b60c78cadf3e75b54f10dd0a72f366c3",
+              "c07us01.c21": "ae030f396a3559a2c4397b8477c6778c7680d59597c309c5e128c347f17b1706",
+              "c07us01.c23": "35c08195a089cbff7d65dc4eb11b2d1f3188ca14f638322c5476cefacbcfebe1",
+              "c07us01.p7": "cf5b6a1358aeac1cce20fd19b01ecd420ba1447e3925a03614e4b06d44cca387",
+              "ffightus01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+            }
+          }
+        },
+        "outputs": {
+          "roms/ffightus01.zip": {
+            "members": {
+              "c07.c01": "ad1062a24a47c8bc4f57db1d1ff7a1854811d306bf3aeb03823a1ef9b2235d6e",
+              "c07.c03": "d7641b5679c32272b067a329a3a791e5116a103c46746c1241215a5993a1083c",
+              "c07.c05": "4eb39c1429fd945049e7963615b3671faeba2f4b192bffa17913f7b7346a36e7",
+              "c07.c07": "0218daf0391c3ad0a51fcdb032a749bdd9e782525371cdf3b8562e8e0068f619",
+              "c07.m1": "9ef9aa8c7d236046404003b8900826cc834450ccd7284145fd93660ed3b438a8",
+              "c07.p1": "e42b6cf5713edf550e8ea86e1c3922b33e4d5db3acaa5a18238f3fa3070b4465",
+              "c07.p2": "bea40e48fad9ed554596bd19f44164062e9bcb5bf73eb2fcae7b9f259e699a06",
+              "c07.p3": "356c297b4a55d769856bc1a4af95bd27109bf3371fa22956643b99eb430c0322",
+              "c07.p5": "74d2a2f2dc2cb2e8190620c01a51d420a8dd0fd5f2e627b7a999adb337a687b6",
+              "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+              "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+              "c07u.p4": "1463506b31c5e92b0008998253b717801f183afb10a338bd6cedfc471e3a28d8",
+              "c07us01.c09": "00cbb3be3de2bc25a07649e677203534d3a8131722d84e4e718174373511397c",
+              "c07us01.c11": "7454ed428575512c3614181a33c0fee8356db881a111cb89b0d61b9267ad2686",
+              "c07us01.c13": "1c4b90de66d223b41ff26861bfcce7feb896df3c5db78938e97a6fe71009d637",
+              "c07us01.c15": "52c51beb4b2f0123f2a38db718a84e001233d1ab010133e6f14ada644032f772",
+              "c07us01.c17": "58872c892d3970b7c9fbed81223ea0ff4a7fa5fafdeacdbb9f533ed74954bfde",
+              "c07us01.c19": "f19010c7ef703ff68d4df4023b2b6239b60c78cadf3e75b54f10dd0a72f366c3",
+              "c07us01.c21": "ae030f396a3559a2c4397b8477c6778c7680d59597c309c5e128c347f17b1706",
+              "c07us01.c23": "35c08195a089cbff7d65dc4eb11b2d1f3188ca14f638322c5476cefacbcfebe1",
+              "c07us01.p7": "cf5b6a1358aeac1cce20fd19b01ecd420ba1447e3925a03614e4b06d44cca387",
+              "ffightus01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+            }
+          },
+          "support/final-fight-ex/README.txt": {
+            "sha256": "e8c0bd8b21128c9fd951f3214da076a601226d4b6b8bd89da7bd5aaeda12b766"
+          },
+          "support/final-fight-ex/TOOLS.md": {
+            "sha256": "5dce13a423d0ed87dd8746328d7c9416a8ee1c99ee91a90b521e87069783e8c9"
+          }
+        },
+        "platform": "hbmame",
+        "region": "us",
+        "sets": {
+          "ffight": {
+            "ff-1m.3a": "rom-e5d9bf0282dada21d4a8",
+            "ff-32m.8h": "rom-86da0d2884a5407f67ac",
+            "ff-3m.5a": "rom-d8660712fc0a7f6e0ebc",
+            "ff-5m.7a": "rom-dce4a9b9f28b7e7f8eb8",
+            "ff-7m.9a": "rom-75aaeae98b4a89fe4db7",
+            "ff_09.12b": "rom-07c0fdf83581da618a73",
+            "ff_36.11f": "rom-0763a7b2a150334423bc",
+            "ff_37.12f": "rom-34a36b617c0be4244fe8",
+            "ff_42.11h": "rom-a6a287ee9eb1952af93c"
+          },
+          "ffightj": {
+            "ffj_30.bin": "rom-ce61fd555f583a007ca5",
+            "ffj_31.bin": "rom-dd897bea75f292778631"
+          },
+          "ffightu": {
+            "ffu_43.12h": "rom-ce221b5d9db9beeca876"
+          }
+        }
+      },
+      "us-mister": {
+        "cue": "CATALOG 0000000000000\nFILE \"Final Fight CD (USA) (Track 01).bin\" BINARY\n  TRACK 01 MODE1/2352\n    INDEX 01 00:00:00\nFILE \"Final Fight CD (USA) (Track 02).bin\" BINARY\n  TRACK 02 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:01:74\nFILE \"Final Fight CD (USA) (Track 03).bin\" BINARY\n  TRACK 03 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 04).bin\" BINARY\n  TRACK 04 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 05).bin\" BINARY\n  TRACK 05 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 06).bin\" BINARY\n  TRACK 06 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 07).bin\" BINARY\n  TRACK 07 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 08).bin\" BINARY\n  TRACK 08 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 09).bin\" BINARY\n  TRACK 09 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 10).bin\" BINARY\n  TRACK 10 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 11).bin\" BINARY\n  TRACK 11 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 12).bin\" BINARY\n  TRACK 12 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 13).bin\" BINARY\n  TRACK 13 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 14).bin\" BINARY\n  TRACK 14 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 15).bin\" BINARY\n  TRACK 15 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 16).bin\" BINARY\n  TRACK 16 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 17).bin\" BINARY\n  TRACK 17 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 18).bin\" BINARY\n  TRACK 18 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 19).bin\" BINARY\n  TRACK 19 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 20).bin\" BINARY\n  TRACK 20 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 21).bin\" BINARY\n  TRACK 21 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 22).bin\" BINARY\n  TRACK 22 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 23).bin\" BINARY\n  TRACK 23 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 24).bin\" BINARY\n  TRACK 24 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 25).bin\" BINARY\n  TRACK 25 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Final Fight CD (USA) (Track 26).bin\" BINARY\n  TRACK 26 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\n",
+        "data_file": "Final Fight CD (USA) (Track 01).bin",
+        "files": {
+          "Final Fight CD (USA) (Track 01).bin": "disc-2fbfa7273b9c8f21a524",
+          "Final Fight CD (USA) (Track 02).bin": "disc-51dc5b6940b30eb9e7f2",
+          "Final Fight CD (USA) (Track 03).bin": "disc-da39eccfe37992c3e021",
+          "Final Fight CD (USA) (Track 04).bin": "disc-99212c959eefd4970608",
+          "Final Fight CD (USA) (Track 05).bin": "disc-85d75cb242e186506d2c",
+          "Final Fight CD (USA) (Track 06).bin": "disc-0f2ce4b062dca6811aa8",
+          "Final Fight CD (USA) (Track 07).bin": "disc-4b44691218296673273f",
+          "Final Fight CD (USA) (Track 08).bin": "disc-cfd1e3f4433c6a9996db",
+          "Final Fight CD (USA) (Track 09).bin": "disc-88d699cefa17b08d2a45",
+          "Final Fight CD (USA) (Track 10).bin": "disc-2cb132eba87720cdc37f",
+          "Final Fight CD (USA) (Track 11).bin": "disc-dd5b50e5b6eebf003596",
+          "Final Fight CD (USA) (Track 12).bin": "disc-dad65cfc1ee943933eab",
+          "Final Fight CD (USA) (Track 13).bin": "disc-4d2af1344acd48da5090",
+          "Final Fight CD (USA) (Track 14).bin": "disc-0fc1a031276eade337d1",
+          "Final Fight CD (USA) (Track 15).bin": "disc-f00a4b58f3789b6c6677",
+          "Final Fight CD (USA) (Track 16).bin": "disc-6f182cb7bd171d9b2404",
+          "Final Fight CD (USA) (Track 17).bin": "disc-1e636e5d86abb3a5f40c",
+          "Final Fight CD (USA) (Track 18).bin": "disc-25dce78e0c61afb9a380",
+          "Final Fight CD (USA) (Track 19).bin": "disc-25fc47a136fbf7e49b97",
+          "Final Fight CD (USA) (Track 20).bin": "disc-a44db26332ccf48f560d",
+          "Final Fight CD (USA) (Track 21).bin": "disc-e7672eeb23c1481afd53",
+          "Final Fight CD (USA) (Track 22).bin": "disc-20d18c362602b9d71de3",
+          "Final Fight CD (USA) (Track 23).bin": "disc-312ab6bfb54324e6a22c",
+          "Final Fight CD (USA) (Track 24).bin": "disc-9ed2b93410815f8a19ea",
+          "Final Fight CD (USA) (Track 25).bin": "disc-c06fe0a2c9a58448e01b",
+          "Final Fight CD (USA) (Track 26).bin": "disc-4f44408de026e527631e"
+        },
+        "kit_mapping": {
+          "README.txt": "support/final-fight-ex/README.txt",
+          "TOOLS.md": "support/final-fight-ex/TOOLS.md"
+        },
+        "mapping": {
+          "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/Final Fight EX (USA) [Arrange].mra": "_Arcade/_Arcade Patches/_Arrangements/_CPS+/Final Fight EX (USA) [Arrange].mra",
+          "mister/_Arcade/_Arcade Patches/_Enhanced Versions/Final Fight EX (USA).mra": "_Arcade/_Arcade Patches/_Enhanced Versions/Final Fight EX (USA).mra",
+          "mister/_Arcade/cores/BUILD_PROVENANCE.txt": "_Arcade/cores/BUILD_PROVENANCE.txt",
+          "mister/_Arcade/cores/LICENSE": "_Arcade/cores/LICENSE",
+          "mister/_Arcade/cores/SOURCE_AND_LICENSE.txt": "_Arcade/cores/SOURCE_AND_LICENSE.txt",
+          "mister/_Arcade/cores/jtcps1-cpsplus.rbf": "_Arcade/cores/jtcps1-cpsplus.rbf",
+          "mister/games/CPS+/ffight_arrange.zip": "games/CPS+/ffight_arrange.zip",
+          "mister/games/hbmame/ffightus01.zip": "games/hbmame/ffightus01.zip"
+        },
+        "original_outputs": {
+          "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/Final Fight EX (USA) [Arrange].mra": {
+            "sha256": "5248e48d24f63179ffd77763daaf5728ce560aaf09221c83395b9f5fb87e8d1b"
+          },
+          "mister/_Arcade/_Arcade Patches/_Enhanced Versions/Final Fight EX (USA).mra": {
+            "sha256": "e8ae93a8d1ac264f6a3ec64e90274d5f94323fb7dd751c41f3b0285b44a965cf"
+          },
+          "mister/_Arcade/cores/BUILD_PROVENANCE.txt": {
+            "sha256": "05447531a1b4b301c99115238adda10b43c84730c5ca216cfdbef765e8817f28"
+          },
+          "mister/_Arcade/cores/LICENSE": {
+            "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+          },
+          "mister/_Arcade/cores/SOURCE_AND_LICENSE.txt": {
+            "sha256": "9f63120bd40e3981e91876b87016ea57790dfdb095b73a1f0117493235667316"
+          },
+          "mister/_Arcade/cores/jtcps1-cpsplus.rbf": {
+            "sha256": "402ea11eb64266b804ceb18c4cebb1ba1983d5142c1672d39a454d25a711b65e"
+          },
+          "mister/games/CPS+/ffight_arrange.zip": {
+            "members": {
+              "ffight_arrange.cpk": "fd8f3b6cda24fd8398f858cf8d555126e39ea2c75686ca4d208f279807748a19"
+            }
+          },
+          "mister/games/hbmame/ffightus01.zip": {
+            "members": {
+              "c07.c01": "ad1062a24a47c8bc4f57db1d1ff7a1854811d306bf3aeb03823a1ef9b2235d6e",
+              "c07.c03": "d7641b5679c32272b067a329a3a791e5116a103c46746c1241215a5993a1083c",
+              "c07.c05": "4eb39c1429fd945049e7963615b3671faeba2f4b192bffa17913f7b7346a36e7",
+              "c07.c07": "0218daf0391c3ad0a51fcdb032a749bdd9e782525371cdf3b8562e8e0068f619",
+              "c07.m1": "9ef9aa8c7d236046404003b8900826cc834450ccd7284145fd93660ed3b438a8",
+              "c07.p1": "e42b6cf5713edf550e8ea86e1c3922b33e4d5db3acaa5a18238f3fa3070b4465",
+              "c07.p2": "bea40e48fad9ed554596bd19f44164062e9bcb5bf73eb2fcae7b9f259e699a06",
+              "c07.p3": "356c297b4a55d769856bc1a4af95bd27109bf3371fa22956643b99eb430c0322",
+              "c07.p5": "74d2a2f2dc2cb2e8190620c01a51d420a8dd0fd5f2e627b7a999adb337a687b6",
+              "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+              "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+              "c07u.p4": "1463506b31c5e92b0008998253b717801f183afb10a338bd6cedfc471e3a28d8",
+              "c07us01.c09": "00cbb3be3de2bc25a07649e677203534d3a8131722d84e4e718174373511397c",
+              "c07us01.c11": "7454ed428575512c3614181a33c0fee8356db881a111cb89b0d61b9267ad2686",
+              "c07us01.c13": "1c4b90de66d223b41ff26861bfcce7feb896df3c5db78938e97a6fe71009d637",
+              "c07us01.c15": "52c51beb4b2f0123f2a38db718a84e001233d1ab010133e6f14ada644032f772",
+              "c07us01.c17": "58872c892d3970b7c9fbed81223ea0ff4a7fa5fafdeacdbb9f533ed74954bfde",
+              "c07us01.c19": "f19010c7ef703ff68d4df4023b2b6239b60c78cadf3e75b54f10dd0a72f366c3",
+              "c07us01.c21": "ae030f396a3559a2c4397b8477c6778c7680d59597c309c5e128c347f17b1706",
+              "c07us01.c23": "35c08195a089cbff7d65dc4eb11b2d1f3188ca14f638322c5476cefacbcfebe1",
+              "c07us01.p7": "cf5b6a1358aeac1cce20fd19b01ecd420ba1447e3925a03614e4b06d44cca387",
+              "ffightus01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+            }
+          }
+        },
+        "outputs": {
+          "_Arcade/_Arcade Patches/_Arrangements/_CPS+/Final Fight EX (USA) [Arrange].mra": {
+            "sha256": "5248e48d24f63179ffd77763daaf5728ce560aaf09221c83395b9f5fb87e8d1b"
+          },
+          "_Arcade/_Arcade Patches/_Enhanced Versions/Final Fight EX (USA).mra": {
+            "sha256": "e8ae93a8d1ac264f6a3ec64e90274d5f94323fb7dd751c41f3b0285b44a965cf"
+          },
+          "_Arcade/cores/BUILD_PROVENANCE.txt": {
+            "sha256": "05447531a1b4b301c99115238adda10b43c84730c5ca216cfdbef765e8817f28"
+          },
+          "_Arcade/cores/LICENSE": {
+            "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+          },
+          "_Arcade/cores/SOURCE_AND_LICENSE.txt": {
+            "sha256": "9f63120bd40e3981e91876b87016ea57790dfdb095b73a1f0117493235667316"
+          },
+          "_Arcade/cores/jtcps1-cpsplus.rbf": {
+            "sha256": "402ea11eb64266b804ceb18c4cebb1ba1983d5142c1672d39a454d25a711b65e"
+          },
+          "games/CPS+/ffight_arrange.zip": {
+            "members": {
+              "ffight_arrange.cpk": "fd8f3b6cda24fd8398f858cf8d555126e39ea2c75686ca4d208f279807748a19"
+            }
+          },
+          "games/hbmame/ffightus01.zip": {
+            "members": {
+              "c07.c01": "ad1062a24a47c8bc4f57db1d1ff7a1854811d306bf3aeb03823a1ef9b2235d6e",
+              "c07.c03": "d7641b5679c32272b067a329a3a791e5116a103c46746c1241215a5993a1083c",
+              "c07.c05": "4eb39c1429fd945049e7963615b3671faeba2f4b192bffa17913f7b7346a36e7",
+              "c07.c07": "0218daf0391c3ad0a51fcdb032a749bdd9e782525371cdf3b8562e8e0068f619",
+              "c07.m1": "9ef9aa8c7d236046404003b8900826cc834450ccd7284145fd93660ed3b438a8",
+              "c07.p1": "e42b6cf5713edf550e8ea86e1c3922b33e4d5db3acaa5a18238f3fa3070b4465",
+              "c07.p2": "bea40e48fad9ed554596bd19f44164062e9bcb5bf73eb2fcae7b9f259e699a06",
+              "c07.p3": "356c297b4a55d769856bc1a4af95bd27109bf3371fa22956643b99eb430c0322",
+              "c07.p5": "74d2a2f2dc2cb2e8190620c01a51d420a8dd0fd5f2e627b7a999adb337a687b6",
+              "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+              "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+              "c07u.p4": "1463506b31c5e92b0008998253b717801f183afb10a338bd6cedfc471e3a28d8",
+              "c07us01.c09": "00cbb3be3de2bc25a07649e677203534d3a8131722d84e4e718174373511397c",
+              "c07us01.c11": "7454ed428575512c3614181a33c0fee8356db881a111cb89b0d61b9267ad2686",
+              "c07us01.c13": "1c4b90de66d223b41ff26861bfcce7feb896df3c5db78938e97a6fe71009d637",
+              "c07us01.c15": "52c51beb4b2f0123f2a38db718a84e001233d1ab010133e6f14ada644032f772",
+              "c07us01.c17": "58872c892d3970b7c9fbed81223ea0ff4a7fa5fafdeacdbb9f533ed74954bfde",
+              "c07us01.c19": "f19010c7ef703ff68d4df4023b2b6239b60c78cadf3e75b54f10dd0a72f366c3",
+              "c07us01.c21": "ae030f396a3559a2c4397b8477c6778c7680d59597c309c5e128c347f17b1706",
+              "c07us01.c23": "35c08195a089cbff7d65dc4eb11b2d1f3188ca14f638322c5476cefacbcfebe1",
+              "c07us01.p7": "cf5b6a1358aeac1cce20fd19b01ecd420ba1447e3925a03614e4b06d44cca387",
+              "ffightus01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+            }
+          },
+          "support/final-fight-ex/README.txt": {
+            "sha256": "e8c0bd8b21128c9fd951f3214da076a601226d4b6b8bd89da7bd5aaeda12b766"
+          },
+          "support/final-fight-ex/TOOLS.md": {
+            "sha256": "5dce13a423d0ed87dd8746328d7c9416a8ee1c99ee91a90b521e87069783e8c9"
+          }
+        },
+        "platform": "mister",
+        "region": "us",
+        "sets": {
+          "ffight": {
+            "ff-1m.3a": "rom-e5d9bf0282dada21d4a8",
+            "ff-32m.8h": "rom-86da0d2884a5407f67ac",
+            "ff-3m.5a": "rom-d8660712fc0a7f6e0ebc",
+            "ff-5m.7a": "rom-dce4a9b9f28b7e7f8eb8",
+            "ff-7m.9a": "rom-75aaeae98b4a89fe4db7",
+            "ff_09.12b": "rom-07c0fdf83581da618a73",
+            "ff_36.11f": "rom-0763a7b2a150334423bc",
+            "ff_37.12f": "rom-34a36b617c0be4244fe8",
+            "ff_42.11h": "rom-a6a287ee9eb1952af93c"
+          },
+          "ffightj": {
+            "ffj_30.bin": "rom-ce61fd555f583a007ca5",
+            "ffj_31.bin": "rom-dd897bea75f292778631"
+          },
+          "ffightu": {
+            "ffu_43.12h": "rom-ce221b5d9db9beeca876"
+          }
+        }
+      }
+    }
+  },
+  "game_version": "rc4",
+  "kit_revision": 2,
+  "manifest_sha256": "ac0fcce8efffc5e810db29132f0b4447025fe288ee9f2bc885566e4a6a22d59b",
+  "native_outputs": {
+    "hbmame/ffightjs01.zip": {
+      "members": {
+        "c07.c01": "756585ed5f8f5ca1fa0b2526b5ad130bdb6104ef1c571654a0721842af5e29ed",
+        "c07.c03": "7c38ea89761f80da8726c339231ea7b31391b8731ef982f49b86be3fffebcb43",
+        "c07.c05": "318f8263e20b08065fa676988e61ff4f7634127dda00b03124539b8469083eb5",
+        "c07.c07": "7ad445b87020a0ac9c88386964305d283471cb563becbc41de12921bba8d91ca",
+        "c07.m1": "454d5454d3c141bffc0de9d204f2a903703b7339d903623834427f49c2376b7f",
+        "c07.p1": "a0472312fbf14e85135483e67dea246a33d0bbc4697db205d45f66147cac2c3c",
+        "c07.p2": "46b8295cbf470960970db3f61321050c599ce5f4b18656af193db021e5a4ae99",
+        "c07.p3": "31d005f041ff7b8c0c207bb07997d401a09872dc4b1a99e560e20e0f1dabd67b",
+        "c07.p5": "0661b86ce4550774e8b18fbd87d19c78eb207e5263f229be45f1e9ad54b7f281",
+        "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+        "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+        "c07j.p4": "02f1c85c307502f94cd89ec704bb2e41e8fdc31510f38b888f7ceb343471dfe6",
+        "c07js01.c09": "bf6c3f4f28d0b71d41a197ef8fb96458fdd20f169b71e720b48be38c82af3dbf",
+        "c07js01.c11": "88483ec8e5ff9404e3ad87019bf9f5aba4937a8cef90013172a5036a4b5658b1",
+        "c07js01.c13": "bf969e7cb7b7fd8d020cc1d63739d8dd8f090c69f3b5873668bcd25b783861db",
+        "c07js01.c15": "45f39135d08e9c1135d48ef28db10fc1c96f74b04ee1c01089fc8c04129024cd",
+        "c07js01.c17": "6fd734b9fc7844c0ea4c4f7678da16b8b66ba58de8c56e522785b6675447e452",
+        "c07js01.c19": "5d077867316c8f9ca7dcaeab11c2f143a09f06fdbb9e7f8355690dd64c48af7f",
+        "c07js01.c21": "51ba55a8ae7ae3029dc394ae8e8af98510436d810e9ac647c72b627c7e46536e",
+        "c07js01.c23": "a159b2e12142f4c92f13e6ce80c468c3257a85752c620f9ac5da9fd8fdcfcb60",
+        "c07js01.p7": "5bbc991b6785acad387f736b74525976e2224c8ba48ad8db4b833c6c08cf84a5",
+        "ffightjs01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+      }
+    },
+    "hbmame/ffightus01.zip": {
+      "members": {
+        "c07.c01": "ad1062a24a47c8bc4f57db1d1ff7a1854811d306bf3aeb03823a1ef9b2235d6e",
+        "c07.c03": "d7641b5679c32272b067a329a3a791e5116a103c46746c1241215a5993a1083c",
+        "c07.c05": "4eb39c1429fd945049e7963615b3671faeba2f4b192bffa17913f7b7346a36e7",
+        "c07.c07": "0218daf0391c3ad0a51fcdb032a749bdd9e782525371cdf3b8562e8e0068f619",
+        "c07.m1": "9ef9aa8c7d236046404003b8900826cc834450ccd7284145fd93660ed3b438a8",
+        "c07.p1": "e42b6cf5713edf550e8ea86e1c3922b33e4d5db3acaa5a18238f3fa3070b4465",
+        "c07.p2": "bea40e48fad9ed554596bd19f44164062e9bcb5bf73eb2fcae7b9f259e699a06",
+        "c07.p3": "356c297b4a55d769856bc1a4af95bd27109bf3371fa22956643b99eb430c0322",
+        "c07.p5": "74d2a2f2dc2cb2e8190620c01a51d420a8dd0fd5f2e627b7a999adb337a687b6",
+        "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+        "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+        "c07u.p4": "1463506b31c5e92b0008998253b717801f183afb10a338bd6cedfc471e3a28d8",
+        "c07us01.c09": "00cbb3be3de2bc25a07649e677203534d3a8131722d84e4e718174373511397c",
+        "c07us01.c11": "7454ed428575512c3614181a33c0fee8356db881a111cb89b0d61b9267ad2686",
+        "c07us01.c13": "1c4b90de66d223b41ff26861bfcce7feb896df3c5db78938e97a6fe71009d637",
+        "c07us01.c15": "52c51beb4b2f0123f2a38db718a84e001233d1ab010133e6f14ada644032f772",
+        "c07us01.c17": "58872c892d3970b7c9fbed81223ea0ff4a7fa5fafdeacdbb9f533ed74954bfde",
+        "c07us01.c19": "f19010c7ef703ff68d4df4023b2b6239b60c78cadf3e75b54f10dd0a72f366c3",
+        "c07us01.c21": "ae030f396a3559a2c4397b8477c6778c7680d59597c309c5e128c347f17b1706",
+        "c07us01.c23": "35c08195a089cbff7d65dc4eb11b2d1f3188ca14f638322c5476cefacbcfebe1",
+        "c07us01.p7": "cf5b6a1358aeac1cce20fd19b01ecd420ba1447e3925a03614e4b06d44cca387",
+        "ffightus01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+      }
+    },
+    "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/Final Fight EX (USA) [Arrange].mra": {
+      "sha256": "5248e48d24f63179ffd77763daaf5728ce560aaf09221c83395b9f5fb87e8d1b"
+    },
+    "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Final Fight EX (Japan) [Arrange].mra": {
+      "sha256": "ac854987a480fe06cf697445b398e0c6a79e5a7d6160f192dc57cfd0b460eee2"
+    },
+    "mister/_Arcade/_Arcade Patches/_Enhanced Versions/Final Fight EX (USA).mra": {
+      "sha256": "e8ae93a8d1ac264f6a3ec64e90274d5f94323fb7dd751c41f3b0285b44a965cf"
+    },
+    "mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Final Fight EX (Japan).mra": {
+      "sha256": "62f0bb423af5702c5f070724b9a36f9d8e1f7e6fae94d4f66a1278446983837e"
+    },
+    "mister/_Arcade/cores/BUILD_PROVENANCE.txt": {
+      "sha256": "05447531a1b4b301c99115238adda10b43c84730c5ca216cfdbef765e8817f28"
+    },
+    "mister/_Arcade/cores/LICENSE": {
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+    },
+    "mister/_Arcade/cores/SOURCE_AND_LICENSE.txt": {
+      "sha256": "9f63120bd40e3981e91876b87016ea57790dfdb095b73a1f0117493235667316"
+    },
+    "mister/_Arcade/cores/jtcps1-cpsplus.rbf": {
+      "sha256": "402ea11eb64266b804ceb18c4cebb1ba1983d5142c1672d39a454d25a711b65e"
+    },
+    "mister/games/CPS+/ffight_arrange.zip": {
+      "members": {
+        "ffight_arrange.cpk": "fd8f3b6cda24fd8398f858cf8d555126e39ea2c75686ca4d208f279807748a19"
+      }
+    },
+    "mister/games/CPS+/ffight_arrange_jp.zip": {
+      "members": {
+        "ffight_arrange_jp.cpk": "5e0ca87e2ab617738c6a3f3f3431b24eccf329fd25d547fdc048886971b442b2"
+      }
+    },
+    "mister/games/hbmame/ffightjs01.zip": {
+      "members": {
+        "c07.c01": "756585ed5f8f5ca1fa0b2526b5ad130bdb6104ef1c571654a0721842af5e29ed",
+        "c07.c03": "7c38ea89761f80da8726c339231ea7b31391b8731ef982f49b86be3fffebcb43",
+        "c07.c05": "318f8263e20b08065fa676988e61ff4f7634127dda00b03124539b8469083eb5",
+        "c07.c07": "7ad445b87020a0ac9c88386964305d283471cb563becbc41de12921bba8d91ca",
+        "c07.m1": "454d5454d3c141bffc0de9d204f2a903703b7339d903623834427f49c2376b7f",
+        "c07.p1": "a0472312fbf14e85135483e67dea246a33d0bbc4697db205d45f66147cac2c3c",
+        "c07.p2": "46b8295cbf470960970db3f61321050c599ce5f4b18656af193db021e5a4ae99",
+        "c07.p3": "31d005f041ff7b8c0c207bb07997d401a09872dc4b1a99e560e20e0f1dabd67b",
+        "c07.p5": "0661b86ce4550774e8b18fbd87d19c78eb207e5263f229be45f1e9ad54b7f281",
+        "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+        "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+        "c07j.p4": "02f1c85c307502f94cd89ec704bb2e41e8fdc31510f38b888f7ceb343471dfe6",
+        "c07js01.c09": "bf6c3f4f28d0b71d41a197ef8fb96458fdd20f169b71e720b48be38c82af3dbf",
+        "c07js01.c11": "88483ec8e5ff9404e3ad87019bf9f5aba4937a8cef90013172a5036a4b5658b1",
+        "c07js01.c13": "bf969e7cb7b7fd8d020cc1d63739d8dd8f090c69f3b5873668bcd25b783861db",
+        "c07js01.c15": "45f39135d08e9c1135d48ef28db10fc1c96f74b04ee1c01089fc8c04129024cd",
+        "c07js01.c17": "6fd734b9fc7844c0ea4c4f7678da16b8b66ba58de8c56e522785b6675447e452",
+        "c07js01.c19": "5d077867316c8f9ca7dcaeab11c2f143a09f06fdbb9e7f8355690dd64c48af7f",
+        "c07js01.c21": "51ba55a8ae7ae3029dc394ae8e8af98510436d810e9ac647c72b627c7e46536e",
+        "c07js01.c23": "a159b2e12142f4c92f13e6ce80c468c3257a85752c620f9ac5da9fd8fdcfcb60",
+        "c07js01.p7": "5bbc991b6785acad387f736b74525976e2224c8ba48ad8db4b833c6c08cf84a5",
+        "ffightjs01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+      }
+    },
+    "mister/games/hbmame/ffightus01.zip": {
+      "members": {
+        "c07.c01": "ad1062a24a47c8bc4f57db1d1ff7a1854811d306bf3aeb03823a1ef9b2235d6e",
+        "c07.c03": "d7641b5679c32272b067a329a3a791e5116a103c46746c1241215a5993a1083c",
+        "c07.c05": "4eb39c1429fd945049e7963615b3671faeba2f4b192bffa17913f7b7346a36e7",
+        "c07.c07": "0218daf0391c3ad0a51fcdb032a749bdd9e782525371cdf3b8562e8e0068f619",
+        "c07.m1": "9ef9aa8c7d236046404003b8900826cc834450ccd7284145fd93660ed3b438a8",
+        "c07.p1": "e42b6cf5713edf550e8ea86e1c3922b33e4d5db3acaa5a18238f3fa3070b4465",
+        "c07.p2": "bea40e48fad9ed554596bd19f44164062e9bcb5bf73eb2fcae7b9f259e699a06",
+        "c07.p3": "356c297b4a55d769856bc1a4af95bd27109bf3371fa22956643b99eb430c0322",
+        "c07.p5": "74d2a2f2dc2cb2e8190620c01a51d420a8dd0fd5f2e627b7a999adb337a687b6",
+        "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+        "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+        "c07u.p4": "1463506b31c5e92b0008998253b717801f183afb10a338bd6cedfc471e3a28d8",
+        "c07us01.c09": "00cbb3be3de2bc25a07649e677203534d3a8131722d84e4e718174373511397c",
+        "c07us01.c11": "7454ed428575512c3614181a33c0fee8356db881a111cb89b0d61b9267ad2686",
+        "c07us01.c13": "1c4b90de66d223b41ff26861bfcce7feb896df3c5db78938e97a6fe71009d637",
+        "c07us01.c15": "52c51beb4b2f0123f2a38db718a84e001233d1ab010133e6f14ada644032f772",
+        "c07us01.c17": "58872c892d3970b7c9fbed81223ea0ff4a7fa5fafdeacdbb9f533ed74954bfde",
+        "c07us01.c19": "f19010c7ef703ff68d4df4023b2b6239b60c78cadf3e75b54f10dd0a72f366c3",
+        "c07us01.c21": "ae030f396a3559a2c4397b8477c6778c7680d59597c309c5e128c347f17b1706",
+        "c07us01.c23": "35c08195a089cbff7d65dc4eb11b2d1f3188ca14f638322c5476cefacbcfebe1",
+        "c07us01.p7": "cf5b6a1358aeac1cce20fd19b01ecd420ba1447e3925a03614e4b06d44cca387",
+        "ffightus01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+      }
+    }
+  },
+  "prerequisites": {
+    "disc-004b1f988be5d2228a34": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "42dde540",
+          "sha256": "004b1f988be5d2228a347d32e9ce280c4b3d24a83fbf86a735ffedc8ad7738b1",
+          "size": 2413152
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 21).bin"
+    },
+    "disc-09be0461e0fed6af9124": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "d2e3ccd4",
+          "sha256": "09be0461e0fed6af9124b1179a63470119921435443f7c3863d132fb135f060e",
+          "size": 23129568
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 23).bin"
+    },
+    "disc-0f2ce4b062dca6811aa8": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "3daa29a0",
+          "sha256": "0f2ce4b062dca6811aa8790d80e5b0c3f05abdc4f74fc5b40b737ffbdea36482",
+          "size": 34633200
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 06).bin"
+    },
+    "disc-0fc1a031276eade337d1": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "9e433a60",
+          "sha256": "0fc1a031276eade337d1a52295d87254d9d70d6616c805b78b38d7fa880e3aa3",
+          "size": 2119152
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 14).bin"
+    },
+    "disc-1645db85b475f43f00de": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "6cf0af23",
+          "sha256": "1645db85b475f43f00de5237d6d76ac33aa699fe33ba1fa332ab7e3fd105343c",
+          "size": 2253216
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 15).bin"
+    },
+    "disc-1c6aa19aa37af167401d": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "fddb4185",
+          "sha256": "1c6aa19aa37af167401da904887e633b648703e2bc69c99bf26e2da2d791cc42",
+          "size": 23437680
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 09).bin"
+    },
+    "disc-1e636e5d86abb3a5f40c": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "fa9a0fe8",
+          "sha256": "1e636e5d86abb3a5f40c8a9c8a3d8a1684c2a53dd104edaaca37a7fffb927991",
+          "size": 21638400
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 17).bin"
+    },
+    "disc-1ef304c004ef77bb1425": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "0741c9ec",
+          "sha256": "1ef304c004ef77bb1425646e8c36c81577de4394717361dbb6ac7aa5a2cb9b7f",
+          "size": 1481760
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 16).bin"
+    },
+    "disc-20d18c362602b9d71de3": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "057d6abc",
+          "sha256": "20d18c362602b9d71de3d56dabef6397eed017c7ca67a36a4b12e51c3dcba491",
+          "size": 34581456
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 22).bin"
+    },
+    "disc-25dce78e0c61afb9a380": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "3f0f858d",
+          "sha256": "25dce78e0c61afb9a3801a420f14b4f8c70c4c8a5f1149881714ee9b34bdbdac",
+          "size": 2827104
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 18).bin"
+    },
+    "disc-25fc47a136fbf7e49b97": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "43e4f6d7",
+          "sha256": "25fc47a136fbf7e49b97d7ec4925280745e6c85e9a0631748db44d1ebad36348",
+          "size": 2293200
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 19).bin"
+    },
+    "disc-2cb132eba87720cdc37f": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "41e3ce3e",
+          "sha256": "2cb132eba87720cdc37f9fbab060d679c11f89c0333b5498412b7fb48bfa109a",
+          "size": 23315376
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 10).bin"
+    },
+    "disc-2fbfa7273b9c8f21a524": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "a32905c4",
+          "sha256": "2fbfa7273b9c8f21a524ca50b1788eee86c5e60b9daa3b30c595369a44b17375",
+          "size": 28565040
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 01).bin"
+    },
+    "disc-312ab6bfb54324e6a22c": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "e414f709",
+          "sha256": "312ab6bfb54324e6a22ce61651ee95985b483c30604ea3cdc9a3e2d3794a6708",
+          "size": 24646608
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 23).bin"
+    },
+    "disc-36378ce42c2bab9a7f06": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "051d633a",
+          "sha256": "36378ce42c2bab9a7f064dc51e6d7560256c6b724c7250a86e98a569168bf7f5",
+          "size": 22181712
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 07).bin"
+    },
+    "disc-431727881fdce0caf257": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "c2fab799",
+          "sha256": "431727881fdce0caf2573ca9a169d9f7e009efd0e886516ea2c2bea279eb7ce9",
+          "size": 22962576
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 10).bin"
+    },
+    "disc-4b44691218296673273f": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "edd57e92",
+          "sha256": "4b44691218296673273f3b0507cb6485ac5752711da738bdae2b09140646bfe0",
+          "size": 22534512
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 07).bin"
+    },
+    "disc-4cc0a4d608e9e2a3fd97": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "38da1600",
+          "sha256": "4cc0a4d608e9e2a3fd975bcb93b65f5ebed8ac03aa909e06ad324c934af95365",
+          "size": 30084432
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 12).bin"
+    },
+    "disc-4d2af1344acd48da5090": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "018b3115",
+          "sha256": "4d2af1344acd48da5090faa65996a9ac1b464b28abd884bdd3839ddb51f0c057",
+          "size": 1714608
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 13).bin"
+    },
+    "disc-4e22e1143ff107246370": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "34c52149",
+          "sha256": "4e22e1143ff1072463704b94cac8aeeb891c00ba76ce247207564f0d859a7668",
+          "size": 24794784
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 24).bin"
+    },
+    "disc-4f44408de026e527631e": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "720554c1",
+          "sha256": "4f44408de026e527631ec0355be161b8707523f62277eb9942ce2c192414faac",
+          "size": 7180656
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 26).bin"
+    },
+    "disc-51dc5b6940b30eb9e7f2": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "87e19980",
+          "sha256": "51dc5b6940b30eb9e7f228ca6b4ad40086404a3dcf810b56a951f9b9b61834c1",
+          "size": 23284800
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 02).bin"
+    },
+    "disc-53b1d687eeb012f6a338": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "6295a806",
+          "sha256": "53b1d687eeb012f6a338e06a4231ae58ac7f30609bd9298cbb2c1bb78a195687",
+          "size": 1361808
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 13).bin"
+    },
+    "disc-54fc4122a32eff39e285": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "9bab4ce0",
+          "sha256": "54fc4122a32eff39e2854c5c6aa08aac32bfe4af1bd396491907ef52dc01321e",
+          "size": 4188912
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 27).bin"
+    },
+    "disc-5e9eeb97a7cafee92062": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "2b3737b4",
+          "sha256": "5e9eeb97a7cafee9206229a5bd9758a537b109d737895dc8be1a3e17348b1f1f",
+          "size": 1940400
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 19).bin"
+    },
+    "disc-66d3c04a9709f7179e64": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "cf65493f",
+          "sha256": "66d3c04a9709f7179e6487df01805e8aa92a38327d94a5f0cdeff60b8355f1c5",
+          "size": 34280400
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 06).bin"
+    },
+    "disc-6d2fbe5a7697cc7c600c": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "f8cfa374",
+          "sha256": "6d2fbe5a7697cc7c600cf6c42e282744c00b92e8f9f7e660a8fd41803a43657d",
+          "size": 7178304
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 29).bin"
+    },
+    "disc-6f182cb7bd171d9b2404": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "51b5cf7d",
+          "sha256": "6f182cb7bd171d9b24042fe2b3012d9232f689b4e95ee2ae60715f24fb3f7416",
+          "size": 1834560
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 16).bin"
+    },
+    "disc-71c83f446ac1f9c89c92": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "63b1a5fd",
+          "sha256": "71c83f446ac1f9c89c923259533110f0e09e38f36bc4d6d7f7b42dd67334e880",
+          "size": 21621936
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 20).bin"
+    },
+    "disc-77e81c705415dfcd0441": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "0526ca2e",
+          "sha256": "77e81c705415dfcd04410a767113b30bd78d39b4fd66bc7655d5e9d613063a44",
+          "size": 4214784
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 26).bin"
+    },
+    "disc-827d003619821e2213fe": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "0539a47e",
+          "sha256": "827d003619821e2213fe52a6ff4278a70355cfae59b4fe3b3d83d913f9001a02",
+          "size": 28209888
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 01).bin"
+    },
+    "disc-85d75cb242e186506d2c": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "da5b7206",
+          "sha256": "85d75cb242e186506d2caf501851d09fecbf0e252fad1dffe6c3e4a7098e0b4d",
+          "size": 22854384
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 05).bin"
+    },
+    "disc-88d699cefa17b08d2a45": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "2c4a6b85",
+          "sha256": "88d699cefa17b08d2a45b6921e6f002882b9a5d79e59ba6c7cf9b99f9743ca2c",
+          "size": 23790480
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 09).bin"
+    },
+    "disc-8b239f426314abd2969c": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "34e60016",
+          "sha256": "8b239f426314abd2969cfe28633877b32d7127c3e0b5cf88d0dfc4a1b8af165a",
+          "size": 2474304
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 18).bin"
+    },
+    "disc-915b9ab60b1401e17ab2": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "f5dc03cd",
+          "sha256": "915b9ab60b1401e17ab2e0c71529da8989e849c16b214a866f8999a3f373c40e",
+          "size": 1766352
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 14).bin"
+    },
+    "disc-919e634b70d5a7f9e552": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "e220f412",
+          "sha256": "919e634b70d5a7f9e552688b7fce767937a41a4ac9ee7904142e6f22cadbe00e",
+          "size": 22501584
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 05).bin"
+    },
+    "disc-982acea796b6cde67935": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "0118969b",
+          "sha256": "982acea796b6cde67935f36f5e97f18bb7f11f0c847d900f2112b1b6fb1d5cd6",
+          "size": 20535312
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 08).bin"
+    },
+    "disc-99212c959eefd4970608": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "44b6c987",
+          "sha256": "99212c959eefd497060821d7f4596c6fd58d602f06a0fc8f6339afdd4cbd547d",
+          "size": 23143680
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 04).bin"
+    },
+    "disc-9ed2b93410815f8a19ea": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "7bb885a7",
+          "sha256": "9ed2b93410815f8a19ea1361eabb1166b2aef925a1ddc465a88145d681af07a4",
+          "size": 20638800
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 24).bin"
+    },
+    "disc-9f2e26e3ac45b86507bc": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "315d88df",
+          "sha256": "9f2e26e3ac45b86507bc07436793fd5066cad59f2018eef6d941e3b4e0fdbdd9",
+          "size": 34228656
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 22).bin"
+    },
+    "disc-a44db26332ccf48f560d": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "3627fc76",
+          "sha256": "a44db26332ccf48f560d537035c23559595647dcbeb2d26044f20916ab93a661",
+          "size": 21974736
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 20).bin"
+    },
+    "disc-aba869bbb0f531d5cb03": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "d7531f85",
+          "sha256": "aba869bbb0f531d5cb03fe3bdafd61b0d9127361cebb0737cc4d8418006d55ee",
+          "size": 23799888
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 03).bin"
+    },
+    "disc-b54665afaf110ef1ee2a": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "0a05e927",
+          "sha256": "b54665afaf110ef1ee2a0988c8c3d571783fd33749d382263033cc745cb2e432",
+          "size": 22936704
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 02).bin"
+    },
+    "disc-b6ba21f1c5a1a908c52b": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "9f720e3f",
+          "sha256": "b6ba21f1c5a1a908c52b2c8fa68a1518de648ef5e23877c2db7aeccd2a2811fa",
+          "size": 22852032
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 11).bin"
+    },
+    "disc-c06fe0a2c9a58448e01b": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "3d7a47d4",
+          "sha256": "c06fe0a2c9a58448e01b9652c3c18dac5006d2fbb9432721c1768539dcc6af3b",
+          "size": 9250416
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 25).bin"
+    },
+    "disc-c24db563f4e13d006dbf": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "385633f7",
+          "sha256": "c24db563f4e13d006dbfa28e68c9b20328a74734ad60eedddfb0f56e0322cb24",
+          "size": 8897616
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 28).bin"
+    },
+    "disc-c64bdbdb7c145479aefa": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "a68bc30b",
+          "sha256": "c64bdbdb7c145479aefaf9bc6deb295a4467af790367b7164e96f8c027d61743",
+          "size": 22790880
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 04).bin"
+    },
+    "disc-cfd1e3f4433c6a9996db": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "6ac22aee",
+          "sha256": "cfd1e3f4433c6a9996dbf00b9b8c32105627a1a3cb407458ab611e14e61d2e1d",
+          "size": 20888112
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 08).bin"
+    },
+    "disc-da39eccfe37992c3e021": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "b0704e03",
+          "sha256": "da39eccfe37992c3e021f5bc481e480e5c5fe79494baf54a1e2e25eaa6a527ee",
+          "size": 24152688
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 03).bin"
+    },
+    "disc-dad65cfc1ee943933eab": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "323b6b83",
+          "sha256": "dad65cfc1ee943933eab2a5e6f5dc7dcc2a3a3654747462fadb62459b952f0fa",
+          "size": 30437232
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 12).bin"
+    },
+    "disc-dd5b50e5b6eebf003596": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "8425801a",
+          "sha256": "dd5b50e5b6eebf0035960d6cd668ee3d5d078b2d94627e1ff6da6ba0ba3ff15f",
+          "size": 23204832
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 11).bin"
+    },
+    "disc-e7672eeb23c1481afd53": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "3e9f0dc6",
+          "sha256": "e7672eeb23c1481afd53fc1225fa3b75f749e2fcf46602e6e68f3d727d5c49d4",
+          "size": 2765952
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 21).bin"
+    },
+    "disc-f00a4b58f3789b6c6677": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "0a81a95f",
+          "sha256": "f00a4b58f3789b6c66771720658aa089cc2fbabb4775d736d9822204a64632ac",
+          "size": 2606016
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (USA): Final Fight CD (USA) (Track 15).bin"
+    },
+    "disc-f245a10b193982e19a48": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "0a7884e2",
+          "sha256": "f245a10b193982e19a4868821881b4af358c5dee76dc2c273d94a602adf82567",
+          "size": 3996048
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 25).bin"
+    },
+    "disc-f25bb1c475bfaef5c5a0": {
+      "action": "Add your matching complete Sega CD rip folder or ZIP. Tracks are identified by content; the builder supplies the verified CUE layout.",
+      "alternatives": [
+        {
+          "crc32": "bc95b4cd",
+          "sha256": "f25bb1c475bfaef5c5a080c83f91d217dbc53c0692fa5266c12fabf5f2ad10cb",
+          "size": 21285600
+        }
+      ],
+      "formats": [
+        "loose raw CD tracks",
+        "ZIP containing raw CD tracks",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Final Fight CD (Japan): Final Fight CD (Japan) (Track 17).bin"
+    },
+    "rom-051df1f81f98a04685bb": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "6e8181ea",
+          "sha256": "051df1f81f98a04685bb729b9613a1513ea511d2b4c9bdcb5f6ddb77efe3f29a",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_25.7e"
+    },
+    "rom-0763a7b2a150334423bc": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "f9a5ce83",
+          "sha256": "0763a7b2a150334423bc0e90d3977dd155a9676003204fb16bf5c49b86887126",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ff36.bin"
+    },
+    "rom-07c0fdf83581da618a73": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "b8367eb5",
+          "sha256": "07c0fdf83581da618a730a3de88aa44f7fedea1c283979ac73a1449b1b39ee17",
+          "size": 65536
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffight: ff_09.12b"
+    },
+    "rom-1b837e362281b897312e": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "6535a57f",
+          "sha256": "1b837e362281b897312e4504e36ec2914acde72d1a47315c321b7ff32da3c42f",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_38.8h"
+    },
+    "rom-1bc247d5bc756ed797cb": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "b6dee1c3",
+          "sha256": "1bc247d5bc756ed797cb7c65c2ec0eef2a388e02a6472dd09afbcaa0bd013c56",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ff43.bin"
+    },
+    "rom-34a36b617c0be4244fe8": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "e1033784",
+          "sha256": "34a36b617c0be4244fe86326350cf986a38145361987875f24fa71991450fbcd",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffight: ff_37.12f"
+    },
+    "rom-419a7042935dd3e3a6e5": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "9416b477",
+          "sha256": "419a7042935dd3e3a6e58d5bf8a7bd9724a86e9bfa18c824d3111024d398838c",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_39.9h"
+    },
+    "rom-5acd4407f2ee03642ff2": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "0a2e9101",
+          "sha256": "5acd4407f2ee03642ff2e06af72b3462673c640881450d8a123dcf4f9741d48a",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_14.10b"
+    },
+    "rom-62e2e94ff15e4d2b0f2f": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "d0fcd4b5",
+          "sha256": "62e2e94ff15e4d2b0f2f6e615cb441312f7305e2f788f50d7c5b7f87fad45738",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_05.9a"
+    },
+    "rom-75aaeae98b4a89fe4db7": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "a7584dfb",
+          "sha256": "75aaeae98b4a89fe4db75dc2c8b75916392c2decb226f2158950a4731535c8db",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffight: ff-7m.9a"
+    },
+    "rom-7ae492882290a768d84e": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "a1ab607a",
+          "sha256": "7ae492882290a768d84ede25191930b1f691f515ba7805e95f01a1a461864ad7",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_24.5e"
+    },
+    "rom-86da0d2884a5407f67ac": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "c747696e",
+          "sha256": "86da0d2884a5407f67ac490ce366f5887f80ac6da343c1a86a9489129b63fbc7",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffight: ff-32m.8h"
+    },
+    "rom-875c00651821c163d5a9": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "815b1797",
+          "sha256": "875c00651821c163d5a99da1aca344f711a8cd12428ec950d25f8f885475610f",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_01.4a"
+    },
+    "rom-902b8850e99a62913d90": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "2dc18cf4",
+          "sha256": "902b8850e99a62913d9088cebf3a3d96b7e1d6fc8af886e2e0fe32abeccb063b",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_17.5c"
+    },
+    "rom-a08c9f2d8cf0c0ef3ed6": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "5d91f694",
+          "sha256": "a08c9f2d8cf0c0ef3ed64a852e05146aa4880b0cfc1ccca5292ec17829133c2d",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_02.5a"
+    },
+    "rom-a6a287ee9eb1952af93c": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "65f11215",
+          "sha256": "a6a287ee9eb1952af93cdc3e0612005b15bcbba9c8697d974ad6285b303b3f7a",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ff42.bin"
+    },
+    "rom-bf8bfe8d32b4eabb2580": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "b19ede59",
+          "sha256": "bf8bfe8d32b4eabb2580f72fd3db1dda3018a86f71454196f911597823c0a83f",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_18.7c"
+    },
+    "rom-c381c318a2dd36c62003": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "7369fa07",
+          "sha256": "c381c318a2dd36c620031dea1ff059596e99b534c531ecdbd6c221f8d2fc66d6",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_33.9f"
+    },
+    "rom-c4e8786a1c283c624c26": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "c8bc4a57",
+          "sha256": "c4e8786a1c283c624c26a60e458b18ddd9147acd278f47eff6fe7d292ccc3e22",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_32.8f"
+    },
+    "rom-ce221b5d9db9beeca876": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "4ca65947",
+          "sha256": "ce221b5d9db9beeca876d1f5920acfe0949d4050cb54b4855ae81627d4548f5b",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightu: ffu_43.12h"
+    },
+    "rom-ce61fd555f583a007ca5": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "375c66e7",
+          "sha256": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_30.bin"
+    },
+    "rom-cf86ed0f9faa212043a2": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "624a924a",
+          "sha256": "cf86ed0f9faa212043a201152337182d8c10767bb44ebc64338e9a6b8cb6744f",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_10.5b"
+    },
+    "rom-d35ff7bc039bc6cd5c96": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "5b116d0d",
+          "sha256": "d35ff7bc039bc6cd5c9677c87ce4167ab0ed6117788597ee03f44db9a1fb3d78",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_09.4b"
+    },
+    "rom-d8660712fc0a7f6e0ebc": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "52291cd2",
+          "sha256": "d8660712fc0a7f6e0ebcebd67966e5d0852d214054d8794c2e23a6b174bfb923",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffight: ff-3m.5a"
+    },
+    "rom-dce4a9b9f28b7e7f8eb8": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "9c284108",
+          "sha256": "dce4a9b9f28b7e7f8eb8d7f03251b6c24318f8b4b686d6f2a6b0f2dcb5918acd",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffight: ff-5m.7a"
+    },
+    "rom-dd897bea75f292778631": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "1ef137f9",
+          "sha256": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_31.bin"
+    },
+    "rom-e5d9bf0282dada21d4a8": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "0b605e44",
+          "sha256": "e5d9bf0282dada21d4a8ab50a9f51dab47a8209a93db11973fcbfe6396b0f1ac",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffight: ff-1m.3a"
+    },
+    "rom-eaca37867b6fa2a51723": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "8721a7da",
+          "sha256": "eaca37867b6fa2a51723bf1209e4f0e2f8c233f941ce1ee0270f8687ff273b70",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_13.9b"
+    },
+    "rom-fac30feffb36c00025dd": {
+      "action": "Add your canonical MAME Final Fight ROM folder.",
+      "alternatives": [
+        {
+          "crc32": "1c18f042",
+          "sha256": "fac30feffb36c00025ddc6640322fce5f041589426cff89564e7da76ef2cfb3a",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "ffightj: ffj_06.10a"
+    }
+  },
+  "project": "final-fight-ex",
+  "requires": [
+    "file-inputs-v1",
+    "locked-wheels-v1",
+    "native-bindings-v1",
+    "native-context-v1",
+    "native-dependencies-v1",
+    "run-cache-v1",
+    "zip-outputs-v1"
+  ],
+  "targets": {
+    "jp-hbmame": {
+      "destination_requirements": "HBMAME with ffightus01/ffightjs01 registrations.",
+      "inputs": [
+        "disc-827d003619821e2213fe",
+        "rom-051df1f81f98a04685bb",
+        "rom-0763a7b2a150334423bc",
+        "rom-07c0fdf83581da618a73",
+        "rom-1b837e362281b897312e",
+        "rom-1bc247d5bc756ed797cb",
+        "rom-34a36b617c0be4244fe8",
+        "rom-419a7042935dd3e3a6e5",
+        "rom-5acd4407f2ee03642ff2",
+        "rom-62e2e94ff15e4d2b0f2f",
+        "rom-75aaeae98b4a89fe4db7",
+        "rom-7ae492882290a768d84e",
+        "rom-86da0d2884a5407f67ac",
+        "rom-875c00651821c163d5a9",
+        "rom-902b8850e99a62913d90",
+        "rom-a08c9f2d8cf0c0ef3ed6",
+        "rom-a6a287ee9eb1952af93c",
+        "rom-bf8bfe8d32b4eabb2580",
+        "rom-c381c318a2dd36c62003",
+        "rom-c4e8786a1c283c624c26",
+        "rom-ce61fd555f583a007ca5",
+        "rom-cf86ed0f9faa212043a2",
+        "rom-d35ff7bc039bc6cd5c96",
+        "rom-d8660712fc0a7f6e0ebc",
+        "rom-dce4a9b9f28b7e7f8eb8",
+        "rom-dd897bea75f292778631",
+        "rom-e5d9bf0282dada21d4a8",
+        "rom-eaca37867b6fa2a51723",
+        "rom-fac30feffb36c00025dd"
+      ],
+      "minimum_free_bytes": 6442450944,
+      "outputs": {
+        "roms/ffightjs01.zip": {
+          "members": {
+            "c07.c01": "756585ed5f8f5ca1fa0b2526b5ad130bdb6104ef1c571654a0721842af5e29ed",
+            "c07.c03": "7c38ea89761f80da8726c339231ea7b31391b8731ef982f49b86be3fffebcb43",
+            "c07.c05": "318f8263e20b08065fa676988e61ff4f7634127dda00b03124539b8469083eb5",
+            "c07.c07": "7ad445b87020a0ac9c88386964305d283471cb563becbc41de12921bba8d91ca",
+            "c07.m1": "454d5454d3c141bffc0de9d204f2a903703b7339d903623834427f49c2376b7f",
+            "c07.p1": "a0472312fbf14e85135483e67dea246a33d0bbc4697db205d45f66147cac2c3c",
+            "c07.p2": "46b8295cbf470960970db3f61321050c599ce5f4b18656af193db021e5a4ae99",
+            "c07.p3": "31d005f041ff7b8c0c207bb07997d401a09872dc4b1a99e560e20e0f1dabd67b",
+            "c07.p5": "0661b86ce4550774e8b18fbd87d19c78eb207e5263f229be45f1e9ad54b7f281",
+            "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+            "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+            "c07j.p4": "02f1c85c307502f94cd89ec704bb2e41e8fdc31510f38b888f7ceb343471dfe6",
+            "c07js01.c09": "bf6c3f4f28d0b71d41a197ef8fb96458fdd20f169b71e720b48be38c82af3dbf",
+            "c07js01.c11": "88483ec8e5ff9404e3ad87019bf9f5aba4937a8cef90013172a5036a4b5658b1",
+            "c07js01.c13": "bf969e7cb7b7fd8d020cc1d63739d8dd8f090c69f3b5873668bcd25b783861db",
+            "c07js01.c15": "45f39135d08e9c1135d48ef28db10fc1c96f74b04ee1c01089fc8c04129024cd",
+            "c07js01.c17": "6fd734b9fc7844c0ea4c4f7678da16b8b66ba58de8c56e522785b6675447e452",
+            "c07js01.c19": "5d077867316c8f9ca7dcaeab11c2f143a09f06fdbb9e7f8355690dd64c48af7f",
+            "c07js01.c21": "51ba55a8ae7ae3029dc394ae8e8af98510436d810e9ac647c72b627c7e46536e",
+            "c07js01.c23": "a159b2e12142f4c92f13e6ce80c468c3257a85752c620f9ac5da9fd8fdcfcb60",
+            "c07js01.p7": "5bbc991b6785acad387f736b74525976e2224c8ba48ad8db4b833c6c08cf84a5",
+            "ffightjs01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+          }
+        },
+        "support/final-fight-ex/README.txt": {
+          "sha256": "e8c0bd8b21128c9fd951f3214da076a601226d4b6b8bd89da7bd5aaeda12b766"
+        },
+        "support/final-fight-ex/TOOLS.md": {
+          "sha256": "5dce13a423d0ed87dd8746328d7c9416a8ee1c99ee91a90b521e87069783e8c9"
+        }
+      },
+      "platform": "hbmame",
+      "region": "jp",
+      "software_notes": [
+        "Pinned NumPy and Pillow are installed privately. MiSTer soundtrack helpers are prepared by the unchanged public kit."
+      ],
+      "variant": "jp"
+    },
+    "jp-mister": {
+      "destination_requirements": "Includes both arcade-audio and CPS+ launchers; arcade audio uses the standard jtcps1 core.",
+      "inputs": [
+        "disc-004b1f988be5d2228a34",
+        "disc-09be0461e0fed6af9124",
+        "disc-1645db85b475f43f00de",
+        "disc-1c6aa19aa37af167401d",
+        "disc-1ef304c004ef77bb1425",
+        "disc-36378ce42c2bab9a7f06",
+        "disc-431727881fdce0caf257",
+        "disc-4cc0a4d608e9e2a3fd97",
+        "disc-4e22e1143ff107246370",
+        "disc-53b1d687eeb012f6a338",
+        "disc-54fc4122a32eff39e285",
+        "disc-5e9eeb97a7cafee92062",
+        "disc-66d3c04a9709f7179e64",
+        "disc-6d2fbe5a7697cc7c600c",
+        "disc-71c83f446ac1f9c89c92",
+        "disc-77e81c705415dfcd0441",
+        "disc-827d003619821e2213fe",
+        "disc-8b239f426314abd2969c",
+        "disc-915b9ab60b1401e17ab2",
+        "disc-919e634b70d5a7f9e552",
+        "disc-982acea796b6cde67935",
+        "disc-9f2e26e3ac45b86507bc",
+        "disc-aba869bbb0f531d5cb03",
+        "disc-b54665afaf110ef1ee2a",
+        "disc-b6ba21f1c5a1a908c52b",
+        "disc-c24db563f4e13d006dbf",
+        "disc-c64bdbdb7c145479aefa",
+        "disc-f245a10b193982e19a48",
+        "disc-f25bb1c475bfaef5c5a0",
+        "rom-051df1f81f98a04685bb",
+        "rom-0763a7b2a150334423bc",
+        "rom-07c0fdf83581da618a73",
+        "rom-1b837e362281b897312e",
+        "rom-1bc247d5bc756ed797cb",
+        "rom-34a36b617c0be4244fe8",
+        "rom-419a7042935dd3e3a6e5",
+        "rom-5acd4407f2ee03642ff2",
+        "rom-62e2e94ff15e4d2b0f2f",
+        "rom-75aaeae98b4a89fe4db7",
+        "rom-7ae492882290a768d84e",
+        "rom-86da0d2884a5407f67ac",
+        "rom-875c00651821c163d5a9",
+        "rom-902b8850e99a62913d90",
+        "rom-a08c9f2d8cf0c0ef3ed6",
+        "rom-a6a287ee9eb1952af93c",
+        "rom-bf8bfe8d32b4eabb2580",
+        "rom-c381c318a2dd36c62003",
+        "rom-c4e8786a1c283c624c26",
+        "rom-ce61fd555f583a007ca5",
+        "rom-cf86ed0f9faa212043a2",
+        "rom-d35ff7bc039bc6cd5c96",
+        "rom-d8660712fc0a7f6e0ebc",
+        "rom-dce4a9b9f28b7e7f8eb8",
+        "rom-dd897bea75f292778631",
+        "rom-e5d9bf0282dada21d4a8",
+        "rom-eaca37867b6fa2a51723",
+        "rom-fac30feffb36c00025dd"
+      ],
+      "minimum_free_bytes": 6442450944,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Final Fight EX (Japan) [Arrange].mra": {
+          "sha256": "ac854987a480fe06cf697445b398e0c6a79e5a7d6160f192dc57cfd0b460eee2"
+        },
+        "_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Final Fight EX (Japan).mra": {
+          "sha256": "62f0bb423af5702c5f070724b9a36f9d8e1f7e6fae94d4f66a1278446983837e"
+        },
+        "_Arcade/cores/BUILD_PROVENANCE.txt": {
+          "sha256": "05447531a1b4b301c99115238adda10b43c84730c5ca216cfdbef765e8817f28"
+        },
+        "_Arcade/cores/LICENSE": {
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        },
+        "_Arcade/cores/SOURCE_AND_LICENSE.txt": {
+          "sha256": "9f63120bd40e3981e91876b87016ea57790dfdb095b73a1f0117493235667316"
+        },
+        "_Arcade/cores/jtcps1-cpsplus.rbf": {
+          "sha256": "402ea11eb64266b804ceb18c4cebb1ba1983d5142c1672d39a454d25a711b65e"
+        },
+        "games/CPS+/ffight_arrange_jp.zip": {
+          "members": {
+            "ffight_arrange_jp.cpk": "5e0ca87e2ab617738c6a3f3f3431b24eccf329fd25d547fdc048886971b442b2"
+          }
+        },
+        "games/hbmame/ffightjs01.zip": {
+          "members": {
+            "c07.c01": "756585ed5f8f5ca1fa0b2526b5ad130bdb6104ef1c571654a0721842af5e29ed",
+            "c07.c03": "7c38ea89761f80da8726c339231ea7b31391b8731ef982f49b86be3fffebcb43",
+            "c07.c05": "318f8263e20b08065fa676988e61ff4f7634127dda00b03124539b8469083eb5",
+            "c07.c07": "7ad445b87020a0ac9c88386964305d283471cb563becbc41de12921bba8d91ca",
+            "c07.m1": "454d5454d3c141bffc0de9d204f2a903703b7339d903623834427f49c2376b7f",
+            "c07.p1": "a0472312fbf14e85135483e67dea246a33d0bbc4697db205d45f66147cac2c3c",
+            "c07.p2": "46b8295cbf470960970db3f61321050c599ce5f4b18656af193db021e5a4ae99",
+            "c07.p3": "31d005f041ff7b8c0c207bb07997d401a09872dc4b1a99e560e20e0f1dabd67b",
+            "c07.p5": "0661b86ce4550774e8b18fbd87d19c78eb207e5263f229be45f1e9ad54b7f281",
+            "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+            "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+            "c07j.p4": "02f1c85c307502f94cd89ec704bb2e41e8fdc31510f38b888f7ceb343471dfe6",
+            "c07js01.c09": "bf6c3f4f28d0b71d41a197ef8fb96458fdd20f169b71e720b48be38c82af3dbf",
+            "c07js01.c11": "88483ec8e5ff9404e3ad87019bf9f5aba4937a8cef90013172a5036a4b5658b1",
+            "c07js01.c13": "bf969e7cb7b7fd8d020cc1d63739d8dd8f090c69f3b5873668bcd25b783861db",
+            "c07js01.c15": "45f39135d08e9c1135d48ef28db10fc1c96f74b04ee1c01089fc8c04129024cd",
+            "c07js01.c17": "6fd734b9fc7844c0ea4c4f7678da16b8b66ba58de8c56e522785b6675447e452",
+            "c07js01.c19": "5d077867316c8f9ca7dcaeab11c2f143a09f06fdbb9e7f8355690dd64c48af7f",
+            "c07js01.c21": "51ba55a8ae7ae3029dc394ae8e8af98510436d810e9ac647c72b627c7e46536e",
+            "c07js01.c23": "a159b2e12142f4c92f13e6ce80c468c3257a85752c620f9ac5da9fd8fdcfcb60",
+            "c07js01.p7": "5bbc991b6785acad387f736b74525976e2224c8ba48ad8db4b833c6c08cf84a5",
+            "ffightjs01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+          }
+        },
+        "support/final-fight-ex/README.txt": {
+          "sha256": "e8c0bd8b21128c9fd951f3214da076a601226d4b6b8bd89da7bd5aaeda12b766"
+        },
+        "support/final-fight-ex/TOOLS.md": {
+          "sha256": "5dce13a423d0ed87dd8746328d7c9416a8ee1c99ee91a90b521e87069783e8c9"
+        }
+      },
+      "platform": "mister",
+      "region": "jp",
+      "software_notes": [
+        "Pinned NumPy and Pillow are installed privately. MiSTer soundtrack helpers are prepared by the unchanged public kit."
+      ],
+      "variant": "jp"
+    },
+    "us-hbmame": {
+      "destination_requirements": "HBMAME with ffightus01/ffightjs01 registrations.",
+      "inputs": [
+        "disc-2fbfa7273b9c8f21a524",
+        "rom-0763a7b2a150334423bc",
+        "rom-07c0fdf83581da618a73",
+        "rom-34a36b617c0be4244fe8",
+        "rom-75aaeae98b4a89fe4db7",
+        "rom-86da0d2884a5407f67ac",
+        "rom-a6a287ee9eb1952af93c",
+        "rom-ce221b5d9db9beeca876",
+        "rom-ce61fd555f583a007ca5",
+        "rom-d8660712fc0a7f6e0ebc",
+        "rom-dce4a9b9f28b7e7f8eb8",
+        "rom-dd897bea75f292778631",
+        "rom-e5d9bf0282dada21d4a8"
+      ],
+      "minimum_free_bytes": 6442450944,
+      "outputs": {
+        "roms/ffightus01.zip": {
+          "members": {
+            "c07.c01": "ad1062a24a47c8bc4f57db1d1ff7a1854811d306bf3aeb03823a1ef9b2235d6e",
+            "c07.c03": "d7641b5679c32272b067a329a3a791e5116a103c46746c1241215a5993a1083c",
+            "c07.c05": "4eb39c1429fd945049e7963615b3671faeba2f4b192bffa17913f7b7346a36e7",
+            "c07.c07": "0218daf0391c3ad0a51fcdb032a749bdd9e782525371cdf3b8562e8e0068f619",
+            "c07.m1": "9ef9aa8c7d236046404003b8900826cc834450ccd7284145fd93660ed3b438a8",
+            "c07.p1": "e42b6cf5713edf550e8ea86e1c3922b33e4d5db3acaa5a18238f3fa3070b4465",
+            "c07.p2": "bea40e48fad9ed554596bd19f44164062e9bcb5bf73eb2fcae7b9f259e699a06",
+            "c07.p3": "356c297b4a55d769856bc1a4af95bd27109bf3371fa22956643b99eb430c0322",
+            "c07.p5": "74d2a2f2dc2cb2e8190620c01a51d420a8dd0fd5f2e627b7a999adb337a687b6",
+            "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+            "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+            "c07u.p4": "1463506b31c5e92b0008998253b717801f183afb10a338bd6cedfc471e3a28d8",
+            "c07us01.c09": "00cbb3be3de2bc25a07649e677203534d3a8131722d84e4e718174373511397c",
+            "c07us01.c11": "7454ed428575512c3614181a33c0fee8356db881a111cb89b0d61b9267ad2686",
+            "c07us01.c13": "1c4b90de66d223b41ff26861bfcce7feb896df3c5db78938e97a6fe71009d637",
+            "c07us01.c15": "52c51beb4b2f0123f2a38db718a84e001233d1ab010133e6f14ada644032f772",
+            "c07us01.c17": "58872c892d3970b7c9fbed81223ea0ff4a7fa5fafdeacdbb9f533ed74954bfde",
+            "c07us01.c19": "f19010c7ef703ff68d4df4023b2b6239b60c78cadf3e75b54f10dd0a72f366c3",
+            "c07us01.c21": "ae030f396a3559a2c4397b8477c6778c7680d59597c309c5e128c347f17b1706",
+            "c07us01.c23": "35c08195a089cbff7d65dc4eb11b2d1f3188ca14f638322c5476cefacbcfebe1",
+            "c07us01.p7": "cf5b6a1358aeac1cce20fd19b01ecd420ba1447e3925a03614e4b06d44cca387",
+            "ffightus01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+          }
+        },
+        "support/final-fight-ex/README.txt": {
+          "sha256": "e8c0bd8b21128c9fd951f3214da076a601226d4b6b8bd89da7bd5aaeda12b766"
+        },
+        "support/final-fight-ex/TOOLS.md": {
+          "sha256": "5dce13a423d0ed87dd8746328d7c9416a8ee1c99ee91a90b521e87069783e8c9"
+        }
+      },
+      "platform": "hbmame",
+      "region": "us",
+      "software_notes": [
+        "Pinned NumPy and Pillow are installed privately. MiSTer soundtrack helpers are prepared by the unchanged public kit."
+      ],
+      "variant": "us"
+    },
+    "us-mister": {
+      "destination_requirements": "Includes both arcade-audio and CPS+ launchers; arcade audio uses the standard jtcps1 core.",
+      "inputs": [
+        "disc-0f2ce4b062dca6811aa8",
+        "disc-0fc1a031276eade337d1",
+        "disc-1e636e5d86abb3a5f40c",
+        "disc-20d18c362602b9d71de3",
+        "disc-25dce78e0c61afb9a380",
+        "disc-25fc47a136fbf7e49b97",
+        "disc-2cb132eba87720cdc37f",
+        "disc-2fbfa7273b9c8f21a524",
+        "disc-312ab6bfb54324e6a22c",
+        "disc-4b44691218296673273f",
+        "disc-4d2af1344acd48da5090",
+        "disc-4f44408de026e527631e",
+        "disc-51dc5b6940b30eb9e7f2",
+        "disc-6f182cb7bd171d9b2404",
+        "disc-85d75cb242e186506d2c",
+        "disc-88d699cefa17b08d2a45",
+        "disc-99212c959eefd4970608",
+        "disc-9ed2b93410815f8a19ea",
+        "disc-a44db26332ccf48f560d",
+        "disc-c06fe0a2c9a58448e01b",
+        "disc-cfd1e3f4433c6a9996db",
+        "disc-da39eccfe37992c3e021",
+        "disc-dad65cfc1ee943933eab",
+        "disc-dd5b50e5b6eebf003596",
+        "disc-e7672eeb23c1481afd53",
+        "disc-f00a4b58f3789b6c6677",
+        "rom-0763a7b2a150334423bc",
+        "rom-07c0fdf83581da618a73",
+        "rom-34a36b617c0be4244fe8",
+        "rom-75aaeae98b4a89fe4db7",
+        "rom-86da0d2884a5407f67ac",
+        "rom-a6a287ee9eb1952af93c",
+        "rom-ce221b5d9db9beeca876",
+        "rom-ce61fd555f583a007ca5",
+        "rom-d8660712fc0a7f6e0ebc",
+        "rom-dce4a9b9f28b7e7f8eb8",
+        "rom-dd897bea75f292778631",
+        "rom-e5d9bf0282dada21d4a8"
+      ],
+      "minimum_free_bytes": 6442450944,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_CPS+/Final Fight EX (USA) [Arrange].mra": {
+          "sha256": "5248e48d24f63179ffd77763daaf5728ce560aaf09221c83395b9f5fb87e8d1b"
+        },
+        "_Arcade/_Arcade Patches/_Enhanced Versions/Final Fight EX (USA).mra": {
+          "sha256": "e8ae93a8d1ac264f6a3ec64e90274d5f94323fb7dd751c41f3b0285b44a965cf"
+        },
+        "_Arcade/cores/BUILD_PROVENANCE.txt": {
+          "sha256": "05447531a1b4b301c99115238adda10b43c84730c5ca216cfdbef765e8817f28"
+        },
+        "_Arcade/cores/LICENSE": {
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        },
+        "_Arcade/cores/SOURCE_AND_LICENSE.txt": {
+          "sha256": "9f63120bd40e3981e91876b87016ea57790dfdb095b73a1f0117493235667316"
+        },
+        "_Arcade/cores/jtcps1-cpsplus.rbf": {
+          "sha256": "402ea11eb64266b804ceb18c4cebb1ba1983d5142c1672d39a454d25a711b65e"
+        },
+        "games/CPS+/ffight_arrange.zip": {
+          "members": {
+            "ffight_arrange.cpk": "fd8f3b6cda24fd8398f858cf8d555126e39ea2c75686ca4d208f279807748a19"
+          }
+        },
+        "games/hbmame/ffightus01.zip": {
+          "members": {
+            "c07.c01": "ad1062a24a47c8bc4f57db1d1ff7a1854811d306bf3aeb03823a1ef9b2235d6e",
+            "c07.c03": "d7641b5679c32272b067a329a3a791e5116a103c46746c1241215a5993a1083c",
+            "c07.c05": "4eb39c1429fd945049e7963615b3671faeba2f4b192bffa17913f7b7346a36e7",
+            "c07.c07": "0218daf0391c3ad0a51fcdb032a749bdd9e782525371cdf3b8562e8e0068f619",
+            "c07.m1": "9ef9aa8c7d236046404003b8900826cc834450ccd7284145fd93660ed3b438a8",
+            "c07.p1": "e42b6cf5713edf550e8ea86e1c3922b33e4d5db3acaa5a18238f3fa3070b4465",
+            "c07.p2": "bea40e48fad9ed554596bd19f44164062e9bcb5bf73eb2fcae7b9f259e699a06",
+            "c07.p3": "356c297b4a55d769856bc1a4af95bd27109bf3371fa22956643b99eb430c0322",
+            "c07.p5": "74d2a2f2dc2cb2e8190620c01a51d420a8dd0fd5f2e627b7a999adb337a687b6",
+            "c07.v1": "ce61fd555f583a007ca544886683b1f3589aba55009db72b331884180b765d17",
+            "c07.v2": "dd897bea75f2927786315fc186b619a570be791f1d3de84a368e95c17c7537b8",
+            "c07u.p4": "1463506b31c5e92b0008998253b717801f183afb10a338bd6cedfc471e3a28d8",
+            "c07us01.c09": "00cbb3be3de2bc25a07649e677203534d3a8131722d84e4e718174373511397c",
+            "c07us01.c11": "7454ed428575512c3614181a33c0fee8356db881a111cb89b0d61b9267ad2686",
+            "c07us01.c13": "1c4b90de66d223b41ff26861bfcce7feb896df3c5db78938e97a6fe71009d637",
+            "c07us01.c15": "52c51beb4b2f0123f2a38db718a84e001233d1ab010133e6f14ada644032f772",
+            "c07us01.c17": "58872c892d3970b7c9fbed81223ea0ff4a7fa5fafdeacdbb9f533ed74954bfde",
+            "c07us01.c19": "f19010c7ef703ff68d4df4023b2b6239b60c78cadf3e75b54f10dd0a72f366c3",
+            "c07us01.c21": "ae030f396a3559a2c4397b8477c6778c7680d59597c309c5e128c347f17b1706",
+            "c07us01.c23": "35c08195a089cbff7d65dc4eb11b2d1f3188ca14f638322c5476cefacbcfebe1",
+            "c07us01.p7": "cf5b6a1358aeac1cce20fd19b01ecd420ba1447e3925a03614e4b06d44cca387",
+            "ffightus01.key": "b64056b0aa20b4a01fd2c73003d8d583d51df2c833478e16bef595e862385524"
+          }
+        },
+        "support/final-fight-ex/README.txt": {
+          "sha256": "e8c0bd8b21128c9fd951f3214da076a601226d4b6b8bd89da7bd5aaeda12b766"
+        },
+        "support/final-fight-ex/TOOLS.md": {
+          "sha256": "5dce13a423d0ed87dd8746328d7c9416a8ee1c99ee91a90b521e87069783e8c9"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "software_notes": [
+        "Pinned NumPy and Pillow are installed privately. MiSTer soundtrack helpers are prepared by the unchanged public kit."
+      ],
+      "variant": "us"
+    }
+  }
+}

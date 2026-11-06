@@ -97,14 +97,14 @@ You need:</p>
 <tr><td>English restoration</td><td>Final Fight EX</td><td class="mono">ffex2r</td><td class="mono">ffex2r</td></tr><tr><td>USA</td><td>Final Fight EX</td><td class="mono">ffex2u</td><td class="mono">ffex2u</td></tr><tr><td>Japan</td><td>Final Fight EX</td><td class="mono">ffex2j</td><td class="mono">ffex2j</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-11-04. Game version unchanged.</p>
+<p>Tools updated 2026-11-06. Game version unchanged.</p>
 <p><strong>FBNeo.</strong> The kit also writes the complete sets <code>ffex2j</code>, <code>ffex2r</code>, <code>ffex2u</code> under <code>out/fbneo/</code>, preserving their FBNeo ZIP and ROM filenames. Copy those ZIPs to your FBNeo ROM folder. Use an FBNeo version with definitions matching this game release. To build only these sets, add <code>--platform fbneo</code> to the build command.</p>
 <p>Merged, split and complete archives and extracted ROM folders are accepted. Use <code>--rompath /path/to/roms</code> (repeatable) and <code>--check</code> to verify arcade inputs before rebuilding from your disc. 7z needs installed 7-Zip; ZIP does not.</p>
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/final-fight-ex-cps2-rc3-kit.zip?v=daba6d9cb0">final-fight-ex-cps2-rc3-kit.zip</a>
-  (37.5 MB)</div>
-  <div class="hash">SHA-256: daba6d9cb00e77bc07fed2b35d6c827a504c5c789ce7a749cff11255e26e80e4</div>
+  <div class="file"><a href="../downloads/final-fight-ex-cps2-rc3-kit.zip?v=cfdc2f6c75">final-fight-ex-cps2-rc3-kit.zip</a>
+  (37.6 MB)</div>
+  <div class="hash">SHA-256: cfdc2f6c751acfa5de05eaf4f5a8fcf93da5e11579971cc2c8aa04c6eec252c7</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
@@ -117,6 +117,8 @@ python3 apply.py --disc-jp &quot;Final Fight CD (JP).cue&quot; \
                  --disc-us &quot;Final Fight CD (USA).cue&quot; \
                  --romset /path/to/roms --out-dir out</code></pre>
 
+<h3>Darksoft CPS-2</h3>
+<p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices. These are Phoenix-style builds with arcade music; CPS+ streamed audio requires MiSTer.</p>
 <h2 id="history">Release history</h2>
 <h3>rc3 (2026-11-03)</h3><ul>
 <li>New Console mode: a title menu with Arcade, Time Attack and Options, and a pause menu during play. MiSTer starts in Console mode; GAME MODE in the test menu&#x27;s EX page switches it.</li>

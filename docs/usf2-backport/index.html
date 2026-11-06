@@ -103,6 +103,8 @@ Everything else is rebuilt on your machine from files you already own.</p>
 cd usf2-backport
 python3 apply.py --rompath roms --source-us usa.nsp --keys prod.keys --platform mame</code></pre>
 
+<h3>Darksoft CPS-2</h3>
+<p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices. Darksoft uses native music; the streamed arrangements require CPS+ on MiSTer.</p>
 <h2 id="history">Release history</h2>
 <h3>rc5 (2026-10-28)</h3><ul>
 <li>Improved: A new 30th-anniversary logo in the intro.</li>

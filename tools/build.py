@@ -603,14 +603,32 @@ def tools_notice(bundle: dict) -> str:
             if bundle.get("tools_updated") else "")
 
 
+def render_darksoft_support(patch: dict, bundle: dict | None) -> str:
+    if not bundle or not bundle.get('darksoft_variants'):
+        return ''
+    note=''
+    if patch['slug'] in ('sfa2-gold','sfa2-ex'):
+        note=' The Darksoft export uses the 8 MB version with full-quality native sound.'
+    elif patch['slug']=='usf2-backport':
+        note=' Darksoft uses native music; the streamed arrangements require CPS+ on MiSTer.'
+    elif patch['slug']=='final-fight-ex-cps2':
+        note=' These are Phoenix-style builds with arcade music; CPS+ streamed audio requires MiSTer.'
+    return ('<h3>Darksoft CPS-2</h3>\n<p>The kit can build Darksoft CPS-2 flash files. '
+            'Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected '
+            'game folder from <code>out/darksoft/games/</code> to the card\'s <code>games/</code> folder. '
+            'Keep its flash files, key and NAME together. Follow the kit readme for build choices.'+note+'</p>')
+
+
 def render_download(patch: dict, bundle: dict | None) -> str:
     if not bundle:
         return ""
     if bundle["kind"] == "chd":
-        return render_chd_download(patch, bundle)
-    if bundle["kind"] == "kit":
-        return render_kit_download(patch, bundle)
-    return render_rom_download(patch, bundle)
+        result=render_chd_download(patch, bundle)
+    elif bundle["kind"] == "kit":
+        result=render_kit_download(patch, bundle)
+    else:
+        result=render_rom_download(patch, bundle)
+    return result+'\n'+render_darksoft_support(patch,bundle)
 
 
 def crc_rows(entries) -> str:
@@ -976,6 +994,7 @@ carries the same audio at full quality, for HBMAME and MiSTer (Jotego's <code>jt
 sets, {sets} (<a href="{esc(upstream)}">merged upstream</a>), so full HBMAME collections may already carry them.</p>""")
     if bundle and bundle.get("kind") == "kit":
         parts.append(render_kit_download(patch, bundle))
+        parts.append(render_darksoft_support(patch,bundle))
     elif bundle:
         parts.append(render_download(patch, bundle))
     else:

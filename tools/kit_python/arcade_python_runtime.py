@@ -256,6 +256,11 @@ class LazyDependencies(importlib.abc.MetaPathFinder):
 
 
 def bootstrap(argv=None):
+    try:
+        from .cli_errors import install
+    except ImportError:
+        from cli_errors import install
+    install()
     configure(sys.argv[1:] if argv is None else argv)
     # Consume just these shared options, so older kit-specific argument parsers
     # accept them without changing their existing command-line contracts.

@@ -339,9 +339,32 @@ def registered_fbneo(item):
 def published_bundle(root: Path, patch: dict, inventory: dict) -> dict:
     result = _published_bundle(root, patch, inventory)
     item = inventory["releases"][patch["slug"]]["versions"][patch["version"]]
+    role='ips' if item['kind']=='rom' else item['kind']
+    path=Path(root)/'docs/downloads'/item['files'][role]['name']
+    with zipfile.ZipFile(path) as archive:
+        variants=declared_darksoft(archive)
+    if variants:result['darksoft_variants']=variants
     if item.get("current_revision", 1) > 1:
         result.update(kit_revision=item["current_revision"], tools_updated=item["date"])
     return result
+
+
+def declared_darksoft(archive):
+    """Only declarations in the selected kit can advertise flash exports."""
+    names=set(archive.namelist())
+    if 'collection.json' in names:
+        value=json.loads(archive.read('collection.json'))
+        targets=value.get('targets',{})
+        declared=[key for key,target in targets.items() if target.get('platform')=='darksoft']
+        for key in declared:
+            outputs=targets[key].get('outputs',{})
+            require(any(n.endswith('/NAME') for n in outputs) and any('/flash.' in n for n in outputs),
+                    'Darksoft target has no declared flash/NAME output: '+key)
+        if declared:return sorted(declared)
+    if 'manifest.json' in names:
+        value=json.loads(archive.read('manifest.json'))
+        return sorted(v.get('key','default') for v in value.get('variants',[value]) if v.get('darksoft'))
+    return []
 
 
 def candidate_release(ready_path: Path, candidate: Path) -> tuple[dict, dict]:

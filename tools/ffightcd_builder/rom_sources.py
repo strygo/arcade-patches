@@ -64,13 +64,18 @@ def default_output(name):
 
 def check_output(value, inputs=(), *, directory=True):
     """Reject type conflicts and source/output overlap before expensive work."""
-    out = Path(value).expanduser().resolve()
+    original = Path(value).expanduser()
+    if original.is_symlink():
+        raise RomError(f"Output must not be a symlink: {original}")
+    out = original.resolve()
     for source in inputs:
         src = Path(source).expanduser().resolve()
         if out == src or out in src.parents:
             raise RomError(f"Output must be separate from input: {out} overlaps {src}")
     if out.exists() and out.is_dir() != directory:
         raise RomError(f"Output must be {'a folder' if directory else 'a file'}: {out}")
+    if out.exists() and (not directory or any(out.iterdir())):
+        raise RomError(f"Output already exists: {out}. Choose a new output path; existing files are preserved.")
     parent = out.parent
     while not parent.exists():
         parent = parent.parent

@@ -86,12 +86,12 @@ You need:</p>
 <ul><li>Your own original Street Fighter Zero (Japan 950727) arcade romset: sfzj.</li></ul>
 <p>The patch tool verifies your original ROMs, applies the selected EX edition, and writes the MAME and HBMAME archives and MiSTer MRAs. No console disc is needed.</p>
 <h2>Downloads</h2>
-
+<p>Tools updated 2026-11-06. Game version unchanged.</p>
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware, all 3 builds</div>
-  <div class="file"><a href="../downloads/sfa-ex-rc3-ips.zip?v=f9936a02f0">sfa-ex-rc3-ips.zip</a>
+  <div class="file"><a href="../downloads/sfa-ex-rc3-ips.zip?v=4ede8beb99">sfa-ex-rc3-ips.zip</a>
   (1.1 MB)</div>
-  <div class="hash">SHA-256: f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e</div>
+  <div class="hash">SHA-256: 4ede8beb9952e1d2bcf897d982f8ee2357e8c71b969457365fe4ab0ac09c1c95</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 3 builds</div>
@@ -205,6 +205,8 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <tr><td>Japan (Japanese)</td><td class="mono">57e23cad</td></tr>
 <tr><td>Asia (English)</td><td class="mono">71acb7f6</td></tr>
 </table>
+<h3>Darksoft CPS-2</h3>
+<p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices.</p>
 <h2 id="history">Release history</h2>
 <h3>rc3 (2026-11-03)</h3><ul>
 <li>Fixed the corrupted SCORE RANKING heading, and set the default ranking initials to CHN for Chun-Li and to CHL for Charlie in the USA and Asia builds.</li>

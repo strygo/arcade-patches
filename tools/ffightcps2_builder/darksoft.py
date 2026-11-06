@@ -179,9 +179,11 @@ def configure_ips(manifest, slug):
     if row is None:
         manifest['darksoft_unsupported'] = catalog['exceptions'].get(slug, 'No compatible CPS-2 layout has been declared.')
         return
-    require(manifest['set'] == row['profile'] and manifest.get('mame_build', True),
+    require(manifest['set'] == row['profile'] and
+            manifest.get('mame_build', True) == row.get('mame_build', True),
             'kit no longer has its declared stock-layout output')
     mapping = profile(row['profile'])
+    manifest.pop('darksoft_unsupported', None)
     for variant in manifest.get('variants', [manifest]):
         sizes = {m['name']: m.get('output_size', m['size']) for m in variant['members']
                  if m['name'] != 'dl-1425.bin' and m.get('role') != 'device'}

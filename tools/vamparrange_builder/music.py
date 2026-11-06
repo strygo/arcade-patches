@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 import cpk_format
@@ -41,15 +42,29 @@ def build(disc, value, path):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--iso', required=True)
+    p.add_argument('--iso','--disc',dest='iso',required=True,help='Collection DVD ISO or CHD')
+    p.add_argument('--chdman')
+    p.add_argument('--debug',action='store_true')
     p.add_argument('--out', type=Path, required=True)
+    from tool_controls import add_arguments,configure
+    add_arguments(p)
     a = p.parse_args()
+    configure(sys.argv[1:])
     import collection
     value = json.loads(Path(__file__).with_name('music.json').read_text())
+    from disc_sources import dvd_iso
+    from rom_sources import check_output,require_path
+    a.iso=require_path(a.iso,'--disc',file=True)
+    check_output(a.out,[a.iso],directory=False)
     a.out.parent.mkdir(parents=True, exist_ok=True)
-    build(collection.Disc(a.iso), value, a.out)
+    with dvd_iso(a.iso,chdman=a.chdman) as iso:
+        build(collection.Disc(iso), value, a.out)
     print('Built shared Vampire Arrange music pack; all sources and output verified.')
 
 
 if __name__ == '__main__':
-    main()
+    import sys
+    try:main()
+    except (OSError,ValueError) as exc:
+        if '--debug' in sys.argv:raise
+        raise SystemExit('ERROR: '+str(exc))

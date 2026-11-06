@@ -1,0 +1,831 @@
+{
+  "api": 1,
+  "game_version": "rc1",
+  "kit_revision": 8,
+  "manifest_sha256": "801b12eeef94c6d614f9aa857a0788634c72aaae89ca1b9aef95ad6d11420706",
+  "native_outputs": {
+    "darksoft/games/dstlk-restoration/NAME": {
+      "sha256": "035f4caa6d076741bbe2168c0d44db293162e3a8ba23ed60723b8231e929d337"
+    },
+    "darksoft/games/dstlk-restoration/flash.01": {
+      "sha256": "816af6ada39334c623d1a01f664720f9549e37fc8078ece58dee26d64832652f"
+    },
+    "darksoft/games/dstlk-restoration/flash.02": {
+      "sha256": "b0ef76243070da457837a9123d0be934868275beca53684d7a18a7c1e776fff2"
+    },
+    "darksoft/games/dstlk-restoration/flash.03": {
+      "sha256": "7650e2ad333ef6d237e96de8e6519a631d26858e32c64081bdc7df5985fc7807"
+    },
+    "darksoft/games/dstlk-restoration/flash.05": {
+      "sha256": "39c196329795fe8c1fd11394a0d05df7ad754b56fdcfb9beca7acb3282d516c3"
+    },
+    "darksoft/games/dstlk-restoration/flash.06": {
+      "sha256": "94af6cecf0adcc38359147ca13ae1b7e28583978420f213b661c41e76fdcec69"
+    },
+    "darksoft/games/dstlk-restoration/flash.07": {
+      "sha256": "2b85e46587dceb7ad9e80e35213aaf2958bf0d5f7fabeeb30f39e9bcaf14bc22"
+    },
+    "darksoft/games/dstlk-restoration/flash.08": {
+      "sha256": "8d92e06ee45bb68affcc3a9e13c8a3fc405423b16660ad658397a2beb2a8fad6"
+    },
+    "darksoft/games/dstlk-restoration/flash.09": {
+      "sha256": "b522f67474808f2827356217bbbedd206d52132b8c1c816883c50affaf2b4bef"
+    },
+    "darksoft/games/dstlk-restoration/flash.10": {
+      "sha256": "fddcfbd716fd435ebf679f02139c44cdb2427b329d26307a2b9ed1c210aab32c"
+    },
+    "darksoft/games/dstlk-restoration/flash.11": {
+      "sha256": "7008614a61fa1ee459cb87df99439a28df6899e9ca74d542154f39b201766f59"
+    },
+    "darksoft/games/dstlk-restoration/flash.12": {
+      "sha256": "4357eb0cf8e02f9ca57e9092dbb40cd922ca4b618eefc6eaf527060e136635be"
+    },
+    "darksoft/games/dstlk-restoration/key": {
+      "sha256": "5720b0dbc2cbf03b13867dd205701a44da160fb530d1e808416cdf8a713d8228"
+    },
+    "darksoft/receipts/dstlk-restoration.json": {
+      "sha256": "a30b2864a468d84f57bc3f11552425c8b07bd53b623e70a1c8964db5cc07b674"
+    },
+    "fbneo/vamprest.zip": {
+      "members": {
+        "vam.01": "2dabdb07d10a39e4aed51127a8c8c9a2077d4bd2c8638e99d9db52cc799b86c7",
+        "vam.02": "af9c0a31105c00500b35818e98ce0dfb8351292a50dab2d2e36f2dbcc35120cb",
+        "vam.11m": "949434a327c03bc34efdb5f2fbb079c51fb1b6e71db4f2aebd8e91619ba93707",
+        "vam.12m": "1033e60ca6d02caa58360239f514e57acfc16189465121a5738451b93e1da676",
+        "vam.14m": "4e097b8b87ece94e2dc730b2f03c47869c7e51cfeb95586a6964b386c76b3e5e",
+        "vam.16m": "ac15ddf1eb66abcf4e2a6908e255a8ae8defd96145398a324dbba2d202eea849",
+        "vam.18m": "c232df55cc38eff9458b02e6056f6e45564ff6f192aad7c54f6451990edfeeb9",
+        "vam.20m": "dc9c5fa6ac2cccd995c0721191c4fa72b7177ce406f1f08f1b6c4c8d2425153f",
+        "vamj.05a": "a728990d5a1b6f2fee0ece00b10fdae3ff1b2319c574bd92651f3ac6633bc15a",
+        "vamj.06a": "e2cd31e52544181aab05f5549014edf26ccd8b9abaeed3206d1b09fa6dc0d732",
+        "vamj.07a": "872a8c20397185a8aabc991b382e95f853b52b293ab1f80680acff57c5ed2276",
+        "vamj.08a": "a3a2088aeb08f0aa4e63d76f5eb9f0ae06bd4cf7a149953af5b1fabf2b2b9691",
+        "vamj.10a": "250e155d2cbad2cd78676d984f7b5c53d1d2cce8ead785f79648e706f40632e6",
+        "vampj.key": "5720b0dbc2cbf03b13867dd205701a44da160fb530d1e808416cdf8a713d8228",
+        "vamre.03a": "b08350be0a7fe6aabf7252d09aad866fc7fc5243008616b72aaf90d175689d65",
+        "vamre.04b": "ec5b64c96353c38631442b848dbafe00442c8780da693f4e549c5db4c1de5259",
+        "vamre.09a": "b1a5957dbcf6ff15e9eec065327b458cbd2415e11fa10eb2ad5bcf7788d24c93",
+        "vamre.13m": "39c196329795fe8c1fd11394a0d05df7ad754b56fdcfb9beca7acb3282d516c3",
+        "vamre.15m": "2b85e46587dceb7ad9e80e35213aaf2958bf0d5f7fabeeb30f39e9bcaf14bc22",
+        "vamre.17m": "b522f67474808f2827356217bbbedd206d52132b8c1c816883c50affaf2b4bef",
+        "vamre.19m": "7008614a61fa1ee459cb87df99439a28df6899e9ca74d542154f39b201766f59"
+      }
+    },
+    "hbmame/vamprest.zip": {
+      "members": {
+        "vam.01": "2dabdb07d10a39e4aed51127a8c8c9a2077d4bd2c8638e99d9db52cc799b86c7",
+        "vam.02": "af9c0a31105c00500b35818e98ce0dfb8351292a50dab2d2e36f2dbcc35120cb",
+        "vam.11m": "949434a327c03bc34efdb5f2fbb079c51fb1b6e71db4f2aebd8e91619ba93707",
+        "vam.12m": "1033e60ca6d02caa58360239f514e57acfc16189465121a5738451b93e1da676",
+        "vam.13m": "39c196329795fe8c1fd11394a0d05df7ad754b56fdcfb9beca7acb3282d516c3",
+        "vam.14m": "4e097b8b87ece94e2dc730b2f03c47869c7e51cfeb95586a6964b386c76b3e5e",
+        "vam.15m": "2b85e46587dceb7ad9e80e35213aaf2958bf0d5f7fabeeb30f39e9bcaf14bc22",
+        "vam.16m": "ac15ddf1eb66abcf4e2a6908e255a8ae8defd96145398a324dbba2d202eea849",
+        "vam.17m": "b522f67474808f2827356217bbbedd206d52132b8c1c816883c50affaf2b4bef",
+        "vam.18m": "c232df55cc38eff9458b02e6056f6e45564ff6f192aad7c54f6451990edfeeb9",
+        "vam.19m": "7008614a61fa1ee459cb87df99439a28df6899e9ca74d542154f39b201766f59",
+        "vam.20m": "dc9c5fa6ac2cccd995c0721191c4fa72b7177ce406f1f08f1b6c4c8d2425153f",
+        "vamj.03a": "b08350be0a7fe6aabf7252d09aad866fc7fc5243008616b72aaf90d175689d65",
+        "vamj.04b": "ec5b64c96353c38631442b848dbafe00442c8780da693f4e549c5db4c1de5259",
+        "vamj.05a": "a728990d5a1b6f2fee0ece00b10fdae3ff1b2319c574bd92651f3ac6633bc15a",
+        "vamj.06a": "e2cd31e52544181aab05f5549014edf26ccd8b9abaeed3206d1b09fa6dc0d732",
+        "vamj.07a": "872a8c20397185a8aabc991b382e95f853b52b293ab1f80680acff57c5ed2276",
+        "vamj.08a": "a3a2088aeb08f0aa4e63d76f5eb9f0ae06bd4cf7a149953af5b1fabf2b2b9691",
+        "vamj.09a": "b1a5957dbcf6ff15e9eec065327b458cbd2415e11fa10eb2ad5bcf7788d24c93",
+        "vamj.10a": "250e155d2cbad2cd78676d984f7b5c53d1d2cce8ead785f79648e706f40632e6",
+        "vampj.key": "5720b0dbc2cbf03b13867dd205701a44da160fb530d1e808416cdf8a713d8228"
+      }
+    },
+    "mame/vampj.zip": {
+      "members": {
+        "vam.01": "2dabdb07d10a39e4aed51127a8c8c9a2077d4bd2c8638e99d9db52cc799b86c7",
+        "vam.02": "af9c0a31105c00500b35818e98ce0dfb8351292a50dab2d2e36f2dbcc35120cb",
+        "vam.11m": "949434a327c03bc34efdb5f2fbb079c51fb1b6e71db4f2aebd8e91619ba93707",
+        "vam.12m": "1033e60ca6d02caa58360239f514e57acfc16189465121a5738451b93e1da676",
+        "vam.13m": "39c196329795fe8c1fd11394a0d05df7ad754b56fdcfb9beca7acb3282d516c3",
+        "vam.14m": "4e097b8b87ece94e2dc730b2f03c47869c7e51cfeb95586a6964b386c76b3e5e",
+        "vam.15m": "2b85e46587dceb7ad9e80e35213aaf2958bf0d5f7fabeeb30f39e9bcaf14bc22",
+        "vam.16m": "ac15ddf1eb66abcf4e2a6908e255a8ae8defd96145398a324dbba2d202eea849",
+        "vam.17m": "b522f67474808f2827356217bbbedd206d52132b8c1c816883c50affaf2b4bef",
+        "vam.18m": "c232df55cc38eff9458b02e6056f6e45564ff6f192aad7c54f6451990edfeeb9",
+        "vam.19m": "7008614a61fa1ee459cb87df99439a28df6899e9ca74d542154f39b201766f59",
+        "vam.20m": "dc9c5fa6ac2cccd995c0721191c4fa72b7177ce406f1f08f1b6c4c8d2425153f",
+        "vamj.03a": "b08350be0a7fe6aabf7252d09aad866fc7fc5243008616b72aaf90d175689d65",
+        "vamj.04b": "ec5b64c96353c38631442b848dbafe00442c8780da693f4e549c5db4c1de5259",
+        "vamj.05a": "a728990d5a1b6f2fee0ece00b10fdae3ff1b2319c574bd92651f3ac6633bc15a",
+        "vamj.06a": "e2cd31e52544181aab05f5549014edf26ccd8b9abaeed3206d1b09fa6dc0d732",
+        "vamj.07a": "872a8c20397185a8aabc991b382e95f853b52b293ab1f80680acff57c5ed2276",
+        "vamj.08a": "a3a2088aeb08f0aa4e63d76f5eb9f0ae06bd4cf7a149953af5b1fabf2b2b9691",
+        "vamj.09a": "b1a5957dbcf6ff15e9eec065327b458cbd2415e11fa10eb2ad5bcf7788d24c93",
+        "vamj.10a": "250e155d2cbad2cd78676d984f7b5c53d1d2cce8ead785f79648e706f40632e6",
+        "vampj.key": "5720b0dbc2cbf03b13867dd205701a44da160fb530d1e808416cdf8a713d8228"
+      }
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/Darkstalkers The Night Warriors (USA) [English Restoration].mra": {
+      "sha256": "637d7386276692a2522aa9bb49dd96951c8150da0b1c87f8a9927698526769b9"
+    }
+  },
+  "prerequisites": {
+    "source-1033e60ca6d02caa5836": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "1a3e5c03",
+          "sha256": "1033e60ca6d02caa58360239f514e57acfc16189465121a5738451b93e1da676",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.12m"
+    },
+    "source-250e155d2cbad2cd7867": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "9270c26b",
+          "sha256": "250e155d2cbad2cd78676d984f7b5c53d1d2cce8ead785f79648e706f40632e6",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vamj.10a"
+    },
+    "source-2dabdb07d10a39e4aed5": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "64b685d5",
+          "sha256": "2dabdb07d10a39e4aed51127a8c8c9a2077d4bd2c8638e99d9db52cc799b86c7",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.01"
+    },
+    "source-2f22fb763dba97f5dcd3": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "4d9c43c4",
+          "sha256": "2f22fb763dba97f5dcd3dad30de81800a24094975f771a0f629b9dc192e85a00",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vamj.04b"
+    },
+    "source-342e2f7c1e7a42d04057": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "4f2408e0",
+          "sha256": "342e2f7c1e7a42d040570ff13a1c57e958fdf8aa236c0ceb45b4e6a76b42acfa",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.17m"
+    },
+    "source-47b8f7cf94dbe7576a8c": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "3ce83c77",
+          "sha256": "47b8f7cf94dbe7576a8caa1b198242ef88171419f016778d341a3306919c2ebf",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.15m"
+    },
+    "source-4e097b8b87ece94e2dc7": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "bd87243c",
+          "sha256": "4e097b8b87ece94e2dc730b2f03c47869c7e51cfeb95586a6964b386c76b3e5e",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.14m"
+    },
+    "source-524a25bcd153be24594d": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d6cf5ef5",
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "size": 24576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "device",
+      "title": "dl-1425.bin"
+    },
+    "source-5720b0dbc2cbf03b1386": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "8418cc6f",
+          "sha256": "5720b0dbc2cbf03b13867dd205701a44da160fb530d1e808416cdf8a713d8228",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vampj.key"
+    },
+    "source-60e9554a18cd4befa79f": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "9ff60250",
+          "sha256": "60e9554a18cd4befa79fd3e294de049292dd4906b9b65fe9ee6364f27ea972ae",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.19m"
+    },
+    "source-872a8c20397185a8aabc": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "1067ad84",
+          "sha256": "872a8c20397185a8aabc991b382e95f853b52b293ab1f80680acff57c5ed2276",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vamj.07a"
+    },
+    "source-949434a327c03bc34efd": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "4a39deb2",
+          "sha256": "949434a327c03bc34efdb5f2fbb079c51fb1b6e71db4f2aebd8e91619ba93707",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.11m"
+    },
+    "source-a3a2088aeb08f0aa4e63": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "4b89f41f",
+          "sha256": "a3a2088aeb08f0aa4e63d76f5eb9f0ae06bd4cf7a149953af5b1fabf2b2b9691",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vamj.08a"
+    },
+    "source-a3dffa3dcb2b4b2e091d": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "c51baf99",
+          "sha256": "a3dffa3dcb2b4b2e091dfd86a5e6786ffd264ae3435e04dd43c823c469972e76",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.13m"
+    },
+    "source-a728990d5a1b6f2fee0e": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "6c497e92",
+          "sha256": "a728990d5a1b6f2fee0ece00b10fdae3ff1b2319c574bd92651f3ac6633bc15a",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vamj.05a"
+    },
+    "source-ac15ddf1eb66abcf4e2a": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "afec855f",
+          "sha256": "ac15ddf1eb66abcf4e2a6908e255a8ae8defd96145398a324dbba2d202eea849",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.16m"
+    },
+    "source-af9c0a31105c00500b35": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "cf7c97c7",
+          "sha256": "af9c0a31105c00500b35818e98ce0dfb8351292a50dab2d2e36f2dbcc35120cb",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.02"
+    },
+    "source-c232df55cc38eff9458b": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "3a033625",
+          "sha256": "c232df55cc38eff9458b02e6056f6e45564ff6f192aad7c54f6451990edfeeb9",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.18m"
+    },
+    "source-dc17120a44a7cae65fce": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "fc0a4aac",
+          "sha256": "dc17120a44a7cae65fce7b3bcdb5c35387ae0e50e645089aa3ae0938929b6610",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vamj.09a"
+    },
+    "source-dc9c5fa6ac2cccd995c0": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "2bff6a89",
+          "sha256": "dc9c5fa6ac2cccd995c0721191c4fa72b7177ce406f1f08f1b6c4c8d2425153f",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vam.20m"
+    },
+    "source-e2cd31e52544181aab05": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "f1bbecb6",
+          "sha256": "e2cd31e52544181aab05f5549014edf26ccd8b9abaeed3206d1b09fa6dc0d732",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vamj.06a"
+    },
+    "source-f6af174f76778120e42f": {
+      "action": "Add the canonical vampj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "f55d3722",
+          "sha256": "f6af174f76778120e42fec61164bb10b6a73ef8aee21788d15e9c9dd4b7d4aba",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vamj.03a"
+    }
+  },
+  "project": "dstlk-restoration",
+  "targets": {
+    "default-darksoft": {
+      "destination_requirements": "Use the Darksoft hardware and layout described in this kit's readme.",
+      "inputs": [
+        "source-1033e60ca6d02caa5836",
+        "source-250e155d2cbad2cd7867",
+        "source-2dabdb07d10a39e4aed5",
+        "source-2f22fb763dba97f5dcd3",
+        "source-342e2f7c1e7a42d04057",
+        "source-47b8f7cf94dbe7576a8c",
+        "source-4e097b8b87ece94e2dc7",
+        "source-5720b0dbc2cbf03b1386",
+        "source-60e9554a18cd4befa79f",
+        "source-872a8c20397185a8aabc",
+        "source-949434a327c03bc34efd",
+        "source-a3a2088aeb08f0aa4e63",
+        "source-a3dffa3dcb2b4b2e091d",
+        "source-a728990d5a1b6f2fee0e",
+        "source-ac15ddf1eb66abcf4e2a",
+        "source-af9c0a31105c00500b35",
+        "source-c232df55cc38eff9458b",
+        "source-dc17120a44a7cae65fce",
+        "source-dc9c5fa6ac2cccd995c0",
+        "source-e2cd31e52544181aab05",
+        "source-f6af174f76778120e42f"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "games/dstlk-restoration/NAME": {
+          "sha256": "035f4caa6d076741bbe2168c0d44db293162e3a8ba23ed60723b8231e929d337"
+        },
+        "games/dstlk-restoration/flash.01": {
+          "sha256": "816af6ada39334c623d1a01f664720f9549e37fc8078ece58dee26d64832652f"
+        },
+        "games/dstlk-restoration/flash.02": {
+          "sha256": "b0ef76243070da457837a9123d0be934868275beca53684d7a18a7c1e776fff2"
+        },
+        "games/dstlk-restoration/flash.03": {
+          "sha256": "7650e2ad333ef6d237e96de8e6519a631d26858e32c64081bdc7df5985fc7807"
+        },
+        "games/dstlk-restoration/flash.05": {
+          "sha256": "39c196329795fe8c1fd11394a0d05df7ad754b56fdcfb9beca7acb3282d516c3"
+        },
+        "games/dstlk-restoration/flash.06": {
+          "sha256": "94af6cecf0adcc38359147ca13ae1b7e28583978420f213b661c41e76fdcec69"
+        },
+        "games/dstlk-restoration/flash.07": {
+          "sha256": "2b85e46587dceb7ad9e80e35213aaf2958bf0d5f7fabeeb30f39e9bcaf14bc22"
+        },
+        "games/dstlk-restoration/flash.08": {
+          "sha256": "8d92e06ee45bb68affcc3a9e13c8a3fc405423b16660ad658397a2beb2a8fad6"
+        },
+        "games/dstlk-restoration/flash.09": {
+          "sha256": "b522f67474808f2827356217bbbedd206d52132b8c1c816883c50affaf2b4bef"
+        },
+        "games/dstlk-restoration/flash.10": {
+          "sha256": "fddcfbd716fd435ebf679f02139c44cdb2427b329d26307a2b9ed1c210aab32c"
+        },
+        "games/dstlk-restoration/flash.11": {
+          "sha256": "7008614a61fa1ee459cb87df99439a28df6899e9ca74d542154f39b201766f59"
+        },
+        "games/dstlk-restoration/flash.12": {
+          "sha256": "4357eb0cf8e02f9ca57e9092dbb40cd922ca4b618eefc6eaf527060e136635be"
+        },
+        "games/dstlk-restoration/key": {
+          "sha256": "5720b0dbc2cbf03b13867dd205701a44da160fb530d1e808416cdf8a713d8228"
+        },
+        "receipts/dstlk-restoration.json": {
+          "sha256": "a30b2864a468d84f57bc3f11552425c8b07bd53b623e70a1c8964db5cc07b674"
+        }
+      },
+      "platform": "darksoft",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-fbneo": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-1033e60ca6d02caa5836",
+        "source-250e155d2cbad2cd7867",
+        "source-2dabdb07d10a39e4aed5",
+        "source-2f22fb763dba97f5dcd3",
+        "source-342e2f7c1e7a42d04057",
+        "source-47b8f7cf94dbe7576a8c",
+        "source-4e097b8b87ece94e2dc7",
+        "source-5720b0dbc2cbf03b1386",
+        "source-60e9554a18cd4befa79f",
+        "source-872a8c20397185a8aabc",
+        "source-949434a327c03bc34efd",
+        "source-a3a2088aeb08f0aa4e63",
+        "source-a3dffa3dcb2b4b2e091d",
+        "source-a728990d5a1b6f2fee0e",
+        "source-ac15ddf1eb66abcf4e2a",
+        "source-af9c0a31105c00500b35",
+        "source-c232df55cc38eff9458b",
+        "source-dc17120a44a7cae65fce",
+        "source-dc9c5fa6ac2cccd995c0",
+        "source-e2cd31e52544181aab05",
+        "source-f6af174f76778120e42f"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/vamprest.zip": {
+          "members": {
+            "vam.01": "2dabdb07d10a39e4aed51127a8c8c9a2077d4bd2c8638e99d9db52cc799b86c7",
+            "vam.02": "af9c0a31105c00500b35818e98ce0dfb8351292a50dab2d2e36f2dbcc35120cb",
+            "vam.11m": "949434a327c03bc34efdb5f2fbb079c51fb1b6e71db4f2aebd8e91619ba93707",
+            "vam.12m": "1033e60ca6d02caa58360239f514e57acfc16189465121a5738451b93e1da676",
+            "vam.14m": "4e097b8b87ece94e2dc730b2f03c47869c7e51cfeb95586a6964b386c76b3e5e",
+            "vam.16m": "ac15ddf1eb66abcf4e2a6908e255a8ae8defd96145398a324dbba2d202eea849",
+            "vam.18m": "c232df55cc38eff9458b02e6056f6e45564ff6f192aad7c54f6451990edfeeb9",
+            "vam.20m": "dc9c5fa6ac2cccd995c0721191c4fa72b7177ce406f1f08f1b6c4c8d2425153f",
+            "vamj.05a": "a728990d5a1b6f2fee0ece00b10fdae3ff1b2319c574bd92651f3ac6633bc15a",
+            "vamj.06a": "e2cd31e52544181aab05f5549014edf26ccd8b9abaeed3206d1b09fa6dc0d732",
+            "vamj.07a": "872a8c20397185a8aabc991b382e95f853b52b293ab1f80680acff57c5ed2276",
+            "vamj.08a": "a3a2088aeb08f0aa4e63d76f5eb9f0ae06bd4cf7a149953af5b1fabf2b2b9691",
+            "vamj.10a": "250e155d2cbad2cd78676d984f7b5c53d1d2cce8ead785f79648e706f40632e6",
+            "vampj.key": "5720b0dbc2cbf03b13867dd205701a44da160fb530d1e808416cdf8a713d8228",
+            "vamre.03a": "b08350be0a7fe6aabf7252d09aad866fc7fc5243008616b72aaf90d175689d65",
+            "vamre.04b": "ec5b64c96353c38631442b848dbafe00442c8780da693f4e549c5db4c1de5259",
+            "vamre.09a": "b1a5957dbcf6ff15e9eec065327b458cbd2415e11fa10eb2ad5bcf7788d24c93",
+            "vamre.13m": "39c196329795fe8c1fd11394a0d05df7ad754b56fdcfb9beca7acb3282d516c3",
+            "vamre.15m": "2b85e46587dceb7ad9e80e35213aaf2958bf0d5f7fabeeb30f39e9bcaf14bc22",
+            "vamre.17m": "b522f67474808f2827356217bbbedd206d52132b8c1c816883c50affaf2b4bef",
+            "vamre.19m": "7008614a61fa1ee459cb87df99439a28df6899e9ca74d542154f39b201766f59"
+          }
+        }
+      },
+      "platform": "fbneo",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-hbmame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-1033e60ca6d02caa5836",
+        "source-250e155d2cbad2cd7867",
+        "source-2dabdb07d10a39e4aed5",
+        "source-2f22fb763dba97f5dcd3",
+        "source-342e2f7c1e7a42d04057",
+        "source-47b8f7cf94dbe7576a8c",
+        "source-4e097b8b87ece94e2dc7",
+        "source-524a25bcd153be24594d",
+        "source-5720b0dbc2cbf03b1386",
+        "source-60e9554a18cd4befa79f",
+        "source-872a8c20397185a8aabc",
+        "source-949434a327c03bc34efd",
+        "source-a3a2088aeb08f0aa4e63",
+        "source-a3dffa3dcb2b4b2e091d",
+        "source-a728990d5a1b6f2fee0e",
+        "source-ac15ddf1eb66abcf4e2a",
+        "source-af9c0a31105c00500b35",
+        "source-c232df55cc38eff9458b",
+        "source-dc17120a44a7cae65fce",
+        "source-dc9c5fa6ac2cccd995c0",
+        "source-e2cd31e52544181aab05",
+        "source-f6af174f76778120e42f"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/vamprest.zip": {
+          "members": {
+            "vam.01": "2dabdb07d10a39e4aed51127a8c8c9a2077d4bd2c8638e99d9db52cc799b86c7",
+            "vam.02": "af9c0a31105c00500b35818e98ce0dfb8351292a50dab2d2e36f2dbcc35120cb",
+            "vam.11m": "949434a327c03bc34efdb5f2fbb079c51fb1b6e71db4f2aebd8e91619ba93707",
+            "vam.12m": "1033e60ca6d02caa58360239f514e57acfc16189465121a5738451b93e1da676",
+            "vam.13m": "39c196329795fe8c1fd11394a0d05df7ad754b56fdcfb9beca7acb3282d516c3",
+            "vam.14m": "4e097b8b87ece94e2dc730b2f03c47869c7e51cfeb95586a6964b386c76b3e5e",
+            "vam.15m": "2b85e46587dceb7ad9e80e35213aaf2958bf0d5f7fabeeb30f39e9bcaf14bc22",
+            "vam.16m": "ac15ddf1eb66abcf4e2a6908e255a8ae8defd96145398a324dbba2d202eea849",
+            "vam.17m": "b522f67474808f2827356217bbbedd206d52132b8c1c816883c50affaf2b4bef",
+            "vam.18m": "c232df55cc38eff9458b02e6056f6e45564ff6f192aad7c54f6451990edfeeb9",
+            "vam.19m": "7008614a61fa1ee459cb87df99439a28df6899e9ca74d542154f39b201766f59",
+            "vam.20m": "dc9c5fa6ac2cccd995c0721191c4fa72b7177ce406f1f08f1b6c4c8d2425153f",
+            "vamj.03a": "b08350be0a7fe6aabf7252d09aad866fc7fc5243008616b72aaf90d175689d65",
+            "vamj.04b": "ec5b64c96353c38631442b848dbafe00442c8780da693f4e549c5db4c1de5259",
+            "vamj.05a": "a728990d5a1b6f2fee0ece00b10fdae3ff1b2319c574bd92651f3ac6633bc15a",
+            "vamj.06a": "e2cd31e52544181aab05f5549014edf26ccd8b9abaeed3206d1b09fa6dc0d732",
+            "vamj.07a": "872a8c20397185a8aabc991b382e95f853b52b293ab1f80680acff57c5ed2276",
+            "vamj.08a": "a3a2088aeb08f0aa4e63d76f5eb9f0ae06bd4cf7a149953af5b1fabf2b2b9691",
+            "vamj.09a": "b1a5957dbcf6ff15e9eec065327b458cbd2415e11fa10eb2ad5bcf7788d24c93",
+            "vamj.10a": "250e155d2cbad2cd78676d984f7b5c53d1d2cce8ead785f79648e706f40632e6",
+            "vampj.key": "5720b0dbc2cbf03b13867dd205701a44da160fb530d1e808416cdf8a713d8228"
+          }
+        }
+      },
+      "platform": "hbmame",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-1033e60ca6d02caa5836",
+        "source-250e155d2cbad2cd7867",
+        "source-2dabdb07d10a39e4aed5",
+        "source-2f22fb763dba97f5dcd3",
+        "source-342e2f7c1e7a42d04057",
+        "source-47b8f7cf94dbe7576a8c",
+        "source-4e097b8b87ece94e2dc7",
+        "source-524a25bcd153be24594d",
+        "source-5720b0dbc2cbf03b1386",
+        "source-60e9554a18cd4befa79f",
+        "source-872a8c20397185a8aabc",
+        "source-949434a327c03bc34efd",
+        "source-a3a2088aeb08f0aa4e63",
+        "source-a3dffa3dcb2b4b2e091d",
+        "source-a728990d5a1b6f2fee0e",
+        "source-ac15ddf1eb66abcf4e2a",
+        "source-af9c0a31105c00500b35",
+        "source-c232df55cc38eff9458b",
+        "source-dc17120a44a7cae65fce",
+        "source-dc9c5fa6ac2cccd995c0",
+        "source-e2cd31e52544181aab05",
+        "source-f6af174f76778120e42f"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/vampj.zip": {
+          "members": {
+            "vam.01": "2dabdb07d10a39e4aed51127a8c8c9a2077d4bd2c8638e99d9db52cc799b86c7",
+            "vam.02": "af9c0a31105c00500b35818e98ce0dfb8351292a50dab2d2e36f2dbcc35120cb",
+            "vam.11m": "949434a327c03bc34efdb5f2fbb079c51fb1b6e71db4f2aebd8e91619ba93707",
+            "vam.12m": "1033e60ca6d02caa58360239f514e57acfc16189465121a5738451b93e1da676",
+            "vam.13m": "39c196329795fe8c1fd11394a0d05df7ad754b56fdcfb9beca7acb3282d516c3",
+            "vam.14m": "4e097b8b87ece94e2dc730b2f03c47869c7e51cfeb95586a6964b386c76b3e5e",
+            "vam.15m": "2b85e46587dceb7ad9e80e35213aaf2958bf0d5f7fabeeb30f39e9bcaf14bc22",
+            "vam.16m": "ac15ddf1eb66abcf4e2a6908e255a8ae8defd96145398a324dbba2d202eea849",
+            "vam.17m": "b522f67474808f2827356217bbbedd206d52132b8c1c816883c50affaf2b4bef",
+            "vam.18m": "c232df55cc38eff9458b02e6056f6e45564ff6f192aad7c54f6451990edfeeb9",
+            "vam.19m": "7008614a61fa1ee459cb87df99439a28df6899e9ca74d542154f39b201766f59",
+            "vam.20m": "dc9c5fa6ac2cccd995c0721191c4fa72b7177ce406f1f08f1b6c4c8d2425153f",
+            "vamj.03a": "b08350be0a7fe6aabf7252d09aad866fc7fc5243008616b72aaf90d175689d65",
+            "vamj.04b": "ec5b64c96353c38631442b848dbafe00442c8780da693f4e549c5db4c1de5259",
+            "vamj.05a": "a728990d5a1b6f2fee0ece00b10fdae3ff1b2319c574bd92651f3ac6633bc15a",
+            "vamj.06a": "e2cd31e52544181aab05f5549014edf26ccd8b9abaeed3206d1b09fa6dc0d732",
+            "vamj.07a": "872a8c20397185a8aabc991b382e95f853b52b293ab1f80680acff57c5ed2276",
+            "vamj.08a": "a3a2088aeb08f0aa4e63d76f5eb9f0ae06bd4cf7a149953af5b1fabf2b2b9691",
+            "vamj.09a": "b1a5957dbcf6ff15e9eec065327b458cbd2415e11fa10eb2ad5bcf7788d24c93",
+            "vamj.10a": "250e155d2cbad2cd78676d984f7b5c53d1d2cce8ead785f79648e706f40632e6",
+            "vampj.key": "5720b0dbc2cbf03b13867dd205701a44da160fb530d1e808416cdf8a713d8228"
+          }
+        }
+      },
+      "platform": "mame",
+      "profile": "dstlk-restoration-default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mister": {
+      "destination_requirements": "Use the MiSTer core named by the included MRA.",
+      "inputs": [
+        "source-1033e60ca6d02caa5836",
+        "source-250e155d2cbad2cd7867",
+        "source-2dabdb07d10a39e4aed5",
+        "source-2f22fb763dba97f5dcd3",
+        "source-342e2f7c1e7a42d04057",
+        "source-47b8f7cf94dbe7576a8c",
+        "source-4e097b8b87ece94e2dc7",
+        "source-524a25bcd153be24594d",
+        "source-5720b0dbc2cbf03b1386",
+        "source-60e9554a18cd4befa79f",
+        "source-872a8c20397185a8aabc",
+        "source-949434a327c03bc34efd",
+        "source-a3a2088aeb08f0aa4e63",
+        "source-a3dffa3dcb2b4b2e091d",
+        "source-a728990d5a1b6f2fee0e",
+        "source-ac15ddf1eb66abcf4e2a",
+        "source-af9c0a31105c00500b35",
+        "source-c232df55cc38eff9458b",
+        "source-dc17120a44a7cae65fce",
+        "source-dc9c5fa6ac2cccd995c0",
+        "source-e2cd31e52544181aab05",
+        "source-f6af174f76778120e42f"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Restorations/Darkstalkers The Night Warriors (USA) [English Restoration].mra": {
+          "sha256": "637d7386276692a2522aa9bb49dd96951c8150da0b1c87f8a9927698526769b9"
+        },
+        "games/mame/vampj.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vam.01": "2dabdb07d10a39e4aed51127a8c8c9a2077d4bd2c8638e99d9db52cc799b86c7",
+            "vam.02": "af9c0a31105c00500b35818e98ce0dfb8351292a50dab2d2e36f2dbcc35120cb",
+            "vam.11m": "949434a327c03bc34efdb5f2fbb079c51fb1b6e71db4f2aebd8e91619ba93707",
+            "vam.12m": "1033e60ca6d02caa58360239f514e57acfc16189465121a5738451b93e1da676",
+            "vam.13m": "a3dffa3dcb2b4b2e091dfd86a5e6786ffd264ae3435e04dd43c823c469972e76",
+            "vam.14m": "4e097b8b87ece94e2dc730b2f03c47869c7e51cfeb95586a6964b386c76b3e5e",
+            "vam.15m": "47b8f7cf94dbe7576a8caa1b198242ef88171419f016778d341a3306919c2ebf",
+            "vam.16m": "ac15ddf1eb66abcf4e2a6908e255a8ae8defd96145398a324dbba2d202eea849",
+            "vam.17m": "342e2f7c1e7a42d040570ff13a1c57e958fdf8aa236c0ceb45b4e6a76b42acfa",
+            "vam.18m": "c232df55cc38eff9458b02e6056f6e45564ff6f192aad7c54f6451990edfeeb9",
+            "vam.19m": "60e9554a18cd4befa79fd3e294de049292dd4906b9b65fe9ee6364f27ea972ae",
+            "vam.20m": "dc9c5fa6ac2cccd995c0721191c4fa72b7177ce406f1f08f1b6c4c8d2425153f",
+            "vamj.03a": "f6af174f76778120e42fec61164bb10b6a73ef8aee21788d15e9c9dd4b7d4aba",
+            "vamj.04b": "2f22fb763dba97f5dcd3dad30de81800a24094975f771a0f629b9dc192e85a00",
+            "vamj.05a": "a728990d5a1b6f2fee0ece00b10fdae3ff1b2319c574bd92651f3ac6633bc15a",
+            "vamj.06a": "e2cd31e52544181aab05f5549014edf26ccd8b9abaeed3206d1b09fa6dc0d732",
+            "vamj.07a": "872a8c20397185a8aabc991b382e95f853b52b293ab1f80680acff57c5ed2276",
+            "vamj.08a": "a3a2088aeb08f0aa4e63d76f5eb9f0ae06bd4cf7a149953af5b1fabf2b2b9691",
+            "vamj.09a": "dc17120a44a7cae65fce7b3bcdb5c35387ae0e50e645089aa3ae0938929b6610",
+            "vamj.10a": "250e155d2cbad2cd78676d984f7b5c53d1d2cce8ead785f79648e706f40632e6",
+            "vampj.key": "5720b0dbc2cbf03b13867dd205701a44da160fb530d1e808416cdf8a713d8228"
+          }
+        }
+      },
+      "platform": "mister",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    }
+  }
+}

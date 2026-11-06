@@ -5,6 +5,7 @@ from pathlib import Path
 import shutil
 
 import fetch_switch_tools as common
+from tool_controls import executable_path
 
 HERE = Path(__file__).resolve().parent
 COMPONENTS = {
@@ -27,6 +28,9 @@ def _resolve(tool, *, manifest=None, host=None):
     key = 'CPSPLUS_'+tool.upper()
     override = os.environ.get(key)
     if override:
+        if tool in ('chdman','sevenzip'):
+            names = ('chdman.exe','chdman') if tool == 'chdman' else ('7zz','7z','7za','7zr','7z.exe','7za.exe','7zr.exe')
+            return executable_path(override,names,label=key)
         path = Path(override).expanduser()
         found = str(path.absolute()) if path.is_file() else shutil.which(override)
         common.require(found, key+' does not name a file: '+override)

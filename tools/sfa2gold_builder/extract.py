@@ -224,12 +224,31 @@ ASIA = _region(0x9F738000, "76b1e4bc7cd5fa11dc9d3ea2354bc5a7",
                164845568, 165140480, 45391872, 45686784)
 
 
+def main():
+    import argparse,sys
+    from disc_sources import dvd_iso
+    from rom_sources import require_path
+    from tool_controls import add_arguments,configure
+    parser=argparse.ArgumentParser(description='Verify and extract anthology resources from your PS2 DVD ISO or CHD.')
+    parser.add_argument('disc')
+    parser.add_argument('--region',choices=('us','jp','eu','asia'),default='us')
+    parser.add_argument('--chdman');parser.add_argument('--debug',action='store_true')
+    add_arguments(parser)
+    args=parser.parse_args();configure(sys.argv[1:])
+    source=require_path(args.disc,'disc',file=True)
+    profile={'us':US,'jp':JP,'eu':EU,'asia':ASIA}[args.region]
+    with dvd_iso(source,chdman=args.chdman) as iso:
+        r = extract_zero6(iso, profile)
+        print(f"entry531: {len(r['entry531'])} tiles (verified)")
+        print(f"comp2: {len(r['comp2'])} bytes (verified)")
+        a = extract_audio(iso, profile)
+        for pkg, mem in a.items():
+            print(f"{pkg} audio: {', '.join(f'{k}={len(v)}' for k, v in mem.items())} (verified)")
+
+
 if __name__ == "__main__":
     import sys
-    iso = sys.argv[1]
-    r = extract_zero6(iso, US)
-    print(f"entry531: {len(r['entry531'])} tiles (verified)")
-    print(f"comp2: {len(r['comp2'])} bytes (verified)")
-    a = extract_audio(iso, US)
-    for pkg, mem in a.items():
-        print(f"{pkg} audio: {', '.join(f'{k}={len(v)}' for k, v in mem.items())} (verified)")
+    try:main()
+    except (OSError,ValueError) as exc:
+        if '--debug' in sys.argv:raise
+        raise SystemExit('ERROR: '+str(exc))

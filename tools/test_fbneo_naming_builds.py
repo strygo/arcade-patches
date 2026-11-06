@@ -63,8 +63,12 @@ class FutureNamesTests(unittest.TestCase):
                     (build if art.get('variants') else art)['patched_zip']=str(target)
                     declaration=registry[hb['setname']]
                     wanted[declaration['setname']+'.zip']={declaration['renames'][hb['renames'].get(n,n)]:b for n,b in payload.items()}
-                with patch.object(packager,'DOCS',root/'published'),patch('darksoft.configure_ips'):
+                # Synthetic ROM-name fixtures exercise the IPS producer and
+                # FBNeo reconstruction; native definitions require real firmware.
+                with patch.object(packager,'DOCS',root/'published'),patch('darksoft.configure_ips'), \
+                     patch('kit_collection.package_archive') as native_package:
                     packager.build_rom_downloads(page)
+                    native_package.assert_called_once()
                 kit=root/'kit'
                 with zipfile.ZipFile(root/'published/downloads'/(page['slug']+'-'+page['version']+'-ips.zip')) as z:
                     z.extractall(kit)

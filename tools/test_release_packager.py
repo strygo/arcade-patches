@@ -114,12 +114,13 @@ class ReleasePackagerTests(unittest.TestCase):
                         self.assertEqual({'game.03': b'fixed', 'game.04': b'unchanged'},
                                          {n: z.read(n) for n in z.namelist()})
                 if embedded:
+                    argv[-1] = str(root / 'with-devices')
                     argv += ['--include-devices']
                     code = ('import runpy,sys;sys.path.insert(0,' + repr(str(kit)) + ');'
                             'import rom_sources;rom_sources.QSOUND=' + repr(spec) + ';'
                             'sys.argv=' + repr(argv) + ';runpy.run_path(sys.argv[0],run_name="__main__")')
                     subprocess.run([sys.executable, '-c', code], check=True, capture_output=True)
-                    with zipfile.ZipFile(root / str(embedded) / 'mame/demo.zip') as z:
+                    with zipfile.ZipFile(root / 'with-devices/mame/demo.zip') as z:
                         self.assertEqual(firmware, z.read('dl-1425.bin'))
 
     def test_kits_never_carry_emulator_definitions(self):
