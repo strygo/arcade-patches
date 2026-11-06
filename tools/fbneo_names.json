@@ -1274,6 +1274,29 @@
       },
       "setname": "vsavs02",
       "slug": "vsav-arrange"
+    },
+    "hsf2re": {
+      "setname": "hsf2re",
+      "slug": "hsf2-restoration",
+      "renames": {
+        "hs2.01": "hs2.01",
+        "hs2.02": "hs2.02",
+        "hs2.11m": "hs2.11m",
+        "hs2re.13m": "hs2re.13m",
+        "hs2re.15m": "hs2re.15m",
+        "hs2re.17m": "hs2re.17m",
+        "hs2re.19m": "hs2re.19m",
+        "hs2re.03c": "hs2re.03c",
+        "hs2re.04b": "hs2re.04b",
+        "hs2j.05": "hs2j.05",
+        "hs2j.06": "hs2j.06",
+        "hs2j.07": "hs2j.07",
+        "hs2j.08": "hs2j.08",
+        "hs2j.09": "hs2j.09",
+        "hs2re.10": "hs2re.10",
+        "hsf2j.key": "hsf2j.key"
+      },
+      "ignored": {}
     }
   }
 }

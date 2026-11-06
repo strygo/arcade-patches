@@ -2886,6 +2886,10 @@
       "sha256": "8e1da071159ce7e0bff49052bb40d9b0b7419e2008fea1ece6d6f8213c5bc9fb",
       "size": 60618
     },
+    "catalog/v1/definitions/9b0536f55a2782b3107aabc94923cefee9cf7e1629ff5d15bfdb19284f51e029.json": {
+      "sha256": "9b0536f55a2782b3107aabc94923cefee9cf7e1629ff5d15bfdb19284f51e029",
+      "size": 21916
+    },
     "catalog/v1/definitions/9cdf87698509ea5e0e8916608896ecc6c4e70abf163793b802e7c6740836698c.json": {
       "sha256": "9cdf87698509ea5e0e8916608896ecc6c4e70abf163793b802e7c6740836698c",
       "size": 120476
@@ -2951,8 +2955,8 @@
       "size": 127219
     },
     "catalog/v1/index.json": {
-      "sha256": "fe9d857978ab9d2025840d8671ece86d506831e020b1435a37f4ebd0fd585276",
-      "size": 27438
+      "sha256": "6e37524949ff5e41ff449f51d52f03f27786e7aea303f110c861d553b6d9bbdd",
+      "size": 28343
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
       "sha256": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4",
@@ -2973,6 +2977,10 @@
     "downloads/archive/51f116c2ea8c6e41c9cb263fbe245d0227706b14238f4026afc25edef5bd7c74/vsav-arrange-rc4-kit.zip": {
       "sha256": "51f116c2ea8c6e41c9cb263fbe245d0227706b14238f4026afc25edef5bd7c74",
       "size": 2354143
+    },
+    "downloads/archive/6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8/hsf2-restoration-rc1-ips.zip": {
+      "sha256": "6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8",
+      "size": 170519
     },
     "downloads/archive/9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329/sfa3-upper-cps2-rc1-kit.zip": {
       "sha256": "9486433a8d1b6e1aa969be12ecfe3096204fce12f3775a70e761e73f8eeeb329",
@@ -3015,7 +3023,7 @@
       "size": 44138
     }
   },
-  "generation": 53,
+  "generation": 54,
   "launcher": "tools/downloads/archive/5f3be6f6034b4dd735b96ec4caf0989dd8275b25649c78a9867f045c08877b81/ArcadePatches-0.1.1.zip",
   "native_updates": [
     {
@@ -3121,6 +3129,14 @@
       "project": "sfa3-upper-cps2",
       "ready_sha256": "88a5e2fc5f995c10eac7d8ff056839a44213fa374878b9d61b4b9a83e23fcfe9",
       "release_sha256": "794952c98a9d99ceb7eb29f8019e0305ac94b77bb8b0a6a65033a04ed1cd69ff"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 1,
+      "kit_sha256": "6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8",
+      "project": "hsf2-restoration",
+      "ready_sha256": "78829c7da4e364457c5f7c437a2b6bfdc709a562c6dc26d6fc08fada9496d20a",
+      "release_sha256": "bcc58b38cafff17b36580793199b6baef360ee1973501e6b4b4ee094d65aad3f"
     }
   ],
   "package_receipt": {

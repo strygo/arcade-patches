@@ -85,8 +85,17 @@ def prepare(root, ready_path, candidate):
     require(set(definition.get('requires', [])) <= set(record['package_receipt'].get('features', [])),
             'prepare a launcher supporting this native kit’s required capabilities')
     qualified = {}
-    for case in ready['qa']['cases']:
+    declared_cases = release['qa']['cases']
+    case_downloads = {case['id']: case['download'] for case in declared_cases}
+    observed_cases = ready['qa']['cases']
+    require(len(case_downloads) == len(declared_cases) == len(observed_cases)
+            and {case['id'] for case in observed_cases} == set(case_downloads),
+            'native collection QA case binding differs')
+    for case in observed_cases:
         require(case.get('status') == 'passed', 'unpassed collection output QA case')
+        # The definition belongs to this kit, while release QA also covers
+        # separate downloads such as standalone overlay MRAs.
+        if case_downloads[case['id']] != name:continue
         for output, spec in case['outputs'].items():
             require(output not in qualified or qualified[output] == spec, 'conflicting qualified outputs')
             qualified[output] = spec

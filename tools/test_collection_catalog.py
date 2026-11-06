@@ -27,8 +27,9 @@ class CatalogImportTests(unittest.TestCase):
             'targets': {'default-fbneo': {'platform': 'fbneo', 'outputs': {'roms/game.zip': self.native_outputs['fbneo/game.zip']}}}}
         with zipfile.ZipFile(self.kit, 'w') as out:
             out.writestr('manifest.json', raw);out.writestr('collection.json', json.dumps(declaration))
-        self.release = {'plan': {'kit': 'game', 'version': 'rc2'}, 'downloads': {self.kit.name: contract(self.kit)['sha256']}}
-        self.ready = {'release_sha256': 'b' * 64, 'qa': {'cases': [{'status': 'passed', 'outputs': self.native_outputs}]}}
+        self.release = {'plan': {'kit': 'game', 'version': 'rc2'}, 'downloads': {self.kit.name: contract(self.kit)['sha256']},
+            'qa': {'cases': [{'id': 'native', 'download': self.kit.name}]}}
+        self.ready = {'release_sha256': 'b' * 64, 'qa': {'cases': [{'id': 'native', 'status': 'passed', 'outputs': self.native_outputs}]}}
         self.ready_path = self.root / 'ready.json';self.ready_path.write_text('{}')
         artifacts = {};releases = {}
         for slug in ('game', 'other'):
@@ -230,6 +231,24 @@ class CatalogImportTests(unittest.TestCase):
     def test_candidate_contract_must_match_independent_qa(self):
         self.ready['qa']['cases'][0]['outputs'] = {'fbneo/game.zip': {'members': {'p.bin': '0' * 64}}}
         with self.assertRaisesRegex(ReleaseInventoryError, 'independent release QA'):self.prepare()
+
+    def test_separate_mra_download_does_not_expand_native_kit_outputs(self):
+        self.release['qa']['cases'].append({'id': 'mra', 'download': 'game-rc2-mra.zip'})
+        self.ready['qa']['cases'].append({'id': 'mra', 'status': 'passed',
+            'outputs': {'_Arcade/game.mra': {'sha256': 'c' * 64}}})
+        self.assertIsNotNone(self.prepare())
+
+    def test_additional_case_for_same_kit_cannot_hide_an_output(self):
+        self.release['qa']['cases'].append({'id': 'extra', 'download': self.kit.name})
+        self.ready['qa']['cases'].append({'id': 'extra', 'status': 'passed',
+            'outputs': {'extra.bin': {'sha256': 'c' * 64}}})
+        with self.assertRaisesRegex(ReleaseInventoryError, 'independent release QA'):self.prepare()
+
+    def test_unknown_or_duplicate_qa_case_is_rejected(self):
+        self.ready['qa']['cases'].append({'id': 'unknown', 'status': 'passed', 'outputs': {}})
+        with self.assertRaisesRegex(ReleaseInventoryError, 'QA case binding'):self.prepare()
+        self.ready['qa']['cases'][-1]['id'] = 'native'
+        with self.assertRaisesRegex(ReleaseInventoryError, 'QA case binding'):self.prepare()
 
     def test_native_update_cannot_silently_drop_its_definition(self):
         self.index['releases']['game-rc1'] = {'runner': {'artifact': 'game-kit'}}

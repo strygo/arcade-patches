@@ -6058,6 +6058,166 @@
         "how": "Reconstructs the USA and Japan versions from your original game files and writes the HBMAME and FBNeo sets and MiSTer card folders.",
         "sizes_note": "Use new work and output directories with at least 8 GiB of free storage."
       }
+    },
+    {
+      "slug": "hsf2-restoration",
+      "hidden": false,
+      "collection_api": 1,
+      "title": "Hyper Street Fighter II: The Anniversary Edition",
+      "subtitle": "English restoration",
+      "section": "restorations",
+      "status": "release-candidate",
+      "version": "rc1",
+      "date": "2026-11-05",
+      "game": "Hyper Street Fighter II: The Anniversary Edition (Japan 040202)",
+      "set": "hsf2j",
+      "hardware": "Capcom CPS-2",
+      "mame_build": false,
+      "mister_hbmame": true,
+      "patch_noun": "restoration",
+      "patch_kind": "English restoration patch",
+      "patch_intro": "An unofficial English restoration of Hyper Street Fighter II: The Anniversary Edition (Japan 040202).",
+      "summary": "The Japanese Anniversary Edition in English, with its original balance, Western fighter names and the full stories and win quotes.",
+      "description": [
+        "Play the Japanese version of Hyper Street Fighter II in English, with its original balance and the classic versions of each fighter. Western fighter names and the official US regional move voices accompany English win quotes, full endings, illustrated Continue tips and all 28 Start messages.",
+        "Stage and portrait artwork repairs, black backgrounds in affected ending and Ryu intro scenes, and a clearer ending-choice menu complete the restoration. Japan's factory speed and coin settings are retained, with native Free Play available in the operator menu.",
+        "It runs on MiSTer and in HBMAME or FBNeo builds that include hsf2re. Apply the patch to your stock Japanese set.",
+        "This is a release candidate."
+      ],
+      "changes": [
+        "Japanese 040202 gameplay and classic fighter versions",
+        "Western fighter names and official US regional move voices",
+        "English win quotes, full endings and illustrated Continue tips",
+        "All 28 Start-message choices in English",
+        "Stage and portrait artwork repairs, black backgrounds in affected ending and Ryu intro scenes, and a clearer ending-choice menu",
+        "Native operator Free Play with saved settings and no-coin starts"
+      ],
+      "release_history": [
+        {
+          "version": "rc1",
+          "date": "2026-11-05",
+          "items": [
+            "First public release."
+          ]
+        }
+      ],
+      "comparison": {
+        "heading": "Japanese gameplay, English presentation",
+        "intro": [
+          "The restoration preserves the Japanese release’s speed, CPU difficulty, damage and stun rules, with English text, Western fighter names and official US regional move voices."
+        ],
+        "columns": [
+          "",
+          "Japan and this restoration",
+          "Original US release"
+        ],
+        "rows": [
+          [
+            "Free Select speed",
+            "Japanese speeds",
+            "One speed step faster at the same Turbo label"
+          ],
+          [
+            "Factory speed setting",
+            "Fixed Turbo 2",
+            "Free Select"
+          ],
+          [
+            "Factory coin setting",
+            "1 coin / 1 credit",
+            "2 coins / 1 credit"
+          ]
+        ]
+      },
+      "feedback": true,
+      "artifact": {
+        "stock_zip": "../capcom/roms/mame0260/hsf2j.zip",
+        "patched_zip": "../capcom/translations/ssf2x/out/hsf2-release/hsf2en.zip",
+        "parents": [
+          "hsf2"
+        ]
+      },
+      "mra": {
+        "base": "data/mra/hsf2j.mra",
+        "name": "Hyper Street Fighter II: The Anniversary Edition (USA) [English Restoration]",
+        "setname": "hsf2re",
+        "filename": "Hyper Street Fighter II The Anniversary Edition (USA) [English Restoration].mra",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations",
+        "platform": "CPS-2",
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "mraauthor": "jotego,strygo",
+        "region": "USA"
+      },
+      "hbmame": {
+        "setname": "hsf2re",
+        "complete": true,
+        "renames": {
+          "hs2.01": "hs2.01",
+          "hs2.02": "hs2.02",
+          "hs2.11m": "hs2.11m",
+          "hs2.13m": "hs2re.13m",
+          "hs2.15m": "hs2re.15m",
+          "hs2.17m": "hs2re.17m",
+          "hs2.19m": "hs2re.19m",
+          "hs2j.03c": "hs2re.03c",
+          "hs2j.04b": "hs2re.04b",
+          "hs2j.05": "hs2j.05",
+          "hs2j.06": "hs2j.06",
+          "hs2j.07": "hs2j.07",
+          "hs2j.08": "hs2j.08",
+          "hs2j.09": "hs2j.09",
+          "hs2j.10": "hs2re.10",
+          "hsf2j.key": "hsf2j.key"
+        }
+      },
+      "fbneo": {
+        "setname": "hsf2re",
+        "renames": {
+          "hs2.01": "hs2.01",
+          "hs2.02": "hs2.02",
+          "hs2.11m": "hs2.11m",
+          "hs2.13m": "hs2re.13m",
+          "hs2.15m": "hs2re.15m",
+          "hs2.17m": "hs2re.17m",
+          "hs2.19m": "hs2re.19m",
+          "hs2j.03c": "hs2re.03c",
+          "hs2j.04b": "hs2re.04b",
+          "hs2j.05": "hs2j.05",
+          "hs2j.06": "hs2j.06",
+          "hs2j.07": "hs2j.07",
+          "hs2j.08": "hs2j.08",
+          "hs2j.09": "hs2j.09",
+          "hs2j.10": "hs2re.10",
+          "hsf2j.key": "hsf2j.key"
+        }
+      },
+      "screenshots": [
+        {
+          "single": "data/screenshots/hsf2-restoration/continue-tip.png",
+          "caption": "Illustrated Continue tips in English."
+        },
+        {
+          "single": "data/screenshots/hsf2-restoration/win-quote.png",
+          "caption": "Cammy’s win quotes in English."
+        }
+      ],
+      "notes": [
+        "Use HBMAME or FBNeo builds that include the hsf2re set.",
+        "Fan work, unaffiliated with Capcom. You need your own stock Japanese set."
+      ],
+      "readme_sections": [
+        {
+          "heading": "Start messages",
+          "paragraphs": [
+            "Solo: use Free Play, or start with exactly one credit so no spare credits remain. Spare credits keep PRESS START above the vacant seat and suppress the message, as in the Japanese game.",
+            "Hold the active player's Start while the VS screen is showing, keep it held until the fight begins, then release. With no attack held, Challenger / wanted! alternates with the normal join prompt. Hold LP, MP, HP, LK, MK or HK with Start for the other six choices. Pressing Start again during the fight cancels the stored notice.",
+            "Two-player HUD messages require a completed round: hold Start through the transition into the next round. The two sets belong to the previous round winner and loser. For the result-screen set, hold the match winner's Start through the result transition. Longer messages appear in two consecutive parts."
+          ]
+        }
+      ],
+      "mame_build_note": "This kit provides HBMAME and FBNeo outputs. Use emulator builds containing the hsf2re set.",
+      "mister_hbmame_note": "out/mister/games/hbmame/hsf2re.zip is a complete copy of the emulator set. The supplied MRA uses the stock Japanese set; that extra ZIP is optional."
     }
   ],
   "articles": [

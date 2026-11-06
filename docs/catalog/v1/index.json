@@ -20,6 +20,11 @@
       "size": 1921603,
       "url": "https://arcadepatches.com/catalog/v1/artifacts/9d9ee7d6649f20a3d7aaa3ee854bcad55b819d5cf1efe39f6f3407d5798dca6f-final-fight-ex-native-kit.zip"
     },
+    "hsf2-restoration-kit": {
+      "sha256": "6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8",
+      "size": 170519,
+      "url": "https://arcadepatches.com/downloads/archive/6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8/hsf2-restoration-rc1-ips.zip"
+    },
     "mshvsf-ex-kit": {
       "sha256": "0c6395bcb986556076ea4355c0ddede0414ed619cdd65da134e3f65da86d54f5",
       "size": 866446,
@@ -192,7 +197,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
     }
   },
-  "generation": 53,
+  "generation": 54,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.1"
@@ -214,6 +219,10 @@
     "final-fight-ex-cps2": {
       "current": "final-fight-ex-cps2-rc3-r2",
       "title": "Final Fight EX (CPS-2)"
+    },
+    "hsf2-restoration": {
+      "current": "hsf2-restoration-rc1-r1",
+      "title": "Hyper Street Fighter II: The Anniversary Edition \u00b7 English restoration"
     },
     "mshvsf-ex": {
       "current": "mshvsf-ex-rc5-r1",
@@ -356,6 +365,17 @@
       "game_version": "rc4",
       "kit": "final-fight-ex-kit",
       "kit_revision": 2
+    },
+    "hsf2-restoration-rc1-r1": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "9b0536f55a2782b3107aabc94923cefee9cf7e1629ff5d15bfdb19284f51e029",
+        "size": 21916,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/9b0536f55a2782b3107aabc94923cefee9cf7e1629ff5d15bfdb19284f51e029.json"
+      },
+      "game_version": "rc1",
+      "kit": "hsf2-restoration-kit",
+      "kit_revision": 1
     },
     "mshvsf-ex-rc5-r1": {
       "definition": {

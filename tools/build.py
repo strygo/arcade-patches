@@ -704,6 +704,8 @@ stock set in your MAME rompath (it keeps the name <code>{setname}.zip</code>{", 
 files. MAME's game menu won't start a set with patched ROMs, so start it from the command line:
 <code>mame {setname}</code>. MAME shows checksum warnings for the patched ROMs. That's expected, and the
 game runs normally.{" To start it from a menu, use the HBMAME build." if any(o[2] for o in outputs) else ""}</p>""")
+    elif patch.get('mame_build_note'):
+        parts.append(f"<p>{esc(patch['mame_build_note'])}</p>")
     else:
         parts.append("""<p>There is no MAME build: stock MAME has no driver that loads the added
 program ROM, so on a computer, play it in HBMAME.</p>""")
@@ -725,6 +727,8 @@ program ROM, so on a computer, play it in HBMAME.</p>""")
                       f"collections may already carry {them}.")
         elif hb.get("official"):
             status = f"{lead}, so full HBMAME collections may already carry {them}."
+        elif patch.get('mame_build_note'):
+            status = f"Use a {link} build containing the {sets} set definition."
         else:
             status = (f"The <a href=\"https://github.com/Robbbert/hbmame\">HBMAME</a> set definition "
                       f"({sets}) is generated with the {noun}; an upstream submission is pending, so for "
@@ -749,7 +753,9 @@ To build only the FBNeo sets, use <code>--platform fbneo --out-dir out</code>.</
 Jotego's <code>jtcps2</code> core, which update_all installs. The MRA applies the {noun} in memory
 as the game loads, so nothing on your card is modified, and {"each build keeps its own settings and saves under its own setname" if variants else f"it keeps its own settings and saves under <code>{esc(patch['mra']['setname'])}</code>"}.
 The MiSTer-only download holds the same MRAs, ready to copy.</p>""")
-        if patch.get("mister_hbmame"):
+        if patch.get("mister_hbmame") and patch.get('mister_hbmame_note'):
+            parts.append(f"<p>{esc(patch['mister_hbmame_note'])}</p>")
+        elif patch.get("mister_hbmame"):
             parts.append("""<p><code>out/mister/</code> also holds the HBMAME set in <code>games/hbmame/</code>.
 The MRA above doesn't need it, but the <a href="../cps-plus/">CPS+</a> Arrange and HD Remix MRAs load it,
 so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</code> to your card as well.</p>""")

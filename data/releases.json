@@ -1378,6 +1378,70 @@
         }
       }
     },
+    "hsf2-restoration": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-11-05",
+          "files": {
+            "ips": {
+              "archive": "archive/6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8/hsf2-restoration-rc1-ips.zip",
+              "name": "hsf2-restoration-rc1-ips.zip",
+              "sha256": "6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8",
+              "size": 170519
+            },
+            "mra": {
+              "archive": "archive/6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a/hsf2-restoration-rc1-mra.zip",
+              "name": "hsf2-restoration-rc1-mra.zip",
+              "sha256": "6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a",
+              "size": 53763
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc1-candidate.3",
+            "capcom_source_commit": "e6f7597637b1326109abbf41c2631b55c8aa7f1b",
+            "ready_record_sha256": "78829c7da4e364457c5f7c437a2b6bfdc709a562c6dc26d6fc08fada9496d20a",
+            "release_sha256": "bcc58b38cafff17b36580793199b6baef360ee1973501e6b4b4ee094d65aad3f",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-11-05",
+              "files": {
+                "ips": {
+                  "archive": "archive/6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8/hsf2-restoration-rc1-ips.zip",
+                  "name": "hsf2-restoration-rc1-ips.zip",
+                  "sha256": "6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8",
+                  "size": 170519
+                },
+                "mra": {
+                  "archive": "archive/6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a/hsf2-restoration-rc1-mra.zip",
+                  "name": "hsf2-restoration-rc1-mra.zip",
+                  "sha256": "6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a",
+                  "size": 53763
+                }
+              },
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc1-candidate.3",
+                "capcom_source_commit": "e6f7597637b1326109abbf41c2631b55c8aa7f1b",
+                "ready_record_sha256": "78829c7da4e364457c5f7c437a2b6bfdc709a562c6dc26d6fc08fada9496d20a",
+                "release_sha256": "bcc58b38cafff17b36580793199b6baef360ee1973501e6b4b4ee094d65aad3f",
+                "type": "qualified-candidate"
+              }
+            }
+          }
+        }
+      }
+    },
     "mshvsf-ex": {
       "current": "rc5",
       "versions": {

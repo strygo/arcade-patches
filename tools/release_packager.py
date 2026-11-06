@@ -165,6 +165,15 @@ def make_readme(patch: dict, members: list, fmt: str,
             f"'{mra_cfg['setname']}'.",
         ]
 
+    for section in patch.get('readme_sections', []):
+        if (not isinstance(section, dict) or set(section) != {'heading', 'paragraphs'}
+                or not isinstance(section['heading'], str) or not section['heading'].strip()
+                or not isinstance(section['paragraphs'], list) or not section['paragraphs']
+                or not all(isinstance(p, str) and p.strip() for p in section['paragraphs'])):
+            raise ValueError('readme_sections needs a heading and nonempty text paragraphs')
+        lines += ['', section['heading'].upper(), '']
+        for paragraph in section['paragraphs']:
+            lines += [textwrap.fill(paragraph, 78), '']
     lines += [
         "",
         "LEGAL",
@@ -286,6 +295,8 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
             lines += ["To start it from a menu, use the HBMAME build."]
         if (patch.get("artifact") or {}).get("auxiliary_stock_members"):
             lines += ["Keep your unmodified qsound.zip in MAME's ROM path."]
+    elif patch.get('mame_build_note'):
+        lines += ['', *textwrap.wrap(patch['mame_build_note'], 78)]
     else:
         lines += [
             "",
@@ -322,7 +333,9 @@ def ips_readme_lines(patch: dict, members: list, variants: list | None) -> list:
             "game loads, so nothing on the card is modified. You need Jotego's jtcps2",
             "core, which update_all installs. The MRAs are also a separate download.",
         ]
-        if patch.get("mister_hbmame"):
+        if patch.get('mister_hbmame_note'):
+            lines += ['', *textwrap.wrap(patch['mister_hbmame_note'], 78)]
+        elif patch.get("mister_hbmame"):
             lines += [
                 "",
                 "out/mister/ also holds the HBMAME set in games/hbmame/. This MRA doesn't use",

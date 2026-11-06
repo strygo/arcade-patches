@@ -8,6 +8,18 @@ import build
 
 
 class ReconstructionTests(unittest.TestCase):
+    def test_hsf2_uses_its_scoped_platform_notes(self):
+        root = Path(__file__).resolve().parents[1]
+        config = json.loads((root / 'data/patches.json').read_text())
+        patch = next(p for p in config['patches'] if p['slug'] == 'hsf2-restoration')
+        bundle = build.published_bundle(root, patch, build.load_inventory(root / 'data/releases.json'))
+        html = build.render_rom_download(patch, bundle)
+        for field in ('mame_build_note', 'mister_hbmame_note'):
+            self.assertIn(build.esc(patch[field]), html)
+        self.assertNotIn('added\nprogram ROM', html)
+        self.assertNotIn('Arrange and HD Remix MRAs load it', html)
+        self.assertIn('build containing the <code>hsf2re</code> set definition', html)
+
     def test_fbneo_sets_follow_the_published_kit_and_keep_distinct_aliases(self):
         root = Path(__file__).resolve().parents[1]
         config = json.loads((root / 'data/patches.json').read_text())
