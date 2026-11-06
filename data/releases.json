@@ -3872,7 +3872,7 @@
       }
     },
     "sfa2-gold": {
-      "current": "rc7",
+      "current": "rc8",
       "versions": {
         "rc1": {
           "current_revision": 1,
@@ -4370,6 +4370,53 @@
               "kit": "0630d0fadc23bdab7d8e9292b388db7bce0cbd84302ab8967d12f4782cd43273"
             },
             "revision": 3
+          }
+        },
+        "rc8": {
+          "current_revision": 1,
+          "date": "2026-11-06",
+          "files": {
+            "kit": {
+              "archive": "archive/d28c9aef545ea9db3ba68a3504c5c965595a9489efa638fbaa825d399f0c1f4a/sfa2-gold-rc8-kit.zip",
+              "name": "sfa2-gold-rc8-kit.zip",
+              "sha256": "d28c9aef545ea9db3ba68a3504c5c965595a9489efa638fbaa825d399f0c1f4a",
+              "size": 1706727
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "rc8-candidate.3",
+            "capcom_source_commit": "a3e6e3814ab868f2a5a3e355a33317c5e48b2752",
+            "ready_record_sha256": "93eb5503bae359c6825fd28b431fe1cbcbd3c25935a792d50edb25c917acb809",
+            "release_sha256": "e9345461584a2e72cdd27c1bb0396ee8ac58f22f4b9a0b6e1d120b8b0287f5dc",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-11-06",
+              "files": {
+                "kit": {
+                  "archive": "archive/d28c9aef545ea9db3ba68a3504c5c965595a9489efa638fbaa825d399f0c1f4a/sfa2-gold-rc8-kit.zip",
+                  "name": "sfa2-gold-rc8-kit.zip",
+                  "sha256": "d28c9aef545ea9db3ba68a3504c5c965595a9489efa638fbaa825d399f0c1f4a",
+                  "size": 1706727
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc8-candidate.3",
+                "capcom_source_commit": "a3e6e3814ab868f2a5a3e355a33317c5e48b2752",
+                "ready_record_sha256": "93eb5503bae359c6825fd28b431fe1cbcbd3c25935a792d50edb25c917acb809",
+                "release_sha256": "e9345461584a2e72cdd27c1bb0396ee8ac58f22f4b9a0b6e1d120b8b0287f5dc",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }

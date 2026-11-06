@@ -1629,8 +1629,8 @@
       "subtitle": "Arcade backport",
       "section": "restorations",
       "status": "release-candidate",
-      "version": "rc7",
-      "date": "2026-10-12",
+      "version": "rc8",
+      "date": "2026-11-06",
       "game": "Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)",
       "hardware": "Capcom CPS-2",
       "thumbnail_build": "us",
@@ -1733,6 +1733,19 @@
         }
       ],
       "release_history": [
+        {
+          "version": "rc8",
+          "date": "2026-11-06",
+          "items": [
+            "Corrected Cammy's crouching collision and her poses and positioning when thrown by the rest of the roster.",
+            "Cammy can taunt once per round with START.",
+            "Fixed Ryu and his alternate forms breaking apart incorrectly as the VS screen ends in the English builds.",
+            "Jessica reacts to Cody looking at Cammy on Guy's stage.",
+            "Charlie and Chun-Li now use CHL and CHN as their default score initials in the USA and English Asia builds.",
+            "Corrected the program-ROM results in MEMORY CHECK.",
+            "Every set has new checksums, so rebuild them with the rc8 kit."
+          ]
+        },
         {
           "version": "rc7",
           "date": "2026-10-12",
@@ -6012,7 +6025,7 @@
         }
       ],
       "requirements": {
-        "text": "Reconstruction requires your own Alpha 3 / Zero 3 arcade ROMs, the USA Alpha Anthology and Japanese Zero Fighter’s Generation PS2 disc images, and the Zero 3 Upper NAOMI GD-ROM and PIC. MiSTer play requires the CPS+ core and 128 MB SDRAM."
+        "text": "Reconstruction requires your own Alpha 3 / Zero 3 arcade ROMs, the USA Alpha Anthology and Japanese Zero Fighter\u2019s Generation PS2 disc images, and the Zero 3 Upper NAOMI GD-ROM and PIC. MiSTer play requires the CPS+ core and 128 MB SDRAM."
       },
       "related": [
         {
@@ -6050,7 +6063,7 @@
       "reconstruction": {
         "requires": [
           "Your own arcade ROM sets sfa3, sfa3u, sfz3j and qsound in canonical MAME format.",
-          "Your own USA Street Fighter Alpha Anthology and Japanese Street Fighter Zero: Fighter’s Generation PS2 disc images.",
+          "Your own USA Street Fighter Alpha Anthology and Japanese Street Fighter Zero: Fighter\u2019s Generation PS2 disc images.",
           "Your own Street Fighter Zero 3 Upper NAOMI GD-ROM CHD and sfz3ugd.zip PIC archive.",
           "The Arcade Patches builder app prepares Python and its dependencies. To build by hand: Python 3.12 or newer, NumPy 2.2.6, SciPy 1.15.3 and chdman."
         ],
@@ -6104,7 +6117,7 @@
       "comparison": {
         "heading": "Japanese gameplay, English presentation",
         "intro": [
-          "The restoration preserves the Japanese release’s speed, CPU difficulty, damage and stun rules, with English text, Western fighter names and official US regional move voices."
+          "The restoration preserves the Japanese release\u2019s speed, CPU difficulty, damage and stun rules, with English text, Western fighter names and official US regional move voices."
         ],
         "columns": [
           "",
@@ -6199,7 +6212,7 @@
         },
         {
           "single": "data/screenshots/hsf2-restoration/win-quote.png",
-          "caption": "Cammy’s win quotes in English."
+          "caption": "Cammy\u2019s win quotes in English."
         }
       ],
       "notes": [

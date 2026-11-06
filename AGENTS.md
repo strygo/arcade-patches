@@ -90,6 +90,13 @@ Also:
   the list and matching the page's `version` and `date`. List only the
   public-facing changes since the last **public** version. Leave out bugs that
   existed only in candidates, MRA folder moves and low-level detail.
+- Rank each new release-history list by importance to players, most important
+  first. Consider severity, frequency and gameplay impact: crashes, broken
+  gameplay and major features usually come before controls/usability,
+  presentation, minor corrections and rebuild notices. Use judgment for the
+  release; never follow commit order, implementation order or technical
+  complexity. Recheck the ranking before import. Keep historical published
+  entries unchanged.
 - Check every claim against the project's own docs in `../capcom` (for
   example, `translations/ssf2x/enhanced/OPERATOR_SETTINGS.md`), not against
   commit subjects. SSF2 EX rc4 candidate 1 described a BONUS STAGE on/off
