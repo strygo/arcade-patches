@@ -2955,7 +2955,7 @@
       "size": 127219
     },
     "catalog/v1/index.json": {
-      "sha256": "6e37524949ff5e41ff449f51d52f03f27786e7aea303f110c861d553b6d9bbdd",
+      "sha256": "f3c21af0e4aa8b0de938c75bdb14d9199d0fdc5e43d29c217145a8d7b4f9a969",
       "size": 28343
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
@@ -3014,6 +3014,10 @@
       "sha256": "f9936a02f0195e9d648864b4288085dc53b6d2d63cd500022cb0a3d4873d491e",
       "size": 1103705
     },
+    "tools/downloads/archive/09bf1e6ec4c9b5b8d4d959e7385b9b49f03497a9cbd3961beb7cd7d045d8b8c2/ArcadePatches-0.1.2.zip": {
+      "sha256": "09bf1e6ec4c9b5b8d4d959e7385b9b49f03497a9cbd3961beb7cd7d045d8b8c2",
+      "size": 44518
+    },
     "tools/downloads/archive/5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1/ArcadePatches-0.1.zip": {
       "sha256": "5c3c3763c0f68d96751e386dcf1d0c5881a6430ed1a7de21673632e8babb6fd1",
       "size": 43091
@@ -3023,8 +3027,8 @@
       "size": 44138
     }
   },
-  "generation": 54,
-  "launcher": "tools/downloads/archive/5f3be6f6034b4dd735b96ec4caf0989dd8275b25649c78a9867f045c08877b81/ArcadePatches-0.1.1.zip",
+  "generation": 55,
+  "launcher": "tools/downloads/archive/09bf1e6ec4c9b5b8d4d959e7385b9b49f03497a9cbd3961beb7cd7d045d8b8c2/ArcadePatches-0.1.2.zip",
   "native_updates": [
     {
       "game_version": "rc3",
@@ -3140,8 +3144,8 @@
     }
   ],
   "package_receipt": {
-    "archive": "ArcadePatches-0.1.1.zip",
-    "display_version": "0.1.1",
+    "archive": "ArcadePatches-0.1.2.zip",
+    "display_version": "0.1.2",
     "features": [
       "archive-inputs-v1",
       "disc-inputs-v1",
@@ -3162,27 +3166,27 @@
     ],
     "files": {
       "QUICKSTART.txt": {
-        "sha256": "1cf77803b0d340027cdec50100eceb58cbf43b37194f07ea6ab32ab10d93ba35",
+        "sha256": "d0450caaaa28e283ca1f8c07fe3014ce3bf3d23df5818864c724affe26b21c81",
         "size": 8264
       },
       "arcadepatches.py": {
-        "sha256": "d5ca78d23ef7a05713cde35f7be3bbfc7e66543a5dbcaf9ed34de7e6e628db09",
-        "size": 151098
+        "sha256": "7de215314fcfd49fce295e877fd2d61d7322faa9cc4141c908d7ec31b7ddf92e",
+        "size": 152113
       }
     },
     "recipe_sha256": "3c366ce5f5db84daecd778fe1073d5a96835f20750e0221322ab1686db67e0a6",
     "schema": 1,
     "scope": "portable launcher/instructions ZIP and isolated standard-library doctor; not published",
-    "sha256": "5f3be6f6034b4dd735b96ec4caf0989dd8275b25649c78a9867f045c08877b81",
-    "size": 44138,
+    "sha256": "09bf1e6ec4c9b5b8d4d959e7385b9b49f03497a9cbd3961beb7cd7d045d8b8c2",
+    "size": 44518,
     "standalone_doctor": "passed",
     "status": "passed",
-    "version": "0.1.1"
+    "version": "0.1.2"
   },
   "provenance": {
     "inventory_sha256": "e36b4164b1b819f3b4b6c7631068004b3408eb196ede18dcb7a28038269d81f1",
     "site_commit": "3991ccc2c0d600a1c327fac60832dcb53dfde9d4"
   },
   "schema": 1,
-  "version": "0.1.1"
+  "version": "0.1.2"
 }
