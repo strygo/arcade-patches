@@ -49,3 +49,15 @@ class IndexTests(unittest.TestCase):
         release = self.model['releases']['game-r1'];release['adapter'] = release.pop('runner')
         with self.assertRaisesRegex(ValueError, 'Only native'):
             ci.publish(self.model, lambda url: self.fail('Invalid model must not read a kit'))
+
+
+class CapabilityTests(unittest.TestCase):
+    def test_external_tools_requires_capability_even_when_empty(self):
+        for tools in ([], [{'id': 'mame'}]):
+            definition = {'api': 1, 'game_version': 'rc1', 'kit_revision': 9,
+                'prerequisites': {}, 'targets': {'jp-mister': {'external_tools': tools}}}
+            with self.subTest(tools=tools):
+                with self.assertRaisesRegex(ValueError, 'external-tools-v1'):
+                    ci.native_release(definition, 'kit')
+                definition['requires'] = ['external-tools-v1']
+                self.assertIn('external-tools-v1', ci.native_release(definition, 'kit')['requires'])
