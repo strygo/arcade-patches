@@ -16,9 +16,9 @@
       "url": "https://arcadepatches.com/downloads/archive/cfdc2f6c751acfa5de05eaf4f5a8fcf93da5e11579971cc2c8aa04c6eec252c7/final-fight-ex-cps2-rc3-kit.zip"
     },
     "final-fight-ex-kit": {
-      "sha256": "cb4a59b0e37e36fde4240b4de0556d7c40b4418b94cdad4a173e145fc58c7245",
-      "size": 1978135,
-      "url": "https://arcadepatches.com/downloads/archive/cb4a59b0e37e36fde4240b4de0556d7c40b4418b94cdad4a173e145fc58c7245/final-fight-ex-rc4-kit.zip"
+      "sha256": "ad51f488164e017fae44fcaadfbc0eda7761035cb0f564de72a55f9fc128ffa9",
+      "size": 3231596,
+      "url": "https://arcadepatches.com/downloads/archive/ad51f488164e017fae44fcaadfbc0eda7761035cb0f564de72a55f9fc128ffa9/final-fight-ex-rc4-kit.zip"
     },
     "hsf2-restoration-kit": {
       "sha256": "cb04b213c85e38cf843219d6ad76d0c85bca448ae5451eb9b12e13e3bd992ce6",
@@ -209,7 +209,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
     }
   },
-  "generation": 92,
+  "generation": 93,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.3"
@@ -225,7 +225,7 @@
       "title": "Darkstalkers: The Night Warriors"
     },
     "final-fight-ex": {
-      "current": "final-fight-ex-rc4-r2",
+      "current": "final-fight-ex-rc4-r3",
       "title": "Final Fight EX"
     },
     "final-fight-ex-cps2": {
@@ -367,16 +367,16 @@
       "kit": "final-fight-ex-cps2-kit",
       "kit_revision": 3
     },
-    "final-fight-ex-rc4-r2": {
+    "final-fight-ex-rc4-r3": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "02792434b38c62d6726164008bfdc41e42a631387b2ee37b30cad333ceaa78b4",
-        "size": 127219,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/02792434b38c62d6726164008bfdc41e42a631387b2ee37b30cad333ceaa78b4.json"
+        "sha256": "3696a155887fe2994d2ca11b9f80dfe731bbc5f0dd7d899ba33f3027d1aae09d",
+        "size": 126603,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/3696a155887fe2994d2ca11b9f80dfe731bbc5f0dd7d899ba33f3027d1aae09d.json"
       },
       "game_version": "rc4",
       "kit": "final-fight-ex-kit",
-      "kit_revision": 2
+      "kit_revision": 3
     },
     "hsf2-restoration-rc1-r3": {
       "definition": {

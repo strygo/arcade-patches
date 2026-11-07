@@ -2607,6 +2607,10 @@
       "sha256": "363da8cb9e19c8eb788a482da91a8da80b09aa9c3cb9640fe87049e7682a16e1",
       "size": 74047
     },
+    "catalog/v1/definitions/3696a155887fe2994d2ca11b9f80dfe731bbc5f0dd7d899ba33f3027d1aae09d.json": {
+      "sha256": "3696a155887fe2994d2ca11b9f80dfe731bbc5f0dd7d899ba33f3027d1aae09d",
+      "size": 126603
+    },
     "catalog/v1/definitions/386fa1f4b644a9ff3aaebee40c59fc01c6fa3d076f7afc17f96e72a01dd61a09.json": {
       "sha256": "386fa1f4b644a9ff3aaebee40c59fc01c6fa3d076f7afc17f96e72a01dd61a09",
       "size": 74047
@@ -2840,7 +2844,7 @@
       "size": 114654
     },
     "catalog/v1/index.json": {
-      "sha256": "9ad9a2c0cf18f4c820e714cfe2f5982f494c5d106c42b7e53edf42158de5b432",
+      "sha256": "8b33a6c35832bc9178936be0b0bb8b681c97cd8a7fb3326e85c666d54ca2a221",
       "size": 29017
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
@@ -2951,6 +2955,10 @@
       "sha256": "a71f861befc1d82ccde449cae09df513658dcad21836cc602a9a85aff6a8800b",
       "size": 5389165
     },
+    "downloads/archive/ad51f488164e017fae44fcaadfbc0eda7761035cb0f564de72a55f9fc128ffa9/final-fight-ex-rc4-kit.zip": {
+      "sha256": "ad51f488164e017fae44fcaadfbc0eda7761035cb0f564de72a55f9fc128ffa9",
+      "size": 3231596
+    },
     "downloads/archive/af46bc76d0af317cc09ad44ec248d0be90a72f0c8f38cfe0ba9e52c102055ffd/sfa2-ex-rc4-kit.zip": {
       "sha256": "af46bc76d0af317cc09ad44ec248d0be90a72f0c8f38cfe0ba9e52c102055ffd",
       "size": 1052396
@@ -3060,7 +3068,7 @@
       "size": 44138
     }
   },
-  "generation": 92,
+  "generation": 93,
   "launcher": "tools/downloads/archive/2ddc294d3b16ecae922e6f5b10da8f11cd66c7c12924915bb225e384830ef830/ArcadePatches-0.1.3.zip",
   "native_updates": [
     {
@@ -3462,6 +3470,14 @@
       "project": "strider-ex",
       "ready_sha256": "1ba2774ea0643593c8e122c83744bd6ef4651e39f673125b37aff8afb0f5489a",
       "release_sha256": "15c9d165b9eb4daff5305f22b7a7e2eb91f919d5ea971ace0993d2040089272c"
+    },
+    {
+      "game_version": "rc4",
+      "kit_revision": 3,
+      "kit_sha256": "ad51f488164e017fae44fcaadfbc0eda7761035cb0f564de72a55f9fc128ffa9",
+      "project": "final-fight-ex",
+      "ready_sha256": "34b516d9475a00152618365d40ba1b7c220cbc437a426a46dffc6c8bee65248c",
+      "release_sha256": "70848dd72f55be64cd50fd75fc5ec5c31691eda2c0f36da08e5339591da9bd7a"
     }
   ],
   "package_receipt": {
