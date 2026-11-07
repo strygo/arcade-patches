@@ -6008,7 +6008,7 @@
         "Strider EX brings the PC Engine CD version\u2019s opening, mission briefings, boss dialogue and extended ending to the arcade game, alongside its additional desert stage. Cutscenes and boss portraits retain their original pixel width.",
         "USA and Japanese builds include a hidden stage select, revised stage transitions and corrections to desert ledges, poles and camera movement. The USA build includes English boss voices through the original arcade sound hardware, with a new native FM score during the cinematics.",
         "On MiSTer, the CPS+ Arrange launchers add the PC Engine soundtrack and voiced cinematics, with English and Japanese voice options and new full-quality English boss recordings. The required Strider EX CPS+ core is included.",
-        "Supply your own arcade ROMs, PC Engine CD, System Card BIOS and X68000 game disks. It runs in HBMAME and on MiSTer; stock MAME is used only to reconstruct the source scenes. This is a release candidate."
+        "Supply your own arcade ROMs, PC Engine CD and X68000 System disk. It runs in HBMAME and on MiSTer. This is a release candidate."
       ],
       "changes": [
         "PC Engine CD opening, mission briefings and extended ending, with English or Japanese captions",

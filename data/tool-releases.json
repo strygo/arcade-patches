@@ -2595,6 +2595,10 @@
       "sha256": "2c9ada1df94d31d849ebb3f6fdcaa761e1e953b605739d4c8e4b52ae503fb5c5",
       "size": 41729
     },
+    "catalog/v1/definitions/2dd8a357c2a1f8ed169894c096d4f4c294f0f57f7379e02b6d53c486b7460d2f.json": {
+      "sha256": "2dd8a357c2a1f8ed169894c096d4f4c294f0f57f7379e02b6d53c486b7460d2f",
+      "size": 91477
+    },
     "catalog/v1/definitions/30894aebc8f389d6fce7114e9e6555b685ac29aabbdcc64079c11cf5681940f2.json": {
       "sha256": "30894aebc8f389d6fce7114e9e6555b685ac29aabbdcc64079c11cf5681940f2",
       "size": 514282
@@ -2836,8 +2840,8 @@
       "size": 114654
     },
     "catalog/v1/index.json": {
-      "sha256": "ee3cdf6061dce44e4961b0c4083c50500f6fe3e7df18c1e8037abe9b57bcabc7",
-      "size": 29018
+      "sha256": "9ad9a2c0cf18f4c820e714cfe2f5982f494c5d106c42b7e53edf42158de5b432",
+      "size": 29017
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
       "sha256": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4",
@@ -2951,6 +2955,10 @@
       "sha256": "af46bc76d0af317cc09ad44ec248d0be90a72f0c8f38cfe0ba9e52c102055ffd",
       "size": 1052396
     },
+    "downloads/archive/b39688bfd692c130ace0478feee3b5d6abd3d6dfd381167a2071163c4f8a5f4f/strider-ex-rc1-kit.zip": {
+      "sha256": "b39688bfd692c130ace0478feee3b5d6abd3d6dfd381167a2071163c4f8a5f4f",
+      "size": 15416947
+    },
     "downloads/archive/bae4167723d7d54a07eceabfbabcd4f6951563b7b8028a1647a424276b6000d8/ssf2-ex-rc13-ips.zip": {
       "sha256": "bae4167723d7d54a07eceabfbabcd4f6951563b7b8028a1647a424276b6000d8",
       "size": 1433084
@@ -3052,7 +3060,7 @@
       "size": 44138
     }
   },
-  "generation": 91,
+  "generation": 92,
   "launcher": "tools/downloads/archive/2ddc294d3b16ecae922e6f5b10da8f11cd66c7c12924915bb225e384830ef830/ArcadePatches-0.1.3.zip",
   "native_updates": [
     {
@@ -3446,6 +3454,14 @@
       "project": "cps-plus",
       "ready_sha256": "867b25aac1ee9be11082cce64dc887e1df623441ae9c9f291593ca63a9d97da9",
       "release_sha256": "eec413248ccdfc88c7fe60e26f1c17a422c4839ed291977959fd57af81fbf013"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 9,
+      "kit_sha256": "b39688bfd692c130ace0478feee3b5d6abd3d6dfd381167a2071163c4f8a5f4f",
+      "project": "strider-ex",
+      "ready_sha256": "1ba2774ea0643593c8e122c83744bd6ef4651e39f673125b37aff8afb0f5489a",
+      "release_sha256": "15c9d165b9eb4daff5305f22b7a7e2eb91f919d5ea971ace0993d2040089272c"
     }
   ],
   "package_receipt": {
