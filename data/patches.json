@@ -6193,7 +6193,7 @@
       "game": "Hyper Street Fighter II: The Anniversary Edition (Japan 040202)",
       "set": "hsf2j",
       "hardware": "Capcom CPS-2",
-      "mame_build": false,
+      "mame_build": true,
       "mister_hbmame": true,
       "patch_noun": "restoration",
       "patch_kind": "English restoration patch",
@@ -6202,7 +6202,7 @@
       "description": [
         "Play the Japanese version of Hyper Street Fighter II in English, with its original balance and the classic versions of each fighter. Western fighter names and the official US regional move voices accompany English win quotes, full endings, illustrated Continue tips and all 28 Start messages.",
         "Stage and portrait artwork repairs, black backgrounds in affected ending and Ryu intro scenes, and a clearer ending-choice menu complete the restoration. Japan's factory speed and coin settings are retained, with native Free Play available in the operator menu.",
-        "It runs on MiSTer and in HBMAME or FBNeo builds that include hsf2re. Apply the patch to your stock Japanese set.",
+        "It runs in MAME and on MiSTer, and in HBMAME or FBNeo builds that include hsf2re. Apply the patch to your stock Japanese set.",
         "This is a release candidate."
       ],
       "changes": [
@@ -6337,7 +6337,7 @@
           ]
         }
       ],
-      "mame_build_note": "This kit provides HBMAME and FBNeo outputs. Use emulator builds containing the hsf2re set.",
+      "mame_build_note": "HBMAME and FBNeo outputs use the hsf2re set. Use emulator builds containing that set.",
       "mister_hbmame_note": "out/mister/games/hbmame/hsf2re.zip is a complete copy of the emulator set. The supplied MRA uses the stock Japanese set; that extra ZIP is optional."
     }
   ],

@@ -2583,6 +2583,10 @@
       "sha256": "193fcb19c8b1cc85c0192285350a0c526f7b96ee16bb477fece2143b4f80d2f4",
       "size": 59664
     },
+    "catalog/v1/definitions/25ddded59a68216535bc373b61c036d1ae5a3cb8d3a6e69518912a8590a64c9a.json": {
+      "sha256": "25ddded59a68216535bc373b61c036d1ae5a3cb8d3a6e69518912a8590a64c9a",
+      "size": 31938
+    },
     "catalog/v1/definitions/25e27020c4f9a899064dd4bcc114701dec102351ecfb6cd493c0275a09577d04.json": {
       "sha256": "25e27020c4f9a899064dd4bcc114701dec102351ecfb6cd493c0275a09577d04",
       "size": 105262
@@ -2848,7 +2852,7 @@
       "size": 114654
     },
     "catalog/v1/index.json": {
-      "sha256": "6dcbbaef2a0514d71cb675f1d2f2d75384ee05355ec434d94cad4f78d1ba459d",
+      "sha256": "267c1ba0d976cb79a6872a0c3c32e23da38777cd989ae6b2b09d72f938b6f19a",
       "size": 29017
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
@@ -2882,6 +2886,10 @@
     "downloads/archive/2fb6cd5a7882775aabaffc5f039fbf01d51cc82e3126ed031acfb395207d1924/hsf2-restoration-rc1-ips.zip": {
       "sha256": "2fb6cd5a7882775aabaffc5f039fbf01d51cc82e3126ed031acfb395207d1924",
       "size": 171843
+    },
+    "downloads/archive/366b5d2695c74d43e8be07d8dc2b3f03c33aa64c5951c41f115bb3c3993412f7/hsf2-restoration-rc1-ips.zip": {
+      "sha256": "366b5d2695c74d43e8be07d8dc2b3f03c33aa64c5951c41f115bb3c3993412f7",
+      "size": 172456
     },
     "downloads/archive/4005eb16f1ceede19d22bb36fbbb571165e4c7ef16e694f3503d9b68063a270b/sfa2-restoration-rc2-ips.zip": {
       "sha256": "4005eb16f1ceede19d22bb36fbbb571165e4c7ef16e694f3503d9b68063a270b",
@@ -3076,7 +3084,7 @@
       "size": 44138
     }
   },
-  "generation": 94,
+  "generation": 95,
   "launcher": "tools/downloads/archive/2ddc294d3b16ecae922e6f5b10da8f11cd66c7c12924915bb225e384830ef830/ArcadePatches-0.1.3.zip",
   "native_updates": [
     {
@@ -3494,6 +3502,14 @@
       "project": "final-fight-ex-cps2",
       "ready_sha256": "385b46d75040467580d82d2c3c40d6c2befd040f3f9e130d05d5f69c7d7d70cc",
       "release_sha256": "48874b2c42457e353a5434a3d2587bbc907edfdc6d1512d227b938d76cf4022a"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 4,
+      "kit_sha256": "366b5d2695c74d43e8be07d8dc2b3f03c33aa64c5951c41f115bb3c3993412f7",
+      "project": "hsf2-restoration",
+      "ready_sha256": "94bd88d9bfd5893c238ef77e555124d65dac7c8fea3ae2fa608b9f78029b1c33",
+      "release_sha256": "6c470d4a00b4ce1d54a80dca2bca249c5f8fd393bb7e57afef8c8868b81e91bc"
     }
   ],
   "package_receipt": {

@@ -58,7 +58,7 @@
 
 <p>Play the Japanese version of Hyper Street Fighter II in English, with its original balance and the classic versions of each fighter. Western fighter names and the official US regional move voices accompany English win quotes, full endings, illustrated Continue tips and all 28 Start messages.</p>
 <p>Stage and portrait artwork repairs, black backgrounds in affected ending and Ryu intro scenes, and a clearer ending-choice menu complete the restoration. Japan&#x27;s factory speed and coin settings are retained, with native Free Play available in the operator menu.</p>
-<p>It runs on MiSTer and in HBMAME or FBNeo builds that include hsf2re. Apply the patch to your stock Japanese set.</p>
+<p>It runs in MAME and on MiSTer, and in HBMAME or FBNeo builds that include hsf2re. Apply the patch to your stock Japanese set.</p>
 <p>This is a release candidate.</p>
 <h2>What's changed</h2><ul>
 <li>Japanese 040202 gameplay and classic fighter versions</li>
@@ -78,10 +78,10 @@ please <a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">
 <h2>Downloads</h2>
 <p>Tools updated 2026-11-06. Game version unchanged.</p>
 <div class="download">
-  <div class="kind">Patch kit for HBMAME, FBNeo and MiSTer</div>
-  <div class="file"><a href="../downloads/hsf2-restoration-rc1-ips.zip?v=cb04b213c8">hsf2-restoration-rc1-ips.zip</a>
-  (173 KB)</div>
-  <div class="hash">SHA-256: cb04b213c85e38cf843219d6ad76d0c85bca448ae5451eb9b12e13e3bd992ce6</div>
+  <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware</div>
+  <div class="file"><a href="../downloads/hsf2-restoration-rc1-ips.zip?v=366b5d2695">hsf2-restoration-rc1-ips.zip</a>
+  (168 KB)</div>
+  <div class="hash">SHA-256: 366b5d2695c74d43e8be07d8dc2b3f03c33aa64c5951c41f115bb3c3993412f7</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRA only</div>
@@ -99,11 +99,16 @@ cd hsf2j-patch
 python3 apply.py /path/to/hsf2j.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
 checks the result, and writes the files for every platform in one go:</p>
-<pre><code>out/hbmame/hsf2re.zip
+<pre><code>out/mame/hsf2j.zip
+out/hbmame/hsf2re.zip
 out/fbneo/hsf2re.zip
 out/mister/_Arcade/_Arcade Patches/_Restorations/Hyper Street Fighter II The Anniversary Edition (USA) [English Restoration].mra
 out/mister/games/hbmame/hsf2re.zip</code></pre>
-<p>This kit provides HBMAME and FBNeo outputs. Use emulator builds containing the hsf2re set.</p>
+<p><strong>MAME and original hardware.</strong> Put the zip from <code>out/mame/</code> ahead of the
+stock set in your MAME rompath (it keeps the name <code>hsf2j.zip</code>), or burn its ROM
+files. MAME's game menu won't start a set with patched ROMs, so start it from the command line:
+<code>mame hsf2j</code>. MAME shows checksum warnings for the patched ROMs. That's expected, and the
+game runs normally. To start it from a menu, use the HBMAME build.</p>
 <p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
 <code>roms/</code> folder together with <code>qsound.zip</code>; it holds the complete set. It loads with no checksum
 warnings. Use a <a href="https://github.com/Robbbert/hbmame">HBMAME</a> build containing the <code>hsf2re</code> set definition.</p>
@@ -118,6 +123,8 @@ Jotego's <code>jtcps2</code> core, which update_all installs. The MRA applies th
 as the game loads, so nothing on your card is modified, and it keeps its own settings and saves under <code>hsf2re</code>.
 The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p>out/mister/games/hbmame/hsf2re.zip is a complete copy of the emulator set. The supplied MRA uses the stock Japanese set; that extra ZIP is optional.</p>
+<p><strong>Any IPS patcher.</strong> Apply each file in <code>ips/</code>
+(Flips, Lunar IPS, …) to the ROM file of the same name and re-zip the set yourself.</p>
 <h3>Changed ROMs</h3>
 <table>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>

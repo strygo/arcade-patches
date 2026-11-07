@@ -1636,15 +1636,15 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "additive_output": "darksoft",
-          "current_revision": 3,
+          "additive_output": "mame",
+          "current_revision": 4,
           "date": "2026-11-06",
           "files": {
             "ips": {
-              "archive": "archive/cb04b213c85e38cf843219d6ad76d0c85bca448ae5451eb9b12e13e3bd992ce6/hsf2-restoration-rc1-ips.zip",
+              "archive": "archive/366b5d2695c74d43e8be07d8dc2b3f03c33aa64c5951c41f115bb3c3993412f7/hsf2-restoration-rc1-ips.zip",
               "name": "hsf2-restoration-rc1-ips.zip",
-              "sha256": "cb04b213c85e38cf843219d6ad76d0c85bca448ae5451eb9b12e13e3bd992ce6",
-              "size": 176773
+              "sha256": "366b5d2695c74d43e8be07d8dc2b3f03c33aa64c5951c41f115bb3c3993412f7",
+              "size": 172456
             },
             "mra": {
               "archive": "archive/6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a/hsf2-restoration-rc1-mra.zip",
@@ -1653,7 +1653,7 @@
               "size": 53763
             }
           },
-          "game_contract_sha256": "50bb1d9e73902eb7d1bffd852fcbd4477b97a2fea30b7a89a72c6adf077323f8",
+          "game_contract_sha256": "2e975965b370d3c2e2c5dd03b0c030d73060942efec7528afeb7725931635190",
           "kind": "rom",
           "promotions": [
             {
@@ -1669,13 +1669,18 @@
               "date": "2026-11-06",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-06",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "qualification": {
-            "candidate": "rc1-tools-r3-robustness-candidate.1",
-            "capcom_source_commit": "2fc0bd29d63f8f492f18396c556b5185c0785d20",
-            "ready_record_sha256": "f730b51f1bdd9aa23a45c559214fd408623d55361046d0d90a88835fe03750cb",
-            "release_sha256": "1c5115de76197f44448b75764ad65b0b30a4279dec27d2f4c1727f465d38fc30",
+            "candidate": "rc1-tools-r4-mame-candidate.2",
+            "capcom_source_commit": "3e927c4282c4c6cb01162167c530aae941b6c8a4",
+            "ready_record_sha256": "94bd88d9bfd5893c238ef77e555124d65dac7c8fea3ae2fa608b9f78029b1c33",
+            "release_sha256": "6c470d4a00b4ce1d54a80dca2bca249c5f8fd393bb7e57afef8c8868b81e91bc",
             "type": "qualified-candidate"
           },
           "revisions": {
@@ -1770,14 +1775,48 @@
                 },
                 "revision": 2
               }
+            },
+            "4": {
+              "additive_output": "mame",
+              "date": "2026-11-06",
+              "files": {
+                "ips": {
+                  "archive": "archive/366b5d2695c74d43e8be07d8dc2b3f03c33aa64c5951c41f115bb3c3993412f7/hsf2-restoration-rc1-ips.zip",
+                  "name": "hsf2-restoration-rc1-ips.zip",
+                  "sha256": "366b5d2695c74d43e8be07d8dc2b3f03c33aa64c5951c41f115bb3c3993412f7",
+                  "size": 172456
+                },
+                "mra": {
+                  "archive": "archive/6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a/hsf2-restoration-rc1-mra.zip",
+                  "name": "hsf2-restoration-rc1-mra.zip",
+                  "sha256": "6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a",
+                  "size": 53763
+                }
+              },
+              "game_contract_sha256": "2e975965b370d3c2e2c5dd03b0c030d73060942efec7528afeb7725931635190",
+              "kind": "rom",
+              "qualification": {
+                "candidate": "rc1-tools-r4-mame-candidate.2",
+                "capcom_source_commit": "3e927c4282c4c6cb01162167c530aae941b6c8a4",
+                "ready_record_sha256": "94bd88d9bfd5893c238ef77e555124d65dac7c8fea3ae2fa608b9f78029b1c33",
+                "release_sha256": "6c470d4a00b4ce1d54a80dca2bca249c5f8fd393bb7e57afef8c8868b81e91bc",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "ips": "cb04b213c85e38cf843219d6ad76d0c85bca448ae5451eb9b12e13e3bd992ce6",
+                  "mra": "6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a"
+                },
+                "revision": 3
+              }
             }
           },
           "tooling_baseline": {
             "files": {
-              "ips": "2fb6cd5a7882775aabaffc5f039fbf01d51cc82e3126ed031acfb395207d1924",
+              "ips": "cb04b213c85e38cf843219d6ad76d0c85bca448ae5451eb9b12e13e3bd992ce6",
               "mra": "6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a"
             },
-            "revision": 2
+            "revision": 3
           }
         }
       }

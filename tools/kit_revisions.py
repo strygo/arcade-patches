@@ -88,7 +88,7 @@ def validate_revisions(root, slug, version, item):
             # Only a declared additive-output revision (Darksoft flash files, HBMAME sets), or one that
             # removes emulator definitions, starts a new contract.
             require(previous_contract is None or revision["game_contract_sha256"] == previous_contract
-                    or revision.get("additive_output") in ("darksoft", "hbmame", "fbneo")
+                    or revision.get("additive_output") in ("darksoft", "hbmame", "fbneo", "mame")
                     or revision.get("removed_output") == "definitions"
                     or revision.get("member_names") == "fbneo", "kit revision game contract changed")
             previous_contract = revision["game_contract_sha256"]
@@ -200,6 +200,7 @@ def import_revision(root, ready_path, candidate, ready, release):
     # existing output equals the baseline and every new file is a verified export. Its contract is the
     # identity of its own outputs, which later revisions then hold constant.
     declared = ("darksoft" if plan.get("add_darksoft") is True else "hbmame" if plan.get("add_hbmame") is True
+                else "mame" if isinstance(plan.get("add_mame"), dict) and plan["add_mame"]
                 else "fbneo" if isinstance(plan.get("add_fbneo"), dict) and plan["add_fbneo"] else None)
     member_names = isinstance(plan.get("fbneo_member_names"), dict) and bool(plan["fbneo_member_names"])
     additive = declared is not None and old.get("game_contract_sha256") != contract

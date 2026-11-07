@@ -14,7 +14,9 @@ class ReconstructionTests(unittest.TestCase):
         patch = next(p for p in config['patches'] if p['slug'] == 'hsf2-restoration')
         bundle = build.published_bundle(root, patch, build.load_inventory(root / 'data/releases.json'))
         html = build.render_rom_download(patch, bundle)
-        for field in ('mame_build_note', 'mister_hbmame_note'):
+        self.assertIn('out/mame/hsf2j.zip', html)
+        self.assertIn('<code>mame hsf2j</code>', html)
+        for field in ('mister_hbmame_note',):
             self.assertIn(build.esc(patch[field]), html)
         self.assertNotIn('added\nprogram ROM', html)
         self.assertNotIn('Arrange and HD Remix MRAs load it', html)

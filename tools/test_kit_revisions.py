@@ -68,6 +68,8 @@ class KitRevisionTests(ReleaseInventoryTests):
             release = json.loads((candidate / 'release.json').read_text())
             if additive == 'fbneo-names':
                 release['plan']['fbneo_member_names'] = {'fbneo/demo.zip': {'game.03': 'legacy.03'}}
+            elif additive == 'mame':
+                release['plan']['add_mame'] = {'hbmame/demo.zip': {'target': 'mame/stock.zip', 'renames': {'rom': 'rom'}}}
             elif additive == 'fbneo':
                 release['plan']['add_fbneo'] = {'mame/usa/stock.zip': 'fbneo/demo.zip'}
             elif additive == 'definitions':
@@ -136,6 +138,14 @@ class KitRevisionTests(ReleaseInventoryTests):
         with self.assertRaisesRegex(ReleaseInventoryError, 'another QA'):
             import_candidate(self.root, ready, candidate)
         self.assertEqual(old['files']['ips']['sha256'], sha256_file(self.root / 'docs/downloads/demo-rc2-ips.zip'))
+
+    def test_declared_mame_revision_starts_a_new_game_contract(self):
+        ready, candidate = self.contract_candidate('mame')
+        import_candidate(self.root, ready, candidate)
+        inv = load_inventory(self.root / 'data/releases.json')
+        item = inv['releases']['demo']['versions']['rc2']
+        self.assertEqual('mame', item['revisions']['2']['additive_output'])
+        validate_inventory(self.root, inv)
 
     def test_declared_fbneo_revision_starts_a_new_game_contract(self):
         ready, candidate = self.contract_candidate('fbneo')
