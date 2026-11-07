@@ -12,12 +12,15 @@ def encoded(value):
     return (json.dumps(value, indent=2, sort_keys=True) + '\n').encode()
 
 
-def native_release(definition, kit):
-    if definition.get('api') != 1:
-        raise ValueError('Unknown native definition API')
+def validate_capabilities(definition):
     for name, target in definition.get('targets', {}).items():
         if 'external_tools' in target and 'external-tools-v1' not in definition.get('requires', []):
             raise ValueError('Target ' + name + ' declares external_tools without external-tools-v1')
+
+
+def native_release(definition, kit):
+    if definition.get('api') != 1:
+        raise ValueError('Unknown native definition API')
     return {**{k: copy.deepcopy(definition[k]) for k in ('environments', 'helpers') if k in definition},
         'protocol': 1, 'minimum_launcher': '0.1.0',
         'requires': sorted(set(['native-kit-v1', 'file-inputs-v1', 'archive-inputs-v1', 'zip-outputs-v1', *definition.get('requires', [])])),
@@ -68,6 +71,7 @@ def publish(model, read):
                 raise ValueError('Missing or duplicate native definition')
             raw = archive.read('collection.json')
         definition = json.loads(raw)
+        validate_capabilities(definition)
         expected = native_release(definition, kit)
         if definition['project'] != slug or any(expected[k] != release[k] for k in expected if k != 'requires') or set(expected['requires']) != set(release['requires']):
             raise ValueError('Native definition differs from qualified release: ' + slug)

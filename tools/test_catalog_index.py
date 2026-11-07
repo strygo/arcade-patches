@@ -34,6 +34,15 @@ class IndexTests(unittest.TestCase):
         again, _ = ci.publish(ci.expand(index, lambda url: files[url.removeprefix(ci.ORIGIN)]), lambda url: self.kit)
         self.assertEqual(again['launcher'], self.model['launcher'])
 
+    def test_publication_rejects_missing_capability_but_can_read_legacy_definition(self):
+        self.definition['targets']['mame']['external_tools'] = []
+        self.model['releases']['game-r1'] = ci.native_release(self.definition, 'game-kit')
+        stream = io.BytesIO()
+        with zipfile.ZipFile(stream, 'w') as archive:
+            archive.writestr('collection.json', json.dumps(self.definition))
+        with self.assertRaisesRegex(ValueError, 'external-tools-v1'):
+            ci.publish(self.model, lambda url: stream.getvalue())
+
     def test_native_contract_drift_rejected(self):
         self.model['releases']['game-r1']['targets']['mame']['outputs'] = {}
         with self.assertRaisesRegex(ValueError, 'qualified release'):ci.publish(self.model, lambda url: self.kit)
@@ -58,6 +67,6 @@ class CapabilityTests(unittest.TestCase):
                 'prerequisites': {}, 'targets': {'jp-mister': {'external_tools': tools}}}
             with self.subTest(tools=tools):
                 with self.assertRaisesRegex(ValueError, 'external-tools-v1'):
-                    ci.native_release(definition, 'kit')
+                    ci.validate_capabilities(definition)
                 definition['requires'] = ['external-tools-v1']
                 self.assertIn('external-tools-v1', ci.native_release(definition, 'kit')['requires'])
