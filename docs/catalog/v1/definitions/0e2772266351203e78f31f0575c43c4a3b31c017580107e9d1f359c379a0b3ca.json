@@ -1,0 +1,1847 @@
+{
+  "api": 1,
+  "artifacts": {
+    "wheel-185cd3d6d05ca4b44a8f": {
+      "filename": "scipy-1.15.3-cp312-cp312-macosx_12_0_arm64.whl",
+      "sha256": "185cd3d6d05ca4b44a8f1595af87f9c372bb6acf9c808e99aa3e9aa03bd98cf6",
+      "size": 30173284,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/185cd3d6d05ca4b44a8f1595af87f9c372bb6acf9c808e99aa3e9aa03bd98cf6-scipy-1.15.3-cp312-cp312-macosx_12_0_arm64.whl"
+    },
+    "wheel-b0544343a702fa80c95a": {
+      "filename": "numpy-2.2.6-cp313-cp313-win_amd64.whl",
+      "sha256": "b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c",
+      "size": 12610885,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c-numpy-2.2.6-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-b90ab29d0c37ec9bf554": {
+      "filename": "scipy-1.15.3-cp313-cp313-win_amd64.whl",
+      "sha256": "b90ab29d0c37ec9bf55424c064312930ca5f4bde15ee8619ee44e69319aab163",
+      "size": 40988851,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/b90ab29d0c37ec9bf55424c064312930ca5f4bde15ee8619ee44e69319aab163-scipy-1.15.3-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-de749064336d37e340f6": {
+      "filename": "numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c",
+      "size": 14119362,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
+    }
+  },
+  "environments": {
+    "darwin-arm64": {
+      "python": [
+        3,
+        12
+      ],
+      "wheels": [
+        "wheel-de749064336d37e340f6",
+        "wheel-185cd3d6d05ca4b44a8f"
+      ]
+    },
+    "windows-x86_64": {
+      "python": [
+        3,
+        13
+      ],
+      "wheels": [
+        "wheel-b0544343a702fa80c95a",
+        "wheel-b90ab29d0c37ec9bf554"
+      ]
+    }
+  },
+  "execution": {
+    "bios": null,
+    "cue": "CATALOG 0000000000000\nFILE \"Strider Hiryuu (Japan) (Track 01).bin\" BINARY\n  TRACK 01 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 02).bin\" BINARY\n  TRACK 02 MODE1/2352\n    INDEX 00 00:00:00\n    INDEX 01 00:03:00\nFILE \"Strider Hiryuu (Japan) (Track 03).bin\" BINARY\n  TRACK 03 AUDIO\n    INDEX 00 00:00:00\n    INDEX 01 00:02:00\nFILE \"Strider Hiryuu (Japan) (Track 04).bin\" BINARY\n  TRACK 04 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 05).bin\" BINARY\n  TRACK 05 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 06).bin\" BINARY\n  TRACK 06 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 07).bin\" BINARY\n  TRACK 07 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 08).bin\" BINARY\n  TRACK 08 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 09).bin\" BINARY\n  TRACK 09 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 10).bin\" BINARY\n  TRACK 10 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 11).bin\" BINARY\n  TRACK 11 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 12).bin\" BINARY\n  TRACK 12 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 13).bin\" BINARY\n  TRACK 13 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 14).bin\" BINARY\n  TRACK 14 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 15).bin\" BINARY\n  TRACK 15 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 16).bin\" BINARY\n  TRACK 16 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 17).bin\" BINARY\n  TRACK 17 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 18).bin\" BINARY\n  TRACK 18 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 19).bin\" BINARY\n  TRACK 19 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 20).bin\" BINARY\n  TRACK 20 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 21).bin\" BINARY\n  TRACK 21 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 22).bin\" BINARY\n  TRACK 22 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 23).bin\" BINARY\n  TRACK 23 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 24).bin\" BINARY\n  TRACK 24 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 25).bin\" BINARY\n  TRACK 25 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 26).bin\" BINARY\n  TRACK 26 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 27).bin\" BINARY\n  TRACK 27 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 28).bin\" BINARY\n  TRACK 28 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 29).bin\" BINARY\n  TRACK 29 AUDIO\n    INDEX 01 00:00:00\nFILE \"Strider Hiryuu (Japan) (Track 30).bin\" BINARY\n  TRACK 30 MODE1/2352\n    INDEX 00 00:00:00\n    INDEX 01 00:03:00\n",
+    "files": {
+      "Strider Hiryuu (Japan) (Track 01).bin": "disc-076adfd634389556ac9e",
+      "Strider Hiryuu (Japan) (Track 02).bin": "disc-7c74c7ef4e1f874f0256",
+      "Strider Hiryuu (Japan) (Track 03).bin": "disc-12e099810b9cd1f14f1f",
+      "Strider Hiryuu (Japan) (Track 04).bin": "disc-fee4205d64cc128e0754",
+      "Strider Hiryuu (Japan) (Track 05).bin": "disc-1457549b7b0704d41e68",
+      "Strider Hiryuu (Japan) (Track 06).bin": "disc-840e99b7fe82e6e4d10d",
+      "Strider Hiryuu (Japan) (Track 07).bin": "disc-d434cc5375acfe0fbb94",
+      "Strider Hiryuu (Japan) (Track 08).bin": "disc-86bd233b30037a03d477",
+      "Strider Hiryuu (Japan) (Track 09).bin": "disc-67ea4db48b82cad9012f",
+      "Strider Hiryuu (Japan) (Track 10).bin": "disc-c5de00c1d5c0afac511a",
+      "Strider Hiryuu (Japan) (Track 11).bin": "disc-a662cdb60b8c0699e15c",
+      "Strider Hiryuu (Japan) (Track 12).bin": "disc-2f297b214447539964af",
+      "Strider Hiryuu (Japan) (Track 13).bin": "disc-cdf394e7f7d073367b32",
+      "Strider Hiryuu (Japan) (Track 14).bin": "disc-e63b3bbd3e6fe4a6cf6d",
+      "Strider Hiryuu (Japan) (Track 15).bin": "disc-934839c485e6038b8de0",
+      "Strider Hiryuu (Japan) (Track 16).bin": "disc-def7310e7e76977c9d1d",
+      "Strider Hiryuu (Japan) (Track 17).bin": "disc-3d6b369ef5559232dd6d",
+      "Strider Hiryuu (Japan) (Track 18).bin": "disc-2f53f7a2b1aeafbde455",
+      "Strider Hiryuu (Japan) (Track 19).bin": "disc-7ff5ac157c490ab2dcbc",
+      "Strider Hiryuu (Japan) (Track 20).bin": "disc-9ce3b76b42037616af6b",
+      "Strider Hiryuu (Japan) (Track 21).bin": "disc-7c7a91626948070f7689",
+      "Strider Hiryuu (Japan) (Track 22).bin": "disc-074a6b3613430d8f0f05",
+      "Strider Hiryuu (Japan) (Track 23).bin": "disc-f805371457119a77708c",
+      "Strider Hiryuu (Japan) (Track 24).bin": "disc-01f5fed99aced5acc107",
+      "Strider Hiryuu (Japan) (Track 25).bin": "disc-e99c1c289406932c58c6",
+      "Strider Hiryuu (Japan) (Track 26).bin": "disc-bac2b741d09c58df8eb1",
+      "Strider Hiryuu (Japan) (Track 27).bin": "disc-f08accb9b9e25c007190",
+      "Strider Hiryuu (Japan) (Track 28).bin": "disc-bf35b9520568e10db392",
+      "Strider Hiryuu (Japan) (Track 29).bin": "disc-a918a5bba8666b8d687a",
+      "Strider Hiryuu (Japan) (Track 30).bin": "disc-62507abb5f83b6bd8e58"
+    },
+    "manifest_sha256": "f01a39d23c28fe261943394bd363c1079c42a3e3aab8906ccfe39bb0d718eb92",
+    "original_outputs": {
+      "BUILD-RECEIPT.json": {
+        "sha256": "4a35ada5f6c17a141d108096c5a335da3bbfbf662cc9922c9abf6deb958bdb54"
+      },
+      "hbmame/striderjs01.zip": {
+        "members": {
+          "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+          "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+          "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+          "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+          "c03js01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+          "c03js01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+          "c03js01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+          "c03js01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+          "c03js01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+          "c03js01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+          "c03js01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+          "c03js01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+          "c03js01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+          "c03js01.p1": "46a6045ad4123e2b2150e6ce38e650bd893c4983f422add51cfda72c8be8327a",
+          "c03js01.p5": "7f42cb12a8d1eecf8b63dbe1c18368d138a9d0edf79c1da6131dde0783a6d85a",
+          "c03js01.p6": "3401ae347744316818f4234e85a2a62b636a81304a453c5dc375ce4e58fe727d",
+          "c03js01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+          "c03js01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+          "striderjs01.key": "9f34cee7c14d38d383552764262b1fa58a1ca39ed35bec53730056604719c757"
+        }
+      },
+      "hbmame/striderus01.zip": {
+        "members": {
+          "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+          "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+          "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+          "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+          "c03us01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+          "c03us01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+          "c03us01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+          "c03us01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+          "c03us01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+          "c03us01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+          "c03us01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+          "c03us01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+          "c03us01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+          "c03us01.p1": "5c2799c65f7c15607776c5884b2e44bea3cfce0d3df17e89d34a6c629e0f2a0a",
+          "c03us01.p2": "3b3daa0b60e818093fab750effa25eb2c99535e7c65b91c8bb22e22462c085db",
+          "c03us01.p3": "53956c352873b4a0874cbde989f0bf76fca4d21bd1d2abcaa96376b9fa729fca",
+          "c03us01.p4": "34059ed6cf313742992b82988e9f6fb95afb010be2f082362fb3ec7ccd90a42f",
+          "c03us01.p5": "d2bb4826047afba5ab304cd10be1a01ac00bf89a90bf916963c2cf6e68ac548d",
+          "c03us01.p6": "e0a7c88ec8f9c406d04a5ab81bad61c704de1d82cc0365165d7165fff0b6f8b0",
+          "c03us01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+          "c03us01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+          "striderus01.key": "c8db0617f7f541584ae4fefb11b7232a5c9877259c919c2efe6471d123802469"
+        }
+      },
+      "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange, Japanese voices].mra": {
+        "sha256": "fa8469a9e9c6d2d4b1300a3b5c5328e273b1e26df0c9306e1363e1c6857d07ff"
+      },
+      "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange].mra": {
+        "sha256": "de0cba2c0752343ffdaed8b3269771bb3dafff97baa02d5293f036ccfca064a5"
+      },
+      "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange, English voices].mra": {
+        "sha256": "a42007c81268ca5e32a8298619fcca31a09d7a881828ee5c601ef6eba918ed22"
+      },
+      "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange].mra": {
+        "sha256": "b3a35ef96bce4bfc4201417382d9f92fe7bc018fef114b48a083d9fe974a8d35"
+      },
+      "mister/_Arcade/_Arcade Patches/_Enhanced Versions/Strider EX (USA).mra": {
+        "sha256": "ce393fb821782fc5d4ea6adad0294e39d465bc874bdb0f409d57bc7a4a56f0cc"
+      },
+      "mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Strider Hiryu EX (Japan).mra": {
+        "sha256": "61d4e4a3eeb3514f0ae1b0bdef46ab33c7ef540567860deffc2d4f74d7ae095c"
+      },
+      "mister/_Arcade/cores/jtcps1-cpsplus_20261009.rbf": {
+        "sha256": "c68ffd55776f5f4ff736740b22fcd7b6c44cc7279ceffa41665306fab30c7352"
+      },
+      "mister/games/CPS+/strider_ex.zip": {
+        "members": {
+          "strider_ex.cpk": "02aa41624d55e2aa135cdfad399987ba489d2f693fa9c8c1a51caf4105ff8aa6"
+        }
+      },
+      "mister/games/hbmame/striderjs01.zip": {
+        "members": {
+          "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+          "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+          "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+          "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+          "c03js01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+          "c03js01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+          "c03js01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+          "c03js01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+          "c03js01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+          "c03js01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+          "c03js01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+          "c03js01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+          "c03js01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+          "c03js01.p1": "46a6045ad4123e2b2150e6ce38e650bd893c4983f422add51cfda72c8be8327a",
+          "c03js01.p5": "7f42cb12a8d1eecf8b63dbe1c18368d138a9d0edf79c1da6131dde0783a6d85a",
+          "c03js01.p6": "3401ae347744316818f4234e85a2a62b636a81304a453c5dc375ce4e58fe727d",
+          "c03js01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+          "c03js01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+          "striderjs01.key": "9f34cee7c14d38d383552764262b1fa58a1ca39ed35bec53730056604719c757"
+        }
+      },
+      "mister/games/hbmame/striderus01.zip": {
+        "members": {
+          "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+          "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+          "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+          "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+          "c03us01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+          "c03us01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+          "c03us01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+          "c03us01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+          "c03us01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+          "c03us01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+          "c03us01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+          "c03us01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+          "c03us01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+          "c03us01.p1": "5c2799c65f7c15607776c5884b2e44bea3cfce0d3df17e89d34a6c629e0f2a0a",
+          "c03us01.p2": "3b3daa0b60e818093fab750effa25eb2c99535e7c65b91c8bb22e22462c085db",
+          "c03us01.p3": "53956c352873b4a0874cbde989f0bf76fca4d21bd1d2abcaa96376b9fa729fca",
+          "c03us01.p4": "34059ed6cf313742992b82988e9f6fb95afb010be2f082362fb3ec7ccd90a42f",
+          "c03us01.p5": "d2bb4826047afba5ab304cd10be1a01ac00bf89a90bf916963c2cf6e68ac548d",
+          "c03us01.p6": "e0a7c88ec8f9c406d04a5ab81bad61c704de1d82cc0365165d7165fff0b6f8b0",
+          "c03us01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+          "c03us01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+          "striderus01.key": "c8db0617f7f541584ae4fefb11b7232a5c9877259c919c2efe6471d123802469"
+        }
+      }
+    },
+    "resource_recipe": true,
+    "sets": {
+      "striderjr": {
+        "sth_01.3a": "rom-6580f6b3c7ada215a710",
+        "sth_02.4a": "rom-3772d4cfae3bdba2c4b2",
+        "sth_03.5a": "rom-ad8b02bab3a7a384207c",
+        "sth_04.6a": "rom-e94ed2c04163cc76a4e5",
+        "sth_05.7a": "rom-2c19b645c1b668b1ff41",
+        "sth_06.8a": "rom-c6a86f7ca021bd5df963",
+        "sth_07.9a": "rom-7a0c3e9f48ecc911e151",
+        "sth_08.10a": "rom-06dc231f9a6ea775d47b",
+        "sth_09.12a": "rom-5d7868824b8b8f5a5dae",
+        "sth_18.11c": "rom-223dd6d52f31cfd5ddc4",
+        "sth_19.12c": "rom-871d54585e990112a187",
+        "sthj_22.7f": "rom-a84abf77cddf8cf1d362",
+        "sthj_23.8f": "rom-521faeba3e0e3752b0cc"
+      },
+      "striderua": {
+        "09.12b": "rom-5d7868824b8b8f5a5dae",
+        "18.11c": "rom-223dd6d52f31cfd5ddc4",
+        "19.12c": "rom-871d54585e990112a187",
+        "30.11f": "rom-7e53d542d0e83724f4f3",
+        "31.12f": "rom-4495d00b5b64be71932b",
+        "35.11h": "rom-f4690b53a6b9be79abae",
+        "36.12h": "rom-8360e5b3ad4c8a6ae54d",
+        "st-1.7a": "rom-2c19b645c1b668b1ff41",
+        "st-10.9a": "rom-c6a86f7ca021bd5df963",
+        "st-11.10a": "rom-3772d4cfae3bdba2c4b2",
+        "st-14.8h": "rom-a84abf77cddf8cf1d362",
+        "st-2.8a": "rom-6580f6b3c7ada215a710",
+        "st-4.3a": "rom-7a0c3e9f48ecc911e151",
+        "st-5.4a": "rom-ad8b02bab3a7a384207c",
+        "st-8.5a": "rom-06dc231f9a6ea775d47b",
+        "st-9.6a": "rom-e94ed2c04163cc76a4e5"
+      }
+    },
+    "targets": {
+      "jp-hbmame": {
+        "kit_mapping": {
+          "LICENSES.txt": "support/strider-ex/LICENSES.txt",
+          "README.txt": "support/strider-ex/README.txt",
+          "TOOLS.md": "support/strider-ex/TOOLS.md"
+        },
+        "mapping": {
+          "hbmame/striderjs01.zip": "roms/striderjs01.zip"
+        },
+        "outputs": {
+          "roms/striderjs01.zip": {
+            "members": {
+              "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+              "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+              "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+              "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+              "c03js01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+              "c03js01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+              "c03js01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+              "c03js01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+              "c03js01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+              "c03js01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+              "c03js01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+              "c03js01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+              "c03js01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+              "c03js01.p1": "46a6045ad4123e2b2150e6ce38e650bd893c4983f422add51cfda72c8be8327a",
+              "c03js01.p5": "7f42cb12a8d1eecf8b63dbe1c18368d138a9d0edf79c1da6131dde0783a6d85a",
+              "c03js01.p6": "3401ae347744316818f4234e85a2a62b636a81304a453c5dc375ce4e58fe727d",
+              "c03js01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+              "c03js01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+              "striderjs01.key": "9f34cee7c14d38d383552764262b1fa58a1ca39ed35bec53730056604719c757"
+            }
+          },
+          "support/strider-ex/LICENSES.txt": {
+            "sha256": "afc3f5bb116ba491d63c59d270ae4869b0ff99161ec5405f648afe2a4f3fd77d"
+          },
+          "support/strider-ex/README.txt": {
+            "sha256": "c1d9f26c1fae3eb6fb620b0961f63ad09e01402a76b7884c99731ad4b6c35b0e"
+          },
+          "support/strider-ex/TOOLS.md": {
+            "sha256": "ead600ecfa1b2229d78e66b1fd02539846994b74c8c6de6c82f06b36b3aa511a"
+          }
+        }
+      },
+      "jp-mister": {
+        "kit_mapping": {
+          "LICENSES.txt": "support/strider-ex/LICENSES.txt",
+          "README.txt": "support/strider-ex/README.txt",
+          "TOOLS.md": "support/strider-ex/TOOLS.md"
+        },
+        "mapping": {
+          "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange, English voices].mra": "_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange, English voices].mra",
+          "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange].mra": "_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange].mra",
+          "mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Strider Hiryu EX (Japan).mra": "_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Strider Hiryu EX (Japan).mra",
+          "mister/_Arcade/cores/jtcps1-cpsplus_20261009.rbf": "_Arcade/cores/jtcps1-cpsplus_20261009.rbf",
+          "mister/games/CPS+/strider_ex.zip": "games/CPS+/strider_ex.zip",
+          "mister/games/hbmame/striderjs01.zip": "games/hbmame/striderjs01.zip"
+        },
+        "outputs": {
+          "_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange, English voices].mra": {
+            "sha256": "a42007c81268ca5e32a8298619fcca31a09d7a881828ee5c601ef6eba918ed22"
+          },
+          "_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange].mra": {
+            "sha256": "b3a35ef96bce4bfc4201417382d9f92fe7bc018fef114b48a083d9fe974a8d35"
+          },
+          "_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Strider Hiryu EX (Japan).mra": {
+            "sha256": "61d4e4a3eeb3514f0ae1b0bdef46ab33c7ef540567860deffc2d4f74d7ae095c"
+          },
+          "_Arcade/cores/jtcps1-cpsplus_20261009.rbf": {
+            "sha256": "c68ffd55776f5f4ff736740b22fcd7b6c44cc7279ceffa41665306fab30c7352"
+          },
+          "games/CPS+/strider_ex.zip": {
+            "members": {
+              "strider_ex.cpk": "02aa41624d55e2aa135cdfad399987ba489d2f693fa9c8c1a51caf4105ff8aa6"
+            }
+          },
+          "games/hbmame/striderjs01.zip": {
+            "members": {
+              "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+              "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+              "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+              "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+              "c03js01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+              "c03js01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+              "c03js01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+              "c03js01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+              "c03js01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+              "c03js01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+              "c03js01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+              "c03js01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+              "c03js01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+              "c03js01.p1": "46a6045ad4123e2b2150e6ce38e650bd893c4983f422add51cfda72c8be8327a",
+              "c03js01.p5": "7f42cb12a8d1eecf8b63dbe1c18368d138a9d0edf79c1da6131dde0783a6d85a",
+              "c03js01.p6": "3401ae347744316818f4234e85a2a62b636a81304a453c5dc375ce4e58fe727d",
+              "c03js01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+              "c03js01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+              "striderjs01.key": "9f34cee7c14d38d383552764262b1fa58a1ca39ed35bec53730056604719c757"
+            }
+          },
+          "support/strider-ex/LICENSES.txt": {
+            "sha256": "afc3f5bb116ba491d63c59d270ae4869b0ff99161ec5405f648afe2a4f3fd77d"
+          },
+          "support/strider-ex/README.txt": {
+            "sha256": "c1d9f26c1fae3eb6fb620b0961f63ad09e01402a76b7884c99731ad4b6c35b0e"
+          },
+          "support/strider-ex/TOOLS.md": {
+            "sha256": "ead600ecfa1b2229d78e66b1fd02539846994b74c8c6de6c82f06b36b3aa511a"
+          }
+        }
+      },
+      "us-hbmame": {
+        "kit_mapping": {
+          "LICENSES.txt": "support/strider-ex/LICENSES.txt",
+          "README.txt": "support/strider-ex/README.txt",
+          "TOOLS.md": "support/strider-ex/TOOLS.md"
+        },
+        "mapping": {
+          "hbmame/striderus01.zip": "roms/striderus01.zip"
+        },
+        "outputs": {
+          "roms/striderus01.zip": {
+            "members": {
+              "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+              "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+              "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+              "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+              "c03us01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+              "c03us01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+              "c03us01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+              "c03us01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+              "c03us01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+              "c03us01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+              "c03us01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+              "c03us01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+              "c03us01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+              "c03us01.p1": "5c2799c65f7c15607776c5884b2e44bea3cfce0d3df17e89d34a6c629e0f2a0a",
+              "c03us01.p2": "3b3daa0b60e818093fab750effa25eb2c99535e7c65b91c8bb22e22462c085db",
+              "c03us01.p3": "53956c352873b4a0874cbde989f0bf76fca4d21bd1d2abcaa96376b9fa729fca",
+              "c03us01.p4": "34059ed6cf313742992b82988e9f6fb95afb010be2f082362fb3ec7ccd90a42f",
+              "c03us01.p5": "d2bb4826047afba5ab304cd10be1a01ac00bf89a90bf916963c2cf6e68ac548d",
+              "c03us01.p6": "e0a7c88ec8f9c406d04a5ab81bad61c704de1d82cc0365165d7165fff0b6f8b0",
+              "c03us01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+              "c03us01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+              "striderus01.key": "c8db0617f7f541584ae4fefb11b7232a5c9877259c919c2efe6471d123802469"
+            }
+          },
+          "support/strider-ex/LICENSES.txt": {
+            "sha256": "afc3f5bb116ba491d63c59d270ae4869b0ff99161ec5405f648afe2a4f3fd77d"
+          },
+          "support/strider-ex/README.txt": {
+            "sha256": "c1d9f26c1fae3eb6fb620b0961f63ad09e01402a76b7884c99731ad4b6c35b0e"
+          },
+          "support/strider-ex/TOOLS.md": {
+            "sha256": "ead600ecfa1b2229d78e66b1fd02539846994b74c8c6de6c82f06b36b3aa511a"
+          }
+        }
+      },
+      "us-mister": {
+        "kit_mapping": {
+          "LICENSES.txt": "support/strider-ex/LICENSES.txt",
+          "README.txt": "support/strider-ex/README.txt",
+          "TOOLS.md": "support/strider-ex/TOOLS.md"
+        },
+        "mapping": {
+          "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange, Japanese voices].mra": "_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange, Japanese voices].mra",
+          "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange].mra": "_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange].mra",
+          "mister/_Arcade/_Arcade Patches/_Enhanced Versions/Strider EX (USA).mra": "_Arcade/_Arcade Patches/_Enhanced Versions/Strider EX (USA).mra",
+          "mister/_Arcade/cores/jtcps1-cpsplus_20261009.rbf": "_Arcade/cores/jtcps1-cpsplus_20261009.rbf",
+          "mister/games/CPS+/strider_ex.zip": "games/CPS+/strider_ex.zip",
+          "mister/games/hbmame/striderus01.zip": "games/hbmame/striderus01.zip"
+        },
+        "outputs": {
+          "_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange, Japanese voices].mra": {
+            "sha256": "fa8469a9e9c6d2d4b1300a3b5c5328e273b1e26df0c9306e1363e1c6857d07ff"
+          },
+          "_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange].mra": {
+            "sha256": "de0cba2c0752343ffdaed8b3269771bb3dafff97baa02d5293f036ccfca064a5"
+          },
+          "_Arcade/_Arcade Patches/_Enhanced Versions/Strider EX (USA).mra": {
+            "sha256": "ce393fb821782fc5d4ea6adad0294e39d465bc874bdb0f409d57bc7a4a56f0cc"
+          },
+          "_Arcade/cores/jtcps1-cpsplus_20261009.rbf": {
+            "sha256": "c68ffd55776f5f4ff736740b22fcd7b6c44cc7279ceffa41665306fab30c7352"
+          },
+          "games/CPS+/strider_ex.zip": {
+            "members": {
+              "strider_ex.cpk": "02aa41624d55e2aa135cdfad399987ba489d2f693fa9c8c1a51caf4105ff8aa6"
+            }
+          },
+          "games/hbmame/striderus01.zip": {
+            "members": {
+              "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+              "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+              "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+              "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+              "c03us01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+              "c03us01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+              "c03us01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+              "c03us01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+              "c03us01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+              "c03us01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+              "c03us01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+              "c03us01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+              "c03us01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+              "c03us01.p1": "5c2799c65f7c15607776c5884b2e44bea3cfce0d3df17e89d34a6c629e0f2a0a",
+              "c03us01.p2": "3b3daa0b60e818093fab750effa25eb2c99535e7c65b91c8bb22e22462c085db",
+              "c03us01.p3": "53956c352873b4a0874cbde989f0bf76fca4d21bd1d2abcaa96376b9fa729fca",
+              "c03us01.p4": "34059ed6cf313742992b82988e9f6fb95afb010be2f082362fb3ec7ccd90a42f",
+              "c03us01.p5": "d2bb4826047afba5ab304cd10be1a01ac00bf89a90bf916963c2cf6e68ac548d",
+              "c03us01.p6": "e0a7c88ec8f9c406d04a5ab81bad61c704de1d82cc0365165d7165fff0b6f8b0",
+              "c03us01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+              "c03us01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+              "striderus01.key": "c8db0617f7f541584ae4fefb11b7232a5c9877259c919c2efe6471d123802469"
+            }
+          },
+          "support/strider-ex/LICENSES.txt": {
+            "sha256": "afc3f5bb116ba491d63c59d270ae4869b0ff99161ec5405f648afe2a4f3fd77d"
+          },
+          "support/strider-ex/README.txt": {
+            "sha256": "c1d9f26c1fae3eb6fb620b0961f63ad09e01402a76b7884c99731ad4b6c35b0e"
+          },
+          "support/strider-ex/TOOLS.md": {
+            "sha256": "ead600ecfa1b2229d78e66b1fd02539846994b74c8c6de6c82f06b36b3aa511a"
+          }
+        }
+      }
+    },
+    "x68k": "game-c611d2ccfbdaf0abc5fd"
+  },
+  "game_version": "rc1",
+  "kit_revision": 10,
+  "manifest_sha256": "f01a39d23c28fe261943394bd363c1079c42a3e3aab8906ccfe39bb0d718eb92",
+  "native_outputs": {
+    "BUILD-RECEIPT.json": {
+      "sha256": "4a35ada5f6c17a141d108096c5a335da3bbfbf662cc9922c9abf6deb958bdb54"
+    },
+    "hbmame/striderjs01.zip": {
+      "members": {
+        "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+        "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+        "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+        "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+        "c03js01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+        "c03js01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+        "c03js01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+        "c03js01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+        "c03js01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+        "c03js01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+        "c03js01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+        "c03js01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+        "c03js01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+        "c03js01.p1": "46a6045ad4123e2b2150e6ce38e650bd893c4983f422add51cfda72c8be8327a",
+        "c03js01.p5": "7f42cb12a8d1eecf8b63dbe1c18368d138a9d0edf79c1da6131dde0783a6d85a",
+        "c03js01.p6": "3401ae347744316818f4234e85a2a62b636a81304a453c5dc375ce4e58fe727d",
+        "c03js01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+        "c03js01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+        "striderjs01.key": "9f34cee7c14d38d383552764262b1fa58a1ca39ed35bec53730056604719c757"
+      }
+    },
+    "hbmame/striderus01.zip": {
+      "members": {
+        "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+        "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+        "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+        "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+        "c03us01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+        "c03us01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+        "c03us01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+        "c03us01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+        "c03us01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+        "c03us01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+        "c03us01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+        "c03us01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+        "c03us01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+        "c03us01.p1": "5c2799c65f7c15607776c5884b2e44bea3cfce0d3df17e89d34a6c629e0f2a0a",
+        "c03us01.p2": "3b3daa0b60e818093fab750effa25eb2c99535e7c65b91c8bb22e22462c085db",
+        "c03us01.p3": "53956c352873b4a0874cbde989f0bf76fca4d21bd1d2abcaa96376b9fa729fca",
+        "c03us01.p4": "34059ed6cf313742992b82988e9f6fb95afb010be2f082362fb3ec7ccd90a42f",
+        "c03us01.p5": "d2bb4826047afba5ab304cd10be1a01ac00bf89a90bf916963c2cf6e68ac548d",
+        "c03us01.p6": "e0a7c88ec8f9c406d04a5ab81bad61c704de1d82cc0365165d7165fff0b6f8b0",
+        "c03us01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+        "c03us01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+        "striderus01.key": "c8db0617f7f541584ae4fefb11b7232a5c9877259c919c2efe6471d123802469"
+      }
+    },
+    "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange, Japanese voices].mra": {
+      "sha256": "fa8469a9e9c6d2d4b1300a3b5c5328e273b1e26df0c9306e1363e1c6857d07ff"
+    },
+    "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange].mra": {
+      "sha256": "de0cba2c0752343ffdaed8b3269771bb3dafff97baa02d5293f036ccfca064a5"
+    },
+    "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange, English voices].mra": {
+      "sha256": "a42007c81268ca5e32a8298619fcca31a09d7a881828ee5c601ef6eba918ed22"
+    },
+    "mister/_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange].mra": {
+      "sha256": "b3a35ef96bce4bfc4201417382d9f92fe7bc018fef114b48a083d9fe974a8d35"
+    },
+    "mister/_Arcade/_Arcade Patches/_Enhanced Versions/Strider EX (USA).mra": {
+      "sha256": "ce393fb821782fc5d4ea6adad0294e39d465bc874bdb0f409d57bc7a4a56f0cc"
+    },
+    "mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Strider Hiryu EX (Japan).mra": {
+      "sha256": "61d4e4a3eeb3514f0ae1b0bdef46ab33c7ef540567860deffc2d4f74d7ae095c"
+    },
+    "mister/_Arcade/cores/jtcps1-cpsplus_20261009.rbf": {
+      "sha256": "c68ffd55776f5f4ff736740b22fcd7b6c44cc7279ceffa41665306fab30c7352"
+    },
+    "mister/games/CPS+/strider_ex.zip": {
+      "members": {
+        "strider_ex.cpk": "02aa41624d55e2aa135cdfad399987ba489d2f693fa9c8c1a51caf4105ff8aa6"
+      }
+    },
+    "mister/games/hbmame/striderjs01.zip": {
+      "members": {
+        "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+        "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+        "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+        "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+        "c03js01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+        "c03js01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+        "c03js01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+        "c03js01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+        "c03js01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+        "c03js01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+        "c03js01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+        "c03js01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+        "c03js01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+        "c03js01.p1": "46a6045ad4123e2b2150e6ce38e650bd893c4983f422add51cfda72c8be8327a",
+        "c03js01.p5": "7f42cb12a8d1eecf8b63dbe1c18368d138a9d0edf79c1da6131dde0783a6d85a",
+        "c03js01.p6": "3401ae347744316818f4234e85a2a62b636a81304a453c5dc375ce4e58fe727d",
+        "c03js01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+        "c03js01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+        "striderjs01.key": "9f34cee7c14d38d383552764262b1fa58a1ca39ed35bec53730056604719c757"
+      }
+    },
+    "mister/games/hbmame/striderus01.zip": {
+      "members": {
+        "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+        "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+        "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+        "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+        "c03us01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+        "c03us01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+        "c03us01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+        "c03us01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+        "c03us01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+        "c03us01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+        "c03us01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+        "c03us01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+        "c03us01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+        "c03us01.p1": "5c2799c65f7c15607776c5884b2e44bea3cfce0d3df17e89d34a6c629e0f2a0a",
+        "c03us01.p2": "3b3daa0b60e818093fab750effa25eb2c99535e7c65b91c8bb22e22462c085db",
+        "c03us01.p3": "53956c352873b4a0874cbde989f0bf76fca4d21bd1d2abcaa96376b9fa729fca",
+        "c03us01.p4": "34059ed6cf313742992b82988e9f6fb95afb010be2f082362fb3ec7ccd90a42f",
+        "c03us01.p5": "d2bb4826047afba5ab304cd10be1a01ac00bf89a90bf916963c2cf6e68ac548d",
+        "c03us01.p6": "e0a7c88ec8f9c406d04a5ab81bad61c704de1d82cc0365165d7165fff0b6f8b0",
+        "c03us01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+        "c03us01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+        "striderus01.key": "c8db0617f7f541584ae4fefb11b7232a5c9877259c919c2efe6471d123802469"
+      }
+    }
+  },
+  "prerequisites": {
+    "disc-01f5fed99aced5acc107": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "01f5fed99aced5acc107a4a70c9421a0c21af89fb0c5e5559f2fc2e086467e8e",
+          "size": 4278288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 24).bin"
+    },
+    "disc-074a6b3613430d8f0f05": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "074a6b3613430d8f0f053b83211a9e1e183f7bd57223ac3d9b28c9e8586a3847",
+          "size": 5898816
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 22).bin"
+    },
+    "disc-076adfd634389556ac9e": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "076adfd634389556ac9e672b34a174da9fe23380f6766da30608d73ff3bc229a",
+          "size": 7914480
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 01).bin"
+    },
+    "disc-12e099810b9cd1f14f1f": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "12e099810b9cd1f14f1f6ffb075b6973d07dbc8a2e38415b171768ec05b569bd",
+          "size": 13034784
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 03).bin"
+    },
+    "disc-1457549b7b0704d41e68": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "1457549b7b0704d41e68e4dd7e9cff13be0f11a888ccfd593825491123628868",
+          "size": 1853376
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 05).bin"
+    },
+    "disc-2f297b214447539964af": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "2f297b214447539964af01c067db3d55618db0e5cf3710415bd1ed9ecd18965b",
+          "size": 20906928
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 12).bin"
+    },
+    "disc-2f53f7a2b1aeafbde455": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "2f53f7a2b1aeafbde455466000e5b958857a418d8e295e7e6c8e380e9ed77539",
+          "size": 27203232
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 18).bin"
+    },
+    "disc-3d6b369ef5559232dd6d": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "3d6b369ef5559232dd6d107eac861c90d4dd3457e9e2f4d594fdabff04a4b5cb",
+          "size": 21988848
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 17).bin"
+    },
+    "disc-62507abb5f83b6bd8e58": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "62507abb5f83b6bd8e58169051d3127500fcb1616208877fcf20287c732ac3ef",
+          "size": 51238320
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 30).bin"
+    },
+    "disc-67ea4db48b82cad9012f": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "67ea4db48b82cad9012f22b4d8564c6e031712f301b09e2874225c07e25b6fd2",
+          "size": 20088432
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 09).bin"
+    },
+    "disc-7c74c7ef4e1f874f0256": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "7c74c7ef4e1f874f0256edd8668390b55fe5028ee9b05d0b3a56fa7166d5a471",
+          "size": 51588768
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 02).bin"
+    },
+    "disc-7c7a91626948070f7689": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "7c7a91626948070f7689baa6100ed0006a320b8553b84fa39881eeb05c59f222",
+          "size": 7521696
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 21).bin"
+    },
+    "disc-7ff5ac157c490ab2dcbc": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "7ff5ac157c490ab2dcbc22a76d1753bdbf9c1cb44cd9f284981409d6a67343f5",
+          "size": 23872800
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 19).bin"
+    },
+    "disc-840e99b7fe82e6e4d10d": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "840e99b7fe82e6e4d10d803617e154f94e78ff2b4133fe0d32a503514d664d45",
+          "size": 2803584
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 06).bin"
+    },
+    "disc-86bd233b30037a03d477": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "86bd233b30037a03d4772e4408a28581d729089ca925e18260cec81be63baa54",
+          "size": 22216992
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 08).bin"
+    },
+    "disc-934839c485e6038b8de0": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "934839c485e6038b8de05ed02750b17072f5c7011879170c70aa0cf8fc0df631",
+          "size": 16139424
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 15).bin"
+    },
+    "disc-9ce3b76b42037616af6b": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "9ce3b76b42037616af6ba61ccc4100dca7afe01a493dbcf6c6503f004602da90",
+          "size": 18155088
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 20).bin"
+    },
+    "disc-a662cdb60b8c0699e15c": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "a662cdb60b8c0699e15caccb93ffb1de0ab0fec73d517d2b0720838a3def5d31",
+          "size": 22579200
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 11).bin"
+    },
+    "disc-a918a5bba8666b8d687a": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "a918a5bba8666b8d687a436b25f2b61281bf3119ac378b1514dc758d32df6a73",
+          "size": 20448288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 29).bin"
+    },
+    "disc-bac2b741d09c58df8eb1": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "bac2b741d09c58df8eb198dfff2d33d23cfde26d63941c1ba3f1abae4da5a869",
+          "size": 5588352
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 26).bin"
+    },
+    "disc-bf35b9520568e10db392": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "bf35b9520568e10db3920f85169f94474126d193fce2df32568fdd9e8c35f4a9",
+          "size": 6571488
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 28).bin"
+    },
+    "disc-c5de00c1d5c0afac511a": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "c5de00c1d5c0afac511af15f580cd5c5f8f54b967ca9356a8188f0a34bd0dba0",
+          "size": 18122160
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 10).bin"
+    },
+    "disc-cdf394e7f7d073367b32": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "cdf394e7f7d073367b325bebc003d484f3f3acdd85881dd2079428dc7a3c174a",
+          "size": 21104496
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 13).bin"
+    },
+    "disc-d434cc5375acfe0fbb94": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "d434cc5375acfe0fbb9421f30286eb9723c02269402b8ed91478b623cbfca30b",
+          "size": 2114448
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 07).bin"
+    },
+    "disc-def7310e7e76977c9d1d": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "def7310e7e76977c9d1dd5994cfca5f756831691be78ca750a2c741f932a1607",
+          "size": 23150736
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 16).bin"
+    },
+    "disc-e63b3bbd3e6fe4a6cf6d": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "e63b3bbd3e6fe4a6cf6d9abeb485d9d72ba3c27eb174239bc0cc9af972d870a1",
+          "size": 19204080
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 14).bin"
+    },
+    "disc-e99c1c289406932c58c6": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "e99c1c289406932c58c6861a0c6cd32c0ca483c681e5edf7c364b1317fbaa470",
+          "size": 4605216
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 25).bin"
+    },
+    "disc-f08accb9b9e25c007190": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "f08accb9b9e25c0071903688930689a98f8c5c9fb1e18a2a64ca371b4fa1c7d3",
+          "size": 4671072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 27).bin"
+    },
+    "disc-f805371457119a77708c": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "f805371457119a77708c01254b3114c2679ce01ce632ebb933de7806e1d91e57",
+          "size": 3866688
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 23).bin"
+    },
+    "disc-fee4205d64cc128e0754": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "fee4205d64cc128e0754522d7ccbd6a996eef7096488a32c4ebc3cba790f1dda",
+          "size": 16713312
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Strider Hiryuu (Japan), PC Engine CD: Strider Hiryuu (Japan) (Track 04).bin"
+    },
+    "game-c611d2ccfbdaf0abc5fd": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "sha256": "c611d2ccfbdaf0abc5fdc1c5bfc6cfd4bde4dc7f76b4b224a6f663b0e57fdc7c",
+          "size": 1261824
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "game",
+      "title": "Strider Hiryuu X68000 System disk"
+    },
+    "rom-06dc231f9a6ea775d47b": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "6b4713b4",
+          "sha256": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: st-8.5a"
+    },
+    "rom-223dd6d52f31cfd5ddc4": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "4386bc80",
+          "sha256": "223dd6d52f31cfd5ddc486a66dd93391cce514f7e888be4b5b03d9252d07d08c",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: 18.11c"
+    },
+    "rom-2c19b645c1b668b1ff41": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "005f000b",
+          "sha256": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: st-1.7a"
+    },
+    "rom-3772d4cfae3bdba2c4b2": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "2d7f21e4",
+          "sha256": "3772d4cfae3bdba2c4b2c48b384b439ecd49c964306ed9159e475cf812ca3171",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: st-11.10a"
+    },
+    "rom-4495d00b5b64be71932b": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "eae93bd1",
+          "sha256": "4495d00b5b64be71932b2f2a15522822cd375621de63b093ae4baaf3f6b0a8d8",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: 31.12f"
+    },
+    "rom-521faeba3e0e3752b0cc": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "046e7b12",
+          "sha256": "521faeba3e0e3752b0ccc7d4cd40f437fd8a0aeb9f0c71ae131d82a1579d3fe7",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderjr: sthj_23.8f"
+    },
+    "rom-5d7868824b8b8f5a5dae": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "08d63519",
+          "sha256": "5d7868824b8b8f5a5dae564c4fd37a8196ad9570ed9861936443543828c5e299",
+          "size": 65536
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: 09.12b"
+    },
+    "rom-6580f6b3c7ada215a710": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "4eee9aea",
+          "sha256": "6580f6b3c7ada215a710bb2c647b71e83394321bd0e46871ba4bda4deba5147b",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: st-2.8a"
+    },
+    "rom-7a0c3e9f48ecc911e151": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "b7d04e8b",
+          "sha256": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: st-4.3a"
+    },
+    "rom-7e53d542d0e83724f4f3": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "66aec273",
+          "sha256": "7e53d542d0e83724f4f33716371f3e000e54abe1bc8829ec0a631be56a0eb02d",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: 30.11f"
+    },
+    "rom-8360e5b3ad4c8a6ae54d": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "b904a31d",
+          "sha256": "8360e5b3ad4c8a6ae54d0a270493e4d1a977db678658c07a23e0aab5a07d8b28",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: 36.12h"
+    },
+    "rom-871d54585e990112a187": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "444536d7",
+          "sha256": "871d54585e990112a187be5cc8589628ddccf0d486bde4984e7b7d7f59cca473",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: 19.12c"
+    },
+    "rom-a84abf77cddf8cf1d362": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "9b3cfc08",
+          "sha256": "a84abf77cddf8cf1d36223861cca8a743a0742517787760209370a730e2d3602",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: st-14.8h"
+    },
+    "rom-ad8b02bab3a7a384207c": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "7705aa46",
+          "sha256": "ad8b02bab3a7a384207c70c5c098132ae160b5ed5a1a646c553e2943c323614e",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: st-5.4a"
+    },
+    "rom-c6a86f7ca021bd5df963": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "b9441519",
+          "sha256": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: st-10.9a"
+    },
+    "rom-e94ed2c04163cc76a4e5": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "5b18b722",
+          "sha256": "e94ed2c04163cc76a4e5a021a22aecd56771adfb3baa2c21f5f174a1bd8a2173",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: st-9.6a"
+    },
+    "rom-f4690b53a6b9be79abae": {
+      "action": "Add the matching owned source to a scanned folder. Files are identified by content; loose files, ZIP members and 7z members are supported.",
+      "alternatives": [
+        {
+          "crc32": "50e0e865",
+          "sha256": "f4690b53a6b9be79abae038ebbfae27f9f4125232357e57c37dce474aa9ba688",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "striderua: 35.11h"
+    }
+  },
+  "project": "strider-ex",
+  "requires": [
+    "external-tools-v1",
+    "file-inputs-v1",
+    "locked-wheels-v1",
+    "native-bindings-v1",
+    "native-context-v1",
+    "native-dependencies-v1",
+    "run-cache-v1",
+    "worker-timeout-v1",
+    "zip-outputs-v1"
+  ],
+  "targets": {
+    "jp-hbmame": {
+      "destination_requirements": "An HBMAME build that includes the Strider EX sets.",
+      "external_tools": [],
+      "inputs": [
+        "disc-01f5fed99aced5acc107",
+        "disc-074a6b3613430d8f0f05",
+        "disc-076adfd634389556ac9e",
+        "disc-12e099810b9cd1f14f1f",
+        "disc-1457549b7b0704d41e68",
+        "disc-2f297b214447539964af",
+        "disc-2f53f7a2b1aeafbde455",
+        "disc-3d6b369ef5559232dd6d",
+        "disc-62507abb5f83b6bd8e58",
+        "disc-67ea4db48b82cad9012f",
+        "disc-7c74c7ef4e1f874f0256",
+        "disc-7c7a91626948070f7689",
+        "disc-7ff5ac157c490ab2dcbc",
+        "disc-840e99b7fe82e6e4d10d",
+        "disc-86bd233b30037a03d477",
+        "disc-934839c485e6038b8de0",
+        "disc-9ce3b76b42037616af6b",
+        "disc-a662cdb60b8c0699e15c",
+        "disc-a918a5bba8666b8d687a",
+        "disc-bac2b741d09c58df8eb1",
+        "disc-bf35b9520568e10db392",
+        "disc-c5de00c1d5c0afac511a",
+        "disc-cdf394e7f7d073367b32",
+        "disc-d434cc5375acfe0fbb94",
+        "disc-def7310e7e76977c9d1d",
+        "disc-e63b3bbd3e6fe4a6cf6d",
+        "disc-e99c1c289406932c58c6",
+        "disc-f08accb9b9e25c007190",
+        "disc-f805371457119a77708c",
+        "disc-fee4205d64cc128e0754",
+        "game-c611d2ccfbdaf0abc5fd",
+        "rom-06dc231f9a6ea775d47b",
+        "rom-223dd6d52f31cfd5ddc4",
+        "rom-2c19b645c1b668b1ff41",
+        "rom-3772d4cfae3bdba2c4b2",
+        "rom-4495d00b5b64be71932b",
+        "rom-521faeba3e0e3752b0cc",
+        "rom-5d7868824b8b8f5a5dae",
+        "rom-6580f6b3c7ada215a710",
+        "rom-7a0c3e9f48ecc911e151",
+        "rom-7e53d542d0e83724f4f3",
+        "rom-8360e5b3ad4c8a6ae54d",
+        "rom-871d54585e990112a187",
+        "rom-a84abf77cddf8cf1d362",
+        "rom-ad8b02bab3a7a384207c",
+        "rom-c6a86f7ca021bd5df963",
+        "rom-e94ed2c04163cc76a4e5",
+        "rom-f4690b53a6b9be79abae"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "roms/striderjs01.zip": {
+          "members": {
+            "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+            "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+            "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+            "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+            "c03js01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+            "c03js01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+            "c03js01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+            "c03js01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+            "c03js01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+            "c03js01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+            "c03js01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+            "c03js01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+            "c03js01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+            "c03js01.p1": "46a6045ad4123e2b2150e6ce38e650bd893c4983f422add51cfda72c8be8327a",
+            "c03js01.p5": "7f42cb12a8d1eecf8b63dbe1c18368d138a9d0edf79c1da6131dde0783a6d85a",
+            "c03js01.p6": "3401ae347744316818f4234e85a2a62b636a81304a453c5dc375ce4e58fe727d",
+            "c03js01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+            "c03js01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+            "striderjs01.key": "9f34cee7c14d38d383552764262b1fa58a1ca39ed35bec53730056604719c757"
+          }
+        },
+        "support/strider-ex/LICENSES.txt": {
+          "sha256": "afc3f5bb116ba491d63c59d270ae4869b0ff99161ec5405f648afe2a4f3fd77d"
+        },
+        "support/strider-ex/README.txt": {
+          "sha256": "c1d9f26c1fae3eb6fb620b0961f63ad09e01402a76b7884c99731ad4b6c35b0e"
+        },
+        "support/strider-ex/TOOLS.md": {
+          "sha256": "ead600ecfa1b2229d78e66b1fd02539846994b74c8c6de6c82f06b36b3aa511a"
+        }
+      },
+      "platform": "hbmame",
+      "region": "jp",
+      "software_notes": [
+        "Requires complete owned PC Engine CD tracks, X68000 System disk and canonical Strider arcade ROMs.",
+        "Source-bound resource recipes replace recipient emulation and conversion.",
+        "Pinned NumPy, SciPy and authenticated FFmpeg helpers reproduce the unchanged arrangement."
+      ],
+      "timeout_seconds": 14400,
+      "variant": "jp"
+    },
+    "jp-mister": {
+      "destination_requirements": "Includes the required unchanged Strider EX CPS+ core and regional audio/language launchers.",
+      "external_tools": [],
+      "inputs": [
+        "disc-01f5fed99aced5acc107",
+        "disc-074a6b3613430d8f0f05",
+        "disc-076adfd634389556ac9e",
+        "disc-12e099810b9cd1f14f1f",
+        "disc-1457549b7b0704d41e68",
+        "disc-2f297b214447539964af",
+        "disc-2f53f7a2b1aeafbde455",
+        "disc-3d6b369ef5559232dd6d",
+        "disc-62507abb5f83b6bd8e58",
+        "disc-67ea4db48b82cad9012f",
+        "disc-7c74c7ef4e1f874f0256",
+        "disc-7c7a91626948070f7689",
+        "disc-7ff5ac157c490ab2dcbc",
+        "disc-840e99b7fe82e6e4d10d",
+        "disc-86bd233b30037a03d477",
+        "disc-934839c485e6038b8de0",
+        "disc-9ce3b76b42037616af6b",
+        "disc-a662cdb60b8c0699e15c",
+        "disc-a918a5bba8666b8d687a",
+        "disc-bac2b741d09c58df8eb1",
+        "disc-bf35b9520568e10db392",
+        "disc-c5de00c1d5c0afac511a",
+        "disc-cdf394e7f7d073367b32",
+        "disc-d434cc5375acfe0fbb94",
+        "disc-def7310e7e76977c9d1d",
+        "disc-e63b3bbd3e6fe4a6cf6d",
+        "disc-e99c1c289406932c58c6",
+        "disc-f08accb9b9e25c007190",
+        "disc-f805371457119a77708c",
+        "disc-fee4205d64cc128e0754",
+        "game-c611d2ccfbdaf0abc5fd",
+        "rom-06dc231f9a6ea775d47b",
+        "rom-223dd6d52f31cfd5ddc4",
+        "rom-2c19b645c1b668b1ff41",
+        "rom-3772d4cfae3bdba2c4b2",
+        "rom-4495d00b5b64be71932b",
+        "rom-521faeba3e0e3752b0cc",
+        "rom-5d7868824b8b8f5a5dae",
+        "rom-6580f6b3c7ada215a710",
+        "rom-7a0c3e9f48ecc911e151",
+        "rom-7e53d542d0e83724f4f3",
+        "rom-8360e5b3ad4c8a6ae54d",
+        "rom-871d54585e990112a187",
+        "rom-a84abf77cddf8cf1d362",
+        "rom-ad8b02bab3a7a384207c",
+        "rom-c6a86f7ca021bd5df963",
+        "rom-e94ed2c04163cc76a4e5",
+        "rom-f4690b53a6b9be79abae"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange, English voices].mra": {
+          "sha256": "a42007c81268ca5e32a8298619fcca31a09d7a881828ee5c601ef6eba918ed22"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_CPS+/_Japan/Strider Hiryu EX (Japan) [Arrange].mra": {
+          "sha256": "b3a35ef96bce4bfc4201417382d9f92fe7bc018fef114b48a083d9fe974a8d35"
+        },
+        "_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Strider Hiryu EX (Japan).mra": {
+          "sha256": "61d4e4a3eeb3514f0ae1b0bdef46ab33c7ef540567860deffc2d4f74d7ae095c"
+        },
+        "_Arcade/cores/jtcps1-cpsplus_20261009.rbf": {
+          "sha256": "c68ffd55776f5f4ff736740b22fcd7b6c44cc7279ceffa41665306fab30c7352"
+        },
+        "games/CPS+/strider_ex.zip": {
+          "members": {
+            "strider_ex.cpk": "02aa41624d55e2aa135cdfad399987ba489d2f693fa9c8c1a51caf4105ff8aa6"
+          }
+        },
+        "games/hbmame/striderjs01.zip": {
+          "members": {
+            "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+            "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+            "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+            "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+            "c03js01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+            "c03js01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+            "c03js01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+            "c03js01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+            "c03js01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+            "c03js01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+            "c03js01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+            "c03js01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+            "c03js01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+            "c03js01.p1": "46a6045ad4123e2b2150e6ce38e650bd893c4983f422add51cfda72c8be8327a",
+            "c03js01.p5": "7f42cb12a8d1eecf8b63dbe1c18368d138a9d0edf79c1da6131dde0783a6d85a",
+            "c03js01.p6": "3401ae347744316818f4234e85a2a62b636a81304a453c5dc375ce4e58fe727d",
+            "c03js01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+            "c03js01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+            "striderjs01.key": "9f34cee7c14d38d383552764262b1fa58a1ca39ed35bec53730056604719c757"
+          }
+        },
+        "support/strider-ex/LICENSES.txt": {
+          "sha256": "afc3f5bb116ba491d63c59d270ae4869b0ff99161ec5405f648afe2a4f3fd77d"
+        },
+        "support/strider-ex/README.txt": {
+          "sha256": "c1d9f26c1fae3eb6fb620b0961f63ad09e01402a76b7884c99731ad4b6c35b0e"
+        },
+        "support/strider-ex/TOOLS.md": {
+          "sha256": "ead600ecfa1b2229d78e66b1fd02539846994b74c8c6de6c82f06b36b3aa511a"
+        }
+      },
+      "platform": "mister",
+      "region": "jp",
+      "software_notes": [
+        "Requires complete owned PC Engine CD tracks, X68000 System disk and canonical Strider arcade ROMs.",
+        "Source-bound resource recipes replace recipient emulation and conversion.",
+        "Pinned NumPy, SciPy and authenticated FFmpeg helpers reproduce the unchanged arrangement."
+      ],
+      "timeout_seconds": 14400,
+      "variant": "jp"
+    },
+    "us-hbmame": {
+      "destination_requirements": "An HBMAME build that includes the Strider EX sets.",
+      "external_tools": [],
+      "inputs": [
+        "disc-01f5fed99aced5acc107",
+        "disc-074a6b3613430d8f0f05",
+        "disc-076adfd634389556ac9e",
+        "disc-12e099810b9cd1f14f1f",
+        "disc-1457549b7b0704d41e68",
+        "disc-2f297b214447539964af",
+        "disc-2f53f7a2b1aeafbde455",
+        "disc-3d6b369ef5559232dd6d",
+        "disc-62507abb5f83b6bd8e58",
+        "disc-67ea4db48b82cad9012f",
+        "disc-7c74c7ef4e1f874f0256",
+        "disc-7c7a91626948070f7689",
+        "disc-7ff5ac157c490ab2dcbc",
+        "disc-840e99b7fe82e6e4d10d",
+        "disc-86bd233b30037a03d477",
+        "disc-934839c485e6038b8de0",
+        "disc-9ce3b76b42037616af6b",
+        "disc-a662cdb60b8c0699e15c",
+        "disc-a918a5bba8666b8d687a",
+        "disc-bac2b741d09c58df8eb1",
+        "disc-bf35b9520568e10db392",
+        "disc-c5de00c1d5c0afac511a",
+        "disc-cdf394e7f7d073367b32",
+        "disc-d434cc5375acfe0fbb94",
+        "disc-def7310e7e76977c9d1d",
+        "disc-e63b3bbd3e6fe4a6cf6d",
+        "disc-e99c1c289406932c58c6",
+        "disc-f08accb9b9e25c007190",
+        "disc-f805371457119a77708c",
+        "disc-fee4205d64cc128e0754",
+        "game-c611d2ccfbdaf0abc5fd",
+        "rom-06dc231f9a6ea775d47b",
+        "rom-223dd6d52f31cfd5ddc4",
+        "rom-2c19b645c1b668b1ff41",
+        "rom-3772d4cfae3bdba2c4b2",
+        "rom-4495d00b5b64be71932b",
+        "rom-521faeba3e0e3752b0cc",
+        "rom-5d7868824b8b8f5a5dae",
+        "rom-6580f6b3c7ada215a710",
+        "rom-7a0c3e9f48ecc911e151",
+        "rom-7e53d542d0e83724f4f3",
+        "rom-8360e5b3ad4c8a6ae54d",
+        "rom-871d54585e990112a187",
+        "rom-a84abf77cddf8cf1d362",
+        "rom-ad8b02bab3a7a384207c",
+        "rom-c6a86f7ca021bd5df963",
+        "rom-e94ed2c04163cc76a4e5",
+        "rom-f4690b53a6b9be79abae"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "roms/striderus01.zip": {
+          "members": {
+            "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+            "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+            "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+            "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+            "c03us01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+            "c03us01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+            "c03us01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+            "c03us01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+            "c03us01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+            "c03us01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+            "c03us01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+            "c03us01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+            "c03us01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+            "c03us01.p1": "5c2799c65f7c15607776c5884b2e44bea3cfce0d3df17e89d34a6c629e0f2a0a",
+            "c03us01.p2": "3b3daa0b60e818093fab750effa25eb2c99535e7c65b91c8bb22e22462c085db",
+            "c03us01.p3": "53956c352873b4a0874cbde989f0bf76fca4d21bd1d2abcaa96376b9fa729fca",
+            "c03us01.p4": "34059ed6cf313742992b82988e9f6fb95afb010be2f082362fb3ec7ccd90a42f",
+            "c03us01.p5": "d2bb4826047afba5ab304cd10be1a01ac00bf89a90bf916963c2cf6e68ac548d",
+            "c03us01.p6": "e0a7c88ec8f9c406d04a5ab81bad61c704de1d82cc0365165d7165fff0b6f8b0",
+            "c03us01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+            "c03us01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+            "striderus01.key": "c8db0617f7f541584ae4fefb11b7232a5c9877259c919c2efe6471d123802469"
+          }
+        },
+        "support/strider-ex/LICENSES.txt": {
+          "sha256": "afc3f5bb116ba491d63c59d270ae4869b0ff99161ec5405f648afe2a4f3fd77d"
+        },
+        "support/strider-ex/README.txt": {
+          "sha256": "c1d9f26c1fae3eb6fb620b0961f63ad09e01402a76b7884c99731ad4b6c35b0e"
+        },
+        "support/strider-ex/TOOLS.md": {
+          "sha256": "ead600ecfa1b2229d78e66b1fd02539846994b74c8c6de6c82f06b36b3aa511a"
+        }
+      },
+      "platform": "hbmame",
+      "region": "us",
+      "software_notes": [
+        "Requires complete owned PC Engine CD tracks, X68000 System disk and canonical Strider arcade ROMs.",
+        "Source-bound resource recipes replace recipient emulation and conversion.",
+        "Pinned NumPy, SciPy and authenticated FFmpeg helpers reproduce the unchanged arrangement."
+      ],
+      "timeout_seconds": 14400,
+      "variant": "us"
+    },
+    "us-mister": {
+      "destination_requirements": "Includes the required unchanged Strider EX CPS+ core and regional audio/language launchers.",
+      "external_tools": [],
+      "inputs": [
+        "disc-01f5fed99aced5acc107",
+        "disc-074a6b3613430d8f0f05",
+        "disc-076adfd634389556ac9e",
+        "disc-12e099810b9cd1f14f1f",
+        "disc-1457549b7b0704d41e68",
+        "disc-2f297b214447539964af",
+        "disc-2f53f7a2b1aeafbde455",
+        "disc-3d6b369ef5559232dd6d",
+        "disc-62507abb5f83b6bd8e58",
+        "disc-67ea4db48b82cad9012f",
+        "disc-7c74c7ef4e1f874f0256",
+        "disc-7c7a91626948070f7689",
+        "disc-7ff5ac157c490ab2dcbc",
+        "disc-840e99b7fe82e6e4d10d",
+        "disc-86bd233b30037a03d477",
+        "disc-934839c485e6038b8de0",
+        "disc-9ce3b76b42037616af6b",
+        "disc-a662cdb60b8c0699e15c",
+        "disc-a918a5bba8666b8d687a",
+        "disc-bac2b741d09c58df8eb1",
+        "disc-bf35b9520568e10db392",
+        "disc-c5de00c1d5c0afac511a",
+        "disc-cdf394e7f7d073367b32",
+        "disc-d434cc5375acfe0fbb94",
+        "disc-def7310e7e76977c9d1d",
+        "disc-e63b3bbd3e6fe4a6cf6d",
+        "disc-e99c1c289406932c58c6",
+        "disc-f08accb9b9e25c007190",
+        "disc-f805371457119a77708c",
+        "disc-fee4205d64cc128e0754",
+        "game-c611d2ccfbdaf0abc5fd",
+        "rom-06dc231f9a6ea775d47b",
+        "rom-223dd6d52f31cfd5ddc4",
+        "rom-2c19b645c1b668b1ff41",
+        "rom-3772d4cfae3bdba2c4b2",
+        "rom-4495d00b5b64be71932b",
+        "rom-521faeba3e0e3752b0cc",
+        "rom-5d7868824b8b8f5a5dae",
+        "rom-6580f6b3c7ada215a710",
+        "rom-7a0c3e9f48ecc911e151",
+        "rom-7e53d542d0e83724f4f3",
+        "rom-8360e5b3ad4c8a6ae54d",
+        "rom-871d54585e990112a187",
+        "rom-a84abf77cddf8cf1d362",
+        "rom-ad8b02bab3a7a384207c",
+        "rom-c6a86f7ca021bd5df963",
+        "rom-e94ed2c04163cc76a4e5",
+        "rom-f4690b53a6b9be79abae"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange, Japanese voices].mra": {
+          "sha256": "fa8469a9e9c6d2d4b1300a3b5c5328e273b1e26df0c9306e1363e1c6857d07ff"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_CPS+/Strider EX (USA) [Arrange].mra": {
+          "sha256": "de0cba2c0752343ffdaed8b3269771bb3dafff97baa02d5293f036ccfca064a5"
+        },
+        "_Arcade/_Arcade Patches/_Enhanced Versions/Strider EX (USA).mra": {
+          "sha256": "ce393fb821782fc5d4ea6adad0294e39d465bc874bdb0f409d57bc7a4a56f0cc"
+        },
+        "_Arcade/cores/jtcps1-cpsplus_20261009.rbf": {
+          "sha256": "c68ffd55776f5f4ff736740b22fcd7b6c44cc7279ceffa41665306fab30c7352"
+        },
+        "games/CPS+/strider_ex.zip": {
+          "members": {
+            "strider_ex.cpk": "02aa41624d55e2aa135cdfad399987ba489d2f693fa9c8c1a51caf4105ff8aa6"
+          }
+        },
+        "games/hbmame/striderus01.zip": {
+          "members": {
+            "c03.c17": "2c19b645c1b668b1ff410f448e2d0317dc6d9148c86390b8740a1b75417c16b4",
+            "c03.c19": "c6a86f7ca021bd5df9635293f7ecfd4929f530a27ab5f9bd3754a1fcece99aab",
+            "c03.c21": "7a0c3e9f48ecc911e151bc879e3011b966131c2431aeefafa9fef71612c30be3",
+            "c03.c23": "06dc231f9a6ea775d47ba4df90dff4e0f3cfaab14e0148a2d3beb925e30bb2ef",
+            "c03us01.c01": "124279c254476e0d330c7d2e17c56d267f5a0d142d48f29033705992ed321262",
+            "c03us01.c03": "b0798bb9c62a1c0474970dc5fe6fcc3f583c1a76ba5bc5d7b100a57eee7c9a5f",
+            "c03us01.c05": "7b96ed94703c1ed6c598ed4d83cd917c110da6ff0617c9489e74807cd058c4b4",
+            "c03us01.c07": "aa6f37499ce13560d01217e673d293288d37ecb00d954e5090b9c7e934fa9488",
+            "c03us01.c25": "db5eef2a21bdf42b7860740b57882b349aabb2f4c112cfb1f42922ea90c31079",
+            "c03us01.c27": "2169e61d9770475a30dc19bba178a3d13aefdf289882fc6fd38b2271d167d719",
+            "c03us01.c29": "1beb42141c1606738caa457728a43cd3b0407ab4ae46d4a983b25695e431cbad",
+            "c03us01.c31": "7879ca695a96d5f0054c29c240e95f36077d54c07681dc0ace6d1416024c887e",
+            "c03us01.m1": "f0b109323119a209d63968c861f433413724b9a992d752387bba35b2f8480d76",
+            "c03us01.p1": "5c2799c65f7c15607776c5884b2e44bea3cfce0d3df17e89d34a6c629e0f2a0a",
+            "c03us01.p2": "3b3daa0b60e818093fab750effa25eb2c99535e7c65b91c8bb22e22462c085db",
+            "c03us01.p3": "53956c352873b4a0874cbde989f0bf76fca4d21bd1d2abcaa96376b9fa729fca",
+            "c03us01.p4": "34059ed6cf313742992b82988e9f6fb95afb010be2f082362fb3ec7ccd90a42f",
+            "c03us01.p5": "d2bb4826047afba5ab304cd10be1a01ac00bf89a90bf916963c2cf6e68ac548d",
+            "c03us01.p6": "e0a7c88ec8f9c406d04a5ab81bad61c704de1d82cc0365165d7165fff0b6f8b0",
+            "c03us01.v1": "2ffd8638cf5905f7e4a870896e216b5d48250611c4687d34247c6502cac404d2",
+            "c03us01.v2": "859f0b05b6c85d41225eb04cee832de0ebbde5d60283f45ead7853d87a647006",
+            "striderus01.key": "c8db0617f7f541584ae4fefb11b7232a5c9877259c919c2efe6471d123802469"
+          }
+        },
+        "support/strider-ex/LICENSES.txt": {
+          "sha256": "afc3f5bb116ba491d63c59d270ae4869b0ff99161ec5405f648afe2a4f3fd77d"
+        },
+        "support/strider-ex/README.txt": {
+          "sha256": "c1d9f26c1fae3eb6fb620b0961f63ad09e01402a76b7884c99731ad4b6c35b0e"
+        },
+        "support/strider-ex/TOOLS.md": {
+          "sha256": "ead600ecfa1b2229d78e66b1fd02539846994b74c8c6de6c82f06b36b3aa511a"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "software_notes": [
+        "Requires complete owned PC Engine CD tracks, X68000 System disk and canonical Strider arcade ROMs.",
+        "Source-bound resource recipes replace recipient emulation and conversion.",
+        "Pinned NumPy, SciPy and authenticated FFmpeg helpers reproduce the unchanged arrangement."
+      ],
+      "timeout_seconds": 14400,
+      "variant": "us"
+    }
+  }
+}

@@ -121,9 +121,9 @@
       "url": "https://arcadepatches.com/downloads/archive/eb923d4f31c8ac81189ae68ea598974da6911737dc25b486d3cfc0997acf0096/ssf2t-gmc-rc4-ips.zip"
     },
     "strider-ex-kit": {
-      "sha256": "b39688bfd692c130ace0478feee3b5d6abd3d6dfd381167a2071163c4f8a5f4f",
-      "size": 15416947,
-      "url": "https://arcadepatches.com/downloads/archive/b39688bfd692c130ace0478feee3b5d6abd3d6dfd381167a2071163c4f8a5f4f/strider-ex-rc1-kit.zip"
+      "sha256": "6dac5c6a9a0ae1e9b663f19aae961002e90ec953c95e5d297dce982d5cf84832",
+      "size": 15440190,
+      "url": "https://arcadepatches.com/downloads/archive/6dac5c6a9a0ae1e9b663f19aae961002e90ec953c95e5d297dce982d5cf84832/strider-ex-rc1-kit.zip"
     },
     "usf2-backport-kit": {
       "sha256": "dff1e4a1ce7e3d6d2ea5a471c12f77f831d0aceb04d5fad5e1539ec7abf0bac6",
@@ -209,7 +209,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
     }
   },
-  "generation": 95,
+  "generation": 96,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.3"
@@ -297,7 +297,7 @@
       "title": "Super Street Fighter II Turbo: Grand Master Challenge"
     },
     "strider-ex": {
-      "current": "strider-ex-rc1-r9",
+      "current": "strider-ex-rc1-r10",
       "title": "Strider EX"
     },
     "usf2-backport": {
@@ -554,16 +554,16 @@
       "kit": "ssf2t-gmc-kit",
       "kit_revision": 4
     },
-    "strider-ex-rc1-r9": {
+    "strider-ex-rc1-r10": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "2dd8a357c2a1f8ed169894c096d4f4c294f0f57f7379e02b6d53c486b7460d2f",
-        "size": 91477,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/2dd8a357c2a1f8ed169894c096d4f4c294f0f57f7379e02b6d53c486b7460d2f.json"
+        "sha256": "0e2772266351203e78f31f0575c43c4a3b31c017580107e9d1f359c379a0b3ca",
+        "size": 91503,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/0e2772266351203e78f31f0575c43c4a3b31c017580107e9d1f359c379a0b3ca.json"
       },
       "game_version": "rc1",
       "kit": "strider-ex-kit",
-      "kit_revision": 9
+      "kit_revision": 10
     },
     "usf2-backport-rc5-r5": {
       "definition": {

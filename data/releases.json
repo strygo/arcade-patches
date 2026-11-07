@@ -8633,14 +8633,14 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 9,
+          "current_revision": 10,
           "date": "2026-11-06",
           "files": {
             "kit": {
-              "archive": "archive/b39688bfd692c130ace0478feee3b5d6abd3d6dfd381167a2071163c4f8a5f4f/strider-ex-rc1-kit.zip",
+              "archive": "archive/6dac5c6a9a0ae1e9b663f19aae961002e90ec953c95e5d297dce982d5cf84832/strider-ex-rc1-kit.zip",
               "name": "strider-ex-rc1-kit.zip",
-              "sha256": "b39688bfd692c130ace0478feee3b5d6abd3d6dfd381167a2071163c4f8a5f4f",
-              "size": 15416947
+              "sha256": "6dac5c6a9a0ae1e9b663f19aae961002e90ec953c95e5d297dce982d5cf84832",
+              "size": 15440190
             }
           },
           "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",
@@ -8689,13 +8689,18 @@
               "date": "2026-11-06",
               "reason": "tooling update",
               "revision": 9
+            },
+            {
+              "date": "2026-11-06",
+              "reason": "tooling update",
+              "revision": 10
             }
           ],
           "qualification": {
-            "candidate": "rc1-tools-r9-simplified-candidate.4",
-            "capcom_source_commit": "ef2a6381b7b8fd3dbc30c16d4f1b318661d102b2",
-            "ready_record_sha256": "1ba2774ea0643593c8e122c83744bd6ef4651e39f673125b37aff8afb0f5489a",
-            "release_sha256": "15c9d165b9eb4daff5305f22b7a7e2eb91f919d5ea971ace0993d2040089272c",
+            "candidate": "rc1-tools-r10-catalog-candidate.1",
+            "capcom_source_commit": "f4d010120ff9666d9276ec24d4e882d51316771e",
+            "ready_record_sha256": "6b16c37912238e516d9be6e97590e75cffc685c4c6a29af74d09adf20c0cbd96",
+            "release_sha256": "8de408821e39934a7ca871e516ef042cd3e4e8f6f4e9e81519d098c963b4e865",
             "type": "qualified-candidate"
           },
           "removed_output": "definitions",
@@ -8717,6 +8722,32 @@
                 "ready_record_sha256": "487ae8822f096ec3f4ecc53da103158e400a11e183c18e519b14f2d2d8ba0bce",
                 "release_sha256": "7667be6b75eae8aa3cb7fda7fc47a8399e043c975ae7e8da6490ade273fca8bd",
                 "type": "qualified-candidate"
+              }
+            },
+            "10": {
+              "date": "2026-11-06",
+              "files": {
+                "kit": {
+                  "archive": "archive/6dac5c6a9a0ae1e9b663f19aae961002e90ec953c95e5d297dce982d5cf84832/strider-ex-rc1-kit.zip",
+                  "name": "strider-ex-rc1-kit.zip",
+                  "sha256": "6dac5c6a9a0ae1e9b663f19aae961002e90ec953c95e5d297dce982d5cf84832",
+                  "size": 15440190
+                }
+              },
+              "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",
+              "kind": "kit",
+              "qualification": {
+                "candidate": "rc1-tools-r10-catalog-candidate.1",
+                "capcom_source_commit": "f4d010120ff9666d9276ec24d4e882d51316771e",
+                "ready_record_sha256": "6b16c37912238e516d9be6e97590e75cffc685c4c6a29af74d09adf20c0cbd96",
+                "release_sha256": "8de408821e39934a7ca871e516ef042cd3e4e8f6f4e9e81519d098c963b4e865",
+                "type": "qualified-candidate"
+              },
+              "tooling_baseline": {
+                "files": {
+                  "kit": "b39688bfd692c130ace0478feee3b5d6abd3d6dfd381167a2071163c4f8a5f4f"
+                },
+                "revision": 9
               }
             },
             "2": {
@@ -8931,9 +8962,9 @@
           },
           "tooling_baseline": {
             "files": {
-              "kit": "529f79bcab4bfafdda226795137634e039ab5b6449991e1a8452455f428efe15"
+              "kit": "b39688bfd692c130ace0478feee3b5d6abd3d6dfd381167a2071163c4f8a5f4f"
             },
-            "revision": 8
+            "revision": 9
           }
         }
       }

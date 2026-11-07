@@ -2575,6 +2575,10 @@
       "sha256": "0ae75d610b46df6802eb77a31507f709c6c4be260f036198478d6bb5e39153e9",
       "size": 574446
     },
+    "catalog/v1/definitions/0e2772266351203e78f31f0575c43c4a3b31c017580107e9d1f359c379a0b3ca.json": {
+      "sha256": "0e2772266351203e78f31f0575c43c4a3b31c017580107e9d1f359c379a0b3ca",
+      "size": 91503
+    },
     "catalog/v1/definitions/17a4641145945e30d4c63cced1d454dce37f79f4e51492e3fcc257b09aeac9f9.json": {
       "sha256": "17a4641145945e30d4c63cced1d454dce37f79f4e51492e3fcc257b09aeac9f9",
       "size": 511780
@@ -2852,8 +2856,8 @@
       "size": 114654
     },
     "catalog/v1/index.json": {
-      "sha256": "267c1ba0d976cb79a6872a0c3c32e23da38777cd989ae6b2b09d72f938b6f19a",
-      "size": 29017
+      "sha256": "296f84e98ae9623c8e1ed05c24cde7759350508f18e17ff7387f55e73cabb7fa",
+      "size": 29020
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
       "sha256": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4",
@@ -2914,6 +2918,10 @@
     "downloads/archive/609a28eef932bac12d316aac0871182c67b16e93c0a98794ccde31a7ba7d59d5/dstlk-restoration-rc1-ips.zip": {
       "sha256": "609a28eef932bac12d316aac0871182c67b16e93c0a98794ccde31a7ba7d59d5",
       "size": 143578
+    },
+    "downloads/archive/6dac5c6a9a0ae1e9b663f19aae961002e90ec953c95e5d297dce982d5cf84832/strider-ex-rc1-kit.zip": {
+      "sha256": "6dac5c6a9a0ae1e9b663f19aae961002e90ec953c95e5d297dce982d5cf84832",
+      "size": 15440190
     },
     "downloads/archive/6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8/hsf2-restoration-rc1-ips.zip": {
       "sha256": "6fa8919da899388b925860b0a72d8ecd8f74d19eae82a0aed205de8b7b0e2be8",
@@ -3084,7 +3092,7 @@
       "size": 44138
     }
   },
-  "generation": 95,
+  "generation": 96,
   "launcher": "tools/downloads/archive/2ddc294d3b16ecae922e6f5b10da8f11cd66c7c12924915bb225e384830ef830/ArcadePatches-0.1.3.zip",
   "native_updates": [
     {
@@ -3510,6 +3518,14 @@
       "project": "hsf2-restoration",
       "ready_sha256": "94bd88d9bfd5893c238ef77e555124d65dac7c8fea3ae2fa608b9f78029b1c33",
       "release_sha256": "6c470d4a00b4ce1d54a80dca2bca249c5f8fd393bb7e57afef8c8868b81e91bc"
+    },
+    {
+      "game_version": "rc1",
+      "kit_revision": 10,
+      "kit_sha256": "6dac5c6a9a0ae1e9b663f19aae961002e90ec953c95e5d297dce982d5cf84832",
+      "project": "strider-ex",
+      "ready_sha256": "6b16c37912238e516d9be6e97590e75cffc685c4c6a29af74d09adf20c0cbd96",
+      "release_sha256": "8de408821e39934a7ca871e516ef042cd3e4e8f6f4e9e81519d098c963b4e865"
     }
   ],
   "package_receipt": {
