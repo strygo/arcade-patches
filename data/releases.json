@@ -1,7 +1,7 @@
 {
   "releases": {
     "cps-plus": {
-      "current": "1.7",
+      "current": "1.8",
       "versions": {
         "1.0": {
           "current_revision": 1,
@@ -518,6 +518,53 @@
               "kit": "498510c73bb03f542719caf43c19fcaeb2960a57f01e992d452cbc7d0e45bce8"
             },
             "revision": 1
+          }
+        },
+        "1.8": {
+          "current_revision": 1,
+          "date": "2026-11-06",
+          "files": {
+            "kit": {
+              "archive": "archive/cc0e3e417134472554d908a322db1d05905617a21c4a3435e0d98f1f6daed003/cps-plus-1.8-kit.zip",
+              "name": "cps-plus-1.8-kit.zip",
+              "sha256": "cc0e3e417134472554d908a322db1d05905617a21c4a3435e0d98f1f6daed003",
+              "size": 17825815
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "qualification": {
+            "candidate": "1.8-candidate.8",
+            "capcom_source_commit": "2bc88d96e4628c7042cca08436016f2e0972bfbf",
+            "ready_record_sha256": "867b25aac1ee9be11082cce64dc887e1df623441ae9c9f291593ca63a9d97da9",
+            "release_sha256": "eec413248ccdfc88c7fe60e26f1c17a422c4839ed291977959fd57af81fbf013",
+            "type": "qualified-candidate"
+          },
+          "revisions": {
+            "1": {
+              "date": "2026-11-06",
+              "files": {
+                "kit": {
+                  "archive": "archive/cc0e3e417134472554d908a322db1d05905617a21c4a3435e0d98f1f6daed003/cps-plus-1.8-kit.zip",
+                  "name": "cps-plus-1.8-kit.zip",
+                  "sha256": "cc0e3e417134472554d908a322db1d05905617a21c4a3435e0d98f1f6daed003",
+                  "size": 17825815
+                }
+              },
+              "kind": "kit",
+              "qualification": {
+                "candidate": "1.8-candidate.8",
+                "capcom_source_commit": "2bc88d96e4628c7042cca08436016f2e0972bfbf",
+                "ready_record_sha256": "867b25aac1ee9be11082cce64dc887e1df623441ae9c9f291593ca63a9d97da9",
+                "release_sha256": "eec413248ccdfc88c7fe60e26f1c17a422c4839ed291977959fd57af81fbf013",
+                "type": "qualified-candidate"
+              }
+            }
           }
         }
       }

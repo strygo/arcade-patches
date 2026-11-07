@@ -45,31 +45,31 @@
       "subtitle": "Arranged CD-era soundtracks for CPS-1 & CPS-2 arcade games on MiSTer",
       "section": "arrangements",
       "status": "released",
-      "version": "1.7",
-      "date": "2026-10-28",
+      "version": "1.8",
+      "date": "2026-11-06",
       "hardware": "MiSTer FPGA (CPS-1.0, CPS-1.5 and CPS-2 cores)",
       "summary": "When Capcom brought its arcade games home on CD, it sent the music back to the studio and re-recorded it. Those versions never made it back to the arcade. CPS+ puts them there. Pick a game on your MiSTer and the arranged soundtrack is just playing, while every punch, voice and jingle still comes from the arcade game itself.",
-      "featured_stats": "32 audio packs \u00b7 179 MRAs \u00b7 3 cores \u00b7 every pack built from sources you own",
+      "featured_stats": "38 audio packs \u00b7 213 MRAs \u00b7 3 cores \u00b7 every pack built from sources you own",
       "description": [
         "From Final Fight CD onward, Capcom kept sending its arcade soundtracks back to the studio. Every CD-based home port got a full re-recording of the music, the 'arrange' versions, produced by the original composers' teams. For thirty years those recordings stayed locked to the home versions. CPS+ puts them where they always belonged, under the arcade games themselves.",
         "On a MiSTer, the real CPS-1 or CPS-2 hardware logic runs the game while the CD-era soundtrack plays the music, started, looped and faded by the game itself, exactly the way Capcom's own console releases timed it. Hit sounds, voices and the announcer stay pure arcade. It sounds like the arcade machine grew a CD drive.",
-        "Super Street Fighter II, Super Street Fighter II Turbo and Hyper Street Fighter II each have ten soundtracks, from the Anniversary Edition arrange to the remixed score of Ultra Street Fighter II and, new in version 1.6, the music the X68000's own FM chip played."
+        "Super Street Fighter II, Super Street Fighter II Turbo and Hyper Street Fighter II each have twelve soundtracks, including the Anniversary Edition arrange, Ultra Street Fighter II remix, 3DO, FM Towns, X68000 and MS-DOS scores."
       ],
       "how_it_works": [
-        "Nothing in the game is modified. CPS-1 and CPS-2 games post sound commands to their audio hardware, and the CPS+ core watches for them. When one matches the loaded pack, it streams that arranged track and holds the command back from the sound chip. Everything else plays as it always did: hit sounds, voices, the announcer, and the jingles a pack deliberately leaves alone.",
+        "CPS-1 and CPS-2 games post sound commands to their audio hardware, and the CPS+ core watches for them. When one matches the loaded pack, it streams that arranged track and holds the command back from the sound chip. Everything else plays as it always did: hit sounds, voices, the announcer, and the jingles a pack deliberately leaves alone.",
         "The trigger tables were reverse-engineered from Capcom's own console releases and checked against the arcade programs, down to the loop points and fades.",
         "A pack carries the arranged tracks and the table that says which sound command starts each one. The MRA points at the pack, and MiSTer loads it into memory alongside the ROM. A stock MiSTer runs all of this as it comes.",
         "A given disc always produces the same pack, and the builder checks yours against a published hash."
       ],
       "download_notes": [
         "The download is tools: the MRAs, the three CPS+ cores with their GPL-3.0 source, and the pack builder. It makes the packs on your machine from discs, disks and albums you own, naming anything it skips for want of a disc. It also assembles out/mister/ for you, holding the cores, your packs, and only the MRAs those packs can load, so nothing on the card fails to start.",
-        "Five MRA groups pair CPS+ audio with sets that are not stock: the Alpha 2 Gold MRAs load the SFA2 Gold reconstructed sets, the Grand Master Challenge and Super Street Fighter II EX MRAs load those projects' HBMAME sets, \u2018Final Fight EX (Arrange)\u2019 loads the Final Fight EX set, and \u2018Final Fight 30th Anniversary CPS2 Edition (Arrange)\u2019 loads the CPS2 conversion of Final Fight that the Arcade Offset project distributes. Build the first four with their own kits first (links below).",
+        "Companion MRAs add CPS+ music to Alpha/Zero EX, Alpha/Zero 2 EX, Alpha 2 Gold/Dash, Grand Master Challenge, Super Street Fighter II EX and both Final Fight EX versions. Build the arcade sets with their own game kits first. Final Fight 30th Anniversary CPS2 Edition uses the conversion distributed by Arcade Offset.",
         "The Captain Commando MRAs change one instruction in the game, so the Stage 3 boss fight keeps its music when Yamato splits apart. Nothing else in the game differs."
       ],
       "quickstart": [
         "Download and unzip the kit.",
         "Edit builder/discs.toml and point it at the disc rips you own (each entry is optional), or pass them on the command line with --disc mtwins_pce_disc=/discs/chiki.7z. make_packs.py --list shows every pack and the disc it wants.",
-        "Run python3 builder/make_packs.py (Python 3.11+, numpy, ffmpeg). It builds out/mister/, laid out like your SD card. The X68000 packs also need git, cmake and a C/C++ compiler, and take up to an hour each to render (the FM pack records in MAME instead); the USF2 Remix pack needs the same three tools. The Strider pack needs MAME and your PlayStation BIOS set, and takes about five minutes to record.",
+        "Run python3 builder/make_packs.py (Python 3.11+, numpy, ffmpeg; scipy for Strider PC Engine). It builds out/mister/, laid out like your SD card. The X68000 packs also need git, cmake and a C/C++ compiler, and take up to an hour each to render (the FM pack records in MAME instead); the USF2 Remix pack needs the same three tools. The Strider pack needs MAME and your PlayStation BIOS set, and takes about five minutes to record.",
         "Copy the contents of out/mister/ to your MiSTer SD card, merging with what's there. Arcade ROM zips go where they always do."
       ],
       "tech_spec": [
@@ -141,18 +141,33 @@
           "label": "ValleyBell/ExtractorsDecoders",
           "url": "https://github.com/ValleyBell/ExtractorsDecoders",
           "note": "the X68000 music-bank decoders, built from source at a pinned revision"
+        },
+        {
+          "label": "Street Fighter Alpha EX",
+          "url": "../sfa-ex/",
+          "note": "Companion game kit for its Arrange launchers"
+        },
+        {
+          "label": "Street Fighter Alpha 2 EX",
+          "url": "../sfa2-ex/",
+          "note": "Companion game kit for its Arrange launchers"
+        },
+        {
+          "label": "Final Fight EX CPS2",
+          "url": "../final-fight-ex-cps2/",
+          "note": "Companion game kit for its Arrange launchers"
         }
       ],
       "notes": [
-        "The arranged recordings remain \u00a9 Capcom and are never distributed here. Every pack is built from your own discs, disks, albums and ROMs.",
-        "Sound effects, voices and the announcer always play live through the original arcade audio path; packs substitute music only, and a few cues deliberately pass through to the arcade game's own music."
+        "Every soundtrack pack is reconstructed from your own discs, disks, albums and ROMs. The Final Fight EX CPS2 English scenes are keyed to their corresponding Japanese disc scenes.",
+        "Sound effects and the announcer play live through the arcade audio path. Final Fight EX also plays its arranged voiced scenes; other cues deliberately retain the arcade music."
       ],
       "kit": {
         "label": "CPS+ MiSTer kit: cores, MRAs and the pack builder"
       },
       "highlights": [
-        "32 audio packs covering 19 arcade games: every arranged soundtrack Capcom recorded for the CPS line, the SNES, X68000 and MS-DOS scores, the Double Impact and HD Remix arrangements, and the PlayStation soundtracks of Strider and Captain Commando, and the Nintendo Switch remix of Ultra Street Fighter II",
-        "179 ready-to-play MRAs, so you pick the game from the CPS+ folder and the music is just there",
+        "38 audio packs: arranged console scores, SNES, X68000 and MS-DOS music, Double Impact and HD Remix, Strider on PlayStation and PC Engine, Captain Commando on PlayStation, Ultra Street Fighter II Remix and Final Fight EX CPS2 voiced scenes.",
+        "213 ready-to-play MRAs, so you pick the game from the CPS+ folder and the music is just there",
         "Runs on a stock MiSTer, with no firmware changes and nothing to configure",
         "Only tools in the download. Packs build from the discs, disks and albums you already own, in one command"
       ],
@@ -261,6 +276,21 @@
           "platform": "Nintendo Switch",
           "disc": "Ultra Street Fighter II: The Final Challengers",
           "variants": "USA, the base game's .nsp (not an update), plus your own prod.keys; the kit's SWITCH.md explains what it reads"
+        },
+        {
+          "platform": "PC Engine CD",
+          "disc": "Strider Hiryuu",
+          "variants": "Japan, the original disc archive"
+        },
+        {
+          "platform": "3DO",
+          "disc": "Super Street Fighter II Turbo",
+          "variants": "USA"
+        },
+        {
+          "platform": "FM Towns",
+          "disc": "Super Street Fighter II",
+          "variants": "Japan / English release"
         }
       ],
       "coverage_intro": "Every soundtrack is built from one disc, one set of disks, or one album you own. Where a disc came out in several regions, the ones listed below all produce the same pack.",
@@ -268,7 +298,7 @@
         {
           "q": "What do I need installed to build the packs?",
           "a": [
-            "Python 3.11 or newer, numpy, and ffmpeg on your PATH. On a Mac: brew install python ffmpeg, then pip3 install numpy. On Linux, use your package manager. 7-Zip is only needed if your rips are .7z archives. The X68000 packs, the rendered MS-DOS packs (FM, Sound Canvas and MT-32) and the USF2 Remix pack additionally need git, cmake and a C/C++ compiler (see the X68000 and USF2 questions below, and the kit's MSDOS.md). The Strider pack and the X68000 FM pack need MAME as well (see the Strider and X68000 questions).",
+            "Python 3.11 or newer, numpy, and ffmpeg on your PATH. On a Mac: brew install python ffmpeg, then pip3 install numpy. On Linux, use your package manager. 7-Zip is only needed if your rips are .7z archives. The X68000 packs, the rendered MS-DOS packs (FM, Sound Canvas and MT-32) and the USF2 Remix pack additionally need git, cmake and a C/C++ compiler (see the X68000 and USF2 questions below, and the kit's MSDOS.md). The Strider pack and the X68000 FM pack need MAME as well (see the Strider and X68000 questions). Strider PC Engine also needs scipy (python3 -m pip install scipy).",
             "Nothing is installed on the MiSTer itself. The kit is plain files copied to the SD card, and a stock MiSTer runs them as-is."
           ]
         },
@@ -276,7 +306,7 @@
           "q": "What disc rip formats does the builder accept?",
           "a": [
             "A .cue sheet with its .bin files beside it, a .mds/.mdf pair, or a .zip/.7z archive containing exactly one cue sheet. For the PlayStation 2 sources, point it at the .iso, a zip containing it, or a .chd. The two CD-audio sources (the Final Fight OST and the Area 88 soundtrack) are folders of .flac or .wav files instead of a disc image. The X68000 games are a zip of their .dim or .xdf floppy images. The two album sources are the downloads themselves: Capcom's Double Impact zip, as downloaded or unpacked, and the OC ReMix folder holding the FLACs. The MS-DOS game is its installed folder, or a .zip/.7z of it; the disc image alone (.cue or .chd) builds the CD soundtrack, but the FM, Sound Canvas and MT-32 packs need the installed game. The USF2 Remix pack reads the Switch game's .nsp.",
-            "Every CD source also takes a .chd, which the builder turns back into a cue sheet and image with MAME's chdman. The PlayStation 2 discs are read from their DVD .chd the same way."
+            "Most CD sources also take a .chd, which the builder turns back into a cue sheet and image with MAME's chdman. The PlayStation 2 discs are read from their DVD .chd the same way. Strider PC Engine uses the original Strider Hiryuu (Japan).7z archive so its source identity can be checked exactly."
           ]
         },
         {
@@ -406,6 +436,16 @@
           ]
         },
         {
+          "game": "Final Fight EX CPS2",
+          "sets": "ffex2u, ffex2j, ffex2r",
+          "packs": [
+            {
+              "soundtrack": "Sega CD arrange with voiced scenes and Time Attack (USA, Japan and English restoration)",
+              "disc": "Final Fight CD"
+            }
+          ]
+        },
+        {
           "game": "Final Fight 30th Anniversary CPS2 Edition",
           "also": "a CPS2 conversion of Final Fight, distributed by Arcade Offset",
           "sets": "ffightae_cps2",
@@ -481,6 +521,14 @@
             {
               "soundtrack": "Ultra Street Fighter II remix",
               "disc": "Ultra Street Fighter II: The Final Challengers"
+            },
+            {
+              "soundtrack": "3DO soundtrack",
+              "disc": "Super Street Fighter II Turbo (3DO)"
+            },
+            {
+              "soundtrack": "FM Towns soundtrack",
+              "disc": "Super Street Fighter II (FM Towns)"
             }
           ]
         },
@@ -520,7 +568,7 @@
         {
           "game": "Street Fighter Alpha",
           "also": "Street Fighter Zero in Japan and Asia",
-          "sets": "sfau, sfzj, sfza",
+          "sets": "sfau, sfzj, sfza, sfaexu, sfzexj, sfzexa",
           "packs": [
             {
               "soundtrack": "Saturn arrange",
@@ -531,7 +579,7 @@
         {
           "game": "Street Fighter Alpha 2",
           "also": "Street Fighter Zero 2 in Japan and Asia",
-          "sets": "sfa2u, sfz2j, sfz2a",
+          "sets": "sfa2u, sfz2j, sfz2a, sfa2ex, sfz2ex",
           "packs": [
             {
               "soundtrack": "Saturn arrange",
@@ -604,6 +652,10 @@
             {
               "soundtrack": "PlayStation Sound Remix",
               "disc": "Strider"
+            },
+            {
+              "soundtrack": "PC Engine CD soundtrack",
+              "disc": "Strider Hiryuu"
             }
           ]
         },
@@ -661,6 +713,14 @@
             {
               "soundtrack": "Ultra Street Fighter II remix",
               "disc": "Ultra Street Fighter II: The Final Challengers"
+            },
+            {
+              "soundtrack": "3DO soundtrack",
+              "disc": "Super Street Fighter II Turbo (3DO)"
+            },
+            {
+              "soundtrack": "FM Towns soundtrack",
+              "disc": "Super Street Fighter II (FM Towns)"
             }
           ]
         },
@@ -708,6 +768,14 @@
             {
               "soundtrack": "Ultra Street Fighter II remix",
               "disc": "Ultra Street Fighter II: The Final Challengers"
+            },
+            {
+              "soundtrack": "3DO soundtrack",
+              "disc": "Super Street Fighter II Turbo (3DO)"
+            },
+            {
+              "soundtrack": "FM Towns soundtrack",
+              "disc": "Super Street Fighter II (FM Towns)"
             }
           ]
         },
@@ -724,6 +792,18 @@
         }
       ],
       "release_history": [
+        {
+          "version": "1.8",
+          "date": "2026-11-06",
+          "items": [
+            "Arranged music pauses and resumes from the same position in Alpha/Zero EX, Alpha/Zero 2 EX and Super Street Fighter II EX.",
+            "Music stops at the credit screen in the Super Street Fighter II family, and when leaving attract mode with Start in Alpha/Zero 2 EX Console mode. Super Street Fighter II EX uses the ST select theme in Training and Versus and stops it at the VS screen.",
+            "Adds the PC Engine CD soundtrack for the original arcade Strider. The PlayStation soundtrack now stops when the arcade Time Over cue begins.",
+            "Adds the 3DO and FM Towns soundtracks throughout the Super Street Fighter II family.",
+            "Adds Final Fight EX CPS2 soundtracks for USA, Japan and the English restoration, including voiced scenes and the Time Attack theme.",
+            "Updates the companion launchers for Alpha/Zero EX, Alpha/Zero 2 EX, Super Street Fighter II EX, Alpha 2 Gold/Dash and Grand Master Challenge."
+          ]
+        },
         {
           "version": "1.7",
           "date": "2026-10-28",
@@ -815,6 +895,14 @@
             "First public release."
           ]
         }
+      ],
+      "changes": [
+        "Arranged music pauses and resumes from the same position in Alpha/Zero EX, Alpha/Zero 2 EX and Super Street Fighter II EX.",
+        "Music stops at the credit screen in the Super Street Fighter II family, and when leaving attract mode with Start in Alpha/Zero 2 EX Console mode. Super Street Fighter II EX uses the ST select theme in Training and Versus and stops it at the VS screen.",
+        "Adds the PC Engine CD soundtrack for the original arcade Strider. The PlayStation soundtrack now stops when the arcade Time Over cue begins.",
+        "Adds the 3DO and FM Towns soundtracks throughout the Super Street Fighter II family.",
+        "Adds Final Fight EX CPS2 soundtracks for USA, Japan and the English restoration, including voiced scenes and the Time Attack theme.",
+        "Updates the companion launchers for Alpha/Zero EX, Alpha/Zero 2 EX, Super Street Fighter II EX, Alpha 2 Gold/Dash and Grand Master Challenge."
       ]
     },
     {

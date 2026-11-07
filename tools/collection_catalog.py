@@ -26,6 +26,34 @@ def fingerprint(path):
     return sha256_file(path) if path.exists() else None
 
 
+def verify_native_outputs(definition, qualified, slug):
+    expected = dict(definition['native_outputs'])
+    if slug == 'cps-plus':
+        # CPS+ declares static producer assets here and its generated pack ZIPs
+        # in regional targets. Compare their complete union with independent QA.
+        for target in definition['targets'].values():
+            for name, spec in target['outputs'].items():
+                if not name.startswith('games/CPS+/'):continue
+                if name == 'games/CPS+/README.txt':
+                    require(set(spec) == {'sha256'}, 'invalid CPS+ readme contract')
+                else:
+                    require(re.fullmatch(r'games/CPS\+/[a-z0-9_]+\.zip', name), 'unknown CPS+ generated output')
+                    variants = spec.get('any_of', [spec])
+                    require(isinstance(variants, list) and variants and
+                        (set(spec) == {'any_of'} if 'any_of' in spec else set(spec) == {'members'}),
+                        'invalid CPS+ pack alternatives')
+                    member = name.rsplit('/', 1)[1][:-4]+'.cpk'
+                    for variant in variants:
+                        require(set(variant) == {'members'} and set(variant['members']) == {member} and
+                            re.fullmatch(r'[0-9a-f]{64}', variant['members'][member]), 'invalid CPS+ pack contract')
+                require(name not in expected or expected[name] == spec, 'conflicting CPS+ generated output')
+                expected[name] = spec
+    require(qualified and set(expected) == set(qualified) and all(
+        observed == expected[name] or (slug == 'cps-plus' and name.startswith('games/CPS+/') and
+                                      observed in expected[name].get('any_of', []))
+        for name, observed in qualified.items()), 'native definition differs from independent release QA')
+
+
 def pending_state(root, slug, version, archive, digest, index, record, kit_path=None):
     sidecars = {}
     if (root / INDEX).is_file() and read_json(root / INDEX).get('schema') == 2:
@@ -102,7 +130,7 @@ def prepare(root, ready_path, candidate):
     reports = definition.get('native_reports', [])
     require(isinstance(reports, list) and set(reports) <= {'files.json', 'verification.json'}, 'unknown native audit report scope')
     qualified = {name: spec for name, spec in qualified.items() if name not in reports}
-    require(qualified and definition['native_outputs'] == qualified, 'native definition differs from independent release QA')
+    verify_native_outputs(definition, qualified, slug)
     key = slug + '-kit'
     revision = definition['kit_revision']
     if old_release.get('runner') and old_release['game_version'] == definition['game_version']:

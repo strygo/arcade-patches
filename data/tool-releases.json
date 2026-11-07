@@ -2399,6 +2399,10 @@
       "sha256": "185cd3d6d05ca4b44a8f1595af87f9c372bb6acf9c808e99aa3e9aa03bd98cf6",
       "size": 30173284
     },
+    "catalog/v1/artifacts/1afac4a847207c7ff8efd321734a50b06d0280b3b2a2c0fc2f413101747ad7c7-scipy-1.18.0-cp313-cp313-win_amd64.whl": {
+      "sha256": "1afac4a847207c7ff8efd321734a50b06d0280b3b2a2c0fc2f413101747ad7c7",
+      "size": 36554943
+    },
     "catalog/v1/artifacts/217020a805f3faaf81363b685820f6ab670a15b4d837bcc9892741e23807c300-mshvsf-ex-native-kit.zip": {
       "sha256": "217020a805f3faaf81363b685820f6ab670a15b4d837bcc9892741e23807c300",
       "size": 523644
@@ -2410,6 +2414,10 @@
     "catalog/v1/artifacts/250075bba0c177f4c9e0caddf1911152f58529d5a9d38caf076e563d42de2721-ng-plus-native-kit.zip": {
       "sha256": "250075bba0c177f4c9e0caddf1911152f58529d5a9d38caf076e563d42de2721",
       "size": 1734232
+    },
+    "catalog/v1/artifacts/265915e79107de9f946b855e50d7470d5893ec3f54b342e1aa6201cbdcd8bb6b-scipy-1.18.0-cp312-cp312-macosx_12_0_arm64.whl": {
+      "sha256": "265915e79107de9f946b855e50d7470d5893ec3f54b342e1aa6201cbdcd8bb6b",
+      "size": 28681889
     },
     "catalog/v1/artifacts/2949b2f1d77f94e2fe0ad5ea5ddb374339b635912b38937f082ee79a6c2862ac-cps-plus-native-kit.zip": {
       "sha256": "2949b2f1d77f94e2fe0ad5ea5ddb374339b635912b38937f082ee79a6c2862ac",
@@ -2627,6 +2635,10 @@
       "sha256": "4e85eff854e84008712b22803cc3206eb9c9549fb044ad537aea296ab3fbda56",
       "size": 27621
     },
+    "catalog/v1/definitions/52f533904516544419da17091c2b9c61fdd353ce831f2657b6fd7ff02635bbd9.json": {
+      "sha256": "52f533904516544419da17091c2b9c61fdd353ce831f2657b6fd7ff02635bbd9",
+      "size": 622576
+    },
     "catalog/v1/definitions/560b9bcdd79d606ca1a0a9abe800d2b115a7c27daa58257d246076863cd47d5b.json": {
       "sha256": "560b9bcdd79d606ca1a0a9abe800d2b115a7c27daa58257d246076863cd47d5b",
       "size": 60182
@@ -2824,8 +2836,8 @@
       "size": 114654
     },
     "catalog/v1/index.json": {
-      "sha256": "ecfd11fdc4b1510b511afa851ab513dcfa6ff7f9f27c398d36cd77c0bb6222c2",
-      "size": 28247
+      "sha256": "ee3cdf6061dce44e4961b0c4083c50500f6fe3e7df18c1e8037abe9b57bcabc7",
+      "size": 29018
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
       "sha256": "081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4",
@@ -2967,6 +2979,10 @@
       "sha256": "cb4a59b0e37e36fde4240b4de0556d7c40b4418b94cdad4a173e145fc58c7245",
       "size": 1978135
     },
+    "downloads/archive/cc0e3e417134472554d908a322db1d05905617a21c4a3435e0d98f1f6daed003/cps-plus-1.8-kit.zip": {
+      "sha256": "cc0e3e417134472554d908a322db1d05905617a21c4a3435e0d98f1f6daed003",
+      "size": 17825815
+    },
     "downloads/archive/cf54cb8e241be252ddbc3daa21ca9bda1982012d7e3f463eaaca394fb08b263c/mshvsf-restoration-rc1-ips.zip": {
       "sha256": "cf54cb8e241be252ddbc3daa21ca9bda1982012d7e3f463eaaca394fb08b263c",
       "size": 181854
@@ -3036,7 +3052,7 @@
       "size": 44138
     }
   },
-  "generation": 90,
+  "generation": 91,
   "launcher": "tools/downloads/archive/2ddc294d3b16ecae922e6f5b10da8f11cd66c7c12924915bb225e384830ef830/ArcadePatches-0.1.3.zip",
   "native_updates": [
     {
@@ -3422,6 +3438,14 @@
       "project": "final-fight-ex-cps2",
       "ready_sha256": "90060b86a4be009529d8ae89486663a8d2421ed916389ecf5b45d9c059c43b36",
       "release_sha256": "6af4609e9c7091cf57a1bf9ddeaf18227aefb8ae7012cd963186ca8981699c6f"
+    },
+    {
+      "game_version": "1.8",
+      "kit_revision": 1,
+      "kit_sha256": "cc0e3e417134472554d908a322db1d05905617a21c4a3435e0d98f1f6daed003",
+      "project": "cps-plus",
+      "ready_sha256": "867b25aac1ee9be11082cce64dc887e1df623441ae9c9f291593ca63a9d97da9",
+      "release_sha256": "eec413248ccdfc88c7fe60e26f1c17a422c4839ed291977959fd57af81fbf013"
     }
   ],
   "package_receipt": {
