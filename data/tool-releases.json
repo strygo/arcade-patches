@@ -2663,6 +2663,10 @@
       "sha256": "5ccf500255bc38b4ba40a099979eab01bdb7feaaa06fcc142f84613527c5ec94",
       "size": 85056
     },
+    "catalog/v1/definitions/60838e54a9a2870b369c5b708b57d358dbf4a7c8c9f0105d3e76e3268a1032cc.json": {
+      "sha256": "60838e54a9a2870b369c5b708b57d358dbf4a7c8c9f0105d3e76e3268a1032cc",
+      "size": 512222
+    },
     "catalog/v1/definitions/60f43217002578f34df82a1e7e19300f8562a1187c316a068e37f13b51405931.json": {
       "sha256": "60f43217002578f34df82a1e7e19300f8562a1187c316a068e37f13b51405931",
       "size": 105262
@@ -2844,7 +2848,7 @@
       "size": 114654
     },
     "catalog/v1/index.json": {
-      "sha256": "8b33a6c35832bc9178936be0b0bb8b681c97cd8a7fb3326e85c666d54ca2a221",
+      "sha256": "6dcbbaef2a0514d71cb675f1d2f2d75384ee05355ec434d94cad4f78d1ba459d",
       "size": 29017
     },
     "downloads/archive/081351905d214805c518deacfe2e7ecfc730432561346ac3ed16a4ce9bc131a4/sfa3-upper-cps2-rc1-kit.zip": {
@@ -2946,6 +2950,10 @@
     "downloads/archive/9c5ea94612996b14ec857fcf5356409e7f82371950a2056868efabf95e6d82ce/sfa-restoration-rc1-ips.zip": {
       "sha256": "9c5ea94612996b14ec857fcf5356409e7f82371950a2056868efabf95e6d82ce",
       "size": 439071
+    },
+    "downloads/archive/a17ea62844c6abbc61e616c207423c434592dcef0aa3ee7bf0b9a3f3bea4e1e1/final-fight-ex-cps2-rc3-kit.zip": {
+      "sha256": "a17ea62844c6abbc61e616c207423c434592dcef0aa3ee7bf0b9a3f3bea4e1e1",
+      "size": 17112372
     },
     "downloads/archive/a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc/ng-plus-1.1-kit.zip": {
       "sha256": "a53750d27fd73b4b806186567136c0cc4976c1e600da3ae5e17d362339dbb9fc",
@@ -3068,7 +3076,7 @@
       "size": 44138
     }
   },
-  "generation": 93,
+  "generation": 94,
   "launcher": "tools/downloads/archive/2ddc294d3b16ecae922e6f5b10da8f11cd66c7c12924915bb225e384830ef830/ArcadePatches-0.1.3.zip",
   "native_updates": [
     {
@@ -3478,6 +3486,14 @@
       "project": "final-fight-ex",
       "ready_sha256": "34b516d9475a00152618365d40ba1b7c220cbc437a426a46dffc6c8bee65248c",
       "release_sha256": "70848dd72f55be64cd50fd75fc5ec5c31691eda2c0f36da08e5339591da9bd7a"
+    },
+    {
+      "game_version": "rc3",
+      "kit_revision": 4,
+      "kit_sha256": "a17ea62844c6abbc61e616c207423c434592dcef0aa3ee7bf0b9a3f3bea4e1e1",
+      "project": "final-fight-ex-cps2",
+      "ready_sha256": "385b46d75040467580d82d2c3c40d6c2befd040f3f9e130d05d5f69c7d7d70cc",
+      "release_sha256": "48874b2c42457e353a5434a3d2587bbc907edfdc6d1512d227b938d76cf4022a"
     }
   ],
   "package_receipt": {
