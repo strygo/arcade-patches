@@ -228,14 +228,14 @@
       "current": "rc4",
       "versions": {
         "rc4": {
-          "current_revision": 4,
-          "date": "2026-11-08",
+          "current_revision": 6,
+          "date": "2026-11-09",
           "files": {
             "kit": {
-              "archive": "archive/dca0251899ed9f9d044e8b5c6dab68404b5b1c246956eee3364819101863d36d/final-fight-ex-rc4-kit.zip",
+              "archive": "archive/5ab458fd985d92d4b62e0168a3e51ab0f175b8cca05428cb45d90a92596d5f4d/final-fight-ex-rc4-kit.zip",
               "name": "final-fight-ex-rc4-kit.zip",
-              "sha256": "dca0251899ed9f9d044e8b5c6dab68404b5b1c246956eee3364819101863d36d",
-              "size": 3301305
+              "sha256": "5ab458fd985d92d4b62e0168a3e51ab0f175b8cca05428cb45d90a92596d5f4d",
+              "size": 3462447
             }
           },
           "game_contract_sha256": "4cda8fcd38c813071b64c4b5e528742584e86a5f2024ce76203ed063be8677b7",
@@ -245,6 +245,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 4
+            },
+            {
+              "date": "2026-11-09",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "revisions": {
@@ -260,6 +265,19 @@
               },
               "game_contract_sha256": "4cda8fcd38c813071b64c4b5e528742584e86a5f2024ce76203ed063be8677b7",
               "kind": "kit"
+            },
+            "6": {
+              "date": "2026-11-09",
+              "files": {
+                "kit": {
+                  "archive": "archive/5ab458fd985d92d4b62e0168a3e51ab0f175b8cca05428cb45d90a92596d5f4d/final-fight-ex-rc4-kit.zip",
+                  "name": "final-fight-ex-rc4-kit.zip",
+                  "sha256": "5ab458fd985d92d4b62e0168a3e51ab0f175b8cca05428cb45d90a92596d5f4d",
+                  "size": 3462447
+                }
+              },
+              "game_contract_sha256": "4cda8fcd38c813071b64c4b5e528742584e86a5f2024ce76203ed063be8677b7",
+              "kind": "kit"
             }
           }
         }
@@ -269,14 +287,14 @@
       "current": "rc3",
       "versions": {
         "rc3": {
-          "current_revision": 5,
-          "date": "2026-11-08",
+          "current_revision": 7,
+          "date": "2026-11-09",
           "files": {
             "kit": {
-              "archive": "archive/22b8963aad77a491bd1ebdea9e4fbb726742203b9af9a5ab855b15ae8a683f99/final-fight-ex-cps2-rc3-kit.zip",
+              "archive": "archive/927b93e7ebdfa656b33df783f744d248de19d80f2378f0ff035e865e4f5d90f0/final-fight-ex-cps2-rc3-kit.zip",
               "name": "final-fight-ex-cps2-rc3-kit.zip",
-              "sha256": "22b8963aad77a491bd1ebdea9e4fbb726742203b9af9a5ab855b15ae8a683f99",
-              "size": 17185149
+              "sha256": "927b93e7ebdfa656b33df783f744d248de19d80f2378f0ff035e865e4f5d90f0",
+              "size": 17386881
             }
           },
           "game_contract_sha256": "a85e9953f46f3b5f9e01ea76b5efd5c9726cfd817e1bb419a0b0ef6129517569",
@@ -286,6 +304,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-09",
+              "reason": "tooling update",
+              "revision": 7
             }
           ],
           "removed_output": "definitions",
@@ -298,6 +321,19 @@
                   "name": "final-fight-ex-cps2-rc3-kit.zip",
                   "sha256": "22b8963aad77a491bd1ebdea9e4fbb726742203b9af9a5ab855b15ae8a683f99",
                   "size": 17185149
+                }
+              },
+              "game_contract_sha256": "a85e9953f46f3b5f9e01ea76b5efd5c9726cfd817e1bb419a0b0ef6129517569",
+              "kind": "kit"
+            },
+            "7": {
+              "date": "2026-11-09",
+              "files": {
+                "kit": {
+                  "archive": "archive/927b93e7ebdfa656b33df783f744d248de19d80f2378f0ff035e865e4f5d90f0/final-fight-ex-cps2-rc3-kit.zip",
+                  "name": "final-fight-ex-cps2-rc3-kit.zip",
+                  "sha256": "927b93e7ebdfa656b33df783f744d248de19d80f2378f0ff035e865e4f5d90f0",
+                  "size": 17386881
                 }
               },
               "game_contract_sha256": "a85e9953f46f3b5f9e01ea76b5efd5c9726cfd817e1bb419a0b0ef6129517569",
@@ -2039,14 +2075,14 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 11,
-          "date": "2026-11-08",
+          "current_revision": 13,
+          "date": "2026-11-09",
           "files": {
             "kit": {
-              "archive": "archive/4afc7cdf1059a92b2770a9e98101c4957b69177789814b1223023621942c9c70/strider-ex-rc1-kit.zip",
+              "archive": "archive/3b084dd0f33b102d7b239ffbc640d8811eb1046066192beecee822196bde273d/strider-ex-rc1-kit.zip",
               "name": "strider-ex-rc1-kit.zip",
-              "sha256": "4afc7cdf1059a92b2770a9e98101c4957b69177789814b1223023621942c9c70",
-              "size": 15487168
+              "sha256": "3b084dd0f33b102d7b239ffbc640d8811eb1046066192beecee822196bde273d",
+              "size": 15548996
             }
           },
           "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",
@@ -2056,6 +2092,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 11
+            },
+            {
+              "date": "2026-11-09",
+              "reason": "tooling update",
+              "revision": 13
             }
           ],
           "removed_output": "definitions",
@@ -2068,6 +2109,19 @@
                   "name": "strider-ex-rc1-kit.zip",
                   "sha256": "4afc7cdf1059a92b2770a9e98101c4957b69177789814b1223023621942c9c70",
                   "size": 15487168
+                }
+              },
+              "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",
+              "kind": "kit"
+            },
+            "13": {
+              "date": "2026-11-09",
+              "files": {
+                "kit": {
+                  "archive": "archive/3b084dd0f33b102d7b239ffbc640d8811eb1046066192beecee822196bde273d/strider-ex-rc1-kit.zip",
+                  "name": "strider-ex-rc1-kit.zip",
+                  "sha256": "3b084dd0f33b102d7b239ffbc640d8811eb1046066192beecee822196bde273d",
+                  "size": 15548996
                 }
               },
               "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",

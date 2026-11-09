@@ -1,9 +1,10 @@
 {
-  "date": "2026-11-08",
+  "date": "2026-11-09",
   "features": [
     "Point it at your ROM and media folders. Loose files, ZIPs and 7z archives are identified by content, without renaming them. Supported discs and audio can use equivalent containers and lossless formats.",
     "Choose individual games, platforms and regions, or keep everything selected to include future catalog additions.",
     "Check requirements without unpacking ROMs. Disc messages explain absent, unsupported and unmatched images; reports include candidate filenames and sizes. Ready games can update while others wait for missing media.",
+    "Reuses verified inputs during a build and skips media scans when the selected outputs are already current, reducing repeated reads from network storage.",
     "Required patches, helpers and Python packages are downloaded and prepared privately when needed.",
     "Run it again to pick up catalog updates. Completed output is grouped by platform, ready to copy."
   ],
@@ -23,5 +24,5 @@
   ],
   "summary": "Build and update your Arcade Patches collection from media you own. Choose your games, platforms and regions, then copy the completed folders to your setup.",
   "title": "ArcadePatches",
-  "version": "0.1.5"
+  "version": "0.1.6"
 }

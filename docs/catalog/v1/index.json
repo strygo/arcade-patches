@@ -11,14 +11,14 @@
       "url": "https://arcadepatches.com/downloads/archive/47e333c4b49020d76f52dfcb785f114ca4bc05f0cd585d5894b541d3574d545e/dstlk-restoration-rc1-ips.zip"
     },
     "final-fight-ex-cps2-kit": {
-      "sha256": "22b8963aad77a491bd1ebdea9e4fbb726742203b9af9a5ab855b15ae8a683f99",
-      "size": 17185149,
-      "url": "https://arcadepatches.com/downloads/archive/22b8963aad77a491bd1ebdea9e4fbb726742203b9af9a5ab855b15ae8a683f99/final-fight-ex-cps2-rc3-kit.zip"
+      "sha256": "927b93e7ebdfa656b33df783f744d248de19d80f2378f0ff035e865e4f5d90f0",
+      "size": 17386881,
+      "url": "https://arcadepatches.com/downloads/archive/927b93e7ebdfa656b33df783f744d248de19d80f2378f0ff035e865e4f5d90f0/final-fight-ex-cps2-rc3-kit.zip"
     },
     "final-fight-ex-kit": {
-      "sha256": "dca0251899ed9f9d044e8b5c6dab68404b5b1c246956eee3364819101863d36d",
-      "size": 3301305,
-      "url": "https://arcadepatches.com/downloads/archive/dca0251899ed9f9d044e8b5c6dab68404b5b1c246956eee3364819101863d36d/final-fight-ex-rc4-kit.zip"
+      "sha256": "5ab458fd985d92d4b62e0168a3e51ab0f175b8cca05428cb45d90a92596d5f4d",
+      "size": 3462447,
+      "url": "https://arcadepatches.com/downloads/archive/5ab458fd985d92d4b62e0168a3e51ab0f175b8cca05428cb45d90a92596d5f4d/final-fight-ex-rc4-kit.zip"
     },
     "hsf2-restoration-kit": {
       "sha256": "39808a9eac76238c34db88454076ec741be743757fbb122ef5863a8b891b1f6b",
@@ -121,9 +121,9 @@
       "url": "https://arcadepatches.com/downloads/archive/720a8eb89354dec07439f7f8972f6ea5740a97730bcec69e9caf5c0aa6a4c34b/ssf2t-gmc-rc4-ips.zip"
     },
     "strider-ex-kit": {
-      "sha256": "4afc7cdf1059a92b2770a9e98101c4957b69177789814b1223023621942c9c70",
-      "size": 15487168,
-      "url": "https://arcadepatches.com/downloads/archive/4afc7cdf1059a92b2770a9e98101c4957b69177789814b1223023621942c9c70/strider-ex-rc1-kit.zip"
+      "sha256": "3b084dd0f33b102d7b239ffbc640d8811eb1046066192beecee822196bde273d",
+      "size": 15548996,
+      "url": "https://arcadepatches.com/downloads/archive/3b084dd0f33b102d7b239ffbc640d8811eb1046066192beecee822196bde273d/strider-ex-rc1-kit.zip"
     },
     "usf2-backport-kit": {
       "sha256": "d8678e91487b15e6b6ca4ed3e423dc0f2c991f340d846c0fa9b56f755bc0a2a7",
@@ -209,10 +209,10 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
     }
   },
-  "generation": 135,
+  "generation": 142,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
-    "version": "0.1.5"
+    "version": "0.1.6"
   },
   "not_integrated": [],
   "projects": {
@@ -225,11 +225,11 @@
       "title": "Darkstalkers: The Night Warriors"
     },
     "final-fight-ex": {
-      "current": "final-fight-ex-rc4-r4",
+      "current": "final-fight-ex-rc4-r6",
       "title": "Final Fight EX"
     },
     "final-fight-ex-cps2": {
-      "current": "final-fight-ex-cps2-rc3-r5",
+      "current": "final-fight-ex-cps2-rc3-r7",
       "title": "Final Fight EX (CPS-2)"
     },
     "hsf2-restoration": {
@@ -297,7 +297,7 @@
       "title": "Super Street Fighter II Turbo: Grand Master Challenge"
     },
     "strider-ex": {
-      "current": "strider-ex-rc1-r11",
+      "current": "strider-ex-rc1-r13",
       "title": "Strider EX"
     },
     "usf2-backport": {
@@ -352,27 +352,27 @@
       "kit": "dstlk-restoration-kit",
       "kit_revision": 9
     },
-    "final-fight-ex-cps2-rc3-r5": {
+    "final-fight-ex-cps2-rc3-r7": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "fe720fcf63f05d83c5cfa3d07c160b07faf02235f3923f884247511f426cd9fe",
-        "size": 512222,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/fe720fcf63f05d83c5cfa3d07c160b07faf02235f3923f884247511f426cd9fe.json"
+        "sha256": "55080f7193a6bfbe0a98cd352b34eb5a18e3ff2be270c5632fd09dd60002b4a6",
+        "size": 511652,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/55080f7193a6bfbe0a98cd352b34eb5a18e3ff2be270c5632fd09dd60002b4a6.json"
       },
       "game_version": "rc3",
       "kit": "final-fight-ex-cps2-kit",
-      "kit_revision": 5
+      "kit_revision": 7
     },
-    "final-fight-ex-rc4-r4": {
+    "final-fight-ex-rc4-r6": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "87add93329b62c5af2381485e1d77e5b3c1f53fa0eb8f6f3b41f8d06ad558633",
-        "size": 126603,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/87add93329b62c5af2381485e1d77e5b3c1f53fa0eb8f6f3b41f8d06ad558633.json"
+        "sha256": "3317e219ce10e69227ef61ff8290d7c7068d8b1f63d3d2ed0da533dcff74d213",
+        "size": 125648,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/3317e219ce10e69227ef61ff8290d7c7068d8b1f63d3d2ed0da533dcff74d213.json"
       },
       "game_version": "rc4",
       "kit": "final-fight-ex-kit",
-      "kit_revision": 4
+      "kit_revision": 6
     },
     "hsf2-restoration-rc1-r5": {
       "definition": {
@@ -550,16 +550,16 @@
       "kit": "ssf2t-gmc-kit",
       "kit_revision": 5
     },
-    "strider-ex-rc1-r11": {
+    "strider-ex-rc1-r13": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "98d547be82494900ddb3609dd7128186e791cd6bb2347a5e87b10fbf07d04823",
-        "size": 91499,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/98d547be82494900ddb3609dd7128186e791cd6bb2347a5e87b10fbf07d04823.json"
+        "sha256": "3ee3959a1a87f61736069d5aaf7daa2fe26554a004f4f3dc9b3b2dc3277a8de6",
+        "size": 89642,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/3ee3959a1a87f61736069d5aaf7daa2fe26554a004f4f3dc9b3b2dc3277a8de6.json"
       },
       "game_version": "rc1",
       "kit": "strider-ex-kit",
-      "kit_revision": 11
+      "kit_revision": 13
     },
     "usf2-backport-rc6-r3": {
       "definition": {
