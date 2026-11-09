@@ -1,0 +1,837 @@
+{
+  "api": 1,
+  "game_version": "rc3",
+  "kit_revision": 8,
+  "manifest_sha256": "223bb5e462743689f9ee430b7c82e25b15c734f62d2a14418627241f951888d6",
+  "native_outputs": {
+    "darksoft/games/vhunt2-english/NAME": {
+      "sha256": "619125dd58cfd8ddb1be2c5b4e970dd35b2b0e1f618c36483b944e7981c51c92"
+    },
+    "darksoft/games/vhunt2-english/flash.01": {
+      "sha256": "4ac88270c364181c216d2f81d928b04eddebafbc6851bf067d4f438f0002fddd"
+    },
+    "darksoft/games/vhunt2-english/flash.02": {
+      "sha256": "c80bd4a7da45f03df9e5f9efbb70d98e99c030c58eff21ace7474a0d7849b1ed"
+    },
+    "darksoft/games/vhunt2-english/flash.03": {
+      "sha256": "6ec24ccc6ab0c8052473dff6e02b61517ed5b9226627076bd294fb54c005271c"
+    },
+    "darksoft/games/vhunt2-english/flash.04": {
+      "sha256": "7f7041ab6635857745532f3e7ed3ddb105047084d768837c997d2ed42f8f128d"
+    },
+    "darksoft/games/vhunt2-english/flash.05": {
+      "sha256": "b539c91585d71a8a1625295509dfd0f11f3497ab441f6b123035d8fb5472d60f"
+    },
+    "darksoft/games/vhunt2-english/flash.06": {
+      "sha256": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802"
+    },
+    "darksoft/games/vhunt2-english/flash.07": {
+      "sha256": "354f41d9c103ccaf815bc0151c88ffbc0f8a9303cd26fb7470ae9dbd5bff028a"
+    },
+    "darksoft/games/vhunt2-english/flash.08": {
+      "sha256": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1"
+    },
+    "darksoft/games/vhunt2-english/flash.09": {
+      "sha256": "c5213fbce17aca2295bd8d78e5bf81f730fa67b7c7d839ca0796e32ca3cf568e"
+    },
+    "darksoft/games/vhunt2-english/flash.10": {
+      "sha256": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2"
+    },
+    "darksoft/games/vhunt2-english/flash.11": {
+      "sha256": "130450e0fa25ffd87f5349fef8bfb1526db57814a4d9026b8290b0030a69c2c7"
+    },
+    "darksoft/games/vhunt2-english/flash.12": {
+      "sha256": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451"
+    },
+    "darksoft/games/vhunt2-english/key": {
+      "sha256": "ab58d85028baad8d3863c9d9578cff39d70ef9c84058d9ba4b19f70cb35bb9d5"
+    },
+    "darksoft/receipts/vhunt2-english.json": {
+      "sha256": "97e941192669e1df8c8e5d02e9195864dd4c1c65b8bb2ca7ff3cb8d998473c1a"
+    },
+    "fbneo/vhunt2te.zip": {
+      "members": {
+        "vh2.01": "6e308e1af4e7ed63b60447fbb23c89a6491695988a72994a04c989070ef86236",
+        "vh2.02": "1f356ddbf4b4cee1c0b22f0d3322641d73a41838e482b8919762b284461839fc",
+        "vh2.11m": "6ec24ccc6ab0c8052473dff6e02b61517ed5b9226627076bd294fb54c005271c",
+        "vh2.12m": "7f7041ab6635857745532f3e7ed3ddb105047084d768837c997d2ed42f8f128d",
+        "vh2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+        "vh2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+        "vh2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+        "vh2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+        "vh2j.05": "3cfb1de97db68d4b70228a8276912ec876a84edf6b8ac93eaee5eed7661b162c",
+        "vh2j.06": "dc75eea0cedec206c97d0cea1f63d3bb2e7407d7d2b12ad94fd5e939eee30f40",
+        "vh2j.07": "18828a261398827e62c09c26de301ea71dae8e796101b178bde6ace8e02ad036",
+        "vh2j.09": "cab0690851c480f6a0846756cf44895c7e2311b194dcaa575f33297207d3e167",
+        "vh2j.10": "0d3a8a2f15066765d37708b40832267f0516a1ba78fb95fbb4cbc09fab21d180",
+        "vh2jte.03a": "0289ef7bce10763909bc68f0f44812b146b1a2f6681b92349cd8a5aec1ddc837",
+        "vh2jte.04a": "ceddb5006ebe6d6ac38b2b157f7422eed09383430d3231095c417097ac1c0156",
+        "vh2jte.08": "e8416c023c77d2527542ed3378dcdace0797b42efe38ae0cb659a8a6976e5a62",
+        "vh2te.13m": "b539c91585d71a8a1625295509dfd0f11f3497ab441f6b123035d8fb5472d60f",
+        "vh2te.15m": "354f41d9c103ccaf815bc0151c88ffbc0f8a9303cd26fb7470ae9dbd5bff028a",
+        "vh2te.17m": "c5213fbce17aca2295bd8d78e5bf81f730fa67b7c7d839ca0796e32ca3cf568e",
+        "vh2te.19m": "130450e0fa25ffd87f5349fef8bfb1526db57814a4d9026b8290b0030a69c2c7",
+        "vhunt2.key": "ab58d85028baad8d3863c9d9578cff39d70ef9c84058d9ba4b19f70cb35bb9d5"
+      }
+    },
+    "hbmame/vhunt2s01.zip": {
+      "members": {
+        "c75s01.c1": "b539c91585d71a8a1625295509dfd0f11f3497ab441f6b123035d8fb5472d60f",
+        "c75s01.c2": "354f41d9c103ccaf815bc0151c88ffbc0f8a9303cd26fb7470ae9dbd5bff028a",
+        "c75s01.c3": "c5213fbce17aca2295bd8d78e5bf81f730fa67b7c7d839ca0796e32ca3cf568e",
+        "c75s01.c4": "130450e0fa25ffd87f5349fef8bfb1526db57814a4d9026b8290b0030a69c2c7",
+        "c75s01.p1": "0289ef7bce10763909bc68f0f44812b146b1a2f6681b92349cd8a5aec1ddc837",
+        "c75s01.p2": "ceddb5006ebe6d6ac38b2b157f7422eed09383430d3231095c417097ac1c0156",
+        "c75s01.p6": "e8416c023c77d2527542ed3378dcdace0797b42efe38ae0cb659a8a6976e5a62"
+      }
+    },
+    "mame/vhunt2.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "vh2.01": "6e308e1af4e7ed63b60447fbb23c89a6491695988a72994a04c989070ef86236",
+        "vh2.02": "1f356ddbf4b4cee1c0b22f0d3322641d73a41838e482b8919762b284461839fc",
+        "vh2.11m": "6ec24ccc6ab0c8052473dff6e02b61517ed5b9226627076bd294fb54c005271c",
+        "vh2.12m": "7f7041ab6635857745532f3e7ed3ddb105047084d768837c997d2ed42f8f128d",
+        "vh2.13m": "b539c91585d71a8a1625295509dfd0f11f3497ab441f6b123035d8fb5472d60f",
+        "vh2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+        "vh2.15m": "354f41d9c103ccaf815bc0151c88ffbc0f8a9303cd26fb7470ae9dbd5bff028a",
+        "vh2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+        "vh2.17m": "c5213fbce17aca2295bd8d78e5bf81f730fa67b7c7d839ca0796e32ca3cf568e",
+        "vh2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+        "vh2.19m": "130450e0fa25ffd87f5349fef8bfb1526db57814a4d9026b8290b0030a69c2c7",
+        "vh2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+        "vh2j.03a": "0289ef7bce10763909bc68f0f44812b146b1a2f6681b92349cd8a5aec1ddc837",
+        "vh2j.04a": "ceddb5006ebe6d6ac38b2b157f7422eed09383430d3231095c417097ac1c0156",
+        "vh2j.05": "3cfb1de97db68d4b70228a8276912ec876a84edf6b8ac93eaee5eed7661b162c",
+        "vh2j.06": "dc75eea0cedec206c97d0cea1f63d3bb2e7407d7d2b12ad94fd5e939eee30f40",
+        "vh2j.07": "18828a261398827e62c09c26de301ea71dae8e796101b178bde6ace8e02ad036",
+        "vh2j.08": "e8416c023c77d2527542ed3378dcdace0797b42efe38ae0cb659a8a6976e5a62",
+        "vh2j.09": "cab0690851c480f6a0846756cf44895c7e2311b194dcaa575f33297207d3e167",
+        "vh2j.10": "0d3a8a2f15066765d37708b40832267f0516a1ba78fb95fbb4cbc09fab21d180",
+        "vhunt2.key": "ab58d85028baad8d3863c9d9578cff39d70ef9c84058d9ba4b19f70cb35bb9d5"
+      }
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/Night Warriors 2 (USA) [English Translation].mra": {
+      "sha256": "3d3b24e268db0603fc124cfecbf57f0df626328c1debd96e75ac7b9fdb649c75"
+    }
+  },
+  "prerequisites": {
+    "source-05564d7bd1d366988878": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "ac873dff",
+          "sha256": "05564d7bd1d366988878d4efb74df9a8daa481112a84b13b4b9d92db6f1b9b70",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2j.08"
+    },
+    "source-0d3a8a2f15066765d377": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "11730952",
+          "sha256": "0d3a8a2f15066765d37708b40832267f0516a1ba78fb95fbb4cbc09fab21d180",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2j.10"
+    },
+    "source-18828a261398827e62c0": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "b021c029",
+          "sha256": "18828a261398827e62c09c26de301ea71dae8e796101b178bde6ace8e02ad036",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2j.07"
+    },
+    "source-1f356ddbf4b4cee1c0b2": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "aaf15fcb",
+          "sha256": "1f356ddbf4b4cee1c0b22f0d3322641d73a41838e482b8919762b284461839fc",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.02"
+    },
+    "source-220f33b55e4978a8d84c": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "778dc4f6",
+          "sha256": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.18m"
+    },
+    "source-28dcc12ea8db3b8a35e6": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "3b02ddaa",
+          "sha256": "28dcc12ea8db3b8a35e6c1c3cfadb4e7de559cb84177fadb554b31aafb0c4ffb",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.13m"
+    },
+    "source-347d82db84ec3b17a46a": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "cd09bd63",
+          "sha256": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.14m"
+    },
+    "source-3cfb1de97db68d4b7022": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "de34f624",
+          "sha256": "3cfb1de97db68d4b70228a8276912ec876a84edf6b8ac93eaee5eed7661b162c",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2j.05"
+    },
+    "source-4030a7de364d0da1d9e2": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "605d9d1d",
+          "sha256": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.20m"
+    },
+    "source-524a25bcd153be24594d": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d6cf5ef5",
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "size": 24576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "device",
+      "title": "dl-1425.bin"
+    },
+    "source-5c413607761c3700e7c8": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "9ae8f186",
+          "sha256": "5c413607761c3700e7c851ca34852e8c1b1c17109977f2980c9e068d7625fc10",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2j.03a"
+    },
+    "source-6dd8632c46bd7a27cba2": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "e2fabf53",
+          "sha256": "6dd8632c46bd7a27cba2bc41eedb5010b4c9eabaa1621417c0081e239cbc8d54",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2j.04a"
+    },
+    "source-6e308e1af4e7ed63b604": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "67b9f779",
+          "sha256": "6e308e1af4e7ed63b60447fbb23c89a6491695988a72994a04c989070ef86236",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.01"
+    },
+    "source-6ec24ccc6ab0c8052473": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "38922efd",
+          "sha256": "6ec24ccc6ab0c8052473dff6e02b61517ed5b9226627076bd294fb54c005271c",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.11m"
+    },
+    "source-7f7041ab663585774553": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "6e2430af",
+          "sha256": "7f7041ab6635857745532f3e7ed3ddb105047084d768837c997d2ed42f8f128d",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.12m"
+    },
+    "source-8e9746a570e2522b4ce8": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "e0182c15",
+          "sha256": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.16m"
+    },
+    "source-a1d96765f86351ca4abd": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "149be3ab",
+          "sha256": "a1d96765f86351ca4abd6727250df49be521f11c3712a003799ba60c6792eda7",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.19m"
+    },
+    "source-ab58d85028baad8d3863": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "61306b20",
+          "sha256": "ab58d85028baad8d3863c9d9578cff39d70ef9c84058d9ba4b19f70cb35bb9d5",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2.key"
+    },
+    "source-cab0690851c480f6a084": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "eaefce9c",
+          "sha256": "cab0690851c480f6a0846756cf44895c7e2311b194dcaa575f33297207d3e167",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2j.09"
+    },
+    "source-dc75eea0cedec206c97d": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "6a3b9897",
+          "sha256": "dc75eea0cedec206c97d0cea1f63d3bb2e7407d7d2b12ad94fd5e939eee30f40",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2j.06"
+    },
+    "source-e7169f3cbca69e05cd1f": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "4e40de66",
+          "sha256": "e7169f3cbca69e05cd1f057666ffef3201e205e294888ff63ac983a24894131d",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.15m"
+    },
+    "source-f95e87f087c483320b03": {
+      "action": "Add the canonical vhunt2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "b31d00c9",
+          "sha256": "f95e87f087c483320b03fc5d366d29bc3ec6acaef60108101a945ce87558c906",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vh2.17m"
+    }
+  },
+  "project": "vhunt2-english",
+  "targets": {
+    "default-darksoft": {
+      "destination_requirements": "Use the Darksoft hardware and layout described in this kit's readme.",
+      "inputs": [
+        "source-05564d7bd1d366988878",
+        "source-0d3a8a2f15066765d377",
+        "source-18828a261398827e62c0",
+        "source-1f356ddbf4b4cee1c0b2",
+        "source-220f33b55e4978a8d84c",
+        "source-28dcc12ea8db3b8a35e6",
+        "source-347d82db84ec3b17a46a",
+        "source-3cfb1de97db68d4b7022",
+        "source-4030a7de364d0da1d9e2",
+        "source-5c413607761c3700e7c8",
+        "source-6dd8632c46bd7a27cba2",
+        "source-6e308e1af4e7ed63b604",
+        "source-6ec24ccc6ab0c8052473",
+        "source-7f7041ab663585774553",
+        "source-8e9746a570e2522b4ce8",
+        "source-a1d96765f86351ca4abd",
+        "source-ab58d85028baad8d3863",
+        "source-cab0690851c480f6a084",
+        "source-dc75eea0cedec206c97d",
+        "source-e7169f3cbca69e05cd1f",
+        "source-f95e87f087c483320b03"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "games/vhunt2-english/NAME": {
+          "sha256": "619125dd58cfd8ddb1be2c5b4e970dd35b2b0e1f618c36483b944e7981c51c92"
+        },
+        "games/vhunt2-english/flash.01": {
+          "sha256": "4ac88270c364181c216d2f81d928b04eddebafbc6851bf067d4f438f0002fddd"
+        },
+        "games/vhunt2-english/flash.02": {
+          "sha256": "c80bd4a7da45f03df9e5f9efbb70d98e99c030c58eff21ace7474a0d7849b1ed"
+        },
+        "games/vhunt2-english/flash.03": {
+          "sha256": "6ec24ccc6ab0c8052473dff6e02b61517ed5b9226627076bd294fb54c005271c"
+        },
+        "games/vhunt2-english/flash.04": {
+          "sha256": "7f7041ab6635857745532f3e7ed3ddb105047084d768837c997d2ed42f8f128d"
+        },
+        "games/vhunt2-english/flash.05": {
+          "sha256": "b539c91585d71a8a1625295509dfd0f11f3497ab441f6b123035d8fb5472d60f"
+        },
+        "games/vhunt2-english/flash.06": {
+          "sha256": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802"
+        },
+        "games/vhunt2-english/flash.07": {
+          "sha256": "354f41d9c103ccaf815bc0151c88ffbc0f8a9303cd26fb7470ae9dbd5bff028a"
+        },
+        "games/vhunt2-english/flash.08": {
+          "sha256": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1"
+        },
+        "games/vhunt2-english/flash.09": {
+          "sha256": "c5213fbce17aca2295bd8d78e5bf81f730fa67b7c7d839ca0796e32ca3cf568e"
+        },
+        "games/vhunt2-english/flash.10": {
+          "sha256": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2"
+        },
+        "games/vhunt2-english/flash.11": {
+          "sha256": "130450e0fa25ffd87f5349fef8bfb1526db57814a4d9026b8290b0030a69c2c7"
+        },
+        "games/vhunt2-english/flash.12": {
+          "sha256": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451"
+        },
+        "games/vhunt2-english/key": {
+          "sha256": "ab58d85028baad8d3863c9d9578cff39d70ef9c84058d9ba4b19f70cb35bb9d5"
+        },
+        "receipts/vhunt2-english.json": {
+          "sha256": "97e941192669e1df8c8e5d02e9195864dd4c1c65b8bb2ca7ff3cb8d998473c1a"
+        }
+      },
+      "platform": "darksoft",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-fbneo": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-05564d7bd1d366988878",
+        "source-0d3a8a2f15066765d377",
+        "source-18828a261398827e62c0",
+        "source-1f356ddbf4b4cee1c0b2",
+        "source-220f33b55e4978a8d84c",
+        "source-28dcc12ea8db3b8a35e6",
+        "source-347d82db84ec3b17a46a",
+        "source-3cfb1de97db68d4b7022",
+        "source-4030a7de364d0da1d9e2",
+        "source-5c413607761c3700e7c8",
+        "source-6dd8632c46bd7a27cba2",
+        "source-6e308e1af4e7ed63b604",
+        "source-6ec24ccc6ab0c8052473",
+        "source-7f7041ab663585774553",
+        "source-8e9746a570e2522b4ce8",
+        "source-a1d96765f86351ca4abd",
+        "source-ab58d85028baad8d3863",
+        "source-cab0690851c480f6a084",
+        "source-dc75eea0cedec206c97d",
+        "source-e7169f3cbca69e05cd1f",
+        "source-f95e87f087c483320b03"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/vhunt2te.zip": {
+          "members": {
+            "vh2.01": "6e308e1af4e7ed63b60447fbb23c89a6491695988a72994a04c989070ef86236",
+            "vh2.02": "1f356ddbf4b4cee1c0b22f0d3322641d73a41838e482b8919762b284461839fc",
+            "vh2.11m": "6ec24ccc6ab0c8052473dff6e02b61517ed5b9226627076bd294fb54c005271c",
+            "vh2.12m": "7f7041ab6635857745532f3e7ed3ddb105047084d768837c997d2ed42f8f128d",
+            "vh2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vh2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vh2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vh2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vh2j.05": "3cfb1de97db68d4b70228a8276912ec876a84edf6b8ac93eaee5eed7661b162c",
+            "vh2j.06": "dc75eea0cedec206c97d0cea1f63d3bb2e7407d7d2b12ad94fd5e939eee30f40",
+            "vh2j.07": "18828a261398827e62c09c26de301ea71dae8e796101b178bde6ace8e02ad036",
+            "vh2j.09": "cab0690851c480f6a0846756cf44895c7e2311b194dcaa575f33297207d3e167",
+            "vh2j.10": "0d3a8a2f15066765d37708b40832267f0516a1ba78fb95fbb4cbc09fab21d180",
+            "vh2jte.03a": "0289ef7bce10763909bc68f0f44812b146b1a2f6681b92349cd8a5aec1ddc837",
+            "vh2jte.04a": "ceddb5006ebe6d6ac38b2b157f7422eed09383430d3231095c417097ac1c0156",
+            "vh2jte.08": "e8416c023c77d2527542ed3378dcdace0797b42efe38ae0cb659a8a6976e5a62",
+            "vh2te.13m": "b539c91585d71a8a1625295509dfd0f11f3497ab441f6b123035d8fb5472d60f",
+            "vh2te.15m": "354f41d9c103ccaf815bc0151c88ffbc0f8a9303cd26fb7470ae9dbd5bff028a",
+            "vh2te.17m": "c5213fbce17aca2295bd8d78e5bf81f730fa67b7c7d839ca0796e32ca3cf568e",
+            "vh2te.19m": "130450e0fa25ffd87f5349fef8bfb1526db57814a4d9026b8290b0030a69c2c7",
+            "vhunt2.key": "ab58d85028baad8d3863c9d9578cff39d70ef9c84058d9ba4b19f70cb35bb9d5"
+          }
+        }
+      },
+      "platform": "fbneo",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-hbmame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-05564d7bd1d366988878",
+        "source-0d3a8a2f15066765d377",
+        "source-18828a261398827e62c0",
+        "source-1f356ddbf4b4cee1c0b2",
+        "source-220f33b55e4978a8d84c",
+        "source-28dcc12ea8db3b8a35e6",
+        "source-347d82db84ec3b17a46a",
+        "source-3cfb1de97db68d4b7022",
+        "source-4030a7de364d0da1d9e2",
+        "source-524a25bcd153be24594d",
+        "source-5c413607761c3700e7c8",
+        "source-6dd8632c46bd7a27cba2",
+        "source-6e308e1af4e7ed63b604",
+        "source-6ec24ccc6ab0c8052473",
+        "source-7f7041ab663585774553",
+        "source-8e9746a570e2522b4ce8",
+        "source-a1d96765f86351ca4abd",
+        "source-ab58d85028baad8d3863",
+        "source-cab0690851c480f6a084",
+        "source-dc75eea0cedec206c97d",
+        "source-e7169f3cbca69e05cd1f",
+        "source-f95e87f087c483320b03"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/vhunt2.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vh2.01": "6e308e1af4e7ed63b60447fbb23c89a6491695988a72994a04c989070ef86236",
+            "vh2.02": "1f356ddbf4b4cee1c0b22f0d3322641d73a41838e482b8919762b284461839fc",
+            "vh2.11m": "6ec24ccc6ab0c8052473dff6e02b61517ed5b9226627076bd294fb54c005271c",
+            "vh2.12m": "7f7041ab6635857745532f3e7ed3ddb105047084d768837c997d2ed42f8f128d",
+            "vh2.13m": "28dcc12ea8db3b8a35e6c1c3cfadb4e7de559cb84177fadb554b31aafb0c4ffb",
+            "vh2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vh2.15m": "e7169f3cbca69e05cd1f057666ffef3201e205e294888ff63ac983a24894131d",
+            "vh2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vh2.17m": "f95e87f087c483320b03fc5d366d29bc3ec6acaef60108101a945ce87558c906",
+            "vh2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vh2.19m": "a1d96765f86351ca4abd6727250df49be521f11c3712a003799ba60c6792eda7",
+            "vh2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vh2j.03a": "5c413607761c3700e7c851ca34852e8c1b1c17109977f2980c9e068d7625fc10",
+            "vh2j.04a": "6dd8632c46bd7a27cba2bc41eedb5010b4c9eabaa1621417c0081e239cbc8d54",
+            "vh2j.05": "3cfb1de97db68d4b70228a8276912ec876a84edf6b8ac93eaee5eed7661b162c",
+            "vh2j.06": "dc75eea0cedec206c97d0cea1f63d3bb2e7407d7d2b12ad94fd5e939eee30f40",
+            "vh2j.07": "18828a261398827e62c09c26de301ea71dae8e796101b178bde6ace8e02ad036",
+            "vh2j.08": "05564d7bd1d366988878d4efb74df9a8daa481112a84b13b4b9d92db6f1b9b70",
+            "vh2j.09": "cab0690851c480f6a0846756cf44895c7e2311b194dcaa575f33297207d3e167",
+            "vh2j.10": "0d3a8a2f15066765d37708b40832267f0516a1ba78fb95fbb4cbc09fab21d180",
+            "vhunt2.key": "ab58d85028baad8d3863c9d9578cff39d70ef9c84058d9ba4b19f70cb35bb9d5"
+          }
+        },
+        "roms/vhunt2s01.zip": {
+          "members": {
+            "c75s01.c1": "b539c91585d71a8a1625295509dfd0f11f3497ab441f6b123035d8fb5472d60f",
+            "c75s01.c2": "354f41d9c103ccaf815bc0151c88ffbc0f8a9303cd26fb7470ae9dbd5bff028a",
+            "c75s01.c3": "c5213fbce17aca2295bd8d78e5bf81f730fa67b7c7d839ca0796e32ca3cf568e",
+            "c75s01.c4": "130450e0fa25ffd87f5349fef8bfb1526db57814a4d9026b8290b0030a69c2c7",
+            "c75s01.p1": "0289ef7bce10763909bc68f0f44812b146b1a2f6681b92349cd8a5aec1ddc837",
+            "c75s01.p2": "ceddb5006ebe6d6ac38b2b157f7422eed09383430d3231095c417097ac1c0156",
+            "c75s01.p6": "e8416c023c77d2527542ed3378dcdace0797b42efe38ae0cb659a8a6976e5a62"
+          }
+        }
+      },
+      "platform": "hbmame",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-05564d7bd1d366988878",
+        "source-0d3a8a2f15066765d377",
+        "source-18828a261398827e62c0",
+        "source-1f356ddbf4b4cee1c0b2",
+        "source-220f33b55e4978a8d84c",
+        "source-28dcc12ea8db3b8a35e6",
+        "source-347d82db84ec3b17a46a",
+        "source-3cfb1de97db68d4b7022",
+        "source-4030a7de364d0da1d9e2",
+        "source-524a25bcd153be24594d",
+        "source-5c413607761c3700e7c8",
+        "source-6dd8632c46bd7a27cba2",
+        "source-6e308e1af4e7ed63b604",
+        "source-6ec24ccc6ab0c8052473",
+        "source-7f7041ab663585774553",
+        "source-8e9746a570e2522b4ce8",
+        "source-a1d96765f86351ca4abd",
+        "source-ab58d85028baad8d3863",
+        "source-cab0690851c480f6a084",
+        "source-dc75eea0cedec206c97d",
+        "source-e7169f3cbca69e05cd1f",
+        "source-f95e87f087c483320b03"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/vhunt2.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vh2.01": "6e308e1af4e7ed63b60447fbb23c89a6491695988a72994a04c989070ef86236",
+            "vh2.02": "1f356ddbf4b4cee1c0b22f0d3322641d73a41838e482b8919762b284461839fc",
+            "vh2.11m": "6ec24ccc6ab0c8052473dff6e02b61517ed5b9226627076bd294fb54c005271c",
+            "vh2.12m": "7f7041ab6635857745532f3e7ed3ddb105047084d768837c997d2ed42f8f128d",
+            "vh2.13m": "b539c91585d71a8a1625295509dfd0f11f3497ab441f6b123035d8fb5472d60f",
+            "vh2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vh2.15m": "354f41d9c103ccaf815bc0151c88ffbc0f8a9303cd26fb7470ae9dbd5bff028a",
+            "vh2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vh2.17m": "c5213fbce17aca2295bd8d78e5bf81f730fa67b7c7d839ca0796e32ca3cf568e",
+            "vh2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vh2.19m": "130450e0fa25ffd87f5349fef8bfb1526db57814a4d9026b8290b0030a69c2c7",
+            "vh2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vh2j.03a": "0289ef7bce10763909bc68f0f44812b146b1a2f6681b92349cd8a5aec1ddc837",
+            "vh2j.04a": "ceddb5006ebe6d6ac38b2b157f7422eed09383430d3231095c417097ac1c0156",
+            "vh2j.05": "3cfb1de97db68d4b70228a8276912ec876a84edf6b8ac93eaee5eed7661b162c",
+            "vh2j.06": "dc75eea0cedec206c97d0cea1f63d3bb2e7407d7d2b12ad94fd5e939eee30f40",
+            "vh2j.07": "18828a261398827e62c09c26de301ea71dae8e796101b178bde6ace8e02ad036",
+            "vh2j.08": "e8416c023c77d2527542ed3378dcdace0797b42efe38ae0cb659a8a6976e5a62",
+            "vh2j.09": "cab0690851c480f6a0846756cf44895c7e2311b194dcaa575f33297207d3e167",
+            "vh2j.10": "0d3a8a2f15066765d37708b40832267f0516a1ba78fb95fbb4cbc09fab21d180",
+            "vhunt2.key": "ab58d85028baad8d3863c9d9578cff39d70ef9c84058d9ba4b19f70cb35bb9d5"
+          }
+        }
+      },
+      "platform": "mame",
+      "profile": "vhunt2-english-default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mister": {
+      "destination_requirements": "Use the MiSTer core named by the included MRA.",
+      "inputs": [
+        "source-05564d7bd1d366988878",
+        "source-0d3a8a2f15066765d377",
+        "source-18828a261398827e62c0",
+        "source-1f356ddbf4b4cee1c0b2",
+        "source-220f33b55e4978a8d84c",
+        "source-28dcc12ea8db3b8a35e6",
+        "source-347d82db84ec3b17a46a",
+        "source-3cfb1de97db68d4b7022",
+        "source-4030a7de364d0da1d9e2",
+        "source-524a25bcd153be24594d",
+        "source-5c413607761c3700e7c8",
+        "source-6dd8632c46bd7a27cba2",
+        "source-6e308e1af4e7ed63b604",
+        "source-6ec24ccc6ab0c8052473",
+        "source-7f7041ab663585774553",
+        "source-8e9746a570e2522b4ce8",
+        "source-a1d96765f86351ca4abd",
+        "source-ab58d85028baad8d3863",
+        "source-cab0690851c480f6a084",
+        "source-dc75eea0cedec206c97d",
+        "source-e7169f3cbca69e05cd1f",
+        "source-f95e87f087c483320b03"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Restorations/Night Warriors 2 (USA) [English Translation].mra": {
+          "sha256": "3d3b24e268db0603fc124cfecbf57f0df626328c1debd96e75ac7b9fdb649c75"
+        },
+        "games/mame/vhunt2.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vh2.01": "6e308e1af4e7ed63b60447fbb23c89a6491695988a72994a04c989070ef86236",
+            "vh2.02": "1f356ddbf4b4cee1c0b22f0d3322641d73a41838e482b8919762b284461839fc",
+            "vh2.11m": "6ec24ccc6ab0c8052473dff6e02b61517ed5b9226627076bd294fb54c005271c",
+            "vh2.12m": "7f7041ab6635857745532f3e7ed3ddb105047084d768837c997d2ed42f8f128d",
+            "vh2.13m": "28dcc12ea8db3b8a35e6c1c3cfadb4e7de559cb84177fadb554b31aafb0c4ffb",
+            "vh2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vh2.15m": "e7169f3cbca69e05cd1f057666ffef3201e205e294888ff63ac983a24894131d",
+            "vh2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vh2.17m": "f95e87f087c483320b03fc5d366d29bc3ec6acaef60108101a945ce87558c906",
+            "vh2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vh2.19m": "a1d96765f86351ca4abd6727250df49be521f11c3712a003799ba60c6792eda7",
+            "vh2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vh2j.03a": "5c413607761c3700e7c851ca34852e8c1b1c17109977f2980c9e068d7625fc10",
+            "vh2j.04a": "6dd8632c46bd7a27cba2bc41eedb5010b4c9eabaa1621417c0081e239cbc8d54",
+            "vh2j.05": "3cfb1de97db68d4b70228a8276912ec876a84edf6b8ac93eaee5eed7661b162c",
+            "vh2j.06": "dc75eea0cedec206c97d0cea1f63d3bb2e7407d7d2b12ad94fd5e939eee30f40",
+            "vh2j.07": "18828a261398827e62c09c26de301ea71dae8e796101b178bde6ace8e02ad036",
+            "vh2j.08": "05564d7bd1d366988878d4efb74df9a8daa481112a84b13b4b9d92db6f1b9b70",
+            "vh2j.09": "cab0690851c480f6a0846756cf44895c7e2311b194dcaa575f33297207d3e167",
+            "vh2j.10": "0d3a8a2f15066765d37708b40832267f0516a1ba78fb95fbb4cbc09fab21d180",
+            "vhunt2.key": "ab58d85028baad8d3863c9d9578cff39d70ef9c84058d9ba4b19f70cb35bb9d5"
+          }
+        }
+      },
+      "platform": "mister",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    }
+  }
+}

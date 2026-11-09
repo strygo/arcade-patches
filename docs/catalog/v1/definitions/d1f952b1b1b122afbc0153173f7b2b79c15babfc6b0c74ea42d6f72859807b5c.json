@@ -1,0 +1,1935 @@
+{
+  "api": 1,
+  "artifacts": {
+    "wheel-0bce5c4fd0921f99d2e8": {
+      "filename": "pillow-11.3.0-cp313-cp313-win_amd64.whl",
+      "sha256": "0bce5c4fd0921f99d2e858dc4d4d64193407e1b99478bc5cacecba2311abde51",
+      "size": 6978450,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/0bce5c4fd0921f99d2e858dc4d4d64193407e1b99478bc5cacecba2311abde51-pillow-11.3.0-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-921bd305b10e82b4d1f5": {
+      "filename": "pillow-11.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "921bd305b10e82b4d1f5e802b6850677f965d8394203d182f078873851dada69",
+      "size": 4686296,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/921bd305b10e82b4d1f5e802b6850677f965d8394203d182f078873851dada69-pillow-11.3.0-cp312-cp312-macosx_11_0_arm64.whl"
+    },
+    "wheel-b0544343a702fa80c95a": {
+      "filename": "numpy-2.2.6-cp313-cp313-win_amd64.whl",
+      "sha256": "b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c",
+      "size": 12610885,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c-numpy-2.2.6-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-de749064336d37e340f6": {
+      "filename": "numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c",
+      "size": 14119362,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
+    }
+  },
+  "environments": {
+    "darwin-arm64": {
+      "python": [
+        3,
+        12
+      ],
+      "wheels": [
+        "wheel-de749064336d37e340f6",
+        "wheel-921bd305b10e82b4d1f5"
+      ]
+    },
+    "windows-x86_64": {
+      "python": [
+        3,
+        13
+      ],
+      "wheels": [
+        "wheel-b0544343a702fa80c95a",
+        "wheel-0bce5c4fd0921f99d2e8"
+      ]
+    }
+  },
+  "game_version": "1.1",
+  "kit_revision": 4,
+  "manifest_sha256": "22ef0f3df759063690d3471c10a66673f517bb05a3e1b7f21bd70457e78a1e31",
+  "native_outputs": {
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Art of Fighting 2.mgl": {
+      "sha256": "8b58dd969937c86ce4510dbe09a0ac94bf3e8a83ee570283a8b80dd909d34106"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Art of Fighting 3.mgl": {
+      "sha256": "d26a97b754b8a4b341ba6c619cdd5c80b5f0fc56153f8d59498f7d8c5474e21e"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Baseball Stars 2.mgl": {
+      "sha256": "226423ee8d790e7ed04e25eb644e8eb21fa7ad2e54fc58ba3e5a4bbdac46d83f"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Breakers.mgl": {
+      "sha256": "72b2212c1ee80adb3b6ca1bcc4991c3333022c00b5431a67b3558b0a98924c2d"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Fatal Fury 2.mgl": {
+      "sha256": "e69fe1ee3ad8765d8d043a3ca675645b2e55dbb28bc63aa4a82064ce8055e67a"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Fatal Fury 3.mgl": {
+      "sha256": "5ebbd97ebdfe3891dbfd9f2538c80411048b0725ab5e2d093118d58c91272b1d"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Fatal Fury Special.mgl": {
+      "sha256": "23ac3e96b3b4ce3e4665d6e6b3e667125ba3579d2a59b817e8dbf404d1a46ad8"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Fatal Fury.mgl": {
+      "sha256": "f89fde18c129bd6c712e1917ca1ddb22ebac98c9297dd2693c001003fccbb225"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Kabuki Klash.mgl": {
+      "sha256": "f75f43eecd3e8dc82dc24f1339c24d4411710d65491b804b9734f01f6657a028"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Last Resort.mgl": {
+      "sha256": "362a60cd67a1ae3384635a05fd536be81fed84cf6d4655962fdf4eea7b4e319a"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Pleasure Goal.mgl": {
+      "sha256": "5f25bbbedd363abc5b6fdf23af5be6c091acc8e702ef90f0d73be1437089d078"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Quiz King of Fighters.mgl": {
+      "sha256": "28008fd040cb1467d697d2d404b7811a69c8e97d288f88360d37ea975dfec8a4"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Real Bout Fatal Fury.mgl": {
+      "sha256": "68f52621c4fc4ec508abd27b22aa1b6cdd7f88e0a5ca5c79168a27712bb5ae91"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Samurai Shodown II.mgl": {
+      "sha256": "843211b9dcd86b3eca84cd1bd7cb71eafd9644a3660dddeb817e2f4e4ad0d6e2"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Samurai Shodown III.mgl": {
+      "sha256": "a000435ba8b72e4294f09fc59a7e40a53b10d060e8f9772c7f83c31269c14b1a"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Samurai Shodown.mgl": {
+      "sha256": "459f7fb2da71c13d72dd05ce51d7fa16532c77c866ec8bb3f06a7270807e02da"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Savage Reign.mgl": {
+      "sha256": "f392eadaef4627854388a1e115ec3d75e1283ea443a8e3441fa91aa948566705"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Stakes Winner.mgl": {
+      "sha256": "13518085cfb785c7d355d984f3855b830f10ecfe8cdc4f57d0dfa194db7dcaf6"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Super Sidekicks 2.mgl": {
+      "sha256": "2a985c773d1b36bbde56c5a8bc2c8e58cd8966b31dd60906996769a899d0c014"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Super Sidekicks 3.mgl": {
+      "sha256": "87dd8c9bb0dbf84d988a20292d4f6afc402a9dd42a18f3ceb9646fc6639bdb57"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Super Sidekicks.mgl": {
+      "sha256": "540d772e2ff56c8b56846f8120770a9566e8a592ac23eda17d8430ae144b3d73"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/The King of Fighters '94.mgl": {
+      "sha256": "487b3cab71b5532a1e9eb967d3c6dea71a03a9b09c65fde662f9f7650db2ad3b"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/The King of Fighters '95.mgl": {
+      "sha256": "3c28b1ddd75e09796b41abd08415d97c1809d50c0db26655e91421c4b14a1389"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Top Hunter.mgl": {
+      "sha256": "b70c15ec9965581b9b6fc864e969b75d02dfdc532288d46b7524f37034c62641"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/Top Player's Golf.mgl": {
+      "sha256": "db51b16345d0e0f2216c35633637e106bfcfc6487b8d2075f52813512f9f2d66"
+    },
+    "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+      "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+    },
+    "games/NG+/aof2.nga": {
+      "sha256": "4c91645683f6ef12c32284982838f4684831e63bf02978b215feebad51258c51"
+    },
+    "games/NG+/aof3.nga": {
+      "sha256": "214311b77113da4699426983a6a91d0f5752fe9fd425312102428d60cf7cc85c"
+    },
+    "games/NG+/breakers.nga": {
+      "sha256": "692d67646940d13e1081147206f670207eaad53c324f78646b6b3a05839e0353"
+    },
+    "games/NG+/bstars2.nga": {
+      "sha256": "70d1a4c750831c7c2e8e3df5569a7ff7354d5b539f0e99652d496ab16faa3368"
+    },
+    "games/NG+/fatfursp.nga": {
+      "sha256": "2013ced7c12fedbf0a4c4209eaa36b76c55236dbf85b819d778d61b099c80532"
+    },
+    "games/NG+/fatfury1.nga": {
+      "sha256": "0f091142223261089d0413ff51edc69beda23d19fcc3c86081829f6237095780"
+    },
+    "games/NG+/fatfury2.nga": {
+      "sha256": "89e849a880cea62fe99ac00ec16fa81cb3146c72646325dd9be49d0f9b6d8754"
+    },
+    "games/NG+/fatfury3.nga": {
+      "sha256": "688371d28b4713333ad8a3ae66e8d1e778f80d88d88728855a6ac069f2ddf428"
+    },
+    "games/NG+/kabukikl.nga": {
+      "sha256": "48dd8908b23b2a99bb838ed25619cbc010a59993fcbe2a3af3afe31fc0590d3d"
+    },
+    "games/NG+/kof94.nga": {
+      "sha256": "19b73621c740039356d63c9a547821a5df16e610b5cd13d0c94be59c4d486952"
+    },
+    "games/NG+/kof95.nga": {
+      "sha256": "1ac8ec2b5979db581746f36b2474b657301a80ef16edda9716d4881e62e55f1f"
+    },
+    "games/NG+/lresort.nga": {
+      "sha256": "00a22119b5de1e8ae5f42ea42c830f6955e2fa1cb8df455aaaf553ac78fcb484"
+    },
+    "games/NG+/pgoal.nga": {
+      "sha256": "07ea0795fb6bb479702d5425bdc01b4c82b0edaea6b6043e4523fec9176dd594"
+    },
+    "games/NG+/quizkof.nga": {
+      "sha256": "4ba38f499631992923849e2b8d393817858dbb32c4da1a9d8a60163e2d89bdc3"
+    },
+    "games/NG+/rbff1.nga": {
+      "sha256": "2dbb2555c36796b71d2904b8bb5265a400ca27e0ae9b53643399456c5caeab17"
+    },
+    "games/NG+/samsho.nga": {
+      "sha256": "ece3ed554be3b927ea958a528507c5fc191a947067ed0efb9555da60f8466823"
+    },
+    "games/NG+/samsho2.nga": {
+      "sha256": "4eb0c825ab0eb9f33e5892b302c00797df57f807a35d56e9fbae96dd96434e66"
+    },
+    "games/NG+/samsho3.nga": {
+      "sha256": "33776ff55b5058084517d4733ab105593a811ccaee6c8a5337589f4cbc01c368"
+    },
+    "games/NG+/savagere.nga": {
+      "sha256": "073fe0b257a3b87069f33e2ced0b4a525d1fbb4d6a12017e39b6074d2cf3cc8f"
+    },
+    "games/NG+/ssideki.nga": {
+      "sha256": "f9e6cbf3c7993a7f31a158b02d7757dadef91b97feed48c5721b6067c4b3e854"
+    },
+    "games/NG+/ssideki2.nga": {
+      "sha256": "da8a563002fdb90305302beb9e0e23df51fd48c3dda3b17d255da2c66f13d7a4"
+    },
+    "games/NG+/ssideki3.nga": {
+      "sha256": "a2c9539b41cd46e104bdff34cab5ae7299c3bd56878f26e5fb8f47db069ec1f6"
+    },
+    "games/NG+/stakwin.nga": {
+      "sha256": "4d0bae8f2bfca7702b57dc05188f9c2a7b8068de4f0735c2ab7566e6de61e361"
+    },
+    "games/NG+/tophuntr.nga": {
+      "sha256": "c79946035a7df6f02c5dd0805c8c44ddf4a2a0ddd70a9b06318c3cd9cd3df705"
+    },
+    "games/NG+/tpgolf.nga": {
+      "sha256": "df3845944113fbd075fe5c1ca1dfa488c451b50d9cb6f049ef355d2c941dedcd"
+    }
+  },
+  "prerequisites": {
+    "archive-047e761b5dc408b835fb": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "047e761b5dc408b835fb1fdbd811fe33874c7d52e898cf20925a4b4bdaba9cdc",
+          "size": 6848129
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: ssideki2"
+    },
+    "archive-0731b3f1f1d3abb7b8eb": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "0731b3f1f1d3abb7b8eb08171398aeb1b374a3edd393fd0effaa70492825bc26",
+          "size": 573401346
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: aof2"
+    },
+    "archive-0dbf44084b169acfce67": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "0dbf44084b169acfce67afe8c353fab68b04f427bd003c08e3752aab64161b9a",
+          "size": 3368722
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: stakwin"
+    },
+    "archive-0e2be377eefd04997f61": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "0e2be377eefd04997f61f053b1fc54df40fce0577b2bc609d972ad7cbd30d5db",
+          "size": 226994710
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: bstars2"
+    },
+    "archive-0eec69d2b6160fab056b": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "0eec69d2b6160fab056b9cd0779775002a73ac24687209e01fdb355be2e5c711",
+          "size": 595398077
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: quizkof"
+    },
+    "archive-12f665b813b6ef08b300": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "12f665b813b6ef08b300f202b68d94354a29dfc3c1fa5aee8f0e88a469892b7c",
+          "size": 338886333
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: tpgolf"
+    },
+    "archive-1e433634a165f4ff842d": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "1e433634a165f4ff842d3b90db9c6cdc2d12754efc33337c069ef44e5d73448c",
+          "size": 12771605
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: kof94"
+    },
+    "archive-2369572ed6e1f77dc2d6": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "2369572ed6e1f77dc2d65250a68633ffb6768bcabc106c3aea9eb85ac5e942f1",
+          "size": 490108170
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: ssideki2"
+    },
+    "archive-26f3ecd27310a7e3b952": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "26f3ecd27310a7e3b9524076a93fd4c6de4bacc0802a22fcdd22df72ad661ab8",
+          "size": 328914988
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: lresort"
+    },
+    "archive-2e2c1659b0bc85900d7f": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "2e2c1659b0bc85900d7f704a2c9f51fadee02d4dac9176468703fcf49f82bb2d",
+          "size": 13849074
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: breakers"
+    },
+    "archive-39ca1b28fcc554a105a0": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "39ca1b28fcc554a105a0ee74adb6bba651b3867032bc2e35a6880e7eaf51f45f",
+          "size": 12319772
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: aof2"
+    },
+    "archive-3d3769ac9e918d42d358": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "3d3769ac9e918d42d3581fce0aafc62eba04894744e87bbeee4872018c47af38",
+          "size": 563503437
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: kof95"
+    },
+    "archive-427fe7c38deb557e8eaa": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "427fe7c38deb557e8eaa9717b95a8646c7dbff03010fdd6f8119d7378dff2621",
+          "size": 185279818
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: ssideki"
+    },
+    "archive-4666bfa644376330f0cf": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "4666bfa644376330f0cf0e14ac67a796b58a517e397a66e4ada6846c7dcf24c4",
+          "size": 17087158
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: aof3"
+    },
+    "archive-4920f9437abc5da296db": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "4920f9437abc5da296dbdd8d5130750229b14a31c0aeeb0da3a6ef8859b81ca3",
+          "size": 7980986
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: fatfury2"
+    },
+    "archive-4e48cada314344b2e871": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "4e48cada314344b2e871717d5e9990e13446a85d2b854f9861f9a5299bc4407c",
+          "size": 546918965
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: samsho2"
+    },
+    "archive-5317ebcf10a5c9d05138": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "5317ebcf10a5c9d051388aed813d3491afa3feb98a0acff5af84de41f82220df",
+          "size": 6958558
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: tophuntr"
+    },
+    "archive-55b6bbc772528752612a": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "55b6bbc772528752612a5e3dde2c26490011387ea32a8448235e1d1ce498df7a",
+          "size": 510140271
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: savagere"
+    },
+    "archive-5ad9dca7d0b27d599ec8": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "5ad9dca7d0b27d599ec89c4fe3c3c68e0f7eaeaebb109abd7267f31d02cba541",
+          "size": 440771370
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: ssideki3"
+    },
+    "archive-5e7f779163e3f4acd2ef": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "5e7f779163e3f4acd2ef78c6b70b34bdf34104af78e2b158467ff8e38bac3d4c",
+          "size": 599912072
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: fatfursp"
+    },
+    "archive-6682926e9d2dd795b465": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "6682926e9d2dd795b46581f3df7396ab8dbc33c9509c2ef5f291a8dda18b3a1d",
+          "size": 567170885
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: pgoal"
+    },
+    "archive-68801c06d0e9802f7a93": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "68801c06d0e9802f7a931c684fc3ed7a2c46f9214c102f80945e410136110fb6",
+          "size": 24118759
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: rbff1"
+    },
+    "archive-6ab0751037c8174cda63": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "6ab0751037c8174cda6363ad16b60aee0325481663e4c1eb7d8863d310ba7e7a",
+          "size": 654493215
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: rbff1"
+    },
+    "archive-6e6348de8e54ee364a15": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "6e6348de8e54ee364a157a2a58723f7e8e62838cba13471c7c5599f5f092c738",
+          "size": 467467108
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: kabukikl"
+    },
+    "archive-6f3fb32b77b5f0d62898": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "6f3fb32b77b5f0d628987a503e43222f9f6b21f765055109cafd05eab8ebda02",
+          "size": 468496750
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: tophuntr"
+    },
+    "archive-766054ba8e13146ccf30": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "766054ba8e13146ccf307db5c90774796ba93ea9b7734e563dc59b7f703d12ab",
+          "size": 4054288
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: fatfury1"
+    },
+    "archive-82e3308f18ae4517d5b0": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "82e3308f18ae4517d5b0589d7cf59338bed9a44c22b9a304ae30db9c21c8608b",
+          "size": 16156579
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: kof95"
+    },
+    "archive-894df704f352ecb600b9": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "894df704f352ecb600b91a6013ff8ac88b867c2a7bce555f739d8a1366ce29fd",
+          "size": 17548262
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: samsho3"
+    },
+    "archive-92f4e294e78cfaaabd25": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "92f4e294e78cfaaabd25bfa5be6e131995f7298b1bc2ad70a6e495de39695ec8",
+          "size": 14482574
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: samsho2"
+    },
+    "archive-96c05087d1148258fa1a": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "96c05087d1148258fa1ae905c16d183bfb24a05b2dfbbbaae357daaf91e4384b",
+          "size": 12077082
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: kabukikl"
+    },
+    "archive-a2cb22cd1e63ba7283eb": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "a2cb22cd1e63ba7283eb143a2dfa28802e70a3d8b0485da28889e91c6ee821d3",
+          "size": 11294568
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: fatfursp"
+    },
+    "archive-a39d1f07b9b78f6baa8c": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "a39d1f07b9b78f6baa8c65e1c96b4c7a20c7e5a5797e981ec6f197eb3c859ab7",
+          "size": 7243545
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: pgoal"
+    },
+    "archive-aebe660fc00d131fdf43": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "aebe660fc00d131fdf43ffcbc4cef027834e418dbd96bd2ba07369530d9bb203",
+          "size": 343154035
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: stakwin"
+    },
+    "archive-ba8e18d9c7cd365a7051": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "ba8e18d9c7cd365a70517f19c20c6f0cd304c404a5061e857df892bb1b6ff68e",
+          "size": 598102555
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: fatfury3"
+    },
+    "archive-bf05cc848e403f8ae457": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "bf05cc848e403f8ae457bfe26faa8135cf4725cfff956fa030f5c0a00a26adcc",
+          "size": 1859335
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "firmware",
+      "title": "Neo Geo BIOS archive"
+    },
+    "archive-c026cfea928364a13aea": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "c026cfea928364a13aea9b84dced93fb2cfc812c44a5bacd90463ae40c421bf8",
+          "size": 485387618
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: aof3"
+    },
+    "archive-c25599174225758619a5": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "c25599174225758619a5cf2553a26c96d0053ccb88d6f0b14f74c4c90ebfaa2b",
+          "size": 13252181
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: savagere"
+    },
+    "archive-c399f5df67795bfc977f": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "c399f5df67795bfc977f07014d6df1e1dc54751e5228e7ee9412c3a566e13023",
+          "size": 500331225
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: fatfury2"
+    },
+    "archive-cbfb016c977510d25fac": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "cbfb016c977510d25fac93a92a751cee14e1054a0ccb4476bfb5ce7e4ebfe082",
+          "size": 3700580
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: bstars2"
+    },
+    "archive-d0aae28d366fa2443fd4": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "d0aae28d366fa2443fd40097a18b0396c9478cbe167c7ba1e378c3afff7f447f",
+          "size": 2916299
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: lresort"
+    },
+    "archive-d6e109c474661c571563": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "d6e109c474661c5715631667c4485503c7a730797b586329fc06793b332c3a72",
+          "size": 3253025
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: ssideki"
+    },
+    "archive-d71c50d0dd0a54bd413f": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "d71c50d0dd0a54bd413f778655bc073250e2d467580351997c9db6b7eb4d76b9",
+          "size": 405039023
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: breakers"
+    },
+    "archive-da547399fdd3d0a36aaf": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "da547399fdd3d0a36aafc95bd252c7a3085d7366d7e2257eae509f09084b2a0b",
+          "size": 565980365
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: samsho"
+    },
+    "archive-de093b37510ab12f7175": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "de093b37510ab12f7175525f8033f18547b767d4fcfa5216211155f253d84393",
+          "size": 9870579
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: ssideki3"
+    },
+    "archive-e050c64b8cbff61f2d24": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "e050c64b8cbff61f2d246e2b9a1a09b0360fc8481f336d82b863d13186cb9e1a",
+          "size": 534379504
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: fatfury1"
+    },
+    "archive-e4d3b478428bb09de83f": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "e4d3b478428bb09de83f6522601f149e6a87183028dacb48b5ec9a1534c019f4",
+          "size": 570556354
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: samsho3"
+    },
+    "archive-ea2cd4dad7a142144cac": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "ea2cd4dad7a142144cacd989ee221d9b9d3b3d7f7fcc3b643ad90d7d595068d5",
+          "size": 8649139
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: quizkof"
+    },
+    "archive-ec8aaa7aa0bba9eebfb6": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "ec8aaa7aa0bba9eebfb638ff42f6909db2eabd81884950c0a721157983b28abf",
+          "size": 19557282
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: fatfury3"
+    },
+    "archive-eed344546293dcbb0971": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "eed344546293dcbb097134cfaa6f0fee6fb88047a21a328ac6e1ac26b0ac897f",
+          "size": 574138098
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "disc",
+      "title": "disc: kof94"
+    },
+    "archive-fa3b0c084e46756a37cf": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "fa3b0c084e46756a37cf7e81fbf760940557b014cb9fc202683a2329ad8137d7",
+          "size": 3792358
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: tpgolf"
+    },
+    "archive-faec4c9268b7e3fd16e3": {
+      "action": "Add your canonical MAME/Neo Geo CD ZIP archives to a scanned folder. Filenames may differ.",
+      "alternatives": [
+        {
+          "sha256": "faec4c9268b7e3fd16e3d1799a299629c8537ebd7e99790aec3b701e0000316a",
+          "size": 8347740
+        }
+      ],
+      "formats": [
+        "ZIP archive",
+        "ZIP/7z member containing the archive"
+      ],
+      "kind": "rom",
+      "title": "rom: samsho"
+    }
+  },
+  "project": "ng-plus",
+  "requires": [
+    "native-context-v1",
+    "native-bindings-v1",
+    "locked-wheels-v1",
+    "native-dependencies-v1"
+  ],
+  "targets": {
+    "aof2-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-0731b3f1f1d3abb7b8eb",
+        "archive-39ca1b28fcc554a105a0",
+        "archive-bf05cc848e403f8ae457"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Art of Fighting 2.mgl": {
+          "sha256": "8b58dd969937c86ce4510dbe09a0ac94bf3e8a83ee570283a8b80dd909d34106"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/aof2.nga": {
+          "sha256": "4c91645683f6ef12c32284982838f4684831e63bf02978b215feebad51258c51"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "aof2"
+    },
+    "aof3-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-4666bfa644376330f0cf",
+        "archive-bf05cc848e403f8ae457",
+        "archive-c026cfea928364a13aea"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Art of Fighting 3.mgl": {
+          "sha256": "d26a97b754b8a4b341ba6c619cdd5c80b5f0fc56153f8d59498f7d8c5474e21e"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/aof3.nga": {
+          "sha256": "214311b77113da4699426983a6a91d0f5752fe9fd425312102428d60cf7cc85c"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "aof3"
+    },
+    "breakers-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-2e2c1659b0bc85900d7f",
+        "archive-bf05cc848e403f8ae457",
+        "archive-d71c50d0dd0a54bd413f"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Breakers.mgl": {
+          "sha256": "72b2212c1ee80adb3b6ca1bcc4991c3333022c00b5431a67b3558b0a98924c2d"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/breakers.nga": {
+          "sha256": "692d67646940d13e1081147206f670207eaad53c324f78646b6b3a05839e0353"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "breakers"
+    },
+    "bstars2-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-0e2be377eefd04997f61",
+        "archive-bf05cc848e403f8ae457",
+        "archive-cbfb016c977510d25fac"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Baseball Stars 2.mgl": {
+          "sha256": "226423ee8d790e7ed04e25eb644e8eb21fa7ad2e54fc58ba3e5a4bbdac46d83f"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/bstars2.nga": {
+          "sha256": "70d1a4c750831c7c2e8e3df5569a7ff7354d5b539f0e99652d496ab16faa3368"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "bstars2"
+    },
+    "fatfursp-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-5e7f779163e3f4acd2ef",
+        "archive-a2cb22cd1e63ba7283eb",
+        "archive-bf05cc848e403f8ae457"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Fatal Fury Special.mgl": {
+          "sha256": "23ac3e96b3b4ce3e4665d6e6b3e667125ba3579d2a59b817e8dbf404d1a46ad8"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/fatfursp.nga": {
+          "sha256": "2013ced7c12fedbf0a4c4209eaa36b76c55236dbf85b819d778d61b099c80532"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "fatfursp"
+    },
+    "fatfury1-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-766054ba8e13146ccf30",
+        "archive-bf05cc848e403f8ae457",
+        "archive-e050c64b8cbff61f2d24"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Fatal Fury.mgl": {
+          "sha256": "f89fde18c129bd6c712e1917ca1ddb22ebac98c9297dd2693c001003fccbb225"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/fatfury1.nga": {
+          "sha256": "0f091142223261089d0413ff51edc69beda23d19fcc3c86081829f6237095780"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "fatfury1"
+    },
+    "fatfury2-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-4920f9437abc5da296db",
+        "archive-bf05cc848e403f8ae457",
+        "archive-c399f5df67795bfc977f"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Fatal Fury 2.mgl": {
+          "sha256": "e69fe1ee3ad8765d8d043a3ca675645b2e55dbb28bc63aa4a82064ce8055e67a"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/fatfury2.nga": {
+          "sha256": "89e849a880cea62fe99ac00ec16fa81cb3146c72646325dd9be49d0f9b6d8754"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "fatfury2"
+    },
+    "fatfury3-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-ba8e18d9c7cd365a7051",
+        "archive-bf05cc848e403f8ae457",
+        "archive-ec8aaa7aa0bba9eebfb6"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Fatal Fury 3.mgl": {
+          "sha256": "5ebbd97ebdfe3891dbfd9f2538c80411048b0725ab5e2d093118d58c91272b1d"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/fatfury3.nga": {
+          "sha256": "688371d28b4713333ad8a3ae66e8d1e778f80d88d88728855a6ac069f2ddf428"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "fatfury3"
+    },
+    "kabukikl-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-6e6348de8e54ee364a15",
+        "archive-96c05087d1148258fa1a",
+        "archive-bf05cc848e403f8ae457"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Kabuki Klash.mgl": {
+          "sha256": "f75f43eecd3e8dc82dc24f1339c24d4411710d65491b804b9734f01f6657a028"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/kabukikl.nga": {
+          "sha256": "48dd8908b23b2a99bb838ed25619cbc010a59993fcbe2a3af3afe31fc0590d3d"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "kabukikl"
+    },
+    "kof94-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-1e433634a165f4ff842d",
+        "archive-bf05cc848e403f8ae457",
+        "archive-eed344546293dcbb0971"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/The King of Fighters '94.mgl": {
+          "sha256": "487b3cab71b5532a1e9eb967d3c6dea71a03a9b09c65fde662f9f7650db2ad3b"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/kof94.nga": {
+          "sha256": "19b73621c740039356d63c9a547821a5df16e610b5cd13d0c94be59c4d486952"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "kof94"
+    },
+    "kof95-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-3d3769ac9e918d42d358",
+        "archive-82e3308f18ae4517d5b0",
+        "archive-bf05cc848e403f8ae457"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/The King of Fighters '95.mgl": {
+          "sha256": "3c28b1ddd75e09796b41abd08415d97c1809d50c0db26655e91421c4b14a1389"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/kof95.nga": {
+          "sha256": "1ac8ec2b5979db581746f36b2474b657301a80ef16edda9716d4881e62e55f1f"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "kof95"
+    },
+    "lresort-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-26f3ecd27310a7e3b952",
+        "archive-bf05cc848e403f8ae457",
+        "archive-d0aae28d366fa2443fd4"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Last Resort.mgl": {
+          "sha256": "362a60cd67a1ae3384635a05fd536be81fed84cf6d4655962fdf4eea7b4e319a"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/lresort.nga": {
+          "sha256": "00a22119b5de1e8ae5f42ea42c830f6955e2fa1cb8df455aaaf553ac78fcb484"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "lresort"
+    },
+    "pgoal-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-6682926e9d2dd795b465",
+        "archive-a39d1f07b9b78f6baa8c",
+        "archive-bf05cc848e403f8ae457"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Pleasure Goal.mgl": {
+          "sha256": "5f25bbbedd363abc5b6fdf23af5be6c091acc8e702ef90f0d73be1437089d078"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/pgoal.nga": {
+          "sha256": "07ea0795fb6bb479702d5425bdc01b4c82b0edaea6b6043e4523fec9176dd594"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "pgoal"
+    },
+    "quizkof-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-0eec69d2b6160fab056b",
+        "archive-bf05cc848e403f8ae457",
+        "archive-ea2cd4dad7a142144cac"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Quiz King of Fighters.mgl": {
+          "sha256": "28008fd040cb1467d697d2d404b7811a69c8e97d288f88360d37ea975dfec8a4"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/quizkof.nga": {
+          "sha256": "4ba38f499631992923849e2b8d393817858dbb32c4da1a9d8a60163e2d89bdc3"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "quizkof"
+    },
+    "rbff1-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-68801c06d0e9802f7a93",
+        "archive-6ab0751037c8174cda63",
+        "archive-bf05cc848e403f8ae457"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Real Bout Fatal Fury.mgl": {
+          "sha256": "68f52621c4fc4ec508abd27b22aa1b6cdd7f88e0a5ca5c79168a27712bb5ae91"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/rbff1.nga": {
+          "sha256": "2dbb2555c36796b71d2904b8bb5265a400ca27e0ae9b53643399456c5caeab17"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "rbff1"
+    },
+    "samsho-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-bf05cc848e403f8ae457",
+        "archive-da547399fdd3d0a36aaf",
+        "archive-faec4c9268b7e3fd16e3"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Samurai Shodown.mgl": {
+          "sha256": "459f7fb2da71c13d72dd05ce51d7fa16532c77c866ec8bb3f06a7270807e02da"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/samsho.nga": {
+          "sha256": "ece3ed554be3b927ea958a528507c5fc191a947067ed0efb9555da60f8466823"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "samsho"
+    },
+    "samsho2-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-4e48cada314344b2e871",
+        "archive-92f4e294e78cfaaabd25",
+        "archive-bf05cc848e403f8ae457"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Samurai Shodown II.mgl": {
+          "sha256": "843211b9dcd86b3eca84cd1bd7cb71eafd9644a3660dddeb817e2f4e4ad0d6e2"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/samsho2.nga": {
+          "sha256": "4eb0c825ab0eb9f33e5892b302c00797df57f807a35d56e9fbae96dd96434e66"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "samsho2"
+    },
+    "samsho3-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-894df704f352ecb600b9",
+        "archive-bf05cc848e403f8ae457",
+        "archive-e4d3b478428bb09de83f"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Samurai Shodown III.mgl": {
+          "sha256": "a000435ba8b72e4294f09fc59a7e40a53b10d060e8f9772c7f83c31269c14b1a"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/samsho3.nga": {
+          "sha256": "33776ff55b5058084517d4733ab105593a811ccaee6c8a5337589f4cbc01c368"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "samsho3"
+    },
+    "savagere-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-55b6bbc772528752612a",
+        "archive-bf05cc848e403f8ae457",
+        "archive-c25599174225758619a5"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Savage Reign.mgl": {
+          "sha256": "f392eadaef4627854388a1e115ec3d75e1283ea443a8e3441fa91aa948566705"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/savagere.nga": {
+          "sha256": "073fe0b257a3b87069f33e2ced0b4a525d1fbb4d6a12017e39b6074d2cf3cc8f"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "savagere"
+    },
+    "ssideki-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-427fe7c38deb557e8eaa",
+        "archive-bf05cc848e403f8ae457",
+        "archive-d6e109c474661c571563"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Super Sidekicks.mgl": {
+          "sha256": "540d772e2ff56c8b56846f8120770a9566e8a592ac23eda17d8430ae144b3d73"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/ssideki.nga": {
+          "sha256": "f9e6cbf3c7993a7f31a158b02d7757dadef91b97feed48c5721b6067c4b3e854"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "ssideki"
+    },
+    "ssideki2-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-047e761b5dc408b835fb",
+        "archive-2369572ed6e1f77dc2d6",
+        "archive-bf05cc848e403f8ae457"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Super Sidekicks 2.mgl": {
+          "sha256": "2a985c773d1b36bbde56c5a8bc2c8e58cd8966b31dd60906996769a899d0c014"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/ssideki2.nga": {
+          "sha256": "da8a563002fdb90305302beb9e0e23df51fd48c3dda3b17d255da2c66f13d7a4"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "ssideki2"
+    },
+    "ssideki3-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-5ad9dca7d0b27d599ec8",
+        "archive-bf05cc848e403f8ae457",
+        "archive-de093b37510ab12f7175"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Super Sidekicks 3.mgl": {
+          "sha256": "87dd8c9bb0dbf84d988a20292d4f6afc402a9dd42a18f3ceb9646fc6639bdb57"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/ssideki3.nga": {
+          "sha256": "a2c9539b41cd46e104bdff34cab5ae7299c3bd56878f26e5fb8f47db069ec1f6"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "ssideki3"
+    },
+    "stakwin-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-0dbf44084b169acfce67",
+        "archive-aebe660fc00d131fdf43",
+        "archive-bf05cc848e403f8ae457"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Stakes Winner.mgl": {
+          "sha256": "13518085cfb785c7d355d984f3855b830f10ecfe8cdc4f57d0dfa194db7dcaf6"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/stakwin.nga": {
+          "sha256": "4d0bae8f2bfca7702b57dc05188f9c2a7b8068de4f0735c2ab7566e6de61e361"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "stakwin"
+    },
+    "tophuntr-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-5317ebcf10a5c9d05138",
+        "archive-6f3fb32b77b5f0d62898",
+        "archive-bf05cc848e403f8ae457"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Top Hunter.mgl": {
+          "sha256": "b70c15ec9965581b9b6fc864e969b75d02dfdc532288d46b7524f37034c62641"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/tophuntr.nga": {
+          "sha256": "c79946035a7df6f02c5dd0805c8c44ddf4a2a0ddd70a9b06318c3cd9cd3df705"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "tophuntr"
+    },
+    "tpgolf-mister": {
+      "destination_requirements": "Includes the unchanged NG+ core and its source/license notices.",
+      "inputs": [
+        "archive-12f665b813b6ef08b300",
+        "archive-bf05cc848e403f8ae457",
+        "archive-fa3b0c084e46756a37cf"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/Top Player's Golf.mgl": {
+          "sha256": "db51b16345d0e0f2216c35633637e106bfcfc6487b8d2075f52813512f9f2d66"
+        },
+        "_Arcade/_Arcade Patches/_Arrangements/_NG+/cores/NeoGeoPlus_20260928.rbf": {
+          "sha256": "c22fd5510459aa68428736c7911490772e0db12922c5c9c8b92528a5f7649072"
+        },
+        "games/NG+/tpgolf.nga": {
+          "sha256": "df3845944113fbd075fe5c1ca1dfa488c451b50d9cb6f049ef355d2c941dedcd"
+        },
+        "support/ng-plus/BUILD_PROVENANCE.txt": {
+          "sha256": "894a45d3c5a342c712873f156662c6cb174c7cf5ad73b9f92602c75b62f52c0f"
+        },
+        "support/ng-plus/INSTALL.md": {
+          "sha256": "2e9fbee3558663110397af47176cc2c6c5e3433bb263e0153f885f9fe05a6b12"
+        },
+        "support/ng-plus/LICENSE-MAME.txt": {
+          "sha256": "ba67875fa535993247317a634e34d476796b80046e106ecb6e77c9d48e3cf862"
+        },
+        "support/ng-plus/README.txt": {
+          "sha256": "f369474b8b043c5bd339741f852c63f75eafe0c82756bb9605854fda98f04da4"
+        },
+        "support/ng-plus/SOURCE_AND_LICENSE.txt": {
+          "sha256": "beb08cc99c7547ebbd22d80726fe844e01b74dfbc269cd4bf878bb20d6e822e8"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "tpgolf"
+    }
+  }
+}

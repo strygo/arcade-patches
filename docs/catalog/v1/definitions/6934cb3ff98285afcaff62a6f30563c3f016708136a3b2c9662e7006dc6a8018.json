@@ -1,0 +1,73 @@
+{
+  "api": 1,
+  "game_version": "1.0",
+  "kit_revision": 6,
+  "manifest_sha256": "ccc412ea1cb2377889f3065a39ce8ec49d587ac30ab630e187e04f1551f03dc9",
+  "native_outputs": {
+    "sfz3ugd/gdl-0002.chd": {
+      "sha256": "7750b3a3d006f9538ec14ce01b72c2279401f2ebcd9a1dc3f023b45b95e41273"
+    }
+  },
+  "prerequisites": {
+    "disc-8146554de79c34f5494f": {
+      "action": "Add your unmodified canonical MAME GD-ROM CHD to a scanned folder. Names may differ.",
+      "alternatives": [
+        {
+          "sha256": "8146554de79c34f5494f931121d27dcbb06d37fb21472edd8435db00efa51ab8",
+          "size": 109224132
+        }
+      ],
+      "content": [
+        {
+          "extensions": [
+            ".chd"
+          ],
+          "identity": {
+            "data_sha1": "471d5f7ddd966f5639312ccd044421f4184dbfc6",
+            "type": "chd"
+          }
+        }
+      ],
+      "formats": [
+        "CHD",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Street Fighter Zero 3 Upper (Japan, GDL-0002): original gdl-0002.chd"
+    }
+  },
+  "project": "sfz3ugd-multiregion",
+  "requires": [
+    "native-context-v1",
+    "native-bindings-v1",
+    "target-regions-v1"
+  ],
+  "targets": {
+    "multiregion-mame": {
+      "inputs": [
+        "disc-8146554de79c34f5494f"
+      ],
+      "minimum_free_bytes": 4294967296,
+      "outputs": {
+        "roms/sfz3ugd/gdl-0002.chd": {
+          "sha256": "7750b3a3d006f9538ec14ce01b72c2279401f2ebcd9a1dc3f023b45b95e41273"
+        },
+        "support/sfz3ugd-multiregion/readme.txt": {
+          "sha256": "ef92a320b6934da9d94fc3c89c90940ef996c51d4abdbc9e49b4db27a244a0a1"
+        }
+      },
+      "platform": "mame",
+      "regions": [
+        "jp",
+        "us",
+        "world"
+      ],
+      "software_notes": [
+        "The kit prepares its pinned chdman helper automatically. Allow about 2.5 GB of temporary space.",
+        "Keep your existing arcade set and NAOMI BIOS in MAME. Japan, USA and Export share this output."
+      ],
+      "variant": "multiregion"
+    }
+  }
+}

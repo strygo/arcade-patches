@@ -1,0 +1,837 @@
+{
+  "api": 1,
+  "game_version": "rc3",
+  "kit_revision": 6,
+  "manifest_sha256": "f61484234d16db5c48022e0ec06a2658087241f28d721aa8d04c0dd494c287bf",
+  "native_outputs": {
+    "darksoft/games/vsav2-english/NAME": {
+      "sha256": "9109334568135e9c266fbbc5b69df827749c1190f4327a6e2e4bdfa4670bd36d"
+    },
+    "darksoft/games/vsav2-english/flash.01": {
+      "sha256": "ffe8fccff8e7838ae0816f2a0a4209edc8b3a10bb62375c023fc19d2418fa0b8"
+    },
+    "darksoft/games/vsav2-english/flash.02": {
+      "sha256": "2ce80bae8cc6770f66f890b599986d9f584b62289c8537b8ce8f4473ddb4e6c7"
+    },
+    "darksoft/games/vsav2-english/flash.03": {
+      "sha256": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59"
+    },
+    "darksoft/games/vsav2-english/flash.04": {
+      "sha256": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2"
+    },
+    "darksoft/games/vsav2-english/flash.05": {
+      "sha256": "0392754b9108539bff7163be44c5fff2eaff867f7c27f194b3ea0aa10a366725"
+    },
+    "darksoft/games/vsav2-english/flash.06": {
+      "sha256": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802"
+    },
+    "darksoft/games/vsav2-english/flash.07": {
+      "sha256": "13d6380e3d89d2cd6d389d434b1c964408dc67ff5b31eacee633551d7027f72e"
+    },
+    "darksoft/games/vsav2-english/flash.08": {
+      "sha256": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1"
+    },
+    "darksoft/games/vsav2-english/flash.09": {
+      "sha256": "6e46741c814c7c500e6b82ad87b541c70451cb63ac28102065d41d1c763e3e42"
+    },
+    "darksoft/games/vsav2-english/flash.10": {
+      "sha256": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2"
+    },
+    "darksoft/games/vsav2-english/flash.11": {
+      "sha256": "7e6c4b98fe46ceeae9510dfaa286b950f268a14aa66161914c17be9dc3862cbb"
+    },
+    "darksoft/games/vsav2-english/flash.12": {
+      "sha256": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451"
+    },
+    "darksoft/games/vsav2-english/key": {
+      "sha256": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+    },
+    "darksoft/receipts/vsav2-english.json": {
+      "sha256": "2af815872a5ca46808d499812be25a3420e75c63cd1dbf7fbe27196a33f9ee6a"
+    },
+    "fbneo/vsav2te.zip": {
+      "members": {
+        "vs2.01": "27081d58de50f3905988d2521d1448776c20bd25d357c6be4a33e9e21f2c2bed",
+        "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+        "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+        "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+        "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+        "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+        "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+        "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+        "vs2j.05": "15a31774fec9426f927e4129338c88164fd39617824e9899d2e2d77b9f196d12",
+        "vs2j.06": "86e491a3cd8b3ea535abce569d7850bdc3a50e6e1043b90d5b0b6bd42b9caed9",
+        "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+        "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+        "vs2j.10": "0ec88cb3d1a2329b4fbc44d0fc703170f96396e1c6c6fc50b9dfd5109f2bda58",
+        "vs2jte.03": "5f4e3be6495b527ecf67883534b994782f4477b4b073f5f7c588ad7d0d5d5e3d",
+        "vs2jte.04": "d5f45dc0fabc3822468db23602e6958a45ded7e7dce47109af2a014d63d8ad12",
+        "vs2jte.08": "bc0a02103b77010c61484651ff9c89315c936401f7de90c675c9bf791075cd2b",
+        "vs2te.13m": "0392754b9108539bff7163be44c5fff2eaff867f7c27f194b3ea0aa10a366725",
+        "vs2te.15m": "13d6380e3d89d2cd6d389d434b1c964408dc67ff5b31eacee633551d7027f72e",
+        "vs2te.17m": "6e46741c814c7c500e6b82ad87b541c70451cb63ac28102065d41d1c763e3e42",
+        "vs2te.19m": "7e6c4b98fe46ceeae9510dfaa286b950f268a14aa66161914c17be9dc3862cbb",
+        "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+      }
+    },
+    "hbmame/vsav2s04.zip": {
+      "members": {
+        "c76s04.c1": "0392754b9108539bff7163be44c5fff2eaff867f7c27f194b3ea0aa10a366725",
+        "c76s04.c2": "13d6380e3d89d2cd6d389d434b1c964408dc67ff5b31eacee633551d7027f72e",
+        "c76s04.c3": "6e46741c814c7c500e6b82ad87b541c70451cb63ac28102065d41d1c763e3e42",
+        "c76s04.c4": "7e6c4b98fe46ceeae9510dfaa286b950f268a14aa66161914c17be9dc3862cbb",
+        "c76s04.p1": "5f4e3be6495b527ecf67883534b994782f4477b4b073f5f7c588ad7d0d5d5e3d",
+        "c76s04.p2": "d5f45dc0fabc3822468db23602e6958a45ded7e7dce47109af2a014d63d8ad12",
+        "c76s04.p6": "bc0a02103b77010c61484651ff9c89315c936401f7de90c675c9bf791075cd2b"
+      }
+    },
+    "mame/vsav2.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "vs2.01": "27081d58de50f3905988d2521d1448776c20bd25d357c6be4a33e9e21f2c2bed",
+        "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+        "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+        "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+        "vs2.13m": "0392754b9108539bff7163be44c5fff2eaff867f7c27f194b3ea0aa10a366725",
+        "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+        "vs2.15m": "13d6380e3d89d2cd6d389d434b1c964408dc67ff5b31eacee633551d7027f72e",
+        "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+        "vs2.17m": "6e46741c814c7c500e6b82ad87b541c70451cb63ac28102065d41d1c763e3e42",
+        "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+        "vs2.19m": "7e6c4b98fe46ceeae9510dfaa286b950f268a14aa66161914c17be9dc3862cbb",
+        "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+        "vs2j.03": "5f4e3be6495b527ecf67883534b994782f4477b4b073f5f7c588ad7d0d5d5e3d",
+        "vs2j.04": "d5f45dc0fabc3822468db23602e6958a45ded7e7dce47109af2a014d63d8ad12",
+        "vs2j.05": "15a31774fec9426f927e4129338c88164fd39617824e9899d2e2d77b9f196d12",
+        "vs2j.06": "86e491a3cd8b3ea535abce569d7850bdc3a50e6e1043b90d5b0b6bd42b9caed9",
+        "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+        "vs2j.08": "bc0a02103b77010c61484651ff9c89315c936401f7de90c675c9bf791075cd2b",
+        "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+        "vs2j.10": "0ec88cb3d1a2329b4fbc44d0fc703170f96396e1c6c6fc50b9dfd5109f2bda58",
+        "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+      }
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/Vampire Savior 2 (USA) [English Translation].mra": {
+      "sha256": "5c2c7e069e002ebd572631c949181e193418ebe98022068da62262ec7648c3b6"
+    }
+  },
+  "prerequisites": {
+    "source-0ec88cb3d1a2329b4fbc": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "eb490213",
+          "sha256": "0ec88cb3d1a2329b4fbc44d0fc703170f96396e1c6c6fc50b9dfd5109f2bda58",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2j.10"
+    },
+    "source-15a31774fec9426f927e": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "61979638",
+          "sha256": "15a31774fec9426f927e4129338c88164fd39617824e9899d2e2d77b9f196d12",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2j.05"
+    },
+    "source-220f33b55e4978a8d84c": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "778dc4f6",
+          "sha256": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.18m"
+    },
+    "source-27081d58de50f3905988": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "35190139",
+          "sha256": "27081d58de50f3905988d2521d1448776c20bd25d357c6be4a33e9e21f2c2bed",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.01"
+    },
+    "source-277a26797d2507875d00": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "00c763a7",
+          "sha256": "277a26797d2507875d00b21158fc3edd7d03557fea045a7e86950d421ffd433c",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.19m"
+    },
+    "source-347d82db84ec3b17a46a": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "cd09bd63",
+          "sha256": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.14m"
+    },
+    "source-3b385c35bb68659e2561": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "fac3c217",
+          "sha256": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2j.09"
+    },
+    "source-4030a7de364d0da1d9e2": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "605d9d1d",
+          "sha256": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.20m"
+    },
+    "source-524a25bcd153be24594d": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d6cf5ef5",
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "size": 24576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "device",
+      "title": "dl-1425.bin"
+    },
+    "source-63a4f7b14e37e3ecd33e": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "6d020a14",
+          "sha256": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.12m"
+    },
+    "source-65697c143e06b4cd3bf8": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d67e47b7",
+          "sha256": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.11m"
+    },
+    "source-74c845c2d978441611fc": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "2018c120",
+          "sha256": "74c845c2d978441611fc6d8c382d06f13a5e1d3c2ca7a4b3ae1227aada3be1a8",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2j.08"
+    },
+    "source-8537c742042603301783": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "c32dba09",
+          "sha256": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.02"
+    },
+    "source-86e491a3cd8b3ea535ab": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "f37c5bc2",
+          "sha256": "86e491a3cd8b3ea535abce569d7850bdc3a50e6e1043b90d5b0b6bd42b9caed9",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2j.06"
+    },
+    "source-8e9746a570e2522b4ce8": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "e0182c15",
+          "sha256": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.16m"
+    },
+    "source-9cd791ed27cd29f14901": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "8f885809",
+          "sha256": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2j.07"
+    },
+    "source-9ce04df3d39eb33c8fd0": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "5c852f52",
+          "sha256": "9ce04df3d39eb33c8fd05f2119006df5542c6104612541ec6810c3d161cc07fe",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.13m"
+    },
+    "source-9e433561696cf187b863": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "107c091b",
+          "sha256": "9e433561696cf187b8630f45ca7d5bb12a61a495ee9556f2a91e05ba08e9dbde",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2j.04"
+    },
+    "source-c8a4531e4835d9e381a9": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "a20f58af",
+          "sha256": "c8a4531e4835d9e381a99d204090cd418753cbe610f7050b25ab7d322e6bbb86",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.15m"
+    },
+    "source-d4af6d05b69fe1d5ad4a": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "89fd86b4",
+          "sha256": "d4af6d05b69fe1d5ad4abc713b418329b0a2c44a62524c888c0820d00945a369",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2j.03"
+    },
+    "source-e6fae88f5bfd52c0d3ef": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "39db59ad",
+          "sha256": "e6fae88f5bfd52c0d3ef341b77704ad27f920bec5f35e12aaaf5f2b160ea3178",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vs2.17m"
+    },
+    "source-fbebcba2ad83d0b1df76": {
+      "action": "Add the canonical vsav2 arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "289028ce",
+          "sha256": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2.key"
+    }
+  },
+  "project": "vsav2-english",
+  "targets": {
+    "default-darksoft": {
+      "destination_requirements": "Use the Darksoft hardware and layout described in this kit's readme.",
+      "inputs": [
+        "source-0ec88cb3d1a2329b4fbc",
+        "source-15a31774fec9426f927e",
+        "source-220f33b55e4978a8d84c",
+        "source-27081d58de50f3905988",
+        "source-277a26797d2507875d00",
+        "source-347d82db84ec3b17a46a",
+        "source-3b385c35bb68659e2561",
+        "source-4030a7de364d0da1d9e2",
+        "source-63a4f7b14e37e3ecd33e",
+        "source-65697c143e06b4cd3bf8",
+        "source-74c845c2d978441611fc",
+        "source-8537c742042603301783",
+        "source-86e491a3cd8b3ea535ab",
+        "source-8e9746a570e2522b4ce8",
+        "source-9cd791ed27cd29f14901",
+        "source-9ce04df3d39eb33c8fd0",
+        "source-9e433561696cf187b863",
+        "source-c8a4531e4835d9e381a9",
+        "source-d4af6d05b69fe1d5ad4a",
+        "source-e6fae88f5bfd52c0d3ef",
+        "source-fbebcba2ad83d0b1df76"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "games/vsav2-english/NAME": {
+          "sha256": "9109334568135e9c266fbbc5b69df827749c1190f4327a6e2e4bdfa4670bd36d"
+        },
+        "games/vsav2-english/flash.01": {
+          "sha256": "ffe8fccff8e7838ae0816f2a0a4209edc8b3a10bb62375c023fc19d2418fa0b8"
+        },
+        "games/vsav2-english/flash.02": {
+          "sha256": "2ce80bae8cc6770f66f890b599986d9f584b62289c8537b8ce8f4473ddb4e6c7"
+        },
+        "games/vsav2-english/flash.03": {
+          "sha256": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59"
+        },
+        "games/vsav2-english/flash.04": {
+          "sha256": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2"
+        },
+        "games/vsav2-english/flash.05": {
+          "sha256": "0392754b9108539bff7163be44c5fff2eaff867f7c27f194b3ea0aa10a366725"
+        },
+        "games/vsav2-english/flash.06": {
+          "sha256": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802"
+        },
+        "games/vsav2-english/flash.07": {
+          "sha256": "13d6380e3d89d2cd6d389d434b1c964408dc67ff5b31eacee633551d7027f72e"
+        },
+        "games/vsav2-english/flash.08": {
+          "sha256": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1"
+        },
+        "games/vsav2-english/flash.09": {
+          "sha256": "6e46741c814c7c500e6b82ad87b541c70451cb63ac28102065d41d1c763e3e42"
+        },
+        "games/vsav2-english/flash.10": {
+          "sha256": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2"
+        },
+        "games/vsav2-english/flash.11": {
+          "sha256": "7e6c4b98fe46ceeae9510dfaa286b950f268a14aa66161914c17be9dc3862cbb"
+        },
+        "games/vsav2-english/flash.12": {
+          "sha256": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451"
+        },
+        "games/vsav2-english/key": {
+          "sha256": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+        },
+        "receipts/vsav2-english.json": {
+          "sha256": "2af815872a5ca46808d499812be25a3420e75c63cd1dbf7fbe27196a33f9ee6a"
+        }
+      },
+      "platform": "darksoft",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-fbneo": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0ec88cb3d1a2329b4fbc",
+        "source-15a31774fec9426f927e",
+        "source-220f33b55e4978a8d84c",
+        "source-27081d58de50f3905988",
+        "source-277a26797d2507875d00",
+        "source-347d82db84ec3b17a46a",
+        "source-3b385c35bb68659e2561",
+        "source-4030a7de364d0da1d9e2",
+        "source-63a4f7b14e37e3ecd33e",
+        "source-65697c143e06b4cd3bf8",
+        "source-74c845c2d978441611fc",
+        "source-8537c742042603301783",
+        "source-86e491a3cd8b3ea535ab",
+        "source-8e9746a570e2522b4ce8",
+        "source-9cd791ed27cd29f14901",
+        "source-9ce04df3d39eb33c8fd0",
+        "source-9e433561696cf187b863",
+        "source-c8a4531e4835d9e381a9",
+        "source-d4af6d05b69fe1d5ad4a",
+        "source-e6fae88f5bfd52c0d3ef",
+        "source-fbebcba2ad83d0b1df76"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/vsav2te.zip": {
+          "members": {
+            "vs2.01": "27081d58de50f3905988d2521d1448776c20bd25d357c6be4a33e9e21f2c2bed",
+            "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+            "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+            "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+            "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vs2j.05": "15a31774fec9426f927e4129338c88164fd39617824e9899d2e2d77b9f196d12",
+            "vs2j.06": "86e491a3cd8b3ea535abce569d7850bdc3a50e6e1043b90d5b0b6bd42b9caed9",
+            "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+            "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+            "vs2j.10": "0ec88cb3d1a2329b4fbc44d0fc703170f96396e1c6c6fc50b9dfd5109f2bda58",
+            "vs2jte.03": "5f4e3be6495b527ecf67883534b994782f4477b4b073f5f7c588ad7d0d5d5e3d",
+            "vs2jte.04": "d5f45dc0fabc3822468db23602e6958a45ded7e7dce47109af2a014d63d8ad12",
+            "vs2jte.08": "bc0a02103b77010c61484651ff9c89315c936401f7de90c675c9bf791075cd2b",
+            "vs2te.13m": "0392754b9108539bff7163be44c5fff2eaff867f7c27f194b3ea0aa10a366725",
+            "vs2te.15m": "13d6380e3d89d2cd6d389d434b1c964408dc67ff5b31eacee633551d7027f72e",
+            "vs2te.17m": "6e46741c814c7c500e6b82ad87b541c70451cb63ac28102065d41d1c763e3e42",
+            "vs2te.19m": "7e6c4b98fe46ceeae9510dfaa286b950f268a14aa66161914c17be9dc3862cbb",
+            "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+          }
+        }
+      },
+      "platform": "fbneo",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-hbmame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0ec88cb3d1a2329b4fbc",
+        "source-15a31774fec9426f927e",
+        "source-220f33b55e4978a8d84c",
+        "source-27081d58de50f3905988",
+        "source-277a26797d2507875d00",
+        "source-347d82db84ec3b17a46a",
+        "source-3b385c35bb68659e2561",
+        "source-4030a7de364d0da1d9e2",
+        "source-524a25bcd153be24594d",
+        "source-63a4f7b14e37e3ecd33e",
+        "source-65697c143e06b4cd3bf8",
+        "source-74c845c2d978441611fc",
+        "source-8537c742042603301783",
+        "source-86e491a3cd8b3ea535ab",
+        "source-8e9746a570e2522b4ce8",
+        "source-9cd791ed27cd29f14901",
+        "source-9ce04df3d39eb33c8fd0",
+        "source-9e433561696cf187b863",
+        "source-c8a4531e4835d9e381a9",
+        "source-d4af6d05b69fe1d5ad4a",
+        "source-e6fae88f5bfd52c0d3ef",
+        "source-fbebcba2ad83d0b1df76"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/vsav2.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vs2.01": "27081d58de50f3905988d2521d1448776c20bd25d357c6be4a33e9e21f2c2bed",
+            "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+            "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+            "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+            "vs2.13m": "9ce04df3d39eb33c8fd05f2119006df5542c6104612541ec6810c3d161cc07fe",
+            "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vs2.15m": "c8a4531e4835d9e381a99d204090cd418753cbe610f7050b25ab7d322e6bbb86",
+            "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vs2.17m": "e6fae88f5bfd52c0d3ef341b77704ad27f920bec5f35e12aaaf5f2b160ea3178",
+            "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vs2.19m": "277a26797d2507875d00b21158fc3edd7d03557fea045a7e86950d421ffd433c",
+            "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vs2j.03": "d4af6d05b69fe1d5ad4abc713b418329b0a2c44a62524c888c0820d00945a369",
+            "vs2j.04": "9e433561696cf187b8630f45ca7d5bb12a61a495ee9556f2a91e05ba08e9dbde",
+            "vs2j.05": "15a31774fec9426f927e4129338c88164fd39617824e9899d2e2d77b9f196d12",
+            "vs2j.06": "86e491a3cd8b3ea535abce569d7850bdc3a50e6e1043b90d5b0b6bd42b9caed9",
+            "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+            "vs2j.08": "74c845c2d978441611fc6d8c382d06f13a5e1d3c2ca7a4b3ae1227aada3be1a8",
+            "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+            "vs2j.10": "0ec88cb3d1a2329b4fbc44d0fc703170f96396e1c6c6fc50b9dfd5109f2bda58",
+            "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+          }
+        },
+        "roms/vsav2s04.zip": {
+          "members": {
+            "c76s04.c1": "0392754b9108539bff7163be44c5fff2eaff867f7c27f194b3ea0aa10a366725",
+            "c76s04.c2": "13d6380e3d89d2cd6d389d434b1c964408dc67ff5b31eacee633551d7027f72e",
+            "c76s04.c3": "6e46741c814c7c500e6b82ad87b541c70451cb63ac28102065d41d1c763e3e42",
+            "c76s04.c4": "7e6c4b98fe46ceeae9510dfaa286b950f268a14aa66161914c17be9dc3862cbb",
+            "c76s04.p1": "5f4e3be6495b527ecf67883534b994782f4477b4b073f5f7c588ad7d0d5d5e3d",
+            "c76s04.p2": "d5f45dc0fabc3822468db23602e6958a45ded7e7dce47109af2a014d63d8ad12",
+            "c76s04.p6": "bc0a02103b77010c61484651ff9c89315c936401f7de90c675c9bf791075cd2b"
+          }
+        }
+      },
+      "platform": "hbmame",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0ec88cb3d1a2329b4fbc",
+        "source-15a31774fec9426f927e",
+        "source-220f33b55e4978a8d84c",
+        "source-27081d58de50f3905988",
+        "source-277a26797d2507875d00",
+        "source-347d82db84ec3b17a46a",
+        "source-3b385c35bb68659e2561",
+        "source-4030a7de364d0da1d9e2",
+        "source-524a25bcd153be24594d",
+        "source-63a4f7b14e37e3ecd33e",
+        "source-65697c143e06b4cd3bf8",
+        "source-74c845c2d978441611fc",
+        "source-8537c742042603301783",
+        "source-86e491a3cd8b3ea535ab",
+        "source-8e9746a570e2522b4ce8",
+        "source-9cd791ed27cd29f14901",
+        "source-9ce04df3d39eb33c8fd0",
+        "source-9e433561696cf187b863",
+        "source-c8a4531e4835d9e381a9",
+        "source-d4af6d05b69fe1d5ad4a",
+        "source-e6fae88f5bfd52c0d3ef",
+        "source-fbebcba2ad83d0b1df76"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/vsav2.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vs2.01": "27081d58de50f3905988d2521d1448776c20bd25d357c6be4a33e9e21f2c2bed",
+            "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+            "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+            "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+            "vs2.13m": "0392754b9108539bff7163be44c5fff2eaff867f7c27f194b3ea0aa10a366725",
+            "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vs2.15m": "13d6380e3d89d2cd6d389d434b1c964408dc67ff5b31eacee633551d7027f72e",
+            "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vs2.17m": "6e46741c814c7c500e6b82ad87b541c70451cb63ac28102065d41d1c763e3e42",
+            "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vs2.19m": "7e6c4b98fe46ceeae9510dfaa286b950f268a14aa66161914c17be9dc3862cbb",
+            "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vs2j.03": "5f4e3be6495b527ecf67883534b994782f4477b4b073f5f7c588ad7d0d5d5e3d",
+            "vs2j.04": "d5f45dc0fabc3822468db23602e6958a45ded7e7dce47109af2a014d63d8ad12",
+            "vs2j.05": "15a31774fec9426f927e4129338c88164fd39617824e9899d2e2d77b9f196d12",
+            "vs2j.06": "86e491a3cd8b3ea535abce569d7850bdc3a50e6e1043b90d5b0b6bd42b9caed9",
+            "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+            "vs2j.08": "bc0a02103b77010c61484651ff9c89315c936401f7de90c675c9bf791075cd2b",
+            "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+            "vs2j.10": "0ec88cb3d1a2329b4fbc44d0fc703170f96396e1c6c6fc50b9dfd5109f2bda58",
+            "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+          }
+        }
+      },
+      "platform": "mame",
+      "profile": "vsav2-english-default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mister": {
+      "destination_requirements": "Use the MiSTer core named by the included MRA.",
+      "inputs": [
+        "source-0ec88cb3d1a2329b4fbc",
+        "source-15a31774fec9426f927e",
+        "source-220f33b55e4978a8d84c",
+        "source-27081d58de50f3905988",
+        "source-277a26797d2507875d00",
+        "source-347d82db84ec3b17a46a",
+        "source-3b385c35bb68659e2561",
+        "source-4030a7de364d0da1d9e2",
+        "source-524a25bcd153be24594d",
+        "source-63a4f7b14e37e3ecd33e",
+        "source-65697c143e06b4cd3bf8",
+        "source-74c845c2d978441611fc",
+        "source-8537c742042603301783",
+        "source-86e491a3cd8b3ea535ab",
+        "source-8e9746a570e2522b4ce8",
+        "source-9cd791ed27cd29f14901",
+        "source-9ce04df3d39eb33c8fd0",
+        "source-9e433561696cf187b863",
+        "source-c8a4531e4835d9e381a9",
+        "source-d4af6d05b69fe1d5ad4a",
+        "source-e6fae88f5bfd52c0d3ef",
+        "source-fbebcba2ad83d0b1df76"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Restorations/Vampire Savior 2 (USA) [English Translation].mra": {
+          "sha256": "5c2c7e069e002ebd572631c949181e193418ebe98022068da62262ec7648c3b6"
+        },
+        "games/mame/vsav2.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vs2.01": "27081d58de50f3905988d2521d1448776c20bd25d357c6be4a33e9e21f2c2bed",
+            "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+            "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+            "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+            "vs2.13m": "9ce04df3d39eb33c8fd05f2119006df5542c6104612541ec6810c3d161cc07fe",
+            "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vs2.15m": "c8a4531e4835d9e381a99d204090cd418753cbe610f7050b25ab7d322e6bbb86",
+            "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vs2.17m": "e6fae88f5bfd52c0d3ef341b77704ad27f920bec5f35e12aaaf5f2b160ea3178",
+            "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vs2.19m": "277a26797d2507875d00b21158fc3edd7d03557fea045a7e86950d421ffd433c",
+            "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vs2j.03": "d4af6d05b69fe1d5ad4abc713b418329b0a2c44a62524c888c0820d00945a369",
+            "vs2j.04": "9e433561696cf187b8630f45ca7d5bb12a61a495ee9556f2a91e05ba08e9dbde",
+            "vs2j.05": "15a31774fec9426f927e4129338c88164fd39617824e9899d2e2d77b9f196d12",
+            "vs2j.06": "86e491a3cd8b3ea535abce569d7850bdc3a50e6e1043b90d5b0b6bd42b9caed9",
+            "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+            "vs2j.08": "74c845c2d978441611fc6d8c382d06f13a5e1d3c2ca7a4b3ae1227aada3be1a8",
+            "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+            "vs2j.10": "0ec88cb3d1a2329b4fbc44d0fc703170f96396e1c6c6fc50b9dfd5109f2bda58",
+            "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+          }
+        }
+      },
+      "platform": "mister",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    }
+  }
+}

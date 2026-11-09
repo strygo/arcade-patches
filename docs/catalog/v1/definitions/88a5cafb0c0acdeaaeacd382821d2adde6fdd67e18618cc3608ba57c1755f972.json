@@ -1,0 +1,2954 @@
+{
+  "api": 1,
+  "execution": {
+    "common": {
+      "README.txt": {
+        "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+      },
+      "cps2_code_guard.py": {
+        "sha256": "867fa8d85bc5d6dd7be2190060b7903f6a262ce10281115272a42d51e2151a34"
+      },
+      "cps2_crypt.py": {
+        "sha256": "0f38afa21b9d0b70ca0b57b33203594a2e8630a341803b41d84f586405488ed6"
+      },
+      "darksoft.py": {
+        "sha256": "0aa90597d20ab9ec3b0f003e7c854ca9ee9353e46405edbdcb681ff365323a6c"
+      },
+      "darksoft_profiles.json": {
+        "sha256": "1d85cdbb7b1e0a86207b9f44b4620ea1e50f6467968fa38ccbdeda43809741c4"
+      },
+      "fbneo_names.json": {
+        "sha256": "ea023cbfd443823bf43ce4b8ce495f854bb00416904dc0ada0080f7085872980"
+      },
+      "fbneo_names.py": {
+        "sha256": "980ecc6ccb4abd9dffc47c5b1af21ae93ebc18cf73b5861aed9b5790c7b78c5c"
+      },
+      "hiscore.py": {
+        "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+      },
+      "mra_assembly.py": {
+        "sha256": "12e8b9d5d9ca0a1c6b66388baa29b5fc4d52297a78004811c65a529b62022cc9"
+      },
+      "nsp.py": {
+        "sha256": "9db517c389045df067ffbddf5a170152065ddb2264f39ad9ec5a9086a85ae60f"
+      },
+      "payload.py": {
+        "sha256": "21bad4f6bf638da0c52270fe226dce1432b32a93a4dd0cb10006485ad4955af3"
+      },
+      "policy.py": {
+        "sha256": "0aaf83edccd7064ba804605ff5103e99326e4309ab6aeedaffa38481c8140ac3"
+      },
+      "source-kit.json": {
+        "sha256": "8bbea97f9824b7233ceb959f0b00a86437d8d4a5e0ebd45050591e82ab07b062"
+      },
+      "stock_mame.py": {
+        "sha256": "166c271c024e631365fcc3d4a24729a50e19b67aedb1b087593dc672a11bf634"
+      },
+      "switch_source.py": {
+        "sha256": "2b3a0c39ee1f4a30a91a9d505ee1244c2648fea69d34228429335b2ed1357b11"
+      },
+      "verify.py": {
+        "sha256": "d5c142fd213f2b86e277387f6317842a581bfddc4d679fbc4d50877b02e1cd93"
+      },
+      "verify_output.py": {
+        "sha256": "14e38bc195574cb87e484f04f0ff490c4dbc97f923a08a5a7663906ef677da5c"
+      }
+    },
+    "keys": "switch-production-keys",
+    "manifest_sha256": "b19c8f13fe6b4defe68ce232e578a7a334ca312ced75754adb77881495f62530",
+    "targets": {
+      "usf2j8-darksoft": {
+        "device_key": "rom-524a25bcd153be24594d",
+        "device_output": null,
+        "kit_mapping": {
+          "README.txt": "support/usf2-backport/README-original.txt"
+        },
+        "mapping": {
+          "darksoft/games/usf2_jp/NAME": "games/usf2_jp/NAME",
+          "darksoft/games/usf2_jp/flash.01": "games/usf2_jp/flash.01",
+          "darksoft/games/usf2_jp/flash.02": "games/usf2_jp/flash.02",
+          "darksoft/games/usf2_jp/flash.03": "games/usf2_jp/flash.03",
+          "darksoft/games/usf2_jp/flash.04": "games/usf2_jp/flash.04",
+          "darksoft/games/usf2_jp/flash.05": "games/usf2_jp/flash.05",
+          "darksoft/games/usf2_jp/flash.06": "games/usf2_jp/flash.06",
+          "darksoft/games/usf2_jp/flash.07": "games/usf2_jp/flash.07",
+          "darksoft/games/usf2_jp/flash.08": "games/usf2_jp/flash.08",
+          "darksoft/games/usf2_jp/flash.09": "games/usf2_jp/flash.09",
+          "darksoft/games/usf2_jp/flash.10": "games/usf2_jp/flash.10",
+          "darksoft/games/usf2_jp/flash.11": "games/usf2_jp/flash.11",
+          "darksoft/games/usf2_jp/flash.12": "games/usf2_jp/flash.12",
+          "darksoft/games/usf2_jp/key": "games/usf2_jp/key",
+          "darksoft/receipts/usf2_jp.json": "receipts/usf2_jp.json",
+          "darksoft/verification/dl-1425.bin": "support/usf2-backport/verification/dl-1425.bin"
+        },
+        "nsp": "game-3266ccd2c611bbae4f2f",
+        "outputs": {
+          "games/usf2_jp/NAME": {
+            "sha256": "f23fa969ab95f07580f2e9bb14fa3a9a468e4fb3d46414665394a52ac8b5b8b3"
+          },
+          "games/usf2_jp/flash.01": {
+            "sha256": "bf444d2dd2dbda3f22628ce81da8ce387f1c36ee48f04e1c2564ef161785d80e"
+          },
+          "games/usf2_jp/flash.02": {
+            "sha256": "014e35d38439e80fca4c7bf379fe8884b6851bc0782db8afe22f8ad12c427037"
+          },
+          "games/usf2_jp/flash.03": {
+            "sha256": "65288e84097a7772e310a2ea159cabdb23786ef3893250835c3b86e4a606efa3"
+          },
+          "games/usf2_jp/flash.04": {
+            "sha256": "3e8151df7301ae7797d45d8142c606df98ea2e01d86062bbc8276ba3bf9eeab3"
+          },
+          "games/usf2_jp/flash.05": {
+            "sha256": "623430e59307fd2a74cb62ec7745e853b26864c14ba779f45c616a356af89d8d"
+          },
+          "games/usf2_jp/flash.06": {
+            "sha256": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71"
+          },
+          "games/usf2_jp/flash.07": {
+            "sha256": "01261c24ac2e8323817b61775cd2b298618bad4909c8870fb63fdca4fdcb5362"
+          },
+          "games/usf2_jp/flash.08": {
+            "sha256": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe"
+          },
+          "games/usf2_jp/flash.09": {
+            "sha256": "7b618223c47e6fb554e7959dd799bad39c6bc2bfeaf2ef163233ac83f6888cca"
+          },
+          "games/usf2_jp/flash.10": {
+            "sha256": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958"
+          },
+          "games/usf2_jp/flash.11": {
+            "sha256": "544a92f8aafe1c2972ffd148e08a40f453664aa08400b099972e6be46b399f17"
+          },
+          "games/usf2_jp/flash.12": {
+            "sha256": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07"
+          },
+          "games/usf2_jp/key": {
+            "sha256": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+          },
+          "receipts/usf2_jp.json": {
+            "sha256": "d61750cad2bee55d43e24b08c83e9b643ed7729a8d7ce61286cdf856ed49d337"
+          },
+          "support/usf2-backport/README-original.txt": {
+            "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+          },
+          "support/usf2-backport/verification/dl-1425.bin": {
+            "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "platform": "darksoft",
+        "profile": "usf2j8",
+        "region": "jp",
+        "sources": {
+          "dl-1425.bin": "rom-524a25bcd153be24594d",
+          "sfx.01": "rom-d537d760fa86c3d77cb5",
+          "sfx.02": "rom-45aa9b70ae78f1f29c38",
+          "sfx.09": "rom-4612b2b6e64b2c3ca2d6",
+          "sfx.11m": "rom-cbf9d809b1d5958d8898",
+          "sfx.12m": "rom-2197f85af99c7a2b4d61",
+          "sfx.13m": "rom-54a738964d44cbdc1dac",
+          "sfx.14m": "rom-6500f8613d48f7e880e2",
+          "sfx.15m": "rom-6666265d84da4a2b8155",
+          "sfx.16m": "rom-44b4a66645a2a982e009",
+          "sfx.17m": "rom-40df56cf82388684ad81",
+          "sfx.18m": "rom-5db3d68b3088f7596618",
+          "sfx.19m": "rom-c90642f04d64409110c5",
+          "sfx.20m": "rom-0f045013e1f0d04febe1",
+          "sfx.21m": "rom-eabc7eac8882a1d3600c",
+          "sfx.23m": "rom-4c5a2f8b746fa5a4a7ce",
+          "sfx.25m": "rom-d40e6a5ad1659368cde1",
+          "sfx.27m": "rom-569e44101fa2dd0ba5b4",
+          "sfxj.03d": "rom-ac7a8d48543f9c526929",
+          "sfxj.04a": "rom-6d782ac2d5a994bcf31a",
+          "sfxj.05": "rom-091ac51001654e957bc9",
+          "sfxj.06b": "rom-c981e15abcaecc4d7d73",
+          "sfxj.07a": "rom-2768b60c6442800b32e5",
+          "sfxj.08": "rom-1863b3049553b0a10865",
+          "ssf2xj.key": "rom-0e41159ac6190b24db92"
+        }
+      },
+      "usf2j8-fbneo": {
+        "device_key": "rom-524a25bcd153be24594d",
+        "device_output": "roms/qsound.zip",
+        "kit_mapping": {
+          "README.txt": "support/usf2-backport/README-original.txt"
+        },
+        "mapping": {
+          "fbneo/usf2j.zip": "roms/usf2j.zip",
+          "fbneo/verification/dl-1425.bin": "support/usf2-backport/verification/dl-1425.bin"
+        },
+        "nsp": "game-3266ccd2c611bbae4f2f",
+        "outputs": {
+          "roms/qsound.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+            }
+          },
+          "roms/usf2j.zip": {
+            "members": {
+              "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+              "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+              "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+              "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+              "usf2j.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+              "usf2j.13m": "d55720df34a4e35a8c07944c849689f01cabc01158c9d562c388ff39024298e0",
+              "usf2j.14m": "b428d162dc2059c164961a03c00d7338b8aa53e0f29dd356a1e69d91bb2476c2",
+              "usf2j.29m": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71",
+              "usf2j.31m": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe",
+              "usf2j.33m": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958",
+              "usf2j.35m": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07",
+              "usfx.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+              "usfx.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+              "usfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+              "usfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+              "usfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+              "usfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+              "usfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+              "usfxj.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+              "usfxj.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+              "usfxj.03d": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+              "usfxj.04a": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+              "usfxj.11m": "cbb162a79d806a4e94b0e1f418329adaeb42bfa8f49d9195f38533fd02f7507d",
+              "usfxj.13m": "eec5d8a1328d67b9d69d071bffee7419511fd1125118c1b307621dffec89183f",
+              "usfxj.15m": "b6ee14f78eddd6afc3a87ac8f93db56beab6ae69baeba2b7e3f2ccaec252f1c2",
+              "usfxj.17m": "fa98a629959e3c19d0dbc01257a655a645d75e5478ec452397e998d6d0a61b20",
+              "usfxj.19m": "24e4498e482d2ec181b31bcd81fe0d3afeebad44317ed6aa2396c0157fdb6e97",
+              "usfxj.21m": "3cc4b53ccb23e4455f964685f46b705459134134bf7a4244546f06f6922174cc",
+              "usfxj.23m": "6b35d22816983c09caf078512d35a4a3bbb71b73d6a61d24a9ed119946c8dd1c",
+              "usfxj.25m": "406d1d442f3c07eb42a1565dbf4df5d76828397ab4a8abedb2113feddc80707a",
+              "usfxj.27m": "05783662d317c5ddc1b454b117c091279bc62029ad07531a5badcc4adb448ab8"
+            }
+          },
+          "support/usf2-backport/README-original.txt": {
+            "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+          },
+          "support/usf2-backport/verification/dl-1425.bin": {
+            "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "platform": "fbneo",
+        "profile": "usf2j8",
+        "region": "jp",
+        "sources": {
+          "dl-1425.bin": "rom-524a25bcd153be24594d",
+          "sfx.01": "rom-d537d760fa86c3d77cb5",
+          "sfx.02": "rom-45aa9b70ae78f1f29c38",
+          "sfx.09": "rom-4612b2b6e64b2c3ca2d6",
+          "sfx.11m": "rom-cbf9d809b1d5958d8898",
+          "sfx.12m": "rom-2197f85af99c7a2b4d61",
+          "sfx.13m": "rom-54a738964d44cbdc1dac",
+          "sfx.14m": "rom-6500f8613d48f7e880e2",
+          "sfx.15m": "rom-6666265d84da4a2b8155",
+          "sfx.16m": "rom-44b4a66645a2a982e009",
+          "sfx.17m": "rom-40df56cf82388684ad81",
+          "sfx.18m": "rom-5db3d68b3088f7596618",
+          "sfx.19m": "rom-c90642f04d64409110c5",
+          "sfx.20m": "rom-0f045013e1f0d04febe1",
+          "sfx.21m": "rom-eabc7eac8882a1d3600c",
+          "sfx.23m": "rom-4c5a2f8b746fa5a4a7ce",
+          "sfx.25m": "rom-d40e6a5ad1659368cde1",
+          "sfx.27m": "rom-569e44101fa2dd0ba5b4",
+          "sfxj.03d": "rom-ac7a8d48543f9c526929",
+          "sfxj.04a": "rom-6d782ac2d5a994bcf31a",
+          "sfxj.05": "rom-091ac51001654e957bc9",
+          "sfxj.06b": "rom-c981e15abcaecc4d7d73",
+          "sfxj.07a": "rom-2768b60c6442800b32e5",
+          "sfxj.08": "rom-1863b3049553b0a10865",
+          "ssf2xj.key": "rom-0e41159ac6190b24db92"
+        }
+      },
+      "usf2j8-hbmame": {
+        "device_key": "rom-524a25bcd153be24594d",
+        "device_output": "roms/qsound.zip",
+        "kit_mapping": {
+          "README.txt": "support/usf2-backport/README-original.txt"
+        },
+        "mapping": {
+          "hbmame/hiscore.py": "roms/hiscore.py",
+          "hbmame/usf2-hiscore.json": "roms/usf2-hiscore.json",
+          "hbmame/usf2j.zip": "roms/usf2j.zip"
+        },
+        "nsp": "game-3266ccd2c611bbae4f2f",
+        "outputs": {
+          "roms/hiscore.py": {
+            "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+          },
+          "roms/qsound.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+            }
+          },
+          "roms/usf2-hiscore.json": {
+            "sha256": "68a4d213cfbfbbed4d610fc2808ef7fe1f56c236a4d27e9b8d735cba006d7745"
+          },
+          "roms/usf2j.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+              "sfx.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+              "sfx.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+              "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+              "sfx.11m": "cbb162a79d806a4e94b0e1f418329adaeb42bfa8f49d9195f38533fd02f7507d",
+              "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+              "sfx.13m": "eec5d8a1328d67b9d69d071bffee7419511fd1125118c1b307621dffec89183f",
+              "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+              "sfx.15m": "b6ee14f78eddd6afc3a87ac8f93db56beab6ae69baeba2b7e3f2ccaec252f1c2",
+              "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+              "sfx.17m": "fa98a629959e3c19d0dbc01257a655a645d75e5478ec452397e998d6d0a61b20",
+              "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+              "sfx.19m": "24e4498e482d2ec181b31bcd81fe0d3afeebad44317ed6aa2396c0157fdb6e97",
+              "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+              "sfx.21m": "3cc4b53ccb23e4455f964685f46b705459134134bf7a4244546f06f6922174cc",
+              "sfx.23m": "6b35d22816983c09caf078512d35a4a3bbb71b73d6a61d24a9ed119946c8dd1c",
+              "sfx.25m": "406d1d442f3c07eb42a1565dbf4df5d76828397ab4a8abedb2113feddc80707a",
+              "sfx.27m": "05783662d317c5ddc1b454b117c091279bc62029ad07531a5badcc4adb448ab8",
+              "sfxj.03d": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+              "sfxj.04a": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+              "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+              "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+              "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+              "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+              "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+              "usf2.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+              "usf2.13m": "d55720df34a4e35a8c07944c849689f01cabc01158c9d562c388ff39024298e0",
+              "usf2.14m": "b428d162dc2059c164961a03c00d7338b8aa53e0f29dd356a1e69d91bb2476c2",
+              "usf2.29m": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71",
+              "usf2.31m": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe",
+              "usf2.33m": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958",
+              "usf2.35m": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07"
+            }
+          },
+          "support/usf2-backport/README-original.txt": {
+            "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+          }
+        },
+        "platform": "hbmame",
+        "profile": "usf2j8",
+        "region": "jp",
+        "shared_hiscore": {
+          "archive": "hbmame/usf2j.zip",
+          "machine": "usf2j",
+          "source": "hbmame/usf2-hiscore.json",
+          "text": "{\n  \"schema\": 1,\n  \"archives\": {\n    \"usf2j\": \"0768927393396a341f7227c368cf36d1f3dbd4b6de9fe85c5c07d283844ada11\",\n    \"usf2u\": \"76ac091f66e38e1d8fef14a6a229b2d3406c608a3c4267d9c34d1dd3d274f643\"\n  }\n}\n"
+        },
+        "sources": {
+          "dl-1425.bin": "rom-524a25bcd153be24594d",
+          "sfx.01": "rom-d537d760fa86c3d77cb5",
+          "sfx.02": "rom-45aa9b70ae78f1f29c38",
+          "sfx.09": "rom-4612b2b6e64b2c3ca2d6",
+          "sfx.11m": "rom-cbf9d809b1d5958d8898",
+          "sfx.12m": "rom-2197f85af99c7a2b4d61",
+          "sfx.13m": "rom-54a738964d44cbdc1dac",
+          "sfx.14m": "rom-6500f8613d48f7e880e2",
+          "sfx.15m": "rom-6666265d84da4a2b8155",
+          "sfx.16m": "rom-44b4a66645a2a982e009",
+          "sfx.17m": "rom-40df56cf82388684ad81",
+          "sfx.18m": "rom-5db3d68b3088f7596618",
+          "sfx.19m": "rom-c90642f04d64409110c5",
+          "sfx.20m": "rom-0f045013e1f0d04febe1",
+          "sfx.21m": "rom-eabc7eac8882a1d3600c",
+          "sfx.23m": "rom-4c5a2f8b746fa5a4a7ce",
+          "sfx.25m": "rom-d40e6a5ad1659368cde1",
+          "sfx.27m": "rom-569e44101fa2dd0ba5b4",
+          "sfxj.03d": "rom-ac7a8d48543f9c526929",
+          "sfxj.04a": "rom-6d782ac2d5a994bcf31a",
+          "sfxj.05": "rom-091ac51001654e957bc9",
+          "sfxj.06b": "rom-c981e15abcaecc4d7d73",
+          "sfxj.07a": "rom-2768b60c6442800b32e5",
+          "sfxj.08": "rom-1863b3049553b0a10865",
+          "ssf2xj.key": "rom-0e41159ac6190b24db92"
+        }
+      },
+      "usf2j8-mame": {
+        "device_key": "rom-524a25bcd153be24594d",
+        "device_output": "roms/qsound.zip",
+        "kit_mapping": {
+          "README.txt": "support/usf2-backport/README-original.txt"
+        },
+        "mapping": {
+          "mame/hiscore.py": "roms/hiscore.py",
+          "mame/hsf2j.zip": "roms/hsf2j.zip",
+          "mame/usf2-hiscore.json": "roms/usf2-hiscore.json"
+        },
+        "nsp": "game-3266ccd2c611bbae4f2f",
+        "outputs": {
+          "roms/hiscore.py": {
+            "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+          },
+          "roms/hsf2j.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+              "hs2.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+              "hs2.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+              "hs2.11m": "9fbcce912173ef6880f949967a53b8d25a4465a4b557d68b2c467b9de5309a05",
+              "hs2.13m": "e3e4ffc46640395e90ba2e670709a9304953de23a499afbcf162af7fe9b806ed",
+              "hs2.15m": "20abf4b8dc3a7db8a3afd5f2b902d567c5a18fcd4493ebc7483b4868568b693c",
+              "hs2.17m": "d2bbfc1ff7c034590e80f05f95da94b9093e6f193e839546db34702fe57fc16a",
+              "hs2.19m": "0de8291b744d390e075ce25ca439ca09f88006849caffe171190bef0c094ea03",
+              "hs2j.03c": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+              "hs2j.04b": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+              "hs2j.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+              "hs2j.06": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+              "hs2j.07": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+              "hs2j.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+              "hs2j.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+              "hs2j.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+              "hsf2j.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+            }
+          },
+          "roms/qsound.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+            }
+          },
+          "roms/usf2-hiscore.json": {
+            "sha256": "79e81eb2d99ede1468f61ff6b0072987f9a0b1eb6e8c2c72e218d7da0de8fa92"
+          },
+          "support/usf2-backport/README-original.txt": {
+            "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+          }
+        },
+        "platform": "mame",
+        "profile": "usf2j8",
+        "region": "jp",
+        "shared_hiscore": {
+          "archive": "mame/hsf2j.zip",
+          "machine": "hsf2j",
+          "source": "mame/usf2-hiscore.json",
+          "text": "{\n  \"schema\": 1,\n  \"archives\": {\n    \"hsf2j\": \"5a6f541e79faf5f731f040ff441a6f080b45192216935725fe298653f506c716\",\n    \"hsf2\": \"a047d3a81e57796c9b1130b05e1bcb5e8e7a8cccc4f17c65c983538b572143e2\"\n  }\n}\n"
+        },
+        "sources": {
+          "dl-1425.bin": "rom-524a25bcd153be24594d",
+          "sfx.01": "rom-d537d760fa86c3d77cb5",
+          "sfx.02": "rom-45aa9b70ae78f1f29c38",
+          "sfx.09": "rom-4612b2b6e64b2c3ca2d6",
+          "sfx.11m": "rom-cbf9d809b1d5958d8898",
+          "sfx.12m": "rom-2197f85af99c7a2b4d61",
+          "sfx.13m": "rom-54a738964d44cbdc1dac",
+          "sfx.14m": "rom-6500f8613d48f7e880e2",
+          "sfx.15m": "rom-6666265d84da4a2b8155",
+          "sfx.16m": "rom-44b4a66645a2a982e009",
+          "sfx.17m": "rom-40df56cf82388684ad81",
+          "sfx.18m": "rom-5db3d68b3088f7596618",
+          "sfx.19m": "rom-c90642f04d64409110c5",
+          "sfx.20m": "rom-0f045013e1f0d04febe1",
+          "sfx.21m": "rom-eabc7eac8882a1d3600c",
+          "sfx.23m": "rom-4c5a2f8b746fa5a4a7ce",
+          "sfx.25m": "rom-d40e6a5ad1659368cde1",
+          "sfx.27m": "rom-569e44101fa2dd0ba5b4",
+          "sfxj.03d": "rom-ac7a8d48543f9c526929",
+          "sfxj.04a": "rom-6d782ac2d5a994bcf31a",
+          "sfxj.05": "rom-091ac51001654e957bc9",
+          "sfxj.06b": "rom-c981e15abcaecc4d7d73",
+          "sfxj.07a": "rom-2768b60c6442800b32e5",
+          "sfxj.08": "rom-1863b3049553b0a10865",
+          "ssf2xj.key": "rom-0e41159ac6190b24db92"
+        }
+      },
+      "usf2j8-mister": {
+        "device_key": "rom-524a25bcd153be24594d",
+        "device_output": null,
+        "kit_mapping": {
+          "README.txt": "support/usf2-backport/README-original.txt"
+        },
+        "mapping": {
+          "mister/_Arcade/_Arcade Patches/_Restorations/_Japan/Ultra Street Fighter II (Japan) [Backport].mra": "_Arcade/_Arcade Patches/_Restorations/_Japan/Ultra Street Fighter II (Japan) [Backport].mra",
+          "mister/_Arcade/cores/GPL-3.0.txt": "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/GPL-3.0.txt",
+          "mister/_Arcade/cores/SOURCE_AND_LICENSE.txt": "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/SOURCE_AND_LICENSE.txt",
+          "mister/_Arcade/cores/cps2_core_release.json": "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/cps2_core_release.json",
+          "mister/_Arcade/cores/jtcps2-cpsplus_20261101.rbf": "_Arcade/cores/jtcps2-cpsplus_20261101.rbf",
+          "mister/games/CPS+/usf2_arrange.zip": "games/CPS+/usf2_arrange.zip",
+          "mister/games/mame/usf2j.zip": "games/mame/usf2j.zip"
+        },
+        "nsp": "game-3266ccd2c611bbae4f2f",
+        "outputs": {
+          "_Arcade/_Arcade Patches/_Restorations/_Japan/Ultra Street Fighter II (Japan) [Backport].mra": {
+            "sha256": "e296276c5be3b5105cc20e5f1c62d848e876816046e00dc04f0306e7c4335112"
+          },
+          "_Arcade/cores/jtcps2-cpsplus_20261101.rbf": {
+            "sha256": "23b23a2a7a38b88d959a2cc3df5d970d3ccb5f16fda6ffc5eb491888244db397"
+          },
+          "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/GPL-3.0.txt": {
+            "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+          },
+          "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/SOURCE_AND_LICENSE.txt": {
+            "sha256": "91d07d949bc2d912b8ee8d222ca8009b9f9bbc2e2a380d06b9338a40070a3a31"
+          },
+          "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/cps2_core_release.json": {
+            "sha256": "b59eb80289f177b2afd96c0964b41242b2632ce518c1689c3feac7adeaaa81b6"
+          },
+          "games/CPS+/usf2_arrange.zip": {
+            "members": {
+              "usf2_arrange.cpk": "18948ce8280dfd20285d6f383505eedf616ed2cea137a84ea5f327d7bf3b7f56"
+            }
+          },
+          "games/mame/usf2j.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+              "sfx.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+              "sfx.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+              "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+              "sfx.11m": "cbb162a79d806a4e94b0e1f418329adaeb42bfa8f49d9195f38533fd02f7507d",
+              "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+              "sfx.13m": "eec5d8a1328d67b9d69d071bffee7419511fd1125118c1b307621dffec89183f",
+              "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+              "sfx.15m": "b6ee14f78eddd6afc3a87ac8f93db56beab6ae69baeba2b7e3f2ccaec252f1c2",
+              "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+              "sfx.17m": "fa98a629959e3c19d0dbc01257a655a645d75e5478ec452397e998d6d0a61b20",
+              "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+              "sfx.19m": "24e4498e482d2ec181b31bcd81fe0d3afeebad44317ed6aa2396c0157fdb6e97",
+              "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+              "sfx.21m": "3cc4b53ccb23e4455f964685f46b705459134134bf7a4244546f06f6922174cc",
+              "sfx.23m": "6b35d22816983c09caf078512d35a4a3bbb71b73d6a61d24a9ed119946c8dd1c",
+              "sfx.25m": "406d1d442f3c07eb42a1565dbf4df5d76828397ab4a8abedb2113feddc80707a",
+              "sfx.27m": "05783662d317c5ddc1b454b117c091279bc62029ad07531a5badcc4adb448ab8",
+              "sfxj.03d": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+              "sfxj.04a": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+              "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+              "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+              "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+              "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+              "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+              "usf2.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+              "usf2.13m": "d55720df34a4e35a8c07944c849689f01cabc01158c9d562c388ff39024298e0",
+              "usf2.14m": "b428d162dc2059c164961a03c00d7338b8aa53e0f29dd356a1e69d91bb2476c2",
+              "usf2.29m": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71",
+              "usf2.31m": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe",
+              "usf2.33m": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958",
+              "usf2.35m": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07"
+            }
+          },
+          "support/usf2-backport/README-original.txt": {
+            "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+          }
+        },
+        "platform": "mister",
+        "profile": "usf2j8",
+        "region": "jp",
+        "sources": {
+          "dl-1425.bin": "rom-524a25bcd153be24594d",
+          "sfx.01": "rom-d537d760fa86c3d77cb5",
+          "sfx.02": "rom-45aa9b70ae78f1f29c38",
+          "sfx.09": "rom-4612b2b6e64b2c3ca2d6",
+          "sfx.11m": "rom-cbf9d809b1d5958d8898",
+          "sfx.12m": "rom-2197f85af99c7a2b4d61",
+          "sfx.13m": "rom-54a738964d44cbdc1dac",
+          "sfx.14m": "rom-6500f8613d48f7e880e2",
+          "sfx.15m": "rom-6666265d84da4a2b8155",
+          "sfx.16m": "rom-44b4a66645a2a982e009",
+          "sfx.17m": "rom-40df56cf82388684ad81",
+          "sfx.18m": "rom-5db3d68b3088f7596618",
+          "sfx.19m": "rom-c90642f04d64409110c5",
+          "sfx.20m": "rom-0f045013e1f0d04febe1",
+          "sfx.21m": "rom-eabc7eac8882a1d3600c",
+          "sfx.23m": "rom-4c5a2f8b746fa5a4a7ce",
+          "sfx.25m": "rom-d40e6a5ad1659368cde1",
+          "sfx.27m": "rom-569e44101fa2dd0ba5b4",
+          "sfxj.03d": "rom-ac7a8d48543f9c526929",
+          "sfxj.04a": "rom-6d782ac2d5a994bcf31a",
+          "sfxj.05": "rom-091ac51001654e957bc9",
+          "sfxj.06b": "rom-c981e15abcaecc4d7d73",
+          "sfxj.07a": "rom-2768b60c6442800b32e5",
+          "sfxj.08": "rom-1863b3049553b0a10865",
+          "ssf2xj.key": "rom-0e41159ac6190b24db92"
+        }
+      },
+      "usf2t8-darksoft": {
+        "device_key": "rom-524a25bcd153be24594d",
+        "device_output": null,
+        "kit_mapping": {
+          "README.txt": "support/usf2-backport/README-original.txt"
+        },
+        "mapping": {
+          "darksoft/games/usf2_us/NAME": "games/usf2_us/NAME",
+          "darksoft/games/usf2_us/flash.01": "games/usf2_us/flash.01",
+          "darksoft/games/usf2_us/flash.02": "games/usf2_us/flash.02",
+          "darksoft/games/usf2_us/flash.03": "games/usf2_us/flash.03",
+          "darksoft/games/usf2_us/flash.04": "games/usf2_us/flash.04",
+          "darksoft/games/usf2_us/flash.05": "games/usf2_us/flash.05",
+          "darksoft/games/usf2_us/flash.06": "games/usf2_us/flash.06",
+          "darksoft/games/usf2_us/flash.07": "games/usf2_us/flash.07",
+          "darksoft/games/usf2_us/flash.08": "games/usf2_us/flash.08",
+          "darksoft/games/usf2_us/flash.09": "games/usf2_us/flash.09",
+          "darksoft/games/usf2_us/flash.10": "games/usf2_us/flash.10",
+          "darksoft/games/usf2_us/flash.11": "games/usf2_us/flash.11",
+          "darksoft/games/usf2_us/flash.12": "games/usf2_us/flash.12",
+          "darksoft/games/usf2_us/key": "games/usf2_us/key",
+          "darksoft/receipts/usf2_us.json": "receipts/usf2_us.json",
+          "darksoft/verification/dl-1425.bin": "support/usf2-backport/verification/dl-1425.bin"
+        },
+        "nsp": "game-235c8f3d1a83d81703ac",
+        "outputs": {
+          "games/usf2_us/NAME": {
+            "sha256": "a697f7666544731bfbf6b8b3ad4268e2fd0cad6600355985c00ee89ba926336c"
+          },
+          "games/usf2_us/flash.01": {
+            "sha256": "efcc91e2ff6f1360320bf82544a54f8aaa08a9fb00739036c46db9506335104a"
+          },
+          "games/usf2_us/flash.02": {
+            "sha256": "12984b95dbd0f660f085b53d52194b6baa7d4b3ad9cb5b4effe0b4de6c1991b1"
+          },
+          "games/usf2_us/flash.03": {
+            "sha256": "4e453b5e42bcd8b05ceb4172c465aea552c2c63937a26fd91e57be5c5d9d9e81"
+          },
+          "games/usf2_us/flash.04": {
+            "sha256": "f78d2dbdb5cbae8de88ade38c425ad9054d292ccc1fa9ecf680c85b4726ab57d"
+          },
+          "games/usf2_us/flash.05": {
+            "sha256": "3ad93351170a352e4c8e9a3d0871431a7480b197f5b395ffd37f3cf7b9c9e79b"
+          },
+          "games/usf2_us/flash.06": {
+            "sha256": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015"
+          },
+          "games/usf2_us/flash.07": {
+            "sha256": "e736a42386d273e7ac9468aaddec2c35a43317d5c3bffab96e3174d32964537b"
+          },
+          "games/usf2_us/flash.08": {
+            "sha256": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206"
+          },
+          "games/usf2_us/flash.09": {
+            "sha256": "f4e1acb6b462116d0c074ef609d8f0b17fcbe3d47877bd7c7eb5b432a056f9bb"
+          },
+          "games/usf2_us/flash.10": {
+            "sha256": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6"
+          },
+          "games/usf2_us/flash.11": {
+            "sha256": "9dd091a952df9ee2de050c4eeb5125945008f33cdf272546256b34002bd8bb48"
+          },
+          "games/usf2_us/flash.12": {
+            "sha256": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee"
+          },
+          "games/usf2_us/key": {
+            "sha256": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+          },
+          "receipts/usf2_us.json": {
+            "sha256": "e0894a287c24608260784207494792e47e77e01ac45a089b9642c9bc68a33714"
+          },
+          "support/usf2-backport/README-original.txt": {
+            "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+          },
+          "support/usf2-backport/verification/dl-1425.bin": {
+            "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "platform": "darksoft",
+        "profile": "usf2t8",
+        "region": "us",
+        "sources": {
+          "dl-1425.bin": "rom-524a25bcd153be24594d",
+          "sfx.01": "rom-d537d760fa86c3d77cb5",
+          "sfx.02": "rom-45aa9b70ae78f1f29c38",
+          "sfx.09": "rom-4612b2b6e64b2c3ca2d6",
+          "sfx.11m": "rom-cbf9d809b1d5958d8898",
+          "sfx.12m": "rom-2197f85af99c7a2b4d61",
+          "sfx.13m": "rom-54a738964d44cbdc1dac",
+          "sfx.14m": "rom-6500f8613d48f7e880e2",
+          "sfx.15m": "rom-6666265d84da4a2b8155",
+          "sfx.16m": "rom-44b4a66645a2a982e009",
+          "sfx.17m": "rom-40df56cf82388684ad81",
+          "sfx.18m": "rom-5db3d68b3088f7596618",
+          "sfx.19m": "rom-c90642f04d64409110c5",
+          "sfx.20m": "rom-0f045013e1f0d04febe1",
+          "sfx.21m": "rom-eabc7eac8882a1d3600c",
+          "sfx.23m": "rom-4c5a2f8b746fa5a4a7ce",
+          "sfx.25m": "rom-d40e6a5ad1659368cde1",
+          "sfx.27m": "rom-569e44101fa2dd0ba5b4",
+          "sfxj.03d": "rom-ac7a8d48543f9c526929",
+          "sfxj.04a": "rom-6d782ac2d5a994bcf31a",
+          "sfxj.05": "rom-091ac51001654e957bc9",
+          "sfxj.06b": "rom-c981e15abcaecc4d7d73",
+          "sfxj.07a": "rom-2768b60c6442800b32e5",
+          "sfxj.08": "rom-1863b3049553b0a10865",
+          "ssf2xj.key": "rom-0e41159ac6190b24db92"
+        }
+      },
+      "usf2t8-fbneo": {
+        "device_key": "rom-524a25bcd153be24594d",
+        "device_output": "roms/qsound.zip",
+        "kit_mapping": {
+          "README.txt": "support/usf2-backport/README-original.txt"
+        },
+        "mapping": {
+          "fbneo/usf2u.zip": "roms/usf2u.zip",
+          "fbneo/verification/dl-1425.bin": "support/usf2-backport/verification/dl-1425.bin"
+        },
+        "nsp": "game-235c8f3d1a83d81703ac",
+        "outputs": {
+          "roms/qsound.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+            }
+          },
+          "roms/usf2u.zip": {
+            "members": {
+              "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+              "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+              "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+              "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+              "usf2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+              "usf2.13m": "34b72a8aec1f7dfbfcd6974a671f021ec6e00aa20ee5d9153737447ae03c9c04",
+              "usf2.14m": "c2df66a47ec6b321b26e97bb5fbec1ee517031a6da6906c49b32f69c09d65874",
+              "usf2.29m": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015",
+              "usf2.31m": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206",
+              "usf2.33m": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6",
+              "usf2.35m": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee",
+              "usfx.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+              "usfx.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+              "usfx.03d": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+              "usfx.04a": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+              "usfx.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+              "usfx.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+              "usfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+              "usfx.11m": "c39eae5936f162b3b4c892f54bf3015313bdb4d56aab0e3018c2a071d0e89f24",
+              "usfx.13m": "8246736b69dd21337eaeb57c9280358a36e66f2a4e83fd8b7eed48c4918a57a2",
+              "usfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+              "usfx.15m": "72c0b63c3f86dbfd911bc92f91641cb7f849bedfadbe6494651e1b4e6f138b7d",
+              "usfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+              "usfx.17m": "f1e37f9ee80fc4f7429c583be80dacbd5986bd6b28881d82b1c5337d7796a12e",
+              "usfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+              "usfx.19m": "127f84e5ff9db011edc24f0d68b2022361a8044f06b0648c1ad5858dfcaeac06",
+              "usfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+              "usfx.21m": "34d912f1d822dbd28b9fe4dc7c95703b50f034de48353ddf613cfbe8b4f3e95d",
+              "usfx.23m": "7c4ac8c48f882a2a442079c41d98b97f6dba93fca845799615b9855bcfc8e616",
+              "usfx.25m": "c28f396eff1e055bb12eb2f179eb095e4fdeb050d3893e4b93104d38604f9b88",
+              "usfx.27m": "5f1f8c4b67e74a5c9e1d0e71e600f7c2de17faf7b327b3344e57c81c0abf2b18"
+            }
+          },
+          "support/usf2-backport/README-original.txt": {
+            "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+          },
+          "support/usf2-backport/verification/dl-1425.bin": {
+            "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "platform": "fbneo",
+        "profile": "usf2t8",
+        "region": "us",
+        "sources": {
+          "dl-1425.bin": "rom-524a25bcd153be24594d",
+          "sfx.01": "rom-d537d760fa86c3d77cb5",
+          "sfx.02": "rom-45aa9b70ae78f1f29c38",
+          "sfx.09": "rom-4612b2b6e64b2c3ca2d6",
+          "sfx.11m": "rom-cbf9d809b1d5958d8898",
+          "sfx.12m": "rom-2197f85af99c7a2b4d61",
+          "sfx.13m": "rom-54a738964d44cbdc1dac",
+          "sfx.14m": "rom-6500f8613d48f7e880e2",
+          "sfx.15m": "rom-6666265d84da4a2b8155",
+          "sfx.16m": "rom-44b4a66645a2a982e009",
+          "sfx.17m": "rom-40df56cf82388684ad81",
+          "sfx.18m": "rom-5db3d68b3088f7596618",
+          "sfx.19m": "rom-c90642f04d64409110c5",
+          "sfx.20m": "rom-0f045013e1f0d04febe1",
+          "sfx.21m": "rom-eabc7eac8882a1d3600c",
+          "sfx.23m": "rom-4c5a2f8b746fa5a4a7ce",
+          "sfx.25m": "rom-d40e6a5ad1659368cde1",
+          "sfx.27m": "rom-569e44101fa2dd0ba5b4",
+          "sfxj.03d": "rom-ac7a8d48543f9c526929",
+          "sfxj.04a": "rom-6d782ac2d5a994bcf31a",
+          "sfxj.05": "rom-091ac51001654e957bc9",
+          "sfxj.06b": "rom-c981e15abcaecc4d7d73",
+          "sfxj.07a": "rom-2768b60c6442800b32e5",
+          "sfxj.08": "rom-1863b3049553b0a10865",
+          "ssf2xj.key": "rom-0e41159ac6190b24db92"
+        }
+      },
+      "usf2t8-hbmame": {
+        "device_key": "rom-524a25bcd153be24594d",
+        "device_output": "roms/qsound.zip",
+        "kit_mapping": {
+          "README.txt": "support/usf2-backport/README-original.txt"
+        },
+        "mapping": {
+          "hbmame/hiscore.py": "roms/hiscore.py",
+          "hbmame/usf2-hiscore.json": "roms/usf2-hiscore.json",
+          "hbmame/usf2u.zip": "roms/usf2u.zip"
+        },
+        "nsp": "game-235c8f3d1a83d81703ac",
+        "outputs": {
+          "roms/hiscore.py": {
+            "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+          },
+          "roms/qsound.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+            }
+          },
+          "roms/usf2-hiscore.json": {
+            "sha256": "68a4d213cfbfbbed4d610fc2808ef7fe1f56c236a4d27e9b8d735cba006d7745"
+          },
+          "roms/usf2u.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+              "sfx.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+              "sfx.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+              "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+              "sfx.11m": "c39eae5936f162b3b4c892f54bf3015313bdb4d56aab0e3018c2a071d0e89f24",
+              "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+              "sfx.13m": "8246736b69dd21337eaeb57c9280358a36e66f2a4e83fd8b7eed48c4918a57a2",
+              "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+              "sfx.15m": "72c0b63c3f86dbfd911bc92f91641cb7f849bedfadbe6494651e1b4e6f138b7d",
+              "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+              "sfx.17m": "f1e37f9ee80fc4f7429c583be80dacbd5986bd6b28881d82b1c5337d7796a12e",
+              "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+              "sfx.19m": "127f84e5ff9db011edc24f0d68b2022361a8044f06b0648c1ad5858dfcaeac06",
+              "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+              "sfx.21m": "34d912f1d822dbd28b9fe4dc7c95703b50f034de48353ddf613cfbe8b4f3e95d",
+              "sfx.23m": "7c4ac8c48f882a2a442079c41d98b97f6dba93fca845799615b9855bcfc8e616",
+              "sfx.25m": "c28f396eff1e055bb12eb2f179eb095e4fdeb050d3893e4b93104d38604f9b88",
+              "sfx.27m": "5f1f8c4b67e74a5c9e1d0e71e600f7c2de17faf7b327b3344e57c81c0abf2b18",
+              "sfxj.03d": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+              "sfxj.04a": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+              "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+              "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+              "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+              "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+              "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+              "usf2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+              "usf2.13m": "34b72a8aec1f7dfbfcd6974a671f021ec6e00aa20ee5d9153737447ae03c9c04",
+              "usf2.14m": "c2df66a47ec6b321b26e97bb5fbec1ee517031a6da6906c49b32f69c09d65874",
+              "usf2.29m": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015",
+              "usf2.31m": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206",
+              "usf2.33m": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6",
+              "usf2.35m": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee"
+            }
+          },
+          "support/usf2-backport/README-original.txt": {
+            "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+          }
+        },
+        "platform": "hbmame",
+        "profile": "usf2t8",
+        "region": "us",
+        "shared_hiscore": {
+          "archive": "hbmame/usf2u.zip",
+          "machine": "usf2u",
+          "source": "hbmame/usf2-hiscore.json",
+          "text": "{\n  \"schema\": 1,\n  \"archives\": {\n    \"usf2j\": \"0768927393396a341f7227c368cf36d1f3dbd4b6de9fe85c5c07d283844ada11\",\n    \"usf2u\": \"76ac091f66e38e1d8fef14a6a229b2d3406c608a3c4267d9c34d1dd3d274f643\"\n  }\n}\n"
+        },
+        "sources": {
+          "dl-1425.bin": "rom-524a25bcd153be24594d",
+          "sfx.01": "rom-d537d760fa86c3d77cb5",
+          "sfx.02": "rom-45aa9b70ae78f1f29c38",
+          "sfx.09": "rom-4612b2b6e64b2c3ca2d6",
+          "sfx.11m": "rom-cbf9d809b1d5958d8898",
+          "sfx.12m": "rom-2197f85af99c7a2b4d61",
+          "sfx.13m": "rom-54a738964d44cbdc1dac",
+          "sfx.14m": "rom-6500f8613d48f7e880e2",
+          "sfx.15m": "rom-6666265d84da4a2b8155",
+          "sfx.16m": "rom-44b4a66645a2a982e009",
+          "sfx.17m": "rom-40df56cf82388684ad81",
+          "sfx.18m": "rom-5db3d68b3088f7596618",
+          "sfx.19m": "rom-c90642f04d64409110c5",
+          "sfx.20m": "rom-0f045013e1f0d04febe1",
+          "sfx.21m": "rom-eabc7eac8882a1d3600c",
+          "sfx.23m": "rom-4c5a2f8b746fa5a4a7ce",
+          "sfx.25m": "rom-d40e6a5ad1659368cde1",
+          "sfx.27m": "rom-569e44101fa2dd0ba5b4",
+          "sfxj.03d": "rom-ac7a8d48543f9c526929",
+          "sfxj.04a": "rom-6d782ac2d5a994bcf31a",
+          "sfxj.05": "rom-091ac51001654e957bc9",
+          "sfxj.06b": "rom-c981e15abcaecc4d7d73",
+          "sfxj.07a": "rom-2768b60c6442800b32e5",
+          "sfxj.08": "rom-1863b3049553b0a10865",
+          "ssf2xj.key": "rom-0e41159ac6190b24db92"
+        }
+      },
+      "usf2t8-mame": {
+        "device_key": "rom-524a25bcd153be24594d",
+        "device_output": "roms/qsound.zip",
+        "kit_mapping": {
+          "README.txt": "support/usf2-backport/README-original.txt"
+        },
+        "mapping": {
+          "mame/hiscore.py": "roms/hiscore.py",
+          "mame/hsf2.zip": "roms/hsf2.zip",
+          "mame/usf2-hiscore.json": "roms/usf2-hiscore.json"
+        },
+        "nsp": "game-235c8f3d1a83d81703ac",
+        "outputs": {
+          "roms/hiscore.py": {
+            "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+          },
+          "roms/hsf2.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+              "hs2.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+              "hs2.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+              "hs2.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+              "hs2.06": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+              "hs2.07": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+              "hs2.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+              "hs2.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+              "hs2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+              "hs2.11m": "5ba0019791a6b6dd9728edeec97dc284b0206fc12f5d978e6bcba9c9e7f35234",
+              "hs2.13m": "3d8ea271afcdf231c6daf3b18b8b7293044e20c1dc3e79022aa8c47f13605348",
+              "hs2.15m": "921f36e91af693ad79028bd670957277b223ac748a6ef04e666acf8d324d8bc3",
+              "hs2.17m": "b5af74da78dbd1f3ef5a4b56cf69a4d8a3d68f1df75b85a5b5f2faa35f24928b",
+              "hs2.19m": "9c2c70ff29b632ed4988d00dd5bc435d76c7422377536bd0d4c0ef968c17538a",
+              "hs2u.03": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+              "hs2u.04": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+              "hsf2.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+            }
+          },
+          "roms/qsound.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+            }
+          },
+          "roms/usf2-hiscore.json": {
+            "sha256": "79e81eb2d99ede1468f61ff6b0072987f9a0b1eb6e8c2c72e218d7da0de8fa92"
+          },
+          "support/usf2-backport/README-original.txt": {
+            "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+          }
+        },
+        "platform": "mame",
+        "profile": "usf2t8",
+        "region": "us",
+        "shared_hiscore": {
+          "archive": "mame/hsf2.zip",
+          "machine": "hsf2",
+          "source": "mame/usf2-hiscore.json",
+          "text": "{\n  \"schema\": 1,\n  \"archives\": {\n    \"hsf2j\": \"5a6f541e79faf5f731f040ff441a6f080b45192216935725fe298653f506c716\",\n    \"hsf2\": \"a047d3a81e57796c9b1130b05e1bcb5e8e7a8cccc4f17c65c983538b572143e2\"\n  }\n}\n"
+        },
+        "sources": {
+          "dl-1425.bin": "rom-524a25bcd153be24594d",
+          "sfx.01": "rom-d537d760fa86c3d77cb5",
+          "sfx.02": "rom-45aa9b70ae78f1f29c38",
+          "sfx.09": "rom-4612b2b6e64b2c3ca2d6",
+          "sfx.11m": "rom-cbf9d809b1d5958d8898",
+          "sfx.12m": "rom-2197f85af99c7a2b4d61",
+          "sfx.13m": "rom-54a738964d44cbdc1dac",
+          "sfx.14m": "rom-6500f8613d48f7e880e2",
+          "sfx.15m": "rom-6666265d84da4a2b8155",
+          "sfx.16m": "rom-44b4a66645a2a982e009",
+          "sfx.17m": "rom-40df56cf82388684ad81",
+          "sfx.18m": "rom-5db3d68b3088f7596618",
+          "sfx.19m": "rom-c90642f04d64409110c5",
+          "sfx.20m": "rom-0f045013e1f0d04febe1",
+          "sfx.21m": "rom-eabc7eac8882a1d3600c",
+          "sfx.23m": "rom-4c5a2f8b746fa5a4a7ce",
+          "sfx.25m": "rom-d40e6a5ad1659368cde1",
+          "sfx.27m": "rom-569e44101fa2dd0ba5b4",
+          "sfxj.03d": "rom-ac7a8d48543f9c526929",
+          "sfxj.04a": "rom-6d782ac2d5a994bcf31a",
+          "sfxj.05": "rom-091ac51001654e957bc9",
+          "sfxj.06b": "rom-c981e15abcaecc4d7d73",
+          "sfxj.07a": "rom-2768b60c6442800b32e5",
+          "sfxj.08": "rom-1863b3049553b0a10865",
+          "ssf2xj.key": "rom-0e41159ac6190b24db92"
+        }
+      },
+      "usf2t8-mister": {
+        "device_key": "rom-524a25bcd153be24594d",
+        "device_output": null,
+        "kit_mapping": {
+          "README.txt": "support/usf2-backport/README-original.txt"
+        },
+        "mapping": {
+          "mister/_Arcade/_Arcade Patches/_Restorations/Ultra Street Fighter II (USA) [Backport].mra": "_Arcade/_Arcade Patches/_Restorations/Ultra Street Fighter II (USA) [Backport].mra",
+          "mister/_Arcade/cores/GPL-3.0.txt": "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/GPL-3.0.txt",
+          "mister/_Arcade/cores/SOURCE_AND_LICENSE.txt": "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/SOURCE_AND_LICENSE.txt",
+          "mister/_Arcade/cores/cps2_core_release.json": "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/cps2_core_release.json",
+          "mister/_Arcade/cores/jtcps2-cpsplus_20261101.rbf": "_Arcade/cores/jtcps2-cpsplus_20261101.rbf",
+          "mister/games/CPS+/usf2_arrange.zip": "games/CPS+/usf2_arrange.zip",
+          "mister/games/mame/usf2u.zip": "games/mame/usf2u.zip"
+        },
+        "nsp": "game-235c8f3d1a83d81703ac",
+        "outputs": {
+          "_Arcade/_Arcade Patches/_Restorations/Ultra Street Fighter II (USA) [Backport].mra": {
+            "sha256": "f65937adc5bd0e11657a4e4e10d3a788bbee4ee57c4a2a8de443436d2490d3f9"
+          },
+          "_Arcade/cores/jtcps2-cpsplus_20261101.rbf": {
+            "sha256": "23b23a2a7a38b88d959a2cc3df5d970d3ccb5f16fda6ffc5eb491888244db397"
+          },
+          "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/GPL-3.0.txt": {
+            "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+          },
+          "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/SOURCE_AND_LICENSE.txt": {
+            "sha256": "91d07d949bc2d912b8ee8d222ca8009b9f9bbc2e2a380d06b9338a40070a3a31"
+          },
+          "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/cps2_core_release.json": {
+            "sha256": "b59eb80289f177b2afd96c0964b41242b2632ce518c1689c3feac7adeaaa81b6"
+          },
+          "games/CPS+/usf2_arrange.zip": {
+            "members": {
+              "usf2_arrange.cpk": "18948ce8280dfd20285d6f383505eedf616ed2cea137a84ea5f327d7bf3b7f56"
+            }
+          },
+          "games/mame/usf2u.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+              "sfx.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+              "sfx.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+              "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+              "sfx.11m": "c39eae5936f162b3b4c892f54bf3015313bdb4d56aab0e3018c2a071d0e89f24",
+              "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+              "sfx.13m": "8246736b69dd21337eaeb57c9280358a36e66f2a4e83fd8b7eed48c4918a57a2",
+              "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+              "sfx.15m": "72c0b63c3f86dbfd911bc92f91641cb7f849bedfadbe6494651e1b4e6f138b7d",
+              "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+              "sfx.17m": "f1e37f9ee80fc4f7429c583be80dacbd5986bd6b28881d82b1c5337d7796a12e",
+              "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+              "sfx.19m": "127f84e5ff9db011edc24f0d68b2022361a8044f06b0648c1ad5858dfcaeac06",
+              "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+              "sfx.21m": "34d912f1d822dbd28b9fe4dc7c95703b50f034de48353ddf613cfbe8b4f3e95d",
+              "sfx.23m": "7c4ac8c48f882a2a442079c41d98b97f6dba93fca845799615b9855bcfc8e616",
+              "sfx.25m": "c28f396eff1e055bb12eb2f179eb095e4fdeb050d3893e4b93104d38604f9b88",
+              "sfx.27m": "5f1f8c4b67e74a5c9e1d0e71e600f7c2de17faf7b327b3344e57c81c0abf2b18",
+              "sfxj.03d": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+              "sfxj.04a": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+              "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+              "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+              "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+              "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+              "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+              "usf2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+              "usf2.13m": "34b72a8aec1f7dfbfcd6974a671f021ec6e00aa20ee5d9153737447ae03c9c04",
+              "usf2.14m": "c2df66a47ec6b321b26e97bb5fbec1ee517031a6da6906c49b32f69c09d65874",
+              "usf2.29m": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015",
+              "usf2.31m": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206",
+              "usf2.33m": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6",
+              "usf2.35m": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee"
+            }
+          },
+          "support/usf2-backport/README-original.txt": {
+            "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+          }
+        },
+        "platform": "mister",
+        "profile": "usf2t8",
+        "region": "us",
+        "sources": {
+          "dl-1425.bin": "rom-524a25bcd153be24594d",
+          "sfx.01": "rom-d537d760fa86c3d77cb5",
+          "sfx.02": "rom-45aa9b70ae78f1f29c38",
+          "sfx.09": "rom-4612b2b6e64b2c3ca2d6",
+          "sfx.11m": "rom-cbf9d809b1d5958d8898",
+          "sfx.12m": "rom-2197f85af99c7a2b4d61",
+          "sfx.13m": "rom-54a738964d44cbdc1dac",
+          "sfx.14m": "rom-6500f8613d48f7e880e2",
+          "sfx.15m": "rom-6666265d84da4a2b8155",
+          "sfx.16m": "rom-44b4a66645a2a982e009",
+          "sfx.17m": "rom-40df56cf82388684ad81",
+          "sfx.18m": "rom-5db3d68b3088f7596618",
+          "sfx.19m": "rom-c90642f04d64409110c5",
+          "sfx.20m": "rom-0f045013e1f0d04febe1",
+          "sfx.21m": "rom-eabc7eac8882a1d3600c",
+          "sfx.23m": "rom-4c5a2f8b746fa5a4a7ce",
+          "sfx.25m": "rom-d40e6a5ad1659368cde1",
+          "sfx.27m": "rom-569e44101fa2dd0ba5b4",
+          "sfxj.03d": "rom-ac7a8d48543f9c526929",
+          "sfxj.04a": "rom-6d782ac2d5a994bcf31a",
+          "sfxj.05": "rom-091ac51001654e957bc9",
+          "sfxj.06b": "rom-c981e15abcaecc4d7d73",
+          "sfxj.07a": "rom-2768b60c6442800b32e5",
+          "sfxj.08": "rom-1863b3049553b0a10865",
+          "ssf2xj.key": "rom-0e41159ac6190b24db92"
+        }
+      }
+    }
+  },
+  "game_version": "rc6",
+  "kit_revision": 3,
+  "manifest_sha256": "b19c8f13fe6b4defe68ce232e578a7a334ca312ced75754adb77881495f62530",
+  "native_outputs": {
+    "README.txt": {
+      "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+    },
+    "cps2_code_guard.py": {
+      "sha256": "867fa8d85bc5d6dd7be2190060b7903f6a262ce10281115272a42d51e2151a34"
+    },
+    "cps2_crypt.py": {
+      "sha256": "0f38afa21b9d0b70ca0b57b33203594a2e8630a341803b41d84f586405488ed6"
+    },
+    "darksoft.py": {
+      "sha256": "0aa90597d20ab9ec3b0f003e7c854ca9ee9353e46405edbdcb681ff365323a6c"
+    },
+    "darksoft/games/usf2_jp/NAME": {
+      "sha256": "f23fa969ab95f07580f2e9bb14fa3a9a468e4fb3d46414665394a52ac8b5b8b3"
+    },
+    "darksoft/games/usf2_jp/flash.01": {
+      "sha256": "bf444d2dd2dbda3f22628ce81da8ce387f1c36ee48f04e1c2564ef161785d80e"
+    },
+    "darksoft/games/usf2_jp/flash.02": {
+      "sha256": "014e35d38439e80fca4c7bf379fe8884b6851bc0782db8afe22f8ad12c427037"
+    },
+    "darksoft/games/usf2_jp/flash.03": {
+      "sha256": "65288e84097a7772e310a2ea159cabdb23786ef3893250835c3b86e4a606efa3"
+    },
+    "darksoft/games/usf2_jp/flash.04": {
+      "sha256": "3e8151df7301ae7797d45d8142c606df98ea2e01d86062bbc8276ba3bf9eeab3"
+    },
+    "darksoft/games/usf2_jp/flash.05": {
+      "sha256": "623430e59307fd2a74cb62ec7745e853b26864c14ba779f45c616a356af89d8d"
+    },
+    "darksoft/games/usf2_jp/flash.06": {
+      "sha256": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71"
+    },
+    "darksoft/games/usf2_jp/flash.07": {
+      "sha256": "01261c24ac2e8323817b61775cd2b298618bad4909c8870fb63fdca4fdcb5362"
+    },
+    "darksoft/games/usf2_jp/flash.08": {
+      "sha256": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe"
+    },
+    "darksoft/games/usf2_jp/flash.09": {
+      "sha256": "7b618223c47e6fb554e7959dd799bad39c6bc2bfeaf2ef163233ac83f6888cca"
+    },
+    "darksoft/games/usf2_jp/flash.10": {
+      "sha256": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958"
+    },
+    "darksoft/games/usf2_jp/flash.11": {
+      "sha256": "544a92f8aafe1c2972ffd148e08a40f453664aa08400b099972e6be46b399f17"
+    },
+    "darksoft/games/usf2_jp/flash.12": {
+      "sha256": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07"
+    },
+    "darksoft/games/usf2_jp/key": {
+      "sha256": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+    },
+    "darksoft/games/usf2_us/NAME": {
+      "sha256": "a697f7666544731bfbf6b8b3ad4268e2fd0cad6600355985c00ee89ba926336c"
+    },
+    "darksoft/games/usf2_us/flash.01": {
+      "sha256": "efcc91e2ff6f1360320bf82544a54f8aaa08a9fb00739036c46db9506335104a"
+    },
+    "darksoft/games/usf2_us/flash.02": {
+      "sha256": "12984b95dbd0f660f085b53d52194b6baa7d4b3ad9cb5b4effe0b4de6c1991b1"
+    },
+    "darksoft/games/usf2_us/flash.03": {
+      "sha256": "4e453b5e42bcd8b05ceb4172c465aea552c2c63937a26fd91e57be5c5d9d9e81"
+    },
+    "darksoft/games/usf2_us/flash.04": {
+      "sha256": "f78d2dbdb5cbae8de88ade38c425ad9054d292ccc1fa9ecf680c85b4726ab57d"
+    },
+    "darksoft/games/usf2_us/flash.05": {
+      "sha256": "3ad93351170a352e4c8e9a3d0871431a7480b197f5b395ffd37f3cf7b9c9e79b"
+    },
+    "darksoft/games/usf2_us/flash.06": {
+      "sha256": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015"
+    },
+    "darksoft/games/usf2_us/flash.07": {
+      "sha256": "e736a42386d273e7ac9468aaddec2c35a43317d5c3bffab96e3174d32964537b"
+    },
+    "darksoft/games/usf2_us/flash.08": {
+      "sha256": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206"
+    },
+    "darksoft/games/usf2_us/flash.09": {
+      "sha256": "f4e1acb6b462116d0c074ef609d8f0b17fcbe3d47877bd7c7eb5b432a056f9bb"
+    },
+    "darksoft/games/usf2_us/flash.10": {
+      "sha256": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6"
+    },
+    "darksoft/games/usf2_us/flash.11": {
+      "sha256": "9dd091a952df9ee2de050c4eeb5125945008f33cdf272546256b34002bd8bb48"
+    },
+    "darksoft/games/usf2_us/flash.12": {
+      "sha256": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee"
+    },
+    "darksoft/games/usf2_us/key": {
+      "sha256": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+    },
+    "darksoft/receipts/usf2_jp.json": {
+      "sha256": "d61750cad2bee55d43e24b08c83e9b643ed7729a8d7ce61286cdf856ed49d337"
+    },
+    "darksoft/receipts/usf2_us.json": {
+      "sha256": "e0894a287c24608260784207494792e47e77e01ac45a089b9642c9bc68a33714"
+    },
+    "darksoft/verification/dl-1425.bin": {
+      "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+    },
+    "darksoft_profiles.json": {
+      "sha256": "1d85cdbb7b1e0a86207b9f44b4620ea1e50f6467968fa38ccbdeda43809741c4"
+    },
+    "fbneo/usf2j.zip": {
+      "members": {
+        "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+        "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+        "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+        "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+        "usf2j.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+        "usf2j.13m": "d55720df34a4e35a8c07944c849689f01cabc01158c9d562c388ff39024298e0",
+        "usf2j.14m": "b428d162dc2059c164961a03c00d7338b8aa53e0f29dd356a1e69d91bb2476c2",
+        "usf2j.29m": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71",
+        "usf2j.31m": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe",
+        "usf2j.33m": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958",
+        "usf2j.35m": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07",
+        "usfx.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+        "usfx.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+        "usfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+        "usfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+        "usfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+        "usfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+        "usfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+        "usfxj.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+        "usfxj.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+        "usfxj.03d": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+        "usfxj.04a": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+        "usfxj.11m": "cbb162a79d806a4e94b0e1f418329adaeb42bfa8f49d9195f38533fd02f7507d",
+        "usfxj.13m": "eec5d8a1328d67b9d69d071bffee7419511fd1125118c1b307621dffec89183f",
+        "usfxj.15m": "b6ee14f78eddd6afc3a87ac8f93db56beab6ae69baeba2b7e3f2ccaec252f1c2",
+        "usfxj.17m": "fa98a629959e3c19d0dbc01257a655a645d75e5478ec452397e998d6d0a61b20",
+        "usfxj.19m": "24e4498e482d2ec181b31bcd81fe0d3afeebad44317ed6aa2396c0157fdb6e97",
+        "usfxj.21m": "3cc4b53ccb23e4455f964685f46b705459134134bf7a4244546f06f6922174cc",
+        "usfxj.23m": "6b35d22816983c09caf078512d35a4a3bbb71b73d6a61d24a9ed119946c8dd1c",
+        "usfxj.25m": "406d1d442f3c07eb42a1565dbf4df5d76828397ab4a8abedb2113feddc80707a",
+        "usfxj.27m": "05783662d317c5ddc1b454b117c091279bc62029ad07531a5badcc4adb448ab8"
+      }
+    },
+    "fbneo/usf2u.zip": {
+      "members": {
+        "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+        "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+        "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+        "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+        "usf2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+        "usf2.13m": "34b72a8aec1f7dfbfcd6974a671f021ec6e00aa20ee5d9153737447ae03c9c04",
+        "usf2.14m": "c2df66a47ec6b321b26e97bb5fbec1ee517031a6da6906c49b32f69c09d65874",
+        "usf2.29m": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015",
+        "usf2.31m": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206",
+        "usf2.33m": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6",
+        "usf2.35m": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee",
+        "usfx.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+        "usfx.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+        "usfx.03d": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+        "usfx.04a": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+        "usfx.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+        "usfx.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+        "usfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+        "usfx.11m": "c39eae5936f162b3b4c892f54bf3015313bdb4d56aab0e3018c2a071d0e89f24",
+        "usfx.13m": "8246736b69dd21337eaeb57c9280358a36e66f2a4e83fd8b7eed48c4918a57a2",
+        "usfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+        "usfx.15m": "72c0b63c3f86dbfd911bc92f91641cb7f849bedfadbe6494651e1b4e6f138b7d",
+        "usfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+        "usfx.17m": "f1e37f9ee80fc4f7429c583be80dacbd5986bd6b28881d82b1c5337d7796a12e",
+        "usfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+        "usfx.19m": "127f84e5ff9db011edc24f0d68b2022361a8044f06b0648c1ad5858dfcaeac06",
+        "usfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+        "usfx.21m": "34d912f1d822dbd28b9fe4dc7c95703b50f034de48353ddf613cfbe8b4f3e95d",
+        "usfx.23m": "7c4ac8c48f882a2a442079c41d98b97f6dba93fca845799615b9855bcfc8e616",
+        "usfx.25m": "c28f396eff1e055bb12eb2f179eb095e4fdeb050d3893e4b93104d38604f9b88",
+        "usfx.27m": "5f1f8c4b67e74a5c9e1d0e71e600f7c2de17faf7b327b3344e57c81c0abf2b18"
+      }
+    },
+    "fbneo/verification/dl-1425.bin": {
+      "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+    },
+    "fbneo_names.json": {
+      "sha256": "ea023cbfd443823bf43ce4b8ce495f854bb00416904dc0ada0080f7085872980"
+    },
+    "fbneo_names.py": {
+      "sha256": "980ecc6ccb4abd9dffc47c5b1af21ae93ebc18cf73b5861aed9b5790c7b78c5c"
+    },
+    "hbmame/hiscore.py": {
+      "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+    },
+    "hbmame/usf2-hiscore.json": {
+      "sha256": "68a4d213cfbfbbed4d610fc2808ef7fe1f56c236a4d27e9b8d735cba006d7745"
+    },
+    "hbmame/usf2j.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "sfx.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+        "sfx.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+        "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+        "sfx.11m": "cbb162a79d806a4e94b0e1f418329adaeb42bfa8f49d9195f38533fd02f7507d",
+        "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+        "sfx.13m": "eec5d8a1328d67b9d69d071bffee7419511fd1125118c1b307621dffec89183f",
+        "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+        "sfx.15m": "b6ee14f78eddd6afc3a87ac8f93db56beab6ae69baeba2b7e3f2ccaec252f1c2",
+        "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+        "sfx.17m": "fa98a629959e3c19d0dbc01257a655a645d75e5478ec452397e998d6d0a61b20",
+        "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+        "sfx.19m": "24e4498e482d2ec181b31bcd81fe0d3afeebad44317ed6aa2396c0157fdb6e97",
+        "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+        "sfx.21m": "3cc4b53ccb23e4455f964685f46b705459134134bf7a4244546f06f6922174cc",
+        "sfx.23m": "6b35d22816983c09caf078512d35a4a3bbb71b73d6a61d24a9ed119946c8dd1c",
+        "sfx.25m": "406d1d442f3c07eb42a1565dbf4df5d76828397ab4a8abedb2113feddc80707a",
+        "sfx.27m": "05783662d317c5ddc1b454b117c091279bc62029ad07531a5badcc4adb448ab8",
+        "sfxj.03d": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+        "sfxj.04a": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+        "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+        "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+        "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+        "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+        "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+        "usf2.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+        "usf2.13m": "d55720df34a4e35a8c07944c849689f01cabc01158c9d562c388ff39024298e0",
+        "usf2.14m": "b428d162dc2059c164961a03c00d7338b8aa53e0f29dd356a1e69d91bb2476c2",
+        "usf2.29m": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71",
+        "usf2.31m": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe",
+        "usf2.33m": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958",
+        "usf2.35m": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07"
+      }
+    },
+    "hbmame/usf2u.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "sfx.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+        "sfx.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+        "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+        "sfx.11m": "c39eae5936f162b3b4c892f54bf3015313bdb4d56aab0e3018c2a071d0e89f24",
+        "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+        "sfx.13m": "8246736b69dd21337eaeb57c9280358a36e66f2a4e83fd8b7eed48c4918a57a2",
+        "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+        "sfx.15m": "72c0b63c3f86dbfd911bc92f91641cb7f849bedfadbe6494651e1b4e6f138b7d",
+        "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+        "sfx.17m": "f1e37f9ee80fc4f7429c583be80dacbd5986bd6b28881d82b1c5337d7796a12e",
+        "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+        "sfx.19m": "127f84e5ff9db011edc24f0d68b2022361a8044f06b0648c1ad5858dfcaeac06",
+        "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+        "sfx.21m": "34d912f1d822dbd28b9fe4dc7c95703b50f034de48353ddf613cfbe8b4f3e95d",
+        "sfx.23m": "7c4ac8c48f882a2a442079c41d98b97f6dba93fca845799615b9855bcfc8e616",
+        "sfx.25m": "c28f396eff1e055bb12eb2f179eb095e4fdeb050d3893e4b93104d38604f9b88",
+        "sfx.27m": "5f1f8c4b67e74a5c9e1d0e71e600f7c2de17faf7b327b3344e57c81c0abf2b18",
+        "sfxj.03d": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+        "sfxj.04a": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+        "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+        "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+        "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+        "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+        "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+        "usf2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+        "usf2.13m": "34b72a8aec1f7dfbfcd6974a671f021ec6e00aa20ee5d9153737447ae03c9c04",
+        "usf2.14m": "c2df66a47ec6b321b26e97bb5fbec1ee517031a6da6906c49b32f69c09d65874",
+        "usf2.29m": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015",
+        "usf2.31m": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206",
+        "usf2.33m": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6",
+        "usf2.35m": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee"
+      }
+    },
+    "hiscore.py": {
+      "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+    },
+    "mame/RUN-MAME.txt": {
+      "sha256": "009156752069572b7c59a96f286e83ddac59593b99c5988b59fdaf6b990f4158"
+    },
+    "mame/hiscore.py": {
+      "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+    },
+    "mame/hsf2.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "hs2.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+        "hs2.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+        "hs2.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+        "hs2.06": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+        "hs2.07": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+        "hs2.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+        "hs2.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+        "hs2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+        "hs2.11m": "5ba0019791a6b6dd9728edeec97dc284b0206fc12f5d978e6bcba9c9e7f35234",
+        "hs2.13m": "3d8ea271afcdf231c6daf3b18b8b7293044e20c1dc3e79022aa8c47f13605348",
+        "hs2.15m": "921f36e91af693ad79028bd670957277b223ac748a6ef04e666acf8d324d8bc3",
+        "hs2.17m": "b5af74da78dbd1f3ef5a4b56cf69a4d8a3d68f1df75b85a5b5f2faa35f24928b",
+        "hs2.19m": "9c2c70ff29b632ed4988d00dd5bc435d76c7422377536bd0d4c0ef968c17538a",
+        "hs2u.03": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+        "hs2u.04": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+        "hsf2.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+      }
+    },
+    "mame/hsf2j.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "hs2.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+        "hs2.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+        "hs2.11m": "9fbcce912173ef6880f949967a53b8d25a4465a4b557d68b2c467b9de5309a05",
+        "hs2.13m": "e3e4ffc46640395e90ba2e670709a9304953de23a499afbcf162af7fe9b806ed",
+        "hs2.15m": "20abf4b8dc3a7db8a3afd5f2b902d567c5a18fcd4493ebc7483b4868568b693c",
+        "hs2.17m": "d2bbfc1ff7c034590e80f05f95da94b9093e6f193e839546db34702fe57fc16a",
+        "hs2.19m": "0de8291b744d390e075ce25ca439ca09f88006849caffe171190bef0c094ea03",
+        "hs2j.03c": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+        "hs2j.04b": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+        "hs2j.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+        "hs2j.06": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+        "hs2j.07": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+        "hs2j.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+        "hs2j.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+        "hs2j.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+        "hsf2j.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+      }
+    },
+    "mame/usf2-hiscore.json": {
+      "sha256": "79e81eb2d99ede1468f61ff6b0072987f9a0b1eb6e8c2c72e218d7da0de8fa92"
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/Ultra Street Fighter II (USA) [Backport].mra": {
+      "sha256": "f65937adc5bd0e11657a4e4e10d3a788bbee4ee57c4a2a8de443436d2490d3f9"
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/_Japan/Ultra Street Fighter II (Japan) [Backport].mra": {
+      "sha256": "e296276c5be3b5105cc20e5f1c62d848e876816046e00dc04f0306e7c4335112"
+    },
+    "mister/_Arcade/cores/GPL-3.0.txt": {
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+    },
+    "mister/_Arcade/cores/SOURCE_AND_LICENSE.txt": {
+      "sha256": "91d07d949bc2d912b8ee8d222ca8009b9f9bbc2e2a380d06b9338a40070a3a31"
+    },
+    "mister/_Arcade/cores/cps2_core_release.json": {
+      "sha256": "b59eb80289f177b2afd96c0964b41242b2632ce518c1689c3feac7adeaaa81b6"
+    },
+    "mister/_Arcade/cores/jtcps2-cpsplus_20261101.rbf": {
+      "sha256": "23b23a2a7a38b88d959a2cc3df5d970d3ccb5f16fda6ffc5eb491888244db397"
+    },
+    "mister/games/CPS+/usf2_arrange.zip": {
+      "members": {
+        "usf2_arrange.cpk": "18948ce8280dfd20285d6f383505eedf616ed2cea137a84ea5f327d7bf3b7f56"
+      }
+    },
+    "mister/games/mame/usf2j.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "sfx.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+        "sfx.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+        "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+        "sfx.11m": "cbb162a79d806a4e94b0e1f418329adaeb42bfa8f49d9195f38533fd02f7507d",
+        "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+        "sfx.13m": "eec5d8a1328d67b9d69d071bffee7419511fd1125118c1b307621dffec89183f",
+        "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+        "sfx.15m": "b6ee14f78eddd6afc3a87ac8f93db56beab6ae69baeba2b7e3f2ccaec252f1c2",
+        "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+        "sfx.17m": "fa98a629959e3c19d0dbc01257a655a645d75e5478ec452397e998d6d0a61b20",
+        "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+        "sfx.19m": "24e4498e482d2ec181b31bcd81fe0d3afeebad44317ed6aa2396c0157fdb6e97",
+        "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+        "sfx.21m": "3cc4b53ccb23e4455f964685f46b705459134134bf7a4244546f06f6922174cc",
+        "sfx.23m": "6b35d22816983c09caf078512d35a4a3bbb71b73d6a61d24a9ed119946c8dd1c",
+        "sfx.25m": "406d1d442f3c07eb42a1565dbf4df5d76828397ab4a8abedb2113feddc80707a",
+        "sfx.27m": "05783662d317c5ddc1b454b117c091279bc62029ad07531a5badcc4adb448ab8",
+        "sfxj.03d": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+        "sfxj.04a": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+        "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+        "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+        "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+        "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+        "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+        "usf2.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+        "usf2.13m": "d55720df34a4e35a8c07944c849689f01cabc01158c9d562c388ff39024298e0",
+        "usf2.14m": "b428d162dc2059c164961a03c00d7338b8aa53e0f29dd356a1e69d91bb2476c2",
+        "usf2.29m": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71",
+        "usf2.31m": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe",
+        "usf2.33m": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958",
+        "usf2.35m": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07"
+      }
+    },
+    "mister/games/mame/usf2u.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "sfx.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+        "sfx.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+        "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+        "sfx.11m": "c39eae5936f162b3b4c892f54bf3015313bdb4d56aab0e3018c2a071d0e89f24",
+        "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+        "sfx.13m": "8246736b69dd21337eaeb57c9280358a36e66f2a4e83fd8b7eed48c4918a57a2",
+        "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+        "sfx.15m": "72c0b63c3f86dbfd911bc92f91641cb7f849bedfadbe6494651e1b4e6f138b7d",
+        "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+        "sfx.17m": "f1e37f9ee80fc4f7429c583be80dacbd5986bd6b28881d82b1c5337d7796a12e",
+        "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+        "sfx.19m": "127f84e5ff9db011edc24f0d68b2022361a8044f06b0648c1ad5858dfcaeac06",
+        "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+        "sfx.21m": "34d912f1d822dbd28b9fe4dc7c95703b50f034de48353ddf613cfbe8b4f3e95d",
+        "sfx.23m": "7c4ac8c48f882a2a442079c41d98b97f6dba93fca845799615b9855bcfc8e616",
+        "sfx.25m": "c28f396eff1e055bb12eb2f179eb095e4fdeb050d3893e4b93104d38604f9b88",
+        "sfx.27m": "5f1f8c4b67e74a5c9e1d0e71e600f7c2de17faf7b327b3344e57c81c0abf2b18",
+        "sfxj.03d": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+        "sfxj.04a": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+        "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+        "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+        "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+        "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+        "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+        "usf2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+        "usf2.13m": "34b72a8aec1f7dfbfcd6974a671f021ec6e00aa20ee5d9153737447ae03c9c04",
+        "usf2.14m": "c2df66a47ec6b321b26e97bb5fbec1ee517031a6da6906c49b32f69c09d65874",
+        "usf2.29m": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015",
+        "usf2.31m": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206",
+        "usf2.33m": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6",
+        "usf2.35m": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee"
+      }
+    },
+    "mra_assembly.py": {
+      "sha256": "12e8b9d5d9ca0a1c6b66388baa29b5fc4d52297a78004811c65a529b62022cc9"
+    },
+    "nsp.py": {
+      "sha256": "9db517c389045df067ffbddf5a170152065ddb2264f39ad9ec5a9086a85ae60f"
+    },
+    "payload.py": {
+      "sha256": "21bad4f6bf638da0c52270fe226dce1432b32a93a4dd0cb10006485ad4955af3"
+    },
+    "policy.py": {
+      "sha256": "0aaf83edccd7064ba804605ff5103e99326e4309ab6aeedaffa38481c8140ac3"
+    },
+    "source-kit.json": {
+      "sha256": "8bbea97f9824b7233ceb959f0b00a86437d8d4a5e0ebd45050591e82ab07b062"
+    },
+    "stock_mame.py": {
+      "sha256": "166c271c024e631365fcc3d4a24729a50e19b67aedb1b087593dc672a11bf634"
+    },
+    "switch_source.py": {
+      "sha256": "2b3a0c39ee1f4a30a91a9d505ee1244c2648fea69d34228429335b2ed1357b11"
+    },
+    "verify.py": {
+      "sha256": "d5c142fd213f2b86e277387f6317842a581bfddc4d679fbc4d50877b02e1cd93"
+    },
+    "verify_output.py": {
+      "sha256": "14e38bc195574cb87e484f04f0ff490c4dbc97f923a08a5a7663906ef677da5c"
+    }
+  },
+  "native_reports": [
+    "files.json",
+    "verification.json"
+  ],
+  "prerequisites": {
+    "game-235c8f3d1a83d81703ac": {
+      "action": "Add your owned regional base NSP or supported XCI, not an update-only image. The complete selected Program is authenticated.",
+      "alternatives": [
+        {
+          "sha256": "235c8f3d1a83d81703acd7309458e8646564df982edfd271652a6e993487ab8f",
+          "size": 2931201794
+        }
+      ],
+      "content": [
+        {
+          "extensions": [
+            ".nsp",
+            ".xci"
+          ],
+          "identity": {
+            "pin": {
+              "nsp_sha256": "235c8f3d1a83d81703acd7309458e8646564df982edfd271652a6e993487ab8f",
+              "program_name": "95497f167915f13705a441cc7d2bbef0.nca",
+              "program_sha256": "95497f167915f13705a441cc7d2bbef09e9f26fd0f317d9c2a1befde53103784",
+              "program_variants": [
+                {
+                  "media": "US game card",
+                  "program_name": "9f140dc9881f4140f8a4ff23a71509cf.nca",
+                  "program_sha256": "9f140dc9881f4140f8a4ff23a71509cf8b3fd3cec931d95da3cf7b7c395e9a1a",
+                  "ticket_name": null
+                }
+              ],
+              "region": "us",
+              "resource_path": "/1/nativeNXx64/app/arc_us/mess/mess_resident.arc",
+              "resource_sha256": "45b1ddec72e834ae7e3ff22be7fbbdef0b9ff58df163e560a84374a98b2dd362",
+              "ticket_name": "01007330027ee0000000000000000000.tik",
+              "title_id": "01007330027ee000"
+            },
+            "type": "switch"
+          }
+        }
+      ],
+      "formats": [
+        "NSP",
+        "qualified XCI",
+        "ZIP member containing the base game",
+        "7z member"
+      ],
+      "kind": "game",
+      "title": "Ultra Street Fighter II USA base game"
+    },
+    "game-3266ccd2c611bbae4f2f": {
+      "action": "Add your owned regional base NSP or supported XCI, not an update-only image. The complete selected Program is authenticated.",
+      "alternatives": [
+        {
+          "sha256": "3266ccd2c611bbae4f2f3ecc7861f01501fe5bcc7c00c4c5ef935a325788d21c",
+          "size": 2927991128
+        }
+      ],
+      "content": [
+        {
+          "extensions": [
+            ".nsp",
+            ".xci"
+          ],
+          "identity": {
+            "pin": {
+              "nsp_sha256": "3266ccd2c611bbae4f2f3ecc7861f01501fe5bcc7c00c4c5ef935a325788d21c",
+              "program_name": "49033e97216a506417505f77de7df54e.nca",
+              "program_sha256": "49033e97216a506417505f77de7df54e44219dee2e68504a08387735b244534c",
+              "program_variants": [
+                {
+                  "media": "JP game card",
+                  "program_name": "49033e97216a506417505f77de7df54e.nca",
+                  "program_sha256": "563c0aed19881742d855a9432d1eb380f4ad7371939997616ef65096d9229c68",
+                  "ticket_name": null
+                }
+              ],
+              "region": "jp",
+              "resource_path": "/1/nativeNXx64/app/arc_jp/mess/mess_resident.arc",
+              "resource_sha256": "382c1a4ea46627038c2d99b4bf421963fd932db106a89f7acc02d2c1a0673b03",
+              "ticket_name": "0100c86000b580000000000000000000.tik",
+              "title_id": "0100c86000b58000"
+            },
+            "type": "switch"
+          }
+        }
+      ],
+      "formats": [
+        "NSP",
+        "qualified XCI",
+        "ZIP member containing the base game",
+        "7z member"
+      ],
+      "kind": "game",
+      "title": "Ultra Street Fighter II Japan base game"
+    },
+    "rom-091ac51001654e957bc9": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "f4ff18f5",
+          "sha256": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfxj.05"
+    },
+    "rom-0e41159ac6190b24db92": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "160d1424",
+          "sha256": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: ssf2xj.key"
+    },
+    "rom-0f045013e1f0d04febe1": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "459d5c6b",
+          "sha256": "0f045013e1f0d04febe1819d518516e67d8329ae8a1a5d0127babd283e5edb7b",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.20m"
+    },
+    "rom-1863b3049553b0a10865": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "2de76f10",
+          "sha256": "1863b3049553b0a10865c24088557d4a90a2c41bdb36aaf197a197226f041582",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfxj.08"
+    },
+    "rom-2197f85af99c7a2b4d61": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "a05e3aab",
+          "sha256": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.12m"
+    },
+    "rom-2768b60c6442800b32e5": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "a18b3d83",
+          "sha256": "2768b60c6442800b32e5aa613e4b3ded30a12a1cbf71a0186cc987051f4b00fa",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfxj.07a"
+    },
+    "rom-40df56cf82388684ad81": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "ffa60e0f",
+          "sha256": "40df56cf82388684ad81242f393b8311460aa24f1e05fbb0aaf6a40610079811",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.17m"
+    },
+    "rom-44b4a66645a2a982e009": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "8376ad18",
+          "sha256": "44b4a66645a2a982e00961c24789bf18c01a8332ad0914940f707b78d9fae475",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.16m"
+    },
+    "rom-45aa9b70ae78f1f29c38": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "0022633f",
+          "sha256": "45aa9b70ae78f1f29c382d2fea4bf702ef6ab982f3780e7a5c53d9d5e8c3a6f7",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.02"
+    },
+    "rom-4612b2b6e64b2c3ca2d6": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "642fae3f",
+          "sha256": "4612b2b6e64b2c3ca2d6c2fd88807db87b2d39e4d5015f3d1c11ab5d0877211d",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.09"
+    },
+    "rom-4c5a2f8b746fa5a4a7ce": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "760f2927",
+          "sha256": "4c5a2f8b746fa5a4a7ce39dde7a7e15e879cb4b36f035b79cbdf9913c3361765",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.23m"
+    },
+    "rom-524a25bcd153be24594d": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "d6cf5ef5",
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "size": 24576
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "firmware",
+      "title": "QSound firmware"
+    },
+    "rom-54a738964d44cbdc1dac": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "cf94d275",
+          "sha256": "54a738964d44cbdc1dac3a1cb7dd400a35855bc815cb0fe02fc2db2833defc80",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.13m"
+    },
+    "rom-569e44101fa2dd0ba5b4": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "f814400f",
+          "sha256": "569e44101fa2dd0ba5b47d8c3692fe95854202c6db2d4621247a3e269e0e715a",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.27m"
+    },
+    "rom-5db3d68b3088f7596618": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "f5b1b336",
+          "sha256": "5db3d68b3088f7596618f6adb9e879067b1a94eae619e340c98696e0a39dd99a",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.18m"
+    },
+    "rom-6500f8613d48f7e880e2": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "b7cc32e7",
+          "sha256": "6500f8613d48f7e880e22afdd50d6695d9941cd782085e452d0beece9b2f9200",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.14m"
+    },
+    "rom-6666265d84da4a2b8155": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "5eb703af",
+          "sha256": "6666265d84da4a2b815545731d068736d1f4dc7fb088c23b167242adf71a48ca",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.15m"
+    },
+    "rom-6d782ac2d5a994bcf31a": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "af7767b4",
+          "sha256": "6d782ac2d5a994bcf31a087575faba0d0bf8f6fa38c863849de2d52e06d9e8b3",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfxj.04a"
+    },
+    "rom-ac7a8d48543f9c526929": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "50b52b37",
+          "sha256": "ac7a8d48543f9c526929fb7e496435ad9d9acb4b8e88080b40f98b51ebcb1740",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfxj.03d"
+    },
+    "rom-c90642f04d64409110c5": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "34e825c5",
+          "sha256": "c90642f04d64409110c5a69f05db64b8ecddc61c2a41940104bf229ec1d4cdfa",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.19m"
+    },
+    "rom-c981e15abcaecc4d7d73": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "413477c2",
+          "sha256": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfxj.06b"
+    },
+    "rom-cbf9d809b1d5958d8898": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "9bdbd476",
+          "sha256": "cbf9d809b1d5958d88988c604530058272c39d3e8e7d00532a760f20e5ba0832",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.11m"
+    },
+    "rom-d40e6a5ad1659368cde1": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "1ee90208",
+          "sha256": "d40e6a5ad1659368cde19d052a460bc31319a4b1d24ae589b7bdcba3be3a6e30",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.25m"
+    },
+    "rom-d537d760fa86c3d77cb5": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "b47b8835",
+          "sha256": "d537d760fa86c3d77cb566f6d4345c6590ff6c061f241b574b59d2e73c88b7ab",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.01"
+    },
+    "rom-eabc7eac8882a1d3600c": {
+      "action": "Add your canonical MAME SSF2XJ and QSound inputs; names may differ.",
+      "alternatives": [
+        {
+          "crc32": "e32854af",
+          "sha256": "eabc7eac8882a1d3600c8a5ddcc5a72d20dee5152af7d025e3ec0b923bf7a321",
+          "size": 1048576
+        }
+      ],
+      "formats": [
+        "MAME ZIP members",
+        "loose canonical ROMs",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "Super Street Fighter II X: sfx.21m"
+    },
+    "switch-production-keys": {
+      "action": "Add your own private key file to a scanned folder. Keep one intended key map; the original producer verifies that it decrypts the game. Key values are never reported.",
+      "formats": [
+        "UTF-8 private key map, loose or ZIP member",
+        "7z member"
+      ],
+      "kind": "keyfile",
+      "text_keys": {
+        "header_key": 64
+      },
+      "title": "Your own Nintendo Switch prod.keys"
+    }
+  },
+  "project": "usf2-backport",
+  "requires": [
+    "file-inputs-v1",
+    "locked-wheels-v1",
+    "native-bindings-v1",
+    "native-context-v1",
+    "run-cache-v1",
+    "text-keys-v1"
+  ],
+  "targets": {
+    "usf2j8-darksoft": {
+      "inputs": [
+        "game-3266ccd2c611bbae4f2f",
+        "rom-091ac51001654e957bc9",
+        "rom-0e41159ac6190b24db92",
+        "rom-0f045013e1f0d04febe1",
+        "rom-1863b3049553b0a10865",
+        "rom-2197f85af99c7a2b4d61",
+        "rom-2768b60c6442800b32e5",
+        "rom-40df56cf82388684ad81",
+        "rom-44b4a66645a2a982e009",
+        "rom-45aa9b70ae78f1f29c38",
+        "rom-4612b2b6e64b2c3ca2d6",
+        "rom-4c5a2f8b746fa5a4a7ce",
+        "rom-524a25bcd153be24594d",
+        "rom-54a738964d44cbdc1dac",
+        "rom-569e44101fa2dd0ba5b4",
+        "rom-5db3d68b3088f7596618",
+        "rom-6500f8613d48f7e880e2",
+        "rom-6666265d84da4a2b8155",
+        "rom-6d782ac2d5a994bcf31a",
+        "rom-ac7a8d48543f9c526929",
+        "rom-c90642f04d64409110c5",
+        "rom-c981e15abcaecc4d7d73",
+        "rom-cbf9d809b1d5958d8898",
+        "rom-d40e6a5ad1659368cde1",
+        "rom-d537d760fa86c3d77cb5",
+        "rom-eabc7eac8882a1d3600c",
+        "switch-production-keys"
+      ],
+      "minimum_free_bytes": 8589934592,
+      "outputs": {
+        "games/usf2_jp/NAME": {
+          "sha256": "f23fa969ab95f07580f2e9bb14fa3a9a468e4fb3d46414665394a52ac8b5b8b3"
+        },
+        "games/usf2_jp/flash.01": {
+          "sha256": "bf444d2dd2dbda3f22628ce81da8ce387f1c36ee48f04e1c2564ef161785d80e"
+        },
+        "games/usf2_jp/flash.02": {
+          "sha256": "014e35d38439e80fca4c7bf379fe8884b6851bc0782db8afe22f8ad12c427037"
+        },
+        "games/usf2_jp/flash.03": {
+          "sha256": "65288e84097a7772e310a2ea159cabdb23786ef3893250835c3b86e4a606efa3"
+        },
+        "games/usf2_jp/flash.04": {
+          "sha256": "3e8151df7301ae7797d45d8142c606df98ea2e01d86062bbc8276ba3bf9eeab3"
+        },
+        "games/usf2_jp/flash.05": {
+          "sha256": "623430e59307fd2a74cb62ec7745e853b26864c14ba779f45c616a356af89d8d"
+        },
+        "games/usf2_jp/flash.06": {
+          "sha256": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71"
+        },
+        "games/usf2_jp/flash.07": {
+          "sha256": "01261c24ac2e8323817b61775cd2b298618bad4909c8870fb63fdca4fdcb5362"
+        },
+        "games/usf2_jp/flash.08": {
+          "sha256": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe"
+        },
+        "games/usf2_jp/flash.09": {
+          "sha256": "7b618223c47e6fb554e7959dd799bad39c6bc2bfeaf2ef163233ac83f6888cca"
+        },
+        "games/usf2_jp/flash.10": {
+          "sha256": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958"
+        },
+        "games/usf2_jp/flash.11": {
+          "sha256": "544a92f8aafe1c2972ffd148e08a40f453664aa08400b099972e6be46b399f17"
+        },
+        "games/usf2_jp/flash.12": {
+          "sha256": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07"
+        },
+        "games/usf2_jp/key": {
+          "sha256": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+        },
+        "receipts/usf2_jp.json": {
+          "sha256": "d61750cad2bee55d43e24b08c83e9b643ed7729a8d7ce61286cdf856ed49d337"
+        },
+        "support/usf2-backport/README-original.txt": {
+          "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+        },
+        "support/usf2-backport/verification/dl-1425.bin": {
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+        }
+      },
+      "platform": "darksoft",
+      "profile": "default",
+      "region": "jp",
+      "software_notes": [
+        "An owned regional base game and valid private Switch keys are required for every build.",
+        "The pinned Switch extraction helpers are prepared automatically. Private key values are never included in reports.",
+        "HBMAME needs a build that includes the Ultra Street Fighter II sets; stock MAME uses the HSF2 layout in this edition profile."
+      ],
+      "variant": "usf2j8"
+    },
+    "usf2j8-fbneo": {
+      "inputs": [
+        "game-3266ccd2c611bbae4f2f",
+        "rom-091ac51001654e957bc9",
+        "rom-0e41159ac6190b24db92",
+        "rom-0f045013e1f0d04febe1",
+        "rom-1863b3049553b0a10865",
+        "rom-2197f85af99c7a2b4d61",
+        "rom-2768b60c6442800b32e5",
+        "rom-40df56cf82388684ad81",
+        "rom-44b4a66645a2a982e009",
+        "rom-45aa9b70ae78f1f29c38",
+        "rom-4612b2b6e64b2c3ca2d6",
+        "rom-4c5a2f8b746fa5a4a7ce",
+        "rom-524a25bcd153be24594d",
+        "rom-54a738964d44cbdc1dac",
+        "rom-569e44101fa2dd0ba5b4",
+        "rom-5db3d68b3088f7596618",
+        "rom-6500f8613d48f7e880e2",
+        "rom-6666265d84da4a2b8155",
+        "rom-6d782ac2d5a994bcf31a",
+        "rom-ac7a8d48543f9c526929",
+        "rom-c90642f04d64409110c5",
+        "rom-c981e15abcaecc4d7d73",
+        "rom-cbf9d809b1d5958d8898",
+        "rom-d40e6a5ad1659368cde1",
+        "rom-d537d760fa86c3d77cb5",
+        "rom-eabc7eac8882a1d3600c",
+        "switch-production-keys"
+      ],
+      "minimum_free_bytes": 8589934592,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/usf2j.zip": {
+          "members": {
+            "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+            "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+            "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+            "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+            "usf2j.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+            "usf2j.13m": "d55720df34a4e35a8c07944c849689f01cabc01158c9d562c388ff39024298e0",
+            "usf2j.14m": "b428d162dc2059c164961a03c00d7338b8aa53e0f29dd356a1e69d91bb2476c2",
+            "usf2j.29m": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71",
+            "usf2j.31m": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe",
+            "usf2j.33m": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958",
+            "usf2j.35m": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07",
+            "usfx.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+            "usfx.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+            "usfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+            "usfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+            "usfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+            "usfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+            "usfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+            "usfxj.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+            "usfxj.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+            "usfxj.03d": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+            "usfxj.04a": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+            "usfxj.11m": "cbb162a79d806a4e94b0e1f418329adaeb42bfa8f49d9195f38533fd02f7507d",
+            "usfxj.13m": "eec5d8a1328d67b9d69d071bffee7419511fd1125118c1b307621dffec89183f",
+            "usfxj.15m": "b6ee14f78eddd6afc3a87ac8f93db56beab6ae69baeba2b7e3f2ccaec252f1c2",
+            "usfxj.17m": "fa98a629959e3c19d0dbc01257a655a645d75e5478ec452397e998d6d0a61b20",
+            "usfxj.19m": "24e4498e482d2ec181b31bcd81fe0d3afeebad44317ed6aa2396c0157fdb6e97",
+            "usfxj.21m": "3cc4b53ccb23e4455f964685f46b705459134134bf7a4244546f06f6922174cc",
+            "usfxj.23m": "6b35d22816983c09caf078512d35a4a3bbb71b73d6a61d24a9ed119946c8dd1c",
+            "usfxj.25m": "406d1d442f3c07eb42a1565dbf4df5d76828397ab4a8abedb2113feddc80707a",
+            "usfxj.27m": "05783662d317c5ddc1b454b117c091279bc62029ad07531a5badcc4adb448ab8"
+          }
+        },
+        "support/usf2-backport/README-original.txt": {
+          "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+        },
+        "support/usf2-backport/verification/dl-1425.bin": {
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+        }
+      },
+      "platform": "fbneo",
+      "profile": "default",
+      "region": "jp",
+      "software_notes": [
+        "An owned regional base game and valid private Switch keys are required for every build.",
+        "The pinned Switch extraction helpers are prepared automatically. Private key values are never included in reports.",
+        "HBMAME needs a build that includes the Ultra Street Fighter II sets; stock MAME uses the HSF2 layout in this edition profile."
+      ],
+      "variant": "usf2j8"
+    },
+    "usf2j8-hbmame": {
+      "inputs": [
+        "game-3266ccd2c611bbae4f2f",
+        "rom-091ac51001654e957bc9",
+        "rom-0e41159ac6190b24db92",
+        "rom-0f045013e1f0d04febe1",
+        "rom-1863b3049553b0a10865",
+        "rom-2197f85af99c7a2b4d61",
+        "rom-2768b60c6442800b32e5",
+        "rom-40df56cf82388684ad81",
+        "rom-44b4a66645a2a982e009",
+        "rom-45aa9b70ae78f1f29c38",
+        "rom-4612b2b6e64b2c3ca2d6",
+        "rom-4c5a2f8b746fa5a4a7ce",
+        "rom-524a25bcd153be24594d",
+        "rom-54a738964d44cbdc1dac",
+        "rom-569e44101fa2dd0ba5b4",
+        "rom-5db3d68b3088f7596618",
+        "rom-6500f8613d48f7e880e2",
+        "rom-6666265d84da4a2b8155",
+        "rom-6d782ac2d5a994bcf31a",
+        "rom-ac7a8d48543f9c526929",
+        "rom-c90642f04d64409110c5",
+        "rom-c981e15abcaecc4d7d73",
+        "rom-cbf9d809b1d5958d8898",
+        "rom-d40e6a5ad1659368cde1",
+        "rom-d537d760fa86c3d77cb5",
+        "rom-eabc7eac8882a1d3600c",
+        "switch-production-keys"
+      ],
+      "minimum_free_bytes": 8589934592,
+      "outputs": {
+        "roms/hiscore.py": {
+          "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/usf2-hiscore.json": {
+          "sha256": "68a4d213cfbfbbed4d610fc2808ef7fe1f56c236a4d27e9b8d735cba006d7745"
+        },
+        "roms/usf2j.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "sfx.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+            "sfx.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+            "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+            "sfx.11m": "cbb162a79d806a4e94b0e1f418329adaeb42bfa8f49d9195f38533fd02f7507d",
+            "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+            "sfx.13m": "eec5d8a1328d67b9d69d071bffee7419511fd1125118c1b307621dffec89183f",
+            "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+            "sfx.15m": "b6ee14f78eddd6afc3a87ac8f93db56beab6ae69baeba2b7e3f2ccaec252f1c2",
+            "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+            "sfx.17m": "fa98a629959e3c19d0dbc01257a655a645d75e5478ec452397e998d6d0a61b20",
+            "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+            "sfx.19m": "24e4498e482d2ec181b31bcd81fe0d3afeebad44317ed6aa2396c0157fdb6e97",
+            "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+            "sfx.21m": "3cc4b53ccb23e4455f964685f46b705459134134bf7a4244546f06f6922174cc",
+            "sfx.23m": "6b35d22816983c09caf078512d35a4a3bbb71b73d6a61d24a9ed119946c8dd1c",
+            "sfx.25m": "406d1d442f3c07eb42a1565dbf4df5d76828397ab4a8abedb2113feddc80707a",
+            "sfx.27m": "05783662d317c5ddc1b454b117c091279bc62029ad07531a5badcc4adb448ab8",
+            "sfxj.03d": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+            "sfxj.04a": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+            "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+            "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+            "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+            "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+            "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+            "usf2.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+            "usf2.13m": "d55720df34a4e35a8c07944c849689f01cabc01158c9d562c388ff39024298e0",
+            "usf2.14m": "b428d162dc2059c164961a03c00d7338b8aa53e0f29dd356a1e69d91bb2476c2",
+            "usf2.29m": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71",
+            "usf2.31m": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe",
+            "usf2.33m": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958",
+            "usf2.35m": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07"
+          }
+        },
+        "support/usf2-backport/README-original.txt": {
+          "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+        }
+      },
+      "platform": "hbmame",
+      "profile": "default",
+      "region": "jp",
+      "software_notes": [
+        "An owned regional base game and valid private Switch keys are required for every build.",
+        "The pinned Switch extraction helpers are prepared automatically. Private key values are never included in reports.",
+        "HBMAME needs a build that includes the Ultra Street Fighter II sets; stock MAME uses the HSF2 layout in this edition profile."
+      ],
+      "variant": "usf2j8"
+    },
+    "usf2j8-mame": {
+      "inputs": [
+        "game-3266ccd2c611bbae4f2f",
+        "rom-091ac51001654e957bc9",
+        "rom-0e41159ac6190b24db92",
+        "rom-0f045013e1f0d04febe1",
+        "rom-1863b3049553b0a10865",
+        "rom-2197f85af99c7a2b4d61",
+        "rom-2768b60c6442800b32e5",
+        "rom-40df56cf82388684ad81",
+        "rom-44b4a66645a2a982e009",
+        "rom-45aa9b70ae78f1f29c38",
+        "rom-4612b2b6e64b2c3ca2d6",
+        "rom-4c5a2f8b746fa5a4a7ce",
+        "rom-524a25bcd153be24594d",
+        "rom-54a738964d44cbdc1dac",
+        "rom-569e44101fa2dd0ba5b4",
+        "rom-5db3d68b3088f7596618",
+        "rom-6500f8613d48f7e880e2",
+        "rom-6666265d84da4a2b8155",
+        "rom-6d782ac2d5a994bcf31a",
+        "rom-ac7a8d48543f9c526929",
+        "rom-c90642f04d64409110c5",
+        "rom-c981e15abcaecc4d7d73",
+        "rom-cbf9d809b1d5958d8898",
+        "rom-d40e6a5ad1659368cde1",
+        "rom-d537d760fa86c3d77cb5",
+        "rom-eabc7eac8882a1d3600c",
+        "switch-production-keys"
+      ],
+      "minimum_free_bytes": 8589934592,
+      "outputs": {
+        "roms/hiscore.py": {
+          "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+        },
+        "roms/hsf2j.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "hs2.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+            "hs2.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+            "hs2.11m": "9fbcce912173ef6880f949967a53b8d25a4465a4b557d68b2c467b9de5309a05",
+            "hs2.13m": "e3e4ffc46640395e90ba2e670709a9304953de23a499afbcf162af7fe9b806ed",
+            "hs2.15m": "20abf4b8dc3a7db8a3afd5f2b902d567c5a18fcd4493ebc7483b4868568b693c",
+            "hs2.17m": "d2bbfc1ff7c034590e80f05f95da94b9093e6f193e839546db34702fe57fc16a",
+            "hs2.19m": "0de8291b744d390e075ce25ca439ca09f88006849caffe171190bef0c094ea03",
+            "hs2j.03c": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+            "hs2j.04b": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+            "hs2j.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+            "hs2j.06": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+            "hs2j.07": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+            "hs2j.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+            "hs2j.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+            "hs2j.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+            "hsf2j.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+          }
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/usf2-hiscore.json": {
+          "sha256": "79e81eb2d99ede1468f61ff6b0072987f9a0b1eb6e8c2c72e218d7da0de8fa92"
+        },
+        "support/usf2-backport/README-original.txt": {
+          "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+        }
+      },
+      "platform": "mame",
+      "profile": "usf2-backport-jp",
+      "region": "jp",
+      "software_notes": [
+        "An owned regional base game and valid private Switch keys are required for every build.",
+        "The pinned Switch extraction helpers are prepared automatically. Private key values are never included in reports.",
+        "HBMAME needs a build that includes the Ultra Street Fighter II sets; stock MAME uses the HSF2 layout in this edition profile."
+      ],
+      "variant": "usf2j8"
+    },
+    "usf2j8-mister": {
+      "inputs": [
+        "game-3266ccd2c611bbae4f2f",
+        "rom-091ac51001654e957bc9",
+        "rom-0e41159ac6190b24db92",
+        "rom-0f045013e1f0d04febe1",
+        "rom-1863b3049553b0a10865",
+        "rom-2197f85af99c7a2b4d61",
+        "rom-2768b60c6442800b32e5",
+        "rom-40df56cf82388684ad81",
+        "rom-44b4a66645a2a982e009",
+        "rom-45aa9b70ae78f1f29c38",
+        "rom-4612b2b6e64b2c3ca2d6",
+        "rom-4c5a2f8b746fa5a4a7ce",
+        "rom-524a25bcd153be24594d",
+        "rom-54a738964d44cbdc1dac",
+        "rom-569e44101fa2dd0ba5b4",
+        "rom-5db3d68b3088f7596618",
+        "rom-6500f8613d48f7e880e2",
+        "rom-6666265d84da4a2b8155",
+        "rom-6d782ac2d5a994bcf31a",
+        "rom-ac7a8d48543f9c526929",
+        "rom-c90642f04d64409110c5",
+        "rom-c981e15abcaecc4d7d73",
+        "rom-cbf9d809b1d5958d8898",
+        "rom-d40e6a5ad1659368cde1",
+        "rom-d537d760fa86c3d77cb5",
+        "rom-eabc7eac8882a1d3600c",
+        "switch-production-keys"
+      ],
+      "minimum_free_bytes": 17179869184,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Restorations/_Japan/Ultra Street Fighter II (Japan) [Backport].mra": {
+          "sha256": "e296276c5be3b5105cc20e5f1c62d848e876816046e00dc04f0306e7c4335112"
+        },
+        "_Arcade/cores/jtcps2-cpsplus_20261101.rbf": {
+          "sha256": "23b23a2a7a38b88d959a2cc3df5d970d3ccb5f16fda6ffc5eb491888244db397"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/GPL-3.0.txt": {
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/SOURCE_AND_LICENSE.txt": {
+          "sha256": "91d07d949bc2d912b8ee8d222ca8009b9f9bbc2e2a380d06b9338a40070a3a31"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/cps2_core_release.json": {
+          "sha256": "b59eb80289f177b2afd96c0964b41242b2632ce518c1689c3feac7adeaaa81b6"
+        },
+        "games/CPS+/usf2_arrange.zip": {
+          "members": {
+            "usf2_arrange.cpk": "18948ce8280dfd20285d6f383505eedf616ed2cea137a84ea5f327d7bf3b7f56"
+          }
+        },
+        "games/mame/usf2j.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "sfx.01": "b7f0bcbb8726b5281cbc09c9b27ce61050670d4e4604662ec89958edbf6e14c7",
+            "sfx.02": "f9616e28974c4f23327270370f7a5c72c44a29e184dc3d595b58759d488dff42",
+            "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+            "sfx.11m": "cbb162a79d806a4e94b0e1f418329adaeb42bfa8f49d9195f38533fd02f7507d",
+            "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+            "sfx.13m": "eec5d8a1328d67b9d69d071bffee7419511fd1125118c1b307621dffec89183f",
+            "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+            "sfx.15m": "b6ee14f78eddd6afc3a87ac8f93db56beab6ae69baeba2b7e3f2ccaec252f1c2",
+            "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+            "sfx.17m": "fa98a629959e3c19d0dbc01257a655a645d75e5478ec452397e998d6d0a61b20",
+            "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+            "sfx.19m": "24e4498e482d2ec181b31bcd81fe0d3afeebad44317ed6aa2396c0157fdb6e97",
+            "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+            "sfx.21m": "3cc4b53ccb23e4455f964685f46b705459134134bf7a4244546f06f6922174cc",
+            "sfx.23m": "6b35d22816983c09caf078512d35a4a3bbb71b73d6a61d24a9ed119946c8dd1c",
+            "sfx.25m": "406d1d442f3c07eb42a1565dbf4df5d76828397ab4a8abedb2113feddc80707a",
+            "sfx.27m": "05783662d317c5ddc1b454b117c091279bc62029ad07531a5badcc4adb448ab8",
+            "sfxj.03d": "17ad93feb45dc36b7d5f8b861213ad2cf2e28ec089292c35912844c25f352d22",
+            "sfxj.04a": "a1d32808f5325e081909e55883d05d30da95e4ada9871b06a152cfab7d3fb97c",
+            "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+            "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+            "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+            "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+            "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+            "usf2.10": "445220b8c4a5ddafa512485c0ede53966fefb377fe0b2a897bb48ef26339f0df",
+            "usf2.13m": "d55720df34a4e35a8c07944c849689f01cabc01158c9d562c388ff39024298e0",
+            "usf2.14m": "b428d162dc2059c164961a03c00d7338b8aa53e0f29dd356a1e69d91bb2476c2",
+            "usf2.29m": "09d88a99e994ecc9a459d77da7b2d2448231ef87684c3ae5898b20572901bd71",
+            "usf2.31m": "72d16d166204ed86fe920c184a3ea781e31ecec73aa6e15b92d1ded936382ffe",
+            "usf2.33m": "194c230dd51c646871d0d88cce38facec4ad8b8d540c2a204db65fc77032d958",
+            "usf2.35m": "f4e9b807c964008e7b69bf43a9e26d4e3dd8ed6e669db627c337337cfa3f9e07"
+          }
+        },
+        "support/usf2-backport/README-original.txt": {
+          "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+        }
+      },
+      "platform": "mister",
+      "profile": "default",
+      "region": "jp",
+      "software_notes": [
+        "An owned regional base game and valid private Switch keys are required for every build.",
+        "The pinned Switch extraction helpers are prepared automatically. Private key values are never included in reports.",
+        "HBMAME needs a build that includes the Ultra Street Fighter II sets; stock MAME uses the HSF2 layout in this edition profile."
+      ],
+      "variant": "usf2j8"
+    },
+    "usf2t8-darksoft": {
+      "inputs": [
+        "game-235c8f3d1a83d81703ac",
+        "rom-091ac51001654e957bc9",
+        "rom-0e41159ac6190b24db92",
+        "rom-0f045013e1f0d04febe1",
+        "rom-1863b3049553b0a10865",
+        "rom-2197f85af99c7a2b4d61",
+        "rom-2768b60c6442800b32e5",
+        "rom-40df56cf82388684ad81",
+        "rom-44b4a66645a2a982e009",
+        "rom-45aa9b70ae78f1f29c38",
+        "rom-4612b2b6e64b2c3ca2d6",
+        "rom-4c5a2f8b746fa5a4a7ce",
+        "rom-524a25bcd153be24594d",
+        "rom-54a738964d44cbdc1dac",
+        "rom-569e44101fa2dd0ba5b4",
+        "rom-5db3d68b3088f7596618",
+        "rom-6500f8613d48f7e880e2",
+        "rom-6666265d84da4a2b8155",
+        "rom-6d782ac2d5a994bcf31a",
+        "rom-ac7a8d48543f9c526929",
+        "rom-c90642f04d64409110c5",
+        "rom-c981e15abcaecc4d7d73",
+        "rom-cbf9d809b1d5958d8898",
+        "rom-d40e6a5ad1659368cde1",
+        "rom-d537d760fa86c3d77cb5",
+        "rom-eabc7eac8882a1d3600c",
+        "switch-production-keys"
+      ],
+      "minimum_free_bytes": 8589934592,
+      "outputs": {
+        "games/usf2_us/NAME": {
+          "sha256": "a697f7666544731bfbf6b8b3ad4268e2fd0cad6600355985c00ee89ba926336c"
+        },
+        "games/usf2_us/flash.01": {
+          "sha256": "efcc91e2ff6f1360320bf82544a54f8aaa08a9fb00739036c46db9506335104a"
+        },
+        "games/usf2_us/flash.02": {
+          "sha256": "12984b95dbd0f660f085b53d52194b6baa7d4b3ad9cb5b4effe0b4de6c1991b1"
+        },
+        "games/usf2_us/flash.03": {
+          "sha256": "4e453b5e42bcd8b05ceb4172c465aea552c2c63937a26fd91e57be5c5d9d9e81"
+        },
+        "games/usf2_us/flash.04": {
+          "sha256": "f78d2dbdb5cbae8de88ade38c425ad9054d292ccc1fa9ecf680c85b4726ab57d"
+        },
+        "games/usf2_us/flash.05": {
+          "sha256": "3ad93351170a352e4c8e9a3d0871431a7480b197f5b395ffd37f3cf7b9c9e79b"
+        },
+        "games/usf2_us/flash.06": {
+          "sha256": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015"
+        },
+        "games/usf2_us/flash.07": {
+          "sha256": "e736a42386d273e7ac9468aaddec2c35a43317d5c3bffab96e3174d32964537b"
+        },
+        "games/usf2_us/flash.08": {
+          "sha256": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206"
+        },
+        "games/usf2_us/flash.09": {
+          "sha256": "f4e1acb6b462116d0c074ef609d8f0b17fcbe3d47877bd7c7eb5b432a056f9bb"
+        },
+        "games/usf2_us/flash.10": {
+          "sha256": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6"
+        },
+        "games/usf2_us/flash.11": {
+          "sha256": "9dd091a952df9ee2de050c4eeb5125945008f33cdf272546256b34002bd8bb48"
+        },
+        "games/usf2_us/flash.12": {
+          "sha256": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee"
+        },
+        "games/usf2_us/key": {
+          "sha256": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+        },
+        "receipts/usf2_us.json": {
+          "sha256": "e0894a287c24608260784207494792e47e77e01ac45a089b9642c9bc68a33714"
+        },
+        "support/usf2-backport/README-original.txt": {
+          "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+        },
+        "support/usf2-backport/verification/dl-1425.bin": {
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+        }
+      },
+      "platform": "darksoft",
+      "profile": "default",
+      "region": "us",
+      "software_notes": [
+        "An owned regional base game and valid private Switch keys are required for every build.",
+        "The pinned Switch extraction helpers are prepared automatically. Private key values are never included in reports.",
+        "HBMAME needs a build that includes the Ultra Street Fighter II sets; stock MAME uses the HSF2 layout in this edition profile."
+      ],
+      "variant": "usf2t8"
+    },
+    "usf2t8-fbneo": {
+      "inputs": [
+        "game-235c8f3d1a83d81703ac",
+        "rom-091ac51001654e957bc9",
+        "rom-0e41159ac6190b24db92",
+        "rom-0f045013e1f0d04febe1",
+        "rom-1863b3049553b0a10865",
+        "rom-2197f85af99c7a2b4d61",
+        "rom-2768b60c6442800b32e5",
+        "rom-40df56cf82388684ad81",
+        "rom-44b4a66645a2a982e009",
+        "rom-45aa9b70ae78f1f29c38",
+        "rom-4612b2b6e64b2c3ca2d6",
+        "rom-4c5a2f8b746fa5a4a7ce",
+        "rom-524a25bcd153be24594d",
+        "rom-54a738964d44cbdc1dac",
+        "rom-569e44101fa2dd0ba5b4",
+        "rom-5db3d68b3088f7596618",
+        "rom-6500f8613d48f7e880e2",
+        "rom-6666265d84da4a2b8155",
+        "rom-6d782ac2d5a994bcf31a",
+        "rom-ac7a8d48543f9c526929",
+        "rom-c90642f04d64409110c5",
+        "rom-c981e15abcaecc4d7d73",
+        "rom-cbf9d809b1d5958d8898",
+        "rom-d40e6a5ad1659368cde1",
+        "rom-d537d760fa86c3d77cb5",
+        "rom-eabc7eac8882a1d3600c",
+        "switch-production-keys"
+      ],
+      "minimum_free_bytes": 8589934592,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/usf2u.zip": {
+          "members": {
+            "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+            "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+            "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+            "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+            "usf2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+            "usf2.13m": "34b72a8aec1f7dfbfcd6974a671f021ec6e00aa20ee5d9153737447ae03c9c04",
+            "usf2.14m": "c2df66a47ec6b321b26e97bb5fbec1ee517031a6da6906c49b32f69c09d65874",
+            "usf2.29m": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015",
+            "usf2.31m": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206",
+            "usf2.33m": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6",
+            "usf2.35m": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee",
+            "usfx.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+            "usfx.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+            "usfx.03d": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+            "usfx.04a": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+            "usfx.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+            "usfx.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+            "usfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+            "usfx.11m": "c39eae5936f162b3b4c892f54bf3015313bdb4d56aab0e3018c2a071d0e89f24",
+            "usfx.13m": "8246736b69dd21337eaeb57c9280358a36e66f2a4e83fd8b7eed48c4918a57a2",
+            "usfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+            "usfx.15m": "72c0b63c3f86dbfd911bc92f91641cb7f849bedfadbe6494651e1b4e6f138b7d",
+            "usfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+            "usfx.17m": "f1e37f9ee80fc4f7429c583be80dacbd5986bd6b28881d82b1c5337d7796a12e",
+            "usfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+            "usfx.19m": "127f84e5ff9db011edc24f0d68b2022361a8044f06b0648c1ad5858dfcaeac06",
+            "usfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+            "usfx.21m": "34d912f1d822dbd28b9fe4dc7c95703b50f034de48353ddf613cfbe8b4f3e95d",
+            "usfx.23m": "7c4ac8c48f882a2a442079c41d98b97f6dba93fca845799615b9855bcfc8e616",
+            "usfx.25m": "c28f396eff1e055bb12eb2f179eb095e4fdeb050d3893e4b93104d38604f9b88",
+            "usfx.27m": "5f1f8c4b67e74a5c9e1d0e71e600f7c2de17faf7b327b3344e57c81c0abf2b18"
+          }
+        },
+        "support/usf2-backport/README-original.txt": {
+          "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+        },
+        "support/usf2-backport/verification/dl-1425.bin": {
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+        }
+      },
+      "platform": "fbneo",
+      "profile": "default",
+      "region": "us",
+      "software_notes": [
+        "An owned regional base game and valid private Switch keys are required for every build.",
+        "The pinned Switch extraction helpers are prepared automatically. Private key values are never included in reports.",
+        "HBMAME needs a build that includes the Ultra Street Fighter II sets; stock MAME uses the HSF2 layout in this edition profile."
+      ],
+      "variant": "usf2t8"
+    },
+    "usf2t8-hbmame": {
+      "inputs": [
+        "game-235c8f3d1a83d81703ac",
+        "rom-091ac51001654e957bc9",
+        "rom-0e41159ac6190b24db92",
+        "rom-0f045013e1f0d04febe1",
+        "rom-1863b3049553b0a10865",
+        "rom-2197f85af99c7a2b4d61",
+        "rom-2768b60c6442800b32e5",
+        "rom-40df56cf82388684ad81",
+        "rom-44b4a66645a2a982e009",
+        "rom-45aa9b70ae78f1f29c38",
+        "rom-4612b2b6e64b2c3ca2d6",
+        "rom-4c5a2f8b746fa5a4a7ce",
+        "rom-524a25bcd153be24594d",
+        "rom-54a738964d44cbdc1dac",
+        "rom-569e44101fa2dd0ba5b4",
+        "rom-5db3d68b3088f7596618",
+        "rom-6500f8613d48f7e880e2",
+        "rom-6666265d84da4a2b8155",
+        "rom-6d782ac2d5a994bcf31a",
+        "rom-ac7a8d48543f9c526929",
+        "rom-c90642f04d64409110c5",
+        "rom-c981e15abcaecc4d7d73",
+        "rom-cbf9d809b1d5958d8898",
+        "rom-d40e6a5ad1659368cde1",
+        "rom-d537d760fa86c3d77cb5",
+        "rom-eabc7eac8882a1d3600c",
+        "switch-production-keys"
+      ],
+      "minimum_free_bytes": 8589934592,
+      "outputs": {
+        "roms/hiscore.py": {
+          "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/usf2-hiscore.json": {
+          "sha256": "68a4d213cfbfbbed4d610fc2808ef7fe1f56c236a4d27e9b8d735cba006d7745"
+        },
+        "roms/usf2u.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "sfx.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+            "sfx.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+            "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+            "sfx.11m": "c39eae5936f162b3b4c892f54bf3015313bdb4d56aab0e3018c2a071d0e89f24",
+            "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+            "sfx.13m": "8246736b69dd21337eaeb57c9280358a36e66f2a4e83fd8b7eed48c4918a57a2",
+            "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+            "sfx.15m": "72c0b63c3f86dbfd911bc92f91641cb7f849bedfadbe6494651e1b4e6f138b7d",
+            "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+            "sfx.17m": "f1e37f9ee80fc4f7429c583be80dacbd5986bd6b28881d82b1c5337d7796a12e",
+            "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+            "sfx.19m": "127f84e5ff9db011edc24f0d68b2022361a8044f06b0648c1ad5858dfcaeac06",
+            "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+            "sfx.21m": "34d912f1d822dbd28b9fe4dc7c95703b50f034de48353ddf613cfbe8b4f3e95d",
+            "sfx.23m": "7c4ac8c48f882a2a442079c41d98b97f6dba93fca845799615b9855bcfc8e616",
+            "sfx.25m": "c28f396eff1e055bb12eb2f179eb095e4fdeb050d3893e4b93104d38604f9b88",
+            "sfx.27m": "5f1f8c4b67e74a5c9e1d0e71e600f7c2de17faf7b327b3344e57c81c0abf2b18",
+            "sfxj.03d": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+            "sfxj.04a": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+            "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+            "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+            "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+            "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+            "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+            "usf2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+            "usf2.13m": "34b72a8aec1f7dfbfcd6974a671f021ec6e00aa20ee5d9153737447ae03c9c04",
+            "usf2.14m": "c2df66a47ec6b321b26e97bb5fbec1ee517031a6da6906c49b32f69c09d65874",
+            "usf2.29m": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015",
+            "usf2.31m": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206",
+            "usf2.33m": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6",
+            "usf2.35m": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee"
+          }
+        },
+        "support/usf2-backport/README-original.txt": {
+          "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+        }
+      },
+      "platform": "hbmame",
+      "profile": "default",
+      "region": "us",
+      "software_notes": [
+        "An owned regional base game and valid private Switch keys are required for every build.",
+        "The pinned Switch extraction helpers are prepared automatically. Private key values are never included in reports.",
+        "HBMAME needs a build that includes the Ultra Street Fighter II sets; stock MAME uses the HSF2 layout in this edition profile."
+      ],
+      "variant": "usf2t8"
+    },
+    "usf2t8-mame": {
+      "inputs": [
+        "game-235c8f3d1a83d81703ac",
+        "rom-091ac51001654e957bc9",
+        "rom-0e41159ac6190b24db92",
+        "rom-0f045013e1f0d04febe1",
+        "rom-1863b3049553b0a10865",
+        "rom-2197f85af99c7a2b4d61",
+        "rom-2768b60c6442800b32e5",
+        "rom-40df56cf82388684ad81",
+        "rom-44b4a66645a2a982e009",
+        "rom-45aa9b70ae78f1f29c38",
+        "rom-4612b2b6e64b2c3ca2d6",
+        "rom-4c5a2f8b746fa5a4a7ce",
+        "rom-524a25bcd153be24594d",
+        "rom-54a738964d44cbdc1dac",
+        "rom-569e44101fa2dd0ba5b4",
+        "rom-5db3d68b3088f7596618",
+        "rom-6500f8613d48f7e880e2",
+        "rom-6666265d84da4a2b8155",
+        "rom-6d782ac2d5a994bcf31a",
+        "rom-ac7a8d48543f9c526929",
+        "rom-c90642f04d64409110c5",
+        "rom-c981e15abcaecc4d7d73",
+        "rom-cbf9d809b1d5958d8898",
+        "rom-d40e6a5ad1659368cde1",
+        "rom-d537d760fa86c3d77cb5",
+        "rom-eabc7eac8882a1d3600c",
+        "switch-production-keys"
+      ],
+      "minimum_free_bytes": 8589934592,
+      "outputs": {
+        "roms/hiscore.py": {
+          "sha256": "8fa80f2651ffa4b505e4d7bfb8fd2cb7bcfadb4108ec7a3da2555a932bb9eeff"
+        },
+        "roms/hsf2.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "hs2.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+            "hs2.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+            "hs2.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+            "hs2.06": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+            "hs2.07": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+            "hs2.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+            "hs2.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+            "hs2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+            "hs2.11m": "5ba0019791a6b6dd9728edeec97dc284b0206fc12f5d978e6bcba9c9e7f35234",
+            "hs2.13m": "3d8ea271afcdf231c6daf3b18b8b7293044e20c1dc3e79022aa8c47f13605348",
+            "hs2.15m": "921f36e91af693ad79028bd670957277b223ac748a6ef04e666acf8d324d8bc3",
+            "hs2.17m": "b5af74da78dbd1f3ef5a4b56cf69a4d8a3d68f1df75b85a5b5f2faa35f24928b",
+            "hs2.19m": "9c2c70ff29b632ed4988d00dd5bc435d76c7422377536bd0d4c0ef968c17538a",
+            "hs2u.03": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+            "hs2u.04": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+            "hsf2.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca"
+          }
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/usf2-hiscore.json": {
+          "sha256": "79e81eb2d99ede1468f61ff6b0072987f9a0b1eb6e8c2c72e218d7da0de8fa92"
+        },
+        "support/usf2-backport/README-original.txt": {
+          "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+        }
+      },
+      "platform": "mame",
+      "profile": "usf2-backport-us",
+      "region": "us",
+      "software_notes": [
+        "An owned regional base game and valid private Switch keys are required for every build.",
+        "The pinned Switch extraction helpers are prepared automatically. Private key values are never included in reports.",
+        "HBMAME needs a build that includes the Ultra Street Fighter II sets; stock MAME uses the HSF2 layout in this edition profile."
+      ],
+      "variant": "usf2t8"
+    },
+    "usf2t8-mister": {
+      "inputs": [
+        "game-235c8f3d1a83d81703ac",
+        "rom-091ac51001654e957bc9",
+        "rom-0e41159ac6190b24db92",
+        "rom-0f045013e1f0d04febe1",
+        "rom-1863b3049553b0a10865",
+        "rom-2197f85af99c7a2b4d61",
+        "rom-2768b60c6442800b32e5",
+        "rom-40df56cf82388684ad81",
+        "rom-44b4a66645a2a982e009",
+        "rom-45aa9b70ae78f1f29c38",
+        "rom-4612b2b6e64b2c3ca2d6",
+        "rom-4c5a2f8b746fa5a4a7ce",
+        "rom-524a25bcd153be24594d",
+        "rom-54a738964d44cbdc1dac",
+        "rom-569e44101fa2dd0ba5b4",
+        "rom-5db3d68b3088f7596618",
+        "rom-6500f8613d48f7e880e2",
+        "rom-6666265d84da4a2b8155",
+        "rom-6d782ac2d5a994bcf31a",
+        "rom-ac7a8d48543f9c526929",
+        "rom-c90642f04d64409110c5",
+        "rom-c981e15abcaecc4d7d73",
+        "rom-cbf9d809b1d5958d8898",
+        "rom-d40e6a5ad1659368cde1",
+        "rom-d537d760fa86c3d77cb5",
+        "rom-eabc7eac8882a1d3600c",
+        "switch-production-keys"
+      ],
+      "minimum_free_bytes": 17179869184,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Restorations/Ultra Street Fighter II (USA) [Backport].mra": {
+          "sha256": "f65937adc5bd0e11657a4e4e10d3a788bbee4ee57c4a2a8de443436d2490d3f9"
+        },
+        "_Arcade/cores/jtcps2-cpsplus_20261101.rbf": {
+          "sha256": "23b23a2a7a38b88d959a2cc3df5d970d3ccb5f16fda6ffc5eb491888244db397"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/GPL-3.0.txt": {
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/SOURCE_AND_LICENSE.txt": {
+          "sha256": "91d07d949bc2d912b8ee8d222ca8009b9f9bbc2e2a380d06b9338a40070a3a31"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/usf2-backport/cps2_core_release.json": {
+          "sha256": "b59eb80289f177b2afd96c0964b41242b2632ce518c1689c3feac7adeaaa81b6"
+        },
+        "games/CPS+/usf2_arrange.zip": {
+          "members": {
+            "usf2_arrange.cpk": "18948ce8280dfd20285d6f383505eedf616ed2cea137a84ea5f327d7bf3b7f56"
+          }
+        },
+        "games/mame/usf2u.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "sfx.01": "5a640da4870b0885cf19e6e1dab7514148ba4a6b5913dab3903f66b866385d7c",
+            "sfx.02": "c958e814fa9303f28ea8fcc03cadc2064dd12aafda50e6ca1c857f0806031026",
+            "sfx.09": "374b1a6b6e5adc3225fc2bb0a46dc2602652446c5d30665160b81fd693ed8d60",
+            "sfx.11m": "c39eae5936f162b3b4c892f54bf3015313bdb4d56aab0e3018c2a071d0e89f24",
+            "sfx.12m": "2197f85af99c7a2b4d61f8d23dc7bcc4ce30faf8fb42878d5d87b95c16874ca3",
+            "sfx.13m": "8246736b69dd21337eaeb57c9280358a36e66f2a4e83fd8b7eed48c4918a57a2",
+            "sfx.14m": "e14cc2c73a94026eb0a4efb091bcd5c15fe2110371d69983049f2584c9207b58",
+            "sfx.15m": "72c0b63c3f86dbfd911bc92f91641cb7f849bedfadbe6494651e1b4e6f138b7d",
+            "sfx.16m": "8316bc465f785522ed9f1d88966fb1606bc38e0448b5b5f0e72689e3fb471927",
+            "sfx.17m": "f1e37f9ee80fc4f7429c583be80dacbd5986bd6b28881d82b1c5337d7796a12e",
+            "sfx.18m": "569a7bc3fe6c4e44adb0be97befda6d1d4076b2fb48340d625baeccfb7cf6165",
+            "sfx.19m": "127f84e5ff9db011edc24f0d68b2022361a8044f06b0648c1ad5858dfcaeac06",
+            "sfx.20m": "0ee833ec29ad7af72b5e97a7bccb0fe36705c7d66ae05cbd9b71b6c6e81442c2",
+            "sfx.21m": "34d912f1d822dbd28b9fe4dc7c95703b50f034de48353ddf613cfbe8b4f3e95d",
+            "sfx.23m": "7c4ac8c48f882a2a442079c41d98b97f6dba93fca845799615b9855bcfc8e616",
+            "sfx.25m": "c28f396eff1e055bb12eb2f179eb095e4fdeb050d3893e4b93104d38604f9b88",
+            "sfx.27m": "5f1f8c4b67e74a5c9e1d0e71e600f7c2de17faf7b327b3344e57c81c0abf2b18",
+            "sfxj.03d": "6e9287b3e81fac2d4208933b7a39378433fc2e03300051500aa6311fa8300584",
+            "sfxj.04a": "79cb4c3af0c0cfb5348c27a953d446bb6aa6fabb376272b0a641670aa10d3d9d",
+            "sfxj.05": "091ac51001654e957bc9fd655190d40bf4353dcde12accff62f8b4bfa7c754df",
+            "sfxj.06b": "c981e15abcaecc4d7d7350c589dbe6a0f285500214e2ff9f5692c1521b0d4320",
+            "sfxj.07a": "fc44f2139772c01f35dd9ec3d99b4cc464358da203d234e5182ee77201fd9013",
+            "sfxj.08": "2e44d5bebb9cc13c427d9ef6d383e4e4b78a2623500cc1b3abe7bc04e46b480e",
+            "ssf2xj.key": "0e41159ac6190b24db9265e840351b3a98b11221d8620d2253b54fb390c991ca",
+            "usf2.10": "f6f1e9c6b720f398d8d1f523c7a4bc8d1e0d7040fcd08508132f029ec1fa4a3d",
+            "usf2.13m": "34b72a8aec1f7dfbfcd6974a671f021ec6e00aa20ee5d9153737447ae03c9c04",
+            "usf2.14m": "c2df66a47ec6b321b26e97bb5fbec1ee517031a6da6906c49b32f69c09d65874",
+            "usf2.29m": "dd3d17a8de3ca278115c7f675903a5dd61dda17ba89aa2d7ca4981cf2341f015",
+            "usf2.31m": "f5589818750d83841492ed24c7e1bc4e519d1af4a9062bda192a73ba8d2c7206",
+            "usf2.33m": "c9e4d75831c675a01d7e96ffb96575320f534f0575d861893c3591ae264345f6",
+            "usf2.35m": "c9e92ffaf37c94152e02babfcf665eb1abb8521218a2e5dcb2a898ed3cf93cee"
+          }
+        },
+        "support/usf2-backport/README-original.txt": {
+          "sha256": "52f4f9551273b94e32d3b5e3594bff6a49bbdbd93ed40bfbaaf8298b15dfa71b"
+        }
+      },
+      "platform": "mister",
+      "profile": "default",
+      "region": "us",
+      "software_notes": [
+        "An owned regional base game and valid private Switch keys are required for every build.",
+        "The pinned Switch extraction helpers are prepared automatically. Private key values are never included in reports.",
+        "HBMAME needs a build that includes the Ultra Street Fighter II sets; stock MAME uses the HSF2 layout in this edition profile."
+      ],
+      "variant": "usf2t8"
+    }
+  }
+}

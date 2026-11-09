@@ -1,0 +1,681 @@
+{
+  "artifacts": {
+    "cps-plus-kit": {
+      "sha256": "b9d9938f0bc65f1c95bb800627f2ff3a4b98a90833a6f110ad23527d4202199b",
+      "size": 17994142,
+      "url": "https://arcadepatches.com/downloads/archive/b9d9938f0bc65f1c95bb800627f2ff3a4b98a90833a6f110ad23527d4202199b/cps-plus-1.8-kit.zip"
+    },
+    "dstlk-restoration-kit": {
+      "sha256": "47e333c4b49020d76f52dfcb785f114ca4bc05f0cd585d5894b541d3574d545e",
+      "size": 209270,
+      "url": "https://arcadepatches.com/downloads/archive/47e333c4b49020d76f52dfcb785f114ca4bc05f0cd585d5894b541d3574d545e/dstlk-restoration-rc1-ips.zip"
+    },
+    "final-fight-ex-cps2-kit": {
+      "sha256": "22b8963aad77a491bd1ebdea9e4fbb726742203b9af9a5ab855b15ae8a683f99",
+      "size": 17185149,
+      "url": "https://arcadepatches.com/downloads/archive/22b8963aad77a491bd1ebdea9e4fbb726742203b9af9a5ab855b15ae8a683f99/final-fight-ex-cps2-rc3-kit.zip"
+    },
+    "final-fight-ex-kit": {
+      "sha256": "dca0251899ed9f9d044e8b5c6dab68404b5b1c246956eee3364819101863d36d",
+      "size": 3301305,
+      "url": "https://arcadepatches.com/downloads/archive/dca0251899ed9f9d044e8b5c6dab68404b5b1c246956eee3364819101863d36d/final-fight-ex-rc4-kit.zip"
+    },
+    "hsf2-restoration-kit": {
+      "sha256": "39808a9eac76238c34db88454076ec741be743757fbb122ef5863a8b891b1f6b",
+      "size": 240801,
+      "url": "https://arcadepatches.com/downloads/archive/39808a9eac76238c34db88454076ec741be743757fbb122ef5863a8b891b1f6b/hsf2-restoration-rc1-ips.zip"
+    },
+    "mshvsf-ex-kit": {
+      "sha256": "10e0f8b0aa18a080b28539325b9c4d635b2de081d8a378fd35ccf2888517a495",
+      "size": 934696,
+      "url": "https://arcadepatches.com/downloads/archive/10e0f8b0aa18a080b28539325b9c4d635b2de081d8a378fd35ccf2888517a495/mshvsf-ex-rc6-ips.zip"
+    },
+    "mshvsf-restoration-kit": {
+      "sha256": "6f5bd5d122837e95bfcdeb32acee42ff8293c4cb3c7c07260378aca11f86df03",
+      "size": 244206,
+      "url": "https://arcadepatches.com/downloads/archive/6f5bd5d122837e95bfcdeb32acee42ff8293c4cb3c7c07260378aca11f86df03/mshvsf-restoration-rc1-ips.zip"
+    },
+    "ng-plus-kit": {
+      "sha256": "743cca3a79bc766a61d7c01f37f701970c6d6eb93d49a148b52f4f90d34b2429",
+      "size": 1852233,
+      "url": "https://arcadepatches.com/downloads/archive/743cca3a79bc766a61d7c01f37f701970c6d6eb93d49a148b52f4f90d34b2429/ng-plus-1.1-kit.zip"
+    },
+    "nwarr-restoration-kit": {
+      "sha256": "7e63f8136a7a5d5dfeddbf2c3c7d3de0a4cc477aaaa4f67fd52de131d2a027ee",
+      "size": 235012,
+      "url": "https://arcadepatches.com/downloads/archive/7e63f8136a7a5d5dfeddbf2c3c7d3de0a4cc477aaaa4f67fd52de131d2a027ee/nwarr-restoration-rc1-ips.zip"
+    },
+    "sfa-ex-kit": {
+      "sha256": "9b90a6417d6c50ba3b49ee108719bfe028d96319911d7b6597704dcde2ce9f38",
+      "size": 1178155,
+      "url": "https://arcadepatches.com/downloads/archive/9b90a6417d6c50ba3b49ee108719bfe028d96319911d7b6597704dcde2ce9f38/sfa-ex-rc3-ips.zip"
+    },
+    "sfa-restoration-kit": {
+      "sha256": "8fcb7cbde4af6c466e7b27f127e9284579b843fa5f58088bf2f6738509a27ca5",
+      "size": 511463,
+      "url": "https://arcadepatches.com/downloads/archive/8fcb7cbde4af6c466e7b27f127e9284579b843fa5f58088bf2f6738509a27ca5/sfa-restoration-rc1-ips.zip"
+    },
+    "sfa2-ex-kit": {
+      "sha256": "b27596bc80efcd260d3781892e3024263e19dc14444632ced57bf328910fc4d3",
+      "size": 1130858,
+      "url": "https://arcadepatches.com/downloads/archive/b27596bc80efcd260d3781892e3024263e19dc14444632ced57bf328910fc4d3/sfa2-ex-rc4-kit.zip"
+    },
+    "sfa2-gold-kit": {
+      "sha256": "e5249d72ff7237041fd39c6de466f2aec94595eb5be11f97b5d18ce73523c862",
+      "size": 1779246,
+      "url": "https://arcadepatches.com/downloads/archive/e5249d72ff7237041fd39c6de466f2aec94595eb5be11f97b5d18ce73523c862/sfa2-gold-rc8-kit.zip"
+    },
+    "sfa2-restoration-kit": {
+      "sha256": "a211707b5951cc27d4662bdafbdba00c40b5269d3acfcd97036eb23b87054b82",
+      "size": 1419011,
+      "url": "https://arcadepatches.com/downloads/archive/a211707b5951cc27d4662bdafbdba00c40b5269d3acfcd97036eb23b87054b82/sfa2-restoration-rc2-ips.zip"
+    },
+    "sfa3-restoration-kit": {
+      "sha256": "91d11e8b45abc8b2a623d45d86c5bdbf052c12be2440f74fc99ea719ed96ad2a",
+      "size": 632422,
+      "url": "https://arcadepatches.com/downloads/archive/91d11e8b45abc8b2a623d45d86c5bdbf052c12be2440f74fc99ea719ed96ad2a/sfa3-restoration-rc5-ips.zip"
+    },
+    "sfa3-upper-cps2-kit": {
+      "sha256": "cc250531a4b9afbe9793e4b33c05eecbab632e3e52e7b9e6ac2cfe33b5094401",
+      "size": 4351160,
+      "url": "https://arcadepatches.com/downloads/archive/cc250531a4b9afbe9793e4b33c05eecbab632e3e52e7b9e6ac2cfe33b5094401/sfa3-upper-cps2-rc1-kit.zip"
+    },
+    "sfz2al-restoration-kit": {
+      "sha256": "86cdfeb39c3f3b55d23f93e6466c5d85434f3f818279150f681a4e4ff0a9d06b",
+      "size": 334726,
+      "url": "https://arcadepatches.com/downloads/archive/86cdfeb39c3f3b55d23f93e6466c5d85434f3f818279150f681a4e4ff0a9d06b/sfz2al-restoration-rc2-ips.zip"
+    },
+    "sfz3ugd-multiregion-kit": {
+      "sha256": "8a9a4c0989a986ad3e6d15dfabc2fe52262719e95325ed02edd026f71f27a7f7",
+      "size": 128811,
+      "url": "https://arcadepatches.com/downloads/archive/8a9a4c0989a986ad3e6d15dfabc2fe52262719e95325ed02edd026f71f27a7f7/sfz3ugd-multiregion-1.0-chd.zip"
+    },
+    "source-sevenzip-linux-arm64": {
+      "sha256": "6f67134d30695c61129839833c87e173d03e133e5b986e780e346578eb67fad3",
+      "size": 1196603,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/6f67134d30695c61129839833c87e173d03e133e5b986e780e346578eb67fad3-source-sevenzip-linux-arm64.zip"
+    },
+    "source-sevenzip-linux-x86_64": {
+      "sha256": "775bcf73d96195b47e3f377f7d3386c0c9a0dd3041d492abf588152d37aa19ef",
+      "size": 1311711,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/775bcf73d96195b47e3f377f7d3386c0c9a0dd3041d492abf588152d37aa19ef-source-sevenzip-linux-x86_64.zip"
+    },
+    "source-sevenzip-mac": {
+      "sha256": "70225cb9d5e060cd1d3ddc3f35e9fa6f1d3441ad356f53a5f3ee3e74a1171e2a",
+      "size": 2618542,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/70225cb9d5e060cd1d3ddc3f35e9fa6f1d3441ad356f53a5f3ee3e74a1171e2a-source-sevenzip-mac.zip"
+    },
+    "source-sevenzip-windows": {
+      "sha256": "7b1a90f1ef91a39b07611596e617ac6552b5467525df5289144bba3234ac4733",
+      "size": 625726,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/7b1a90f1ef91a39b07611596e617ac6552b5467525df5289144bba3234ac4733-source-sevenzip-windows.zip"
+    },
+    "ssf2-ex-kit": {
+      "sha256": "b3293b6eb2bbcc2914a38f1ebc4c798c0b2ae6922fe0675a0ec21e20835f2f14",
+      "size": 1476890,
+      "url": "https://arcadepatches.com/downloads/archive/b3293b6eb2bbcc2914a38f1ebc4c798c0b2ae6922fe0675a0ec21e20835f2f14/ssf2-ex-rc13-ips.zip"
+    },
+    "ssf2t-gmc-kit": {
+      "sha256": "720a8eb89354dec07439f7f8972f6ea5740a97730bcec69e9caf5c0aa6a4c34b",
+      "size": 217225,
+      "url": "https://arcadepatches.com/downloads/archive/720a8eb89354dec07439f7f8972f6ea5740a97730bcec69e9caf5c0aa6a4c34b/ssf2t-gmc-rc4-ips.zip"
+    },
+    "strider-ex-kit": {
+      "sha256": "4afc7cdf1059a92b2770a9e98101c4957b69177789814b1223023621942c9c70",
+      "size": 15487168,
+      "url": "https://arcadepatches.com/downloads/archive/4afc7cdf1059a92b2770a9e98101c4957b69177789814b1223023621942c9c70/strider-ex-rc1-kit.zip"
+    },
+    "usf2-backport-kit": {
+      "sha256": "d8678e91487b15e6b6ca4ed3e423dc0f2c991f340d846c0fa9b56f755bc0a2a7",
+      "size": 16695025,
+      "url": "https://arcadepatches.com/downloads/archive/d8678e91487b15e6b6ca4ed3e423dc0f2c991f340d846c0fa9b56f755bc0a2a7/usf2-backport-rc6-kit.zip"
+    },
+    "vhunt2-arrange-kit": {
+      "sha256": "5fd74015c88b3813dcf7d7f5031498e86048d1602db3546486a72ab490d489db",
+      "size": 2067552,
+      "url": "https://arcadepatches.com/downloads/archive/5fd74015c88b3813dcf7d7f5031498e86048d1602db3546486a72ab490d489db/vhunt2-arrange-rc4-kit.zip"
+    },
+    "vhunt2-english-kit": {
+      "sha256": "4cd7412b54aab3d6382d8032d40888ee147b656cdd7e4f595d8b246df13ba1cb",
+      "size": 186625,
+      "url": "https://arcadepatches.com/downloads/archive/4cd7412b54aab3d6382d8032d40888ee147b656cdd7e4f595d8b246df13ba1cb/vhunt2-english-rc3-ips.zip"
+    },
+    "vsav-arrange-kit": {
+      "sha256": "fe6ef213d1045a6f5a74bf60513378b5a6f16dcbd1e505998deaaab8fbba4f7d",
+      "size": 2359289,
+      "url": "https://arcadepatches.com/downloads/archive/fe6ef213d1045a6f5a74bf60513378b5a6f16dcbd1e505998deaaab8fbba4f7d/vsav-arrange-rc5-kit.zip"
+    },
+    "vsav-restoration-kit": {
+      "sha256": "409b0db17619f0fdd70e4da9639892eebe5393056964b8868497fbfc9091d5c9",
+      "size": 210937,
+      "url": "https://arcadepatches.com/downloads/archive/409b0db17619f0fdd70e4da9639892eebe5393056964b8868497fbfc9091d5c9/vsav-restoration-rc2-ips.zip"
+    },
+    "vsav2-arrange-kit": {
+      "sha256": "2e3aed6fa6d438fa2a1d3992ba81b299ac17a330f5f0e27499b06c4c8185d59a",
+      "size": 1986815,
+      "url": "https://arcadepatches.com/downloads/archive/2e3aed6fa6d438fa2a1d3992ba81b299ac17a330f5f0e27499b06c4c8185d59a/vsav2-arrange-rc4-kit.zip"
+    },
+    "vsav2-english-kit": {
+      "sha256": "36dad52f1bb1d1b6722982cde9d9f4c5a1d4200280e084fcfe37d46f941dc277",
+      "size": 189201,
+      "url": "https://arcadepatches.com/downloads/archive/36dad52f1bb1d1b6722982cde9d9f4c5a1d4200280e084fcfe37d46f941dc277/vsav2-english-rc3-ips.zip"
+    },
+    "wheel-0bce5c4fd0921f99d2e8": {
+      "filename": "pillow-11.3.0-cp313-cp313-win_amd64.whl",
+      "sha256": "0bce5c4fd0921f99d2e858dc4d4d64193407e1b99478bc5cacecba2311abde51",
+      "size": 6978450,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/0bce5c4fd0921f99d2e858dc4d4d64193407e1b99478bc5cacecba2311abde51-pillow-11.3.0-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-185cd3d6d05ca4b44a8f": {
+      "filename": "scipy-1.15.3-cp312-cp312-macosx_12_0_arm64.whl",
+      "sha256": "185cd3d6d05ca4b44a8f1595af87f9c372bb6acf9c808e99aa3e9aa03bd98cf6",
+      "size": 30173284,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/185cd3d6d05ca4b44a8f1595af87f9c372bb6acf9c808e99aa3e9aa03bd98cf6-scipy-1.15.3-cp312-cp312-macosx_12_0_arm64.whl"
+    },
+    "wheel-1afac4a847207c7ff8ef": {
+      "filename": "scipy-1.18.0-cp313-cp313-win_amd64.whl",
+      "sha256": "1afac4a847207c7ff8efd321734a50b06d0280b3b2a2c0fc2f413101747ad7c7",
+      "size": 36554943,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/1afac4a847207c7ff8efd321734a50b06d0280b3b2a2c0fc2f413101747ad7c7-scipy-1.18.0-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-265915e79107de9f946b": {
+      "filename": "scipy-1.18.0-cp312-cp312-macosx_12_0_arm64.whl",
+      "sha256": "265915e79107de9f946b855e50d7470d5893ec3f54b342e1aa6201cbdcd8bb6b",
+      "size": 28681889,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/265915e79107de9f946b855e50d7470d5893ec3f54b342e1aa6201cbdcd8bb6b-scipy-1.18.0-cp312-cp312-macosx_12_0_arm64.whl"
+    },
+    "wheel-921bd305b10e82b4d1f5": {
+      "filename": "pillow-11.3.0-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "921bd305b10e82b4d1f5e802b6850677f965d8394203d182f078873851dada69",
+      "size": 4686296,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/921bd305b10e82b4d1f5e802b6850677f965d8394203d182f078873851dada69-pillow-11.3.0-cp312-cp312-macosx_11_0_arm64.whl"
+    },
+    "wheel-b0544343a702fa80c95a": {
+      "filename": "numpy-2.2.6-cp313-cp313-win_amd64.whl",
+      "sha256": "b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c",
+      "size": 12610885,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c-numpy-2.2.6-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-b90ab29d0c37ec9bf554": {
+      "filename": "scipy-1.15.3-cp313-cp313-win_amd64.whl",
+      "sha256": "b90ab29d0c37ec9bf55424c064312930ca5f4bde15ee8619ee44e69319aab163",
+      "size": 40988851,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/b90ab29d0c37ec9bf55424c064312930ca5f4bde15ee8619ee44e69319aab163-scipy-1.15.3-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-de749064336d37e340f6": {
+      "filename": "numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c",
+      "size": 14119362,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
+    }
+  },
+  "generation": 135,
+  "launcher": {
+    "url": "https://arcadepatches.com/arcadepatches/",
+    "version": "0.1.5"
+  },
+  "not_integrated": [],
+  "projects": {
+    "cps-plus": {
+      "current": "cps-plus-1-8-r2",
+      "title": "CPS+"
+    },
+    "dstlk-restoration": {
+      "current": "dstlk-restoration-rc1-r9",
+      "title": "Darkstalkers: The Night Warriors"
+    },
+    "final-fight-ex": {
+      "current": "final-fight-ex-rc4-r4",
+      "title": "Final Fight EX"
+    },
+    "final-fight-ex-cps2": {
+      "current": "final-fight-ex-cps2-rc3-r5",
+      "title": "Final Fight EX (CPS-2)"
+    },
+    "hsf2-restoration": {
+      "current": "hsf2-restoration-rc1-r5",
+      "title": "Hyper Street Fighter II: The Anniversary Edition \u00b7 English restoration"
+    },
+    "mshvsf-ex": {
+      "current": "mshvsf-ex-rc6-r2",
+      "title": "Marvel Super Heroes vs. Street Fighter EX"
+    },
+    "mshvsf-restoration": {
+      "current": "mshvsf-restoration-rc1-r10",
+      "title": "Marvel Super Heroes vs. Street Fighter"
+    },
+    "ng-plus": {
+      "current": "ng-plus-1-1-r6",
+      "title": "NG+"
+    },
+    "nwarr-restoration": {
+      "current": "nwarr-restoration-rc1-r9",
+      "title": "Night Warriors: Darkstalkers' Revenge"
+    },
+    "sfa-ex": {
+      "current": "sfa-ex-rc3-r4",
+      "title": "Street Fighter Alpha EX"
+    },
+    "sfa-restoration": {
+      "current": "sfa-restoration-rc1-r9",
+      "title": "Street Fighter Alpha: Warriors' Dreams"
+    },
+    "sfa2-ex": {
+      "current": "sfa2-ex-rc4-r3",
+      "title": "Street Fighter Alpha 2 EX"
+    },
+    "sfa2-gold": {
+      "current": "sfa2-gold-rc8-r3",
+      "title": "Street Fighter Alpha 2 Gold"
+    },
+    "sfa2-restoration": {
+      "current": "sfa2-restoration-rc2-r8",
+      "title": "Street Fighter Alpha 2"
+    },
+    "sfa3-restoration": {
+      "current": "sfa3-restoration-rc5-r3",
+      "title": "Street Fighter Alpha 3"
+    },
+    "sfa3-upper-cps2": {
+      "current": "sfa3-upper-cps2-rc1-r5",
+      "title": "Street Fighter Alpha 3 Upper (CPS-2)"
+    },
+    "sfz2al-restoration": {
+      "current": "sfz2al-restoration-rc2-r8",
+      "title": "Street Fighter Zero 2 Alpha"
+    },
+    "sfz3ugd-multiregion": {
+      "current": "sfz3ugd-multiregion-1-0-r6",
+      "title": "Street Fighter Alpha 3 Upper"
+    },
+    "ssf2-ex": {
+      "current": "ssf2-ex-rc13-r3",
+      "title": "Super Street Fighter II EX"
+    },
+    "ssf2t-gmc": {
+      "current": "ssf2t-gmc-rc4-r5",
+      "title": "Super Street Fighter II Turbo: Grand Master Challenge"
+    },
+    "strider-ex": {
+      "current": "strider-ex-rc1-r11",
+      "title": "Strider EX"
+    },
+    "usf2-backport": {
+      "current": "usf2-backport-rc6-r3",
+      "title": "Ultra Street Fighter II"
+    },
+    "vhunt2-arrange": {
+      "current": "vhunt2-arrange-rc4-r2",
+      "title": "Night Warriors 2 Arrange"
+    },
+    "vhunt2-english": {
+      "current": "vhunt2-english-rc3-r8",
+      "title": "Night Warriors 2"
+    },
+    "vsav-arrange": {
+      "current": "vsav-arrange-rc5-r2",
+      "title": "Vampire Savior Arrange"
+    },
+    "vsav-restoration": {
+      "current": "vsav-restoration-rc2-r8",
+      "title": "Vampire Savior"
+    },
+    "vsav2-arrange": {
+      "current": "vsav2-arrange-rc4-r2",
+      "title": "Vampire Savior 2 Arrange"
+    },
+    "vsav2-english": {
+      "current": "vsav2-english-rc3-r8",
+      "title": "Vampire Savior 2"
+    }
+  },
+  "releases": {
+    "cps-plus-1-8-r2": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "86aff5d10b414e5656896aaa7bf76cf6a10a4884a4284554e0288c6b15548e30",
+        "size": 783745,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/86aff5d10b414e5656896aaa7bf76cf6a10a4884a4284554e0288c6b15548e30.json"
+      },
+      "game_version": "1.8",
+      "kit": "cps-plus-kit",
+      "kit_revision": 2
+    },
+    "dstlk-restoration-rc1-r9": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "f950a1a63dd2b3dd9c99b8d763fbe6219d19c119aa5e15a945b79d417605e6db",
+        "size": 34937,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/f950a1a63dd2b3dd9c99b8d763fbe6219d19c119aa5e15a945b79d417605e6db.json"
+      },
+      "game_version": "rc1",
+      "kit": "dstlk-restoration-kit",
+      "kit_revision": 9
+    },
+    "final-fight-ex-cps2-rc3-r5": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "fe720fcf63f05d83c5cfa3d07c160b07faf02235f3923f884247511f426cd9fe",
+        "size": 512222,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/fe720fcf63f05d83c5cfa3d07c160b07faf02235f3923f884247511f426cd9fe.json"
+      },
+      "game_version": "rc3",
+      "kit": "final-fight-ex-cps2-kit",
+      "kit_revision": 5
+    },
+    "final-fight-ex-rc4-r4": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "87add93329b62c5af2381485e1d77e5b3c1f53fa0eb8f6f3b41f8d06ad558633",
+        "size": 126603,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/87add93329b62c5af2381485e1d77e5b3c1f53fa0eb8f6f3b41f8d06ad558633.json"
+      },
+      "game_version": "rc4",
+      "kit": "final-fight-ex-kit",
+      "kit_revision": 4
+    },
+    "hsf2-restoration-rc1-r5": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "c8ffd6f1f78b51a327ec64933813355b3a534baed5ec1b1e761af7da1a3bb0e0",
+        "size": 31938,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/c8ffd6f1f78b51a327ec64933813355b3a534baed5ec1b1e761af7da1a3bb0e0.json"
+      },
+      "game_version": "rc1",
+      "kit": "hsf2-restoration-kit",
+      "kit_revision": 5
+    },
+    "mshvsf-ex-rc6-r2": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "a1ed56fc451558e3253148da1581b841cdfb2d89c63a1f838bf7362aee54c54a",
+        "size": 60224,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/a1ed56fc451558e3253148da1581b841cdfb2d89c63a1f838bf7362aee54c54a.json"
+      },
+      "game_version": "rc6",
+      "kit": "mshvsf-ex-kit",
+      "kit_revision": 2
+    },
+    "mshvsf-restoration-rc1-r10": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "c457ab230c773b8e1840b1df89e5706edc169a8fde45556868b8b67b9e05f5a5",
+        "size": 58606,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/c457ab230c773b8e1840b1df89e5706edc169a8fde45556868b8b67b9e05f5a5.json"
+      },
+      "game_version": "rc1",
+      "kit": "mshvsf-restoration-kit",
+      "kit_revision": 10
+    },
+    "ng-plus-1-1-r6": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "935f23b5126d19533ef46b3a9230014be7ea39430ed0d3040326c5828b9f6e1e",
+        "size": 74470,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/935f23b5126d19533ef46b3a9230014be7ea39430ed0d3040326c5828b9f6e1e.json"
+      },
+      "game_version": "1.1",
+      "kit": "ng-plus-kit",
+      "kit_revision": 6
+    },
+    "nwarr-restoration-rc1-r9": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "7da07a394a1f8c1057e863f59a4ae0ec98b2889d70b4597854bb1e0db18ae4e0",
+        "size": 35160,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/7da07a394a1f8c1057e863f59a4ae0ec98b2889d70b4597854bb1e0db18ae4e0.json"
+      },
+      "game_version": "rc1",
+      "kit": "nwarr-restoration-kit",
+      "kit_revision": 9
+    },
+    "sfa-ex-rc3-r4": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "9dd7fb2418f9d92e00bd7261eebe880a840f467224b1c19e37cb0ad91fc85337",
+        "size": 55860,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/9dd7fb2418f9d92e00bd7261eebe880a840f467224b1c19e37cb0ad91fc85337.json"
+      },
+      "game_version": "rc3",
+      "kit": "sfa-ex-kit",
+      "kit_revision": 4
+    },
+    "sfa-restoration-rc1-r9": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "e5c5db7234430aa443c72e926c910c3cf02503ed7c837a16bf074a1663f297da",
+        "size": 56446,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/e5c5db7234430aa443c72e926c910c3cf02503ed7c837a16bf074a1663f297da.json"
+      },
+      "game_version": "rc1",
+      "kit": "sfa-restoration-kit",
+      "kit_revision": 9
+    },
+    "sfa2-ex-rc4-r3": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "c09d2127f8783e0fc3b0f3d867682fe79b33ebaed28420c129208c6aef1c80b4",
+        "size": 85056,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/c09d2127f8783e0fc3b0f3d867682fe79b33ebaed28420c129208c6aef1c80b4.json"
+      },
+      "game_version": "rc4",
+      "kit": "sfa2-ex-kit",
+      "kit_revision": 3
+    },
+    "sfa2-gold-rc8-r3": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "108dacad06d231c8d3f2c249e67fc9a726c689f1aea69d51c83766ba485ed14e",
+        "size": 156635,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/108dacad06d231c8d3f2c249e67fc9a726c689f1aea69d51c83766ba485ed14e.json"
+      },
+      "game_version": "rc8",
+      "kit": "sfa2-gold-kit",
+      "kit_revision": 3
+    },
+    "sfa2-restoration-rc2-r8": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "d9623069d0b5d300bf3c9f3e5128430a1aa3dbd154a0e9718d749aa09f8d2e58",
+        "size": 77696,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/d9623069d0b5d300bf3c9f3e5128430a1aa3dbd154a0e9718d749aa09f8d2e58.json"
+      },
+      "game_version": "rc2",
+      "kit": "sfa2-restoration-kit",
+      "kit_revision": 8
+    },
+    "sfa3-restoration-rc5-r3": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "a90e586ab321338a6449b790c02820fc409026f2ecca9829c2be9b99acb3ac9e",
+        "size": 59936,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/a90e586ab321338a6449b790c02820fc409026f2ecca9829c2be9b99acb3ac9e.json"
+      },
+      "game_version": "rc5",
+      "kit": "sfa3-restoration-kit",
+      "kit_revision": 3
+    },
+    "sfa3-upper-cps2-rc1-r5": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "57c6504bedc66994acf7a142b42e19cb1492bd5392b530198698cc7cd6d44456",
+        "size": 114654,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/57c6504bedc66994acf7a142b42e19cb1492bd5392b530198698cc7cd6d44456.json"
+      },
+      "game_version": "rc1",
+      "kit": "sfa3-upper-cps2-kit",
+      "kit_revision": 5
+    },
+    "sfz2al-restoration-rc2-r8": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "bc961e0775ab51020a054f9d6113f4ed54777afe0d989eba6339dc0eb769d4d2",
+        "size": 32689,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/bc961e0775ab51020a054f9d6113f4ed54777afe0d989eba6339dc0eb769d4d2.json"
+      },
+      "game_version": "rc2",
+      "kit": "sfz2al-restoration-kit",
+      "kit_revision": 8
+    },
+    "sfz3ugd-multiregion-1-0-r6": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "6934cb3ff98285afcaff62a6f30563c3f016708136a3b2c9662e7006dc6a8018",
+        "size": 2043,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/6934cb3ff98285afcaff62a6f30563c3f016708136a3b2c9662e7006dc6a8018.json"
+      },
+      "game_version": "1.0",
+      "kit": "sfz3ugd-multiregion-kit",
+      "kit_revision": 6
+    },
+    "ssf2-ex-rc13-r3": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "f13d378c328f7b41d9b459cf2311de2432c0c8edbb4f0b26e0701c2d2f45917a",
+        "size": 74047,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/f13d378c328f7b41d9b459cf2311de2432c0c8edbb4f0b26e0701c2d2f45917a.json"
+      },
+      "game_version": "rc13",
+      "kit": "ssf2-ex-kit",
+      "kit_revision": 3
+    },
+    "ssf2t-gmc-rc4-r5": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "8af47e7e909262f11bf690590de2e13d99460b8fdbc48c30a310fcc1d3e9323b",
+        "size": 41729,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/8af47e7e909262f11bf690590de2e13d99460b8fdbc48c30a310fcc1d3e9323b.json"
+      },
+      "game_version": "rc4",
+      "kit": "ssf2t-gmc-kit",
+      "kit_revision": 5
+    },
+    "strider-ex-rc1-r11": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "98d547be82494900ddb3609dd7128186e791cd6bb2347a5e87b10fbf07d04823",
+        "size": 91499,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/98d547be82494900ddb3609dd7128186e791cd6bb2347a5e87b10fbf07d04823.json"
+      },
+      "game_version": "rc1",
+      "kit": "strider-ex-kit",
+      "kit_revision": 11
+    },
+    "usf2-backport-rc6-r3": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "88a5cafb0c0acdeaaeacd382821d2adde6fdd67e18618cc3608ba57c1755f972",
+        "size": 150583,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/88a5cafb0c0acdeaaeacd382821d2adde6fdd67e18618cc3608ba57c1755f972.json"
+      },
+      "game_version": "rc6",
+      "kit": "usf2-backport-kit",
+      "kit_revision": 3
+    },
+    "vhunt2-arrange-rc4-r2": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "9a5d845429d2583d82be5ce11b411c20d083b81ae4451aa8878778644ea2a564",
+        "size": 71943,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/9a5d845429d2583d82be5ce11b411c20d083b81ae4451aa8878778644ea2a564.json"
+      },
+      "game_version": "rc4",
+      "kit": "vhunt2-arrange-kit",
+      "kit_revision": 2
+    },
+    "vhunt2-english-rc3-r8": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "1e96c1c52584557b64f617195eeb42aa0bea01fd66c004008a96a7df8eb3397d",
+        "size": 34888,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/1e96c1c52584557b64f617195eeb42aa0bea01fd66c004008a96a7df8eb3397d.json"
+      },
+      "game_version": "rc3",
+      "kit": "vhunt2-english-kit",
+      "kit_revision": 8
+    },
+    "vsav-arrange-rc5-r2": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "5b2b04e44a6ffc7ed9a615ab5f24eebb9ded07581eebaf19eb40a6c4ed0a2b1a",
+        "size": 72541,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/5b2b04e44a6ffc7ed9a615ab5f24eebb9ded07581eebaf19eb40a6c4ed0a2b1a.json"
+      },
+      "game_version": "rc5",
+      "kit": "vsav-arrange-kit",
+      "kit_revision": 2
+    },
+    "vsav-restoration-rc2-r8": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "7efada50f740248ca89e234f047d30b3cb873bb6857c77750b5c743035393e49",
+        "size": 34959,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/7efada50f740248ca89e234f047d30b3cb873bb6857c77750b5c743035393e49.json"
+      },
+      "game_version": "rc2",
+      "kit": "vsav-restoration-kit",
+      "kit_revision": 8
+    },
+    "vsav2-arrange-rc4-r2": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "16f63739961e0d1dbb50d3f19e2ab4fee6dffc352e3c74fbadca9f07120d2802",
+        "size": 75122,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/16f63739961e0d1dbb50d3f19e2ab4fee6dffc352e3c74fbadca9f07120d2802.json"
+      },
+      "game_version": "rc4",
+      "kit": "vsav2-arrange-kit",
+      "kit_revision": 2
+    },
+    "vsav2-english-rc3-r8": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "5f7df0981e9ee07523fc0a5c7e2e0de5dc5363e06eb7a85258deeb33f8e065bf",
+        "size": 34805,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/5f7df0981e9ee07523fc0a5c7e2e0de5dc5363e06eb7a85258deeb33f8e065bf.json"
+      },
+      "game_version": "rc3",
+      "kit": "vsav2-english-kit",
+      "kit_revision": 8
+    }
+  },
+  "schema": 2,
+  "source_helpers": {
+    "darwin-arm64": {
+      "sevenzip": {
+        "artifact": "source-sevenzip-mac",
+        "entry": "7zz"
+      }
+    },
+    "darwin-x86_64": {
+      "sevenzip": {
+        "artifact": "source-sevenzip-mac",
+        "entry": "7zz"
+      }
+    },
+    "linux-arm64": {
+      "sevenzip": {
+        "artifact": "source-sevenzip-linux-arm64",
+        "entry": "7zz"
+      }
+    },
+    "linux-x86_64": {
+      "sevenzip": {
+        "artifact": "source-sevenzip-linux-x86_64",
+        "entry": "7zz"
+      }
+    },
+    "windows-arm64": {
+      "sevenzip": {
+        "artifact": "source-sevenzip-windows",
+        "entry": "7za.exe"
+      }
+    },
+    "windows-x86_64": {
+      "sevenzip": {
+        "artifact": "source-sevenzip-windows",
+        "entry": "7za.exe"
+      }
+    }
+  }
+}
