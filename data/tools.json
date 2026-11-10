@@ -1,6 +1,7 @@
 {
-  "date": "2026-11-09",
+  "date": "2026-11-10",
   "features": [
+    "ZIP media is recognized correctly on Windows. Detailed build reports include installer errors and identify media files that fail verification.",
     "Point it at your ROM and media folders. Loose files, ZIPs and 7z archives are identified by content, without renaming them. Supported discs and audio can use equivalent containers and lossless formats.",
     "Choose individual games, platforms and regions, or keep everything selected to include future catalog additions.",
     "Check requirements without unpacking ROMs. Disc messages explain absent, unsupported and unmatched images; reports include candidate filenames and sizes. Ready games can update while others wait for missing media.",
@@ -24,5 +25,5 @@
   ],
   "summary": "Build and update your Arcade Patches collection from media you own. Choose your games, platforms and regions, then copy the completed folders to your setup.",
   "title": "ArcadePatches",
-  "version": "0.1.6"
+  "version": "0.1.7"
 }

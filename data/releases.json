@@ -5,14 +5,14 @@
       "current": "1.8",
       "versions": {
         "1.8": {
-          "current_revision": 2,
-          "date": "2026-11-08",
+          "current_revision": 3,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/b9d9938f0bc65f1c95bb800627f2ff3a4b98a90833a6f110ad23527d4202199b/cps-plus-1.8-kit.zip",
+              "archive": "archive/64157b1ef51d6c9bc5cb4182e722272545e8bd4ec4273800561089b145ddef62/cps-plus-1.8-kit.zip",
               "name": "cps-plus-1.8-kit.zip",
-              "sha256": "b9d9938f0bc65f1c95bb800627f2ff3a4b98a90833a6f110ad23527d4202199b",
-              "size": 17994142
+              "sha256": "64157b1ef51d6c9bc5cb4182e722272545e8bd4ec4273800561089b145ddef62",
+              "size": 18000320
             }
           },
           "game_contract_sha256": "d5161a09b002cfc501804d175e05f46d797b596927e0bc8488907bd1811fc587",
@@ -22,6 +22,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 2
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 3
             }
           ],
           "revisions": {
@@ -33,6 +38,19 @@
                   "name": "cps-plus-1.8-kit.zip",
                   "sha256": "b9d9938f0bc65f1c95bb800627f2ff3a4b98a90833a6f110ad23527d4202199b",
                   "size": 17994142
+                }
+              },
+              "game_contract_sha256": "d5161a09b002cfc501804d175e05f46d797b596927e0bc8488907bd1811fc587",
+              "kind": "kit"
+            },
+            "3": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/64157b1ef51d6c9bc5cb4182e722272545e8bd4ec4273800561089b145ddef62/cps-plus-1.8-kit.zip",
+                  "name": "cps-plus-1.8-kit.zip",
+                  "sha256": "64157b1ef51d6c9bc5cb4182e722272545e8bd4ec4273800561089b145ddef62",
+                  "size": 18000320
                 }
               },
               "game_contract_sha256": "d5161a09b002cfc501804d175e05f46d797b596927e0bc8488907bd1811fc587",
@@ -228,14 +246,14 @@
       "current": "rc4",
       "versions": {
         "rc4": {
-          "current_revision": 6,
-          "date": "2026-11-09",
+          "current_revision": 7,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/5ab458fd985d92d4b62e0168a3e51ab0f175b8cca05428cb45d90a92596d5f4d/final-fight-ex-rc4-kit.zip",
+              "archive": "archive/d59c4e066e3ce2ec435fd255058bec6161638b4201d14235d337a96e132b0dbb/final-fight-ex-rc4-kit.zip",
               "name": "final-fight-ex-rc4-kit.zip",
-              "sha256": "5ab458fd985d92d4b62e0168a3e51ab0f175b8cca05428cb45d90a92596d5f4d",
-              "size": 3462447
+              "sha256": "d59c4e066e3ce2ec435fd255058bec6161638b4201d14235d337a96e132b0dbb",
+              "size": 3454384
             }
           },
           "game_contract_sha256": "4cda8fcd38c813071b64c4b5e528742584e86a5f2024ce76203ed063be8677b7",
@@ -250,6 +268,11 @@
               "date": "2026-11-09",
               "reason": "tooling update",
               "revision": 6
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 7
             }
           ],
           "revisions": {
@@ -278,6 +301,19 @@
               },
               "game_contract_sha256": "4cda8fcd38c813071b64c4b5e528742584e86a5f2024ce76203ed063be8677b7",
               "kind": "kit"
+            },
+            "7": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/d59c4e066e3ce2ec435fd255058bec6161638b4201d14235d337a96e132b0dbb/final-fight-ex-rc4-kit.zip",
+                  "name": "final-fight-ex-rc4-kit.zip",
+                  "sha256": "d59c4e066e3ce2ec435fd255058bec6161638b4201d14235d337a96e132b0dbb",
+                  "size": 3454384
+                }
+              },
+              "game_contract_sha256": "4cda8fcd38c813071b64c4b5e528742584e86a5f2024ce76203ed063be8677b7",
+              "kind": "kit"
             }
           }
         }
@@ -287,14 +323,14 @@
       "current": "rc3",
       "versions": {
         "rc3": {
-          "current_revision": 7,
-          "date": "2026-11-09",
+          "current_revision": 8,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/927b93e7ebdfa656b33df783f744d248de19d80f2378f0ff035e865e4f5d90f0/final-fight-ex-cps2-rc3-kit.zip",
+              "archive": "archive/03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59/final-fight-ex-cps2-rc3-kit.zip",
               "name": "final-fight-ex-cps2-rc3-kit.zip",
-              "sha256": "927b93e7ebdfa656b33df783f744d248de19d80f2378f0ff035e865e4f5d90f0",
-              "size": 17386881
+              "sha256": "03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59",
+              "size": 17341758
             }
           },
           "game_contract_sha256": "a85e9953f46f3b5f9e01ea76b5efd5c9726cfd817e1bb419a0b0ef6129517569",
@@ -309,6 +345,11 @@
               "date": "2026-11-09",
               "reason": "tooling update",
               "revision": 7
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 8
             }
           ],
           "removed_output": "definitions",
@@ -334,6 +375,19 @@
                   "name": "final-fight-ex-cps2-rc3-kit.zip",
                   "sha256": "927b93e7ebdfa656b33df783f744d248de19d80f2378f0ff035e865e4f5d90f0",
                   "size": 17386881
+                }
+              },
+              "game_contract_sha256": "a85e9953f46f3b5f9e01ea76b5efd5c9726cfd817e1bb419a0b0ef6129517569",
+              "kind": "kit"
+            },
+            "8": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59/final-fight-ex-cps2-rc3-kit.zip",
+                  "name": "final-fight-ex-cps2-rc3-kit.zip",
+                  "sha256": "03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59",
+                  "size": 17341758
                 }
               },
               "game_contract_sha256": "a85e9953f46f3b5f9e01ea76b5efd5c9726cfd817e1bb419a0b0ef6129517569",
@@ -1601,14 +1655,14 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 5,
-          "date": "2026-11-08",
+          "current_revision": 6,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/cc250531a4b9afbe9793e4b33c05eecbab632e3e52e7b9e6ac2cfe33b5094401/sfa3-upper-cps2-rc1-kit.zip",
+              "archive": "archive/92357f9ff31c9d2436a56efe01a7af2b42ade9c4193a14ce1a312790e97af81d/sfa3-upper-cps2-rc1-kit.zip",
               "name": "sfa3-upper-cps2-rc1-kit.zip",
-              "sha256": "cc250531a4b9afbe9793e4b33c05eecbab632e3e52e7b9e6ac2cfe33b5094401",
-              "size": 4351160
+              "sha256": "92357f9ff31c9d2436a56efe01a7af2b42ade9c4193a14ce1a312790e97af81d",
+              "size": 4354784
             }
           },
           "game_contract_sha256": "01b2fc9158eeeafae22ad081995d013bfcf8350cf682f1fc1bdb67808a717e38",
@@ -1618,6 +1672,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "revisions": {
@@ -1629,6 +1688,19 @@
                   "name": "sfa3-upper-cps2-rc1-kit.zip",
                   "sha256": "cc250531a4b9afbe9793e4b33c05eecbab632e3e52e7b9e6ac2cfe33b5094401",
                   "size": 4351160
+                }
+              },
+              "game_contract_sha256": "01b2fc9158eeeafae22ad081995d013bfcf8350cf682f1fc1bdb67808a717e38",
+              "kind": "kit"
+            },
+            "6": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/92357f9ff31c9d2436a56efe01a7af2b42ade9c4193a14ce1a312790e97af81d/sfa3-upper-cps2-rc1-kit.zip",
+                  "name": "sfa3-upper-cps2-rc1-kit.zip",
+                  "sha256": "92357f9ff31c9d2436a56efe01a7af2b42ade9c4193a14ce1a312790e97af81d",
+                  "size": 4354784
                 }
               },
               "game_contract_sha256": "01b2fc9158eeeafae22ad081995d013bfcf8350cf682f1fc1bdb67808a717e38",
@@ -2075,14 +2147,14 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 13,
-          "date": "2026-11-09",
+          "current_revision": 14,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/3b084dd0f33b102d7b239ffbc640d8811eb1046066192beecee822196bde273d/strider-ex-rc1-kit.zip",
+              "archive": "archive/84be7401f5bbdeb3fe549e048ccc1848fa1975496bb23b471efba7d8a437a588/strider-ex-rc1-kit.zip",
               "name": "strider-ex-rc1-kit.zip",
-              "sha256": "3b084dd0f33b102d7b239ffbc640d8811eb1046066192beecee822196bde273d",
-              "size": 15548996
+              "sha256": "84be7401f5bbdeb3fe549e048ccc1848fa1975496bb23b471efba7d8a437a588",
+              "size": 15527190
             }
           },
           "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",
@@ -2097,6 +2169,11 @@
               "date": "2026-11-09",
               "reason": "tooling update",
               "revision": 13
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 14
             }
           ],
           "removed_output": "definitions",
@@ -2122,6 +2199,19 @@
                   "name": "strider-ex-rc1-kit.zip",
                   "sha256": "3b084dd0f33b102d7b239ffbc640d8811eb1046066192beecee822196bde273d",
                   "size": 15548996
+                }
+              },
+              "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",
+              "kind": "kit"
+            },
+            "14": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/84be7401f5bbdeb3fe549e048ccc1848fa1975496bb23b471efba7d8a437a588/strider-ex-rc1-kit.zip",
+                  "name": "strider-ex-rc1-kit.zip",
+                  "sha256": "84be7401f5bbdeb3fe549e048ccc1848fa1975496bb23b471efba7d8a437a588",
+                  "size": 15527190
                 }
               },
               "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",
@@ -2205,14 +2295,14 @@
       "current": "rc4",
       "versions": {
         "rc4": {
-          "current_revision": 2,
-          "date": "2026-11-08",
+          "current_revision": 3,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/5fd74015c88b3813dcf7d7f5031498e86048d1602db3546486a72ab490d489db/vhunt2-arrange-rc4-kit.zip",
+              "archive": "archive/5b40d65c02b1ecce5f9eeaaf8e2c76b9f6a1c952779360f1195674c7661f0197/vhunt2-arrange-rc4-kit.zip",
               "name": "vhunt2-arrange-rc4-kit.zip",
-              "sha256": "5fd74015c88b3813dcf7d7f5031498e86048d1602db3546486a72ab490d489db",
-              "size": 2067552
+              "sha256": "5b40d65c02b1ecce5f9eeaaf8e2c76b9f6a1c952779360f1195674c7661f0197",
+              "size": 2073714
             }
           },
           "game_contract_sha256": "ee3c4a2525a565bc90a9274cef24f90f49bdca89d9ef2d3570b23886caaa6289",
@@ -2222,6 +2312,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 2
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 3
             }
           ],
           "revisions": {
@@ -2233,6 +2328,19 @@
                   "name": "vhunt2-arrange-rc4-kit.zip",
                   "sha256": "5fd74015c88b3813dcf7d7f5031498e86048d1602db3546486a72ab490d489db",
                   "size": 2067552
+                }
+              },
+              "game_contract_sha256": "ee3c4a2525a565bc90a9274cef24f90f49bdca89d9ef2d3570b23886caaa6289",
+              "kind": "kit"
+            },
+            "3": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/5b40d65c02b1ecce5f9eeaaf8e2c76b9f6a1c952779360f1195674c7661f0197/vhunt2-arrange-rc4-kit.zip",
+                  "name": "vhunt2-arrange-rc4-kit.zip",
+                  "sha256": "5b40d65c02b1ecce5f9eeaaf8e2c76b9f6a1c952779360f1195674c7661f0197",
+                  "size": 2073714
                 }
               },
               "game_contract_sha256": "ee3c4a2525a565bc90a9274cef24f90f49bdca89d9ef2d3570b23886caaa6289",
@@ -2426,14 +2534,14 @@
       "current": "rc5",
       "versions": {
         "rc5": {
-          "current_revision": 2,
-          "date": "2026-11-08",
+          "current_revision": 3,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/fe6ef213d1045a6f5a74bf60513378b5a6f16dcbd1e505998deaaab8fbba4f7d/vsav-arrange-rc5-kit.zip",
+              "archive": "archive/3b05da1da5c2d4dfced6d1a49d3ea37c692bae919c993b6f4341c93ad261edd5/vsav-arrange-rc5-kit.zip",
               "name": "vsav-arrange-rc5-kit.zip",
-              "sha256": "fe6ef213d1045a6f5a74bf60513378b5a6f16dcbd1e505998deaaab8fbba4f7d",
-              "size": 2359289
+              "sha256": "3b05da1da5c2d4dfced6d1a49d3ea37c692bae919c993b6f4341c93ad261edd5",
+              "size": 2365469
             }
           },
           "game_contract_sha256": "333e129ba83f14fae85e1daab1b7b63f307a875027cba7ea54f3f4abf11a47cf",
@@ -2443,6 +2551,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 2
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 3
             }
           ],
           "revisions": {
@@ -2454,6 +2567,19 @@
                   "name": "vsav-arrange-rc5-kit.zip",
                   "sha256": "fe6ef213d1045a6f5a74bf60513378b5a6f16dcbd1e505998deaaab8fbba4f7d",
                   "size": 2359289
+                }
+              },
+              "game_contract_sha256": "333e129ba83f14fae85e1daab1b7b63f307a875027cba7ea54f3f4abf11a47cf",
+              "kind": "kit"
+            },
+            "3": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/3b05da1da5c2d4dfced6d1a49d3ea37c692bae919c993b6f4341c93ad261edd5/vsav-arrange-rc5-kit.zip",
+                  "name": "vsav-arrange-rc5-kit.zip",
+                  "sha256": "3b05da1da5c2d4dfced6d1a49d3ea37c692bae919c993b6f4341c93ad261edd5",
+                  "size": 2365469
                 }
               },
               "game_contract_sha256": "333e129ba83f14fae85e1daab1b7b63f307a875027cba7ea54f3f4abf11a47cf",
@@ -2647,14 +2773,14 @@
       "current": "rc4",
       "versions": {
         "rc4": {
-          "current_revision": 2,
-          "date": "2026-11-08",
+          "current_revision": 3,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/2e3aed6fa6d438fa2a1d3992ba81b299ac17a330f5f0e27499b06c4c8185d59a/vsav2-arrange-rc4-kit.zip",
+              "archive": "archive/1d688aa02936926589f51fbdfcd11eab863a333a9189859f7bd2b6247301fe81/vsav2-arrange-rc4-kit.zip",
               "name": "vsav2-arrange-rc4-kit.zip",
-              "sha256": "2e3aed6fa6d438fa2a1d3992ba81b299ac17a330f5f0e27499b06c4c8185d59a",
-              "size": 1986815
+              "sha256": "1d688aa02936926589f51fbdfcd11eab863a333a9189859f7bd2b6247301fe81",
+              "size": 1993000
             }
           },
           "game_contract_sha256": "746cb1dcef7db3d20cff62ab664ab62af407b49fec29fb08f20c939ae6066298",
@@ -2664,6 +2790,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 2
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 3
             }
           ],
           "revisions": {
@@ -2675,6 +2806,19 @@
                   "name": "vsav2-arrange-rc4-kit.zip",
                   "sha256": "2e3aed6fa6d438fa2a1d3992ba81b299ac17a330f5f0e27499b06c4c8185d59a",
                   "size": 1986815
+                }
+              },
+              "game_contract_sha256": "746cb1dcef7db3d20cff62ab664ab62af407b49fec29fb08f20c939ae6066298",
+              "kind": "kit"
+            },
+            "3": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/1d688aa02936926589f51fbdfcd11eab863a333a9189859f7bd2b6247301fe81/vsav2-arrange-rc4-kit.zip",
+                  "name": "vsav2-arrange-rc4-kit.zip",
+                  "sha256": "1d688aa02936926589f51fbdfcd11eab863a333a9189859f7bd2b6247301fe81",
+                  "size": 1993000
                 }
               },
               "game_contract_sha256": "746cb1dcef7db3d20cff62ab664ab62af407b49fec29fb08f20c939ae6066298",
