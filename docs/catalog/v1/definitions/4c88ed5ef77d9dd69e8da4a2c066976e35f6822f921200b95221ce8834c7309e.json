@@ -1,0 +1,734 @@
+{
+  "api": 1,
+  "game_version": "rc1",
+  "kit_revision": 6,
+  "manifest_sha256": "dfb9722a66b91fa695514e021ddd22230a32e8251994741016fa844d6c711263",
+  "native_outputs": {
+    "darksoft/games/hsf2-restoration/NAME": {
+      "sha256": "4fac1af8de57ba3c6b1aee9f933e2343431c92f1e2245cc61aed8fff7e427cb9"
+    },
+    "darksoft/games/hsf2-restoration/flash.01": {
+      "sha256": "97fc83abcebb7c9e30d6f7b2ce30363f3d0e67ec00c3f701655e90aefb57bfb1"
+    },
+    "darksoft/games/hsf2-restoration/flash.02": {
+      "sha256": "79e6d3e416c0ba0384714f244ddd06939bc28a1d3cd99537a474c2c902e829be"
+    },
+    "darksoft/games/hsf2-restoration/flash.03": {
+      "sha256": "e542775d5e2ac389d4908cd58b0c522bf645d3d099732c4ef4482bd902330d64"
+    },
+    "darksoft/games/hsf2-restoration/flash.04": {
+      "sha256": "6461b5aa030e504f6c15a9c9dfc4414a22fe4fc73adf75f121fe210af1b606ad"
+    },
+    "darksoft/games/hsf2-restoration/flash.05": {
+      "sha256": "6e4bb37ea8b5fa0407aeb61547f554399a8cf1836b16412609bab74b7d94a7dc"
+    },
+    "darksoft/games/hsf2-restoration/flash.06": {
+      "sha256": "0b1461aab5c92ad7d725e1a8d68ccd273cfcca5f0abfa90283b06925b5b8f3fe"
+    },
+    "darksoft/games/hsf2-restoration/flash.07": {
+      "sha256": "31cd1a4b7ba27a071a4decc7eea49952529673cc71c5804aa48cd1c501093b08"
+    },
+    "darksoft/games/hsf2-restoration/flash.08": {
+      "sha256": "62f12b62806c48419922b68249b1aa958c96e51b2e83ba95d279dba52ccf590c"
+    },
+    "darksoft/games/hsf2-restoration/flash.09": {
+      "sha256": "4a66b20053ef2271ae57c8711fb0581cbdceba0460836acf9edd03f23f368ed6"
+    },
+    "darksoft/games/hsf2-restoration/flash.10": {
+      "sha256": "f6e1aae2e18b3f8fcce58f93a5c4874c4b0dcb72391200cfdc33f9ae1234b4f3"
+    },
+    "darksoft/games/hsf2-restoration/flash.11": {
+      "sha256": "0260c95b6fc5d4dc94cc8318f8adfc18b0f73444520e537c0e1ed92ccc5264ca"
+    },
+    "darksoft/games/hsf2-restoration/flash.12": {
+      "sha256": "225ccc6f375880308e9a3e88cae125e9451ab44ae7f6b1684e685d2c7b8adecb"
+    },
+    "darksoft/games/hsf2-restoration/key": {
+      "sha256": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+    },
+    "darksoft/receipts/hsf2-restoration.json": {
+      "sha256": "af1c0eb4e64e7af4a95f953c7d467174b9cf5f0dfce9997c08caa1b4e15a7c36"
+    },
+    "fbneo/hsf2re.zip": {
+      "members": {
+        "hs2.01": "4b91fa3893a463182319733df8b3044afabb7f32e5c15938eee31b8d92340884",
+        "hs2.02": "9ca5d73cf0d1675cb126f3417197630600468841631787fa088bbd3671df3ff8",
+        "hs2.11m": "dc162ae29f6cc26bb2f370b3bd3272fc335eae3117bcc2fcc9dd27d4e4815981",
+        "hs2j.05": "58ba92a53aa23a9d8b2649eff66c70c54da20bc3c05647daf37183ef7fe03ede",
+        "hs2j.06": "afb920f56cbe4d2138be4d5d0ad20b540d63adb6dfe24dcdee5504cd7ee321a7",
+        "hs2j.07": "4ddd401009f69854ca4ebaff2d0a7f70426d04ce22aaa35f716e0105acd67d73",
+        "hs2j.08": "3e5fcfbcf1f76ceff484f46f731d75aa5c6fc7f84312c83143bad644a6ce4218",
+        "hs2j.09": "09938483ab97292161139326612e39429942996c4bb750f28f5e22b861218501",
+        "hs2re.03c": "e126e11e4d868088289799eaf1855d7560b7a777c316681695cc3cebc03f3a92",
+        "hs2re.04b": "cd73ab187e5b04a1336f2df9a591af8422ad2621ad6dc41884a572da0128f30d",
+        "hs2re.10": "d681c7963011cfb36cec6b40437def2b2db3c1e4294af5cf7edd23de8510c2bd",
+        "hs2re.13m": "1403993944f7373181c75b7ab0ae3176255870ab2185b29bd4c841a246579035",
+        "hs2re.15m": "a41131ab1f80cd2f2c2e609e77af77984de5546a0ace4c91e0058a0f29b432fb",
+        "hs2re.17m": "a383b6599e8fc95075cf41937883ebf36d5382655866adb53498ef527daf6f47",
+        "hs2re.19m": "e165c2c5a4c3ef0b7dc3f20f7f6888df5ca88fa6283177249f5df8759ab3b5c5",
+        "hsf2j.key": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+      }
+    },
+    "hbmame/hsf2re.zip": {
+      "members": {
+        "hs2.01": "4b91fa3893a463182319733df8b3044afabb7f32e5c15938eee31b8d92340884",
+        "hs2.02": "9ca5d73cf0d1675cb126f3417197630600468841631787fa088bbd3671df3ff8",
+        "hs2.11m": "dc162ae29f6cc26bb2f370b3bd3272fc335eae3117bcc2fcc9dd27d4e4815981",
+        "hs2j.05": "58ba92a53aa23a9d8b2649eff66c70c54da20bc3c05647daf37183ef7fe03ede",
+        "hs2j.06": "afb920f56cbe4d2138be4d5d0ad20b540d63adb6dfe24dcdee5504cd7ee321a7",
+        "hs2j.07": "4ddd401009f69854ca4ebaff2d0a7f70426d04ce22aaa35f716e0105acd67d73",
+        "hs2j.08": "3e5fcfbcf1f76ceff484f46f731d75aa5c6fc7f84312c83143bad644a6ce4218",
+        "hs2j.09": "09938483ab97292161139326612e39429942996c4bb750f28f5e22b861218501",
+        "hs2re.03c": "e126e11e4d868088289799eaf1855d7560b7a777c316681695cc3cebc03f3a92",
+        "hs2re.04b": "cd73ab187e5b04a1336f2df9a591af8422ad2621ad6dc41884a572da0128f30d",
+        "hs2re.10": "d681c7963011cfb36cec6b40437def2b2db3c1e4294af5cf7edd23de8510c2bd",
+        "hs2re.13m": "1403993944f7373181c75b7ab0ae3176255870ab2185b29bd4c841a246579035",
+        "hs2re.15m": "a41131ab1f80cd2f2c2e609e77af77984de5546a0ace4c91e0058a0f29b432fb",
+        "hs2re.17m": "a383b6599e8fc95075cf41937883ebf36d5382655866adb53498ef527daf6f47",
+        "hs2re.19m": "e165c2c5a4c3ef0b7dc3f20f7f6888df5ca88fa6283177249f5df8759ab3b5c5",
+        "hsf2j.key": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+      }
+    },
+    "mame/hsf2j.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "hs2.01": "4b91fa3893a463182319733df8b3044afabb7f32e5c15938eee31b8d92340884",
+        "hs2.02": "9ca5d73cf0d1675cb126f3417197630600468841631787fa088bbd3671df3ff8",
+        "hs2.11m": "dc162ae29f6cc26bb2f370b3bd3272fc335eae3117bcc2fcc9dd27d4e4815981",
+        "hs2.13m": "1403993944f7373181c75b7ab0ae3176255870ab2185b29bd4c841a246579035",
+        "hs2.15m": "a41131ab1f80cd2f2c2e609e77af77984de5546a0ace4c91e0058a0f29b432fb",
+        "hs2.17m": "a383b6599e8fc95075cf41937883ebf36d5382655866adb53498ef527daf6f47",
+        "hs2.19m": "e165c2c5a4c3ef0b7dc3f20f7f6888df5ca88fa6283177249f5df8759ab3b5c5",
+        "hs2j.03c": "e126e11e4d868088289799eaf1855d7560b7a777c316681695cc3cebc03f3a92",
+        "hs2j.04b": "cd73ab187e5b04a1336f2df9a591af8422ad2621ad6dc41884a572da0128f30d",
+        "hs2j.05": "58ba92a53aa23a9d8b2649eff66c70c54da20bc3c05647daf37183ef7fe03ede",
+        "hs2j.06": "afb920f56cbe4d2138be4d5d0ad20b540d63adb6dfe24dcdee5504cd7ee321a7",
+        "hs2j.07": "4ddd401009f69854ca4ebaff2d0a7f70426d04ce22aaa35f716e0105acd67d73",
+        "hs2j.08": "3e5fcfbcf1f76ceff484f46f731d75aa5c6fc7f84312c83143bad644a6ce4218",
+        "hs2j.09": "09938483ab97292161139326612e39429942996c4bb750f28f5e22b861218501",
+        "hs2j.10": "d681c7963011cfb36cec6b40437def2b2db3c1e4294af5cf7edd23de8510c2bd",
+        "hsf2j.key": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+      }
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/Hyper Street Fighter II The Anniversary Edition (USA) [English Restoration].mra": {
+      "sha256": "99790ca6bdfdc56b7e740b3dee85b03d28fbd8465386bbaf8199d626734f5a8c"
+    },
+    "mister/games/hbmame/hsf2re.zip": {
+      "members": {
+        "hs2.01": "4b91fa3893a463182319733df8b3044afabb7f32e5c15938eee31b8d92340884",
+        "hs2.02": "9ca5d73cf0d1675cb126f3417197630600468841631787fa088bbd3671df3ff8",
+        "hs2.11m": "dc162ae29f6cc26bb2f370b3bd3272fc335eae3117bcc2fcc9dd27d4e4815981",
+        "hs2j.05": "58ba92a53aa23a9d8b2649eff66c70c54da20bc3c05647daf37183ef7fe03ede",
+        "hs2j.06": "afb920f56cbe4d2138be4d5d0ad20b540d63adb6dfe24dcdee5504cd7ee321a7",
+        "hs2j.07": "4ddd401009f69854ca4ebaff2d0a7f70426d04ce22aaa35f716e0105acd67d73",
+        "hs2j.08": "3e5fcfbcf1f76ceff484f46f731d75aa5c6fc7f84312c83143bad644a6ce4218",
+        "hs2j.09": "09938483ab97292161139326612e39429942996c4bb750f28f5e22b861218501",
+        "hs2re.03c": "e126e11e4d868088289799eaf1855d7560b7a777c316681695cc3cebc03f3a92",
+        "hs2re.04b": "cd73ab187e5b04a1336f2df9a591af8422ad2621ad6dc41884a572da0128f30d",
+        "hs2re.10": "d681c7963011cfb36cec6b40437def2b2db3c1e4294af5cf7edd23de8510c2bd",
+        "hs2re.13m": "1403993944f7373181c75b7ab0ae3176255870ab2185b29bd4c841a246579035",
+        "hs2re.15m": "a41131ab1f80cd2f2c2e609e77af77984de5546a0ace4c91e0058a0f29b432fb",
+        "hs2re.17m": "a383b6599e8fc95075cf41937883ebf36d5382655866adb53498ef527daf6f47",
+        "hs2re.19m": "e165c2c5a4c3ef0b7dc3f20f7f6888df5ca88fa6283177249f5df8759ab3b5c5",
+        "hsf2j.key": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+      }
+    }
+  },
+  "prerequisites": {
+    "source-09938483ab9729216113": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "3fc638a8",
+          "sha256": "09938483ab97292161139326612e39429942996c4bb750f28f5e22b861218501",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2j.09"
+    },
+    "source-0b36b08cc4f3eefaf5a3": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "a6ecab17",
+          "sha256": "0b36b08cc4f3eefaf5a3eb510bbef682641472787d6a9ab539685e146a7dbfbc",
+          "size": 8388608
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2.13m"
+    },
+    "source-17246303be45c6102c11": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "adfa7726",
+          "sha256": "17246303be45c6102c11f7965cb017cd2f7af28847b4a795fbeb7db093e0ea4d",
+          "size": 8388608
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2.17m"
+    },
+    "source-3e5fcfbcf1f76ceff484": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "c9441533",
+          "sha256": "3e5fcfbcf1f76ceff484f46f731d75aa5c6fc7f84312c83143bad644a6ce4218",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2j.08"
+    },
+    "source-4b91fa3893a463182319": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "c1a13786",
+          "sha256": "4b91fa3893a463182319733df8b3044afabb7f32e5c15938eee31b8d92340884",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2.01"
+    },
+    "source-4ddd401009f69854ca4e": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "ee4420fc",
+          "sha256": "4ddd401009f69854ca4ebaff2d0a7f70426d04ce22aaa35f716e0105acd67d73",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2j.07"
+    },
+    "source-524a25bcd153be24594d": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d6cf5ef5",
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "size": 24576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "device",
+      "title": "dl-1425.bin"
+    },
+    "source-5710e2fdb05dd2e947bc": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "10a0ae4d",
+          "sha256": "5710e2fdb05dd2e947bc7b9e6e39d082a8a7a63613e6d9ddb449eff25df8061d",
+          "size": 8388608
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2.15m"
+    },
+    "source-58ba92a53aa23a9d8b26": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "dde34a35",
+          "sha256": "58ba92a53aa23a9d8b2649eff66c70c54da20bc3c05647daf37183ef7fe03ede",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2j.05"
+    },
+    "source-9ca5d73cf0d1675cb126": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "2d8794aa",
+          "sha256": "9ca5d73cf0d1675cb126f3417197630600468841631787fa088bbd3671df3ff8",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2.02"
+    },
+    "source-a7985cbf7eeee7d37a06": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "93f2500a",
+          "sha256": "a7985cbf7eeee7d37a068f0d03f9fb3731b0edcbcab3f4c9068c14f8ed254db9",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2j.04b"
+    },
+    "source-afb920f56cbe4d2138be": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "f4e56dda",
+          "sha256": "afb920f56cbe4d2138be4d5d0ad20b540d63adb6dfe24dcdee5504cd7ee321a7",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2j.06"
+    },
+    "source-c83d2d0fd33fb445e88b": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "20d0f9e4",
+          "sha256": "c83d2d0fd33fb445e88beba6102b616caa6344802242ebb55ccae7520931595a",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2j.10"
+    },
+    "source-dc162ae29f6cc26bb2f3": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "0e15c359",
+          "sha256": "dc162ae29f6cc26bb2f370b3bd3272fc335eae3117bcc2fcc9dd27d4e4815981",
+          "size": 8388608
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2.11m"
+    },
+    "source-e43295e41155774e8443": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "bb3ae322",
+          "sha256": "e43295e41155774e8443c3d8fa201c8077af4f0c4e95748f6315d59909b43d03",
+          "size": 8388608
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2.19m"
+    },
+    "source-e9193a6c46a217d27baf": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "19455a93",
+          "sha256": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hsf2j.key"
+    },
+    "source-ec0bcd1afdd155dd98bb": {
+      "action": "Add the canonical hsf2j arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "6efe661f",
+          "sha256": "ec0bcd1afdd155dd98bb602243e59297aaf6d7453916625aa3add2684a9a9e2c",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "hs2j.03c"
+    }
+  },
+  "project": "hsf2-restoration",
+  "targets": {
+    "default-darksoft": {
+      "destination_requirements": "Use the Darksoft hardware and layout described in this kit's readme.",
+      "inputs": [
+        "source-09938483ab9729216113",
+        "source-0b36b08cc4f3eefaf5a3",
+        "source-17246303be45c6102c11",
+        "source-3e5fcfbcf1f76ceff484",
+        "source-4b91fa3893a463182319",
+        "source-4ddd401009f69854ca4e",
+        "source-5710e2fdb05dd2e947bc",
+        "source-58ba92a53aa23a9d8b26",
+        "source-9ca5d73cf0d1675cb126",
+        "source-a7985cbf7eeee7d37a06",
+        "source-afb920f56cbe4d2138be",
+        "source-c83d2d0fd33fb445e88b",
+        "source-dc162ae29f6cc26bb2f3",
+        "source-e43295e41155774e8443",
+        "source-e9193a6c46a217d27baf",
+        "source-ec0bcd1afdd155dd98bb"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "games/hsf2-restoration/NAME": {
+          "sha256": "4fac1af8de57ba3c6b1aee9f933e2343431c92f1e2245cc61aed8fff7e427cb9"
+        },
+        "games/hsf2-restoration/flash.01": {
+          "sha256": "97fc83abcebb7c9e30d6f7b2ce30363f3d0e67ec00c3f701655e90aefb57bfb1"
+        },
+        "games/hsf2-restoration/flash.02": {
+          "sha256": "79e6d3e416c0ba0384714f244ddd06939bc28a1d3cd99537a474c2c902e829be"
+        },
+        "games/hsf2-restoration/flash.03": {
+          "sha256": "e542775d5e2ac389d4908cd58b0c522bf645d3d099732c4ef4482bd902330d64"
+        },
+        "games/hsf2-restoration/flash.04": {
+          "sha256": "6461b5aa030e504f6c15a9c9dfc4414a22fe4fc73adf75f121fe210af1b606ad"
+        },
+        "games/hsf2-restoration/flash.05": {
+          "sha256": "6e4bb37ea8b5fa0407aeb61547f554399a8cf1836b16412609bab74b7d94a7dc"
+        },
+        "games/hsf2-restoration/flash.06": {
+          "sha256": "0b1461aab5c92ad7d725e1a8d68ccd273cfcca5f0abfa90283b06925b5b8f3fe"
+        },
+        "games/hsf2-restoration/flash.07": {
+          "sha256": "31cd1a4b7ba27a071a4decc7eea49952529673cc71c5804aa48cd1c501093b08"
+        },
+        "games/hsf2-restoration/flash.08": {
+          "sha256": "62f12b62806c48419922b68249b1aa958c96e51b2e83ba95d279dba52ccf590c"
+        },
+        "games/hsf2-restoration/flash.09": {
+          "sha256": "4a66b20053ef2271ae57c8711fb0581cbdceba0460836acf9edd03f23f368ed6"
+        },
+        "games/hsf2-restoration/flash.10": {
+          "sha256": "f6e1aae2e18b3f8fcce58f93a5c4874c4b0dcb72391200cfdc33f9ae1234b4f3"
+        },
+        "games/hsf2-restoration/flash.11": {
+          "sha256": "0260c95b6fc5d4dc94cc8318f8adfc18b0f73444520e537c0e1ed92ccc5264ca"
+        },
+        "games/hsf2-restoration/flash.12": {
+          "sha256": "225ccc6f375880308e9a3e88cae125e9451ab44ae7f6b1684e685d2c7b8adecb"
+        },
+        "games/hsf2-restoration/key": {
+          "sha256": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+        },
+        "receipts/hsf2-restoration.json": {
+          "sha256": "af1c0eb4e64e7af4a95f953c7d467174b9cf5f0dfce9997c08caa1b4e15a7c36"
+        }
+      },
+      "platform": "darksoft",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-fbneo": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-09938483ab9729216113",
+        "source-0b36b08cc4f3eefaf5a3",
+        "source-17246303be45c6102c11",
+        "source-3e5fcfbcf1f76ceff484",
+        "source-4b91fa3893a463182319",
+        "source-4ddd401009f69854ca4e",
+        "source-5710e2fdb05dd2e947bc",
+        "source-58ba92a53aa23a9d8b26",
+        "source-9ca5d73cf0d1675cb126",
+        "source-a7985cbf7eeee7d37a06",
+        "source-afb920f56cbe4d2138be",
+        "source-c83d2d0fd33fb445e88b",
+        "source-dc162ae29f6cc26bb2f3",
+        "source-e43295e41155774e8443",
+        "source-e9193a6c46a217d27baf",
+        "source-ec0bcd1afdd155dd98bb"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/hsf2re.zip": {
+          "members": {
+            "hs2.01": "4b91fa3893a463182319733df8b3044afabb7f32e5c15938eee31b8d92340884",
+            "hs2.02": "9ca5d73cf0d1675cb126f3417197630600468841631787fa088bbd3671df3ff8",
+            "hs2.11m": "dc162ae29f6cc26bb2f370b3bd3272fc335eae3117bcc2fcc9dd27d4e4815981",
+            "hs2j.05": "58ba92a53aa23a9d8b2649eff66c70c54da20bc3c05647daf37183ef7fe03ede",
+            "hs2j.06": "afb920f56cbe4d2138be4d5d0ad20b540d63adb6dfe24dcdee5504cd7ee321a7",
+            "hs2j.07": "4ddd401009f69854ca4ebaff2d0a7f70426d04ce22aaa35f716e0105acd67d73",
+            "hs2j.08": "3e5fcfbcf1f76ceff484f46f731d75aa5c6fc7f84312c83143bad644a6ce4218",
+            "hs2j.09": "09938483ab97292161139326612e39429942996c4bb750f28f5e22b861218501",
+            "hs2re.03c": "e126e11e4d868088289799eaf1855d7560b7a777c316681695cc3cebc03f3a92",
+            "hs2re.04b": "cd73ab187e5b04a1336f2df9a591af8422ad2621ad6dc41884a572da0128f30d",
+            "hs2re.10": "d681c7963011cfb36cec6b40437def2b2db3c1e4294af5cf7edd23de8510c2bd",
+            "hs2re.13m": "1403993944f7373181c75b7ab0ae3176255870ab2185b29bd4c841a246579035",
+            "hs2re.15m": "a41131ab1f80cd2f2c2e609e77af77984de5546a0ace4c91e0058a0f29b432fb",
+            "hs2re.17m": "a383b6599e8fc95075cf41937883ebf36d5382655866adb53498ef527daf6f47",
+            "hs2re.19m": "e165c2c5a4c3ef0b7dc3f20f7f6888df5ca88fa6283177249f5df8759ab3b5c5",
+            "hsf2j.key": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+          }
+        }
+      },
+      "platform": "fbneo",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-hbmame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-09938483ab9729216113",
+        "source-0b36b08cc4f3eefaf5a3",
+        "source-17246303be45c6102c11",
+        "source-3e5fcfbcf1f76ceff484",
+        "source-4b91fa3893a463182319",
+        "source-4ddd401009f69854ca4e",
+        "source-524a25bcd153be24594d",
+        "source-5710e2fdb05dd2e947bc",
+        "source-58ba92a53aa23a9d8b26",
+        "source-9ca5d73cf0d1675cb126",
+        "source-a7985cbf7eeee7d37a06",
+        "source-afb920f56cbe4d2138be",
+        "source-c83d2d0fd33fb445e88b",
+        "source-dc162ae29f6cc26bb2f3",
+        "source-e43295e41155774e8443",
+        "source-e9193a6c46a217d27baf",
+        "source-ec0bcd1afdd155dd98bb"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/hsf2re.zip": {
+          "members": {
+            "hs2.01": "4b91fa3893a463182319733df8b3044afabb7f32e5c15938eee31b8d92340884",
+            "hs2.02": "9ca5d73cf0d1675cb126f3417197630600468841631787fa088bbd3671df3ff8",
+            "hs2.11m": "dc162ae29f6cc26bb2f370b3bd3272fc335eae3117bcc2fcc9dd27d4e4815981",
+            "hs2j.05": "58ba92a53aa23a9d8b2649eff66c70c54da20bc3c05647daf37183ef7fe03ede",
+            "hs2j.06": "afb920f56cbe4d2138be4d5d0ad20b540d63adb6dfe24dcdee5504cd7ee321a7",
+            "hs2j.07": "4ddd401009f69854ca4ebaff2d0a7f70426d04ce22aaa35f716e0105acd67d73",
+            "hs2j.08": "3e5fcfbcf1f76ceff484f46f731d75aa5c6fc7f84312c83143bad644a6ce4218",
+            "hs2j.09": "09938483ab97292161139326612e39429942996c4bb750f28f5e22b861218501",
+            "hs2re.03c": "e126e11e4d868088289799eaf1855d7560b7a777c316681695cc3cebc03f3a92",
+            "hs2re.04b": "cd73ab187e5b04a1336f2df9a591af8422ad2621ad6dc41884a572da0128f30d",
+            "hs2re.10": "d681c7963011cfb36cec6b40437def2b2db3c1e4294af5cf7edd23de8510c2bd",
+            "hs2re.13m": "1403993944f7373181c75b7ab0ae3176255870ab2185b29bd4c841a246579035",
+            "hs2re.15m": "a41131ab1f80cd2f2c2e609e77af77984de5546a0ace4c91e0058a0f29b432fb",
+            "hs2re.17m": "a383b6599e8fc95075cf41937883ebf36d5382655866adb53498ef527daf6f47",
+            "hs2re.19m": "e165c2c5a4c3ef0b7dc3f20f7f6888df5ca88fa6283177249f5df8759ab3b5c5",
+            "hsf2j.key": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+          }
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        }
+      },
+      "platform": "hbmame",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-09938483ab9729216113",
+        "source-0b36b08cc4f3eefaf5a3",
+        "source-17246303be45c6102c11",
+        "source-3e5fcfbcf1f76ceff484",
+        "source-4b91fa3893a463182319",
+        "source-4ddd401009f69854ca4e",
+        "source-524a25bcd153be24594d",
+        "source-5710e2fdb05dd2e947bc",
+        "source-58ba92a53aa23a9d8b26",
+        "source-9ca5d73cf0d1675cb126",
+        "source-a7985cbf7eeee7d37a06",
+        "source-afb920f56cbe4d2138be",
+        "source-c83d2d0fd33fb445e88b",
+        "source-dc162ae29f6cc26bb2f3",
+        "source-e43295e41155774e8443",
+        "source-e9193a6c46a217d27baf",
+        "source-ec0bcd1afdd155dd98bb"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/hsf2j.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "hs2.01": "4b91fa3893a463182319733df8b3044afabb7f32e5c15938eee31b8d92340884",
+            "hs2.02": "9ca5d73cf0d1675cb126f3417197630600468841631787fa088bbd3671df3ff8",
+            "hs2.11m": "dc162ae29f6cc26bb2f370b3bd3272fc335eae3117bcc2fcc9dd27d4e4815981",
+            "hs2.13m": "1403993944f7373181c75b7ab0ae3176255870ab2185b29bd4c841a246579035",
+            "hs2.15m": "a41131ab1f80cd2f2c2e609e77af77984de5546a0ace4c91e0058a0f29b432fb",
+            "hs2.17m": "a383b6599e8fc95075cf41937883ebf36d5382655866adb53498ef527daf6f47",
+            "hs2.19m": "e165c2c5a4c3ef0b7dc3f20f7f6888df5ca88fa6283177249f5df8759ab3b5c5",
+            "hs2j.03c": "e126e11e4d868088289799eaf1855d7560b7a777c316681695cc3cebc03f3a92",
+            "hs2j.04b": "cd73ab187e5b04a1336f2df9a591af8422ad2621ad6dc41884a572da0128f30d",
+            "hs2j.05": "58ba92a53aa23a9d8b2649eff66c70c54da20bc3c05647daf37183ef7fe03ede",
+            "hs2j.06": "afb920f56cbe4d2138be4d5d0ad20b540d63adb6dfe24dcdee5504cd7ee321a7",
+            "hs2j.07": "4ddd401009f69854ca4ebaff2d0a7f70426d04ce22aaa35f716e0105acd67d73",
+            "hs2j.08": "3e5fcfbcf1f76ceff484f46f731d75aa5c6fc7f84312c83143bad644a6ce4218",
+            "hs2j.09": "09938483ab97292161139326612e39429942996c4bb750f28f5e22b861218501",
+            "hs2j.10": "d681c7963011cfb36cec6b40437def2b2db3c1e4294af5cf7edd23de8510c2bd",
+            "hsf2j.key": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+          }
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        }
+      },
+      "platform": "mame",
+      "profile": "hsf2-restoration-default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mister": {
+      "destination_requirements": "Use the MiSTer core named by the included MRA.",
+      "inputs": [
+        "source-09938483ab9729216113",
+        "source-0b36b08cc4f3eefaf5a3",
+        "source-17246303be45c6102c11",
+        "source-3e5fcfbcf1f76ceff484",
+        "source-4b91fa3893a463182319",
+        "source-4ddd401009f69854ca4e",
+        "source-524a25bcd153be24594d",
+        "source-5710e2fdb05dd2e947bc",
+        "source-58ba92a53aa23a9d8b26",
+        "source-9ca5d73cf0d1675cb126",
+        "source-a7985cbf7eeee7d37a06",
+        "source-afb920f56cbe4d2138be",
+        "source-c83d2d0fd33fb445e88b",
+        "source-dc162ae29f6cc26bb2f3",
+        "source-e43295e41155774e8443",
+        "source-e9193a6c46a217d27baf",
+        "source-ec0bcd1afdd155dd98bb"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Restorations/Hyper Street Fighter II The Anniversary Edition (USA) [English Restoration].mra": {
+          "sha256": "99790ca6bdfdc56b7e740b3dee85b03d28fbd8465386bbaf8199d626734f5a8c"
+        },
+        "games/hbmame/hsf2re.zip": {
+          "members": {
+            "hs2.01": "4b91fa3893a463182319733df8b3044afabb7f32e5c15938eee31b8d92340884",
+            "hs2.02": "9ca5d73cf0d1675cb126f3417197630600468841631787fa088bbd3671df3ff8",
+            "hs2.11m": "dc162ae29f6cc26bb2f370b3bd3272fc335eae3117bcc2fcc9dd27d4e4815981",
+            "hs2j.05": "58ba92a53aa23a9d8b2649eff66c70c54da20bc3c05647daf37183ef7fe03ede",
+            "hs2j.06": "afb920f56cbe4d2138be4d5d0ad20b540d63adb6dfe24dcdee5504cd7ee321a7",
+            "hs2j.07": "4ddd401009f69854ca4ebaff2d0a7f70426d04ce22aaa35f716e0105acd67d73",
+            "hs2j.08": "3e5fcfbcf1f76ceff484f46f731d75aa5c6fc7f84312c83143bad644a6ce4218",
+            "hs2j.09": "09938483ab97292161139326612e39429942996c4bb750f28f5e22b861218501",
+            "hs2re.03c": "e126e11e4d868088289799eaf1855d7560b7a777c316681695cc3cebc03f3a92",
+            "hs2re.04b": "cd73ab187e5b04a1336f2df9a591af8422ad2621ad6dc41884a572da0128f30d",
+            "hs2re.10": "d681c7963011cfb36cec6b40437def2b2db3c1e4294af5cf7edd23de8510c2bd",
+            "hs2re.13m": "1403993944f7373181c75b7ab0ae3176255870ab2185b29bd4c841a246579035",
+            "hs2re.15m": "a41131ab1f80cd2f2c2e609e77af77984de5546a0ace4c91e0058a0f29b432fb",
+            "hs2re.17m": "a383b6599e8fc95075cf41937883ebf36d5382655866adb53498ef527daf6f47",
+            "hs2re.19m": "e165c2c5a4c3ef0b7dc3f20f7f6888df5ca88fa6283177249f5df8759ab3b5c5",
+            "hsf2j.key": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+          }
+        },
+        "games/mame/hsf2j.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "hs2.01": "4b91fa3893a463182319733df8b3044afabb7f32e5c15938eee31b8d92340884",
+            "hs2.02": "9ca5d73cf0d1675cb126f3417197630600468841631787fa088bbd3671df3ff8",
+            "hs2.11m": "dc162ae29f6cc26bb2f370b3bd3272fc335eae3117bcc2fcc9dd27d4e4815981",
+            "hs2.13m": "0b36b08cc4f3eefaf5a3eb510bbef682641472787d6a9ab539685e146a7dbfbc",
+            "hs2.15m": "5710e2fdb05dd2e947bc7b9e6e39d082a8a7a63613e6d9ddb449eff25df8061d",
+            "hs2.17m": "17246303be45c6102c11f7965cb017cd2f7af28847b4a795fbeb7db093e0ea4d",
+            "hs2.19m": "e43295e41155774e8443c3d8fa201c8077af4f0c4e95748f6315d59909b43d03",
+            "hs2j.03c": "ec0bcd1afdd155dd98bb602243e59297aaf6d7453916625aa3add2684a9a9e2c",
+            "hs2j.04b": "a7985cbf7eeee7d37a068f0d03f9fb3731b0edcbcab3f4c9068c14f8ed254db9",
+            "hs2j.05": "58ba92a53aa23a9d8b2649eff66c70c54da20bc3c05647daf37183ef7fe03ede",
+            "hs2j.06": "afb920f56cbe4d2138be4d5d0ad20b540d63adb6dfe24dcdee5504cd7ee321a7",
+            "hs2j.07": "4ddd401009f69854ca4ebaff2d0a7f70426d04ce22aaa35f716e0105acd67d73",
+            "hs2j.08": "3e5fcfbcf1f76ceff484f46f731d75aa5c6fc7f84312c83143bad644a6ce4218",
+            "hs2j.09": "09938483ab97292161139326612e39429942996c4bb750f28f5e22b861218501",
+            "hs2j.10": "c83d2d0fd33fb445e88beba6102b616caa6344802242ebb55ccae7520931595a",
+            "hsf2j.key": "e9193a6c46a217d27baf836aa7d67dc87427858a2c824d999da1616fb07c191d"
+          }
+        }
+      },
+      "platform": "mister",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    }
+  }
+}

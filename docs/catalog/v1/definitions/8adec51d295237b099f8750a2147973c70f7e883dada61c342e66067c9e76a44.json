@@ -1,0 +1,1617 @@
+{
+  "api": 1,
+  "game_version": "rc4",
+  "kit_revision": 4,
+  "manifest_sha256": "5299531d2079a1e13340b17226182e79ad4a8ea69ef8f72d4dd5cebf8049f7da",
+  "native_outputs": {
+    "fbneo/vsav2arj.zip": {
+      "members": {
+        "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+        "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+        "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+        "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+        "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+        "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+        "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+        "vs2ar.01": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+        "vs2ar.05": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+        "vs2ar.06": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+        "vs2ar.10": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+        "vs2ar.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+        "vs2ar.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+        "vs2ar.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+        "vs2ar.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "vs2ar.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "vs2ar.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "vs2ar.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "vs2ar.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+        "vs2ar.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+        "vs2arj.03": "ef598ed8860e0c8eb74ea0f08bb93f2500e4a60495ee5b1de176806d396c22d9",
+        "vs2arj.04": "04466d7ff269df4a620aa250316df5ac1e9e87282828b356c15874e5c30e3351",
+        "vs2arj.08": "e634f8eb70cf82be2f7df89b6db1ce43deeb99936612afa63e283bc523261a12",
+        "vs2arj.13m": "308ff599ca2e22e52ed6e6aa2a7e1660de732be4fb8c624c6ab83b7ed25dd577",
+        "vs2arj.15m": "913d8f01ef9a1febd09609bcc0d429cdf753fec9c928f2c5878c43aa7dd09680",
+        "vs2arj.17m": "4a37cf50b211dbfa67af60a9104c71858187c429cdfc5ab5f311a59bfaa7f75a",
+        "vs2arj.19m": "0043322adeb3e78dacc22ffe76c569f2f5a3ce65e459de91e99a11f0c9f0ed4b",
+        "vs2arj.prg": "e6edfc58fd6713ad7c7439ed9f6d2cc04c87b7399b25fc1660c4f6271097f736",
+        "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+        "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+        "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+      }
+    },
+    "fbneo/vsav2aru.zip": {
+      "members": {
+        "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+        "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+        "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+        "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+        "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+        "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+        "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+        "vs2ar.01": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+        "vs2ar.05": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+        "vs2ar.06": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+        "vs2ar.10": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+        "vs2ar.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+        "vs2ar.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+        "vs2ar.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+        "vs2ar.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "vs2ar.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "vs2ar.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "vs2ar.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "vs2ar.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+        "vs2ar.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+        "vs2aru.03": "a939d586d1fe65bbd6e2ef286e061fbe943282356964dc36e24b01492ea0b997",
+        "vs2aru.04": "5c37adbb53930349ee3782baf836d9314b8adf13d402d3ac3b30b7a25759805d",
+        "vs2aru.08": "46af4158630af7bec7ad811d9cb6ccda2da35425d36b0c166d8c2bfcc779d408",
+        "vs2aru.13m": "07a3ad3a660cffff852aa0e0fc7810e951642bc3db44176f525fefaa7bddb482",
+        "vs2aru.15m": "1bcd9d12416cd7603c8ef186a188ba44ccdb0d5facf9af6c99a7b87467e44976",
+        "vs2aru.17m": "ad3a7015d58b0cbaa7d376b5dba945de4181a5930939cff00783c732eaedb534",
+        "vs2aru.19m": "d65df0c9784713d2d3d40c2b36af055a0ad765b422d1984c8bd0f751188bb093",
+        "vs2aru.prg": "ab6b8a711dbda4d210170dce0529a05c883b9b32b3a697d5924e09f6b3847d47",
+        "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+        "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+        "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+      }
+    },
+    "hbmame/vsav2s05.zip": {
+      "members": {
+        "c76s05.c1": "07a3ad3a660cffff852aa0e0fc7810e951642bc3db44176f525fefaa7bddb482",
+        "c76s05.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+        "c76s05.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+        "c76s05.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+        "c76s05.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s05.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s05.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s05.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s05.c2": "1bcd9d12416cd7603c8ef186a188ba44ccdb0d5facf9af6c99a7b87467e44976",
+        "c76s05.c3": "ad3a7015d58b0cbaa7d376b5dba945de4181a5930939cff00783c732eaedb534",
+        "c76s05.c4": "d65df0c9784713d2d3d40c2b36af055a0ad765b422d1984c8bd0f751188bb093",
+        "c76s05.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+        "c76s05.m1": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+        "c76s05.p1": "a939d586d1fe65bbd6e2ef286e061fbe943282356964dc36e24b01492ea0b997",
+        "c76s05.p2": "5c37adbb53930349ee3782baf836d9314b8adf13d402d3ac3b30b7a25759805d",
+        "c76s05.p3": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+        "c76s05.p4": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+        "c76s05.p6": "46af4158630af7bec7ad811d9cb6ccda2da35425d36b0c166d8c2bfcc779d408",
+        "c76s05.p8": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+        "c76s05.p9": "ab6b8a711dbda4d210170dce0529a05c883b9b32b3a697d5924e09f6b3847d47",
+        "c76s05.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+        "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+        "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+        "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+        "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+        "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+        "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+        "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+        "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+        "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+      }
+    },
+    "hbmame/vsav2s06.zip": {
+      "members": {
+        "c76s06.c1": "308ff599ca2e22e52ed6e6aa2a7e1660de732be4fb8c624c6ab83b7ed25dd577",
+        "c76s06.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+        "c76s06.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+        "c76s06.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+        "c76s06.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s06.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s06.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s06.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s06.c2": "913d8f01ef9a1febd09609bcc0d429cdf753fec9c928f2c5878c43aa7dd09680",
+        "c76s06.c3": "4a37cf50b211dbfa67af60a9104c71858187c429cdfc5ab5f311a59bfaa7f75a",
+        "c76s06.c4": "0043322adeb3e78dacc22ffe76c569f2f5a3ce65e459de91e99a11f0c9f0ed4b",
+        "c76s06.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+        "c76s06.m1": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+        "c76s06.p1": "ef598ed8860e0c8eb74ea0f08bb93f2500e4a60495ee5b1de176806d396c22d9",
+        "c76s06.p2": "04466d7ff269df4a620aa250316df5ac1e9e87282828b356c15874e5c30e3351",
+        "c76s06.p3": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+        "c76s06.p4": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+        "c76s06.p6": "e634f8eb70cf82be2f7df89b6db1ce43deeb99936612afa63e283bc523261a12",
+        "c76s06.p8": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+        "c76s06.p9": "e6edfc58fd6713ad7c7439ed9f6d2cc04c87b7399b25fc1660c4f6271097f736",
+        "c76s06.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+        "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+        "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+        "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+        "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+        "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+        "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+        "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+        "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+        "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+      }
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/Vampire Savior 2 Arrange (USA) [Backport].mra": {
+      "sha256": "499e424e87eb09c07eff37060eefdcfe838be7b24f0a6e729a91d78918461163"
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/_Japan/Vampire Savior 2 Arrange (Japan) [Backport].mra": {
+      "sha256": "f01d9be8efc29af6937808a475658021de025e22f0f0f6466b4c5e0ae6e64edc"
+    },
+    "mister/_Arcade/cores/jtcps2-cpsplus_20261101.rbf": {
+      "sha256": "23b23a2a7a38b88d959a2cc3df5d970d3ccb5f16fda6ffc5eb491888244db397"
+    },
+    "mister/games/CPS+/vampire_arrange.zip": {
+      "members": {
+        "vampire_arrange.cpk": "ee31f5f2a2538fb29d8ed1b8ca2f2dff13ba506d245de56ae77c991e23e3721c"
+      }
+    },
+    "mister/games/hbmame/vsav2s05.zip": {
+      "members": {
+        "c76s05.c1": "07a3ad3a660cffff852aa0e0fc7810e951642bc3db44176f525fefaa7bddb482",
+        "c76s05.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+        "c76s05.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+        "c76s05.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+        "c76s05.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s05.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s05.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s05.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s05.c2": "1bcd9d12416cd7603c8ef186a188ba44ccdb0d5facf9af6c99a7b87467e44976",
+        "c76s05.c3": "ad3a7015d58b0cbaa7d376b5dba945de4181a5930939cff00783c732eaedb534",
+        "c76s05.c4": "d65df0c9784713d2d3d40c2b36af055a0ad765b422d1984c8bd0f751188bb093",
+        "c76s05.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+        "c76s05.m1": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+        "c76s05.p1": "a939d586d1fe65bbd6e2ef286e061fbe943282356964dc36e24b01492ea0b997",
+        "c76s05.p2": "5c37adbb53930349ee3782baf836d9314b8adf13d402d3ac3b30b7a25759805d",
+        "c76s05.p3": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+        "c76s05.p4": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+        "c76s05.p6": "46af4158630af7bec7ad811d9cb6ccda2da35425d36b0c166d8c2bfcc779d408",
+        "c76s05.p8": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+        "c76s05.p9": "ab6b8a711dbda4d210170dce0529a05c883b9b32b3a697d5924e09f6b3847d47",
+        "c76s05.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+        "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+        "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+        "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+        "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+        "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+        "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+        "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+        "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+        "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+      }
+    },
+    "mister/games/hbmame/vsav2s06.zip": {
+      "members": {
+        "c76s06.c1": "308ff599ca2e22e52ed6e6aa2a7e1660de732be4fb8c624c6ab83b7ed25dd577",
+        "c76s06.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+        "c76s06.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+        "c76s06.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+        "c76s06.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s06.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s06.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s06.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+        "c76s06.c2": "913d8f01ef9a1febd09609bcc0d429cdf753fec9c928f2c5878c43aa7dd09680",
+        "c76s06.c3": "4a37cf50b211dbfa67af60a9104c71858187c429cdfc5ab5f311a59bfaa7f75a",
+        "c76s06.c4": "0043322adeb3e78dacc22ffe76c569f2f5a3ce65e459de91e99a11f0c9f0ed4b",
+        "c76s06.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+        "c76s06.m1": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+        "c76s06.p1": "ef598ed8860e0c8eb74ea0f08bb93f2500e4a60495ee5b1de176806d396c22d9",
+        "c76s06.p2": "04466d7ff269df4a620aa250316df5ac1e9e87282828b356c15874e5c30e3351",
+        "c76s06.p3": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+        "c76s06.p4": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+        "c76s06.p6": "e634f8eb70cf82be2f7df89b6db1ce43deeb99936612afa63e283bc523261a12",
+        "c76s06.p8": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+        "c76s06.p9": "e6edfc58fd6713ad7c7439ed9f6d2cc04c87b7399b25fc1660c4f6271097f736",
+        "c76s06.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+        "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+        "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+        "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+        "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+        "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+        "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+        "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+        "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+        "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+      }
+    }
+  },
+  "prerequisites": {
+    "disc-ceff831975ba3a649d71": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "format": "chd",
+          "sha256": "ceff831975ba3a649d716e82b8facc09a93c74532a9203035292ab120b118e2d",
+          "size": 716329857
+        },
+        {
+          "format": "iso",
+          "sha256": "6cbdf3ec3de82e23babe933f99d9279cc6cd98a5d28d5668c3a4aef73a9d9dc4",
+          "size": 4698767360
+        }
+      ],
+      "formats": [
+        "loose DVD CHD or ISO"
+      ],
+      "kind": "disc",
+      "title": "Vampire: Darkstalkers Collection (Japan), PlayStation 2 disc"
+    },
+    "rom-05564d7bd1d366988878": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "ac873dff",
+          "sha256": "05564d7bd1d366988878d4efb74df9a8daa481112a84b13b4b9d92db6f1b9b70",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2j.08"
+    },
+    "rom-0d3a8a2f15066765d377": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "11730952",
+          "sha256": "0d3a8a2f15066765d37708b40832267f0516a1ba78fb95fbb4cbc09fab21d180",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2j.10"
+    },
+    "rom-0ec88cb3d1a2329b4fbc": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "eb490213",
+          "sha256": "0ec88cb3d1a2329b4fbc44d0fc703170f96396e1c6c6fc50b9dfd5109f2bda58",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2j.10"
+    },
+    "rom-15a31774fec9426f927e": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "61979638",
+          "sha256": "15a31774fec9426f927e4129338c88164fd39617824e9899d2e2d77b9f196d12",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2j.05"
+    },
+    "rom-18828a261398827e62c0": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "b021c029",
+          "sha256": "18828a261398827e62c09c26de301ea71dae8e796101b178bde6ace8e02ad036",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2j.07"
+    },
+    "rom-1f356ddbf4b4cee1c0b2": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "aaf15fcb",
+          "sha256": "1f356ddbf4b4cee1c0b22f0d3322641d73a41838e482b8919762b284461839fc",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2.02"
+    },
+    "rom-220f33b55e4978a8d84c": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "778dc4f6",
+          "sha256": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.18m"
+    },
+    "rom-27081d58de50f3905988": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "35190139",
+          "sha256": "27081d58de50f3905988d2521d1448776c20bd25d357c6be4a33e9e21f2c2bed",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.01"
+    },
+    "rom-277a26797d2507875d00": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "00c763a7",
+          "sha256": "277a26797d2507875d00b21158fc3edd7d03557fea045a7e86950d421ffd433c",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.19m"
+    },
+    "rom-28dcc12ea8db3b8a35e6": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "3b02ddaa",
+          "sha256": "28dcc12ea8db3b8a35e6c1c3cfadb4e7de559cb84177fadb554b31aafb0c4ffb",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2.13m"
+    },
+    "rom-347d82db84ec3b17a46a": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "cd09bd63",
+          "sha256": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.14m"
+    },
+    "rom-3b385c35bb68659e2561": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "fac3c217",
+          "sha256": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2j.09"
+    },
+    "rom-3cfb1de97db68d4b7022": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "de34f624",
+          "sha256": "3cfb1de97db68d4b70228a8276912ec876a84edf6b8ac93eaee5eed7661b162c",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2j.05"
+    },
+    "rom-4030a7de364d0da1d9e2": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "605d9d1d",
+          "sha256": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.20m"
+    },
+    "rom-524a25bcd153be24594d": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "d6cf5ef5",
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "size": 24576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "QSound firmware (dl-1425.bin)"
+    },
+    "rom-5ab7196f9a3e0684c779": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "9cd71557",
+          "sha256": "5ab7196f9a3e0684c7794fcd04ac000f8b991783a36dce81d919f1d6ca776682",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsavj: vm3.12m"
+    },
+    "rom-5c413607761c3700e7c8": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "9ae8f186",
+          "sha256": "5c413607761c3700e7c851ca34852e8c1b1c17109977f2980c9e068d7625fc10",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2j.03a"
+    },
+    "rom-5e4f9ac8f3f78e8c3619": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "e80e956e",
+          "sha256": "5e4f9ac8f3f78e8c36193512a38d689d399b06b13a3c72d13b9e35be3e59b420",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsavj: vm3.11m"
+    },
+    "rom-63a4f7b14e37e3ecd33e": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "6d020a14",
+          "sha256": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.12m"
+    },
+    "rom-65697c143e06b4cd3bf8": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "d67e47b7",
+          "sha256": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.11m"
+    },
+    "rom-6dd8632c46bd7a27cba2": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "e2fabf53",
+          "sha256": "6dd8632c46bd7a27cba2bc41eedb5010b4c9eabaa1621417c0081e239cbc8d54",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2j.04a"
+    },
+    "rom-6e308e1af4e7ed63b604": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "67b9f779",
+          "sha256": "6e308e1af4e7ed63b60447fbb23c89a6491695988a72994a04c989070ef86236",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2.01"
+    },
+    "rom-6ec24ccc6ab0c8052473": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "38922efd",
+          "sha256": "6ec24ccc6ab0c8052473dff6e02b61517ed5b9226627076bd294fb54c005271c",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2.11m"
+    },
+    "rom-74c845c2d978441611fc": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "2018c120",
+          "sha256": "74c845c2d978441611fc6d8c382d06f13a5e1d3c2ca7a4b3ae1227aada3be1a8",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2j.08"
+    },
+    "rom-7a97d8d29642a2426125": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "cc09faa1",
+          "sha256": "7a97d8d29642a24261250048f9caeef24aac603c64c9f40689c64e588d19dfa6",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsavj: vm3.02"
+    },
+    "rom-7f7041ab663585774553": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "6e2430af",
+          "sha256": "7f7041ab6635857745532f3e7ed3ddb105047084d768837c997d2ed42f8f128d",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2.12m"
+    },
+    "rom-8537c742042603301783": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "c32dba09",
+          "sha256": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.02"
+    },
+    "rom-86e491a3cd8b3ea535ab": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "f37c5bc2",
+          "sha256": "86e491a3cd8b3ea535abce569d7850bdc3a50e6e1043b90d5b0b6bd42b9caed9",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2j.06"
+    },
+    "rom-8e9746a570e2522b4ce8": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "e0182c15",
+          "sha256": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.16m"
+    },
+    "rom-9cd791ed27cd29f14901": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "8f885809",
+          "sha256": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2j.07"
+    },
+    "rom-9ce04df3d39eb33c8fd0": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "5c852f52",
+          "sha256": "9ce04df3d39eb33c8fd05f2119006df5542c6104612541ec6810c3d161cc07fe",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.13m"
+    },
+    "rom-9e433561696cf187b863": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "107c091b",
+          "sha256": "9e433561696cf187b8630f45ca7d5bb12a61a495ee9556f2a91e05ba08e9dbde",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2j.04"
+    },
+    "rom-a1d96765f86351ca4abd": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "149be3ab",
+          "sha256": "a1d96765f86351ca4abd6727250df49be521f11c3712a003799ba60c6792eda7",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2.19m"
+    },
+    "rom-c8a4531e4835d9e381a9": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "a20f58af",
+          "sha256": "c8a4531e4835d9e381a99d204090cd418753cbe610f7050b25ab7d322e6bbb86",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.15m"
+    },
+    "rom-cab0690851c480f6a084": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "eaefce9c",
+          "sha256": "cab0690851c480f6a0846756cf44895c7e2311b194dcaa575f33297207d3e167",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2j.09"
+    },
+    "rom-d4af6d05b69fe1d5ad4a": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "89fd86b4",
+          "sha256": "d4af6d05b69fe1d5ad4abc713b418329b0a2c44a62524c888c0820d00945a369",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2j.03"
+    },
+    "rom-dc75eea0cedec206c97d": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "6a3b9897",
+          "sha256": "dc75eea0cedec206c97d0cea1f63d3bb2e7407d7d2b12ad94fd5e939eee30f40",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2j.06"
+    },
+    "rom-e6fae88f5bfd52c0d3ef": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "39db59ad",
+          "sha256": "e6fae88f5bfd52c0d3ef341b77704ad27f920bec5f35e12aaaf5f2b160ea3178",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vs2.17m"
+    },
+    "rom-e7169f3cbca69e05cd1f": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "4e40de66",
+          "sha256": "e7169f3cbca69e05cd1f057666ffef3201e205e294888ff63ac983a24894131d",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2.15m"
+    },
+    "rom-f933800bfc8f2f938ec3": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "f778769b",
+          "sha256": "f933800bfc8f2f938ec3f4f5b71424e4f17b7bf7700bbccbbcca1545b260afeb",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsavj: vm3.01"
+    },
+    "rom-f95e87f087c483320b03": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "b31d00c9",
+          "sha256": "f95e87f087c483320b03fc5d366d29bc3ec6acaef60108101a945ce87558c906",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vhunt2: vh2.17m"
+    },
+    "rom-fbebcba2ad83d0b1df76": {
+      "action": "Add your canonical arcade ROMs, QSound firmware and owned Vampire: Darkstalkers Collection disc to scanned folders.",
+      "alternatives": [
+        {
+          "crc32": "289028ce",
+          "sha256": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "vsav2: vsav2.key"
+    }
+  },
+  "project": "vsav2-arrange",
+  "requires": [
+    "native-context-v1",
+    "native-bindings-v1",
+    "disc-inputs-v1",
+    "run-cache-v1"
+  ],
+  "targets": {
+    "jp-fbneo": {
+      "destination_requirements": "An FBNeo build containing these set names and matching game revisions.",
+      "inputs": [
+        "disc-ceff831975ba3a649d71",
+        "rom-05564d7bd1d366988878",
+        "rom-0d3a8a2f15066765d377",
+        "rom-0ec88cb3d1a2329b4fbc",
+        "rom-15a31774fec9426f927e",
+        "rom-18828a261398827e62c0",
+        "rom-1f356ddbf4b4cee1c0b2",
+        "rom-220f33b55e4978a8d84c",
+        "rom-27081d58de50f3905988",
+        "rom-277a26797d2507875d00",
+        "rom-28dcc12ea8db3b8a35e6",
+        "rom-347d82db84ec3b17a46a",
+        "rom-3b385c35bb68659e2561",
+        "rom-3cfb1de97db68d4b7022",
+        "rom-4030a7de364d0da1d9e2",
+        "rom-524a25bcd153be24594d",
+        "rom-5ab7196f9a3e0684c779",
+        "rom-5c413607761c3700e7c8",
+        "rom-5e4f9ac8f3f78e8c3619",
+        "rom-63a4f7b14e37e3ecd33e",
+        "rom-65697c143e06b4cd3bf8",
+        "rom-6dd8632c46bd7a27cba2",
+        "rom-6e308e1af4e7ed63b604",
+        "rom-6ec24ccc6ab0c8052473",
+        "rom-74c845c2d978441611fc",
+        "rom-7a97d8d29642a2426125",
+        "rom-7f7041ab663585774553",
+        "rom-8537c742042603301783",
+        "rom-86e491a3cd8b3ea535ab",
+        "rom-8e9746a570e2522b4ce8",
+        "rom-9cd791ed27cd29f14901",
+        "rom-9ce04df3d39eb33c8fd0",
+        "rom-9e433561696cf187b863",
+        "rom-a1d96765f86351ca4abd",
+        "rom-c8a4531e4835d9e381a9",
+        "rom-cab0690851c480f6a084",
+        "rom-d4af6d05b69fe1d5ad4a",
+        "rom-dc75eea0cedec206c97d",
+        "rom-e6fae88f5bfd52c0d3ef",
+        "rom-e7169f3cbca69e05cd1f",
+        "rom-f933800bfc8f2f938ec3",
+        "rom-f95e87f087c483320b03",
+        "rom-fbebcba2ad83d0b1df76"
+      ],
+      "minimum_free_bytes": 12884901888,
+      "outputs": {
+        "roms/vsav2arj.zip": {
+          "members": {
+            "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+            "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+            "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+            "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vs2ar.01": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+            "vs2ar.05": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+            "vs2ar.06": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+            "vs2ar.10": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+            "vs2ar.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+            "vs2ar.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+            "vs2ar.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+            "vs2ar.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "vs2ar.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "vs2ar.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "vs2ar.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "vs2ar.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+            "vs2ar.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+            "vs2arj.03": "ef598ed8860e0c8eb74ea0f08bb93f2500e4a60495ee5b1de176806d396c22d9",
+            "vs2arj.04": "04466d7ff269df4a620aa250316df5ac1e9e87282828b356c15874e5c30e3351",
+            "vs2arj.08": "e634f8eb70cf82be2f7df89b6db1ce43deeb99936612afa63e283bc523261a12",
+            "vs2arj.13m": "308ff599ca2e22e52ed6e6aa2a7e1660de732be4fb8c624c6ab83b7ed25dd577",
+            "vs2arj.15m": "913d8f01ef9a1febd09609bcc0d429cdf753fec9c928f2c5878c43aa7dd09680",
+            "vs2arj.17m": "4a37cf50b211dbfa67af60a9104c71858187c429cdfc5ab5f311a59bfaa7f75a",
+            "vs2arj.19m": "0043322adeb3e78dacc22ffe76c569f2f5a3ce65e459de91e99a11f0c9f0ed4b",
+            "vs2arj.prg": "e6edfc58fd6713ad7c7439ed9f6d2cc04c87b7399b25fc1660c4f6271097f736",
+            "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+            "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+            "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+          }
+        },
+        "support/vsav2-arrange/FBNEO.txt": {
+          "sha256": "5d502b82be6149458494d00df3fb45d10e91765fe57659dcda4cf1b6819fd46a"
+        }
+      },
+      "platform": "fbneo",
+      "region": "jp",
+      "variant": "jp"
+    },
+    "jp-hbmame": {
+      "destination_requirements": "An HBMAME build that includes the Vampire Savior 2 Arrange sets.",
+      "inputs": [
+        "disc-ceff831975ba3a649d71",
+        "rom-05564d7bd1d366988878",
+        "rom-0d3a8a2f15066765d377",
+        "rom-0ec88cb3d1a2329b4fbc",
+        "rom-15a31774fec9426f927e",
+        "rom-18828a261398827e62c0",
+        "rom-1f356ddbf4b4cee1c0b2",
+        "rom-220f33b55e4978a8d84c",
+        "rom-27081d58de50f3905988",
+        "rom-277a26797d2507875d00",
+        "rom-28dcc12ea8db3b8a35e6",
+        "rom-347d82db84ec3b17a46a",
+        "rom-3b385c35bb68659e2561",
+        "rom-3cfb1de97db68d4b7022",
+        "rom-4030a7de364d0da1d9e2",
+        "rom-524a25bcd153be24594d",
+        "rom-5ab7196f9a3e0684c779",
+        "rom-5c413607761c3700e7c8",
+        "rom-5e4f9ac8f3f78e8c3619",
+        "rom-63a4f7b14e37e3ecd33e",
+        "rom-65697c143e06b4cd3bf8",
+        "rom-6dd8632c46bd7a27cba2",
+        "rom-6e308e1af4e7ed63b604",
+        "rom-6ec24ccc6ab0c8052473",
+        "rom-74c845c2d978441611fc",
+        "rom-7a97d8d29642a2426125",
+        "rom-7f7041ab663585774553",
+        "rom-8537c742042603301783",
+        "rom-86e491a3cd8b3ea535ab",
+        "rom-8e9746a570e2522b4ce8",
+        "rom-9cd791ed27cd29f14901",
+        "rom-9ce04df3d39eb33c8fd0",
+        "rom-9e433561696cf187b863",
+        "rom-a1d96765f86351ca4abd",
+        "rom-c8a4531e4835d9e381a9",
+        "rom-cab0690851c480f6a084",
+        "rom-d4af6d05b69fe1d5ad4a",
+        "rom-dc75eea0cedec206c97d",
+        "rom-e6fae88f5bfd52c0d3ef",
+        "rom-e7169f3cbca69e05cd1f",
+        "rom-f933800bfc8f2f938ec3",
+        "rom-f95e87f087c483320b03",
+        "rom-fbebcba2ad83d0b1df76"
+      ],
+      "minimum_free_bytes": 12884901888,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/vsav2s06.zip": {
+          "members": {
+            "c76s06.c1": "308ff599ca2e22e52ed6e6aa2a7e1660de732be4fb8c624c6ab83b7ed25dd577",
+            "c76s06.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+            "c76s06.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+            "c76s06.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+            "c76s06.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s06.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s06.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s06.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s06.c2": "913d8f01ef9a1febd09609bcc0d429cdf753fec9c928f2c5878c43aa7dd09680",
+            "c76s06.c3": "4a37cf50b211dbfa67af60a9104c71858187c429cdfc5ab5f311a59bfaa7f75a",
+            "c76s06.c4": "0043322adeb3e78dacc22ffe76c569f2f5a3ce65e459de91e99a11f0c9f0ed4b",
+            "c76s06.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+            "c76s06.m1": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+            "c76s06.p1": "ef598ed8860e0c8eb74ea0f08bb93f2500e4a60495ee5b1de176806d396c22d9",
+            "c76s06.p2": "04466d7ff269df4a620aa250316df5ac1e9e87282828b356c15874e5c30e3351",
+            "c76s06.p3": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+            "c76s06.p4": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+            "c76s06.p6": "e634f8eb70cf82be2f7df89b6db1ce43deeb99936612afa63e283bc523261a12",
+            "c76s06.p8": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+            "c76s06.p9": "e6edfc58fd6713ad7c7439ed9f6d2cc04c87b7399b25fc1660c4f6271097f736",
+            "c76s06.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+            "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+            "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+            "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+            "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+            "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+          }
+        },
+        "support/vsav2-arrange/README.txt": {
+          "sha256": "6e691778af00b79aa1af79298a25323242a056e85c00ec4670e8abaf56c21e01"
+        }
+      },
+      "platform": "hbmame",
+      "region": "jp",
+      "variant": "jp"
+    },
+    "jp-mister": {
+      "destination_requirements": "Includes the unchanged CPS+ core and shared Collection music pack.",
+      "inputs": [
+        "disc-ceff831975ba3a649d71",
+        "rom-05564d7bd1d366988878",
+        "rom-0d3a8a2f15066765d377",
+        "rom-0ec88cb3d1a2329b4fbc",
+        "rom-15a31774fec9426f927e",
+        "rom-18828a261398827e62c0",
+        "rom-1f356ddbf4b4cee1c0b2",
+        "rom-220f33b55e4978a8d84c",
+        "rom-27081d58de50f3905988",
+        "rom-277a26797d2507875d00",
+        "rom-28dcc12ea8db3b8a35e6",
+        "rom-347d82db84ec3b17a46a",
+        "rom-3b385c35bb68659e2561",
+        "rom-3cfb1de97db68d4b7022",
+        "rom-4030a7de364d0da1d9e2",
+        "rom-524a25bcd153be24594d",
+        "rom-5ab7196f9a3e0684c779",
+        "rom-5c413607761c3700e7c8",
+        "rom-5e4f9ac8f3f78e8c3619",
+        "rom-63a4f7b14e37e3ecd33e",
+        "rom-65697c143e06b4cd3bf8",
+        "rom-6dd8632c46bd7a27cba2",
+        "rom-6e308e1af4e7ed63b604",
+        "rom-6ec24ccc6ab0c8052473",
+        "rom-74c845c2d978441611fc",
+        "rom-7a97d8d29642a2426125",
+        "rom-7f7041ab663585774553",
+        "rom-8537c742042603301783",
+        "rom-86e491a3cd8b3ea535ab",
+        "rom-8e9746a570e2522b4ce8",
+        "rom-9cd791ed27cd29f14901",
+        "rom-9ce04df3d39eb33c8fd0",
+        "rom-9e433561696cf187b863",
+        "rom-a1d96765f86351ca4abd",
+        "rom-c8a4531e4835d9e381a9",
+        "rom-cab0690851c480f6a084",
+        "rom-d4af6d05b69fe1d5ad4a",
+        "rom-dc75eea0cedec206c97d",
+        "rom-e6fae88f5bfd52c0d3ef",
+        "rom-e7169f3cbca69e05cd1f",
+        "rom-f933800bfc8f2f938ec3",
+        "rom-f95e87f087c483320b03",
+        "rom-fbebcba2ad83d0b1df76"
+      ],
+      "minimum_free_bytes": 12884901888,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Restorations/_Japan/Vampire Savior 2 Arrange (Japan) [Backport].mra": {
+          "sha256": "f01d9be8efc29af6937808a475658021de025e22f0f0f6466b4c5e0ae6e64edc"
+        },
+        "_Arcade/cores/jtcps2-cpsplus_20261101.rbf": {
+          "sha256": "23b23a2a7a38b88d959a2cc3df5d970d3ccb5f16fda6ffc5eb491888244db397"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/SOURCE_AND_LICENSE.txt": {
+          "sha256": "ead8efce9ff80b051626f6550c400c069c90ae56d42bc78b4a6149ffa269f6a2"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/GPL-3.0.txt": {
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/LICENSE.txt": {
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/MRA_GPL-2.0.txt": {
+          "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/modules_fx68k_LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/modules_jtdsp16_LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/modules_jteeprom_LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/modules_jtframe_LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "games/CPS+/vampire_arrange.zip": {
+          "members": {
+            "vampire_arrange.cpk": "ee31f5f2a2538fb29d8ed1b8ca2f2dff13ba506d245de56ae77c991e23e3721c"
+          }
+        },
+        "games/hbmame/vsav2s06.zip": {
+          "members": {
+            "c76s06.c1": "308ff599ca2e22e52ed6e6aa2a7e1660de732be4fb8c624c6ab83b7ed25dd577",
+            "c76s06.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+            "c76s06.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+            "c76s06.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+            "c76s06.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s06.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s06.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s06.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s06.c2": "913d8f01ef9a1febd09609bcc0d429cdf753fec9c928f2c5878c43aa7dd09680",
+            "c76s06.c3": "4a37cf50b211dbfa67af60a9104c71858187c429cdfc5ab5f311a59bfaa7f75a",
+            "c76s06.c4": "0043322adeb3e78dacc22ffe76c569f2f5a3ce65e459de91e99a11f0c9f0ed4b",
+            "c76s06.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+            "c76s06.m1": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+            "c76s06.p1": "ef598ed8860e0c8eb74ea0f08bb93f2500e4a60495ee5b1de176806d396c22d9",
+            "c76s06.p2": "04466d7ff269df4a620aa250316df5ac1e9e87282828b356c15874e5c30e3351",
+            "c76s06.p3": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+            "c76s06.p4": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+            "c76s06.p6": "e634f8eb70cf82be2f7df89b6db1ce43deeb99936612afa63e283bc523261a12",
+            "c76s06.p8": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+            "c76s06.p9": "e6edfc58fd6713ad7c7439ed9f6d2cc04c87b7399b25fc1660c4f6271097f736",
+            "c76s06.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+            "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+            "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+            "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+            "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+            "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+          }
+        },
+        "support/vsav2-arrange/README.txt": {
+          "sha256": "6e691778af00b79aa1af79298a25323242a056e85c00ec4670e8abaf56c21e01"
+        }
+      },
+      "platform": "mister",
+      "region": "jp",
+      "variant": "jp"
+    },
+    "us-fbneo": {
+      "destination_requirements": "An FBNeo build containing these set names and matching game revisions.",
+      "inputs": [
+        "disc-ceff831975ba3a649d71",
+        "rom-05564d7bd1d366988878",
+        "rom-0d3a8a2f15066765d377",
+        "rom-0ec88cb3d1a2329b4fbc",
+        "rom-15a31774fec9426f927e",
+        "rom-18828a261398827e62c0",
+        "rom-1f356ddbf4b4cee1c0b2",
+        "rom-220f33b55e4978a8d84c",
+        "rom-27081d58de50f3905988",
+        "rom-277a26797d2507875d00",
+        "rom-28dcc12ea8db3b8a35e6",
+        "rom-347d82db84ec3b17a46a",
+        "rom-3b385c35bb68659e2561",
+        "rom-3cfb1de97db68d4b7022",
+        "rom-4030a7de364d0da1d9e2",
+        "rom-524a25bcd153be24594d",
+        "rom-5ab7196f9a3e0684c779",
+        "rom-5c413607761c3700e7c8",
+        "rom-5e4f9ac8f3f78e8c3619",
+        "rom-63a4f7b14e37e3ecd33e",
+        "rom-65697c143e06b4cd3bf8",
+        "rom-6dd8632c46bd7a27cba2",
+        "rom-6e308e1af4e7ed63b604",
+        "rom-6ec24ccc6ab0c8052473",
+        "rom-74c845c2d978441611fc",
+        "rom-7a97d8d29642a2426125",
+        "rom-7f7041ab663585774553",
+        "rom-8537c742042603301783",
+        "rom-86e491a3cd8b3ea535ab",
+        "rom-8e9746a570e2522b4ce8",
+        "rom-9cd791ed27cd29f14901",
+        "rom-9ce04df3d39eb33c8fd0",
+        "rom-9e433561696cf187b863",
+        "rom-a1d96765f86351ca4abd",
+        "rom-c8a4531e4835d9e381a9",
+        "rom-cab0690851c480f6a084",
+        "rom-d4af6d05b69fe1d5ad4a",
+        "rom-dc75eea0cedec206c97d",
+        "rom-e6fae88f5bfd52c0d3ef",
+        "rom-e7169f3cbca69e05cd1f",
+        "rom-f933800bfc8f2f938ec3",
+        "rom-f95e87f087c483320b03",
+        "rom-fbebcba2ad83d0b1df76"
+      ],
+      "minimum_free_bytes": 12884901888,
+      "outputs": {
+        "roms/vsav2aru.zip": {
+          "members": {
+            "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+            "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+            "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+            "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vs2ar.01": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+            "vs2ar.05": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+            "vs2ar.06": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+            "vs2ar.10": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+            "vs2ar.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+            "vs2ar.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+            "vs2ar.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+            "vs2ar.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "vs2ar.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "vs2ar.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "vs2ar.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "vs2ar.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+            "vs2ar.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+            "vs2aru.03": "a939d586d1fe65bbd6e2ef286e061fbe943282356964dc36e24b01492ea0b997",
+            "vs2aru.04": "5c37adbb53930349ee3782baf836d9314b8adf13d402d3ac3b30b7a25759805d",
+            "vs2aru.08": "46af4158630af7bec7ad811d9cb6ccda2da35425d36b0c166d8c2bfcc779d408",
+            "vs2aru.13m": "07a3ad3a660cffff852aa0e0fc7810e951642bc3db44176f525fefaa7bddb482",
+            "vs2aru.15m": "1bcd9d12416cd7603c8ef186a188ba44ccdb0d5facf9af6c99a7b87467e44976",
+            "vs2aru.17m": "ad3a7015d58b0cbaa7d376b5dba945de4181a5930939cff00783c732eaedb534",
+            "vs2aru.19m": "d65df0c9784713d2d3d40c2b36af055a0ad765b422d1984c8bd0f751188bb093",
+            "vs2aru.prg": "ab6b8a711dbda4d210170dce0529a05c883b9b32b3a697d5924e09f6b3847d47",
+            "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+            "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+            "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+          }
+        },
+        "support/vsav2-arrange/FBNEO.txt": {
+          "sha256": "5d502b82be6149458494d00df3fb45d10e91765fe57659dcda4cf1b6819fd46a"
+        }
+      },
+      "platform": "fbneo",
+      "region": "us",
+      "variant": "us"
+    },
+    "us-hbmame": {
+      "destination_requirements": "An HBMAME build that includes the Vampire Savior 2 Arrange sets.",
+      "inputs": [
+        "disc-ceff831975ba3a649d71",
+        "rom-05564d7bd1d366988878",
+        "rom-0d3a8a2f15066765d377",
+        "rom-0ec88cb3d1a2329b4fbc",
+        "rom-15a31774fec9426f927e",
+        "rom-18828a261398827e62c0",
+        "rom-1f356ddbf4b4cee1c0b2",
+        "rom-220f33b55e4978a8d84c",
+        "rom-27081d58de50f3905988",
+        "rom-277a26797d2507875d00",
+        "rom-28dcc12ea8db3b8a35e6",
+        "rom-347d82db84ec3b17a46a",
+        "rom-3b385c35bb68659e2561",
+        "rom-3cfb1de97db68d4b7022",
+        "rom-4030a7de364d0da1d9e2",
+        "rom-524a25bcd153be24594d",
+        "rom-5ab7196f9a3e0684c779",
+        "rom-5c413607761c3700e7c8",
+        "rom-5e4f9ac8f3f78e8c3619",
+        "rom-63a4f7b14e37e3ecd33e",
+        "rom-65697c143e06b4cd3bf8",
+        "rom-6dd8632c46bd7a27cba2",
+        "rom-6e308e1af4e7ed63b604",
+        "rom-6ec24ccc6ab0c8052473",
+        "rom-74c845c2d978441611fc",
+        "rom-7a97d8d29642a2426125",
+        "rom-7f7041ab663585774553",
+        "rom-8537c742042603301783",
+        "rom-86e491a3cd8b3ea535ab",
+        "rom-8e9746a570e2522b4ce8",
+        "rom-9cd791ed27cd29f14901",
+        "rom-9ce04df3d39eb33c8fd0",
+        "rom-9e433561696cf187b863",
+        "rom-a1d96765f86351ca4abd",
+        "rom-c8a4531e4835d9e381a9",
+        "rom-cab0690851c480f6a084",
+        "rom-d4af6d05b69fe1d5ad4a",
+        "rom-dc75eea0cedec206c97d",
+        "rom-e6fae88f5bfd52c0d3ef",
+        "rom-e7169f3cbca69e05cd1f",
+        "rom-f933800bfc8f2f938ec3",
+        "rom-f95e87f087c483320b03",
+        "rom-fbebcba2ad83d0b1df76"
+      ],
+      "minimum_free_bytes": 12884901888,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/vsav2s05.zip": {
+          "members": {
+            "c76s05.c1": "07a3ad3a660cffff852aa0e0fc7810e951642bc3db44176f525fefaa7bddb482",
+            "c76s05.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+            "c76s05.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+            "c76s05.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+            "c76s05.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s05.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s05.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s05.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s05.c2": "1bcd9d12416cd7603c8ef186a188ba44ccdb0d5facf9af6c99a7b87467e44976",
+            "c76s05.c3": "ad3a7015d58b0cbaa7d376b5dba945de4181a5930939cff00783c732eaedb534",
+            "c76s05.c4": "d65df0c9784713d2d3d40c2b36af055a0ad765b422d1984c8bd0f751188bb093",
+            "c76s05.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+            "c76s05.m1": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+            "c76s05.p1": "a939d586d1fe65bbd6e2ef286e061fbe943282356964dc36e24b01492ea0b997",
+            "c76s05.p2": "5c37adbb53930349ee3782baf836d9314b8adf13d402d3ac3b30b7a25759805d",
+            "c76s05.p3": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+            "c76s05.p4": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+            "c76s05.p6": "46af4158630af7bec7ad811d9cb6ccda2da35425d36b0c166d8c2bfcc779d408",
+            "c76s05.p8": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+            "c76s05.p9": "ab6b8a711dbda4d210170dce0529a05c883b9b32b3a697d5924e09f6b3847d47",
+            "c76s05.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+            "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+            "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+            "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+            "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+            "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+          }
+        },
+        "support/vsav2-arrange/README.txt": {
+          "sha256": "6e691778af00b79aa1af79298a25323242a056e85c00ec4670e8abaf56c21e01"
+        }
+      },
+      "platform": "hbmame",
+      "region": "us",
+      "variant": "us"
+    },
+    "us-mister": {
+      "destination_requirements": "Includes the unchanged CPS+ core and shared Collection music pack.",
+      "inputs": [
+        "disc-ceff831975ba3a649d71",
+        "rom-05564d7bd1d366988878",
+        "rom-0d3a8a2f15066765d377",
+        "rom-0ec88cb3d1a2329b4fbc",
+        "rom-15a31774fec9426f927e",
+        "rom-18828a261398827e62c0",
+        "rom-1f356ddbf4b4cee1c0b2",
+        "rom-220f33b55e4978a8d84c",
+        "rom-27081d58de50f3905988",
+        "rom-277a26797d2507875d00",
+        "rom-28dcc12ea8db3b8a35e6",
+        "rom-347d82db84ec3b17a46a",
+        "rom-3b385c35bb68659e2561",
+        "rom-3cfb1de97db68d4b7022",
+        "rom-4030a7de364d0da1d9e2",
+        "rom-524a25bcd153be24594d",
+        "rom-5ab7196f9a3e0684c779",
+        "rom-5c413607761c3700e7c8",
+        "rom-5e4f9ac8f3f78e8c3619",
+        "rom-63a4f7b14e37e3ecd33e",
+        "rom-65697c143e06b4cd3bf8",
+        "rom-6dd8632c46bd7a27cba2",
+        "rom-6e308e1af4e7ed63b604",
+        "rom-6ec24ccc6ab0c8052473",
+        "rom-74c845c2d978441611fc",
+        "rom-7a97d8d29642a2426125",
+        "rom-7f7041ab663585774553",
+        "rom-8537c742042603301783",
+        "rom-86e491a3cd8b3ea535ab",
+        "rom-8e9746a570e2522b4ce8",
+        "rom-9cd791ed27cd29f14901",
+        "rom-9ce04df3d39eb33c8fd0",
+        "rom-9e433561696cf187b863",
+        "rom-a1d96765f86351ca4abd",
+        "rom-c8a4531e4835d9e381a9",
+        "rom-cab0690851c480f6a084",
+        "rom-d4af6d05b69fe1d5ad4a",
+        "rom-dc75eea0cedec206c97d",
+        "rom-e6fae88f5bfd52c0d3ef",
+        "rom-e7169f3cbca69e05cd1f",
+        "rom-f933800bfc8f2f938ec3",
+        "rom-f95e87f087c483320b03",
+        "rom-fbebcba2ad83d0b1df76"
+      ],
+      "minimum_free_bytes": 12884901888,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Restorations/Vampire Savior 2 Arrange (USA) [Backport].mra": {
+          "sha256": "499e424e87eb09c07eff37060eefdcfe838be7b24f0a6e729a91d78918461163"
+        },
+        "_Arcade/cores/jtcps2-cpsplus_20261101.rbf": {
+          "sha256": "23b23a2a7a38b88d959a2cc3df5d970d3ccb5f16fda6ffc5eb491888244db397"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/SOURCE_AND_LICENSE.txt": {
+          "sha256": "ead8efce9ff80b051626f6550c400c069c90ae56d42bc78b4a6149ffa269f6a2"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/GPL-3.0.txt": {
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/LICENSE.txt": {
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/MRA_GPL-2.0.txt": {
+          "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/modules_fx68k_LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/modules_jtdsp16_LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/modules_jteeprom_LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "_Arcade/cores/licenses/jtcps2-cpsplus_20261101.rbf/licenses/modules_jtframe_LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "games/CPS+/vampire_arrange.zip": {
+          "members": {
+            "vampire_arrange.cpk": "ee31f5f2a2538fb29d8ed1b8ca2f2dff13ba506d245de56ae77c991e23e3721c"
+          }
+        },
+        "games/hbmame/vsav2s05.zip": {
+          "members": {
+            "c76s05.c1": "07a3ad3a660cffff852aa0e0fc7810e951642bc3db44176f525fefaa7bddb482",
+            "c76s05.c10": "6c81cee43b4f1bb119ae9eea26dfcb6992552be8f7bb5be72ac150d1c1f0429b",
+            "c76s05.c11": "5671f52556e1e67a385e7067359f57e5c31b7971616a0c80d51ca9d31c1fc698",
+            "c76s05.c12": "d2c400fb4c64d3f94c6603515363c69a5384c9d25bc2fd1c071799adcb2d6a79",
+            "c76s05.c13": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s05.c14": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s05.c15": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s05.c16": "cd3517473707d59c3d915b52a3e16213cadce80d9ffb2b4371958fb7acb51a08",
+            "c76s05.c2": "1bcd9d12416cd7603c8ef186a188ba44ccdb0d5facf9af6c99a7b87467e44976",
+            "c76s05.c3": "ad3a7015d58b0cbaa7d376b5dba945de4181a5930939cff00783c732eaedb534",
+            "c76s05.c4": "d65df0c9784713d2d3d40c2b36af055a0ad765b422d1984c8bd0f751188bb093",
+            "c76s05.c9": "ed26cf4dbb4fe7bb1f63cff34b197074f2c0aa8fff47b0e6cda12c33a4f80051",
+            "c76s05.m1": "4d00db507b64a2960c793114dd7d86a9517c8f668211a831a676a71fe72a9e0b",
+            "c76s05.p1": "a939d586d1fe65bbd6e2ef286e061fbe943282356964dc36e24b01492ea0b997",
+            "c76s05.p2": "5c37adbb53930349ee3782baf836d9314b8adf13d402d3ac3b30b7a25759805d",
+            "c76s05.p3": "8e02189f6dc2f538b1792b6832eb3e12937b7279a82e4d7d42a6de07c6f55594",
+            "c76s05.p4": "64dceca4e7ae087d0b5919e8754cbdec34d169e206a9e549b068cfd213b03d3e",
+            "c76s05.p6": "46af4158630af7bec7ad811d9cb6ccda2da35425d36b0c166d8c2bfcc779d408",
+            "c76s05.p8": "4f1839b1942d9bf5f89ca22d78bb785c1aab8ca3dc3d460f9067616fcaa18135",
+            "c76s05.p9": "ab6b8a711dbda4d210170dce0529a05c883b9b32b3a697d5924e09f6b3847d47",
+            "c76s05.q3": "6220977b851c7eca4f7d09484838b348b510e33c428d197ce89da3139186065f",
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "vs2.02": "8537c742042603301783e72634d0e3ee92fdf87ef86c4a3faa3405f8d11463cc",
+            "vs2.11m": "65697c143e06b4cd3bf8559199a9d7e4ec0baa30e1fd719d2a2bc3797fd83b59",
+            "vs2.12m": "63a4f7b14e37e3ecd33e2463587aa511d44d51fffc526efb0d11603e6bec36e2",
+            "vs2.14m": "347d82db84ec3b17a46ae5a3df429bb9c63c29cd17801ff16f7fc557b08d3802",
+            "vs2.16m": "8e9746a570e2522b4ce89c4019a9d816f7c59c3e6eefe2a28c8dda52c56538f1",
+            "vs2.18m": "220f33b55e4978a8d84c9d6fbf6a5b8aba2d7412b3b9b367f8191e9b29cacac2",
+            "vs2.20m": "4030a7de364d0da1d9e2036b51ec477ae367dc3c19935ea28515521d82e57451",
+            "vs2j.07": "9cd791ed27cd29f1490171340c2bdb89d7c5f381ac09d02e26e44d860fe312d0",
+            "vs2j.09": "3b385c35bb68659e2561d05ce4323cd32c865811fec6d6cc7d63c3632d34fcc6",
+            "vsav2.key": "fbebcba2ad83d0b1df76eadd4eb38a3ad66ac20c9aaea21ab306544ccc7cfda6"
+          }
+        },
+        "support/vsav2-arrange/README.txt": {
+          "sha256": "6e691778af00b79aa1af79298a25323242a056e85c00ec4670e8abaf56c21e01"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "variant": "us"
+    }
+  }
+}

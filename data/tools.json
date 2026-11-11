@@ -1,7 +1,8 @@
 {
   "date": "2026-11-10",
   "features": [
-    "ZIP media is recognized correctly on Windows. Detailed build reports include installer errors and identify media files that fail verification.",
+    "CPS+ and NG+ prepare their Python packages on Linux x86-64 and ARM64 with Python 3.12. Matching images are found even when unrelated files have the same size.",
+    "Updated kits fix Vampire Collection ISO builds and CPS+ CD-audio setup. DOS MIDI soundtracks request the installed game data they need. Reports identify the archive containing a listed image.",
     "Point it at your ROM and media folders. Loose files, ZIPs and 7z archives are identified by content, without renaming them. Supported discs and audio can use equivalent containers and lossless formats.",
     "Choose individual games, platforms and regions, or keep everything selected to include future catalog additions.",
     "Check requirements without unpacking ROMs. Disc messages explain absent, unsupported and unmatched images; reports include candidate filenames and sizes. Ready games can update while others wait for missing media.",
@@ -12,7 +13,7 @@
   "publication_schema": 1,
   "requirements": [
     "Install Python first. Use Python 3.12 on an Apple Silicon Mac or x64 Python 3.13 on Windows for the full catalog. Windows ARM users can use x64 Python 3.13. Python 3.13 from the Microsoft Store is supported on Windows.",
-    "The launcher requires Python 3.10 or newer. Linux and other Python/host combinations support a subset of builds; the plan identifies unsupported targets before building.",
+    "On Linux x86-64 or ARM64, use Python 3.12 with venv support, glibc 2.28 or newer and the standard C++ runtime (libstdc++6 on Ubuntu/Debian). Keep the state/cache folder on local storage. The launcher itself requires Python 3.10 or newer; other interpreter combinations may leave some targets unsupported.",
     "You need your own canonical MAME-format arcade ROMs. Some games also need discs, firmware or other media. ArcadePatches names what is missing; it does not download source ROMs or private keys.",
     "On Windows, keep the tool's state/cache folder on a local NTFS disk."
   ],
@@ -25,5 +26,5 @@
   ],
   "summary": "Build and update your Arcade Patches collection from media you own. Choose your games, platforms and regions, then copy the completed folders to your setup.",
   "title": "ArcadePatches",
-  "version": "0.1.7"
+  "version": "0.1.8"
 }

@@ -5,14 +5,14 @@
       "current": "1.8",
       "versions": {
         "1.8": {
-          "current_revision": 3,
+          "current_revision": 4,
           "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/64157b1ef51d6c9bc5cb4182e722272545e8bd4ec4273800561089b145ddef62/cps-plus-1.8-kit.zip",
+              "archive": "archive/51d1217594c6295f40e234683fedfb573aef722c1906bcf49c04ffba2c199ed1/cps-plus-1.8-kit.zip",
               "name": "cps-plus-1.8-kit.zip",
-              "sha256": "64157b1ef51d6c9bc5cb4182e722272545e8bd4ec4273800561089b145ddef62",
-              "size": 18000320
+              "sha256": "51d1217594c6295f40e234683fedfb573aef722c1906bcf49c04ffba2c199ed1",
+              "size": 18043707
             }
           },
           "game_contract_sha256": "d5161a09b002cfc501804d175e05f46d797b596927e0bc8488907bd1811fc587",
@@ -27,6 +27,11 @@
               "date": "2026-11-10",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "revisions": {
@@ -55,6 +60,19 @@
               },
               "game_contract_sha256": "d5161a09b002cfc501804d175e05f46d797b596927e0bc8488907bd1811fc587",
               "kind": "kit"
+            },
+            "4": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/51d1217594c6295f40e234683fedfb573aef722c1906bcf49c04ffba2c199ed1/cps-plus-1.8-kit.zip",
+                  "name": "cps-plus-1.8-kit.zip",
+                  "sha256": "51d1217594c6295f40e234683fedfb573aef722c1906bcf49c04ffba2c199ed1",
+                  "size": 18043707
+                }
+              },
+              "game_contract_sha256": "d5161a09b002cfc501804d175e05f46d797b596927e0bc8488907bd1811fc587",
+              "kind": "kit"
             }
           }
         }
@@ -65,14 +83,14 @@
       "versions": {
         "rc1": {
           "additive_output": "fbneo",
-          "current_revision": 9,
-          "date": "2026-11-08",
+          "current_revision": 10,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/47e333c4b49020d76f52dfcb785f114ca4bc05f0cd585d5894b541d3574d545e/dstlk-restoration-rc1-ips.zip",
+              "archive": "archive/082be53429dcf2c2ec0b53350c22c32d086929797a5cc63f62e51c40ad27d970/dstlk-restoration-rc1-ips.zip",
               "name": "dstlk-restoration-rc1-ips.zip",
-              "sha256": "47e333c4b49020d76f52dfcb785f114ca4bc05f0cd585d5894b541d3574d545e",
-              "size": 209270
+              "sha256": "082be53429dcf2c2ec0b53350c22c32d086929797a5cc63f62e51c40ad27d970",
+              "size": 216031
             },
             "mra": {
               "archive": "archive/fff34a93e9893bd51d48cad6cae202018320cb87a655903dbdaa302e545a8c49/dstlk-restoration-rc1-mra.zip",
@@ -123,9 +141,33 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 9
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 10
             }
           ],
           "revisions": {
+            "10": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/082be53429dcf2c2ec0b53350c22c32d086929797a5cc63f62e51c40ad27d970/dstlk-restoration-rc1-ips.zip",
+                  "name": "dstlk-restoration-rc1-ips.zip",
+                  "sha256": "082be53429dcf2c2ec0b53350c22c32d086929797a5cc63f62e51c40ad27d970",
+                  "size": 216031
+                },
+                "mra": {
+                  "archive": "archive/fff34a93e9893bd51d48cad6cae202018320cb87a655903dbdaa302e545a8c49/dstlk-restoration-rc1-mra.zip",
+                  "name": "dstlk-restoration-rc1-mra.zip",
+                  "sha256": "fff34a93e9893bd51d48cad6cae202018320cb87a655903dbdaa302e545a8c49",
+                  "size": 33854
+                }
+              },
+              "game_contract_sha256": "b814347139819944e46a772b247d8438af118eb43609fd11f6faff243a8d5d48",
+              "kind": "rom"
+            },
             "2": {
               "date": "2026-10-07",
               "files": {
@@ -246,14 +288,14 @@
       "current": "rc4",
       "versions": {
         "rc4": {
-          "current_revision": 7,
+          "current_revision": 8,
           "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/d59c4e066e3ce2ec435fd255058bec6161638b4201d14235d337a96e132b0dbb/final-fight-ex-rc4-kit.zip",
+              "archive": "archive/62b5a04d1d57b0e5c84104ac3e7caf7bf6aab09f9d3ed5af5ab634870ec0b1fc/final-fight-ex-rc4-kit.zip",
               "name": "final-fight-ex-rc4-kit.zip",
-              "sha256": "d59c4e066e3ce2ec435fd255058bec6161638b4201d14235d337a96e132b0dbb",
-              "size": 3454384
+              "sha256": "62b5a04d1d57b0e5c84104ac3e7caf7bf6aab09f9d3ed5af5ab634870ec0b1fc",
+              "size": 3464710
             }
           },
           "game_contract_sha256": "4cda8fcd38c813071b64c4b5e528742584e86a5f2024ce76203ed063be8677b7",
@@ -273,6 +315,11 @@
               "date": "2026-11-10",
               "reason": "tooling update",
               "revision": 7
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 8
             }
           ],
           "revisions": {
@@ -314,6 +361,19 @@
               },
               "game_contract_sha256": "4cda8fcd38c813071b64c4b5e528742584e86a5f2024ce76203ed063be8677b7",
               "kind": "kit"
+            },
+            "8": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/62b5a04d1d57b0e5c84104ac3e7caf7bf6aab09f9d3ed5af5ab634870ec0b1fc/final-fight-ex-rc4-kit.zip",
+                  "name": "final-fight-ex-rc4-kit.zip",
+                  "sha256": "62b5a04d1d57b0e5c84104ac3e7caf7bf6aab09f9d3ed5af5ab634870ec0b1fc",
+                  "size": 3464710
+                }
+              },
+              "game_contract_sha256": "4cda8fcd38c813071b64c4b5e528742584e86a5f2024ce76203ed063be8677b7",
+              "kind": "kit"
             }
           }
         }
@@ -323,14 +383,14 @@
       "current": "rc3",
       "versions": {
         "rc3": {
-          "current_revision": 8,
+          "current_revision": 9,
           "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59/final-fight-ex-cps2-rc3-kit.zip",
+              "archive": "archive/50777a86f5090150dd758abe338cee0c19ad65dff8ea67771b4baae07aaf7e57/final-fight-ex-cps2-rc3-kit.zip",
               "name": "final-fight-ex-cps2-rc3-kit.zip",
-              "sha256": "03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59",
-              "size": 17341758
+              "sha256": "50777a86f5090150dd758abe338cee0c19ad65dff8ea67771b4baae07aaf7e57",
+              "size": 17389038
             }
           },
           "game_contract_sha256": "a85e9953f46f3b5f9e01ea76b5efd5c9726cfd817e1bb419a0b0ef6129517569",
@@ -350,6 +410,11 @@
               "date": "2026-11-10",
               "reason": "tooling update",
               "revision": 8
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 9
             }
           ],
           "removed_output": "definitions",
@@ -392,6 +457,19 @@
               },
               "game_contract_sha256": "a85e9953f46f3b5f9e01ea76b5efd5c9726cfd817e1bb419a0b0ef6129517569",
               "kind": "kit"
+            },
+            "9": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/50777a86f5090150dd758abe338cee0c19ad65dff8ea67771b4baae07aaf7e57/final-fight-ex-cps2-rc3-kit.zip",
+                  "name": "final-fight-ex-cps2-rc3-kit.zip",
+                  "sha256": "50777a86f5090150dd758abe338cee0c19ad65dff8ea67771b4baae07aaf7e57",
+                  "size": 17389038
+                }
+              },
+              "game_contract_sha256": "a85e9953f46f3b5f9e01ea76b5efd5c9726cfd817e1bb419a0b0ef6129517569",
+              "kind": "kit"
             }
           }
         }
@@ -402,14 +480,14 @@
       "versions": {
         "rc1": {
           "additive_output": "mame",
-          "current_revision": 5,
-          "date": "2026-11-08",
+          "current_revision": 6,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/39808a9eac76238c34db88454076ec741be743757fbb122ef5863a8b891b1f6b/hsf2-restoration-rc1-ips.zip",
+              "archive": "archive/dbe6430cc9567f2c5ebd03537e7974afa73db2eaf5994d94f46286f8a0032fe3/hsf2-restoration-rc1-ips.zip",
               "name": "hsf2-restoration-rc1-ips.zip",
-              "sha256": "39808a9eac76238c34db88454076ec741be743757fbb122ef5863a8b891b1f6b",
-              "size": 240801
+              "sha256": "dbe6430cc9567f2c5ebd03537e7974afa73db2eaf5994d94f46286f8a0032fe3",
+              "size": 249540
             },
             "mra": {
               "archive": "archive/6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a/hsf2-restoration-rc1-mra.zip",
@@ -444,6 +522,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "revisions": {
@@ -518,6 +601,25 @@
               },
               "game_contract_sha256": "2e975965b370d3c2e2c5dd03b0c030d73060942efec7528afeb7725931635190",
               "kind": "rom"
+            },
+            "6": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/dbe6430cc9567f2c5ebd03537e7974afa73db2eaf5994d94f46286f8a0032fe3/hsf2-restoration-rc1-ips.zip",
+                  "name": "hsf2-restoration-rc1-ips.zip",
+                  "sha256": "dbe6430cc9567f2c5ebd03537e7974afa73db2eaf5994d94f46286f8a0032fe3",
+                  "size": 249540
+                },
+                "mra": {
+                  "archive": "archive/6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a/hsf2-restoration-rc1-mra.zip",
+                  "name": "hsf2-restoration-rc1-mra.zip",
+                  "sha256": "6f7202a990867e5d4aee01bd7b56c26c9211043763c19a6ef94360da55e1484a",
+                  "size": 53763
+                }
+              },
+              "game_contract_sha256": "2e975965b370d3c2e2c5dd03b0c030d73060942efec7528afeb7725931635190",
+              "kind": "rom"
             }
           }
         }
@@ -527,14 +629,14 @@
       "current": "rc6",
       "versions": {
         "rc6": {
-          "current_revision": 2,
-          "date": "2026-11-08",
+          "current_revision": 3,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/10e0f8b0aa18a080b28539325b9c4d635b2de081d8a378fd35ccf2888517a495/mshvsf-ex-rc6-ips.zip",
+              "archive": "archive/9814c996cf52e759cc5570e783d25cc90a940b13d8d06de904bee20b7f3a924a/mshvsf-ex-rc6-ips.zip",
               "name": "mshvsf-ex-rc6-ips.zip",
-              "sha256": "10e0f8b0aa18a080b28539325b9c4d635b2de081d8a378fd35ccf2888517a495",
-              "size": 934696
+              "sha256": "9814c996cf52e759cc5570e783d25cc90a940b13d8d06de904bee20b7f3a924a",
+              "size": 961841
             },
             "mra": {
               "archive": "archive/3efb7f437069d873b96c1ab25623c83e77b75c82c9ea19c7ca980a8f2aa517a2/mshvsf-ex-rc6-mra.zip",
@@ -554,6 +656,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 2
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 3
             }
           ],
           "revisions": {
@@ -587,6 +694,25 @@
               },
               "game_contract_sha256": "f3143a7ef55e6fe3d49fc59662a120dedb7cc3a229143bf317cc7ce20e37234d",
               "kind": "rom"
+            },
+            "3": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/9814c996cf52e759cc5570e783d25cc90a940b13d8d06de904bee20b7f3a924a/mshvsf-ex-rc6-ips.zip",
+                  "name": "mshvsf-ex-rc6-ips.zip",
+                  "sha256": "9814c996cf52e759cc5570e783d25cc90a940b13d8d06de904bee20b7f3a924a",
+                  "size": 961841
+                },
+                "mra": {
+                  "archive": "archive/3efb7f437069d873b96c1ab25623c83e77b75c82c9ea19c7ca980a8f2aa517a2/mshvsf-ex-rc6-mra.zip",
+                  "name": "mshvsf-ex-rc6-mra.zip",
+                  "sha256": "3efb7f437069d873b96c1ab25623c83e77b75c82c9ea19c7ca980a8f2aa517a2",
+                  "size": 436529
+                }
+              },
+              "game_contract_sha256": "f3143a7ef55e6fe3d49fc59662a120dedb7cc3a229143bf317cc7ce20e37234d",
+              "kind": "rom"
             }
           }
         }
@@ -597,14 +723,14 @@
       "versions": {
         "rc1": {
           "additive_output": "fbneo",
-          "current_revision": 10,
-          "date": "2026-11-08",
+          "current_revision": 11,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/6f5bd5d122837e95bfcdeb32acee42ff8293c4cb3c7c07260378aca11f86df03/mshvsf-restoration-rc1-ips.zip",
+              "archive": "archive/beec3b901571f53296168f3e0c06cf120d15bc6067e1aabd7f166c96e2f8a7a7/mshvsf-restoration-rc1-ips.zip",
               "name": "mshvsf-restoration-rc1-ips.zip",
-              "sha256": "6f5bd5d122837e95bfcdeb32acee42ff8293c4cb3c7c07260378aca11f86df03",
-              "size": 244206
+              "sha256": "beec3b901571f53296168f3e0c06cf120d15bc6067e1aabd7f166c96e2f8a7a7",
+              "size": 254310
             },
             "mra": {
               "archive": "archive/1bbc7a50c928773ec41fb0b271d98e9afff031a06d73e5ed2e76ad7ad9227519/mshvsf-restoration-rc1-mra.zip",
@@ -655,6 +781,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 10
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 11
             }
           ],
           "revisions": {
@@ -666,6 +797,25 @@
                   "name": "mshvsf-restoration-rc1-ips.zip",
                   "sha256": "6f5bd5d122837e95bfcdeb32acee42ff8293c4cb3c7c07260378aca11f86df03",
                   "size": 244206
+                },
+                "mra": {
+                  "archive": "archive/1bbc7a50c928773ec41fb0b271d98e9afff031a06d73e5ed2e76ad7ad9227519/mshvsf-restoration-rc1-mra.zip",
+                  "name": "mshvsf-restoration-rc1-mra.zip",
+                  "sha256": "1bbc7a50c928773ec41fb0b271d98e9afff031a06d73e5ed2e76ad7ad9227519",
+                  "size": 55248
+                }
+              },
+              "game_contract_sha256": "461e8c2fa7d8866e3af37afe5a333446c1436afa3239bf8fc6ac0487a197a041",
+              "kind": "rom"
+            },
+            "11": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/beec3b901571f53296168f3e0c06cf120d15bc6067e1aabd7f166c96e2f8a7a7/mshvsf-restoration-rc1-ips.zip",
+                  "name": "mshvsf-restoration-rc1-ips.zip",
+                  "sha256": "beec3b901571f53296168f3e0c06cf120d15bc6067e1aabd7f166c96e2f8a7a7",
+                  "size": 254310
                 },
                 "mra": {
                   "archive": "archive/1bbc7a50c928773ec41fb0b271d98e9afff031a06d73e5ed2e76ad7ad9227519/mshvsf-restoration-rc1-mra.zip",
@@ -778,14 +928,14 @@
       "current": "1.1",
       "versions": {
         "1.1": {
-          "current_revision": 6,
-          "date": "2026-11-08",
+          "current_revision": 7,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/743cca3a79bc766a61d7c01f37f701970c6d6eb93d49a148b52f4f90d34b2429/ng-plus-1.1-kit.zip",
+              "archive": "archive/0fe4ec709a4c98eabb185ed6b2f8bd97eee197acfaac1177516c1e090c7d6491/ng-plus-1.1-kit.zip",
               "name": "ng-plus-1.1-kit.zip",
-              "sha256": "743cca3a79bc766a61d7c01f37f701970c6d6eb93d49a148b52f4f90d34b2429",
-              "size": 1852233
+              "sha256": "0fe4ec709a4c98eabb185ed6b2f8bd97eee197acfaac1177516c1e090c7d6491",
+              "size": 1870951
             }
           },
           "game_contract_sha256": "a17a3b59f407dd394c4d1a1593a25e65dd135c959c16f34152783dec30529308",
@@ -795,6 +945,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 6
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 7
             }
           ],
           "revisions": {
@@ -810,6 +965,19 @@
               },
               "game_contract_sha256": "a17a3b59f407dd394c4d1a1593a25e65dd135c959c16f34152783dec30529308",
               "kind": "kit"
+            },
+            "7": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/0fe4ec709a4c98eabb185ed6b2f8bd97eee197acfaac1177516c1e090c7d6491/ng-plus-1.1-kit.zip",
+                  "name": "ng-plus-1.1-kit.zip",
+                  "sha256": "0fe4ec709a4c98eabb185ed6b2f8bd97eee197acfaac1177516c1e090c7d6491",
+                  "size": 1870951
+                }
+              },
+              "game_contract_sha256": "a17a3b59f407dd394c4d1a1593a25e65dd135c959c16f34152783dec30529308",
+              "kind": "kit"
             }
           }
         }
@@ -820,14 +988,14 @@
       "versions": {
         "rc1": {
           "additive_output": "fbneo",
-          "current_revision": 9,
-          "date": "2026-11-08",
+          "current_revision": 10,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/7e63f8136a7a5d5dfeddbf2c3c7d3de0a4cc477aaaa4f67fd52de131d2a027ee/nwarr-restoration-rc1-ips.zip",
+              "archive": "archive/1dcd6eb225da127aad9be06a33dfd4dff7fec7026da28869661344632d700641/nwarr-restoration-rc1-ips.zip",
               "name": "nwarr-restoration-rc1-ips.zip",
-              "sha256": "7e63f8136a7a5d5dfeddbf2c3c7d3de0a4cc477aaaa4f67fd52de131d2a027ee",
-              "size": 235012
+              "sha256": "1dcd6eb225da127aad9be06a33dfd4dff7fec7026da28869661344632d700641",
+              "size": 243474
             },
             "mra": {
               "archive": "archive/afd8f14af1ff61a2116ac94d2aff494a28a269169cd2a40fef5e658aea2beb5d/nwarr-restoration-rc1-mra.zip",
@@ -878,9 +1046,33 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 9
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 10
             }
           ],
           "revisions": {
+            "10": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/1dcd6eb225da127aad9be06a33dfd4dff7fec7026da28869661344632d700641/nwarr-restoration-rc1-ips.zip",
+                  "name": "nwarr-restoration-rc1-ips.zip",
+                  "sha256": "1dcd6eb225da127aad9be06a33dfd4dff7fec7026da28869661344632d700641",
+                  "size": 243474
+                },
+                "mra": {
+                  "archive": "archive/afd8f14af1ff61a2116ac94d2aff494a28a269169cd2a40fef5e658aea2beb5d/nwarr-restoration-rc1-mra.zip",
+                  "name": "nwarr-restoration-rc1-mra.zip",
+                  "sha256": "afd8f14af1ff61a2116ac94d2aff494a28a269169cd2a40fef5e658aea2beb5d",
+                  "size": 50510
+                }
+              },
+              "game_contract_sha256": "8381462572c53e7bb386108567706d515d0444dc5322ac7cb4523ef4b3b9d5ee",
+              "kind": "rom"
+            },
             "2": {
               "date": "2026-10-07",
               "files": {
@@ -1002,14 +1194,14 @@
       "versions": {
         "rc3": {
           "additive_output": "darksoft",
-          "current_revision": 4,
-          "date": "2026-11-08",
+          "current_revision": 5,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/9b90a6417d6c50ba3b49ee108719bfe028d96319911d7b6597704dcde2ce9f38/sfa-ex-rc3-ips.zip",
+              "archive": "archive/1192052983ef72dc6b5460e88561ec9b645bff996d9bd2e9d492a889dc0b79f3/sfa-ex-rc3-ips.zip",
               "name": "sfa-ex-rc3-ips.zip",
-              "sha256": "9b90a6417d6c50ba3b49ee108719bfe028d96319911d7b6597704dcde2ce9f38",
-              "size": 1178155
+              "sha256": "1192052983ef72dc6b5460e88561ec9b645bff996d9bd2e9d492a889dc0b79f3",
+              "size": 1203865
             },
             "mra": {
               "archive": "archive/0df443db78fcd6538b429cce867d330372ddfe585206eac9a5bc44e2d6faa2d0/sfa-ex-rc3-mra.zip",
@@ -1039,6 +1231,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 4
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 5
             }
           ],
           "revisions": {
@@ -1099,6 +1296,25 @@
               },
               "game_contract_sha256": "6f03fc7cafecb87af9b598c6c2679843600033cdc92e833613a68a074f74a108",
               "kind": "rom"
+            },
+            "5": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/1192052983ef72dc6b5460e88561ec9b645bff996d9bd2e9d492a889dc0b79f3/sfa-ex-rc3-ips.zip",
+                  "name": "sfa-ex-rc3-ips.zip",
+                  "sha256": "1192052983ef72dc6b5460e88561ec9b645bff996d9bd2e9d492a889dc0b79f3",
+                  "size": 1203865
+                },
+                "mra": {
+                  "archive": "archive/0df443db78fcd6538b429cce867d330372ddfe585206eac9a5bc44e2d6faa2d0/sfa-ex-rc3-mra.zip",
+                  "name": "sfa-ex-rc3-mra.zip",
+                  "sha256": "0df443db78fcd6538b429cce867d330372ddfe585206eac9a5bc44e2d6faa2d0",
+                  "size": 608495
+                }
+              },
+              "game_contract_sha256": "6f03fc7cafecb87af9b598c6c2679843600033cdc92e833613a68a074f74a108",
+              "kind": "rom"
             }
           }
         }
@@ -1109,14 +1325,14 @@
       "versions": {
         "rc1": {
           "additive_output": "fbneo",
-          "current_revision": 9,
-          "date": "2026-11-08",
+          "current_revision": 10,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/8fcb7cbde4af6c466e7b27f127e9284579b843fa5f58088bf2f6738509a27ca5/sfa-restoration-rc1-ips.zip",
+              "archive": "archive/d79a549d90b5e0aa5dc16bfd75f647c4ea23ba8f297ae55d65f128672b77210c/sfa-restoration-rc1-ips.zip",
               "name": "sfa-restoration-rc1-ips.zip",
-              "sha256": "8fcb7cbde4af6c466e7b27f127e9284579b843fa5f58088bf2f6738509a27ca5",
-              "size": 511463
+              "sha256": "d79a549d90b5e0aa5dc16bfd75f647c4ea23ba8f297ae55d65f128672b77210c",
+              "size": 531656
             },
             "mra": {
               "archive": "archive/ada406123e1a66b4807eef38b56738d3d313dc10dd7079265607b11a384fc895/sfa-restoration-rc1-mra.zip",
@@ -1171,6 +1387,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 9
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 10
             }
           ],
           "revisions": {
@@ -1184,6 +1405,25 @@
                   "size": 213321
                 }
               },
+              "kind": "rom"
+            },
+            "10": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/d79a549d90b5e0aa5dc16bfd75f647c4ea23ba8f297ae55d65f128672b77210c/sfa-restoration-rc1-ips.zip",
+                  "name": "sfa-restoration-rc1-ips.zip",
+                  "sha256": "d79a549d90b5e0aa5dc16bfd75f647c4ea23ba8f297ae55d65f128672b77210c",
+                  "size": 531656
+                },
+                "mra": {
+                  "archive": "archive/ada406123e1a66b4807eef38b56738d3d313dc10dd7079265607b11a384fc895/sfa-restoration-rc1-mra.zip",
+                  "name": "sfa-restoration-rc1-mra.zip",
+                  "sha256": "ada406123e1a66b4807eef38b56738d3d313dc10dd7079265607b11a384fc895",
+                  "size": 213321
+                }
+              },
+              "game_contract_sha256": "1100d52be17e95e7dc5f8b64c78608fa15b3ddfb6911af0a6f423710f3bc0044",
               "kind": "rom"
             },
             "2": {
@@ -1306,14 +1546,14 @@
       "current": "rc4",
       "versions": {
         "rc4": {
-          "current_revision": 3,
-          "date": "2026-11-08",
+          "current_revision": 4,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/b27596bc80efcd260d3781892e3024263e19dc14444632ced57bf328910fc4d3/sfa2-ex-rc4-kit.zip",
+              "archive": "archive/43e267cd5774e6db087252031a07f8b25b3547d0d23ddbd1cbac20224e2d97ef/sfa2-ex-rc4-kit.zip",
               "name": "sfa2-ex-rc4-kit.zip",
-              "sha256": "b27596bc80efcd260d3781892e3024263e19dc14444632ced57bf328910fc4d3",
-              "size": 1130858
+              "sha256": "43e267cd5774e6db087252031a07f8b25b3547d0d23ddbd1cbac20224e2d97ef",
+              "size": 1142875
             }
           },
           "game_contract_sha256": "59a45e03c0aa5b03725bb06700dc06cd7daf4cd6bc13de7ac061f8719672620d",
@@ -1323,6 +1563,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "revisions": {
@@ -1338,6 +1583,19 @@
               },
               "game_contract_sha256": "59a45e03c0aa5b03725bb06700dc06cd7daf4cd6bc13de7ac061f8719672620d",
               "kind": "kit"
+            },
+            "4": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/43e267cd5774e6db087252031a07f8b25b3547d0d23ddbd1cbac20224e2d97ef/sfa2-ex-rc4-kit.zip",
+                  "name": "sfa2-ex-rc4-kit.zip",
+                  "sha256": "43e267cd5774e6db087252031a07f8b25b3547d0d23ddbd1cbac20224e2d97ef",
+                  "size": 1142875
+                }
+              },
+              "game_contract_sha256": "59a45e03c0aa5b03725bb06700dc06cd7daf4cd6bc13de7ac061f8719672620d",
+              "kind": "kit"
             }
           }
         }
@@ -1347,14 +1605,14 @@
       "current": "rc8",
       "versions": {
         "rc8": {
-          "current_revision": 3,
-          "date": "2026-11-08",
+          "current_revision": 4,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/e5249d72ff7237041fd39c6de466f2aec94595eb5be11f97b5d18ce73523c862/sfa2-gold-rc8-kit.zip",
+              "archive": "archive/3b45acf689fcd4b0f0159ba317c42fff7fc308c4f967cc7bab38a00ae4f80514/sfa2-gold-rc8-kit.zip",
               "name": "sfa2-gold-rc8-kit.zip",
-              "sha256": "e5249d72ff7237041fd39c6de466f2aec94595eb5be11f97b5d18ce73523c862",
-              "size": 1779246
+              "sha256": "3b45acf689fcd4b0f0159ba317c42fff7fc308c4f967cc7bab38a00ae4f80514",
+              "size": 1797451
             }
           },
           "game_contract_sha256": "9b175928c8c0385b47b67ad90a0f6bafe31f7299f7ee5b179bcc2c182780f072",
@@ -1364,6 +1622,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "revisions": {
@@ -1379,6 +1642,19 @@
               },
               "game_contract_sha256": "9b175928c8c0385b47b67ad90a0f6bafe31f7299f7ee5b179bcc2c182780f072",
               "kind": "kit"
+            },
+            "4": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/3b45acf689fcd4b0f0159ba317c42fff7fc308c4f967cc7bab38a00ae4f80514/sfa2-gold-rc8-kit.zip",
+                  "name": "sfa2-gold-rc8-kit.zip",
+                  "sha256": "3b45acf689fcd4b0f0159ba317c42fff7fc308c4f967cc7bab38a00ae4f80514",
+                  "size": 1797451
+                }
+              },
+              "game_contract_sha256": "9b175928c8c0385b47b67ad90a0f6bafe31f7299f7ee5b179bcc2c182780f072",
+              "kind": "kit"
             }
           }
         }
@@ -1389,14 +1665,14 @@
       "versions": {
         "rc2": {
           "additive_output": "fbneo",
-          "current_revision": 8,
-          "date": "2026-11-08",
+          "current_revision": 9,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/a211707b5951cc27d4662bdafbdba00c40b5269d3acfcd97036eb23b87054b82/sfa2-restoration-rc2-ips.zip",
+              "archive": "archive/d9861af77468248d2d153a15ef96a5aaf6b11e76f485194db32ee9d8f683fd9e/sfa2-restoration-rc2-ips.zip",
               "name": "sfa2-restoration-rc2-ips.zip",
-              "sha256": "a211707b5951cc27d4662bdafbdba00c40b5269d3acfcd97036eb23b87054b82",
-              "size": 1419011
+              "sha256": "d9861af77468248d2d153a15ef96a5aaf6b11e76f485194db32ee9d8f683fd9e",
+              "size": 1454662
             },
             "mra": {
               "archive": "archive/c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a/sfa2-restoration-rc2-mra.zip",
@@ -1446,6 +1722,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 8
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 9
             }
           ],
           "revisions": {
@@ -1559,6 +1840,25 @@
               },
               "game_contract_sha256": "d1ef2e7ce95752dbda005b3aa43649c6242c990c241ffdf9afac1ae79c9b7e8a",
               "kind": "rom"
+            },
+            "9": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/d9861af77468248d2d153a15ef96a5aaf6b11e76f485194db32ee9d8f683fd9e/sfa2-restoration-rc2-ips.zip",
+                  "name": "sfa2-restoration-rc2-ips.zip",
+                  "sha256": "d9861af77468248d2d153a15ef96a5aaf6b11e76f485194db32ee9d8f683fd9e",
+                  "size": 1454662
+                },
+                "mra": {
+                  "archive": "archive/c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a/sfa2-restoration-rc2-mra.zip",
+                  "name": "sfa2-restoration-rc2-mra.zip",
+                  "sha256": "c777d4c5c330bd14b0aec714e514620a1328ccf1978582a397a82158ec81d05a",
+                  "size": 725877
+                }
+              },
+              "game_contract_sha256": "d1ef2e7ce95752dbda005b3aa43649c6242c990c241ffdf9afac1ae79c9b7e8a",
+              "kind": "rom"
             }
           }
         }
@@ -1568,14 +1868,14 @@
       "current": "rc5",
       "versions": {
         "rc5": {
-          "current_revision": 3,
-          "date": "2026-11-08",
+          "current_revision": 4,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/91d11e8b45abc8b2a623d45d86c5bdbf052c12be2440f74fc99ea719ed96ad2a/sfa3-restoration-rc5-ips.zip",
+              "archive": "archive/d0327ca2516ca26c92ecf301973b645ec9a8c7fab0fd9dea4466dadb3e11a4dc/sfa3-restoration-rc5-ips.zip",
               "name": "sfa3-restoration-rc5-ips.zip",
-              "sha256": "91d11e8b45abc8b2a623d45d86c5bdbf052c12be2440f74fc99ea719ed96ad2a",
-              "size": 632422
+              "sha256": "d0327ca2516ca26c92ecf301973b645ec9a8c7fab0fd9dea4466dadb3e11a4dc",
+              "size": 653820
             },
             "mra": {
               "archive": "archive/f5377f443b70ea96b367ee18f158a7a0b7b72e0ab354c94e7d821b21616c809f/sfa3-restoration-rc5-mra.zip",
@@ -1600,6 +1900,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "revisions": {
@@ -1646,6 +1951,25 @@
               },
               "game_contract_sha256": "4857940d7091bb71e051f4573704b7deeee1df0f71e75dfb8bb277e8d934f9a0",
               "kind": "rom"
+            },
+            "4": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/d0327ca2516ca26c92ecf301973b645ec9a8c7fab0fd9dea4466dadb3e11a4dc/sfa3-restoration-rc5-ips.zip",
+                  "name": "sfa3-restoration-rc5-ips.zip",
+                  "sha256": "d0327ca2516ca26c92ecf301973b645ec9a8c7fab0fd9dea4466dadb3e11a4dc",
+                  "size": 653820
+                },
+                "mra": {
+                  "archive": "archive/f5377f443b70ea96b367ee18f158a7a0b7b72e0ab354c94e7d821b21616c809f/sfa3-restoration-rc5-mra.zip",
+                  "name": "sfa3-restoration-rc5-mra.zip",
+                  "sha256": "f5377f443b70ea96b367ee18f158a7a0b7b72e0ab354c94e7d821b21616c809f",
+                  "size": 286763
+                }
+              },
+              "game_contract_sha256": "4857940d7091bb71e051f4573704b7deeee1df0f71e75dfb8bb277e8d934f9a0",
+              "kind": "rom"
             }
           }
         }
@@ -1655,14 +1979,14 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 6,
+          "current_revision": 7,
           "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/92357f9ff31c9d2436a56efe01a7af2b42ade9c4193a14ce1a312790e97af81d/sfa3-upper-cps2-rc1-kit.zip",
+              "archive": "archive/9f2f0ed2a97a1ae73cdefd56ee77a836f68fe54fa69aece982109138931210f0/sfa3-upper-cps2-rc1-kit.zip",
               "name": "sfa3-upper-cps2-rc1-kit.zip",
-              "sha256": "92357f9ff31c9d2436a56efe01a7af2b42ade9c4193a14ce1a312790e97af81d",
-              "size": 4354784
+              "sha256": "9f2f0ed2a97a1ae73cdefd56ee77a836f68fe54fa69aece982109138931210f0",
+              "size": 4384753
             }
           },
           "game_contract_sha256": "01b2fc9158eeeafae22ad081995d013bfcf8350cf682f1fc1bdb67808a717e38",
@@ -1677,6 +2001,11 @@
               "date": "2026-11-10",
               "reason": "tooling update",
               "revision": 6
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 7
             }
           ],
           "revisions": {
@@ -1705,6 +2034,19 @@
               },
               "game_contract_sha256": "01b2fc9158eeeafae22ad081995d013bfcf8350cf682f1fc1bdb67808a717e38",
               "kind": "kit"
+            },
+            "7": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/9f2f0ed2a97a1ae73cdefd56ee77a836f68fe54fa69aece982109138931210f0/sfa3-upper-cps2-rc1-kit.zip",
+                  "name": "sfa3-upper-cps2-rc1-kit.zip",
+                  "sha256": "9f2f0ed2a97a1ae73cdefd56ee77a836f68fe54fa69aece982109138931210f0",
+                  "size": 4384753
+                }
+              },
+              "game_contract_sha256": "01b2fc9158eeeafae22ad081995d013bfcf8350cf682f1fc1bdb67808a717e38",
+              "kind": "kit"
             }
           }
         }
@@ -1715,14 +2057,14 @@
       "versions": {
         "rc2": {
           "additive_output": "fbneo",
-          "current_revision": 8,
-          "date": "2026-11-08",
+          "current_revision": 9,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/86cdfeb39c3f3b55d23f93e6466c5d85434f3f818279150f681a4e4ff0a9d06b/sfz2al-restoration-rc2-ips.zip",
+              "archive": "archive/8d6c81765daf7722b9e55474c5cef8823b471c165a719bebef36ad9be518e507/sfz2al-restoration-rc2-ips.zip",
               "name": "sfz2al-restoration-rc2-ips.zip",
-              "sha256": "86cdfeb39c3f3b55d23f93e6466c5d85434f3f818279150f681a4e4ff0a9d06b",
-              "size": 334726
+              "sha256": "8d6c81765daf7722b9e55474c5cef8823b471c165a719bebef36ad9be518e507",
+              "size": 344597
             },
             "mra": {
               "archive": "archive/b3c16c684899059c1fa5a9a5cd708b96face10d2a53b68dc5d784a0488f86293/sfz2al-restoration-rc2-mra.zip",
@@ -1772,6 +2114,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 8
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 9
             }
           ],
           "revisions": {
@@ -1885,6 +2232,25 @@
               },
               "game_contract_sha256": "ba24295ff0062248e5067f78fd33553a5ab28cd6f49af9c3949bb4af2f16bbfb",
               "kind": "rom"
+            },
+            "9": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/8d6c81765daf7722b9e55474c5cef8823b471c165a719bebef36ad9be518e507/sfz2al-restoration-rc2-ips.zip",
+                  "name": "sfz2al-restoration-rc2-ips.zip",
+                  "sha256": "8d6c81765daf7722b9e55474c5cef8823b471c165a719bebef36ad9be518e507",
+                  "size": 344597
+                },
+                "mra": {
+                  "archive": "archive/b3c16c684899059c1fa5a9a5cd708b96face10d2a53b68dc5d784a0488f86293/sfz2al-restoration-rc2-mra.zip",
+                  "name": "sfz2al-restoration-rc2-mra.zip",
+                  "sha256": "b3c16c684899059c1fa5a9a5cd708b96face10d2a53b68dc5d784a0488f86293",
+                  "size": 98724
+                }
+              },
+              "game_contract_sha256": "ba24295ff0062248e5067f78fd33553a5ab28cd6f49af9c3949bb4af2f16bbfb",
+              "kind": "rom"
             }
           }
         }
@@ -1894,14 +2260,14 @@
       "current": "1.0",
       "versions": {
         "1.0": {
-          "current_revision": 6,
-          "date": "2026-11-08",
+          "current_revision": 7,
+          "date": "2026-11-10",
           "files": {
             "chd": {
-              "archive": "archive/8a9a4c0989a986ad3e6d15dfabc2fe52262719e95325ed02edd026f71f27a7f7/sfz3ugd-multiregion-1.0-chd.zip",
+              "archive": "archive/16124090372f902aab382a01c187ad564d7feb15250c5f59561d593d484d7be7/sfz3ugd-multiregion-1.0-chd.zip",
               "name": "sfz3ugd-multiregion-1.0-chd.zip",
-              "sha256": "8a9a4c0989a986ad3e6d15dfabc2fe52262719e95325ed02edd026f71f27a7f7",
-              "size": 128811
+              "sha256": "16124090372f902aab382a01c187ad564d7feb15250c5f59561d593d484d7be7",
+              "size": 134108
             }
           },
           "game_contract_sha256": "a6dfd75489b3a0dd6f416090e24b35abb988c6a759fbdebfde9a605cb80aa715",
@@ -1911,6 +2277,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 6
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 7
             }
           ],
           "revisions": {
@@ -1926,6 +2297,19 @@
               },
               "game_contract_sha256": "a6dfd75489b3a0dd6f416090e24b35abb988c6a759fbdebfde9a605cb80aa715",
               "kind": "chd"
+            },
+            "7": {
+              "date": "2026-11-10",
+              "files": {
+                "chd": {
+                  "archive": "archive/16124090372f902aab382a01c187ad564d7feb15250c5f59561d593d484d7be7/sfz3ugd-multiregion-1.0-chd.zip",
+                  "name": "sfz3ugd-multiregion-1.0-chd.zip",
+                  "sha256": "16124090372f902aab382a01c187ad564d7feb15250c5f59561d593d484d7be7",
+                  "size": 134108
+                }
+              },
+              "game_contract_sha256": "a6dfd75489b3a0dd6f416090e24b35abb988c6a759fbdebfde9a605cb80aa715",
+              "kind": "chd"
             }
           }
         }
@@ -1935,14 +2319,14 @@
       "current": "rc13",
       "versions": {
         "rc13": {
-          "current_revision": 3,
-          "date": "2026-11-08",
+          "current_revision": 4,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/b3293b6eb2bbcc2914a38f1ebc4c798c0b2ae6922fe0675a0ec21e20835f2f14/ssf2-ex-rc13-ips.zip",
+              "archive": "archive/75e6e4629f95857138da49d74170902d24cab768c23627cb0f070663ba8ec446/ssf2-ex-rc13-ips.zip",
               "name": "ssf2-ex-rc13-ips.zip",
-              "sha256": "b3293b6eb2bbcc2914a38f1ebc4c798c0b2ae6922fe0675a0ec21e20835f2f14",
-              "size": 1476890
+              "sha256": "75e6e4629f95857138da49d74170902d24cab768c23627cb0f070663ba8ec446",
+              "size": 1506586
             },
             "mra": {
               "archive": "archive/56f85ba4685eb78489a15901042ff4e496e2fab1a651cc98a708b15442877710/ssf2-ex-rc13-mra.zip",
@@ -1967,6 +2351,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "revisions": {
@@ -2013,6 +2402,25 @@
               },
               "game_contract_sha256": "42d0959d9dad3e3be307d34b58311b812963c8bc8ecc88b82bb2642407914ea2",
               "kind": "rom"
+            },
+            "4": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/75e6e4629f95857138da49d74170902d24cab768c23627cb0f070663ba8ec446/ssf2-ex-rc13-ips.zip",
+                  "name": "ssf2-ex-rc13-ips.zip",
+                  "sha256": "75e6e4629f95857138da49d74170902d24cab768c23627cb0f070663ba8ec446",
+                  "size": 1506586
+                },
+                "mra": {
+                  "archive": "archive/56f85ba4685eb78489a15901042ff4e496e2fab1a651cc98a708b15442877710/ssf2-ex-rc13-mra.zip",
+                  "name": "ssf2-ex-rc13-mra.zip",
+                  "sha256": "56f85ba4685eb78489a15901042ff4e496e2fab1a651cc98a708b15442877710",
+                  "size": 775161
+                }
+              },
+              "game_contract_sha256": "42d0959d9dad3e3be307d34b58311b812963c8bc8ecc88b82bb2642407914ea2",
+              "kind": "rom"
             }
           }
         }
@@ -2023,14 +2431,14 @@
       "versions": {
         "rc4": {
           "additive_output": "fbneo",
-          "current_revision": 5,
-          "date": "2026-11-08",
+          "current_revision": 6,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/720a8eb89354dec07439f7f8972f6ea5740a97730bcec69e9caf5c0aa6a4c34b/ssf2t-gmc-rc4-ips.zip",
+              "archive": "archive/7854946f3235cda825d4fdf1b99d4019f9b534de96ecd61050b2847bc4051082/ssf2t-gmc-rc4-ips.zip",
               "name": "ssf2t-gmc-rc4-ips.zip",
-              "sha256": "720a8eb89354dec07439f7f8972f6ea5740a97730bcec69e9caf5c0aa6a4c34b",
-              "size": 217225
+              "sha256": "7854946f3235cda825d4fdf1b99d4019f9b534de96ecd61050b2847bc4051082",
+              "size": 224235
             },
             "mra": {
               "archive": "archive/c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9/ssf2t-gmc-rc4-mra.zip",
@@ -2065,6 +2473,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 5
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 6
             }
           ],
           "revisions": {
@@ -2138,6 +2551,25 @@
               },
               "game_contract_sha256": "aafdbf23efc052ab4ef84a50cc4dddff59b3760592e6024a19c3a462f76473eb",
               "kind": "rom"
+            },
+            "6": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/7854946f3235cda825d4fdf1b99d4019f9b534de96ecd61050b2847bc4051082/ssf2t-gmc-rc4-ips.zip",
+                  "name": "ssf2t-gmc-rc4-ips.zip",
+                  "sha256": "7854946f3235cda825d4fdf1b99d4019f9b534de96ecd61050b2847bc4051082",
+                  "size": 224235
+                },
+                "mra": {
+                  "archive": "archive/c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9/ssf2t-gmc-rc4-mra.zip",
+                  "name": "ssf2t-gmc-rc4-mra.zip",
+                  "sha256": "c6447c1abb7438eadf85746ae318950992b04c401b9d686df5161776f4e0acc9",
+                  "size": 36422
+                }
+              },
+              "game_contract_sha256": "aafdbf23efc052ab4ef84a50cc4dddff59b3760592e6024a19c3a462f76473eb",
+              "kind": "rom"
             }
           }
         }
@@ -2147,14 +2579,14 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 14,
+          "current_revision": 15,
           "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/84be7401f5bbdeb3fe549e048ccc1848fa1975496bb23b471efba7d8a437a588/strider-ex-rc1-kit.zip",
+              "archive": "archive/489e6639a704091dfcffb6df04cbf97117cf8c9a96ec35ac9aecde1c69ef208a/strider-ex-rc1-kit.zip",
               "name": "strider-ex-rc1-kit.zip",
-              "sha256": "84be7401f5bbdeb3fe549e048ccc1848fa1975496bb23b471efba7d8a437a588",
-              "size": 15527190
+              "sha256": "489e6639a704091dfcffb6df04cbf97117cf8c9a96ec35ac9aecde1c69ef208a",
+              "size": 15551255
             }
           },
           "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",
@@ -2174,6 +2606,11 @@
               "date": "2026-11-10",
               "reason": "tooling update",
               "revision": 14
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 15
             }
           ],
           "removed_output": "definitions",
@@ -2216,6 +2653,19 @@
               },
               "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",
               "kind": "kit"
+            },
+            "15": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/489e6639a704091dfcffb6df04cbf97117cf8c9a96ec35ac9aecde1c69ef208a/strider-ex-rc1-kit.zip",
+                  "name": "strider-ex-rc1-kit.zip",
+                  "sha256": "489e6639a704091dfcffb6df04cbf97117cf8c9a96ec35ac9aecde1c69ef208a",
+                  "size": 15551255
+                }
+              },
+              "game_contract_sha256": "518b47bd42ed6e83ebbe9a87c6bc793c3631d08cb41a45464a00f576fd6f8662",
+              "kind": "kit"
             }
           }
         }
@@ -2225,14 +2675,14 @@
       "current": "rc6",
       "versions": {
         "rc6": {
-          "current_revision": 3,
-          "date": "2026-11-08",
+          "current_revision": 4,
+          "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/d8678e91487b15e6b6ca4ed3e423dc0f2c991f340d846c0fa9b56f755bc0a2a7/usf2-backport-rc6-kit.zip",
+              "archive": "archive/4f97a46468f720516cda58e2c55f5f461bf4e99c631779599a8c4a5fb3a265b5/usf2-backport-rc6-kit.zip",
               "name": "usf2-backport-rc6-kit.zip",
-              "sha256": "d8678e91487b15e6b6ca4ed3e423dc0f2c991f340d846c0fa9b56f755bc0a2a7",
-              "size": 16695025
+              "sha256": "4f97a46468f720516cda58e2c55f5f461bf4e99c631779599a8c4a5fb3a265b5",
+              "size": 16710365
             }
           },
           "game_contract_sha256": "39cb52270de438e59e9dfd5f5fc3e316896069bfbdcf3ff70b3cb8b634315023",
@@ -2243,6 +2693,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "revisions": {
@@ -2272,6 +2727,19 @@
                 "previous_contract": "0d619f7af501ca89863e24356920450ae91da5f29651f612fb5c9cbdb367d92d",
                 "retained_outputs_sha256": "48e5b006e4f8788540512dc68c3e8fb718f5155ee52188aeedd8c805a4e7d745"
               }
+            },
+            "4": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/4f97a46468f720516cda58e2c55f5f461bf4e99c631779599a8c4a5fb3a265b5/usf2-backport-rc6-kit.zip",
+                  "name": "usf2-backport-rc6-kit.zip",
+                  "sha256": "4f97a46468f720516cda58e2c55f5f461bf4e99c631779599a8c4a5fb3a265b5",
+                  "size": 16710365
+                }
+              },
+              "game_contract_sha256": "39cb52270de438e59e9dfd5f5fc3e316896069bfbdcf3ff70b3cb8b634315023",
+              "kind": "kit"
             }
           },
           "software_output_scope": {
@@ -2295,14 +2763,14 @@
       "current": "rc4",
       "versions": {
         "rc4": {
-          "current_revision": 3,
+          "current_revision": 4,
           "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/5b40d65c02b1ecce5f9eeaaf8e2c76b9f6a1c952779360f1195674c7661f0197/vhunt2-arrange-rc4-kit.zip",
+              "archive": "archive/436a950c8725da5530be35f64212b275ed8526dd3e9e034de4c3f99b9df29872/vhunt2-arrange-rc4-kit.zip",
               "name": "vhunt2-arrange-rc4-kit.zip",
-              "sha256": "5b40d65c02b1ecce5f9eeaaf8e2c76b9f6a1c952779360f1195674c7661f0197",
-              "size": 2073714
+              "sha256": "436a950c8725da5530be35f64212b275ed8526dd3e9e034de4c3f99b9df29872",
+              "size": 2084859
             }
           },
           "game_contract_sha256": "ee3c4a2525a565bc90a9274cef24f90f49bdca89d9ef2d3570b23886caaa6289",
@@ -2317,6 +2785,11 @@
               "date": "2026-11-10",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "revisions": {
@@ -2345,6 +2818,19 @@
               },
               "game_contract_sha256": "ee3c4a2525a565bc90a9274cef24f90f49bdca89d9ef2d3570b23886caaa6289",
               "kind": "kit"
+            },
+            "4": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/436a950c8725da5530be35f64212b275ed8526dd3e9e034de4c3f99b9df29872/vhunt2-arrange-rc4-kit.zip",
+                  "name": "vhunt2-arrange-rc4-kit.zip",
+                  "sha256": "436a950c8725da5530be35f64212b275ed8526dd3e9e034de4c3f99b9df29872",
+                  "size": 2084859
+                }
+              },
+              "game_contract_sha256": "ee3c4a2525a565bc90a9274cef24f90f49bdca89d9ef2d3570b23886caaa6289",
+              "kind": "kit"
             }
           }
         }
@@ -2355,14 +2841,14 @@
       "versions": {
         "rc3": {
           "additive_output": "fbneo",
-          "current_revision": 8,
-          "date": "2026-11-08",
+          "current_revision": 9,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/4cd7412b54aab3d6382d8032d40888ee147b656cdd7e4f595d8b246df13ba1cb/vhunt2-english-rc3-ips.zip",
+              "archive": "archive/ad581d594e928884d0c32071a468c9a7ab8cd7ef784b46e5ba72b5a2a9da4836/vhunt2-english-rc3-ips.zip",
               "name": "vhunt2-english-rc3-ips.zip",
-              "sha256": "4cd7412b54aab3d6382d8032d40888ee147b656cdd7e4f595d8b246df13ba1cb",
-              "size": 186625
+              "sha256": "ad581d594e928884d0c32071a468c9a7ab8cd7ef784b46e5ba72b5a2a9da4836",
+              "size": 193450
             },
             "mra": {
               "archive": "archive/f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb/vhunt2-english-rc3-mra.zip",
@@ -2412,6 +2898,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 8
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 9
             }
           ],
           "revisions": {
@@ -2525,6 +3016,25 @@
               },
               "game_contract_sha256": "5b34e90d9d88ab451d92b1c5e2ba1d53e4385976fa953f9a066b410a83ede88a",
               "kind": "rom"
+            },
+            "9": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/ad581d594e928884d0c32071a468c9a7ab8cd7ef784b46e5ba72b5a2a9da4836/vhunt2-english-rc3-ips.zip",
+                  "name": "vhunt2-english-rc3-ips.zip",
+                  "sha256": "ad581d594e928884d0c32071a468c9a7ab8cd7ef784b46e5ba72b5a2a9da4836",
+                  "size": 193450
+                },
+                "mra": {
+                  "archive": "archive/f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb/vhunt2-english-rc3-mra.zip",
+                  "name": "vhunt2-english-rc3-mra.zip",
+                  "sha256": "f60e70bcd3da58eaf43c9c84fd33fe384775dbacfb159d5e49806f9a4ed542fb",
+                  "size": 20149
+                }
+              },
+              "game_contract_sha256": "5b34e90d9d88ab451d92b1c5e2ba1d53e4385976fa953f9a066b410a83ede88a",
+              "kind": "rom"
             }
           }
         }
@@ -2534,14 +3044,14 @@
       "current": "rc5",
       "versions": {
         "rc5": {
-          "current_revision": 3,
+          "current_revision": 4,
           "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/3b05da1da5c2d4dfced6d1a49d3ea37c692bae919c993b6f4341c93ad261edd5/vsav-arrange-rc5-kit.zip",
+              "archive": "archive/22a8dc87b226fcdf67fa27a964410e2e0e1210e34384d3091e662b03242aa306/vsav-arrange-rc5-kit.zip",
               "name": "vsav-arrange-rc5-kit.zip",
-              "sha256": "3b05da1da5c2d4dfced6d1a49d3ea37c692bae919c993b6f4341c93ad261edd5",
-              "size": 2365469
+              "sha256": "22a8dc87b226fcdf67fa27a964410e2e0e1210e34384d3091e662b03242aa306",
+              "size": 2381305
             }
           },
           "game_contract_sha256": "333e129ba83f14fae85e1daab1b7b63f307a875027cba7ea54f3f4abf11a47cf",
@@ -2556,6 +3066,11 @@
               "date": "2026-11-10",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "revisions": {
@@ -2584,6 +3099,19 @@
               },
               "game_contract_sha256": "333e129ba83f14fae85e1daab1b7b63f307a875027cba7ea54f3f4abf11a47cf",
               "kind": "kit"
+            },
+            "4": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/22a8dc87b226fcdf67fa27a964410e2e0e1210e34384d3091e662b03242aa306/vsav-arrange-rc5-kit.zip",
+                  "name": "vsav-arrange-rc5-kit.zip",
+                  "sha256": "22a8dc87b226fcdf67fa27a964410e2e0e1210e34384d3091e662b03242aa306",
+                  "size": 2381305
+                }
+              },
+              "game_contract_sha256": "333e129ba83f14fae85e1daab1b7b63f307a875027cba7ea54f3f4abf11a47cf",
+              "kind": "kit"
             }
           }
         }
@@ -2594,14 +3122,14 @@
       "versions": {
         "rc2": {
           "additive_output": "fbneo",
-          "current_revision": 8,
-          "date": "2026-11-08",
+          "current_revision": 9,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/409b0db17619f0fdd70e4da9639892eebe5393056964b8868497fbfc9091d5c9/vsav-restoration-rc2-ips.zip",
+              "archive": "archive/cb60237216f1951abf1ceb7b6a5df3ee0db1d2e360626a70a758bd10130717c5/vsav-restoration-rc2-ips.zip",
               "name": "vsav-restoration-rc2-ips.zip",
-              "sha256": "409b0db17619f0fdd70e4da9639892eebe5393056964b8868497fbfc9091d5c9",
-              "size": 210937
+              "sha256": "cb60237216f1951abf1ceb7b6a5df3ee0db1d2e360626a70a758bd10130717c5",
+              "size": 219088
             },
             "mra": {
               "archive": "archive/4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7/vsav-restoration-rc2-mra.zip",
@@ -2651,6 +3179,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 8
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 9
             }
           ],
           "revisions": {
@@ -2764,6 +3297,25 @@
               },
               "game_contract_sha256": "0995fcfcb9fe9654709a50c0719b11b9f2385773c6289433db549310596b4dd8",
               "kind": "rom"
+            },
+            "9": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/cb60237216f1951abf1ceb7b6a5df3ee0db1d2e360626a70a758bd10130717c5/vsav-restoration-rc2-ips.zip",
+                  "name": "vsav-restoration-rc2-ips.zip",
+                  "sha256": "cb60237216f1951abf1ceb7b6a5df3ee0db1d2e360626a70a758bd10130717c5",
+                  "size": 219088
+                },
+                "mra": {
+                  "archive": "archive/4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7/vsav-restoration-rc2-mra.zip",
+                  "name": "vsav-restoration-rc2-mra.zip",
+                  "sha256": "4d7c0463a697bb68ff23166fe561a18ed85efffce77bd46f8cc32575ac14bdb7",
+                  "size": 35392
+                }
+              },
+              "game_contract_sha256": "0995fcfcb9fe9654709a50c0719b11b9f2385773c6289433db549310596b4dd8",
+              "kind": "rom"
             }
           }
         }
@@ -2773,14 +3325,14 @@
       "current": "rc4",
       "versions": {
         "rc4": {
-          "current_revision": 3,
+          "current_revision": 4,
           "date": "2026-11-10",
           "files": {
             "kit": {
-              "archive": "archive/1d688aa02936926589f51fbdfcd11eab863a333a9189859f7bd2b6247301fe81/vsav2-arrange-rc4-kit.zip",
+              "archive": "archive/72965b60649a63de6292583459d29cf43f153bf075262fb5b2065343dfb317d8/vsav2-arrange-rc4-kit.zip",
               "name": "vsav2-arrange-rc4-kit.zip",
-              "sha256": "1d688aa02936926589f51fbdfcd11eab863a333a9189859f7bd2b6247301fe81",
-              "size": 1993000
+              "sha256": "72965b60649a63de6292583459d29cf43f153bf075262fb5b2065343dfb317d8",
+              "size": 2004148
             }
           },
           "game_contract_sha256": "746cb1dcef7db3d20cff62ab664ab62af407b49fec29fb08f20c939ae6066298",
@@ -2795,6 +3347,11 @@
               "date": "2026-11-10",
               "reason": "tooling update",
               "revision": 3
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 4
             }
           ],
           "revisions": {
@@ -2823,6 +3380,19 @@
               },
               "game_contract_sha256": "746cb1dcef7db3d20cff62ab664ab62af407b49fec29fb08f20c939ae6066298",
               "kind": "kit"
+            },
+            "4": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/72965b60649a63de6292583459d29cf43f153bf075262fb5b2065343dfb317d8/vsav2-arrange-rc4-kit.zip",
+                  "name": "vsav2-arrange-rc4-kit.zip",
+                  "sha256": "72965b60649a63de6292583459d29cf43f153bf075262fb5b2065343dfb317d8",
+                  "size": 2004148
+                }
+              },
+              "game_contract_sha256": "746cb1dcef7db3d20cff62ab664ab62af407b49fec29fb08f20c939ae6066298",
+              "kind": "kit"
             }
           }
         }
@@ -2833,14 +3403,14 @@
       "versions": {
         "rc3": {
           "additive_output": "fbneo",
-          "current_revision": 8,
-          "date": "2026-11-08",
+          "current_revision": 9,
+          "date": "2026-11-10",
           "files": {
             "ips": {
-              "archive": "archive/36dad52f1bb1d1b6722982cde9d9f4c5a1d4200280e084fcfe37d46f941dc277/vsav2-english-rc3-ips.zip",
+              "archive": "archive/9ebff2421bd7c4c143387a510e0256bcb4593ffa881d4afd79d31fd85c954f9e/vsav2-english-rc3-ips.zip",
               "name": "vsav2-english-rc3-ips.zip",
-              "sha256": "36dad52f1bb1d1b6722982cde9d9f4c5a1d4200280e084fcfe37d46f941dc277",
-              "size": 189201
+              "sha256": "9ebff2421bd7c4c143387a510e0256bcb4593ffa881d4afd79d31fd85c954f9e",
+              "size": 196249
             },
             "mra": {
               "archive": "archive/a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8/vsav2-english-rc3-mra.zip",
@@ -2890,6 +3460,11 @@
               "date": "2026-11-08",
               "reason": "tooling update",
               "revision": 8
+            },
+            {
+              "date": "2026-11-10",
+              "reason": "tooling update",
+              "revision": 9
             }
           ],
           "revisions": {
@@ -2993,6 +3568,25 @@
                   "name": "vsav2-english-rc3-ips.zip",
                   "sha256": "36dad52f1bb1d1b6722982cde9d9f4c5a1d4200280e084fcfe37d46f941dc277",
                   "size": 189201
+                },
+                "mra": {
+                  "archive": "archive/a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8/vsav2-english-rc3-mra.zip",
+                  "name": "vsav2-english-rc3-mra.zip",
+                  "sha256": "a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8",
+                  "size": 21763
+                }
+              },
+              "game_contract_sha256": "bb3ad3e385204cf7be9b0a63a3947e3b17afc1fb23d4190ef5c0143f61d69345",
+              "kind": "rom"
+            },
+            "9": {
+              "date": "2026-11-10",
+              "files": {
+                "ips": {
+                  "archive": "archive/9ebff2421bd7c4c143387a510e0256bcb4593ffa881d4afd79d31fd85c954f9e/vsav2-english-rc3-ips.zip",
+                  "name": "vsav2-english-rc3-ips.zip",
+                  "sha256": "9ebff2421bd7c4c143387a510e0256bcb4593ffa881d4afd79d31fd85c954f9e",
+                  "size": 196249
                 },
                 "mra": {
                   "archive": "archive/a266b7693a9a8445609b8438e799a4b01c6a14bb24f5d23e5578c61ebb5cd0c8/vsav2-english-rc3-mra.zip",
