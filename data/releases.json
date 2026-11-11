@@ -1976,7 +1976,7 @@
       }
     },
     "sfa3-upper-cps2": {
-      "current": "rc1",
+      "current": "rc2",
       "versions": {
         "rc1": {
           "current_revision": 7,
@@ -2046,6 +2046,39 @@
                 }
               },
               "game_contract_sha256": "01b2fc9158eeeafae22ad081995d013bfcf8350cf682f1fc1bdb67808a717e38",
+              "kind": "kit"
+            }
+          }
+        },
+        "rc2": {
+          "current_revision": 1,
+          "date": "2026-11-10",
+          "files": {
+            "kit": {
+              "archive": "archive/fc02f147cabe6f97c6938fd0fbc89579f2363394fcfc96f5bd0680c0e1f27b6d/sfa3-upper-cps2-rc2-kit.zip",
+              "name": "sfa3-upper-cps2-rc2-kit.zip",
+              "sha256": "fc02f147cabe6f97c6938fd0fbc89579f2363394fcfc96f5bd0680c0e1f27b6d",
+              "size": 4541706
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "revisions": {
+            "1": {
+              "date": "2026-11-10",
+              "files": {
+                "kit": {
+                  "archive": "archive/fc02f147cabe6f97c6938fd0fbc89579f2363394fcfc96f5bd0680c0e1f27b6d/sfa3-upper-cps2-rc2-kit.zip",
+                  "name": "sfa3-upper-cps2-rc2-kit.zip",
+                  "sha256": "fc02f147cabe6f97c6938fd0fbc89579f2363394fcfc96f5bd0680c0e1f27b6d",
+                  "size": 4541706
+                }
+              },
               "kind": "kit"
             }
           }

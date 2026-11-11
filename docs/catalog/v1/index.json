@@ -76,9 +76,9 @@
       "url": "https://arcadepatches.com/downloads/archive/d0327ca2516ca26c92ecf301973b645ec9a8c7fab0fd9dea4466dadb3e11a4dc/sfa3-restoration-rc5-ips.zip"
     },
     "sfa3-upper-cps2-kit": {
-      "sha256": "9f2f0ed2a97a1ae73cdefd56ee77a836f68fe54fa69aece982109138931210f0",
-      "size": 4384753,
-      "url": "https://arcadepatches.com/downloads/archive/9f2f0ed2a97a1ae73cdefd56ee77a836f68fe54fa69aece982109138931210f0/sfa3-upper-cps2-rc1-kit.zip"
+      "sha256": "fc02f147cabe6f97c6938fd0fbc89579f2363394fcfc96f5bd0680c0e1f27b6d",
+      "size": 4541706,
+      "url": "https://arcadepatches.com/downloads/archive/fc02f147cabe6f97c6938fd0fbc89579f2363394fcfc96f5bd0680c0e1f27b6d/sfa3-upper-cps2-rc2-kit.zip"
     },
     "sfz2al-restoration-kit": {
       "sha256": "8d6c81765daf7722b9e55474c5cef8823b471c165a719bebef36ad9be518e507",
@@ -245,7 +245,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249-numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
     }
   },
-  "generation": 180,
+  "generation": 181,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.8"
@@ -313,7 +313,7 @@
       "title": "Street Fighter Alpha 3"
     },
     "sfa3-upper-cps2": {
-      "current": "sfa3-upper-cps2-rc1-r7",
+      "current": "sfa3-upper-cps2-rc2-r1",
       "title": "Street Fighter Alpha 3 Upper (CPS-2)"
     },
     "sfz2al-restoration": {
@@ -531,16 +531,16 @@
       "kit": "sfa3-restoration-kit",
       "kit_revision": 4
     },
-    "sfa3-upper-cps2-rc1-r7": {
+    "sfa3-upper-cps2-rc2-r1": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "a2735347b0d0ee1c333141c64612a4ed0102a1ca2a28a9890442a125339a03fd",
-        "size": 114654,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/a2735347b0d0ee1c333141c64612a4ed0102a1ca2a28a9890442a125339a03fd.json"
+        "sha256": "dd63510a979e91baf150c8c70731473c31013439357af73cec7025ca8073f06f",
+        "size": 114736,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/dd63510a979e91baf150c8c70731473c31013439357af73cec7025ca8073f06f.json"
       },
-      "game_version": "rc1",
+      "game_version": "rc2",
       "kit": "sfa3-upper-cps2-kit",
-      "kit_revision": 7
+      "kit_revision": 1
     },
     "sfz2al-restoration-rc2-r9": {
       "definition": {

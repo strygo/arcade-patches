@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 3 Upper (CPS-2)</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha / Zero 3 Upper</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>MAME set</dt><dd>sfa3up / sfz3up</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-11-04</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha / Zero 3 Upper</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>MAME set</dt><dd>sfa3up / sfz3up</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-11-10</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot"><div class="pair"><div><p class="label">Japan</p><img src="../img/sfa3-upper-cps2/00_before.png?v=8e9ef957c9" alt="Japan: The Japanese and USA title screens."></div><div><p class="label">USA</p><img src="../img/sfa3-upper-cps2/00_after.png?v=f929c86c92" alt="USA: The Japanese and USA title screens."></div></div><figcaption>The Japanese and USA title screens.</figcaption></figure>
 <figure class="shot single"><img src="../img/sfa3-upper-cps2/01_single.png?v=4d90842ce6" alt="Choose from the expanded Upper roster."><figcaption>Choose from the expanded Upper roster.</figcaption></figure>
@@ -68,14 +68,14 @@
 <li>USA (English) and Japan versions</li>
 </ul>
 <h2>Download</h2>
-<p>Tools updated 2026-11-10. Game version unchanged.</p>
+
 
 
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/sfa3-upper-cps2-rc1-kit.zip?v=9f2f0ed2a9">sfa3-upper-cps2-rc1-kit.zip</a>
-  (4.2 MB)</div>
-  <div class="hash">SHA-256: 9f2f0ed2a97a1ae73cdefd56ee77a836f68fe54fa69aece982109138931210f0</div>
+  <div class="file"><a href="../downloads/sfa3-upper-cps2-rc2-kit.zip?v=fc02f147ca">sfa3-upper-cps2-rc2-kit.zip</a>
+  (4.3 MB)</div>
+  <div class="hash">SHA-256: fc02f147cabe6f97c6938fd0fbc89579f2363394fcfc96f5bd0680c0e1f27b6d</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
@@ -90,12 +90,36 @@ The kit remembers your choices and prepares required helpers and Python packages
 privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
 for the files to copy. Run the same command again to update.</p>
 <details><summary>Advanced command-line reference</summary><h2>How to build</h2>
-<pre><code>unzip sfa3-upper-cps2-rc1-kit.zip -d sfa3-upper-cps2
+<pre><code>unzip sfa3-upper-cps2-rc2-kit.zip -d sfa3-upper-cps2
 cd sfa3-upper-cps2
 python3 apply.py --rompath /path/to/roms --ps2-us /path/to/us.chd --ps2-jp /path/to/jp.chd --naomi-chd /path/to/gdl-0002.chd --naomi-pic /path/to/sfz3ugd.zip --chdman /path/to/chdman --work /external/fresh-work --out-dir /external/fresh-output</code></pre>
 </details>
 
 <h2 id="history">Release history</h2>
+<h3>rc2 (2026-11-10)</h3><ul>
+<li>Fixed a freeze when the computer-controlled Shin Akuma throws you.</li>
+<li>Fixed Shin Akuma’s Raging Demon grabbing the opponent but never finishing, leaving them stuck.</li>
+<li>Fixed Shin Akuma’s air super spending meter without firing, and his recovery when he lands from it.</li>
+<li>Fixed T. Hawk’s throw holding a knocked-out opponent too long, and his missed Condor Dive landing late.</li>
+<li>Fixed Evil Ryu’s and Shin Akuma’s teleports, which moved the wrong distance and ran punch teleports at kick speed.</li>
+<li>Restored the label card and arrows on the ISM selection screen, and the FIGHTING STYLE SELECT side bands in the USA version.</li>
+<li>The USA select screen reads SELECT PLAYER again, and the added fighters’ portraits have their grey boxes with the cursor glow showing.</li>
+<li>Fixed Balrog’s Gigaton Blow and Shin M. Bison’s Final Psycho Crusher drawing broken graphics.</li>
+<li>Balrog, Juli and Juni play their own opening stories instead of Bison’s.</li>
+<li>Fixed M. Bison lingering beside Juni during the Ryu scene, and restored Juni’s victory pose.</li>
+<li>Fixed Evil Ryu’s match portrait showing Ryu’s face.</li>
+<li>Restored the added fighters’ rival and boss encounters and special intros, including Guile versus Charlie and Dee Jay versus Sakura.</li>
+<li>Dizzy stars appear above fighters’ heads again, including Shin Akuma’s.</li>
+<li>Evil Ryu fights in his cave and Karin on her ship, with their location names, and Balrog’s map reads LAS VEGAS in the USA version.</li>
+<li>Guile’s ending close-up shows his face instead of Ryu’s, Fei Long’s final ending background has its correct colors, and Balrog’s laboratory ending scene is layered correctly.</li>
+<li>Fixed the victory backgrounds for Balrog, Juli and Juni, which used Bison’s, and Sakura’s bow colors on the versus screen.</li>
+<li>The small fighters on the select screen show the color of the button you pressed, and Vega has his mask and claw.</li>
+<li>Fixed ranking colors for every ISM, including Shin Akuma’s eyes and Sodom’s X-ISM mask, and the colors on the character biography buttons.</li>
+<li>Attract mode shows the original fighter poses, Vega’s mask and claw, Blanka’s electric shock and Sodom’s black face ink.</li>
+<li>Fixed garbled characters in T. Hawk’s Japanese opening.</li>
+<li>Free Play now works on the NAOMI title, and title copyrights, registered marks and fades match each region.</li>
+<li>Updated nine USA win quotes, restored forest stage shading and the English attract website address.</li>
+</ul>
 <h3>rc1 (2026-11-04)</h3><ul>
 <li>First release candidate.</li>
 </ul>
