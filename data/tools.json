@@ -13,7 +13,7 @@
   "publication_schema": 1,
   "requirements": [
     "Install Python first. Use Python 3.12 on an Apple Silicon Mac or x64 Python 3.13 on Windows for the full catalog. Windows ARM users can use x64 Python 3.13. Python 3.13 from the Microsoft Store is supported on Windows.",
-    "On Linux x86-64 or ARM64, use Python 3.12 with venv support, glibc 2.28 or newer and the standard C++ runtime (libstdc++6 on Ubuntu/Debian). Keep the state/cache folder on local storage. The launcher itself requires Python 3.10 or newer; other interpreter combinations may leave some targets unsupported.",
+    "On Linux x86-64 or ARM64, use Python 3.12 with venv support, glibc 2.28 or newer and the standard C++ runtime (libstdc++6 on Ubuntu/Debian). Keep the state/cache folder on local storage; your ROM and media folders can be on network storage. The launcher itself requires Python 3.10 or newer; other interpreter combinations may leave some targets unsupported.",
     "You need your own canonical MAME-format arcade ROMs. Some games also need discs, firmware or other media. ArcadePatches names what is missing; it does not download source ROMs or private keys.",
     "On Windows, keep the tool's state/cache folder on a local NTFS disk."
   ],
