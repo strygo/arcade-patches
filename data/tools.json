@@ -1,8 +1,9 @@
 {
-  "date": "2026-11-10",
+  "date": "2026-11-11",
   "features": [
-    "CPS+ and NG+ prepare their Python packages on Linux x86-64 and ARM64 with Python 3.12. Matching images are found even when unrelated files have the same size.",
-    "Updated kits fix Vampire Collection ISO builds and CPS+ CD-audio setup. DOS MIDI soundtracks request the installed game data they need. Reports identify the archive containing a listed image.",
+    "Updated kits fix CPS+ CD-audio discovery, accept single-image Final Fight CD BIN/CUE sources and stop rejecting valid Arrange builds because of README differences.",
+    "Upper prepares its Python packages on Linux x86-64 and ARM64 with Python 3.12. Upper, CPS+ and NG+ no longer install unused image libraries.",
+    "When your selected game has no output for the chosen platform or region, the builder explains which choices are available.",
     "Point it at your ROM and media folders. Loose files, ZIPs and 7z archives are identified by content, without renaming them. Supported discs and audio can use equivalent containers and lossless formats.",
     "Choose individual games, platforms and regions, or keep everything selected to include future catalog additions.",
     "Check requirements without unpacking ROMs. Disc messages explain absent, unsupported and unmatched images; reports include candidate filenames and sizes. Ready games can update while others wait for missing media.",
@@ -26,5 +27,5 @@
   ],
   "summary": "Build and update your Arcade Patches collection from media you own. Choose your games, platforms and regions, then copy the completed folders to your setup.",
   "title": "ArcadePatches",
-  "version": "0.1.8"
+  "version": "0.1.9"
 }

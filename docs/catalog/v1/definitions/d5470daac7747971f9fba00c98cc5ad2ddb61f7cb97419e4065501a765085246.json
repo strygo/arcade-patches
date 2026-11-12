@@ -1,0 +1,2127 @@
+{
+  "api": 1,
+  "artifacts": {
+    "wheel-1afac4a847207c7ff8ef": {
+      "filename": "scipy-1.18.0-cp313-cp313-win_amd64.whl",
+      "sha256": "1afac4a847207c7ff8efd321734a50b06d0280b3b2a2c0fc2f413101747ad7c7",
+      "size": 36554943,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/1afac4a847207c7ff8efd321734a50b06d0280b3b2a2c0fc2f413101747ad7c7-scipy-1.18.0-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-1f55797419e16e7f30cf": {
+      "filename": "scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "1f55797419e16e7f30cf88ffb3113ce0467f00cfe3f70d5c281730b21769bfc2",
+      "size": 35287115,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/1f55797419e16e7f30cf88ffb3113ce0467f00cfe3f70d5c281730b21769bfc2-scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl"
+    },
+    "wheel-265915e79107de9f946b": {
+      "filename": "scipy-1.18.0-cp312-cp312-macosx_12_0_arm64.whl",
+      "sha256": "265915e79107de9f946b855e50d7470d5893ec3f54b342e1aa6201cbdcd8bb6b",
+      "size": 28681889,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/265915e79107de9f946b855e50d7470d5893ec3f54b342e1aa6201cbdcd8bb6b-scipy-1.18.0-cp312-cp312-macosx_12_0_arm64.whl"
+    },
+    "wheel-52a96e21517c7292375c": {
+      "filename": "scipy-1.18.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl",
+      "sha256": "52a96e21517c7292375c0e27dd796a811f03fcea5fd4d108fdfea8145dcf17ab",
+      "size": 33968720,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/52a96e21517c7292375c0e27dd796a811f03fcea5fd4d108fdfea8145dcf17ab-scipy-1.18.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl"
+    },
+    "wheel-b0544343a702fa80c95a": {
+      "filename": "numpy-2.2.6-cp313-cp313-win_amd64.whl",
+      "sha256": "b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c",
+      "size": 12610885,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/b0544343a702fa80c95ad5d3d608ea3599dd54d4632df855e4c8d24eb6ecfa1c-numpy-2.2.6-cp313-cp313-win_amd64.whl"
+    },
+    "wheel-de749064336d37e340f6": {
+      "filename": "numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl",
+      "sha256": "de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c",
+      "size": 14119362,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/de749064336d37e340f640b05f24e9e3dd678c57318c7289d222a8a2f543e90c-numpy-2.2.6-cp312-cp312-macosx_11_0_arm64.whl"
+    },
+    "wheel-f2618db89be1b4e05f7a": {
+      "filename": "numpy-2.2.6-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "sha256": "f2618db89be1b4e05f7a1a847a9c1c0abd63e63a1607d892dd54668dd92faf87",
+      "size": 14018462,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/f2618db89be1b4e05f7a1a847a9c1c0abd63e63a1607d892dd54668dd92faf87-numpy-2.2.6-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl"
+    },
+    "wheel-fd83c01228a688733f1d": {
+      "filename": "numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+      "sha256": "fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249",
+      "size": 16527618,
+      "url": "https://arcadepatches.com/catalog/v1/artifacts/fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249-numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+    }
+  },
+  "environments": {
+    "darwin-arm64": {
+      "python": [
+        3,
+        12
+      ],
+      "wheels": [
+        "wheel-de749064336d37e340f6",
+        "wheel-265915e79107de9f946b"
+      ]
+    },
+    "linux-arm64": {
+      "python": [
+        3,
+        12
+      ],
+      "wheels": [
+        "wheel-f2618db89be1b4e05f7a",
+        "wheel-52a96e21517c7292375c"
+      ]
+    },
+    "linux-x86_64": {
+      "python": [
+        3,
+        12
+      ],
+      "wheels": [
+        "wheel-fd83c01228a688733f1d",
+        "wheel-1f55797419e16e7f30cf"
+      ]
+    },
+    "windows-x86_64": {
+      "python": [
+        3,
+        13
+      ],
+      "wheels": [
+        "wheel-b0544343a702fa80c95a",
+        "wheel-1afac4a847207c7ff8ef"
+      ]
+    }
+  },
+  "execution": {
+    "discs": {
+      "naomi": "disc-8146554de79c34f5494f",
+      "ps2-jp": "disc-cecb214b28b6dfa2b89a",
+      "ps2-us": "disc-9c52f95764efde89d978"
+    },
+    "manifest_sha256": "35e3dddff65371023e9c3addf44ee5b36c3571e27926f66f140e5f52ecd85652",
+    "naomi_set": "sfz3ugd",
+    "original_outputs": {
+      "fbneo/sfa3up.zip": {
+        "members": {
+          "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+          "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+          "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+          "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+          "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+          "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+          "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+          "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+          "sz3up.q3": "23dbfa5c8d68608e1a81c5da3e2470ded28e2ba7b7adefaf2478e6437bc8ed08",
+          "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+          "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+          "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+          "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+          "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+          "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+          "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+          "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+          "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+          "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+          "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+          "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+          "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+          "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+          "sz3upu.c10": "8419e8f38047b040720208132a0baebb9d7ede75003ba0dd3d1687258995a550",
+          "sz3upu.c11": "7650e92e84254ac9866574232ea1eebb139f4ab3247cfb16fd220c3e75af3b62",
+          "sz3upu.c12": "4993bd933af6665e2a591f5484f1c3575bee328c06bb3e4af93f7847c0c68277",
+          "sz3upu.c13": "f232641657427216183195b5775fb18a257b0dc448d4469a47ceac5327d7a173",
+          "sz3upu.c14": "1872913decf13fd0b4599bbbb92591e4a6a13a7ca1ef2cf970aed8b0202ab2ab",
+          "sz3upu.c15": "e467dd9c84f15f2cd2b8488f7f5c8da35e3fa6bdeda9dde5cddc88cfc96f84a2",
+          "sz3upu.c16": "71665b27a1c789dd4069a8a2d4aecb614a2a89320b4df97f00d5d433d601ff7b",
+          "sz3upu.c9": "492b3d4d4a9e89fc03893cff120e92171ad6ddceaa270e47a597779a23207a82",
+          "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+        }
+      },
+      "fbneo/sfz3up.zip": {
+        "members": {
+          "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+          "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+          "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+          "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+          "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+          "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+          "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+          "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+          "sz3up.q3": "23dbfa5c8d68608e1a81c5da3e2470ded28e2ba7b7adefaf2478e6437bc8ed08",
+          "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+          "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+          "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+          "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+          "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+          "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+          "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+          "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+          "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+          "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+          "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+          "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+          "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+          "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+          "sz3upj.c10": "542b6ee88111b7fb3d16b8d61f50de1ea39772b887655aeb763eb8cc99107963",
+          "sz3upj.c11": "2a098d85b41e0e13a77c5fbfa7c27e943654c5e1419866ab379471f0dff5aa6a",
+          "sz3upj.c12": "79436b77e93450352e4be475bd1a0457f397a7db1dc1e77d7ab22b8038e1068e",
+          "sz3upj.c13": "0b5bd4190cbc352df4cdb1cf04fb8c8f225a39667f6ffdd01da7ecc5fa61c64c",
+          "sz3upj.c14": "797b88b199e0d85d7d64d5c0cb7855317def299b23bc1e2a77392e6c7e75efed",
+          "sz3upj.c15": "6fb3cb4e42b7d4ccb02f56fe6e3066a8b273b2916a916d4af3a466f20dbd2af2",
+          "sz3upj.c16": "e4f8f941a1378c8c48dd840544ef73a56d8c74e08fee8d101e489918cd55d263",
+          "sz3upj.c9": "6656d5eaf7a6f6d42a7afbd26107f4365cb33b5bb4a70c6728f3ce9f99b61a91",
+          "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+        }
+      },
+      "hbmame/sfa3up.zip": {
+        "members": {
+          "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+          "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+          "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+          "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+          "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+          "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+          "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+          "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+          "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+          "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+          "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+          "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+          "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+          "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+          "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+          "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+          "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+          "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+          "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+          "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+          "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+          "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+          "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+          "sz3upu.gfx": "e620b3911c1e677b17fe881f6bea494ff1d9def308481e2648e27fbab8bfbe02",
+          "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+        }
+      },
+      "hbmame/sfz3up.zip": {
+        "members": {
+          "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+          "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+          "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+          "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+          "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+          "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+          "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+          "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+          "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+          "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+          "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+          "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+          "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+          "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+          "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+          "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+          "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+          "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+          "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+          "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+          "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+          "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+          "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+          "sz3upj.gfx": "38f098237d9c4a33da8812e75deb5baa6a0261f377fa46fecf6a2788c53e1e53",
+          "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+        }
+      },
+      "mister/INSTALL-MISTER.txt": {
+        "sha256": "8b6818d1ece5c7cd273f56681182a33b2a53f38a3d33bf347790a6cb3dc9011e"
+      },
+      "mister/_Arcade/_Arcade Patches/_Restorations/Street Fighter Alpha 3 Upper (USA) [Backport].mra": {
+        "sha256": "6c8408afaa56275053fbf0c9f69094ce8270964932a3c5e728615524d5f82183"
+      },
+      "mister/_Arcade/_Arcade Patches/_Restorations/_Japan/Street Fighter Zero 3 Upper (Japan) [Backport].mra": {
+        "sha256": "6de158e90cc7a78681e132f0bfaf8a93f6b8e2c7b234b1889b3475d15f0993b1"
+      },
+      "mister/_Arcade/cores/jtcps2-cpsplus_20261006.rbf": {
+        "sha256": "23c1bd0a685dfe95d0d38a85e9b47f746d6294ae20b31284bc377ade2ba43bd6"
+      },
+      "mister/games/mame/sfa3up.zip": {
+        "members": {
+          "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+          "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+          "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+          "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+          "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+          "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+          "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+          "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+          "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+          "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+          "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+          "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+          "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+          "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+          "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+          "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+          "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+          "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+          "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+          "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+          "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+          "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+          "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+          "sz3upu.gfx": "e620b3911c1e677b17fe881f6bea494ff1d9def308481e2648e27fbab8bfbe02",
+          "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+        }
+      },
+      "mister/games/mame/sfz3up.zip": {
+        "members": {
+          "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+          "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+          "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+          "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+          "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+          "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+          "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+          "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+          "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+          "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+          "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+          "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+          "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+          "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+          "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+          "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+          "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+          "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+          "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+          "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+          "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+          "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+          "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+          "sz3upj.gfx": "38f098237d9c4a33da8812e75deb5baa6a0261f377fa46fecf6a2788c53e1e53",
+          "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+        }
+      },
+      "mister/licenses/CORE-LICENSE.txt": {
+        "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+      },
+      "mister/licenses/FX68K-LICENSE.txt": {
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      },
+      "mister/licenses/JTDSP16-LICENSE.txt": {
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      },
+      "mister/licenses/JTEEPROM-LICENSE.txt": {
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      },
+      "mister/licenses/JTFRAME-LICENSE.txt": {
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+      },
+      "mister/licenses/MRA-GPL-2.0.txt": {
+        "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+      },
+      "mister/licenses/SOURCES.txt": {
+        "sha256": "778171f0c4698475abeaf5b1b51a37969342c6bc02b518ca57b1ea08f8fca197"
+      },
+      "mister/licenses/core.json": {
+        "sha256": "8cc68b88cf9b2e633e030a6af695a19abfffdc6088ea11cad0080bf9c14e2c3d"
+      },
+      "mister/licenses/jp.mra": {
+        "sha256": "760fab7612b6fa7d0f394a107c4b0870217bf8091412f384a074f59cd24461fe"
+      },
+      "mister/public-mister.json": {
+        "sha256": "cdc13138f689fd0ba00c51b2058ce76c3bee6cbf858aae60f66741113722b54e"
+      },
+      "verification.json": {
+        "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+      }
+    },
+    "pic": "firmware-fa8d9f6193cd0227be88",
+    "pic_member": "317-5072-com.pic",
+    "sets": {
+      "sfa3u": {
+        "dl-1425.bin": "rom-524a25bcd153be24594d",
+        "sfa3u.key": "rom-c8a17a4bd0726f896e9f",
+        "sz3.01": "rom-a9e36a8822f84145ac63",
+        "sz3.02": "rom-a4b0b4edb38a8b891228",
+        "sz3.05c": "rom-8a6b29435cdbad9316bb",
+        "sz3.06c": "rom-bf18c48cdff4f763eb2b",
+        "sz3.07c": "rom-62341a6cc7aa7a2e7db9",
+        "sz3.08c": "rom-13572160c616147e10d2",
+        "sz3.09c": "rom-cbaf65b8c45a1cc6e46e",
+        "sz3.10b": "rom-59054c279b444df0d04a",
+        "sz3.11m": "rom-2212e03d31828a9ebfd8",
+        "sz3.12m": "rom-036c45bf1a5d4b30c23c",
+        "sz3.13m": "rom-607cc7ae7ad9f2e75bba",
+        "sz3.14m": "rom-9123efcf41b1108ae11a",
+        "sz3.15m": "rom-8ee7453b186d58647542",
+        "sz3.16m": "rom-9bef2913ef07035376ce",
+        "sz3.17m": "rom-2bfd9d1ba38addcb4a94",
+        "sz3.18m": "rom-df31e61932e7ba011104",
+        "sz3.19m": "rom-7f475ffe1fe39940d354",
+        "sz3.20m": "rom-8e915ceffc3c20f887ec",
+        "sz3u.03c": "rom-2d113d10c279b1bb026a",
+        "sz3u.04c": "rom-98285084aa328b61edc1"
+      },
+      "sfz3j": {
+        "dl-1425.bin": "rom-524a25bcd153be24594d",
+        "sfz3j.key": "rom-d1841ad4faa7301f25f6",
+        "sz3.01": "rom-a9e36a8822f84145ac63",
+        "sz3.02": "rom-a4b0b4edb38a8b891228",
+        "sz3.05c": "rom-8a6b29435cdbad9316bb",
+        "sz3.06c": "rom-bf18c48cdff4f763eb2b",
+        "sz3.07c": "rom-62341a6cc7aa7a2e7db9",
+        "sz3.08c": "rom-13572160c616147e10d2",
+        "sz3.09c": "rom-cbaf65b8c45a1cc6e46e",
+        "sz3.10b": "rom-59054c279b444df0d04a",
+        "sz3.11m": "rom-2212e03d31828a9ebfd8",
+        "sz3.12m": "rom-036c45bf1a5d4b30c23c",
+        "sz3.13m": "rom-607cc7ae7ad9f2e75bba",
+        "sz3.14m": "rom-9123efcf41b1108ae11a",
+        "sz3.15m": "rom-8ee7453b186d58647542",
+        "sz3.16m": "rom-9bef2913ef07035376ce",
+        "sz3.17m": "rom-2bfd9d1ba38addcb4a94",
+        "sz3.18m": "rom-df31e61932e7ba011104",
+        "sz3.19m": "rom-7f475ffe1fe39940d354",
+        "sz3.20m": "rom-8e915ceffc3c20f887ec",
+        "sz3j.03c": "rom-90f19b5625ad75ae1425",
+        "sz3j.04c": "rom-8487499bd1bee423c0f8"
+      }
+    },
+    "targets": {
+      "jp-fbneo": {
+        "kit_mapping": {
+          "readme.txt": "support/sfa3-upper-cps2/readme.txt"
+        },
+        "mapping": {
+          "fbneo/sfz3up.zip": "roms/sfz3up.zip",
+          "verification.json": "support/sfa3-upper-cps2/verification.json"
+        },
+        "outputs": {
+          "roms/sfz3up.zip": {
+            "members": {
+              "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+              "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+              "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+              "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+              "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+              "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+              "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+              "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+              "sz3up.q3": "23dbfa5c8d68608e1a81c5da3e2470ded28e2ba7b7adefaf2478e6437bc8ed08",
+              "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+              "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+              "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+              "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+              "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+              "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+              "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+              "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+              "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+              "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+              "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+              "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+              "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+              "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+              "sz3upj.c10": "542b6ee88111b7fb3d16b8d61f50de1ea39772b887655aeb763eb8cc99107963",
+              "sz3upj.c11": "2a098d85b41e0e13a77c5fbfa7c27e943654c5e1419866ab379471f0dff5aa6a",
+              "sz3upj.c12": "79436b77e93450352e4be475bd1a0457f397a7db1dc1e77d7ab22b8038e1068e",
+              "sz3upj.c13": "0b5bd4190cbc352df4cdb1cf04fb8c8f225a39667f6ffdd01da7ecc5fa61c64c",
+              "sz3upj.c14": "797b88b199e0d85d7d64d5c0cb7855317def299b23bc1e2a77392e6c7e75efed",
+              "sz3upj.c15": "6fb3cb4e42b7d4ccb02f56fe6e3066a8b273b2916a916d4af3a466f20dbd2af2",
+              "sz3upj.c16": "e4f8f941a1378c8c48dd840544ef73a56d8c74e08fee8d101e489918cd55d263",
+              "sz3upj.c9": "6656d5eaf7a6f6d42a7afbd26107f4365cb33b5bb4a70c6728f3ce9f99b61a91",
+              "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+            }
+          },
+          "support/sfa3-upper-cps2/readme.txt": {
+            "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+          },
+          "support/sfa3-upper-cps2/verification.json": {
+            "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+          }
+        }
+      },
+      "jp-hbmame": {
+        "kit_mapping": {
+          "readme.txt": "support/sfa3-upper-cps2/readme.txt"
+        },
+        "mapping": {
+          "hbmame/sfz3up.zip": "roms/sfz3up.zip",
+          "verification.json": "support/sfa3-upper-cps2/verification.json"
+        },
+        "outputs": {
+          "roms/sfz3up.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+              "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+              "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+              "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+              "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+              "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+              "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+              "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+              "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+              "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+              "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+              "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+              "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+              "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+              "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+              "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+              "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+              "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+              "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+              "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+              "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+              "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+              "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+              "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+              "sz3upj.gfx": "38f098237d9c4a33da8812e75deb5baa6a0261f377fa46fecf6a2788c53e1e53",
+              "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+            }
+          },
+          "support/sfa3-upper-cps2/readme.txt": {
+            "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+          },
+          "support/sfa3-upper-cps2/verification.json": {
+            "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+          }
+        }
+      },
+      "jp-mister": {
+        "kit_mapping": {
+          "readme.txt": "support/sfa3-upper-cps2/readme.txt"
+        },
+        "mapping": {
+          "mister/INSTALL-MISTER.txt": "INSTALL-MISTER.txt",
+          "mister/_Arcade/_Arcade Patches/_Restorations/_Japan/Street Fighter Zero 3 Upper (Japan) [Backport].mra": "_Arcade/_Arcade Patches/_Restorations/_Japan/Street Fighter Zero 3 Upper (Japan) [Backport].mra",
+          "mister/_Arcade/cores/jtcps2-cpsplus_20261006.rbf": "_Arcade/cores/jtcps2-cpsplus_20261006.rbf",
+          "mister/games/mame/sfz3up.zip": "games/mame/sfz3up.zip",
+          "mister/licenses/CORE-LICENSE.txt": "licenses/CORE-LICENSE.txt",
+          "mister/licenses/FX68K-LICENSE.txt": "licenses/FX68K-LICENSE.txt",
+          "mister/licenses/JTDSP16-LICENSE.txt": "licenses/JTDSP16-LICENSE.txt",
+          "mister/licenses/JTEEPROM-LICENSE.txt": "licenses/JTEEPROM-LICENSE.txt",
+          "mister/licenses/JTFRAME-LICENSE.txt": "licenses/JTFRAME-LICENSE.txt",
+          "mister/licenses/MRA-GPL-2.0.txt": "licenses/MRA-GPL-2.0.txt",
+          "mister/licenses/SOURCES.txt": "licenses/SOURCES.txt",
+          "mister/licenses/core.json": "licenses/core.json",
+          "mister/licenses/jp.mra": "licenses/jp.mra",
+          "mister/public-mister.json": "public-mister.json",
+          "verification.json": "support/sfa3-upper-cps2/verification.json"
+        },
+        "outputs": {
+          "INSTALL-MISTER.txt": {
+            "sha256": "8b6818d1ece5c7cd273f56681182a33b2a53f38a3d33bf347790a6cb3dc9011e"
+          },
+          "_Arcade/_Arcade Patches/_Restorations/_Japan/Street Fighter Zero 3 Upper (Japan) [Backport].mra": {
+            "sha256": "6de158e90cc7a78681e132f0bfaf8a93f6b8e2c7b234b1889b3475d15f0993b1"
+          },
+          "_Arcade/cores/jtcps2-cpsplus_20261006.rbf": {
+            "sha256": "23c1bd0a685dfe95d0d38a85e9b47f746d6294ae20b31284bc377ade2ba43bd6"
+          },
+          "games/mame/sfz3up.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+              "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+              "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+              "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+              "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+              "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+              "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+              "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+              "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+              "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+              "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+              "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+              "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+              "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+              "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+              "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+              "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+              "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+              "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+              "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+              "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+              "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+              "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+              "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+              "sz3upj.gfx": "38f098237d9c4a33da8812e75deb5baa6a0261f377fa46fecf6a2788c53e1e53",
+              "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+            }
+          },
+          "licenses/CORE-LICENSE.txt": {
+            "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+          },
+          "licenses/FX68K-LICENSE.txt": {
+            "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+          },
+          "licenses/JTDSP16-LICENSE.txt": {
+            "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+          },
+          "licenses/JTEEPROM-LICENSE.txt": {
+            "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+          },
+          "licenses/JTFRAME-LICENSE.txt": {
+            "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+          },
+          "licenses/MRA-GPL-2.0.txt": {
+            "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+          },
+          "licenses/SOURCES.txt": {
+            "sha256": "778171f0c4698475abeaf5b1b51a37969342c6bc02b518ca57b1ea08f8fca197"
+          },
+          "licenses/core.json": {
+            "sha256": "8cc68b88cf9b2e633e030a6af695a19abfffdc6088ea11cad0080bf9c14e2c3d"
+          },
+          "licenses/jp.mra": {
+            "sha256": "760fab7612b6fa7d0f394a107c4b0870217bf8091412f384a074f59cd24461fe"
+          },
+          "public-mister.json": {
+            "sha256": "cdc13138f689fd0ba00c51b2058ce76c3bee6cbf858aae60f66741113722b54e"
+          },
+          "support/sfa3-upper-cps2/readme.txt": {
+            "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+          },
+          "support/sfa3-upper-cps2/verification.json": {
+            "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+          }
+        }
+      },
+      "us-fbneo": {
+        "kit_mapping": {
+          "readme.txt": "support/sfa3-upper-cps2/readme.txt"
+        },
+        "mapping": {
+          "fbneo/sfa3up.zip": "roms/sfa3up.zip",
+          "verification.json": "support/sfa3-upper-cps2/verification.json"
+        },
+        "outputs": {
+          "roms/sfa3up.zip": {
+            "members": {
+              "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+              "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+              "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+              "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+              "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+              "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+              "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+              "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+              "sz3up.q3": "23dbfa5c8d68608e1a81c5da3e2470ded28e2ba7b7adefaf2478e6437bc8ed08",
+              "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+              "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+              "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+              "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+              "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+              "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+              "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+              "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+              "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+              "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+              "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+              "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+              "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+              "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+              "sz3upu.c10": "8419e8f38047b040720208132a0baebb9d7ede75003ba0dd3d1687258995a550",
+              "sz3upu.c11": "7650e92e84254ac9866574232ea1eebb139f4ab3247cfb16fd220c3e75af3b62",
+              "sz3upu.c12": "4993bd933af6665e2a591f5484f1c3575bee328c06bb3e4af93f7847c0c68277",
+              "sz3upu.c13": "f232641657427216183195b5775fb18a257b0dc448d4469a47ceac5327d7a173",
+              "sz3upu.c14": "1872913decf13fd0b4599bbbb92591e4a6a13a7ca1ef2cf970aed8b0202ab2ab",
+              "sz3upu.c15": "e467dd9c84f15f2cd2b8488f7f5c8da35e3fa6bdeda9dde5cddc88cfc96f84a2",
+              "sz3upu.c16": "71665b27a1c789dd4069a8a2d4aecb614a2a89320b4df97f00d5d433d601ff7b",
+              "sz3upu.c9": "492b3d4d4a9e89fc03893cff120e92171ad6ddceaa270e47a597779a23207a82",
+              "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+            }
+          },
+          "support/sfa3-upper-cps2/readme.txt": {
+            "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+          },
+          "support/sfa3-upper-cps2/verification.json": {
+            "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+          }
+        }
+      },
+      "us-hbmame": {
+        "kit_mapping": {
+          "readme.txt": "support/sfa3-upper-cps2/readme.txt"
+        },
+        "mapping": {
+          "hbmame/sfa3up.zip": "roms/sfa3up.zip",
+          "verification.json": "support/sfa3-upper-cps2/verification.json"
+        },
+        "outputs": {
+          "roms/sfa3up.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+              "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+              "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+              "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+              "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+              "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+              "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+              "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+              "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+              "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+              "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+              "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+              "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+              "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+              "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+              "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+              "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+              "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+              "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+              "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+              "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+              "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+              "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+              "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+              "sz3upu.gfx": "e620b3911c1e677b17fe881f6bea494ff1d9def308481e2648e27fbab8bfbe02",
+              "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+            }
+          },
+          "support/sfa3-upper-cps2/readme.txt": {
+            "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+          },
+          "support/sfa3-upper-cps2/verification.json": {
+            "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+          }
+        }
+      },
+      "us-mister": {
+        "kit_mapping": {
+          "readme.txt": "support/sfa3-upper-cps2/readme.txt"
+        },
+        "mapping": {
+          "mister/INSTALL-MISTER.txt": "INSTALL-MISTER.txt",
+          "mister/_Arcade/_Arcade Patches/_Restorations/Street Fighter Alpha 3 Upper (USA) [Backport].mra": "_Arcade/_Arcade Patches/_Restorations/Street Fighter Alpha 3 Upper (USA) [Backport].mra",
+          "mister/_Arcade/cores/jtcps2-cpsplus_20261006.rbf": "_Arcade/cores/jtcps2-cpsplus_20261006.rbf",
+          "mister/games/mame/sfa3up.zip": "games/mame/sfa3up.zip",
+          "mister/licenses/CORE-LICENSE.txt": "licenses/CORE-LICENSE.txt",
+          "mister/licenses/FX68K-LICENSE.txt": "licenses/FX68K-LICENSE.txt",
+          "mister/licenses/JTDSP16-LICENSE.txt": "licenses/JTDSP16-LICENSE.txt",
+          "mister/licenses/JTEEPROM-LICENSE.txt": "licenses/JTEEPROM-LICENSE.txt",
+          "mister/licenses/JTFRAME-LICENSE.txt": "licenses/JTFRAME-LICENSE.txt",
+          "mister/licenses/MRA-GPL-2.0.txt": "licenses/MRA-GPL-2.0.txt",
+          "mister/licenses/SOURCES.txt": "licenses/SOURCES.txt",
+          "mister/licenses/core.json": "licenses/core.json",
+          "mister/licenses/jp.mra": "licenses/jp.mra",
+          "mister/public-mister.json": "public-mister.json",
+          "verification.json": "support/sfa3-upper-cps2/verification.json"
+        },
+        "outputs": {
+          "INSTALL-MISTER.txt": {
+            "sha256": "8b6818d1ece5c7cd273f56681182a33b2a53f38a3d33bf347790a6cb3dc9011e"
+          },
+          "_Arcade/_Arcade Patches/_Restorations/Street Fighter Alpha 3 Upper (USA) [Backport].mra": {
+            "sha256": "6c8408afaa56275053fbf0c9f69094ce8270964932a3c5e728615524d5f82183"
+          },
+          "_Arcade/cores/jtcps2-cpsplus_20261006.rbf": {
+            "sha256": "23c1bd0a685dfe95d0d38a85e9b47f746d6294ae20b31284bc377ade2ba43bd6"
+          },
+          "games/mame/sfa3up.zip": {
+            "members": {
+              "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+              "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+              "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+              "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+              "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+              "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+              "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+              "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+              "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+              "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+              "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+              "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+              "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+              "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+              "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+              "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+              "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+              "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+              "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+              "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+              "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+              "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+              "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+              "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+              "sz3upu.gfx": "e620b3911c1e677b17fe881f6bea494ff1d9def308481e2648e27fbab8bfbe02",
+              "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+            }
+          },
+          "licenses/CORE-LICENSE.txt": {
+            "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+          },
+          "licenses/FX68K-LICENSE.txt": {
+            "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+          },
+          "licenses/JTDSP16-LICENSE.txt": {
+            "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+          },
+          "licenses/JTEEPROM-LICENSE.txt": {
+            "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+          },
+          "licenses/JTFRAME-LICENSE.txt": {
+            "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+          },
+          "licenses/MRA-GPL-2.0.txt": {
+            "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+          },
+          "licenses/SOURCES.txt": {
+            "sha256": "778171f0c4698475abeaf5b1b51a37969342c6bc02b518ca57b1ea08f8fca197"
+          },
+          "licenses/core.json": {
+            "sha256": "8cc68b88cf9b2e633e030a6af695a19abfffdc6088ea11cad0080bf9c14e2c3d"
+          },
+          "licenses/jp.mra": {
+            "sha256": "760fab7612b6fa7d0f394a107c4b0870217bf8091412f384a074f59cd24461fe"
+          },
+          "public-mister.json": {
+            "sha256": "cdc13138f689fd0ba00c51b2058ce76c3bee6cbf858aae60f66741113722b54e"
+          },
+          "support/sfa3-upper-cps2/readme.txt": {
+            "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+          },
+          "support/sfa3-upper-cps2/verification.json": {
+            "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+          }
+        }
+      }
+    }
+  },
+  "game_version": "rc2",
+  "kit_revision": 3,
+  "manifest_sha256": "35e3dddff65371023e9c3addf44ee5b36c3571e27926f66f140e5f52ecd85652",
+  "native_outputs": {
+    "fbneo/sfa3up.zip": {
+      "members": {
+        "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+        "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+        "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+        "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+        "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+        "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+        "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+        "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+        "sz3up.q3": "23dbfa5c8d68608e1a81c5da3e2470ded28e2ba7b7adefaf2478e6437bc8ed08",
+        "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+        "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+        "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+        "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+        "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+        "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+        "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+        "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+        "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+        "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+        "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+        "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+        "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+        "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+        "sz3upu.c10": "8419e8f38047b040720208132a0baebb9d7ede75003ba0dd3d1687258995a550",
+        "sz3upu.c11": "7650e92e84254ac9866574232ea1eebb139f4ab3247cfb16fd220c3e75af3b62",
+        "sz3upu.c12": "4993bd933af6665e2a591f5484f1c3575bee328c06bb3e4af93f7847c0c68277",
+        "sz3upu.c13": "f232641657427216183195b5775fb18a257b0dc448d4469a47ceac5327d7a173",
+        "sz3upu.c14": "1872913decf13fd0b4599bbbb92591e4a6a13a7ca1ef2cf970aed8b0202ab2ab",
+        "sz3upu.c15": "e467dd9c84f15f2cd2b8488f7f5c8da35e3fa6bdeda9dde5cddc88cfc96f84a2",
+        "sz3upu.c16": "71665b27a1c789dd4069a8a2d4aecb614a2a89320b4df97f00d5d433d601ff7b",
+        "sz3upu.c9": "492b3d4d4a9e89fc03893cff120e92171ad6ddceaa270e47a597779a23207a82",
+        "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+      }
+    },
+    "fbneo/sfz3up.zip": {
+      "members": {
+        "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+        "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+        "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+        "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+        "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+        "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+        "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+        "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+        "sz3up.q3": "23dbfa5c8d68608e1a81c5da3e2470ded28e2ba7b7adefaf2478e6437bc8ed08",
+        "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+        "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+        "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+        "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+        "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+        "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+        "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+        "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+        "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+        "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+        "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+        "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+        "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+        "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+        "sz3upj.c10": "542b6ee88111b7fb3d16b8d61f50de1ea39772b887655aeb763eb8cc99107963",
+        "sz3upj.c11": "2a098d85b41e0e13a77c5fbfa7c27e943654c5e1419866ab379471f0dff5aa6a",
+        "sz3upj.c12": "79436b77e93450352e4be475bd1a0457f397a7db1dc1e77d7ab22b8038e1068e",
+        "sz3upj.c13": "0b5bd4190cbc352df4cdb1cf04fb8c8f225a39667f6ffdd01da7ecc5fa61c64c",
+        "sz3upj.c14": "797b88b199e0d85d7d64d5c0cb7855317def299b23bc1e2a77392e6c7e75efed",
+        "sz3upj.c15": "6fb3cb4e42b7d4ccb02f56fe6e3066a8b273b2916a916d4af3a466f20dbd2af2",
+        "sz3upj.c16": "e4f8f941a1378c8c48dd840544ef73a56d8c74e08fee8d101e489918cd55d263",
+        "sz3upj.c9": "6656d5eaf7a6f6d42a7afbd26107f4365cb33b5bb4a70c6728f3ce9f99b61a91",
+        "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+      }
+    },
+    "hbmame/sfa3up.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+        "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+        "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+        "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+        "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+        "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+        "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+        "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+        "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+        "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+        "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+        "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+        "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+        "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+        "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+        "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+        "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+        "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+        "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+        "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+        "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+        "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+        "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+        "sz3upu.gfx": "e620b3911c1e677b17fe881f6bea494ff1d9def308481e2648e27fbab8bfbe02",
+        "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+      }
+    },
+    "hbmame/sfz3up.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+        "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+        "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+        "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+        "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+        "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+        "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+        "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+        "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+        "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+        "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+        "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+        "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+        "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+        "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+        "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+        "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+        "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+        "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+        "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+        "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+        "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+        "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+        "sz3upj.gfx": "38f098237d9c4a33da8812e75deb5baa6a0261f377fa46fecf6a2788c53e1e53",
+        "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+      }
+    },
+    "mister/INSTALL-MISTER.txt": {
+      "sha256": "8b6818d1ece5c7cd273f56681182a33b2a53f38a3d33bf347790a6cb3dc9011e"
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/Street Fighter Alpha 3 Upper (USA) [Backport].mra": {
+      "sha256": "6c8408afaa56275053fbf0c9f69094ce8270964932a3c5e728615524d5f82183"
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/_Japan/Street Fighter Zero 3 Upper (Japan) [Backport].mra": {
+      "sha256": "6de158e90cc7a78681e132f0bfaf8a93f6b8e2c7b234b1889b3475d15f0993b1"
+    },
+    "mister/_Arcade/cores/jtcps2-cpsplus_20261006.rbf": {
+      "sha256": "23c1bd0a685dfe95d0d38a85e9b47f746d6294ae20b31284bc377ade2ba43bd6"
+    },
+    "mister/games/mame/sfa3up.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+        "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+        "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+        "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+        "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+        "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+        "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+        "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+        "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+        "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+        "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+        "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+        "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+        "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+        "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+        "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+        "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+        "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+        "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+        "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+        "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+        "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+        "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+        "sz3upu.gfx": "e620b3911c1e677b17fe881f6bea494ff1d9def308481e2648e27fbab8bfbe02",
+        "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+      }
+    },
+    "mister/games/mame/sfz3up.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+        "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+        "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+        "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+        "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+        "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+        "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+        "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+        "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+        "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+        "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+        "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+        "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+        "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+        "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+        "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+        "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+        "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+        "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+        "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+        "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+        "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+        "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+        "sz3upj.gfx": "38f098237d9c4a33da8812e75deb5baa6a0261f377fa46fecf6a2788c53e1e53",
+        "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+      }
+    },
+    "mister/licenses/CORE-LICENSE.txt": {
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+    },
+    "mister/licenses/FX68K-LICENSE.txt": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    "mister/licenses/JTDSP16-LICENSE.txt": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    "mister/licenses/JTEEPROM-LICENSE.txt": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    "mister/licenses/JTFRAME-LICENSE.txt": {
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    "mister/licenses/MRA-GPL-2.0.txt": {
+      "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+    },
+    "mister/licenses/SOURCES.txt": {
+      "sha256": "778171f0c4698475abeaf5b1b51a37969342c6bc02b518ca57b1ea08f8fca197"
+    },
+    "mister/licenses/core.json": {
+      "sha256": "8cc68b88cf9b2e633e030a6af695a19abfffdc6088ea11cad0080bf9c14e2c3d"
+    },
+    "mister/licenses/jp.mra": {
+      "sha256": "760fab7612b6fa7d0f394a107c4b0870217bf8091412f384a074f59cd24461fe"
+    },
+    "mister/public-mister.json": {
+      "sha256": "cdc13138f689fd0ba00c51b2058ce76c3bee6cbf858aae60f66741113722b54e"
+    },
+    "verification.json": {
+      "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+    }
+  },
+  "prerequisites": {
+    "disc-8146554de79c34f5494f": {
+      "action": "Add your canonical MAME sfz3ugd GD-ROM CHD (gdl-0002.chd).",
+      "alternatives": [
+        {
+          "sha256": "8146554de79c34f5494f931121d27dcbb06d37fb21472edd8435db00efa51ab8",
+          "size": 109224132
+        }
+      ],
+      "formats": [
+        "CHD",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Street Fighter Zero 3 Upper (NAOMI GD-ROM), gdl-0002.chd"
+    },
+    "disc-9c52f95764efde89d978": {
+      "action": "Add the matching PS2 DVD as an ISO or CHD. Files are identified by content; names may differ.",
+      "alternatives": [
+        {
+          "sha256": "9c52f95764efde89d978388356f12f706eec410fbafcecb5d2feaff1b241c8f9",
+          "size": 1691914343
+        },
+        {
+          "sha256": "34331ca19721aafeef25ec1fdfd9b777eb0034f13c4cdf15f250832e9d617340",
+          "size": 4698767360
+        }
+      ],
+      "formats": [
+        "ISO",
+        "CHD",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Street Fighter Alpha Anthology (USA), PS2 disc ISO or CHD"
+    },
+    "disc-cecb214b28b6dfa2b89a": {
+      "action": "Add the matching PS2 DVD as an ISO or CHD. Files are identified by content; names may differ.",
+      "alternatives": [
+        {
+          "sha256": "cecb214b28b6dfa2b89a91dcc0b56e055b45441a7b4587b96d48c5ce0d6c513a",
+          "size": 1692579829
+        },
+        {
+          "sha256": "efd1e7618dc2fcba25226ac503da0719b3009d93986139038b217c63ec721ab9",
+          "size": 4698767360
+        }
+      ],
+      "formats": [
+        "ISO",
+        "CHD",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "disc",
+      "title": "Street Fighter Zero - Fighter's Generation (Japan), PS2 disc ISO or CHD"
+    },
+    "firmware-fa8d9f6193cd0227be88": {
+      "action": "Add your canonical MAME sfz3ugd.zip; only its security PIC is read.",
+      "alternatives": [
+        {
+          "sha256": "fa8d9f6193cd0227be88c729f197165932e2fc4135fdf749d9ce125587a465fc",
+          "size": 16384
+        }
+      ],
+      "formats": [
+        "ZIP member",
+        "loose file",
+        "7z member"
+      ],
+      "kind": "firmware",
+      "title": "Street Fighter Zero 3 Upper NAOMI security PIC (317-5072-com.pic)"
+    },
+    "rom-036c45bf1a5d4b30c23c": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "f392b13a",
+          "sha256": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.12m"
+    },
+    "rom-13572160c616147e10d2": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "910c4a3b",
+          "sha256": "13572160c616147e10d2f233d83cc3beee45124afd5e1fc2566606c12c1f66a4",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.08c"
+    },
+    "rom-2212e03d31828a9ebfd8": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "1c89eed1",
+          "sha256": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.11m"
+    },
+    "rom-2bfd9d1ba38addcb4a94": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "d6e98147",
+          "sha256": "2bfd9d1ba38addcb4a94bd0e169ac5f4b8f3542acc4092de6cdf98f952f940c9",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.17m"
+    },
+    "rom-2d113d10c279b1bb026a": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "e007da2e",
+          "sha256": "2d113d10c279b1bb026a60cc716411def746adc077b1301dafe01d7face760a3",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfa3u: sz3u.03c"
+    },
+    "rom-524a25bcd153be24594d": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "d6cf5ef5",
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "size": 24576
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: dl-1425.bin"
+    },
+    "rom-59054c279b444df0d04a": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "deb2ff52",
+          "sha256": "59054c279b444df0d04aef8c596b83092a73ee68434f64706711a61d08bdba32",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.10b"
+    },
+    "rom-607cc7ae7ad9f2e75bba": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "0f7a60d9",
+          "sha256": "607cc7ae7ad9f2e75bba789e4445486fcdab9aa60c19da442b17317cf41934eb",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.13m"
+    },
+    "rom-62341a6cc7aa7a2e7db9": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "6eab0f6f",
+          "sha256": "62341a6cc7aa7a2e7db91111b40d244c2e97ba8e3e15449ff4d2ef20acfd02ca",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.07c"
+    },
+    "rom-7f475ffe1fe39940d354": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "f31a728a",
+          "sha256": "7f475ffe1fe39940d354bb591adb4f560e01ce85a9a70d3c32d8d8f9a3532a1d",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.19m"
+    },
+    "rom-8487499bd1bee423c0f8": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "fcb31228",
+          "sha256": "8487499bd1bee423c0f864917f9995431d977faa05692ea93f665d84bcc4ab33",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3j.04c"
+    },
+    "rom-8a6b29435cdbad9316bb": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "57fd0a40",
+          "sha256": "8a6b29435cdbad9316bbaec21bd6afc7a6aa477ae697b9c5d1dcc22eb62af597",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.05c"
+    },
+    "rom-8e915ceffc3c20f887ec": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "763409b4",
+          "sha256": "8e915ceffc3c20f887ecf65940e85816b94ee221a8f8149c0bd4d9b727c250d4",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.20m"
+    },
+    "rom-8ee7453b186d58647542": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "8e933741",
+          "sha256": "8ee7453b186d586475429b8caf23dae69f88fdcd709a3752fc9d8afa4451548d",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.15m"
+    },
+    "rom-90f19b5625ad75ae1425": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "cadf4a51",
+          "sha256": "90f19b5625ad75ae14259550914c377ef84f9a6522f5c6dc223df1c3d3b70a0a",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3j.03c"
+    },
+    "rom-9123efcf41b1108ae11a": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "5ff98297",
+          "sha256": "9123efcf41b1108ae11a699cacb5e133b3958c40be98eb33674d3878257a7c7c",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.14m"
+    },
+    "rom-98285084aa328b61edc1": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "5f78f0e7",
+          "sha256": "98285084aa328b61edc1373283e6854b73904fdb5cd08a50b52172cffbd2f8a0",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfa3u: sz3u.04c"
+    },
+    "rom-9bef2913ef07035376ce": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "52b5bdee",
+          "sha256": "9bef2913ef07035376ce9db1121a6a298c93f14045ece5751f444d19919117ff",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.16m"
+    },
+    "rom-a4b0b4edb38a8b891228": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "72445dc4",
+          "sha256": "a4b0b4edb38a8b89122829a5cb879b3c10b823aee4a7e77da018b8270549a076",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.02"
+    },
+    "rom-a9e36a8822f84145ac63": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "de810084",
+          "sha256": "a9e36a8822f84145ac631ac48c4cdb39d04ff40d86189c8d1a6df86a785acf93",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.01"
+    },
+    "rom-bf18c48cdff4f763eb2b": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "f6305f8b",
+          "sha256": "bf18c48cdff4f763eb2b7a17b948db99e4cf85092d63aa53f1356c69cdb85e4c",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.06c"
+    },
+    "rom-c8a17a4bd0726f896e9f": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "4a8f98c1",
+          "sha256": "c8a17a4bd0726f896e9f403f0e5984365bafda6364d3b18db0d8f7a8086b31d1",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfa3u: sfa3u.key"
+    },
+    "rom-cbaf65b8c45a1cc6e46e": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "b29e5199",
+          "sha256": "cbaf65b8c45a1cc6e46e4100c22670a930511afdf31bc5e7c956014705f5e1ac",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.09c"
+    },
+    "rom-d1841ad4faa7301f25f6": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "d30cca8d",
+          "sha256": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sfz3j.key"
+    },
+    "rom-df31e61932e7ba011104": {
+      "action": "Add your canonical MAME Street Fighter Alpha 3 (USA) and Street Fighter Zero 3 (Japan) sets with QSound.",
+      "alternatives": [
+        {
+          "crc32": "40631ed5",
+          "sha256": "df31e61932e7ba0111045978b13ec258760a03fcbd41c3594b892006ae2c9ec0",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "ZIP",
+        "loose ROM files",
+        "7z member"
+      ],
+      "kind": "rom",
+      "title": "sfz3j: sz3.18m"
+    }
+  },
+  "project": "sfa3-upper-cps2",
+  "requires": [
+    "file-inputs-v1",
+    "locked-wheels-v1",
+    "native-bindings-v1",
+    "native-context-v1",
+    "native-dependencies-v1",
+    "run-cache-v1",
+    "worker-timeout-v1",
+    "zip-outputs-v1"
+  ],
+  "targets": {
+    "jp-fbneo": {
+      "destination_requirements": "An FBNeo build that includes the Street Fighter Alpha 3 Upper sets.",
+      "inputs": [
+        "disc-8146554de79c34f5494f",
+        "disc-9c52f95764efde89d978",
+        "disc-cecb214b28b6dfa2b89a",
+        "firmware-fa8d9f6193cd0227be88",
+        "rom-036c45bf1a5d4b30c23c",
+        "rom-13572160c616147e10d2",
+        "rom-2212e03d31828a9ebfd8",
+        "rom-2bfd9d1ba38addcb4a94",
+        "rom-2d113d10c279b1bb026a",
+        "rom-524a25bcd153be24594d",
+        "rom-59054c279b444df0d04a",
+        "rom-607cc7ae7ad9f2e75bba",
+        "rom-62341a6cc7aa7a2e7db9",
+        "rom-7f475ffe1fe39940d354",
+        "rom-8487499bd1bee423c0f8",
+        "rom-8a6b29435cdbad9316bb",
+        "rom-8e915ceffc3c20f887ec",
+        "rom-8ee7453b186d58647542",
+        "rom-90f19b5625ad75ae1425",
+        "rom-9123efcf41b1108ae11a",
+        "rom-98285084aa328b61edc1",
+        "rom-9bef2913ef07035376ce",
+        "rom-a4b0b4edb38a8b891228",
+        "rom-a9e36a8822f84145ac63",
+        "rom-bf18c48cdff4f763eb2b",
+        "rom-c8a17a4bd0726f896e9f",
+        "rom-cbaf65b8c45a1cc6e46e",
+        "rom-d1841ad4faa7301f25f6",
+        "rom-df31e61932e7ba011104"
+      ],
+      "minimum_free_bytes": 17179869184,
+      "outputs": {
+        "roms/sfz3up.zip": {
+          "members": {
+            "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+            "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+            "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+            "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+            "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+            "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+            "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+            "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+            "sz3up.q3": "23dbfa5c8d68608e1a81c5da3e2470ded28e2ba7b7adefaf2478e6437bc8ed08",
+            "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+            "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+            "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+            "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+            "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+            "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+            "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+            "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+            "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+            "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+            "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+            "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+            "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+            "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+            "sz3upj.c10": "542b6ee88111b7fb3d16b8d61f50de1ea39772b887655aeb763eb8cc99107963",
+            "sz3upj.c11": "2a098d85b41e0e13a77c5fbfa7c27e943654c5e1419866ab379471f0dff5aa6a",
+            "sz3upj.c12": "79436b77e93450352e4be475bd1a0457f397a7db1dc1e77d7ab22b8038e1068e",
+            "sz3upj.c13": "0b5bd4190cbc352df4cdb1cf04fb8c8f225a39667f6ffdd01da7ecc5fa61c64c",
+            "sz3upj.c14": "797b88b199e0d85d7d64d5c0cb7855317def299b23bc1e2a77392e6c7e75efed",
+            "sz3upj.c15": "6fb3cb4e42b7d4ccb02f56fe6e3066a8b273b2916a916d4af3a466f20dbd2af2",
+            "sz3upj.c16": "e4f8f941a1378c8c48dd840544ef73a56d8c74e08fee8d101e489918cd55d263",
+            "sz3upj.c9": "6656d5eaf7a6f6d42a7afbd26107f4365cb33b5bb4a70c6728f3ce9f99b61a91",
+            "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+          }
+        },
+        "support/sfa3-upper-cps2/readme.txt": {
+          "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+        },
+        "support/sfa3-upper-cps2/verification.json": {
+          "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+        }
+      },
+      "platform": "fbneo",
+      "region": "jp",
+      "software_notes": [
+        "Rebuilds both regions from the original arcade sets, both PS2 DVDs (ISO or CHD) and the NAOMI GD-ROM, then exports this layout. Later layouts reuse that reconstruction.",
+        "chdman and the pinned NumPy/SciPy wheels are prepared automatically. Allow about 16 GB of temporary space; the first reconstruction can take an hour."
+      ],
+      "timeout_seconds": 14400,
+      "variant": "jp"
+    },
+    "jp-hbmame": {
+      "destination_requirements": "An HBMAME build that includes the Street Fighter Alpha 3 Upper sets.",
+      "inputs": [
+        "disc-8146554de79c34f5494f",
+        "disc-9c52f95764efde89d978",
+        "disc-cecb214b28b6dfa2b89a",
+        "firmware-fa8d9f6193cd0227be88",
+        "rom-036c45bf1a5d4b30c23c",
+        "rom-13572160c616147e10d2",
+        "rom-2212e03d31828a9ebfd8",
+        "rom-2bfd9d1ba38addcb4a94",
+        "rom-2d113d10c279b1bb026a",
+        "rom-524a25bcd153be24594d",
+        "rom-59054c279b444df0d04a",
+        "rom-607cc7ae7ad9f2e75bba",
+        "rom-62341a6cc7aa7a2e7db9",
+        "rom-7f475ffe1fe39940d354",
+        "rom-8487499bd1bee423c0f8",
+        "rom-8a6b29435cdbad9316bb",
+        "rom-8e915ceffc3c20f887ec",
+        "rom-8ee7453b186d58647542",
+        "rom-90f19b5625ad75ae1425",
+        "rom-9123efcf41b1108ae11a",
+        "rom-98285084aa328b61edc1",
+        "rom-9bef2913ef07035376ce",
+        "rom-a4b0b4edb38a8b891228",
+        "rom-a9e36a8822f84145ac63",
+        "rom-bf18c48cdff4f763eb2b",
+        "rom-c8a17a4bd0726f896e9f",
+        "rom-cbaf65b8c45a1cc6e46e",
+        "rom-d1841ad4faa7301f25f6",
+        "rom-df31e61932e7ba011104"
+      ],
+      "minimum_free_bytes": 17179869184,
+      "outputs": {
+        "roms/sfz3up.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+            "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+            "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+            "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+            "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+            "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+            "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+            "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+            "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+            "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+            "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+            "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+            "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+            "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+            "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+            "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+            "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+            "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+            "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+            "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+            "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+            "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+            "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+            "sz3upj.gfx": "38f098237d9c4a33da8812e75deb5baa6a0261f377fa46fecf6a2788c53e1e53",
+            "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+          }
+        },
+        "support/sfa3-upper-cps2/readme.txt": {
+          "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+        },
+        "support/sfa3-upper-cps2/verification.json": {
+          "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+        }
+      },
+      "platform": "hbmame",
+      "region": "jp",
+      "software_notes": [
+        "Rebuilds both regions from the original arcade sets, both PS2 DVDs (ISO or CHD) and the NAOMI GD-ROM, then exports this layout. Later layouts reuse that reconstruction.",
+        "chdman and the pinned NumPy/SciPy wheels are prepared automatically. Allow about 16 GB of temporary space; the first reconstruction can take an hour."
+      ],
+      "timeout_seconds": 14400,
+      "variant": "jp"
+    },
+    "jp-mister": {
+      "destination_requirements": "Copy to the SD card root. MiSTer requires 128 MB SDRAM; the CPS+ core is included.",
+      "inputs": [
+        "disc-8146554de79c34f5494f",
+        "disc-9c52f95764efde89d978",
+        "disc-cecb214b28b6dfa2b89a",
+        "firmware-fa8d9f6193cd0227be88",
+        "rom-036c45bf1a5d4b30c23c",
+        "rom-13572160c616147e10d2",
+        "rom-2212e03d31828a9ebfd8",
+        "rom-2bfd9d1ba38addcb4a94",
+        "rom-2d113d10c279b1bb026a",
+        "rom-524a25bcd153be24594d",
+        "rom-59054c279b444df0d04a",
+        "rom-607cc7ae7ad9f2e75bba",
+        "rom-62341a6cc7aa7a2e7db9",
+        "rom-7f475ffe1fe39940d354",
+        "rom-8487499bd1bee423c0f8",
+        "rom-8a6b29435cdbad9316bb",
+        "rom-8e915ceffc3c20f887ec",
+        "rom-8ee7453b186d58647542",
+        "rom-90f19b5625ad75ae1425",
+        "rom-9123efcf41b1108ae11a",
+        "rom-98285084aa328b61edc1",
+        "rom-9bef2913ef07035376ce",
+        "rom-a4b0b4edb38a8b891228",
+        "rom-a9e36a8822f84145ac63",
+        "rom-bf18c48cdff4f763eb2b",
+        "rom-c8a17a4bd0726f896e9f",
+        "rom-cbaf65b8c45a1cc6e46e",
+        "rom-d1841ad4faa7301f25f6",
+        "rom-df31e61932e7ba011104"
+      ],
+      "minimum_free_bytes": 17179869184,
+      "outputs": {
+        "INSTALL-MISTER.txt": {
+          "sha256": "8b6818d1ece5c7cd273f56681182a33b2a53f38a3d33bf347790a6cb3dc9011e"
+        },
+        "_Arcade/_Arcade Patches/_Restorations/_Japan/Street Fighter Zero 3 Upper (Japan) [Backport].mra": {
+          "sha256": "6de158e90cc7a78681e132f0bfaf8a93f6b8e2c7b234b1889b3475d15f0993b1"
+        },
+        "_Arcade/cores/jtcps2-cpsplus_20261006.rbf": {
+          "sha256": "23c1bd0a685dfe95d0d38a85e9b47f746d6294ae20b31284bc377ade2ba43bd6"
+        },
+        "games/mame/sfz3up.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+            "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+            "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+            "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+            "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+            "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+            "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+            "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+            "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+            "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+            "sz3upj.03c": "7692f59939d5cc224a3d5a9a3a3563aa6d09edae6c5b35781c995e902fdd68fe",
+            "sz3upj.04c": "ea36925d4fc716edfb585f5d1501d727059f4cf1b3dbdcfe9f73d2d20582eb25",
+            "sz3upj.08c": "e33d7adb1cc217e95501162f43cab1e7d4f0eaff770bbc31ce403c2b10c0a3f2",
+            "sz3upj.09c": "94091dde96d88b0f7814ed14592fab4a90061e36e28a8cc33d0bf4e6f1fdc110",
+            "sz3upj.10b": "de5e0777524a733d949792d3f341b30d01c9f627fb560e656efbcd51ccdcd849",
+            "sz3upj.13m": "c24ec08d0c367bbeb71d604ff8dc658abcf06bce7b0f2baf28901aa3997fb02c",
+            "sz3upj.14m": "af259b3a1dddd0835539f199a11592b4b04b875037408314efce88a666e52c08",
+            "sz3upj.15m": "ab94da2a3cd9628f5d9d2964bb7a41420eee451544c32dc5ba6f1468e42ade62",
+            "sz3upj.16m": "7939a49d67f1be2475405970a8fcc7b0020aea0a96d7f54b23facdd9d2f46f5c",
+            "sz3upj.17m": "59de879532617bd20b29a8b2fd780d8e8c3668d17318c77b8ce46e862ba36afa",
+            "sz3upj.18m": "afdaf7b44882d51f33ffe68564e2ab4ff1802544195a55e4c97ea67b52565468",
+            "sz3upj.19m": "17c6fc97a926c67f9781a7a0972191b16613c29f0f4bc2acbe8a898a6ada753c",
+            "sz3upj.20m": "b390e7a5ad50d65ea24125518495e3e945a0facac880565b2bdf439e43025ba3",
+            "sz3upj.gfx": "38f098237d9c4a33da8812e75deb5baa6a0261f377fa46fecf6a2788c53e1e53",
+            "sz3upj.prg": "e9735cef0f3aab9630b790878987883f009ee22803dedff52188476310093908"
+          }
+        },
+        "licenses/CORE-LICENSE.txt": {
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        },
+        "licenses/FX68K-LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "licenses/JTDSP16-LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "licenses/JTEEPROM-LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "licenses/JTFRAME-LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "licenses/MRA-GPL-2.0.txt": {
+          "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+        },
+        "licenses/SOURCES.txt": {
+          "sha256": "778171f0c4698475abeaf5b1b51a37969342c6bc02b518ca57b1ea08f8fca197"
+        },
+        "licenses/core.json": {
+          "sha256": "8cc68b88cf9b2e633e030a6af695a19abfffdc6088ea11cad0080bf9c14e2c3d"
+        },
+        "licenses/jp.mra": {
+          "sha256": "760fab7612b6fa7d0f394a107c4b0870217bf8091412f384a074f59cd24461fe"
+        },
+        "public-mister.json": {
+          "sha256": "cdc13138f689fd0ba00c51b2058ce76c3bee6cbf858aae60f66741113722b54e"
+        },
+        "support/sfa3-upper-cps2/readme.txt": {
+          "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+        },
+        "support/sfa3-upper-cps2/verification.json": {
+          "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+        }
+      },
+      "platform": "mister",
+      "region": "jp",
+      "software_notes": [
+        "Rebuilds both regions from the original arcade sets, both PS2 DVDs (ISO or CHD) and the NAOMI GD-ROM, then exports this layout. Later layouts reuse that reconstruction.",
+        "chdman and the pinned NumPy/SciPy wheels are prepared automatically. Allow about 16 GB of temporary space; the first reconstruction can take an hour."
+      ],
+      "timeout_seconds": 14400,
+      "variant": "jp"
+    },
+    "us-fbneo": {
+      "destination_requirements": "An FBNeo build that includes the Street Fighter Alpha 3 Upper sets.",
+      "inputs": [
+        "disc-8146554de79c34f5494f",
+        "disc-9c52f95764efde89d978",
+        "disc-cecb214b28b6dfa2b89a",
+        "firmware-fa8d9f6193cd0227be88",
+        "rom-036c45bf1a5d4b30c23c",
+        "rom-13572160c616147e10d2",
+        "rom-2212e03d31828a9ebfd8",
+        "rom-2bfd9d1ba38addcb4a94",
+        "rom-2d113d10c279b1bb026a",
+        "rom-524a25bcd153be24594d",
+        "rom-59054c279b444df0d04a",
+        "rom-607cc7ae7ad9f2e75bba",
+        "rom-62341a6cc7aa7a2e7db9",
+        "rom-7f475ffe1fe39940d354",
+        "rom-8487499bd1bee423c0f8",
+        "rom-8a6b29435cdbad9316bb",
+        "rom-8e915ceffc3c20f887ec",
+        "rom-8ee7453b186d58647542",
+        "rom-90f19b5625ad75ae1425",
+        "rom-9123efcf41b1108ae11a",
+        "rom-98285084aa328b61edc1",
+        "rom-9bef2913ef07035376ce",
+        "rom-a4b0b4edb38a8b891228",
+        "rom-a9e36a8822f84145ac63",
+        "rom-bf18c48cdff4f763eb2b",
+        "rom-c8a17a4bd0726f896e9f",
+        "rom-cbaf65b8c45a1cc6e46e",
+        "rom-d1841ad4faa7301f25f6",
+        "rom-df31e61932e7ba011104"
+      ],
+      "minimum_free_bytes": 17179869184,
+      "outputs": {
+        "roms/sfa3up.zip": {
+          "members": {
+            "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+            "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+            "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+            "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+            "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+            "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+            "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+            "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+            "sz3up.q3": "23dbfa5c8d68608e1a81c5da3e2470ded28e2ba7b7adefaf2478e6437bc8ed08",
+            "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+            "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+            "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+            "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+            "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+            "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+            "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+            "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+            "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+            "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+            "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+            "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+            "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+            "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+            "sz3upu.c10": "8419e8f38047b040720208132a0baebb9d7ede75003ba0dd3d1687258995a550",
+            "sz3upu.c11": "7650e92e84254ac9866574232ea1eebb139f4ab3247cfb16fd220c3e75af3b62",
+            "sz3upu.c12": "4993bd933af6665e2a591f5484f1c3575bee328c06bb3e4af93f7847c0c68277",
+            "sz3upu.c13": "f232641657427216183195b5775fb18a257b0dc448d4469a47ceac5327d7a173",
+            "sz3upu.c14": "1872913decf13fd0b4599bbbb92591e4a6a13a7ca1ef2cf970aed8b0202ab2ab",
+            "sz3upu.c15": "e467dd9c84f15f2cd2b8488f7f5c8da35e3fa6bdeda9dde5cddc88cfc96f84a2",
+            "sz3upu.c16": "71665b27a1c789dd4069a8a2d4aecb614a2a89320b4df97f00d5d433d601ff7b",
+            "sz3upu.c9": "492b3d4d4a9e89fc03893cff120e92171ad6ddceaa270e47a597779a23207a82",
+            "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+          }
+        },
+        "support/sfa3-upper-cps2/readme.txt": {
+          "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+        },
+        "support/sfa3-upper-cps2/verification.json": {
+          "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+        }
+      },
+      "platform": "fbneo",
+      "region": "us",
+      "software_notes": [
+        "Rebuilds both regions from the original arcade sets, both PS2 DVDs (ISO or CHD) and the NAOMI GD-ROM, then exports this layout. Later layouts reuse that reconstruction.",
+        "chdman and the pinned NumPy/SciPy wheels are prepared automatically. Allow about 16 GB of temporary space; the first reconstruction can take an hour."
+      ],
+      "timeout_seconds": 14400,
+      "variant": "us"
+    },
+    "us-hbmame": {
+      "destination_requirements": "An HBMAME build that includes the Street Fighter Alpha 3 Upper sets.",
+      "inputs": [
+        "disc-8146554de79c34f5494f",
+        "disc-9c52f95764efde89d978",
+        "disc-cecb214b28b6dfa2b89a",
+        "firmware-fa8d9f6193cd0227be88",
+        "rom-036c45bf1a5d4b30c23c",
+        "rom-13572160c616147e10d2",
+        "rom-2212e03d31828a9ebfd8",
+        "rom-2bfd9d1ba38addcb4a94",
+        "rom-2d113d10c279b1bb026a",
+        "rom-524a25bcd153be24594d",
+        "rom-59054c279b444df0d04a",
+        "rom-607cc7ae7ad9f2e75bba",
+        "rom-62341a6cc7aa7a2e7db9",
+        "rom-7f475ffe1fe39940d354",
+        "rom-8487499bd1bee423c0f8",
+        "rom-8a6b29435cdbad9316bb",
+        "rom-8e915ceffc3c20f887ec",
+        "rom-8ee7453b186d58647542",
+        "rom-90f19b5625ad75ae1425",
+        "rom-9123efcf41b1108ae11a",
+        "rom-98285084aa328b61edc1",
+        "rom-9bef2913ef07035376ce",
+        "rom-a4b0b4edb38a8b891228",
+        "rom-a9e36a8822f84145ac63",
+        "rom-bf18c48cdff4f763eb2b",
+        "rom-c8a17a4bd0726f896e9f",
+        "rom-cbaf65b8c45a1cc6e46e",
+        "rom-d1841ad4faa7301f25f6",
+        "rom-df31e61932e7ba011104"
+      ],
+      "minimum_free_bytes": 17179869184,
+      "outputs": {
+        "roms/sfa3up.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+            "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+            "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+            "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+            "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+            "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+            "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+            "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+            "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+            "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+            "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+            "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+            "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+            "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+            "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+            "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+            "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+            "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+            "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+            "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+            "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+            "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+            "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+            "sz3upu.gfx": "e620b3911c1e677b17fe881f6bea494ff1d9def308481e2648e27fbab8bfbe02",
+            "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+          }
+        },
+        "support/sfa3-upper-cps2/readme.txt": {
+          "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+        },
+        "support/sfa3-upper-cps2/verification.json": {
+          "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+        }
+      },
+      "platform": "hbmame",
+      "region": "us",
+      "software_notes": [
+        "Rebuilds both regions from the original arcade sets, both PS2 DVDs (ISO or CHD) and the NAOMI GD-ROM, then exports this layout. Later layouts reuse that reconstruction.",
+        "chdman and the pinned NumPy/SciPy wheels are prepared automatically. Allow about 16 GB of temporary space; the first reconstruction can take an hour."
+      ],
+      "timeout_seconds": 14400,
+      "variant": "us"
+    },
+    "us-mister": {
+      "destination_requirements": "Copy to the SD card root. MiSTer requires 128 MB SDRAM; the CPS+ core is included.",
+      "inputs": [
+        "disc-8146554de79c34f5494f",
+        "disc-9c52f95764efde89d978",
+        "disc-cecb214b28b6dfa2b89a",
+        "firmware-fa8d9f6193cd0227be88",
+        "rom-036c45bf1a5d4b30c23c",
+        "rom-13572160c616147e10d2",
+        "rom-2212e03d31828a9ebfd8",
+        "rom-2bfd9d1ba38addcb4a94",
+        "rom-2d113d10c279b1bb026a",
+        "rom-524a25bcd153be24594d",
+        "rom-59054c279b444df0d04a",
+        "rom-607cc7ae7ad9f2e75bba",
+        "rom-62341a6cc7aa7a2e7db9",
+        "rom-7f475ffe1fe39940d354",
+        "rom-8487499bd1bee423c0f8",
+        "rom-8a6b29435cdbad9316bb",
+        "rom-8e915ceffc3c20f887ec",
+        "rom-8ee7453b186d58647542",
+        "rom-90f19b5625ad75ae1425",
+        "rom-9123efcf41b1108ae11a",
+        "rom-98285084aa328b61edc1",
+        "rom-9bef2913ef07035376ce",
+        "rom-a4b0b4edb38a8b891228",
+        "rom-a9e36a8822f84145ac63",
+        "rom-bf18c48cdff4f763eb2b",
+        "rom-c8a17a4bd0726f896e9f",
+        "rom-cbaf65b8c45a1cc6e46e",
+        "rom-d1841ad4faa7301f25f6",
+        "rom-df31e61932e7ba011104"
+      ],
+      "minimum_free_bytes": 17179869184,
+      "outputs": {
+        "INSTALL-MISTER.txt": {
+          "sha256": "8b6818d1ece5c7cd273f56681182a33b2a53f38a3d33bf347790a6cb3dc9011e"
+        },
+        "_Arcade/_Arcade Patches/_Restorations/Street Fighter Alpha 3 Upper (USA) [Backport].mra": {
+          "sha256": "6c8408afaa56275053fbf0c9f69094ce8270964932a3c5e728615524d5f82183"
+        },
+        "_Arcade/cores/jtcps2-cpsplus_20261006.rbf": {
+          "sha256": "23c1bd0a685dfe95d0d38a85e9b47f746d6294ae20b31284bc377ade2ba43bd6"
+        },
+        "games/mame/sfa3up.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "sfz3j.key": "d1841ad4faa7301f25f62502a3503988c7bd5f492aca69fbd21a8048aead0692",
+            "sz3.11m": "2212e03d31828a9ebfd88f1139d4c46e3009b5c9ae8b8b9a161c40642df6d89f",
+            "sz3.12m": "036c45bf1a5d4b30c23ca67a5926829bbd74dcaa084e30582ba6979a77b0100a",
+            "sz3up.01": "9146352c75734992b5cd051006fe54a429ca80c0e29097d5e34d32af6eaf6e45",
+            "sz3up.02": "1b87d5318ff096346a5b208d52fe75ef891b4c8925885c7c888c4dc0262badce",
+            "sz3up.05c": "8930412221c4d6e20a8e199b2933d2fa444453d705c71a3971f361fe6c684dac",
+            "sz3up.06c": "0f426440f4184024963db58efb3c96ee01c562f03d17c203e474a7188147832e",
+            "sz3up.07c": "9486bc9ff1a213fe80ccc83754fb7ba25d8fde3f2b7149076737e39fe4e47192",
+            "sz3up.snd": "f7d6baaa59a169e97a72eef84469502545a317a5a821fdd4a0e29f0d782498f4",
+            "sz3up.z80": "caf89cfc02c9eca524fd17654384be12aaa4050f65c6613b0f10b057c73dc11c",
+            "sz3upu.03c": "7aa8c84772d8a22f835e3953b88da52f9cb5894776d5d63d6d347a62516d82ff",
+            "sz3upu.04c": "e05d89a5268e630bebb93b50c15f6e398b178d379d8bf5abbd3ac6ea59b5a997",
+            "sz3upu.08c": "6ef878df942d452f544be534c547ecee339c45db634cd1322ddba9734bcbb398",
+            "sz3upu.09c": "89d61951211996bfafb868e2832f0d226dbd893b2b4d5150c2c2e495a4393232",
+            "sz3upu.10b": "46d09a66d65d98db38f0d144c29ff63949076240be781e47c4199c79c469535a",
+            "sz3upu.13m": "6f5caaad04357b8532dced330c0ba2a137ab48725416c24ab1aa4fa734d6c549",
+            "sz3upu.14m": "7bb28394cf4e96ae6555d54c2554cea013965fbad2770969a9c4e16add376b73",
+            "sz3upu.15m": "b0d35462932c8676985bee2e079bdd6825b6a94daf461e788708f4f0178dc53a",
+            "sz3upu.16m": "c694861feae1712597d7ec99d5665dd1282df41aca3112a2f4a77e85db369291",
+            "sz3upu.17m": "386b890389df33e67acab510f5f6326209fc74f062990b2b6c3b1c8e869ccc25",
+            "sz3upu.18m": "182c286ee7d74519548658621789a5db60b47ca6fa1cf7e6b5abc21e97f5a316",
+            "sz3upu.19m": "8beed31032bcf35d20cabe48d1e68b8eef3b4614b17bc804ffca2a0c1c1926c1",
+            "sz3upu.20m": "1b01136fc2894133656e260b73905f7aa46228cc2c9cec2a50ae661fca93499b",
+            "sz3upu.gfx": "e620b3911c1e677b17fe881f6bea494ff1d9def308481e2648e27fbab8bfbe02",
+            "sz3upu.prg": "5c1c6412e62bc037318c565636e4f6d3688297029736b9da9429334e97fc3edd"
+          }
+        },
+        "licenses/CORE-LICENSE.txt": {
+          "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2"
+        },
+        "licenses/FX68K-LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "licenses/JTDSP16-LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "licenses/JTEEPROM-LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "licenses/JTFRAME-LICENSE.txt": {
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+        },
+        "licenses/MRA-GPL-2.0.txt": {
+          "sha256": "edaef632cbb643e4e7a221717a6c441a4c1a7c918e6e4d56debc3d8739b233f6"
+        },
+        "licenses/SOURCES.txt": {
+          "sha256": "778171f0c4698475abeaf5b1b51a37969342c6bc02b518ca57b1ea08f8fca197"
+        },
+        "licenses/core.json": {
+          "sha256": "8cc68b88cf9b2e633e030a6af695a19abfffdc6088ea11cad0080bf9c14e2c3d"
+        },
+        "licenses/jp.mra": {
+          "sha256": "760fab7612b6fa7d0f394a107c4b0870217bf8091412f384a074f59cd24461fe"
+        },
+        "public-mister.json": {
+          "sha256": "cdc13138f689fd0ba00c51b2058ce76c3bee6cbf858aae60f66741113722b54e"
+        },
+        "support/sfa3-upper-cps2/readme.txt": {
+          "sha256": "51a0b985aa0c3a2a6c54b3b222cbf264a6f083451d248ec7790f628b25452ec4"
+        },
+        "support/sfa3-upper-cps2/verification.json": {
+          "sha256": "ab2e4918a6cdf8bd3c62b977f33d431db594e036b2838b60c2bba154446c93bc"
+        }
+      },
+      "platform": "mister",
+      "region": "us",
+      "software_notes": [
+        "Rebuilds both regions from the original arcade sets, both PS2 DVDs (ISO or CHD) and the NAOMI GD-ROM, then exports this layout. Later layouts reuse that reconstruction.",
+        "chdman and the pinned NumPy/SciPy wheels are prepared automatically. Allow about 16 GB of temporary space; the first reconstruction can take an hour."
+      ],
+      "timeout_seconds": 14400,
+      "variant": "us"
+    }
+  }
+}
