@@ -530,7 +530,7 @@
       }
     },
     "hsf2-restoration": {
-      "current": "rc2",
+      "current": "rc3",
       "versions": {
         "rc1": {
           "additive_output": "mame",
@@ -716,6 +716,51 @@
                   "name": "hsf2-restoration-rc2-mra.zip",
                   "sha256": "384f0895082fb1b10427fa83940835e0509bb05406faa913dffdb4820a546570",
                   "size": 53767
+                }
+              },
+              "kind": "rom"
+            }
+          }
+        },
+        "rc3": {
+          "current_revision": 1,
+          "date": "2026-11-14",
+          "files": {
+            "ips": {
+              "archive": "archive/8c7907357590e994c64fc8561c329385e029131308f6329c40a68afed6ba7177/hsf2-restoration-rc3-ips.zip",
+              "name": "hsf2-restoration-rc3-ips.zip",
+              "sha256": "8c7907357590e994c64fc8561c329385e029131308f6329c40a68afed6ba7177",
+              "size": 230194
+            },
+            "mra": {
+              "archive": "archive/c835bff050069eeef55eea60553b280ca705a987f88e55658186dfad0d946a26/hsf2-restoration-rc3-mra.zip",
+              "name": "hsf2-restoration-rc3-mra.zip",
+              "sha256": "c835bff050069eeef55eea60553b280ca705a987f88e55658186dfad0d946a26",
+              "size": 54320
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "revisions": {
+            "1": {
+              "date": "2026-11-14",
+              "files": {
+                "ips": {
+                  "archive": "archive/8c7907357590e994c64fc8561c329385e029131308f6329c40a68afed6ba7177/hsf2-restoration-rc3-ips.zip",
+                  "name": "hsf2-restoration-rc3-ips.zip",
+                  "sha256": "8c7907357590e994c64fc8561c329385e029131308f6329c40a68afed6ba7177",
+                  "size": 230194
+                },
+                "mra": {
+                  "archive": "archive/c835bff050069eeef55eea60553b280ca705a987f88e55658186dfad0d946a26/hsf2-restoration-rc3-mra.zip",
+                  "name": "hsf2-restoration-rc3-mra.zip",
+                  "sha256": "c835bff050069eeef55eea60553b280ca705a987f88e55658186dfad0d946a26",
+                  "size": 54320
                 }
               },
               "kind": "rom"

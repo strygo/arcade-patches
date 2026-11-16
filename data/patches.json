@@ -3833,6 +3833,13 @@
         {
           "date": "2026-11-14",
           "items": [
+            "Fixed a moving background row and gaps around the pillars and doorway on Cammy\u2019s stage."
+          ],
+          "version": "rc3"
+        },
+        {
+          "date": "2026-11-14",
+          "items": [
             "No gameplay changes."
           ],
           "version": "rc2"
@@ -3852,7 +3859,90 @@
       "subtitle": "English restoration",
       "summary": "The Japanese Anniversary Edition in English, with its original balance, Western fighter names and the full stories and win quotes.",
       "title": "Hyper Street Fighter II: The Anniversary Edition",
-      "version": "rc2"
+      "version": "rc3"
+    },
+    {
+      "artifact": {
+        "parents": [
+          "xmvsf"
+        ]
+      },
+      "changes": [
+        "All 288 win quotes in English, including Apocalypse\u2019s sixteen quotes.",
+        "All 54 Apocalypse dialogue passages, 104 ending captions and seventeen tips in English.",
+        "Western fighter names and USA regional voices, with Japanese 970113 gameplay.",
+        "Centered English text and complete ending illustrations."
+      ],
+      "date": "2026-11-16",
+      "description": [
+        "X-Men vs. Street Fighter\u2019s Japanese release has more to say. This restoration brings its full victory quotes, Apocalypse dialogue, endings and tips into English while keeping the Japanese fighting rules.",
+        "The USA presentation uses Western fighter names and regional voices. Text is centered in the game\u2019s original dialogue and ending panels.",
+        "It runs on Darksoft CPS-2 hardware, on MiSTer, and in MAME. HBMAME and FBNeo outputs use the same game data.",
+        "This is a release candidate."
+      ],
+      "feedback": true,
+      "game": "X-Men vs. Street Fighter (Japan 970113)",
+      "hardware": "Capcom CPS-2",
+      "hbmame": {
+        "complete": true,
+        "renames": {
+          "xmvsfj.key": "xmvsfj.key",
+          "xvs.01": "xvs.01",
+          "xvs.02": "xvs.02",
+          "xvs.05a": "xvsre.05a",
+          "xvs.06a": "xvsre.06a",
+          "xvs.07": "xvs.07",
+          "xvs.08": "xvs.08",
+          "xvs.09": "xvsre.09",
+          "xvs.11m": "xvs.11m",
+          "xvs.12m": "xvs.12m",
+          "xvs.13m": "xvs.13m",
+          "xvs.14m": "xvs.14m",
+          "xvs.15m": "xvs.15m",
+          "xvs.16m": "xvs.16m",
+          "xvs.17m": "xvs.17m",
+          "xvs.18m": "xvs.18m",
+          "xvs.19m": "xvs.19m",
+          "xvs.20m": "xvs.20m",
+          "xvsj.03m": "xvsre.03m",
+          "xvsj.04m": "xvsre.04m"
+        },
+        "setname": "xmvsfre"
+      },
+      "hidden": true,
+      "mra": {
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "filename": "X-Men vs. Street Fighter (USA) [Restoration].mra",
+        "mraauthor": "jotego,strygo",
+        "name": "X-Men vs. Street Fighter (USA) [Restoration]",
+        "platform": "CPS-2",
+        "region": "USA",
+        "setname": "xmvsfre",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations"
+      },
+      "notes": [
+        "Supply your own canonical Japan 970113 arcade ROMs (xmvsfj and its xmvsf parent) and QSound firmware. No console disc is needed."
+      ],
+      "patch_kind": "English restoration patch",
+      "patch_noun": "restoration",
+      "release_history": [
+        {
+          "date": "2026-11-16",
+          "items": [
+            "First release candidate: the Japanese arcade game with complete English win quotes, dialogue, endings and tips."
+          ],
+          "version": "rc1"
+        }
+      ],
+      "section": "restorations",
+      "set": "xmvsfj",
+      "slug": "xmvsf-restoration",
+      "status": "release-candidate",
+      "subtitle": "English restoration",
+      "summary": "The Japanese arcade game in English, with its full win quotes, dialogue, endings and tips.",
+      "title": "X-Men vs. Street Fighter",
+      "version": "rc1"
     }
   ],
   "projects": [

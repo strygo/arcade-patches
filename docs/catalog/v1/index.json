@@ -21,9 +21,9 @@
       "url": "https://arcadepatches.com/downloads/archive/d71f3789253adc5efa1f820ecbe102c7af4fc6f94e829a99f5f034cdb8e7d898/final-fight-ex-rc4-kit.zip"
     },
     "hsf2-restoration-kit": {
-      "sha256": "acda6e988a52527ef0d9e6aca8bb471f719c3b84fc55704793a6c0077509142c",
-      "size": 228891,
-      "url": "https://arcadepatches.com/downloads/archive/acda6e988a52527ef0d9e6aca8bb471f719c3b84fc55704793a6c0077509142c/hsf2-restoration-rc2-ips.zip"
+      "sha256": "8c7907357590e994c64fc8561c329385e029131308f6329c40a68afed6ba7177",
+      "size": 230194,
+      "url": "https://arcadepatches.com/downloads/archive/8c7907357590e994c64fc8561c329385e029131308f6329c40a68afed6ba7177/hsf2-restoration-rc3-ips.zip"
     },
     "mshvsf-ex-kit": {
       "sha256": "681130ce77f75c73ced282f661ddf1e9fb87ef833b982d9e68a73154ec831a3d",
@@ -245,7 +245,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249-numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
     }
   },
-  "generation": 203,
+  "generation": 204,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -269,7 +269,7 @@
       "title": "Final Fight EX (CPS-2)"
     },
     "hsf2-restoration": {
-      "current": "hsf2-restoration-rc2-r1",
+      "current": "hsf2-restoration-rc3-r1",
       "title": "Hyper Street Fighter II: The Anniversary Edition \u00b7 English restoration"
     },
     "mshvsf-ex": {
@@ -410,14 +410,14 @@
       "kit": "final-fight-ex-kit",
       "kit_revision": 9
     },
-    "hsf2-restoration-rc2-r1": {
+    "hsf2-restoration-rc3-r1": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "1e84b7ec60ef8f5feb3a41f652b19742f4c2a147d89b93fad7896b7e4e588f47",
+        "sha256": "77d52d7f7949538457a8d76e1a8b3ad07000d27aaefa4327c180648094564f6e",
         "size": 34613,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/1e84b7ec60ef8f5feb3a41f652b19742f4c2a147d89b93fad7896b7e4e588f47.json"
+        "url": "https://arcadepatches.com/catalog/v1/definitions/77d52d7f7949538457a8d76e1a8b3ad07000d27aaefa4327c180648094564f6e.json"
       },
-      "game_version": "rc2",
+      "game_version": "rc3",
       "kit": "hsf2-restoration-kit",
       "kit_revision": 1
     },
