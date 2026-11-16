@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 3</h1>
 <p class="subtitle">English restoration</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc5</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 3 (Japan 980904)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>sfz3j</dd><dt>Version</dt><dd>rc5</dd><dt>Updated</dt><dd>2026-11-03</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc6</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Zero 3 (Japan 980904)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>sfz3j</dd><dt>Version</dt><dd>rc6</dd><dt>Updated</dt><dd>2026-11-14</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/sfa3-restoration/00_single.png?v=7021faea24" alt="An opponent-specific win quote."><figcaption>An opponent-specific win quote.</figcaption></figure>
 <figure class="shot single"><img src="../img/sfa3-restoration/01_single.png?v=85e60e6077" alt="English A/X/V-ISM selection."><figcaption>English A/X/V-ISM selection.</figcaption></figure>
@@ -78,18 +78,18 @@
 something this one still doesn't, whether a line of text, a scene, a screen or a small detail,
 please <a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">let us know</a>. Anything you find goes into the next release.</p>
 <h2>Downloads</h2>
-<p>Tools updated 2026-11-10. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/sfa3-restoration-rc5-ips.zip?v=d0327ca251">sfa3-restoration-rc5-ips.zip</a>
-  (638 KB)</div>
-  <div class="hash">SHA-256: d0327ca2516ca26c92ecf301973b645ec9a8c7fab0fd9dea4466dadb3e11a4dc</div>
+  <div class="file"><a href="../downloads/sfa3-restoration-rc6-ips.zip?v=53733ba86d">sfa3-restoration-rc6-ips.zip</a>
+  (652 KB)</div>
+  <div class="hash">SHA-256: 53733ba86df5ca3870213fcc7b682d482f0c0527b7d12dc90fe4c3b9048cdfc9</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
-  <div class="file"><a href="../downloads/sfa3-restoration-rc5-mra.zip?v=f5377f443b">sfa3-restoration-rc5-mra.zip</a>
-  (280 KB)</div>
-  <div class="hash">SHA-256: f5377f443b70ea96b367ee18f158a7a0b7b72e0ab354c94e7d821b21616c809f</div>
+  <div class="file"><a href="../downloads/sfa3-restoration-rc6-mra.zip?v=68226c363f">sfa3-restoration-rc6-mra.zip</a>
+  (299 KB)</div>
+  <div class="hash">SHA-256: 68226c363f83a947c2d0a3e200aa6209b1de3699b599c7e5da966bfc452d6fba</div>
 </div>
 <p>You need your own dump of <strong>Street Fighter Zero 3 (Japan 980904)</strong> as the MAME
 set <code>sfz3j.zip</code>. Every build is made from that one set.
@@ -108,7 +108,7 @@ The kit remembers your choices and prepares required helpers and Python packages
 privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
 for the files to copy. Run the same command again to update.</p>
 <p>For MiSTer only, the separate MRA download can be used with your stock ROMs. The guided kit builds complete platform folders.</p><details><summary>Advanced command-line reference</summary><h2>How to apply</h2>
-<pre><code>unzip sfa3-restoration-rc5-ips.zip -d sfz3j-patch
+<pre><code>unzip sfa3-restoration-rc6-ips.zip -d sfz3j-patch
 cd sfz3j-patch
 python3 apply.py /path/to/sfz3j.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -129,7 +129,7 @@ files. MAME's game menu won't start a set with patched ROMs, so start it from th
 <code>mame sfz3j</code>. MAME shows checksum warnings for the patched ROMs. That's expected, and the
 game runs normally. To start it from a menu, use the HBMAME build.</p>
 <p><strong>HBMAME.</strong> Put the zip from <code>out/hbmame/</code> in HBMAME's
-<code>roms/</code> folder next to your stock <code>sfz3j.zip</code>. It loads with no checksum
+<code>roms/</code> folder together with <code>qsound.zip</code>; it holds the complete set. It loads with no checksum
 warnings. The <a href="https://github.com/Robbbert/hbmame">HBMAME</a> set definition (<code>sfa3ru</code> and <code>sfz3rj</code>) is generated with the restoration; an upstream submission is pending, so for now you add it to your own HBMAME build.</p>
 <p><strong>FBNeo.</strong> The kit produces the sets <code>sfa3re</code>, <code>sfz3rej</code>.
 Put the ZIPs from <code>out/fbneo/</code> in your FBNeo ROM folder, keeping their ZIP and ROM filenames.
@@ -153,13 +153,13 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p><code>sz3.09c</code> (512 KB, original CRC32 <code>b29e5199</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>English restoration</td><td class="mono">65bc5e7b</td></tr>
+<tr><td>English restoration</td><td class="mono">781d244e</td></tr>
 <tr><td>Japanese restoration</td><td class="mono">cf880cee</td></tr>
 </table>
 <p><code>sz3.10b</code> (512 KB, original CRC32 <code>deb2ff52</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>English restoration</td><td class="mono">3108b13e</td></tr>
+<tr><td>English restoration</td><td class="mono">6c9c3741</td></tr>
 <tr><td>Japanese restoration</td><td class="mono">8ef31512</td></tr>
 </table>
 <p><code>sz3.13m</code> (4.0 MB, original CRC32 <code>0f7a60d9</code>) differs per build:</p>
@@ -213,18 +213,28 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <p><code>sz3j.03c</code> (512 KB, original CRC32 <code>cadf4a51</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>English restoration</td><td class="mono">44fa43f4</td></tr>
-<tr><td>Japanese restoration</td><td class="mono">b0730b33</td></tr>
+<tr><td>English restoration</td><td class="mono">67ffd763</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">afc5b63b</td></tr>
 </table>
 <p><code>sz3j.04c</code> (512 KB, original CRC32 <code>fcb31228</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>English restoration</td><td class="mono">c4746c41</td></tr>
-<tr><td>Japanese restoration</td><td class="mono">faf7c4aa</td></tr>
+<tr><td>English restoration</td><td class="mono">400cc57a</td></tr>
+<tr><td>Japanese restoration</td><td class="mono">44c06332</td></tr>
 </table></details>
 <h3>Darksoft CPS-2</h3>
 <p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices.</p>
 <h2 id="history">Release history</h2>
+<h3>rc6 (2026-11-14)</h3><ul>
+<li>Made the win-quote panel taller, centered every quote and rebalanced uneven or squeezed line breaks.</li>
+<li>Fixed the win screen’s left column overlapping the quote panel and widened the translucent band to frame it evenly.</li>
+<li>Kept the small scrolling player-select text clear of the large headings.</li>
+<li>Corrected inconsistent bush shading in forest stages, including during weather and lightning changes.</li>
+<li>Restored SELECT PLAYER and FIGHTING STYLE SELECT headings.</li>
+<li>Centered character biographies vertically on the stage intro screens.</li>
+<li>Improved nine character-specific win quotes for Akuma, Charlie, Chun-Li, Gen, Cody, Vega and Karin. Thanks to Lemongrwab for contributing the translations.</li>
+<li>Updated the attract-mode Capcom address.</li>
+</ul>
 <h3>rc5 (2026-11-03)</h3><ul>
 <li>Set the default score-ranking initials for Charlie, M. Bison, Akuma, Vega and Balrog to Capcom’s USA defaults in the English edition.</li>
 <li>Gave Sodom black eyes on his small character-select portrait in both editions.</li>
