@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Marvel Super Heroes vs. Street Fighter EX</h1>
 <p class="subtitle">Enhanced version</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc6</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Marvel Super Heroes vs. Street Fighter (Japan 970707)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>mshvsfj</dd><dt>Version</dt><dd>rc6</dd><dt>Updated</dt><dd>2026-11-07</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc7</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Marvel Super Heroes vs. Street Fighter (Japan 970707)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>mshvsfj</dd><dt>Version</dt><dd>rc7</dd><dt>Updated</dt><dd>2026-11-14</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/mshvsf-ex/00_single.png?v=94b8921827" alt="The EX title screen."><figcaption>The EX title screen.</figcaption></figure>
 <figure class="shot single"><img src="../img/mshvsf-ex/01_single.png?v=6900cdcd63" alt="Norimaro is now selectable."><figcaption>Norimaro is now selectable.</figcaption></figure>
@@ -91,18 +91,18 @@
 <p>How EX compares with the original Japanese and US releases.</p>
 <table class="compare"><thead><tr><th></th><th>Japan</th><th>USA</th><th>EX</th></tr></thead><tbody><tr><th scope="row">Norimaro</th><td>Yes</td><td>No</td><td>Yes</td></tr><tr><th scope="row">Norimaro&#x27;s ending</th><td>His own</td><td>None</td><td>His own</td></tr><tr><th scope="row">Mech-Zangief, Shadow, Dark Sakura endings</th><td>Yes, Japanese</td><td>Generic</td><td>Yes, in both languages</td></tr><tr><th scope="row">English win quotes per fighter</th><td>None</td><td>8</td><td>16, translated from the Japanese</td></tr><tr><th scope="row">Hidden characters</th><td>Codes</td><td>Codes</td><td>Two-second hold, or codes</td></tr><tr><th scope="row">Cyber-Akuma</th><td>Boss only</td><td>Boss only</td><td>Playable, on the select screen</td></tr><tr><th scope="row">Apocalypse</th><td>Boss only</td><td>Boss only</td><td>Playable, on the select screen</td></tr><tr><th scope="row">Versus and Training modes</th><td>No</td><td>No</td><td>Yes, in Console mode</td></tr><tr><th scope="row">Same fighter twice</th><td>No</td><td>No</td><td>Yes</td></tr><tr><th scope="row">Colors per fighter</th><td>2</td><td>2</td><td>4</td></tr><tr><th scope="row">HUD names for U.S. Agent, Mephisto, Shadow</th><td>Blank</td><td>Blank</td><td>Yes</td></tr><tr><th scope="row">Game speeds</th><td>3</td><td>3</td><td>8</td></tr><tr><th scope="row">Free Play</th><td>Yes</td><td>Some regions</td><td>Yes</td></tr><tr><th scope="row">Gameplay</th><td>Original</td><td>Original</td><td>Original, plus Norimaro’s restored moves</td></tr></tbody></table>
 <h2>Downloads</h2>
-<p>Tools updated 2026-11-10. Game version unchanged.</p>
+
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware, all 2 builds</div>
-  <div class="file"><a href="../downloads/mshvsf-ex-rc6-ips.zip?v=9814c996cf">mshvsf-ex-rc6-ips.zip</a>
-  (939 KB)</div>
-  <div class="hash">SHA-256: 9814c996cf52e759cc5570e783d25cc90a940b13d8d06de904bee20b7f3a924a</div>
+  <div class="file"><a href="../downloads/mshvsf-ex-rc7-ips.zip?v=681130ce77">mshvsf-ex-rc7-ips.zip</a>
+  (1.0 MB)</div>
+  <div class="hash">SHA-256: 681130ce77f75c73ced282f661ddf1e9fb87ef833b982d9e68a73154ec831a3d</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRAs only, all 2 builds</div>
-  <div class="file"><a href="../downloads/mshvsf-ex-rc6-mra.zip?v=3efb7f4370">mshvsf-ex-rc6-mra.zip</a>
-  (426 KB)</div>
-  <div class="hash">SHA-256: 3efb7f437069d873b96c1ab25623c83e77b75c82c9ea19c7ca980a8f2aa517a2</div>
+  <div class="file"><a href="../downloads/mshvsf-ex-rc7-mra.zip?v=64b9fd3595">mshvsf-ex-rc7-mra.zip</a>
+  (500 KB)</div>
+  <div class="hash">SHA-256: 64b9fd35952e4b728c958bc81d98151829e3245ee80e32bff6902989fa4b4c90</div>
 </div>
 <p>You need your own dump of <strong>Marvel Super Heroes vs. Street Fighter (Japan 970707)</strong> as the MAME
 set <code>mshvsfj.zip</code>. Every build is made from that one set.
@@ -121,7 +121,7 @@ The kit remembers your choices and prepares required helpers and Python packages
 privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
 for the files to copy. Run the same command again to update.</p>
 <p>For MiSTer only, the separate MRA download can be used with your stock ROMs. The guided kit builds complete platform folders.</p><details><summary>Advanced command-line reference</summary><h2>How to apply</h2>
-<pre><code>unzip mshvsf-ex-rc6-ips.zip -d mshvsfj-patch
+<pre><code>unzip mshvsf-ex-rc7-ips.zip -d mshvsfj-patch
 cd mshvsfj-patch
 python3 apply.py /path/to/mshvsfj.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -162,50 +162,57 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <tr><th>File</th><th>Size</th><th>Original CRC32</th><th>Patched CRC32</th></tr>
 <tr><td class="mono">mvs.01</td><td>128 KB</td><td class="mono">68252324</td><td class="mono">4712c830</td></tr>
 <tr><td class="mono">mvs.06a</td><td>512 KB</td><td class="mono">959f3030</td><td class="mono">444fb179</td></tr>
-<tr><td class="mono">mvs.07b</td><td>512 KB</td><td class="mono">7f915bdb</td><td class="mono">e9cbc426</td></tr>
+<tr><td class="mono">mvs.07b</td><td>512 KB</td><td class="mono">7f915bdb</td><td class="mono">b559c147</td></tr>
 <tr><td class="mono">mvs.09b</td><td>512 KB</td><td class="mono">3ba08818</td><td class="mono">2be6f5e0</td></tr>
-<tr><td class="mono">mvs.10b</td><td>512 KB</td><td class="mono">cf0dba98</td><td class="mono">bad46d8a</td></tr>
-<tr><td class="mono">mvsj.04i</td><td>512 KB</td><td class="mono">32741ace</td><td class="mono">d9196f9c</td></tr>
+<tr><td class="mono">mvs.10b</td><td>512 KB</td><td class="mono">cf0dba98</td><td class="mono">1b9b86fe</td></tr>
+<tr><td class="mono">mvsj.04i</td><td>512 KB</td><td class="mono">32741ace</td><td class="mono">d04210e8</td></tr>
 </table>
 <p><code>mvs.05h</code> (512 KB, original CRC32 <code>77870dc3</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA</td><td class="mono">5334b038</td></tr>
-<tr><td>Japan</td><td class="mono">ef82fbee</td></tr>
+<tr><td>USA</td><td class="mono">85d44f70</td></tr>
+<tr><td>Japan</td><td class="mono">396204a6</td></tr>
 </table>
 <p><code>mvs.13m</code> (4.0 MB, original CRC32 <code>29b05fd9</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA</td><td class="mono">5a0765f2</td></tr>
-<tr><td>Japan</td><td class="mono">2d9e887e</td></tr>
+<tr><td>USA</td><td class="mono">9fcf617c</td></tr>
+<tr><td>Japan</td><td class="mono">e8568cf0</td></tr>
 </table>
 <p><code>mvs.15m</code> (4.0 MB, original CRC32 <code>faddccf1</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA</td><td class="mono">ca4700c6</td></tr>
-<tr><td>Japan</td><td class="mono">d65f6ecb</td></tr>
+<tr><td>USA</td><td class="mono">c055f1b7</td></tr>
+<tr><td>Japan</td><td class="mono">dc4d9fba</td></tr>
 </table>
 <p><code>mvs.17m</code> (4.0 MB, original CRC32 <code>97aaf4c7</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA</td><td class="mono">20979aee</td></tr>
-<tr><td>Japan</td><td class="mono">b2cbd772</td></tr>
+<tr><td>USA</td><td class="mono">0119e3d8</td></tr>
+<tr><td>Japan</td><td class="mono">9345ae44</td></tr>
 </table>
 <p><code>mvs.19m</code> (4.0 MB, original CRC32 <code>cb70e915</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA</td><td class="mono">a4e6969f</td></tr>
-<tr><td>Japan</td><td class="mono">690674ec</td></tr>
+<tr><td>USA</td><td class="mono">bf4bce8f</td></tr>
+<tr><td>Japan</td><td class="mono">72ab2cfc</td></tr>
 </table>
 <p><code>mvsj.03i</code> (512 KB, original CRC32 <code>d8cbb691</code>) differs per build:</p>
 <table>
 <tr><th>Build</th><th>Patched CRC32</th></tr>
-<tr><td>USA</td><td class="mono">943102b0</td></tr>
-<tr><td>Japan</td><td class="mono">8e50ee75</td></tr>
+<tr><td>USA</td><td class="mono">631a8b65</td></tr>
+<tr><td>Japan</td><td class="mono">797b67a0</td></tr>
 </table></details>
 <h3>Darksoft CPS-2</h3>
 <p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices.</p>
 <h2 id="history">Release history</h2>
+<h3>rc7 (2026-11-14)</h3><ul>
+<li>Fixes Console Versus rematches and character changes against the computer, including an unwanted Game Over, flickering win counts and incorrect player prompts.</li>
+<li>Fixes extra-color effects for Cyclops, Norimaro and Shuma-Gorath, and Cyber-Akuma’s portraits and ending artwork. Both playable bosses now reach the staff roll correctly.</li>
+<li>Restores the rare English victory quotes, with each line centered in the quote box.</li>
+<li>Improves stage selection with scene previews, stage captions, a faster Random carousel and a confirmation sound. The animated backdrop stays visible after choosing a stage.</li>
+<li>Removes the unused Arcade scores from Training.</li>
+</ul>
 <h3>rc6 (2026-11-07)</h3><ul>
 <li>Fixes a Console mode bug that could bring defeated Hulk back on screen or create an extra Cyber-Akuma, and could also crash the game.</li>
 <li>Fixes two game-speed errors that could crash the game or corrupt memory at the original speed settings.</li>

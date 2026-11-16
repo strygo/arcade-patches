@@ -1,0 +1,1483 @@
+{
+  "api": 1,
+  "game_version": "rc7",
+  "kit_revision": 1,
+  "manifest_sha256": "7b1f99e9259a108e7dfb4db23bbb634f5c23cc26f184ceb1d00a13b5deec5eb5",
+  "native_outputs": {
+    "darksoft/games/mshvsf-ex_japan/NAME": {
+      "sha256": "939073bcb980d1226798ce85b977d691a73e4498f7e4f8342fbcbc4477166710"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.01": {
+      "sha256": "be871d3dff39f201f83e481e1a2fc9ae94e0ecd5a51d4fac3e6b23b60c3d985d"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.02": {
+      "sha256": "bd9f896332c8008268fc01aaaf7d1bddca6abaea957abb650410ea41c47e7652"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.03": {
+      "sha256": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.04": {
+      "sha256": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.05": {
+      "sha256": "8a858c98023c6a2d30a5406fb778ebdf2bc836c1010d42f131235369277b584c"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.06": {
+      "sha256": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.07": {
+      "sha256": "7587fa0dd66c1f9a142fc10277114c49a3ad7f6f397e6f161af2c75f2f04f724"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.08": {
+      "sha256": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.09": {
+      "sha256": "61c4354ea603916d4d86eda83acb4cdae64d132b766d221f90807ab582ee0a0a"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.10": {
+      "sha256": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.11": {
+      "sha256": "14b924bff195127b19d7982dadae8d86e5f62f6db6e376217d94a2f06a000a8b"
+    },
+    "darksoft/games/mshvsf-ex_japan/flash.12": {
+      "sha256": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4"
+    },
+    "darksoft/games/mshvsf-ex_japan/key": {
+      "sha256": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31"
+    },
+    "darksoft/games/mshvsf-ex_usa/NAME": {
+      "sha256": "a33cb361291349382d5025078b0378862c6629482fb3cf6cd9ecce05b4e71de3"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.01": {
+      "sha256": "be871d3dff39f201f83e481e1a2fc9ae94e0ecd5a51d4fac3e6b23b60c3d985d"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.02": {
+      "sha256": "9d0b6ddab7d977cfcd6a7751759cd96deeb311db5775d71b273f5aaf0db5a5e0"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.03": {
+      "sha256": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.04": {
+      "sha256": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.05": {
+      "sha256": "4783c80ec8fdf1c3856c10815613513adbd429cf7f060e376bf4e0ef86c6140c"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.06": {
+      "sha256": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.07": {
+      "sha256": "d7c3c8897604cf26003f1b9b017bbf3f5476028780fd96301cafc3a784a8a4b6"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.08": {
+      "sha256": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.09": {
+      "sha256": "a00b604e5ba126455c754ba695b5f46a9ab5c819434f34745405b2825e6c7e42"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.10": {
+      "sha256": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.11": {
+      "sha256": "b4dfc6cf66feffe5cc0d2f008b81509bd125a8dfd5c570ac1bd1209583c1fec1"
+    },
+    "darksoft/games/mshvsf-ex_usa/flash.12": {
+      "sha256": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4"
+    },
+    "darksoft/games/mshvsf-ex_usa/key": {
+      "sha256": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31"
+    },
+    "darksoft/receipts/mshvsf-ex_japan.json": {
+      "sha256": "64fe13b2116d8f50b088b2fa689e23b4063d9d0549140c834b81c01de2ca41f6"
+    },
+    "darksoft/receipts/mshvsf-ex_usa.json": {
+      "sha256": "8323405c14e61ef318c0e362a9649c8d46a67ac4cf4fc410e3b54c941cf2a476"
+    },
+    "fbneo/mshvsfex.zip": {
+      "members": {
+        "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+        "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+        "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+        "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+        "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+        "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+        "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+        "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+        "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+        "mvsex.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+        "mvsex.03i": "0fb1bdf967e18602cc15123cb92010d42b2e27d603d38008c0f83d3f538a03b7",
+        "mvsex.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8",
+        "mvsex.05h": "a67a5cf66ac7191fcdcd31ba8c9bdafe83058ef87fd7f4f91d82fcd9b6addfa6",
+        "mvsex.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+        "mvsex.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+        "mvsex.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+        "mvsex.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+        "mvsex.13m": "4783c80ec8fdf1c3856c10815613513adbd429cf7f060e376bf4e0ef86c6140c",
+        "mvsex.15m": "d7c3c8897604cf26003f1b9b017bbf3f5476028780fd96301cafc3a784a8a4b6",
+        "mvsex.17m": "a00b604e5ba126455c754ba695b5f46a9ab5c819434f34745405b2825e6c7e42",
+        "mvsex.19m": "b4dfc6cf66feffe5cc0d2f008b81509bd125a8dfd5c570ac1bd1209583c1fec1"
+      }
+    },
+    "fbneo/mshvsfexj.zip": {
+      "members": {
+        "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+        "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+        "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+        "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+        "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+        "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+        "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+        "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+        "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+        "mvsex.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+        "mvsex.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8",
+        "mvsex.05h": "f2da38a735ef7d385db65a42768f522c92ab706dbac3ccf91a6cbc48127c7583",
+        "mvsex.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+        "mvsex.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+        "mvsex.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+        "mvsex.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+        "mvsex.13m": "8a858c98023c6a2d30a5406fb778ebdf2bc836c1010d42f131235369277b584c",
+        "mvsex.15m": "7587fa0dd66c1f9a142fc10277114c49a3ad7f6f397e6f161af2c75f2f04f724",
+        "mvsex.17m": "61c4354ea603916d4d86eda83acb4cdae64d132b766d221f90807ab582ee0a0a",
+        "mvsex.19m": "14b924bff195127b19d7982dadae8d86e5f62f6db6e376217d94a2f06a000a8b",
+        "mvsexj.03i": "69a038c6e7881d0823d7fb311daa6ca85cf3fb9912b4aa47d65d6ea575831507"
+      }
+    },
+    "hbmame/mshvsfej.zip": {
+      "members": {
+        "mvs.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+        "mvs.05h": "f2da38a735ef7d385db65a42768f522c92ab706dbac3ccf91a6cbc48127c7583",
+        "mvs.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+        "mvs.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+        "mvs.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+        "mvs.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+        "mvs.13m": "8a858c98023c6a2d30a5406fb778ebdf2bc836c1010d42f131235369277b584c",
+        "mvs.15m": "7587fa0dd66c1f9a142fc10277114c49a3ad7f6f397e6f161af2c75f2f04f724",
+        "mvs.17m": "61c4354ea603916d4d86eda83acb4cdae64d132b766d221f90807ab582ee0a0a",
+        "mvs.19m": "14b924bff195127b19d7982dadae8d86e5f62f6db6e376217d94a2f06a000a8b",
+        "mvsj.03i": "69a038c6e7881d0823d7fb311daa6ca85cf3fb9912b4aa47d65d6ea575831507",
+        "mvsj.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8"
+      }
+    },
+    "hbmame/mshvsfex.zip": {
+      "members": {
+        "mvs.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+        "mvs.05h": "a67a5cf66ac7191fcdcd31ba8c9bdafe83058ef87fd7f4f91d82fcd9b6addfa6",
+        "mvs.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+        "mvs.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+        "mvs.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+        "mvs.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+        "mvs.13m": "4783c80ec8fdf1c3856c10815613513adbd429cf7f060e376bf4e0ef86c6140c",
+        "mvs.15m": "d7c3c8897604cf26003f1b9b017bbf3f5476028780fd96301cafc3a784a8a4b6",
+        "mvs.17m": "a00b604e5ba126455c754ba695b5f46a9ab5c819434f34745405b2825e6c7e42",
+        "mvs.19m": "b4dfc6cf66feffe5cc0d2f008b81509bd125a8dfd5c570ac1bd1209583c1fec1",
+        "mvsj.03i": "0fb1bdf967e18602cc15123cb92010d42b2e27d603d38008c0f83d3f538a03b7",
+        "mvsj.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8"
+      }
+    },
+    "mame/japan/mshvsfj.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+        "mvs.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+        "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+        "mvs.05h": "f2da38a735ef7d385db65a42768f522c92ab706dbac3ccf91a6cbc48127c7583",
+        "mvs.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+        "mvs.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+        "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+        "mvs.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+        "mvs.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+        "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+        "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+        "mvs.13m": "8a858c98023c6a2d30a5406fb778ebdf2bc836c1010d42f131235369277b584c",
+        "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+        "mvs.15m": "7587fa0dd66c1f9a142fc10277114c49a3ad7f6f397e6f161af2c75f2f04f724",
+        "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+        "mvs.17m": "61c4354ea603916d4d86eda83acb4cdae64d132b766d221f90807ab582ee0a0a",
+        "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+        "mvs.19m": "14b924bff195127b19d7982dadae8d86e5f62f6db6e376217d94a2f06a000a8b",
+        "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+        "mvsj.03i": "69a038c6e7881d0823d7fb311daa6ca85cf3fb9912b4aa47d65d6ea575831507",
+        "mvsj.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8"
+      }
+    },
+    "mame/usa/mshvsfj.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+        "mvs.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+        "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+        "mvs.05h": "a67a5cf66ac7191fcdcd31ba8c9bdafe83058ef87fd7f4f91d82fcd9b6addfa6",
+        "mvs.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+        "mvs.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+        "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+        "mvs.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+        "mvs.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+        "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+        "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+        "mvs.13m": "4783c80ec8fdf1c3856c10815613513adbd429cf7f060e376bf4e0ef86c6140c",
+        "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+        "mvs.15m": "d7c3c8897604cf26003f1b9b017bbf3f5476028780fd96301cafc3a784a8a4b6",
+        "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+        "mvs.17m": "a00b604e5ba126455c754ba695b5f46a9ab5c819434f34745405b2825e6c7e42",
+        "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+        "mvs.19m": "b4dfc6cf66feffe5cc0d2f008b81509bd125a8dfd5c570ac1bd1209583c1fec1",
+        "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+        "mvsj.03i": "0fb1bdf967e18602cc15123cb92010d42b2e27d603d38008c0f83d3f538a03b7",
+        "mvsj.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8"
+      }
+    },
+    "mister/_Arcade/_Arcade Patches/_Enhanced Versions/Marvel Super Heroes Vs. Street Fighter EX (USA).mra": {
+      "sha256": "30c113f9991e4532467efb4f0af30bed42cb0e8c4be6c11ee6eb68fadb84707a"
+    },
+    "mister/_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Marvel Super Heroes Vs. Street Fighter EX (Japan).mra": {
+      "sha256": "10dc9c5d1b0110ece1d3bfb963f5626203a4e0efac01da3ad52bba4fd32a46be"
+    }
+  },
+  "prerequisites": {
+    "source-0981af466a7ef34356b1": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "565eeebb",
+          "sha256": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mshvsfj.key",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mshvsfj.key"
+    },
+    "source-0ac719e09a64cfee8601": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "b3b1972d",
+          "sha256": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.14m",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.14m"
+    },
+    "source-2914e05c2266350de0ef": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "68252324",
+          "sha256": "2914e05c2266350de0ef28af5bb99690a80933bb76800fd38e27d1ee622ad665",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.01",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.01"
+    },
+    "source-332edc4527fc1a7aa307": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "f2fd7f68",
+          "sha256": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.12m",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.12m"
+    },
+    "source-345f5eb13765e1c70348": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "97aaf4c7",
+          "sha256": "345f5eb13765e1c703481c87045820ce0e0c5a2e8d502c3e1843fb7b672718f3",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.17m",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.17m"
+    },
+    "source-4fa6c17b5a63f0318548": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "959f3030",
+          "sha256": "4fa6c17b5a63f031854865c0777f7f3ef16124101506c98298d3dbaa756730a7",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.06a",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.06a"
+    },
+    "source-524a25bcd153be24594d": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d6cf5ef5",
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "size": 24576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "device",
+      "search_names": [
+        "dl-1425.bin",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "dl-1425.bin"
+    },
+    "source-5709e9790ed9719a0633": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "faddccf1",
+          "sha256": "5709e9790ed9719a0633aedd4641829012c44aa37c44dccb1f8489208c4cb2cf",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.15m",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.15m"
+    },
+    "source-615f278514851ed5e0da": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "366cc6c2",
+          "sha256": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.20m",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.20m"
+    },
+    "source-6479e7c55736fd4408ac": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "32741ace",
+          "sha256": "6479e7c55736fd4408ac56e97caffc271c2d6be9432790d1735ea2f4768ae342",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvsj.04i",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvsj.04i"
+    },
+    "source-7c36217c0cec1075d2a5": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "86219770",
+          "sha256": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.11m",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.11m"
+    },
+    "source-8b6ad4f39f90cec2380f": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "cb70e915",
+          "sha256": "8b6ad4f39f90cec2380f8dec09aab57e5d47833e9e5b282d2384a969079daf36",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.19m",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.19m"
+    },
+    "source-8e706ff8e12c250a2f83": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "c1228b35",
+          "sha256": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.18m",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.18m"
+    },
+    "source-916fb92a3ea4c7afb79a": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "77870dc3",
+          "sha256": "916fb92a3ea4c7afb79a5c9ba83a6d22270f5a790ece0dc60c2d5b860d32e0f0",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.05h",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.05h"
+    },
+    "source-9939e61cf5dd99477fdf": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "b34e773d",
+          "sha256": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.02",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.02"
+    },
+    "source-c2375e11acd8a726e7f9": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "7f915bdb",
+          "sha256": "c2375e11acd8a726e7f92d766322228052011a3738f76024fcdda8b1bba9711d",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.07b",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.07b"
+    },
+    "source-c262d7ed4e01b033435c": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "3ba08818",
+          "sha256": "c262d7ed4e01b033435c1e83804e007251ac3cea2b00e4d6d5f792cd8394b42a",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.09b",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.09b"
+    },
+    "source-d00efcfbeed2f4302b11": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "c2813884",
+          "sha256": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.08a",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.08a"
+    },
+    "source-d7076dab85ed83c8c777": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "08aadb5d",
+          "sha256": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.16m",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.16m"
+    },
+    "source-e2605d7c744565615eec": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "cf0dba98",
+          "sha256": "e2605d7c744565615eecad8ae6852fe96f2eec8478e4f8eaeebc79f184ad446e",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.10b",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.10b"
+    },
+    "source-f070624fdc23bb276371": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d8cbb691",
+          "sha256": "f070624fdc23bb2763717a61ca5ba5d1b9e3551ff82393bf4c42902c57b47c8d",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvsj.03i",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvsj.03i"
+    },
+    "source-fd4ed6d5474fcdccbfd9": {
+      "action": "Add the canonical mshvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "29b05fd9",
+          "sha256": "fd4ed6d5474fcdccbfd9bdd238cacba132e71f7521b5adc58166a5b94ce52e31",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "mvs.13m",
+        "mshvsfj",
+        "mshvsfj.zip",
+        "mshvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "mvs.13m"
+    }
+  },
+  "project": "mshvsf-ex",
+  "targets": {
+    "japan-darksoft": {
+      "destination_requirements": "Use the Darksoft hardware and layout described in this kit's readme.",
+      "inputs": [
+        "source-0981af466a7ef34356b1",
+        "source-0ac719e09a64cfee8601",
+        "source-2914e05c2266350de0ef",
+        "source-332edc4527fc1a7aa307",
+        "source-345f5eb13765e1c70348",
+        "source-4fa6c17b5a63f0318548",
+        "source-5709e9790ed9719a0633",
+        "source-615f278514851ed5e0da",
+        "source-6479e7c55736fd4408ac",
+        "source-7c36217c0cec1075d2a5",
+        "source-8b6ad4f39f90cec2380f",
+        "source-8e706ff8e12c250a2f83",
+        "source-916fb92a3ea4c7afb79a",
+        "source-9939e61cf5dd99477fdf",
+        "source-c2375e11acd8a726e7f9",
+        "source-c262d7ed4e01b033435c",
+        "source-d00efcfbeed2f4302b11",
+        "source-d7076dab85ed83c8c777",
+        "source-e2605d7c744565615eec",
+        "source-f070624fdc23bb276371",
+        "source-fd4ed6d5474fcdccbfd9"
+      ],
+      "native_variant": "japan",
+      "outputs": {
+        "games/mshvsf-ex_japan/NAME": {
+          "sha256": "939073bcb980d1226798ce85b977d691a73e4498f7e4f8342fbcbc4477166710"
+        },
+        "games/mshvsf-ex_japan/flash.01": {
+          "sha256": "be871d3dff39f201f83e481e1a2fc9ae94e0ecd5a51d4fac3e6b23b60c3d985d"
+        },
+        "games/mshvsf-ex_japan/flash.02": {
+          "sha256": "bd9f896332c8008268fc01aaaf7d1bddca6abaea957abb650410ea41c47e7652"
+        },
+        "games/mshvsf-ex_japan/flash.03": {
+          "sha256": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85"
+        },
+        "games/mshvsf-ex_japan/flash.04": {
+          "sha256": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3"
+        },
+        "games/mshvsf-ex_japan/flash.05": {
+          "sha256": "8a858c98023c6a2d30a5406fb778ebdf2bc836c1010d42f131235369277b584c"
+        },
+        "games/mshvsf-ex_japan/flash.06": {
+          "sha256": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6"
+        },
+        "games/mshvsf-ex_japan/flash.07": {
+          "sha256": "7587fa0dd66c1f9a142fc10277114c49a3ad7f6f397e6f161af2c75f2f04f724"
+        },
+        "games/mshvsf-ex_japan/flash.08": {
+          "sha256": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46"
+        },
+        "games/mshvsf-ex_japan/flash.09": {
+          "sha256": "61c4354ea603916d4d86eda83acb4cdae64d132b766d221f90807ab582ee0a0a"
+        },
+        "games/mshvsf-ex_japan/flash.10": {
+          "sha256": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3"
+        },
+        "games/mshvsf-ex_japan/flash.11": {
+          "sha256": "14b924bff195127b19d7982dadae8d86e5f62f6db6e376217d94a2f06a000a8b"
+        },
+        "games/mshvsf-ex_japan/flash.12": {
+          "sha256": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4"
+        },
+        "games/mshvsf-ex_japan/key": {
+          "sha256": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31"
+        },
+        "receipts/mshvsf-ex_japan.json": {
+          "sha256": "64fe13b2116d8f50b088b2fa689e23b4063d9d0549140c834b81c01de2ca41f6"
+        }
+      },
+      "platform": "darksoft",
+      "profile": "default",
+      "region": "jp",
+      "variant": "japan"
+    },
+    "japan-fbneo": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0981af466a7ef34356b1",
+        "source-0ac719e09a64cfee8601",
+        "source-2914e05c2266350de0ef",
+        "source-332edc4527fc1a7aa307",
+        "source-345f5eb13765e1c70348",
+        "source-4fa6c17b5a63f0318548",
+        "source-5709e9790ed9719a0633",
+        "source-615f278514851ed5e0da",
+        "source-6479e7c55736fd4408ac",
+        "source-7c36217c0cec1075d2a5",
+        "source-8b6ad4f39f90cec2380f",
+        "source-8e706ff8e12c250a2f83",
+        "source-916fb92a3ea4c7afb79a",
+        "source-9939e61cf5dd99477fdf",
+        "source-c2375e11acd8a726e7f9",
+        "source-c262d7ed4e01b033435c",
+        "source-d00efcfbeed2f4302b11",
+        "source-d7076dab85ed83c8c777",
+        "source-e2605d7c744565615eec",
+        "source-f070624fdc23bb276371",
+        "source-fd4ed6d5474fcdccbfd9"
+      ],
+      "native_variant": "japan",
+      "outputs": {
+        "roms/mshvsfexj.zip": {
+          "members": {
+            "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+            "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+            "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+            "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+            "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+            "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+            "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+            "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+            "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+            "mvsex.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+            "mvsex.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8",
+            "mvsex.05h": "f2da38a735ef7d385db65a42768f522c92ab706dbac3ccf91a6cbc48127c7583",
+            "mvsex.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+            "mvsex.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+            "mvsex.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+            "mvsex.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+            "mvsex.13m": "8a858c98023c6a2d30a5406fb778ebdf2bc836c1010d42f131235369277b584c",
+            "mvsex.15m": "7587fa0dd66c1f9a142fc10277114c49a3ad7f6f397e6f161af2c75f2f04f724",
+            "mvsex.17m": "61c4354ea603916d4d86eda83acb4cdae64d132b766d221f90807ab582ee0a0a",
+            "mvsex.19m": "14b924bff195127b19d7982dadae8d86e5f62f6db6e376217d94a2f06a000a8b",
+            "mvsexj.03i": "69a038c6e7881d0823d7fb311daa6ca85cf3fb9912b4aa47d65d6ea575831507"
+          }
+        }
+      },
+      "platform": "fbneo",
+      "profile": "default",
+      "region": "jp",
+      "variant": "japan"
+    },
+    "japan-hbmame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0981af466a7ef34356b1",
+        "source-0ac719e09a64cfee8601",
+        "source-2914e05c2266350de0ef",
+        "source-332edc4527fc1a7aa307",
+        "source-345f5eb13765e1c70348",
+        "source-4fa6c17b5a63f0318548",
+        "source-524a25bcd153be24594d",
+        "source-5709e9790ed9719a0633",
+        "source-615f278514851ed5e0da",
+        "source-6479e7c55736fd4408ac",
+        "source-7c36217c0cec1075d2a5",
+        "source-8b6ad4f39f90cec2380f",
+        "source-8e706ff8e12c250a2f83",
+        "source-916fb92a3ea4c7afb79a",
+        "source-9939e61cf5dd99477fdf",
+        "source-c2375e11acd8a726e7f9",
+        "source-c262d7ed4e01b033435c",
+        "source-d00efcfbeed2f4302b11",
+        "source-d7076dab85ed83c8c777",
+        "source-e2605d7c744565615eec",
+        "source-f070624fdc23bb276371",
+        "source-fd4ed6d5474fcdccbfd9"
+      ],
+      "native_variant": "japan",
+      "outputs": {
+        "roms/mshvsfej.zip": {
+          "members": {
+            "mvs.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+            "mvs.05h": "f2da38a735ef7d385db65a42768f522c92ab706dbac3ccf91a6cbc48127c7583",
+            "mvs.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+            "mvs.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+            "mvs.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+            "mvs.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+            "mvs.13m": "8a858c98023c6a2d30a5406fb778ebdf2bc836c1010d42f131235369277b584c",
+            "mvs.15m": "7587fa0dd66c1f9a142fc10277114c49a3ad7f6f397e6f161af2c75f2f04f724",
+            "mvs.17m": "61c4354ea603916d4d86eda83acb4cdae64d132b766d221f90807ab582ee0a0a",
+            "mvs.19m": "14b924bff195127b19d7982dadae8d86e5f62f6db6e376217d94a2f06a000a8b",
+            "mvsj.03i": "69a038c6e7881d0823d7fb311daa6ca85cf3fb9912b4aa47d65d6ea575831507",
+            "mvsj.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8"
+          }
+        },
+        "roms/mshvsfj.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+            "mvs.01": "2914e05c2266350de0ef28af5bb99690a80933bb76800fd38e27d1ee622ad665",
+            "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+            "mvs.05h": "916fb92a3ea4c7afb79a5c9ba83a6d22270f5a790ece0dc60c2d5b860d32e0f0",
+            "mvs.06a": "4fa6c17b5a63f031854865c0777f7f3ef16124101506c98298d3dbaa756730a7",
+            "mvs.07b": "c2375e11acd8a726e7f92d766322228052011a3738f76024fcdda8b1bba9711d",
+            "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+            "mvs.09b": "c262d7ed4e01b033435c1e83804e007251ac3cea2b00e4d6d5f792cd8394b42a",
+            "mvs.10b": "e2605d7c744565615eecad8ae6852fe96f2eec8478e4f8eaeebc79f184ad446e",
+            "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+            "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+            "mvs.13m": "fd4ed6d5474fcdccbfd9bdd238cacba132e71f7521b5adc58166a5b94ce52e31",
+            "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+            "mvs.15m": "5709e9790ed9719a0633aedd4641829012c44aa37c44dccb1f8489208c4cb2cf",
+            "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+            "mvs.17m": "345f5eb13765e1c703481c87045820ce0e0c5a2e8d502c3e1843fb7b672718f3",
+            "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+            "mvs.19m": "8b6ad4f39f90cec2380f8dec09aab57e5d47833e9e5b282d2384a969079daf36",
+            "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+            "mvsj.03i": "f070624fdc23bb2763717a61ca5ba5d1b9e3551ff82393bf4c42902c57b47c8d",
+            "mvsj.04i": "6479e7c55736fd4408ac56e97caffc271c2d6be9432790d1735ea2f4768ae342"
+          }
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        }
+      },
+      "platform": "hbmame",
+      "profile": "default",
+      "region": "jp",
+      "variant": "japan"
+    },
+    "japan-mame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0981af466a7ef34356b1",
+        "source-0ac719e09a64cfee8601",
+        "source-2914e05c2266350de0ef",
+        "source-332edc4527fc1a7aa307",
+        "source-345f5eb13765e1c70348",
+        "source-4fa6c17b5a63f0318548",
+        "source-524a25bcd153be24594d",
+        "source-5709e9790ed9719a0633",
+        "source-615f278514851ed5e0da",
+        "source-6479e7c55736fd4408ac",
+        "source-7c36217c0cec1075d2a5",
+        "source-8b6ad4f39f90cec2380f",
+        "source-8e706ff8e12c250a2f83",
+        "source-916fb92a3ea4c7afb79a",
+        "source-9939e61cf5dd99477fdf",
+        "source-c2375e11acd8a726e7f9",
+        "source-c262d7ed4e01b033435c",
+        "source-d00efcfbeed2f4302b11",
+        "source-d7076dab85ed83c8c777",
+        "source-e2605d7c744565615eec",
+        "source-f070624fdc23bb276371",
+        "source-fd4ed6d5474fcdccbfd9"
+      ],
+      "native_variant": "japan",
+      "outputs": {
+        "roms/mshvsfj.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+            "mvs.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+            "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+            "mvs.05h": "f2da38a735ef7d385db65a42768f522c92ab706dbac3ccf91a6cbc48127c7583",
+            "mvs.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+            "mvs.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+            "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+            "mvs.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+            "mvs.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+            "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+            "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+            "mvs.13m": "8a858c98023c6a2d30a5406fb778ebdf2bc836c1010d42f131235369277b584c",
+            "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+            "mvs.15m": "7587fa0dd66c1f9a142fc10277114c49a3ad7f6f397e6f161af2c75f2f04f724",
+            "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+            "mvs.17m": "61c4354ea603916d4d86eda83acb4cdae64d132b766d221f90807ab582ee0a0a",
+            "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+            "mvs.19m": "14b924bff195127b19d7982dadae8d86e5f62f6db6e376217d94a2f06a000a8b",
+            "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+            "mvsj.03i": "69a038c6e7881d0823d7fb311daa6ca85cf3fb9912b4aa47d65d6ea575831507",
+            "mvsj.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8"
+          }
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        }
+      },
+      "platform": "mame",
+      "profile": "mshvsf-ex-japan",
+      "region": "jp",
+      "variant": "japan"
+    },
+    "japan-mister": {
+      "destination_requirements": "Use the MiSTer core named by the included MRA.",
+      "inputs": [
+        "source-0981af466a7ef34356b1",
+        "source-0ac719e09a64cfee8601",
+        "source-2914e05c2266350de0ef",
+        "source-332edc4527fc1a7aa307",
+        "source-345f5eb13765e1c70348",
+        "source-4fa6c17b5a63f0318548",
+        "source-524a25bcd153be24594d",
+        "source-5709e9790ed9719a0633",
+        "source-615f278514851ed5e0da",
+        "source-6479e7c55736fd4408ac",
+        "source-7c36217c0cec1075d2a5",
+        "source-8b6ad4f39f90cec2380f",
+        "source-8e706ff8e12c250a2f83",
+        "source-916fb92a3ea4c7afb79a",
+        "source-9939e61cf5dd99477fdf",
+        "source-c2375e11acd8a726e7f9",
+        "source-c262d7ed4e01b033435c",
+        "source-d00efcfbeed2f4302b11",
+        "source-d7076dab85ed83c8c777",
+        "source-e2605d7c744565615eec",
+        "source-f070624fdc23bb276371",
+        "source-fd4ed6d5474fcdccbfd9"
+      ],
+      "native_variant": "japan",
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Enhanced Versions/_Japan/Marvel Super Heroes Vs. Street Fighter EX (Japan).mra": {
+          "sha256": "10dc9c5d1b0110ece1d3bfb963f5626203a4e0efac01da3ad52bba4fd32a46be"
+        },
+        "games/mame/mshvsfj.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+            "mvs.01": "2914e05c2266350de0ef28af5bb99690a80933bb76800fd38e27d1ee622ad665",
+            "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+            "mvs.05h": "916fb92a3ea4c7afb79a5c9ba83a6d22270f5a790ece0dc60c2d5b860d32e0f0",
+            "mvs.06a": "4fa6c17b5a63f031854865c0777f7f3ef16124101506c98298d3dbaa756730a7",
+            "mvs.07b": "c2375e11acd8a726e7f92d766322228052011a3738f76024fcdda8b1bba9711d",
+            "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+            "mvs.09b": "c262d7ed4e01b033435c1e83804e007251ac3cea2b00e4d6d5f792cd8394b42a",
+            "mvs.10b": "e2605d7c744565615eecad8ae6852fe96f2eec8478e4f8eaeebc79f184ad446e",
+            "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+            "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+            "mvs.13m": "fd4ed6d5474fcdccbfd9bdd238cacba132e71f7521b5adc58166a5b94ce52e31",
+            "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+            "mvs.15m": "5709e9790ed9719a0633aedd4641829012c44aa37c44dccb1f8489208c4cb2cf",
+            "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+            "mvs.17m": "345f5eb13765e1c703481c87045820ce0e0c5a2e8d502c3e1843fb7b672718f3",
+            "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+            "mvs.19m": "8b6ad4f39f90cec2380f8dec09aab57e5d47833e9e5b282d2384a969079daf36",
+            "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+            "mvsj.03i": "f070624fdc23bb2763717a61ca5ba5d1b9e3551ff82393bf4c42902c57b47c8d",
+            "mvsj.04i": "6479e7c55736fd4408ac56e97caffc271c2d6be9432790d1735ea2f4768ae342"
+          }
+        }
+      },
+      "platform": "mister",
+      "profile": "default",
+      "region": "jp",
+      "variant": "japan"
+    },
+    "usa-darksoft": {
+      "destination_requirements": "Use the Darksoft hardware and layout described in this kit's readme.",
+      "inputs": [
+        "source-0981af466a7ef34356b1",
+        "source-0ac719e09a64cfee8601",
+        "source-2914e05c2266350de0ef",
+        "source-332edc4527fc1a7aa307",
+        "source-345f5eb13765e1c70348",
+        "source-4fa6c17b5a63f0318548",
+        "source-5709e9790ed9719a0633",
+        "source-615f278514851ed5e0da",
+        "source-6479e7c55736fd4408ac",
+        "source-7c36217c0cec1075d2a5",
+        "source-8b6ad4f39f90cec2380f",
+        "source-8e706ff8e12c250a2f83",
+        "source-916fb92a3ea4c7afb79a",
+        "source-9939e61cf5dd99477fdf",
+        "source-c2375e11acd8a726e7f9",
+        "source-c262d7ed4e01b033435c",
+        "source-d00efcfbeed2f4302b11",
+        "source-d7076dab85ed83c8c777",
+        "source-e2605d7c744565615eec",
+        "source-f070624fdc23bb276371",
+        "source-fd4ed6d5474fcdccbfd9"
+      ],
+      "native_variant": "usa",
+      "outputs": {
+        "games/mshvsf-ex_usa/NAME": {
+          "sha256": "a33cb361291349382d5025078b0378862c6629482fb3cf6cd9ecce05b4e71de3"
+        },
+        "games/mshvsf-ex_usa/flash.01": {
+          "sha256": "be871d3dff39f201f83e481e1a2fc9ae94e0ecd5a51d4fac3e6b23b60c3d985d"
+        },
+        "games/mshvsf-ex_usa/flash.02": {
+          "sha256": "9d0b6ddab7d977cfcd6a7751759cd96deeb311db5775d71b273f5aaf0db5a5e0"
+        },
+        "games/mshvsf-ex_usa/flash.03": {
+          "sha256": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85"
+        },
+        "games/mshvsf-ex_usa/flash.04": {
+          "sha256": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3"
+        },
+        "games/mshvsf-ex_usa/flash.05": {
+          "sha256": "4783c80ec8fdf1c3856c10815613513adbd429cf7f060e376bf4e0ef86c6140c"
+        },
+        "games/mshvsf-ex_usa/flash.06": {
+          "sha256": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6"
+        },
+        "games/mshvsf-ex_usa/flash.07": {
+          "sha256": "d7c3c8897604cf26003f1b9b017bbf3f5476028780fd96301cafc3a784a8a4b6"
+        },
+        "games/mshvsf-ex_usa/flash.08": {
+          "sha256": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46"
+        },
+        "games/mshvsf-ex_usa/flash.09": {
+          "sha256": "a00b604e5ba126455c754ba695b5f46a9ab5c819434f34745405b2825e6c7e42"
+        },
+        "games/mshvsf-ex_usa/flash.10": {
+          "sha256": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3"
+        },
+        "games/mshvsf-ex_usa/flash.11": {
+          "sha256": "b4dfc6cf66feffe5cc0d2f008b81509bd125a8dfd5c570ac1bd1209583c1fec1"
+        },
+        "games/mshvsf-ex_usa/flash.12": {
+          "sha256": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4"
+        },
+        "games/mshvsf-ex_usa/key": {
+          "sha256": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31"
+        },
+        "receipts/mshvsf-ex_usa.json": {
+          "sha256": "8323405c14e61ef318c0e362a9649c8d46a67ac4cf4fc410e3b54c941cf2a476"
+        }
+      },
+      "platform": "darksoft",
+      "profile": "default",
+      "region": "us",
+      "variant": "usa"
+    },
+    "usa-fbneo": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0981af466a7ef34356b1",
+        "source-0ac719e09a64cfee8601",
+        "source-2914e05c2266350de0ef",
+        "source-332edc4527fc1a7aa307",
+        "source-345f5eb13765e1c70348",
+        "source-4fa6c17b5a63f0318548",
+        "source-5709e9790ed9719a0633",
+        "source-615f278514851ed5e0da",
+        "source-6479e7c55736fd4408ac",
+        "source-7c36217c0cec1075d2a5",
+        "source-8b6ad4f39f90cec2380f",
+        "source-8e706ff8e12c250a2f83",
+        "source-916fb92a3ea4c7afb79a",
+        "source-9939e61cf5dd99477fdf",
+        "source-c2375e11acd8a726e7f9",
+        "source-c262d7ed4e01b033435c",
+        "source-d00efcfbeed2f4302b11",
+        "source-d7076dab85ed83c8c777",
+        "source-e2605d7c744565615eec",
+        "source-f070624fdc23bb276371",
+        "source-fd4ed6d5474fcdccbfd9"
+      ],
+      "native_variant": "usa",
+      "outputs": {
+        "roms/mshvsfex.zip": {
+          "members": {
+            "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+            "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+            "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+            "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+            "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+            "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+            "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+            "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+            "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+            "mvsex.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+            "mvsex.03i": "0fb1bdf967e18602cc15123cb92010d42b2e27d603d38008c0f83d3f538a03b7",
+            "mvsex.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8",
+            "mvsex.05h": "a67a5cf66ac7191fcdcd31ba8c9bdafe83058ef87fd7f4f91d82fcd9b6addfa6",
+            "mvsex.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+            "mvsex.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+            "mvsex.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+            "mvsex.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+            "mvsex.13m": "4783c80ec8fdf1c3856c10815613513adbd429cf7f060e376bf4e0ef86c6140c",
+            "mvsex.15m": "d7c3c8897604cf26003f1b9b017bbf3f5476028780fd96301cafc3a784a8a4b6",
+            "mvsex.17m": "a00b604e5ba126455c754ba695b5f46a9ab5c819434f34745405b2825e6c7e42",
+            "mvsex.19m": "b4dfc6cf66feffe5cc0d2f008b81509bd125a8dfd5c570ac1bd1209583c1fec1"
+          }
+        }
+      },
+      "platform": "fbneo",
+      "profile": "default",
+      "region": "us",
+      "variant": "usa"
+    },
+    "usa-hbmame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0981af466a7ef34356b1",
+        "source-0ac719e09a64cfee8601",
+        "source-2914e05c2266350de0ef",
+        "source-332edc4527fc1a7aa307",
+        "source-345f5eb13765e1c70348",
+        "source-4fa6c17b5a63f0318548",
+        "source-524a25bcd153be24594d",
+        "source-5709e9790ed9719a0633",
+        "source-615f278514851ed5e0da",
+        "source-6479e7c55736fd4408ac",
+        "source-7c36217c0cec1075d2a5",
+        "source-8b6ad4f39f90cec2380f",
+        "source-8e706ff8e12c250a2f83",
+        "source-916fb92a3ea4c7afb79a",
+        "source-9939e61cf5dd99477fdf",
+        "source-c2375e11acd8a726e7f9",
+        "source-c262d7ed4e01b033435c",
+        "source-d00efcfbeed2f4302b11",
+        "source-d7076dab85ed83c8c777",
+        "source-e2605d7c744565615eec",
+        "source-f070624fdc23bb276371",
+        "source-fd4ed6d5474fcdccbfd9"
+      ],
+      "native_variant": "usa",
+      "outputs": {
+        "roms/mshvsfex.zip": {
+          "members": {
+            "mvs.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+            "mvs.05h": "a67a5cf66ac7191fcdcd31ba8c9bdafe83058ef87fd7f4f91d82fcd9b6addfa6",
+            "mvs.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+            "mvs.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+            "mvs.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+            "mvs.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+            "mvs.13m": "4783c80ec8fdf1c3856c10815613513adbd429cf7f060e376bf4e0ef86c6140c",
+            "mvs.15m": "d7c3c8897604cf26003f1b9b017bbf3f5476028780fd96301cafc3a784a8a4b6",
+            "mvs.17m": "a00b604e5ba126455c754ba695b5f46a9ab5c819434f34745405b2825e6c7e42",
+            "mvs.19m": "b4dfc6cf66feffe5cc0d2f008b81509bd125a8dfd5c570ac1bd1209583c1fec1",
+            "mvsj.03i": "0fb1bdf967e18602cc15123cb92010d42b2e27d603d38008c0f83d3f538a03b7",
+            "mvsj.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8"
+          }
+        },
+        "roms/mshvsfj.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+            "mvs.01": "2914e05c2266350de0ef28af5bb99690a80933bb76800fd38e27d1ee622ad665",
+            "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+            "mvs.05h": "916fb92a3ea4c7afb79a5c9ba83a6d22270f5a790ece0dc60c2d5b860d32e0f0",
+            "mvs.06a": "4fa6c17b5a63f031854865c0777f7f3ef16124101506c98298d3dbaa756730a7",
+            "mvs.07b": "c2375e11acd8a726e7f92d766322228052011a3738f76024fcdda8b1bba9711d",
+            "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+            "mvs.09b": "c262d7ed4e01b033435c1e83804e007251ac3cea2b00e4d6d5f792cd8394b42a",
+            "mvs.10b": "e2605d7c744565615eecad8ae6852fe96f2eec8478e4f8eaeebc79f184ad446e",
+            "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+            "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+            "mvs.13m": "fd4ed6d5474fcdccbfd9bdd238cacba132e71f7521b5adc58166a5b94ce52e31",
+            "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+            "mvs.15m": "5709e9790ed9719a0633aedd4641829012c44aa37c44dccb1f8489208c4cb2cf",
+            "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+            "mvs.17m": "345f5eb13765e1c703481c87045820ce0e0c5a2e8d502c3e1843fb7b672718f3",
+            "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+            "mvs.19m": "8b6ad4f39f90cec2380f8dec09aab57e5d47833e9e5b282d2384a969079daf36",
+            "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+            "mvsj.03i": "f070624fdc23bb2763717a61ca5ba5d1b9e3551ff82393bf4c42902c57b47c8d",
+            "mvsj.04i": "6479e7c55736fd4408ac56e97caffc271c2d6be9432790d1735ea2f4768ae342"
+          }
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        }
+      },
+      "platform": "hbmame",
+      "profile": "default",
+      "region": "us",
+      "variant": "usa"
+    },
+    "usa-mame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0981af466a7ef34356b1",
+        "source-0ac719e09a64cfee8601",
+        "source-2914e05c2266350de0ef",
+        "source-332edc4527fc1a7aa307",
+        "source-345f5eb13765e1c70348",
+        "source-4fa6c17b5a63f0318548",
+        "source-524a25bcd153be24594d",
+        "source-5709e9790ed9719a0633",
+        "source-615f278514851ed5e0da",
+        "source-6479e7c55736fd4408ac",
+        "source-7c36217c0cec1075d2a5",
+        "source-8b6ad4f39f90cec2380f",
+        "source-8e706ff8e12c250a2f83",
+        "source-916fb92a3ea4c7afb79a",
+        "source-9939e61cf5dd99477fdf",
+        "source-c2375e11acd8a726e7f9",
+        "source-c262d7ed4e01b033435c",
+        "source-d00efcfbeed2f4302b11",
+        "source-d7076dab85ed83c8c777",
+        "source-e2605d7c744565615eec",
+        "source-f070624fdc23bb276371",
+        "source-fd4ed6d5474fcdccbfd9"
+      ],
+      "native_variant": "usa",
+      "outputs": {
+        "roms/mshvsfj.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+            "mvs.01": "df648bd78cc54d8cd618065bab4bde0107bff6f5a5bdd854dd5f61ad909419c9",
+            "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+            "mvs.05h": "a67a5cf66ac7191fcdcd31ba8c9bdafe83058ef87fd7f4f91d82fcd9b6addfa6",
+            "mvs.06a": "c9028e07fb311394727eabb09391a974ecf1f232fa64b14cd31da07de3a5d1a9",
+            "mvs.07b": "6a0254172c669c90e8784d250f12b7b518adb956391b35c90562ff9f7383c780",
+            "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+            "mvs.09b": "34b8024a93a597384c9ef29c861c59233d66c1b38bc91745184b7871ba9d63db",
+            "mvs.10b": "b5e53005a630e62a0b797d7b260a2c426dc90b368e760579de09e39f72c4a4ba",
+            "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+            "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+            "mvs.13m": "4783c80ec8fdf1c3856c10815613513adbd429cf7f060e376bf4e0ef86c6140c",
+            "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+            "mvs.15m": "d7c3c8897604cf26003f1b9b017bbf3f5476028780fd96301cafc3a784a8a4b6",
+            "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+            "mvs.17m": "a00b604e5ba126455c754ba695b5f46a9ab5c819434f34745405b2825e6c7e42",
+            "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+            "mvs.19m": "b4dfc6cf66feffe5cc0d2f008b81509bd125a8dfd5c570ac1bd1209583c1fec1",
+            "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+            "mvsj.03i": "0fb1bdf967e18602cc15123cb92010d42b2e27d603d38008c0f83d3f538a03b7",
+            "mvsj.04i": "49a16a50c753d2b2e728d8ed266c00eb399c1de8bbdbc7b3bd94a582443cade8"
+          }
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        }
+      },
+      "platform": "mame",
+      "profile": "mshvsf-ex-usa",
+      "region": "us",
+      "variant": "usa"
+    },
+    "usa-mister": {
+      "destination_requirements": "Use the MiSTer core named by the included MRA.",
+      "inputs": [
+        "source-0981af466a7ef34356b1",
+        "source-0ac719e09a64cfee8601",
+        "source-2914e05c2266350de0ef",
+        "source-332edc4527fc1a7aa307",
+        "source-345f5eb13765e1c70348",
+        "source-4fa6c17b5a63f0318548",
+        "source-524a25bcd153be24594d",
+        "source-5709e9790ed9719a0633",
+        "source-615f278514851ed5e0da",
+        "source-6479e7c55736fd4408ac",
+        "source-7c36217c0cec1075d2a5",
+        "source-8b6ad4f39f90cec2380f",
+        "source-8e706ff8e12c250a2f83",
+        "source-916fb92a3ea4c7afb79a",
+        "source-9939e61cf5dd99477fdf",
+        "source-c2375e11acd8a726e7f9",
+        "source-c262d7ed4e01b033435c",
+        "source-d00efcfbeed2f4302b11",
+        "source-d7076dab85ed83c8c777",
+        "source-e2605d7c744565615eec",
+        "source-f070624fdc23bb276371",
+        "source-fd4ed6d5474fcdccbfd9"
+      ],
+      "native_variant": "usa",
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Enhanced Versions/Marvel Super Heroes Vs. Street Fighter EX (USA).mra": {
+          "sha256": "30c113f9991e4532467efb4f0af30bed42cb0e8c4be6c11ee6eb68fadb84707a"
+        },
+        "games/mame/mshvsfj.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "mshvsfj.key": "0981af466a7ef34356b11712f0d07a43de7ee104db2e464e0cc4e78907886a31",
+            "mvs.01": "2914e05c2266350de0ef28af5bb99690a80933bb76800fd38e27d1ee622ad665",
+            "mvs.02": "9939e61cf5dd99477fdf4cb1b505516da8b68512da4f10aa7680eae8d6b5abe7",
+            "mvs.05h": "916fb92a3ea4c7afb79a5c9ba83a6d22270f5a790ece0dc60c2d5b860d32e0f0",
+            "mvs.06a": "4fa6c17b5a63f031854865c0777f7f3ef16124101506c98298d3dbaa756730a7",
+            "mvs.07b": "c2375e11acd8a726e7f92d766322228052011a3738f76024fcdda8b1bba9711d",
+            "mvs.08a": "d00efcfbeed2f4302b1172cc4bbd78b55135b7f7f15e776fe3cb820a8d45668a",
+            "mvs.09b": "c262d7ed4e01b033435c1e83804e007251ac3cea2b00e4d6d5f792cd8394b42a",
+            "mvs.10b": "e2605d7c744565615eecad8ae6852fe96f2eec8478e4f8eaeebc79f184ad446e",
+            "mvs.11m": "7c36217c0cec1075d2a5dbd1bdc310fd79c8ac3b3795a586d6aad0bc04668d85",
+            "mvs.12m": "332edc4527fc1a7aa307a6c5cf824e423462607d853ce6665859c82ab5a7a4a3",
+            "mvs.13m": "fd4ed6d5474fcdccbfd9bdd238cacba132e71f7521b5adc58166a5b94ce52e31",
+            "mvs.14m": "0ac719e09a64cfee86017c20a6e4b0f6575a91fc7b2859ddf573a15a19dfd3f6",
+            "mvs.15m": "5709e9790ed9719a0633aedd4641829012c44aa37c44dccb1f8489208c4cb2cf",
+            "mvs.16m": "d7076dab85ed83c8c77723ec00e30982079ab51c77bb06b06bddf1ff60dfbf46",
+            "mvs.17m": "345f5eb13765e1c703481c87045820ce0e0c5a2e8d502c3e1843fb7b672718f3",
+            "mvs.18m": "8e706ff8e12c250a2f830502fd03c6186651defc0c7a0236a4959ef7a0e8fda3",
+            "mvs.19m": "8b6ad4f39f90cec2380f8dec09aab57e5d47833e9e5b282d2384a969079daf36",
+            "mvs.20m": "615f278514851ed5e0da6ff8fb103c2d418735a49eacf9a38ef90551c0e5aac4",
+            "mvsj.03i": "f070624fdc23bb2763717a61ca5ba5d1b9e3551ff82393bf4c42902c57b47c8d",
+            "mvsj.04i": "6479e7c55736fd4408ac56e97caffc271c2d6be9432790d1735ea2f4768ae342"
+          }
+        }
+      },
+      "platform": "mister",
+      "profile": "default",
+      "region": "us",
+      "variant": "usa"
+    }
+  }
+}
