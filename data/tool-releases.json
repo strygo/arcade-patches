@@ -156,6 +156,10 @@
       "sha256": "1d8daeb096721e3bf309adff818662e15617c27403f936761dd3c94cd7a4563b",
       "size": 72541
     },
+    "catalog/v1/definitions/1e84b7ec60ef8f5feb3a41f652b19742f4c2a147d89b93fad7896b7e4e588f47.json": {
+      "sha256": "1e84b7ec60ef8f5feb3a41f652b19742f4c2a147d89b93fad7896b7e4e588f47",
+      "size": 34613
+    },
     "catalog/v1/definitions/1e96c1c52584557b64f617195eeb42aa0bea01fd66c004008a96a7df8eb3397d.json": {
       "sha256": "1e96c1c52584557b64f617195eeb42aa0bea01fd66c004008a96a7df8eb3397d",
       "size": 34888
@@ -180,6 +184,10 @@
       "sha256": "25f4d958558518e11171f185a6114211ef0aa413499022a5bfa6fc8d79e9aa66",
       "size": 55860
     },
+    "catalog/v1/definitions/25fee14c6e6e574cb022b1cafe2bb52507347a3f6ca1b9da639a7488acb4f5ab.json": {
+      "sha256": "25fee14c6e6e574cb022b1cafe2bb52507347a3f6ca1b9da639a7488acb4f5ab",
+      "size": 76730
+    },
     "catalog/v1/definitions/26566fabd7b9c3bbadccf27623be10cf019f05b224e09cbcea3697a3bbc7accd.json": {
       "sha256": "26566fabd7b9c3bbadccf27623be10cf019f05b224e09cbcea3697a3bbc7accd",
       "size": 60224
@@ -199,6 +207,10 @@
     "catalog/v1/definitions/2dd8a357c2a1f8ed169894c096d4f4c294f0f57f7379e02b6d53c486b7460d2f.json": {
       "sha256": "2dd8a357c2a1f8ed169894c096d4f4c294f0f57f7379e02b6d53c486b7460d2f",
       "size": 91477
+    },
+    "catalog/v1/definitions/3039d8db688ba8e3317557af7899098f93249d9c266d95e0f7fe35dc77300784.json": {
+      "sha256": "3039d8db688ba8e3317557af7899098f93249d9c266d95e0f7fe35dc77300784",
+      "size": 64500
     },
     "catalog/v1/definitions/30894aebc8f389d6fce7114e9e6555b685ac29aabbdcc64079c11cf5681940f2.json": {
       "sha256": "30894aebc8f389d6fce7114e9e6555b685ac29aabbdcc64079c11cf5681940f2",
@@ -228,9 +240,17 @@
       "sha256": "3696a155887fe2994d2ca11b9f80dfe731bbc5f0dd7d899ba33f3027d1aae09d",
       "size": 126603
     },
+    "catalog/v1/definitions/385f9804b5eb15913fc246e8250b36d15094663be9ca275adcab65e3fd720277.json": {
+      "sha256": "385f9804b5eb15913fc246e8250b36d15094663be9ca275adcab65e3fd720277",
+      "size": 160991
+    },
     "catalog/v1/definitions/386fa1f4b644a9ff3aaebee40c59fc01c6fa3d076f7afc17f96e72a01dd61a09.json": {
       "sha256": "386fa1f4b644a9ff3aaebee40c59fc01c6fa3d076f7afc17f96e72a01dd61a09",
       "size": 74047
+    },
+    "catalog/v1/definitions/3d419558ec826fecf96357fea6a1e5ff59a973e45148dd4040a9802570621b75.json": {
+      "sha256": "3d419558ec826fecf96357fea6a1e5ff59a973e45148dd4040a9802570621b75",
+      "size": 46240
     },
     "catalog/v1/definitions/3ee3959a1a87f61736069d5aaf7daa2fe26554a004f4f3dc9b3b2dc3277a8de6.json": {
       "sha256": "3ee3959a1a87f61736069d5aaf7daa2fe26554a004f4f3dc9b3b2dc3277a8de6",
@@ -364,6 +384,10 @@
       "sha256": "674799fa19bbbd0a3a43a0ffd63a8777acae0c7dca82530b882eb85eb2098d92",
       "size": 45232
     },
+    "catalog/v1/definitions/6860ff067f12b2075922e28981e81addcdf03a58e1c6065fda08c6553bf8cff3.json": {
+      "sha256": "6860ff067f12b2075922e28981e81addcdf03a58e1c6065fda08c6553bf8cff3",
+      "size": 77395
+    },
     "catalog/v1/definitions/6934cb3ff98285afcaff62a6f30563c3f016708136a3b2c9662e7006dc6a8018.json": {
       "sha256": "6934cb3ff98285afcaff62a6f30563c3f016708136a3b2c9662e7006dc6a8018",
       "size": 2043
@@ -375,6 +399,10 @@
     "catalog/v1/definitions/6f7a27b5e4a7bc15b135a01932e75a878cba768f70459c48dff07a4c88f95dce.json": {
       "sha256": "6f7a27b5e4a7bc15b135a01932e75a878cba768f70459c48dff07a4c88f95dce",
       "size": 77696
+    },
+    "catalog/v1/definitions/72c4325d65db84e3a2541e1caa6996728a823eb846bf14e007778deceb6e2d5f.json": {
+      "sha256": "72c4325d65db84e3a2541e1caa6996728a823eb846bf14e007778deceb6e2d5f",
+      "size": 76276
     },
     "catalog/v1/definitions/757d4d80daa8bc35022d7f54de8c6189fe86625cacb599f58a74e801208be0f1.json": {
       "sha256": "757d4d80daa8bc35022d7f54de8c6189fe86625cacb599f58a74e801208be0f1",
@@ -496,6 +524,10 @@
       "sha256": "9dd7fb2418f9d92e00bd7261eebe880a840f467224b1c19e37cb0ad91fc85337",
       "size": 55860
     },
+    "catalog/v1/definitions/9e286672c08dd2346d194c88c57e306c4b305830124cd0f3a70d289ffcc2b1bc.json": {
+      "sha256": "9e286672c08dd2346d194c88c57e306c4b305830124cd0f3a70d289ffcc2b1bc",
+      "size": 58019
+    },
     "catalog/v1/definitions/a114fac2ca2c8a4875b353f0e016e4b8ca93c952b8a8bc10dc2c306e85834f7e.json": {
       "sha256": "a114fac2ca2c8a4875b353f0e016e4b8ca93c952b8a8bc10dc2c306e85834f7e",
       "size": 60224
@@ -540,6 +572,10 @@
       "sha256": "acb373ddab89b196d067b8c3ea6b3428203892c13c861a5e1fb655d07e24e09d",
       "size": 72108
     },
+    "catalog/v1/definitions/aeeba4b13617e3b2e20f7fe040710a9b946210a17308aef0afa30339fd491055.json": {
+      "sha256": "aeeba4b13617e3b2e20f7fe040710a9b946210a17308aef0afa30339fd491055",
+      "size": 63654
+    },
     "catalog/v1/definitions/afcd03b9a3649c51c7e56f0452ef1ab0677f3ce6cc40e52539affe8b6332ddcb.json": {
       "sha256": "afcd03b9a3649c51c7e56f0452ef1ab0677f3ce6cc40e52539affe8b6332ddcb",
       "size": 149073
@@ -580,6 +616,10 @@
       "sha256": "c09d2127f8783e0fc3b0f3d867682fe79b33ebaed28420c129208c6aef1c80b4",
       "size": 85056
     },
+    "catalog/v1/definitions/c0f1fd02fa9096580a4fc49ff16f560091f8f3e75df8b489a0d58e71516ac72c.json": {
+      "sha256": "c0f1fd02fa9096580a4fc49ff16f560091f8f3e75df8b489a0d58e71516ac72c",
+      "size": 89451
+    },
     "catalog/v1/definitions/c1777fdddb6f073905d1e64ab1f835882ba1a6c34ef1e216fe69e8498456f55d.json": {
       "sha256": "c1777fdddb6f073905d1e64ab1f835882ba1a6c34ef1e216fe69e8498456f55d",
       "size": 1806
@@ -599,6 +639,10 @@
     "catalog/v1/definitions/c4c2dc3e6c2d2d73c41e6a0ca85fcfaa1c5486e2dd5a60c91dbcf7ffe843e522.json": {
       "sha256": "c4c2dc3e6c2d2d73c41e6a0ca85fcfaa1c5486e2dd5a60c91dbcf7ffe843e522",
       "size": 72706
+    },
+    "catalog/v1/definitions/c7d074ff747a99e0e632411485597c2bce06819005edce6bd07115e38c5a3f38.json": {
+      "sha256": "c7d074ff747a99e0e632411485597c2bce06819005edce6bd07115e38c5a3f38",
+      "size": 79905
     },
     "catalog/v1/definitions/c8ffd6f1f78b51a327ec64933813355b3a534baed5ec1b1e761af7da1a3bb0e0.json": {
       "sha256": "c8ffd6f1f78b51a327ec64933813355b3a534baed5ec1b1e761af7da1a3bb0e0",
@@ -741,8 +785,8 @@
       "size": 512222
     },
     "catalog/v1/index.json": {
-      "sha256": "431f9aa55fdea08a27a621eb41350e737c890854ad47cdcba909e5e6ac06a1cd",
-      "size": 31532
+      "sha256": "4a49aadb1e403c0edd40238b4d77b7ace90f1df9511812de77661964e956ff40",
+      "size": 31533
     },
     "downloads/archive/03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59/final-fight-ex-cps2-rc3-kit.zip": {
       "sha256": "03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59",
@@ -768,9 +812,17 @@
       "sha256": "1192052983ef72dc6b5460e88561ec9b645bff996d9bd2e9d492a889dc0b79f3",
       "size": 1203865
     },
+    "downloads/archive/149edf2f7d1853b373b2674e6022f4fb4dc384502f8da886ac925b03d2038f6a/ssf2t-gmc-rc5-ips.zip": {
+      "sha256": "149edf2f7d1853b373b2674e6022f4fb4dc384502f8da886ac925b03d2038f6a",
+      "size": 196458
+    },
     "downloads/archive/16124090372f902aab382a01c187ad564d7feb15250c5f59561d593d484d7be7/sfz3ugd-multiregion-1.0-chd.zip": {
       "sha256": "16124090372f902aab382a01c187ad564d7feb15250c5f59561d593d484d7be7",
       "size": 134108
+    },
+    "downloads/archive/19b9fcd8aba2149bd0ee9e6cbbf71e386cd46e2823250ab3534ff431e00c7d29/ssf2-ex-rc14-ips.zip": {
+      "sha256": "19b9fcd8aba2149bd0ee9e6cbbf71e386cd46e2823250ab3534ff431e00c7d29",
+      "size": 1506468
     },
     "downloads/archive/1ce7c781ecb084e166bb5a52cfdd09cdaac3eeb5a2cb5cfd1a19ffa3b86f2adf/sfa3-upper-cps2-rc2-kit.zip": {
       "sha256": "1ce7c781ecb084e166bb5a52cfdd09cdaac3eeb5a2cb5cfd1a19ffa3b86f2adf",
@@ -783,6 +835,10 @@
     "downloads/archive/1dcd6eb225da127aad9be06a33dfd4dff7fec7026da28869661344632d700641/nwarr-restoration-rc1-ips.zip": {
       "sha256": "1dcd6eb225da127aad9be06a33dfd4dff7fec7026da28869661344632d700641",
       "size": 243474
+    },
+    "downloads/archive/21ed6c9fb491561f188051df5f9adf2e5ec943358e08e99ce8cc5cfea7d64ee8/vsav2-arrange-rc5-kit.zip": {
+      "sha256": "21ed6c9fb491561f188051df5f9adf2e5ec943358e08e99ce8cc5cfea7d64ee8",
+      "size": 1985764
     },
     "downloads/archive/22a8dc87b226fcdf67fa27a964410e2e0e1210e34384d3091e662b03242aa306/vsav-arrange-rc5-kit.zip": {
       "sha256": "22a8dc87b226fcdf67fa27a964410e2e0e1210e34384d3091e662b03242aa306",
@@ -807,6 +863,10 @@
     "downloads/archive/36dad52f1bb1d1b6722982cde9d9f4c5a1d4200280e084fcfe37d46f941dc277/vsav2-english-rc3-ips.zip": {
       "sha256": "36dad52f1bb1d1b6722982cde9d9f4c5a1d4200280e084fcfe37d46f941dc277",
       "size": 189201
+    },
+    "downloads/archive/385896def66838752b10d38b9ec6620f5a0b4d5557ab84c2a8f87bebe5fc0682/vsav-arrange-rc6-kit.zip": {
+      "sha256": "385896def66838752b10d38b9ec6620f5a0b4d5557ab84c2a8f87bebe5fc0682",
+      "size": 2365562
     },
     "downloads/archive/39808a9eac76238c34db88454076ec741be743757fbb122ef5863a8b891b1f6b/hsf2-restoration-rc1-ips.zip": {
       "sha256": "39808a9eac76238c34db88454076ec741be743757fbb122ef5863a8b891b1f6b",
@@ -864,9 +924,17 @@
       "sha256": "51d1217594c6295f40e234683fedfb573aef722c1906bcf49c04ffba2c199ed1",
       "size": 18043707
     },
+    "downloads/archive/53733ba86df5ca3870213fcc7b682d482f0c0527b7d12dc90fe4c3b9048cdfc9/sfa3-restoration-rc6-ips.zip": {
+      "sha256": "53733ba86df5ca3870213fcc7b682d482f0c0527b7d12dc90fe4c3b9048cdfc9",
+      "size": 667426
+    },
     "downloads/archive/5ab458fd985d92d4b62e0168a3e51ab0f175b8cca05428cb45d90a92596d5f4d/final-fight-ex-rc4-kit.zip": {
       "sha256": "5ab458fd985d92d4b62e0168a3e51ab0f175b8cca05428cb45d90a92596d5f4d",
       "size": 3462447
+    },
+    "downloads/archive/5b22da1effd45c2f43f8e2e85a18bab3a9c207e5e8a2e57bade98a33f125e554/sfa-ex-rc4-ips.zip": {
+      "sha256": "5b22da1effd45c2f43f8e2e85a18bab3a9c207e5e8a2e57bade98a33f125e554",
+      "size": 1223518
     },
     "downloads/archive/5b40d65c02b1ecce5f9eeaaf8e2c76b9f6a1c952779360f1195674c7661f0197/vhunt2-arrange-rc4-kit.zip": {
       "sha256": "5b40d65c02b1ecce5f9eeaaf8e2c76b9f6a1c952779360f1195674c7661f0197",
@@ -884,9 +952,17 @@
       "sha256": "64157b1ef51d6c9bc5cb4182e722272545e8bd4ec4273800561089b145ddef62",
       "size": 18000320
     },
+    "downloads/archive/681130ce77f75c73ced282f661ddf1e9fb87ef833b982d9e68a73154ec831a3d/mshvsf-ex-rc7-ips.zip": {
+      "sha256": "681130ce77f75c73ced282f661ddf1e9fb87ef833b982d9e68a73154ec831a3d",
+      "size": 1093372
+    },
     "downloads/archive/6f5bd5d122837e95bfcdeb32acee42ff8293c4cb3c7c07260378aca11f86df03/mshvsf-restoration-rc1-ips.zip": {
       "sha256": "6f5bd5d122837e95bfcdeb32acee42ff8293c4cb3c7c07260378aca11f86df03",
       "size": 244206
+    },
+    "downloads/archive/71f3404f81096dda5ece6b41e3b5d9ca92c3953b56afdcbd8ed05ce69ab2ceae/sfa2-gold-rc9-kit.zip": {
+      "sha256": "71f3404f81096dda5ece6b41e3b5d9ca92c3953b56afdcbd8ed05ce69ab2ceae",
+      "size": 1780940
     },
     "downloads/archive/720a8eb89354dec07439f7f8972f6ea5740a97730bcec69e9caf5c0aa6a4c34b/ssf2t-gmc-rc4-ips.zip": {
       "sha256": "720a8eb89354dec07439f7f8972f6ea5740a97730bcec69e9caf5c0aa6a4c34b",
@@ -919,6 +995,10 @@
     "downloads/archive/86cdfeb39c3f3b55d23f93e6466c5d85434f3f818279150f681a4e4ff0a9d06b/sfz2al-restoration-rc2-ips.zip": {
       "sha256": "86cdfeb39c3f3b55d23f93e6466c5d85434f3f818279150f681a4e4ff0a9d06b",
       "size": 334726
+    },
+    "downloads/archive/88b9e922932ad6d4ccab534397363ce6d140f1fe3015030998fa92a72cb54a29/sfa2-ex-rc5-kit.zip": {
+      "sha256": "88b9e922932ad6d4ccab534397363ce6d140f1fe3015030998fa92a72cb54a29",
+      "size": 1151452
     },
     "downloads/archive/8a9a4c0989a986ad3e6d15dfabc2fe52262719e95325ed02edd026f71f27a7f7/sfz3ugd-multiregion-1.0-chd.zip": {
       "sha256": "8a9a4c0989a986ad3e6d15dfabc2fe52262719e95325ed02edd026f71f27a7f7",
@@ -964,6 +1044,10 @@
       "sha256": "a211707b5951cc27d4662bdafbdba00c40b5269d3acfcd97036eb23b87054b82",
       "size": 1419011
     },
+    "downloads/archive/acda6e988a52527ef0d9e6aca8bb471f719c3b84fc55704793a6c0077509142c/hsf2-restoration-rc2-ips.zip": {
+      "sha256": "acda6e988a52527ef0d9e6aca8bb471f719c3b84fc55704793a6c0077509142c",
+      "size": 228891
+    },
     "downloads/archive/ad581d594e928884d0c32071a468c9a7ab8cd7ef784b46e5ba72b5a2a9da4836/vhunt2-english-rc3-ips.zip": {
       "sha256": "ad581d594e928884d0c32071a468c9a7ab8cd7ef784b46e5ba72b5a2a9da4836",
       "size": 193450
@@ -979,6 +1063,10 @@
     "downloads/archive/b9d9938f0bc65f1c95bb800627f2ff3a4b98a90833a6f110ad23527d4202199b/cps-plus-1.8-kit.zip": {
       "sha256": "b9d9938f0bc65f1c95bb800627f2ff3a4b98a90833a6f110ad23527d4202199b",
       "size": 17994142
+    },
+    "downloads/archive/bacf7e5f3a2b1878504536673a009265de5cb66e8c954d18b175ae589d38b448/vhunt2-arrange-rc5-kit.zip": {
+      "sha256": "bacf7e5f3a2b1878504536673a009265de5cb66e8c954d18b175ae589d38b448",
+      "size": 2066391
     },
     "downloads/archive/beec3b901571f53296168f3e0c06cf120d15bc6067e1aabd7f166c96e2f8a7a7/mshvsf-restoration-rc1-ips.zip": {
       "sha256": "beec3b901571f53296168f3e0c06cf120d15bc6067e1aabd7f166c96e2f8a7a7",
@@ -1093,7 +1181,7 @@
       "size": 63646
     }
   },
-  "generation": 192,
+  "generation": 203,
   "launcher": "tools/downloads/archive/e00b7ff1a450dbd45cf083f12c5b790970ea56f7c63c69d4b362256e395500ac/ArcadePatches-0.1.9.zip",
   "publication_schema": 1,
   "schema": 1,
