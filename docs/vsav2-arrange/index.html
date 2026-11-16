@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Vampire Savior 2 Arrange</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Vampire Savior 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-11-07</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc5</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire Savior 2 Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc5</dd><dt>Updated</dt><dd>2026-11-14</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/vsav2-arrange/title_us.png?v=12b9f1ba9c" alt="Vampire Savior 2 Arrange (USA) title screen"><figcaption><strong>Vampire Savior 2 Arrange</strong><br>USA · <code>vsav2s05</code></figcaption></figure><figure class="build"><img src="../img/vsav2-arrange/title_jp.png?v=d8a0daac27" alt="Vampire Savior 2 Arrange (Japan) title screen"><figcaption><strong>Vampire Savior 2 Arrange</strong><br>Japan · <code>vsav2s06</code></figcaption></figure></div>
 <h2>About</h2>
@@ -86,14 +86,14 @@ You need:</p>
 <tr><td>USA</td><td>Vampire Savior 2 Arrange</td><td class="mono">vsav2s05</td><td class="mono">vsav2aru</td></tr><tr><td>Japan</td><td>Vampire Savior 2 Arrange</td><td class="mono">vsav2s06</td><td class="mono">vsav2arj</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-11-11. Game version unchanged.</p>
+
 <p><strong>FBNeo.</strong> The kit also writes the complete sets <code>vsav2aru</code>, <code>vsav2arj</code> under <code>out/fbneo/</code>, preserving their FBNeo ZIP and ROM filenames. Copy those ZIPs to your FBNeo ROM folder. Use an FBNeo version with definitions matching this game release. To build only these sets, add <code>--platform fbneo</code> to the build command.</p>
 
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/vsav2-arrange-rc4-kit.zip?v=0dd9d70b88">vsav2-arrange-rc4-kit.zip</a>
+  <div class="file"><a href="../downloads/vsav2-arrange-rc5-kit.zip?v=21ed6c9fb4">vsav2-arrange-rc5-kit.zip</a>
   (1.9 MB)</div>
-  <div class="hash">SHA-256: 0dd9d70b885af44ff7e5c124bf4f9db25c232f5c4685537bf58c9e0598ca8318</div>
+  <div class="hash">SHA-256: 21ed6c9fb491561f188051df5f9adf2e5ec943358e08e99ce8cc5cfea7d64ee8</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
@@ -108,13 +108,17 @@ The kit remembers your choices and prepares required helpers and Python packages
 privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
 for the files to copy. Run the same command again to update.</p>
 <details><summary>Advanced command-line reference</summary><h2>How to build</h2>
-<pre><code>unzip vsav2-arrange-rc4-kit.zip -d vsav2-arrange
+<pre><code>unzip vsav2-arrange-rc5-kit.zip -d vsav2-arrange
 cd vsav2-arrange
 python3 apply.py --iso &quot;Vampire Darkstalkers Collection.iso&quot; \
                  --rompath roms --out-dir out</code></pre>
 </details>
 
 <h2 id="history">Release history</h2>
+<h3>rc5 (2026-11-14)</h3><ul>
+<li>Restored the cats’ reactions to EX moves on Concrete Cave.</li>
+<li>Corrected Lord Raptor’s name during Dark Force in the USA build.</li>
+</ul>
 <h3>rc4 (2026-11-07)</h3><ul>
 <li>Fixed crashes and incorrect reactions when Dee is grabbed, transformed or caught in Lilith’s Gloomy Puppet Show.</li>
 <li>Corrected Dee’s Kill Blade hit limit, guard cancels, dash attacks, jumping heavy punch, Sword Grapple and ES pursuit.</li>
