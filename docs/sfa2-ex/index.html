@@ -49,14 +49,14 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Street Fighter Alpha 2 EX</h1>
 <p class="subtitle">Enhanced version</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-11-06</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc5</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Street Fighter Alpha 2 Gold / Zero 2 Dash (2006 PlayStation 2 anthology revision)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc5</dd><dt>Updated</dt><dd>2026-11-14</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/sfa2-ex/title_us.png?v=e5528e478e" alt="Street Fighter Alpha 2 EX (USA) title screen"><figcaption><strong>Street Fighter Alpha 2 EX</strong><br>USA · <code>sfa2ex</code></figcaption></figure><figure class="build"><img src="../img/sfa2-ex/title_jp.png?v=355727033c" alt="Street Fighter Zero 2 EX (Japan) title screen"><figcaption><strong>Street Fighter Zero 2 EX</strong><br>Japan · <code>sfz2ex</code></figcaption></figure></div>
 <h2>About</h2>
 
 <p>Street Fighter Alpha 2 EX builds on our Street Fighter Alpha 2 Gold backport. Every Gold fighter plays exactly as in Gold. EX adds the menus, modes and forms the arcade game kept behind codes or never had, and every secret starts unlocked.</p>
-<p>In CONSOLE game mode the game plays free, and START at the title opens a mode menu: Arcade, Versus, Survival, Dramatic Battle, Akuma, Training and Options. Versus matches go straight back to the select screen, and Coin opens Pause/Back on selection screens and during fights, with a confirmed Quit to the title menu. Training offers recording and replay, computer behavior and guard settings, input history and attack data. Cammy and a Random cell sit on the select screen, Cammy turns up as a CPU opponent in the other fighters&#x27; Arcade runs, and alternate forms take a START press or two instead of five.</p>
+<p>In CONSOLE game mode the game plays free, and START at the title opens a mode menu: Arcade, Versus, Survival, Dramatic Battle, Akuma, Training and Options. Versus lets each side be Human or Computer, with at least one human, and humans choose their fighters first. Matches go straight back to the select screen, and Coin opens Pause/Back on selection screens and during fights, with a confirmed Quit to the title menu. Training offers recording and replay, computer behavior and guard settings, input history and attack data. Cammy and a Random cell sit on the select screen, Cammy turns up as a CPU opponent in the other fighters&#x27; Arcade runs, and alternate forms take a START press or two instead of five.</p>
 <p>Two EX forms join the roster, each one START press away on its fighter&#x27;s cell: EX Akuma and EX Cammy. Both follow Capcom&#x27;s own EX rules, with classic moves and no Super Combos.</p>
 <p>OPTIONS opens an OPTION MODE page with difficulty, time limit, rounds, damage, turbo and sound. The operator menu adds GAME MODE, REGULATION for red or white blood, eight GAME SPEED levels and a TIME LIMIT of 25, 50, 75, 99 or infinity, and the title has a new EX mark. The USA build is in English; the Japan build, Street Fighter Zero 2 EX, keeps the Japanese. EX CONFIGURATION selects JAPAN or INTERNATIONAL backgrounds and ORIGINAL or 30TH ANNIVERSARY artwork.</p>
 <p>The MiSTer MRAs start in CONSOLE mode. MAME and HBMAME start in ARCADE mode, which keeps Gold&#x27;s arcade title; set GAME MODE to CONSOLE on the operator menu&#x27;s EX page for the mode menu. It runs in MAME and HBMAME and on MiSTer.</p>
@@ -68,7 +68,7 @@
 <li>Cammy and Random cells on the select screen, and Cammy as a CPU opponent in Arcade</li>
 <li>EX Akuma (EX Gouki in Japan) and EX Cammy, under Capcom&#x27;s EX rules with no Super Combos and distinct name colors on the select screen</li>
 <li>Alternate forms with one or two START presses, and every secret unlocked from the start</li>
-<li>Versus matches return straight to the select screen</li>
+<li>Versus against another player or a computer, with human-first fighter selection; matches return straight to the select screen</li>
 <li>An OPTION MODE page, and GAME MODE (CONSOLE or ARCADE), eight GAME SPEED levels and a TIME LIMIT with infinity in the operator menu</li>
 <li>A new title screen with an EX mark</li>
 <li>The USA build includes the Japanese story and endings in English, held-button win-quote selection and the next-stage place names</li>
@@ -102,14 +102,14 @@ carries the same audio at full quality, for HBMAME and MiSTer (Jotego's <code>jt
 <p>The HBMAME builds are official <a href="https://github.com/Robbbert/hbmame">HBMAME</a>
 sets, <code>sfa2ex</code> and <code>sfz2ex</code> (<a href="https://github.com/Robbbert/hbmame/pull/56">merged upstream</a>), so full HBMAME collections may already carry them.</p>
 <h2>Download</h2>
-<p>Tools updated 2026-11-10. Game version unchanged.</p>
+
 <p><strong>FBNeo.</strong> The kit also writes the complete sets <code>sfa2ex</code>, <code>sfz2exj</code> under <code>out/fbneo/</code>, preserving their FBNeo ZIP and ROM filenames. Copy those ZIPs to your FBNeo ROM folder. Use an FBNeo version with definitions matching this game release. To build only these sets, add <code>--platform fbneo</code> to the build command.</p>
 
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/sfa2-ex-rc4-kit.zip?v=43e267cd57">sfa2-ex-rc4-kit.zip</a>
+  <div class="file"><a href="../downloads/sfa2-ex-rc5-kit.zip?v=88b9e92293">sfa2-ex-rc5-kit.zip</a>
   (1.1 MB)</div>
-  <div class="hash">SHA-256: 43e267cd5774e6db087252031a07f8b25b3547d0d23ddbd1cbac20224e2d97ef</div>
+  <div class="hash">SHA-256: 88b9e922932ad6d4ccab534397363ce6d140f1fe3015030998fa92a72cb54a29</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
@@ -124,7 +124,7 @@ The kit remembers your choices and prepares required helpers and Python packages
 privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
 for the files to copy. Run the same command again to update.</p>
 <details><summary>Advanced command-line reference</summary><h2>How to build</h2>
-<pre><code>unzip sfa2-ex-rc4-kit.zip -d sfa2-ex
+<pre><code>unzip sfa2-ex-rc5-kit.zip -d sfa2-ex
 cd sfa2-ex
 python3 apply.py --iso &quot;Street Fighter Alpha Anthology.iso&quot; \
                  --romset sfz2al.zip --region us --out-dir out</code></pre>
@@ -132,6 +132,16 @@ python3 apply.py --iso &quot;Street Fighter Alpha Anthology.iso&quot; \
 <h3>Darksoft CPS-2</h3>
 <p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices. The Darksoft export uses the 8 MB version with full-quality native sound.</p>
 <h2 id="history">Release history</h2>
+<h3>rc5 (2026-11-14)</h3><ul>
+<li>Versus setup lets each side be Human or Computer, with at least one human. Humans choose their fighters before choosing the computer’s fighter.</li>
+<li>REGULATION now controls red or white blood correctly in Training.</li>
+<li>Pause keeps fighters, menus and colors stable, holds the music and lets menu sounds play.</li>
+<li>Fixed held confirmation inputs carrying through Continue screens and kept disabled Replay rows unavailable.</li>
+<li>Kept control of Versus setup with the player who opened it until Begin, including when that player chooses Computer.</li>
+<li>Removed the brief title-screen flash when leaving Versus setup and hid unused scores and join prompts.</li>
+<li>Corrected Cammy’s throw voice calls and distinguished Shin Akuma and Shin Gouki names.</li>
+<li>Corrected the Training map’s Alpha/Zero presentation and centered its PRESS START prompt.</li>
+</ul>
 <h3>rc4 (2026-11-06)</h3><ul>
 <li>Training restores lost health after a short pause and keeps fighters at 1 HP instead of ending the round.</li>
 <li>Training begins directly in practice; its pause menu opens SETUP for practice settings.</li>
