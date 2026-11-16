@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Vampire Savior Arrange</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc5</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Vampire Savior Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc5</dd><dt>Updated</dt><dd>2026-11-07</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc6</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Vampire Savior Arrange (2005 PlayStation 2 Vampire: Darkstalkers Collection)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc6</dd><dt>Updated</dt><dd>2026-11-14</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/vsav-arrange/title_us.png?v=327c8edcdf" alt="Vampire Savior Arrange (USA) title screen"><figcaption><strong>Vampire Savior Arrange</strong><br>USA · <code>vsavs01</code></figcaption></figure><figure class="build"><img src="../img/vsav-arrange/title_jp.png?v=ea35ffa888" alt="Vampire Savior Arrange (Japan) title screen"><figcaption><strong>Vampire Savior Arrange</strong><br>Japan · <code>vsavs02</code></figcaption></figure></div>
 <h2>About</h2>
@@ -85,14 +85,14 @@ You need:</p>
 <tr><td>USA</td><td>Vampire Savior Arrange</td><td class="mono">vsavs01</td><td class="mono">vsavaru</td></tr><tr><td>Japan</td><td>Vampire Savior Arrange</td><td class="mono">vsavs02</td><td class="mono">vsavarj</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-11-11. Game version unchanged.</p>
+
 <p><strong>FBNeo.</strong> The kit also writes the complete sets <code>vsavaru</code>, <code>vsavarj</code> under <code>out/fbneo/</code>, preserving their FBNeo ZIP and ROM filenames. Copy those ZIPs to your FBNeo ROM folder. Use an FBNeo version with definitions matching this game release. To build only these sets, add <code>--platform fbneo</code> to the build command.</p>
 
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/vsav-arrange-rc5-kit.zip?v=c071ad2287">vsav-arrange-rc5-kit.zip</a>
+  <div class="file"><a href="../downloads/vsav-arrange-rc6-kit.zip?v=385896def6">vsav-arrange-rc6-kit.zip</a>
   (2.3 MB)</div>
-  <div class="hash">SHA-256: c071ad2287183d24d6183b7d0945207f2a7a2674266c58b26f779b58b02580b1</div>
+  <div class="hash">SHA-256: 385896def66838752b10d38b9ec6620f5a0b4d5557ab84c2a8f87bebe5fc0682</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
@@ -107,12 +107,20 @@ The kit remembers your choices and prepares required helpers and Python packages
 privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
 for the files to copy. Run the same command again to update.</p>
 <details><summary>Advanced command-line reference</summary><h2>How to build</h2>
-<pre><code>unzip vsav-arrange-rc5-kit.zip -d vsav-arrange
+<pre><code>unzip vsav-arrange-rc6-kit.zip -d vsav-arrange
 cd vsav-arrange
 python3 apply.py --iso collection.iso --rompath roms --out-dir out</code></pre>
 </details>
 
 <h2 id="history">Release history</h2>
+<h3>rc6 (2026-11-14)</h3><ul>
+<li>Corrected Huitzil’s rival encounter so the dialogue and opponent agree.</li>
+<li>Corrected missing pictures, backgrounds, colors and animation in Dee, Oboro Bishamon, Huitzil and Donovan’s endings.</li>
+<li>Restored Oboro Bishamon’s silent win quotes and all twenty entries in the Master of display.</li>
+<li>Concrete Cave’s cat now reacts to EX moves.</li>
+<li>Corrected the English names shown for Lord Raptor during Dark Force and for Dark Talbain.</li>
+<li>Added Anita’s HUD and versus names and corrected the handoff to the staff roll.</li>
+</ul>
 <h3>rc5 (2026-11-07)</h3><ul>
 <li>Restored the missing scene before the staff roll in Dee’s ending.</li>
 <li>Corrected the player selection outlines around Huitzil, Dee and Donovan, including when both players highlight the same character.</li>
