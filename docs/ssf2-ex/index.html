@@ -265,14 +265,11 @@ so if you use CPS+, copy the <code>games</code> folder from <code>out/mister/</c
 <p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices.</p>
 <h2 id="history">Release history</h2>
 <h3>rc14 (2026-11-14)</h3><ul>
-<li>Ryu&#x27;s stage stays intact during Versus and Training, including jumps and the top edge of the picture.</li>
-<li>Pausing and resuming on Cammy&#x27;s stage no longer briefly corrupts the background.</li>
-<li>Versus and Training accept the first direction as player select opens, and the opening portrait has the correct colors.</li>
-<li>The USA build retains portraits, cursors and colors correctly on the select, VS and pause screens.</li>
-<li>The defeated fighter&#x27;s pose is preserved at the start of Continue.</li>
-<li>Skipping Chun-Li&#x27;s intro early no longer leaves its music playing over the title.</li>
-<li>Country flags and names follow the selected ARTWORK setting throughout select and VS screens.</li>
-<li>Moving around stage select in Versus and Training plays the player-select movement sound.</li>
+<li>Ensures Darksoft compatibility on original CPS-2 hardware: corrects stage graphics and the USA build&#x27;s character-selection portraits, cursors and pause-screen colors.</li>
+<li>Ryu&#x27;s stage stays intact during Versus and Training, including jumps and the top edge of the picture. Pausing and resuming on Cammy&#x27;s stage no longer briefly corrupts the background.</li>
+<li>Versus and Training respond to the first direction as character selection opens, and the opening portrait has the correct colors.</li>
+<li>The defeated fighter&#x27;s pose is preserved at the start of Continue. Skipping Chun-Li&#x27;s intro early no longer leaves its music playing over the title.</li>
+<li>Country flags and names follow the ARTWORK setting throughout character selection and VS screens. Stage selection now plays a sound when moving between stages.</li>
 </ul>
 <h3>rc13 (2026-11-03)</h3><ul>
 <li>TIME LIMIT in Option Mode and EX CONFIGURATION. With it off, the clock shows ∞ and rounds end only by KO.</li>

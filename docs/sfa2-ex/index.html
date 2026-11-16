@@ -133,14 +133,11 @@ python3 apply.py --iso &quot;Street Fighter Alpha Anthology.iso&quot; \
 <p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices. The Darksoft export uses the 8 MB version with full-quality native sound.</p>
 <h2 id="history">Release history</h2>
 <h3>rc5 (2026-11-14)</h3><ul>
-<li>Versus setup lets each side be Human or Computer, with at least one human. Humans choose their fighters before choosing the computer’s fighter.</li>
-<li>REGULATION now controls red or white blood correctly in Training.</li>
-<li>Pause keeps fighters, menus and colors stable, holds the music and lets menu sounds play.</li>
-<li>Fixed held confirmation inputs carrying through Continue screens and kept disabled Replay rows unavailable.</li>
-<li>Kept control of Versus setup with the player who opened it until Begin, including when that player chooses Computer.</li>
-<li>Removed the brief title-screen flash when leaving Versus setup and hid unused scores and join prompts.</li>
-<li>Corrected Cammy’s throw voice calls and distinguished Shin Akuma and Shin Gouki names.</li>
-<li>Corrected the Training map’s Alpha/Zero presentation and centered its PRESS START prompt.</li>
+<li>Ensures Darksoft compatibility on original CPS-2 hardware: fixes Console and Training pause freezes, flickering fighters and incorrect pause-menu colors. Uses the 8 MiB native-audio version.</li>
+<li>Choose human or computer opponents for either side in Versus, with human players choosing their fighters first. The player who opens setup keeps control until Begin.</li>
+<li>Pause holds the music while keeping menu sounds available. Held confirmation buttons no longer carry through Continue screens, and disabled Replay choices stay unavailable.</li>
+<li>Training now follows the REGULATION setting for red or white blood.</li>
+<li>Corrected Cammy&#x27;s throw voices and the Shin Akuma/Shin Gouki names. Polished the Training map and prompts, removed unused scores and join prompts, and removed a brief title flash when leaving Versus setup.</li>
 </ul>
 <h3>rc4 (2026-11-06)</h3><ul>
 <li>Training restores lost health after a short pause and keeps fighters at 1 HP instead of ending the round.</li>
