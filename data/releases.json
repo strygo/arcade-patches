@@ -416,7 +416,7 @@
       }
     },
     "final-fight-ex-cps2": {
-      "current": "rc3",
+      "current": "rc4",
       "versions": {
         "rc3": {
           "current_revision": 10,
@@ -523,6 +523,39 @@
                 }
               },
               "game_contract_sha256": "a85e9953f46f3b5f9e01ea76b5efd5c9726cfd817e1bb419a0b0ef6129517569",
+              "kind": "kit"
+            }
+          }
+        },
+        "rc4": {
+          "current_revision": 1,
+          "date": "2026-11-14",
+          "files": {
+            "kit": {
+              "archive": "archive/149ca8b4a3a088a0a5dfb4aeff5466bdb07f73390e2baa771caa3bb3a26c34f8/final-fight-ex-cps2-rc4-kit.zip",
+              "name": "final-fight-ex-cps2-rc4-kit.zip",
+              "sha256": "149ca8b4a3a088a0a5dfb4aeff5466bdb07f73390e2baa771caa3bb3a26c34f8",
+              "size": 17397853
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "revisions": {
+            "1": {
+              "date": "2026-11-14",
+              "files": {
+                "kit": {
+                  "archive": "archive/149ca8b4a3a088a0a5dfb4aeff5466bdb07f73390e2baa771caa3bb3a26c34f8/final-fight-ex-cps2-rc4-kit.zip",
+                  "name": "final-fight-ex-cps2-rc4-kit.zip",
+                  "sha256": "149ca8b4a3a088a0a5dfb4aeff5466bdb07f73390e2baa771caa3bb3a26c34f8",
+                  "size": 17397853
+                }
+              },
               "kind": "kit"
             }
           }

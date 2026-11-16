@@ -11,9 +11,9 @@
       "url": "https://arcadepatches.com/downloads/archive/082be53429dcf2c2ec0b53350c22c32d086929797a5cc63f62e51c40ad27d970/dstlk-restoration-rc1-ips.zip"
     },
     "final-fight-ex-cps2-kit": {
-      "sha256": "d28e96416255e56b4fd66fa4e05885880916b9a4dbc51f08bb6fffbf60e7c57b",
-      "size": 17406752,
-      "url": "https://arcadepatches.com/downloads/archive/d28e96416255e56b4fd66fa4e05885880916b9a4dbc51f08bb6fffbf60e7c57b/final-fight-ex-cps2-rc3-kit.zip"
+      "sha256": "149ca8b4a3a088a0a5dfb4aeff5466bdb07f73390e2baa771caa3bb3a26c34f8",
+      "size": 17397853,
+      "url": "https://arcadepatches.com/downloads/archive/149ca8b4a3a088a0a5dfb4aeff5466bdb07f73390e2baa771caa3bb3a26c34f8/final-fight-ex-cps2-rc4-kit.zip"
     },
     "final-fight-ex-kit": {
       "sha256": "d71f3789253adc5efa1f820ecbe102c7af4fc6f94e829a99f5f034cdb8e7d898",
@@ -245,7 +245,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249-numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
     }
   },
-  "generation": 204,
+  "generation": 205,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -265,7 +265,7 @@
       "title": "Final Fight EX"
     },
     "final-fight-ex-cps2": {
-      "current": "final-fight-ex-cps2-rc3-r10",
+      "current": "final-fight-ex-cps2-rc4-r1",
       "title": "Final Fight EX (CPS-2)"
     },
     "hsf2-restoration": {
@@ -388,16 +388,16 @@
       "kit": "dstlk-restoration-kit",
       "kit_revision": 10
     },
-    "final-fight-ex-cps2-rc3-r10": {
+    "final-fight-ex-cps2-rc4-r1": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "4c486e333a103074b010921a44424fb89b270ec14fab49b3d76de3df6be31b89",
-        "size": 573865,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/4c486e333a103074b010921a44424fb89b270ec14fab49b3d76de3df6be31b89.json"
+        "sha256": "4945bfa3a883d779258a6482f2574506d9e0b82abc66c530fcdbe1932fe6e62c",
+        "size": 573834,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/4945bfa3a883d779258a6482f2574506d9e0b82abc66c530fcdbe1932fe6e62c.json"
       },
-      "game_version": "rc3",
+      "game_version": "rc4",
       "kit": "final-fight-ex-cps2-kit",
-      "kit_revision": 10
+      "kit_revision": 1
     },
     "final-fight-ex-rc4-r9": {
       "definition": {

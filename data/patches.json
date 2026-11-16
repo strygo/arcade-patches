@@ -3500,7 +3500,7 @@
         "GRENADE spelled right on the HUD, and the USA story's typos fixed",
         "USA (ffex2u), Japan (ffex2j) and English restoration (ffex2r) builds"
       ],
-      "date": "2026-11-03",
+      "date": "2026-11-14",
       "description": [
         "This kit brings Final Fight EX to Capcom's CPS-2 with every enhancement from the CPS-1 version. It includes a restored English version with added scenes, an improved translation and uncensored content. The test menu switches between the arcade and Sega CD cutscenes, and on MiSTer between the arranged and arcade soundtracks.",
         "The 1993 Sega CD port of Final Fight opened with a fully animated cutscene and closed with new ending scenes, over a soundtrack with spoken dialogue. Final Fight EX brings them to the arcade game. On the CPS-2 the arcade's music and sound effects play through QSound.",
@@ -3535,6 +3535,17 @@
         }
       ],
       "release_history": [
+        {
+          "date": "2026-11-14",
+          "items": [
+            "Runs correctly on original CPS-2 hardware with a Darksoft kit, with reliable boot and saved settings.",
+            "Corrected cutscene fades and colors, title animation, and flickering objects during the opening.",
+            "Fixed long-idle Coin and Start transitions so the title and game remain responsive.",
+            "Corrected pause-menu sound and music recovery.",
+            "Removed the brief gray flash before the title appears on MiSTer."
+          ],
+          "version": "rc4"
+        },
         {
           "date": "2026-11-03",
           "items": [
@@ -3577,7 +3588,7 @@
       "subtitle": "Enhanced version",
       "summary": "Final Fight EX on Capcom's CPS-2, with every enhancement from the CPS-1 version and a restored English version with added scenes, an improved translation and uncensored content. It adds the Sega CD's Time Attack mode and a Console mode with a title menu and pause. The test menu switches between the arcade and Sega CD cutscenes, and on MiSTer between the arranged and arcade soundtracks.",
       "title": "Final Fight EX (CPS-2)",
-      "version": "rc3"
+      "version": "rc4"
     },
     {
       "changes": [
