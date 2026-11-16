@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Final Fight EX (CPS-2)</h1>
 <p class="subtitle">Enhanced version</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Final Fight (arcade, Capcom CPS-1)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-11-03</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc4</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Final Fight (arcade, Capcom CPS-1)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>Version</dt><dd>rc4</dd><dt>Updated</dt><dd>2026-11-14</dd></dl>
 <h2>Title screen</h2>
 <figure class="shot single"><img src="../img/final-fight-ex-cps2/title_en.png?v=12afd6eff5" alt="Final Fight EX title screen"><figcaption><strong>Final Fight EX</strong><br>English restoration · <code>ffex2r</code><br>USA · <code>ffex2u</code><br>Japan · <code>ffex2j</code></figcaption></figure>
 <h2>About</h2>
@@ -93,18 +93,18 @@ You need:</p>
 <p>A small tool reads the cutscenes and soundtrack from your Final Fight CD discs, combines them with your arcade romsets, and writes out the finished MAME and HBMAME sets, the MiSTer files and the music packs. Give it either disc on its own to build just that disc&#x27;s builds.</p>
 <h3>The builds</h3>
 <table>
-<tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer</th></tr>
-<tr><td>English restoration</td><td>Final Fight EX</td><td class="mono">ffex2r</td></tr><tr><td>USA</td><td>Final Fight EX</td><td class="mono">ffex2u</td></tr><tr><td>Japan</td><td>Final Fight EX</td><td class="mono">ffex2j</td></tr>
+<tr><th>Region</th><th>Title</th><th>HBMAME / MiSTer</th><th>FBNeo</th></tr>
+<tr><td>English restoration</td><td>Final Fight EX</td><td class="mono">ffex2r</td><td class="mono">ffex2r</td></tr><tr><td>USA</td><td>Final Fight EX</td><td class="mono">ffex2u</td><td class="mono">ffex2u</td></tr><tr><td>Japan</td><td>Final Fight EX</td><td class="mono">ffex2j</td><td class="mono">ffex2j</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-11-11. Game version unchanged.</p>
 
+<p><strong>FBNeo.</strong> The kit also writes the complete sets <code>ffex2j</code>, <code>ffex2r</code>, <code>ffex2u</code> under <code>out/fbneo/</code>, preserving their FBNeo ZIP and ROM filenames. Copy those ZIPs to your FBNeo ROM folder. Use an FBNeo version with definitions matching this game release. To build only these sets, add <code>--platform fbneo</code> to the build command.</p>
 
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/final-fight-ex-cps2-rc3-kit.zip?v=d28e964162">final-fight-ex-cps2-rc3-kit.zip</a>
+  <div class="file"><a href="../downloads/final-fight-ex-cps2-rc4-kit.zip?v=149ca8b4a3">final-fight-ex-cps2-rc4-kit.zip</a>
   (16.6 MB)</div>
-  <div class="hash">SHA-256: d28e96416255e56b4fd66fa4e05885880916b9a4dbc51f08bb6fffbf60e7c57b</div>
+  <div class="hash">SHA-256: 149ca8b4a3a088a0a5dfb4aeff5466bdb07f73390e2baa771caa3bb3a26c34f8</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
@@ -119,7 +119,7 @@ The kit remembers your choices and prepares required helpers and Python packages
 privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
 for the files to copy. Run the same command again to update.</p>
 <details><summary>Advanced command-line reference</summary><h2>How to build</h2>
-<pre><code>unzip final-fight-ex-cps2-rc3-kit.zip -d final-fight-ex-cps2
+<pre><code>unzip final-fight-ex-cps2-rc4-kit.zip -d final-fight-ex-cps2
 cd final-fight-ex-cps2
 python3 apply.py --disc-jp &quot;Final Fight CD (JP).cue&quot; \
                  --disc-us &quot;Final Fight CD (USA).cue&quot; \
@@ -128,6 +128,13 @@ python3 apply.py --disc-jp &quot;Final Fight CD (JP).cue&quot; \
 <h3>Darksoft CPS-2</h3>
 <p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices. These are Phoenix-style builds with arcade music; CPS+ streamed audio requires MiSTer.</p>
 <h2 id="history">Release history</h2>
+<h3>rc4 (2026-11-14)</h3><ul>
+<li>Runs correctly on original CPS-2 hardware with a Darksoft kit, with reliable boot and saved settings.</li>
+<li>Corrected cutscene fades and colors, title animation, and flickering objects during the opening.</li>
+<li>Fixed long-idle Coin and Start transitions so the title and game remain responsive.</li>
+<li>Corrected pause-menu sound and music recovery.</li>
+<li>Removed the brief gray flash before the title appears on MiSTer.</li>
+</ul>
 <h3>rc3 (2026-11-03)</h3><ul>
 <li>New Console mode: a title menu with Arcade, Time Attack and Options, and a pause menu during play. MiSTer starts in Console mode; GAME MODE in the test menu&#x27;s EX page switches it.</li>
 <li>New Time Attack mode from the Sega CD, with its arenas, enemy waves and results screen, and on MiSTer its music.</li>
