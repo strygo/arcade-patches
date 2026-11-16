@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Hyper Street Fighter II: The Anniversary Edition</h1>
 <p class="subtitle">English restoration</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc2</span><span class="badge plain">Capcom CPS-2</span></div>
-<dl class="meta"><dt>Game</dt><dd>Hyper Street Fighter II: The Anniversary Edition (Japan 040202)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>hsf2j</dd><dt>Version</dt><dd>rc2</dd><dt>Updated</dt><dd>2026-11-14</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc3</span><span class="badge plain">Capcom CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Hyper Street Fighter II: The Anniversary Edition (Japan 040202)</dd><dt>Hardware</dt><dd>Capcom CPS-2</dd><dt>MAME set</dt><dd>hsf2j</dd><dt>Version</dt><dd>rc3</dd><dt>Updated</dt><dd>2026-11-14</dd></dl>
 <h2>Screenshots</h2>
 <figure class="shot single"><img src="../img/hsf2-restoration/00_single.png?v=2f96a8da0f" alt="Illustrated Continue tips in English."><figcaption>Illustrated Continue tips in English.</figcaption></figure>
 <figure class="shot single"><img src="../img/hsf2-restoration/01_single.png?v=5f91df637e" alt="Cammy’s win quotes in English."><figcaption>Cammy’s win quotes in English.</figcaption></figure>
@@ -79,15 +79,15 @@ please <a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">
 
 <div class="download">
   <div class="kind">Patch kit for MAME, HBMAME, FBNeo, MiSTer and original hardware</div>
-  <div class="file"><a href="../downloads/hsf2-restoration-rc2-ips.zip?v=acda6e988a">hsf2-restoration-rc2-ips.zip</a>
-  (224 KB)</div>
-  <div class="hash">SHA-256: acda6e988a52527ef0d9e6aca8bb471f719c3b84fc55704793a6c0077509142c</div>
+  <div class="file"><a href="../downloads/hsf2-restoration-rc3-ips.zip?v=8c79073575">hsf2-restoration-rc3-ips.zip</a>
+  (225 KB)</div>
+  <div class="hash">SHA-256: 8c7907357590e994c64fc8561c329385e029131308f6329c40a68afed6ba7177</div>
 </div>
 <div class="download">
   <div class="kind">MiSTer MRA only</div>
-  <div class="file"><a href="../downloads/hsf2-restoration-rc2-mra.zip?v=384f089508">hsf2-restoration-rc2-mra.zip</a>
+  <div class="file"><a href="../downloads/hsf2-restoration-rc3-mra.zip?v=c835bff050">hsf2-restoration-rc3-mra.zip</a>
   (53 KB)</div>
-  <div class="hash">SHA-256: 384f0895082fb1b10427fa83940835e0509bb05406faa913dffdb4820a546570</div>
+  <div class="hash">SHA-256: c835bff050069eeef55eea60553b280ca705a987f88e55658186dfad0d946a26</div>
 </div>
 <p>You need your own dump of <strong>Hyper Street Fighter II: The Anniversary Edition (Japan 040202)</strong> as the MAME
 set <code>hsf2j.zip</code>.
@@ -101,7 +101,7 @@ The kit remembers your choices and prepares required helpers and Python packages
 privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
 for the files to copy. Run the same command again to update.</p>
 <p>For MiSTer only, the separate MRA download can be used with your stock ROMs. The guided kit builds complete platform folders.</p><details><summary>Advanced command-line reference</summary><h2>How to apply</h2>
-<pre><code>unzip hsf2-restoration-rc2-ips.zip -d hsf2j-patch
+<pre><code>unzip hsf2-restoration-rc3-ips.zip -d hsf2j-patch
 cd hsf2j-patch
 python3 apply.py /path/to/hsf2j.zip --out-dir out</code></pre>
 <p>The script checks every file against the checksums below, applies the patches,
@@ -139,13 +139,16 @@ The MiSTer-only download holds the same MRAs, ready to copy.</p>
 <tr><td class="mono">hs2.15m</td><td>8.0 MB</td><td class="mono">10a0ae4d</td><td class="mono">642e11ec</td></tr>
 <tr><td class="mono">hs2.17m</td><td>8.0 MB</td><td class="mono">adfa7726</td><td class="mono">0aeb0c24</td></tr>
 <tr><td class="mono">hs2.19m</td><td>8.0 MB</td><td class="mono">bb3ae322</td><td class="mono">180c1a31</td></tr>
-<tr><td class="mono">hs2j.03c</td><td>512 KB</td><td class="mono">6efe661f</td><td class="mono">d61d0069</td></tr>
-<tr><td class="mono">hs2j.04b</td><td>512 KB</td><td class="mono">93f2500a</td><td class="mono">008c3478</td></tr>
-<tr><td class="mono">hs2j.10</td><td>512 KB</td><td class="mono">20d0f9e4</td><td class="mono">49529980</td></tr>
+<tr><td class="mono">hs2j.03c</td><td>512 KB</td><td class="mono">6efe661f</td><td class="mono">42232142</td></tr>
+<tr><td class="mono">hs2j.04b</td><td>512 KB</td><td class="mono">93f2500a</td><td class="mono">c8b569a5</td></tr>
+<tr><td class="mono">hs2j.10</td><td>512 KB</td><td class="mono">20d0f9e4</td><td class="mono">5299288e</td></tr>
 </table></details>
 <h3>Darksoft CPS-2</h3>
 <p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices.</p>
 <h2 id="history">Release history</h2>
+<h3>rc3 (2026-11-14)</h3><ul>
+<li>Fixed a moving background row and gaps around the pillars and doorway on Cammy’s stage.</li>
+</ul>
 <h3>rc2 (2026-11-14)</h3><ul>
 <li>No gameplay changes.</li>
 </ul>
