@@ -894,14 +894,14 @@
           }
         },
         "rc7": {
-          "current_revision": 1,
-          "date": "2026-11-14",
+          "current_revision": 2,
+          "date": "2026-11-16",
           "files": {
             "ips": {
-              "archive": "archive/681130ce77f75c73ced282f661ddf1e9fb87ef833b982d9e68a73154ec831a3d/mshvsf-ex-rc7-ips.zip",
+              "archive": "archive/cb145f1ced3ba4542a1a543e751ad98a2f4237d917ad94f477ba519ca0edce54/mshvsf-ex-rc7-ips.zip",
               "name": "mshvsf-ex-rc7-ips.zip",
-              "sha256": "681130ce77f75c73ced282f661ddf1e9fb87ef833b982d9e68a73154ec831a3d",
-              "size": 1093372
+              "sha256": "cb145f1ced3ba4542a1a543e751ad98a2f4237d917ad94f477ba519ca0edce54",
+              "size": 1080292
             },
             "mra": {
               "archive": "archive/64b9fd35952e4b728c958bc81d98151829e3245ee80e32bff6902989fa4b4c90/mshvsf-ex-rc7-mra.zip",
@@ -910,11 +910,18 @@
               "size": 512032
             }
           },
+          "game_contract_sha256": "7cdf49b53ba5402077ee8a1b7644b770657fe3852cabc129d312b83dc4a88289",
           "kind": "rom",
+          "member_names": "fbneo",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-11-16",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "revisions": {
@@ -935,6 +942,26 @@
                 }
               },
               "kind": "rom"
+            },
+            "2": {
+              "date": "2026-11-16",
+              "files": {
+                "ips": {
+                  "archive": "archive/cb145f1ced3ba4542a1a543e751ad98a2f4237d917ad94f477ba519ca0edce54/mshvsf-ex-rc7-ips.zip",
+                  "name": "mshvsf-ex-rc7-ips.zip",
+                  "sha256": "cb145f1ced3ba4542a1a543e751ad98a2f4237d917ad94f477ba519ca0edce54",
+                  "size": 1080292
+                },
+                "mra": {
+                  "archive": "archive/64b9fd35952e4b728c958bc81d98151829e3245ee80e32bff6902989fa4b4c90/mshvsf-ex-rc7-mra.zip",
+                  "name": "mshvsf-ex-rc7-mra.zip",
+                  "sha256": "64b9fd35952e4b728c958bc81d98151829e3245ee80e32bff6902989fa4b4c90",
+                  "size": 512032
+                }
+              },
+              "game_contract_sha256": "7cdf49b53ba5402077ee8a1b7644b770657fe3852cabc129d312b83dc4a88289",
+              "kind": "rom",
+              "member_names": "fbneo"
             }
           }
         }

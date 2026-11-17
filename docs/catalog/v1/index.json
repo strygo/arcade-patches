@@ -26,9 +26,9 @@
       "url": "https://arcadepatches.com/downloads/archive/8c7907357590e994c64fc8561c329385e029131308f6329c40a68afed6ba7177/hsf2-restoration-rc3-ips.zip"
     },
     "mshvsf-ex-kit": {
-      "sha256": "681130ce77f75c73ced282f661ddf1e9fb87ef833b982d9e68a73154ec831a3d",
-      "size": 1093372,
-      "url": "https://arcadepatches.com/downloads/archive/681130ce77f75c73ced282f661ddf1e9fb87ef833b982d9e68a73154ec831a3d/mshvsf-ex-rc7-ips.zip"
+      "sha256": "cb145f1ced3ba4542a1a543e751ad98a2f4237d917ad94f477ba519ca0edce54",
+      "size": 1080292,
+      "url": "https://arcadepatches.com/downloads/archive/cb145f1ced3ba4542a1a543e751ad98a2f4237d917ad94f477ba519ca0edce54/mshvsf-ex-rc7-ips.zip"
     },
     "mshvsf-restoration-kit": {
       "sha256": "beec3b901571f53296168f3e0c06cf120d15bc6067e1aabd7f166c96e2f8a7a7",
@@ -245,7 +245,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249-numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
     }
   },
-  "generation": 205,
+  "generation": 206,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -273,7 +273,7 @@
       "title": "Hyper Street Fighter II: The Anniversary Edition \u00b7 English restoration"
     },
     "mshvsf-ex": {
-      "current": "mshvsf-ex-rc7-r1",
+      "current": "mshvsf-ex-rc7-r2",
       "title": "Marvel Super Heroes vs. Street Fighter EX"
     },
     "mshvsf-restoration": {
@@ -421,16 +421,16 @@
       "kit": "hsf2-restoration-kit",
       "kit_revision": 1
     },
-    "mshvsf-ex-rc7-r1": {
+    "mshvsf-ex-rc7-r2": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "3039d8db688ba8e3317557af7899098f93249d9c266d95e0f7fe35dc77300784",
-        "size": 64500,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/3039d8db688ba8e3317557af7899098f93249d9c266d95e0f7fe35dc77300784.json"
+        "sha256": "87dbcf47f34fa2406ccc61a29c2f15fff4b10408d177f177cb8fe72cae7d6784",
+        "size": 64510,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/87dbcf47f34fa2406ccc61a29c2f15fff4b10408d177f177cb8fe72cae7d6784.json"
       },
       "game_version": "rc7",
       "kit": "mshvsf-ex-kit",
-      "kit_revision": 1
+      "kit_revision": 2
     },
     "mshvsf-restoration-rc1-r11": {
       "definition": {
