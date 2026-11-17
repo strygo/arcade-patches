@@ -2918,14 +2918,14 @@
           }
         },
         "rc14": {
-          "current_revision": 1,
-          "date": "2026-11-14",
+          "current_revision": 2,
+          "date": "2026-11-16",
           "files": {
             "ips": {
-              "archive": "archive/19b9fcd8aba2149bd0ee9e6cbbf71e386cd46e2823250ab3534ff431e00c7d29/ssf2-ex-rc14-ips.zip",
+              "archive": "archive/f3d5ea785328314dfae4bf5817a5091e07411e9a7ea390e26f6eabdd99c0578f/ssf2-ex-rc14-ips.zip",
               "name": "ssf2-ex-rc14-ips.zip",
-              "sha256": "19b9fcd8aba2149bd0ee9e6cbbf71e386cd46e2823250ab3534ff431e00c7d29",
-              "size": 1506468
+              "sha256": "f3d5ea785328314dfae4bf5817a5091e07411e9a7ea390e26f6eabdd99c0578f",
+              "size": 1481251
             },
             "mra": {
               "archive": "archive/5120072ad2e08dffa0f5b9a5f776a26f425c62c7d9f100c2f6f917014456f3c4/ssf2-ex-rc14-mra.zip",
@@ -2934,11 +2934,17 @@
               "size": 781601
             }
           },
+          "game_contract_sha256": "d651f03767cd92db8a51252da3502ddc8d2427ea6daaa537da848ce14ca2f17e",
           "kind": "rom",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-11-16",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "revisions": {
@@ -2958,6 +2964,25 @@
                   "size": 781601
                 }
               },
+              "kind": "rom"
+            },
+            "2": {
+              "date": "2026-11-16",
+              "files": {
+                "ips": {
+                  "archive": "archive/f3d5ea785328314dfae4bf5817a5091e07411e9a7ea390e26f6eabdd99c0578f/ssf2-ex-rc14-ips.zip",
+                  "name": "ssf2-ex-rc14-ips.zip",
+                  "sha256": "f3d5ea785328314dfae4bf5817a5091e07411e9a7ea390e26f6eabdd99c0578f",
+                  "size": 1481251
+                },
+                "mra": {
+                  "archive": "archive/5120072ad2e08dffa0f5b9a5f776a26f425c62c7d9f100c2f6f917014456f3c4/ssf2-ex-rc14-mra.zip",
+                  "name": "ssf2-ex-rc14-mra.zip",
+                  "sha256": "5120072ad2e08dffa0f5b9a5f776a26f425c62c7d9f100c2f6f917014456f3c4",
+                  "size": 781601
+                }
+              },
+              "game_contract_sha256": "d651f03767cd92db8a51252da3502ddc8d2427ea6daaa537da848ce14ca2f17e",
               "kind": "rom"
             }
           }

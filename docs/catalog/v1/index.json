@@ -111,9 +111,9 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/7b1a90f1ef91a39b07611596e617ac6552b5467525df5289144bba3234ac4733-source-sevenzip-windows.zip"
     },
     "ssf2-ex-kit": {
-      "sha256": "19b9fcd8aba2149bd0ee9e6cbbf71e386cd46e2823250ab3534ff431e00c7d29",
-      "size": 1506468,
-      "url": "https://arcadepatches.com/downloads/archive/19b9fcd8aba2149bd0ee9e6cbbf71e386cd46e2823250ab3534ff431e00c7d29/ssf2-ex-rc14-ips.zip"
+      "sha256": "f3d5ea785328314dfae4bf5817a5091e07411e9a7ea390e26f6eabdd99c0578f",
+      "size": 1481251,
+      "url": "https://arcadepatches.com/downloads/archive/f3d5ea785328314dfae4bf5817a5091e07411e9a7ea390e26f6eabdd99c0578f/ssf2-ex-rc14-ips.zip"
     },
     "ssf2t-gmc-kit": {
       "sha256": "149edf2f7d1853b373b2674e6022f4fb4dc384502f8da886ac925b03d2038f6a",
@@ -250,7 +250,7 @@
       "url": "https://arcadepatches.com/downloads/archive/110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678/xmvsf-restoration-rc1-ips.zip"
     }
   },
-  "generation": 208,
+  "generation": 209,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -330,7 +330,7 @@
       "title": "Street Fighter Alpha 3 Upper"
     },
     "ssf2-ex": {
-      "current": "ssf2-ex-rc14-r1",
+      "current": "ssf2-ex-rc14-r2",
       "title": "Super Street Fighter II EX"
     },
     "ssf2t-gmc": {
@@ -573,16 +573,16 @@
       "kit": "sfz3ugd-multiregion-kit",
       "kit_revision": 7
     },
-    "ssf2-ex-rc14-r1": {
+    "ssf2-ex-rc14-r2": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "72c4325d65db84e3a2541e1caa6996728a823eb846bf14e007778deceb6e2d5f",
+        "sha256": "efa4306652575d4d12ca73e77071ba7d0b92b3ea7af02d1f32596dc78233cb1f",
         "size": 76276,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/72c4325d65db84e3a2541e1caa6996728a823eb846bf14e007778deceb6e2d5f.json"
+        "url": "https://arcadepatches.com/catalog/v1/definitions/efa4306652575d4d12ca73e77071ba7d0b92b3ea7af02d1f32596dc78233cb1f.json"
       },
       "game_version": "rc14",
       "kit": "ssf2-ex-kit",
-      "kit_revision": 1
+      "kit_revision": 2
     },
     "ssf2t-gmc-rc5-r1": {
       "definition": {
