@@ -243,9 +243,14 @@
       "sha256": "fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249",
       "size": 16527618,
       "url": "https://arcadepatches.com/catalog/v1/artifacts/fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249-numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
+    },
+    "xmvsf-restoration-kit": {
+      "sha256": "110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678",
+      "size": 200712,
+      "url": "https://arcadepatches.com/downloads/archive/110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678/xmvsf-restoration-rc1-ips.zip"
     }
   },
-  "generation": 207,
+  "generation": 208,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -363,6 +368,10 @@
     "vsav2-english": {
       "current": "vsav2-english-rc3-r9",
       "title": "Vampire Savior 2"
+    },
+    "xmvsf-restoration": {
+      "current": "xmvsf-restoration-rc1-r1",
+      "title": "X-Men vs. Street Fighter \u00b7 English restoration"
     }
   },
   "releases": {
@@ -673,6 +682,17 @@
       "game_version": "rc3",
       "kit": "vsav2-english-kit",
       "kit_revision": 9
+    },
+    "xmvsf-restoration-rc1-r1": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "82a79870718e4c5466f93a3b3dcdc981b13c63b564416b8bedbfd0ea4f7fd7ff",
+        "size": 37131,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/82a79870718e4c5466f93a3b3dcdc981b13c63b564416b8bedbfd0ea4f7fd7ff.json"
+      },
+      "game_version": "rc1",
+      "kit": "xmvsf-restoration-kit",
+      "kit_revision": 1
     }
   },
   "schema": 2,

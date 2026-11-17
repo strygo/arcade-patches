@@ -4370,6 +4370,56 @@
           }
         }
       }
+    },
+    "xmvsf-restoration": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-11-16",
+          "files": {
+            "ips": {
+              "archive": "archive/110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678/xmvsf-restoration-rc1-ips.zip",
+              "name": "xmvsf-restoration-rc1-ips.zip",
+              "sha256": "110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678",
+              "size": 200712
+            },
+            "mra": {
+              "archive": "archive/9291cefd88e04a7a3f2a2ec12c73eb2e29663124e9d96476cdfd905d26254374/xmvsf-restoration-rc1-mra.zip",
+              "name": "xmvsf-restoration-rc1-mra.zip",
+              "sha256": "9291cefd88e04a7a3f2a2ec12c73eb2e29663124e9d96476cdfd905d26254374",
+              "size": 37197
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "revisions": {
+            "1": {
+              "date": "2026-11-16",
+              "files": {
+                "ips": {
+                  "archive": "archive/110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678/xmvsf-restoration-rc1-ips.zip",
+                  "name": "xmvsf-restoration-rc1-ips.zip",
+                  "sha256": "110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678",
+                  "size": 200712
+                },
+                "mra": {
+                  "archive": "archive/9291cefd88e04a7a3f2a2ec12c73eb2e29663124e9d96476cdfd905d26254374/xmvsf-restoration-rc1-mra.zip",
+                  "name": "xmvsf-restoration-rc1-mra.zip",
+                  "sha256": "9291cefd88e04a7a3f2a2ec12c73eb2e29663124e9d96476cdfd905d26254374",
+                  "size": 37197
+                }
+              },
+              "kind": "rom"
+            }
+          }
+        }
+      }
     }
   },
   "schema": 2
