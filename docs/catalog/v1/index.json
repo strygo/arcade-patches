@@ -126,9 +126,9 @@
       "url": "https://arcadepatches.com/downloads/archive/489e6639a704091dfcffb6df04cbf97117cf8c9a96ec35ac9aecde1c69ef208a/strider-ex-rc1-kit.zip"
     },
     "usf2-backport-kit": {
-      "sha256": "4f97a46468f720516cda58e2c55f5f461bf4e99c631779599a8c4a5fb3a265b5",
-      "size": 16710365,
-      "url": "https://arcadepatches.com/downloads/archive/4f97a46468f720516cda58e2c55f5f461bf4e99c631779599a8c4a5fb3a265b5/usf2-backport-rc6-kit.zip"
+      "sha256": "5af62d96b80ca26cbb0c96d619861ae6b9deda0b35639c9a874165c210f4d338",
+      "size": 24125761,
+      "url": "https://arcadepatches.com/downloads/archive/5af62d96b80ca26cbb0c96d619861ae6b9deda0b35639c9a874165c210f4d338/usf2-backport-rc7-kit.zip"
     },
     "vhunt2-arrange-kit": {
       "sha256": "bacf7e5f3a2b1878504536673a009265de5cb66e8c954d18b175ae589d38b448",
@@ -245,7 +245,7 @@
       "url": "https://arcadepatches.com/catalog/v1/artifacts/fd83c01228a688733f1ded5201c678f0c53ecc1006ffbc404db9f7a899ac6249-numpy-2.2.6-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"
     }
   },
-  "generation": 206,
+  "generation": 207,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -337,7 +337,7 @@
       "title": "Strider EX"
     },
     "usf2-backport": {
-      "current": "usf2-backport-rc6-r4",
+      "current": "usf2-backport-rc7-r1",
       "title": "Ultra Street Fighter II"
     },
     "vhunt2-arrange": {
@@ -597,16 +597,16 @@
       "kit": "strider-ex-kit",
       "kit_revision": 15
     },
-    "usf2-backport-rc6-r4": {
+    "usf2-backport-rc7-r1": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "287a976345005d939fd7de00024bbd9a3d81bef9db44f7152af0d9a571a2dc53",
+        "sha256": "7204ed9b362cd682fcc86c2ee4b1966cc49df347e84c66db38750cae6fc4bcdf",
         "size": 150583,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/287a976345005d939fd7de00024bbd9a3d81bef9db44f7152af0d9a571a2dc53.json"
+        "url": "https://arcadepatches.com/catalog/v1/definitions/7204ed9b362cd682fcc86c2ee4b1966cc49df347e84c66db38750cae6fc4bcdf.json"
       },
-      "game_version": "rc6",
+      "game_version": "rc7",
       "kit": "usf2-backport-kit",
-      "kit_revision": 4
+      "kit_revision": 1
     },
     "vhunt2-arrange-rc5-r1": {
       "definition": {

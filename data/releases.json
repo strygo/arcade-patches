@@ -3255,7 +3255,7 @@
       }
     },
     "usf2-backport": {
-      "current": "rc6",
+      "current": "rc7",
       "versions": {
         "rc6": {
           "current_revision": 4,
@@ -3338,6 +3338,39 @@
             "kind": "usf2-score-installer-scope-v1",
             "previous_contract": "0d619f7af501ca89863e24356920450ae91da5f29651f612fb5c9cbdb367d92d",
             "retained_outputs_sha256": "48e5b006e4f8788540512dc68c3e8fb718f5155ee52188aeedd8c805a4e7d745"
+          }
+        },
+        "rc7": {
+          "current_revision": 1,
+          "date": "2026-11-14",
+          "files": {
+            "kit": {
+              "archive": "archive/5af62d96b80ca26cbb0c96d619861ae6b9deda0b35639c9a874165c210f4d338/usf2-backport-rc7-kit.zip",
+              "name": "usf2-backport-rc7-kit.zip",
+              "sha256": "5af62d96b80ca26cbb0c96d619861ae6b9deda0b35639c9a874165c210f4d338",
+              "size": 24125761
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "revisions": {
+            "1": {
+              "date": "2026-11-14",
+              "files": {
+                "kit": {
+                  "archive": "archive/5af62d96b80ca26cbb0c96d619861ae6b9deda0b35639c9a874165c210f4d338/usf2-backport-rc7-kit.zip",
+                  "name": "usf2-backport-rc7-kit.zip",
+                  "sha256": "5af62d96b80ca26cbb0c96d619861ae6b9deda0b35639c9a874165c210f4d338",
+                  "size": 24125761
+                }
+              },
+              "kind": "kit"
+            }
           }
         }
       }
