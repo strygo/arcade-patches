@@ -1,0 +1,972 @@
+{
+  "api": 1,
+  "game_version": "rc1",
+  "kit_revision": 1,
+  "manifest_sha256": "c8983068162de31437fc82c64861db2c15892be7acd5e523090f4fa594e583bd",
+  "native_outputs": {
+    "darksoft/games/xmvsf-restoration/NAME": {
+      "sha256": "be623e4dce864ef58f1d7f85268d21abd8ef7f4f3c9edbabd9250c375fcb857f"
+    },
+    "darksoft/games/xmvsf-restoration/flash.01": {
+      "sha256": "9809c5946f342b0f874740ef3000f6b4fa170df1cf0993199ec77a697e6e480f"
+    },
+    "darksoft/games/xmvsf-restoration/flash.02": {
+      "sha256": "b7b3c29406a7ca4843f0ed7465749400791091e09446ad130158e83327176c6f"
+    },
+    "darksoft/games/xmvsf-restoration/flash.03": {
+      "sha256": "1724dcd25b049989e07ee5129ffab9293102ff9e1f4fe4f430bfaed2794591f1"
+    },
+    "darksoft/games/xmvsf-restoration/flash.05": {
+      "sha256": "5fc6dab88b19f840f76a7cfc03dbf2a176a6a3b6038116b9926ed7360ece7440"
+    },
+    "darksoft/games/xmvsf-restoration/flash.06": {
+      "sha256": "f78262b13acc0194f293e8e0fa7c32e4055f54c4cbbe1f01fcc7cf6ceb505330"
+    },
+    "darksoft/games/xmvsf-restoration/flash.07": {
+      "sha256": "3ff3f97d715dc9b8bd1a4e37b1a81b80dcf935e46d88a35736661197c666ebfa"
+    },
+    "darksoft/games/xmvsf-restoration/flash.08": {
+      "sha256": "b5fe7499152ab1211fea2606a3ea746ff27b3f118efa34ca9223d6c68d563faf"
+    },
+    "darksoft/games/xmvsf-restoration/flash.09": {
+      "sha256": "ae27bf05aebe89480e11186e7aa3505601e0e4510ac9060a1d0825aaf5678009"
+    },
+    "darksoft/games/xmvsf-restoration/flash.10": {
+      "sha256": "ab3afb5cf3066996224e34ce429281e5f9fa0fb59f913b576c05ed0829cf7dff"
+    },
+    "darksoft/games/xmvsf-restoration/flash.11": {
+      "sha256": "5e17da68c62a237092e0450a6cef991d2c8f41438f35cfcb6c5f9aa9b4fbc16a"
+    },
+    "darksoft/games/xmvsf-restoration/flash.12": {
+      "sha256": "6304e5e28142309b3243ff194c601bdc2ad485f1d0beb311f288b45358fad3e8"
+    },
+    "darksoft/games/xmvsf-restoration/key": {
+      "sha256": "3b078489ef4127f5cf881ec5057cd0b3b8e97074d0249446ab9ab4ec3bb1dd4b"
+    },
+    "darksoft/receipts/xmvsf-restoration.json": {
+      "sha256": "8c007e080a16ecbb2170cba760bf4b01f5a65e97cc128757bd4d6ca2b8676b65"
+    },
+    "fbneo/xmvsfre.zip": {
+      "members": {
+        "xmvsfj.key": "3b078489ef4127f5cf881ec5057cd0b3b8e97074d0249446ab9ab4ec3bb1dd4b",
+        "xvs.01": "edb1de2288098df42f6dece878c16abeb2504ba54984fdb42e608227ce81bb23",
+        "xvs.02": "465c0d0ed84f61a74349bd9d4b5c0d2ec0b424a24703459d86a4a2e557bfc892",
+        "xvs.07": "5ff49f2906f49a7d5e01066e20e5d2d87f1dac5d23a3827891c21a42842163af",
+        "xvs.08": "2374df97b2478f057a8049c6bb5f8453dbfe284471dee58015db1b9fd9bc2223",
+        "xvs.11m": "b77bf8254043f8fbfd2aa1c3321056a0cdf2413c87e4a6c15f38a8dfc32e576f",
+        "xvs.12m": "8158cabdf8c3045f08adfdbd35cbd9138bf91adb63455d5160a0c8897d6e7b17",
+        "xvs.13m": "5fc6dab88b19f840f76a7cfc03dbf2a176a6a3b6038116b9926ed7360ece7440",
+        "xvs.14m": "f78262b13acc0194f293e8e0fa7c32e4055f54c4cbbe1f01fcc7cf6ceb505330",
+        "xvs.15m": "3ff3f97d715dc9b8bd1a4e37b1a81b80dcf935e46d88a35736661197c666ebfa",
+        "xvs.16m": "b5fe7499152ab1211fea2606a3ea746ff27b3f118efa34ca9223d6c68d563faf",
+        "xvs.17m": "ae27bf05aebe89480e11186e7aa3505601e0e4510ac9060a1d0825aaf5678009",
+        "xvs.18m": "ab3afb5cf3066996224e34ce429281e5f9fa0fb59f913b576c05ed0829cf7dff",
+        "xvs.19m": "5e17da68c62a237092e0450a6cef991d2c8f41438f35cfcb6c5f9aa9b4fbc16a",
+        "xvs.20m": "6304e5e28142309b3243ff194c601bdc2ad485f1d0beb311f288b45358fad3e8",
+        "xvsre.03m": "455fbdc4c23fcbaca8af847b0a7c66db2b8bf34068cc1eae5500670bfdca8485",
+        "xvsre.04m": "016b47b7ef0d558e59be964991bbe0cee55096a70004fab99625090072bb08ff",
+        "xvsre.05a": "8ca6e5013f74a43f37be2cb0b2c0d14d09485d176be7ea7d6e14355cc5344880",
+        "xvsre.06a": "ecf883169a70d07c7e7277a188297bc36c25758c92fcfc594e2673d8a34cf936",
+        "xvsre.09": "ab869194450a01b0662e1f83a59aec5b7e6d975f4964d52e00d553cc34a9c59a"
+      }
+    },
+    "hbmame/xmvsfre.zip": {
+      "members": {
+        "xmvsfj.key": "3b078489ef4127f5cf881ec5057cd0b3b8e97074d0249446ab9ab4ec3bb1dd4b",
+        "xvs.01": "edb1de2288098df42f6dece878c16abeb2504ba54984fdb42e608227ce81bb23",
+        "xvs.02": "465c0d0ed84f61a74349bd9d4b5c0d2ec0b424a24703459d86a4a2e557bfc892",
+        "xvs.07": "5ff49f2906f49a7d5e01066e20e5d2d87f1dac5d23a3827891c21a42842163af",
+        "xvs.08": "2374df97b2478f057a8049c6bb5f8453dbfe284471dee58015db1b9fd9bc2223",
+        "xvs.11m": "b77bf8254043f8fbfd2aa1c3321056a0cdf2413c87e4a6c15f38a8dfc32e576f",
+        "xvs.12m": "8158cabdf8c3045f08adfdbd35cbd9138bf91adb63455d5160a0c8897d6e7b17",
+        "xvs.13m": "5fc6dab88b19f840f76a7cfc03dbf2a176a6a3b6038116b9926ed7360ece7440",
+        "xvs.14m": "f78262b13acc0194f293e8e0fa7c32e4055f54c4cbbe1f01fcc7cf6ceb505330",
+        "xvs.15m": "3ff3f97d715dc9b8bd1a4e37b1a81b80dcf935e46d88a35736661197c666ebfa",
+        "xvs.16m": "b5fe7499152ab1211fea2606a3ea746ff27b3f118efa34ca9223d6c68d563faf",
+        "xvs.17m": "ae27bf05aebe89480e11186e7aa3505601e0e4510ac9060a1d0825aaf5678009",
+        "xvs.18m": "ab3afb5cf3066996224e34ce429281e5f9fa0fb59f913b576c05ed0829cf7dff",
+        "xvs.19m": "5e17da68c62a237092e0450a6cef991d2c8f41438f35cfcb6c5f9aa9b4fbc16a",
+        "xvs.20m": "6304e5e28142309b3243ff194c601bdc2ad485f1d0beb311f288b45358fad3e8",
+        "xvsre.03m": "455fbdc4c23fcbaca8af847b0a7c66db2b8bf34068cc1eae5500670bfdca8485",
+        "xvsre.04m": "016b47b7ef0d558e59be964991bbe0cee55096a70004fab99625090072bb08ff",
+        "xvsre.05a": "8ca6e5013f74a43f37be2cb0b2c0d14d09485d176be7ea7d6e14355cc5344880",
+        "xvsre.06a": "ecf883169a70d07c7e7277a188297bc36c25758c92fcfc594e2673d8a34cf936",
+        "xvsre.09": "ab869194450a01b0662e1f83a59aec5b7e6d975f4964d52e00d553cc34a9c59a"
+      }
+    },
+    "mame/xmvsfj.zip": {
+      "members": {
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+        "xmvsfj.key": "3b078489ef4127f5cf881ec5057cd0b3b8e97074d0249446ab9ab4ec3bb1dd4b",
+        "xvs.01": "edb1de2288098df42f6dece878c16abeb2504ba54984fdb42e608227ce81bb23",
+        "xvs.02": "465c0d0ed84f61a74349bd9d4b5c0d2ec0b424a24703459d86a4a2e557bfc892",
+        "xvs.05a": "8ca6e5013f74a43f37be2cb0b2c0d14d09485d176be7ea7d6e14355cc5344880",
+        "xvs.06a": "ecf883169a70d07c7e7277a188297bc36c25758c92fcfc594e2673d8a34cf936",
+        "xvs.07": "5ff49f2906f49a7d5e01066e20e5d2d87f1dac5d23a3827891c21a42842163af",
+        "xvs.08": "2374df97b2478f057a8049c6bb5f8453dbfe284471dee58015db1b9fd9bc2223",
+        "xvs.09": "ab869194450a01b0662e1f83a59aec5b7e6d975f4964d52e00d553cc34a9c59a",
+        "xvs.11m": "b77bf8254043f8fbfd2aa1c3321056a0cdf2413c87e4a6c15f38a8dfc32e576f",
+        "xvs.12m": "8158cabdf8c3045f08adfdbd35cbd9138bf91adb63455d5160a0c8897d6e7b17",
+        "xvs.13m": "5fc6dab88b19f840f76a7cfc03dbf2a176a6a3b6038116b9926ed7360ece7440",
+        "xvs.14m": "f78262b13acc0194f293e8e0fa7c32e4055f54c4cbbe1f01fcc7cf6ceb505330",
+        "xvs.15m": "3ff3f97d715dc9b8bd1a4e37b1a81b80dcf935e46d88a35736661197c666ebfa",
+        "xvs.16m": "b5fe7499152ab1211fea2606a3ea746ff27b3f118efa34ca9223d6c68d563faf",
+        "xvs.17m": "ae27bf05aebe89480e11186e7aa3505601e0e4510ac9060a1d0825aaf5678009",
+        "xvs.18m": "ab3afb5cf3066996224e34ce429281e5f9fa0fb59f913b576c05ed0829cf7dff",
+        "xvs.19m": "5e17da68c62a237092e0450a6cef991d2c8f41438f35cfcb6c5f9aa9b4fbc16a",
+        "xvs.20m": "6304e5e28142309b3243ff194c601bdc2ad485f1d0beb311f288b45358fad3e8",
+        "xvsj.03m": "455fbdc4c23fcbaca8af847b0a7c66db2b8bf34068cc1eae5500670bfdca8485",
+        "xvsj.04m": "016b47b7ef0d558e59be964991bbe0cee55096a70004fab99625090072bb08ff"
+      }
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/X-Men vs. Street Fighter (USA) [Restoration].mra": {
+      "sha256": "622d75fc461d650e4b8bbbc792292efc81d226bbc5f0a1c77a4a2a469bd0c40b"
+    }
+  },
+  "prerequisites": {
+    "source-12d0bb076ec24b3e7bbb": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "9641f36b",
+          "sha256": "12d0bb076ec24b3e7bbbfcf5ef5be2080abb46147ddce7bf11d6a049c8bf14a9",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.09",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.09"
+    },
+    "source-2374df97b2478f057a80": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "81929675",
+          "sha256": "2374df97b2478f057a8049c6bb5f8453dbfe284471dee58015db1b9fd9bc2223",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.08",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.08"
+    },
+    "source-3b078489ef4127f5cf88": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "87576cda",
+          "sha256": "3b078489ef4127f5cf881ec5057cd0b3b8e97074d0249446ab9ab4ec3bb1dd4b",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xmvsfj.key",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xmvsfj.key"
+    },
+    "source-3ff3f97d715dc9b8bd1a": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "29109221",
+          "sha256": "3ff3f97d715dc9b8bd1a4e37b1a81b80dcf935e46d88a35736661197c666ebfa",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.15m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.15m"
+    },
+    "source-465c0d0ed84f61a74349": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "101bdee9",
+          "sha256": "465c0d0ed84f61a74349bd9d4b5c0d2ec0b424a24703459d86a4a2e557bfc892",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.02",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.02"
+    },
+    "source-524a25bcd153be24594d": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d6cf5ef5",
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "size": 24576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "device",
+      "search_names": [
+        "dl-1425.bin",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "dl-1425.bin"
+    },
+    "source-58691feda6dd2febe119": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "7db6025d",
+          "sha256": "58691feda6dd2febe119c3cc14e4611e272920b1c8762e5ef9f7cc18a39f5a89",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.05a",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.05a"
+    },
+    "source-5e17da68c62a237092e0": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "3733473c",
+          "sha256": "5e17da68c62a237092e0450a6cef991d2c8f41438f35cfcb6c5f9aa9b4fbc16a",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.19m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.19m"
+    },
+    "source-5fc6dab88b19f840f76a": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "f6684efd",
+          "sha256": "5fc6dab88b19f840f76a7cfc03dbf2a176a6a3b6038116b9926ed7360ece7440",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.13m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.13m"
+    },
+    "source-5ff49f2906f49a7d5e01": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "08f0abed",
+          "sha256": "5ff49f2906f49a7d5e01066e20e5d2d87f1dac5d23a3827891c21a42842163af",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.07",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.07"
+    },
+    "source-6304e5e28142309b3243": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "4b40ff9f",
+          "sha256": "6304e5e28142309b3243ff194c601bdc2ad485f1d0beb311f288b45358fad3e8",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.20m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.20m"
+    },
+    "source-66f70aa2cdf3e0913888": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "e8e2c75c",
+          "sha256": "66f70aa2cdf3e091388876b5633e069111cf7ee51fec1b01d5fc30342e9d718e",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.06a",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.06a"
+    },
+    "source-674785dda041aed43aaa": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "c20b8524",
+          "sha256": "674785dda041aed43aaa76fdc3aec3912ff511a5f6a0ca2c415c97f5c15496c6",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvsj.04m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvsj.04m"
+    },
+    "source-8158cabdf8c3045f08ad": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "7b11e460",
+          "sha256": "8158cabdf8c3045f08adfdbd35cbd9138bf91adb63455d5160a0c8897d6e7b17",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.12m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.12m"
+    },
+    "source-ab3afb5cf3066996224e": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "b0def86a",
+          "sha256": "ab3afb5cf3066996224e34ce429281e5f9fa0fb59f913b576c05ed0829cf7dff",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.18m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.18m"
+    },
+    "source-ae27bf05aebe89480e11": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "92db3474",
+          "sha256": "ae27bf05aebe89480e11186e7aa3505601e0e4510ac9060a1d0825aaf5678009",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.17m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.17m"
+    },
+    "source-b5fe7499152ab1211fea": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "ea04a272",
+          "sha256": "b5fe7499152ab1211fea2606a3ea746ff27b3f118efa34ca9223d6c68d563faf",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.16m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.16m"
+    },
+    "source-b77bf8254043f8fbfd2a": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "9cadcdbc",
+          "sha256": "b77bf8254043f8fbfd2aa1c3321056a0cdf2413c87e4a6c15f38a8dfc32e576f",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.11m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.11m"
+    },
+    "source-cb4d2704962214beac21": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "e2944372",
+          "sha256": "cb4d2704962214beac21c4708be7a1949a5661ae3823330935ecb29abae9c354",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvsj.03m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvsj.03m"
+    },
+    "source-edb1de2288098df42f6d": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "3999e93a",
+          "sha256": "edb1de2288098df42f6dece878c16abeb2504ba54984fdb42e608227ce81bb23",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.01",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.01"
+    },
+    "source-f78262b13acc0194f293": {
+      "action": "Add the canonical xmvsfj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "bcac2e41",
+          "sha256": "f78262b13acc0194f293e8e0fa7c32e4055f54c4cbbe1f01fcc7cf6ceb505330",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "xvs.14m",
+        "xmvsfj",
+        "xmvsfj.zip",
+        "xmvsfj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "xvs.14m"
+    }
+  },
+  "project": "xmvsf-restoration",
+  "targets": {
+    "default-darksoft": {
+      "destination_requirements": "Use the Darksoft hardware and layout described in this kit's readme.",
+      "inputs": [
+        "source-12d0bb076ec24b3e7bbb",
+        "source-2374df97b2478f057a80",
+        "source-3b078489ef4127f5cf88",
+        "source-3ff3f97d715dc9b8bd1a",
+        "source-465c0d0ed84f61a74349",
+        "source-58691feda6dd2febe119",
+        "source-5e17da68c62a237092e0",
+        "source-5fc6dab88b19f840f76a",
+        "source-5ff49f2906f49a7d5e01",
+        "source-6304e5e28142309b3243",
+        "source-66f70aa2cdf3e0913888",
+        "source-674785dda041aed43aaa",
+        "source-8158cabdf8c3045f08ad",
+        "source-ab3afb5cf3066996224e",
+        "source-ae27bf05aebe89480e11",
+        "source-b5fe7499152ab1211fea",
+        "source-b77bf8254043f8fbfd2a",
+        "source-cb4d2704962214beac21",
+        "source-edb1de2288098df42f6d",
+        "source-f78262b13acc0194f293"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "games/xmvsf-restoration/NAME": {
+          "sha256": "be623e4dce864ef58f1d7f85268d21abd8ef7f4f3c9edbabd9250c375fcb857f"
+        },
+        "games/xmvsf-restoration/flash.01": {
+          "sha256": "9809c5946f342b0f874740ef3000f6b4fa170df1cf0993199ec77a697e6e480f"
+        },
+        "games/xmvsf-restoration/flash.02": {
+          "sha256": "b7b3c29406a7ca4843f0ed7465749400791091e09446ad130158e83327176c6f"
+        },
+        "games/xmvsf-restoration/flash.03": {
+          "sha256": "1724dcd25b049989e07ee5129ffab9293102ff9e1f4fe4f430bfaed2794591f1"
+        },
+        "games/xmvsf-restoration/flash.05": {
+          "sha256": "5fc6dab88b19f840f76a7cfc03dbf2a176a6a3b6038116b9926ed7360ece7440"
+        },
+        "games/xmvsf-restoration/flash.06": {
+          "sha256": "f78262b13acc0194f293e8e0fa7c32e4055f54c4cbbe1f01fcc7cf6ceb505330"
+        },
+        "games/xmvsf-restoration/flash.07": {
+          "sha256": "3ff3f97d715dc9b8bd1a4e37b1a81b80dcf935e46d88a35736661197c666ebfa"
+        },
+        "games/xmvsf-restoration/flash.08": {
+          "sha256": "b5fe7499152ab1211fea2606a3ea746ff27b3f118efa34ca9223d6c68d563faf"
+        },
+        "games/xmvsf-restoration/flash.09": {
+          "sha256": "ae27bf05aebe89480e11186e7aa3505601e0e4510ac9060a1d0825aaf5678009"
+        },
+        "games/xmvsf-restoration/flash.10": {
+          "sha256": "ab3afb5cf3066996224e34ce429281e5f9fa0fb59f913b576c05ed0829cf7dff"
+        },
+        "games/xmvsf-restoration/flash.11": {
+          "sha256": "5e17da68c62a237092e0450a6cef991d2c8f41438f35cfcb6c5f9aa9b4fbc16a"
+        },
+        "games/xmvsf-restoration/flash.12": {
+          "sha256": "6304e5e28142309b3243ff194c601bdc2ad485f1d0beb311f288b45358fad3e8"
+        },
+        "games/xmvsf-restoration/key": {
+          "sha256": "3b078489ef4127f5cf881ec5057cd0b3b8e97074d0249446ab9ab4ec3bb1dd4b"
+        },
+        "receipts/xmvsf-restoration.json": {
+          "sha256": "8c007e080a16ecbb2170cba760bf4b01f5a65e97cc128757bd4d6ca2b8676b65"
+        }
+      },
+      "platform": "darksoft",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-fbneo": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-12d0bb076ec24b3e7bbb",
+        "source-2374df97b2478f057a80",
+        "source-3b078489ef4127f5cf88",
+        "source-3ff3f97d715dc9b8bd1a",
+        "source-465c0d0ed84f61a74349",
+        "source-58691feda6dd2febe119",
+        "source-5e17da68c62a237092e0",
+        "source-5fc6dab88b19f840f76a",
+        "source-5ff49f2906f49a7d5e01",
+        "source-6304e5e28142309b3243",
+        "source-66f70aa2cdf3e0913888",
+        "source-674785dda041aed43aaa",
+        "source-8158cabdf8c3045f08ad",
+        "source-ab3afb5cf3066996224e",
+        "source-ae27bf05aebe89480e11",
+        "source-b5fe7499152ab1211fea",
+        "source-b77bf8254043f8fbfd2a",
+        "source-cb4d2704962214beac21",
+        "source-edb1de2288098df42f6d",
+        "source-f78262b13acc0194f293"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/xmvsfre.zip": {
+          "members": {
+            "xmvsfj.key": "3b078489ef4127f5cf881ec5057cd0b3b8e97074d0249446ab9ab4ec3bb1dd4b",
+            "xvs.01": "edb1de2288098df42f6dece878c16abeb2504ba54984fdb42e608227ce81bb23",
+            "xvs.02": "465c0d0ed84f61a74349bd9d4b5c0d2ec0b424a24703459d86a4a2e557bfc892",
+            "xvs.07": "5ff49f2906f49a7d5e01066e20e5d2d87f1dac5d23a3827891c21a42842163af",
+            "xvs.08": "2374df97b2478f057a8049c6bb5f8453dbfe284471dee58015db1b9fd9bc2223",
+            "xvs.11m": "b77bf8254043f8fbfd2aa1c3321056a0cdf2413c87e4a6c15f38a8dfc32e576f",
+            "xvs.12m": "8158cabdf8c3045f08adfdbd35cbd9138bf91adb63455d5160a0c8897d6e7b17",
+            "xvs.13m": "5fc6dab88b19f840f76a7cfc03dbf2a176a6a3b6038116b9926ed7360ece7440",
+            "xvs.14m": "f78262b13acc0194f293e8e0fa7c32e4055f54c4cbbe1f01fcc7cf6ceb505330",
+            "xvs.15m": "3ff3f97d715dc9b8bd1a4e37b1a81b80dcf935e46d88a35736661197c666ebfa",
+            "xvs.16m": "b5fe7499152ab1211fea2606a3ea746ff27b3f118efa34ca9223d6c68d563faf",
+            "xvs.17m": "ae27bf05aebe89480e11186e7aa3505601e0e4510ac9060a1d0825aaf5678009",
+            "xvs.18m": "ab3afb5cf3066996224e34ce429281e5f9fa0fb59f913b576c05ed0829cf7dff",
+            "xvs.19m": "5e17da68c62a237092e0450a6cef991d2c8f41438f35cfcb6c5f9aa9b4fbc16a",
+            "xvs.20m": "6304e5e28142309b3243ff194c601bdc2ad485f1d0beb311f288b45358fad3e8",
+            "xvsre.03m": "455fbdc4c23fcbaca8af847b0a7c66db2b8bf34068cc1eae5500670bfdca8485",
+            "xvsre.04m": "016b47b7ef0d558e59be964991bbe0cee55096a70004fab99625090072bb08ff",
+            "xvsre.05a": "8ca6e5013f74a43f37be2cb0b2c0d14d09485d176be7ea7d6e14355cc5344880",
+            "xvsre.06a": "ecf883169a70d07c7e7277a188297bc36c25758c92fcfc594e2673d8a34cf936",
+            "xvsre.09": "ab869194450a01b0662e1f83a59aec5b7e6d975f4964d52e00d553cc34a9c59a"
+          }
+        }
+      },
+      "platform": "fbneo",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-hbmame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-12d0bb076ec24b3e7bbb",
+        "source-2374df97b2478f057a80",
+        "source-3b078489ef4127f5cf88",
+        "source-3ff3f97d715dc9b8bd1a",
+        "source-465c0d0ed84f61a74349",
+        "source-524a25bcd153be24594d",
+        "source-58691feda6dd2febe119",
+        "source-5e17da68c62a237092e0",
+        "source-5fc6dab88b19f840f76a",
+        "source-5ff49f2906f49a7d5e01",
+        "source-6304e5e28142309b3243",
+        "source-66f70aa2cdf3e0913888",
+        "source-674785dda041aed43aaa",
+        "source-8158cabdf8c3045f08ad",
+        "source-ab3afb5cf3066996224e",
+        "source-ae27bf05aebe89480e11",
+        "source-b5fe7499152ab1211fea",
+        "source-b77bf8254043f8fbfd2a",
+        "source-cb4d2704962214beac21",
+        "source-edb1de2288098df42f6d",
+        "source-f78262b13acc0194f293"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/xmvsfre.zip": {
+          "members": {
+            "xmvsfj.key": "3b078489ef4127f5cf881ec5057cd0b3b8e97074d0249446ab9ab4ec3bb1dd4b",
+            "xvs.01": "edb1de2288098df42f6dece878c16abeb2504ba54984fdb42e608227ce81bb23",
+            "xvs.02": "465c0d0ed84f61a74349bd9d4b5c0d2ec0b424a24703459d86a4a2e557bfc892",
+            "xvs.07": "5ff49f2906f49a7d5e01066e20e5d2d87f1dac5d23a3827891c21a42842163af",
+            "xvs.08": "2374df97b2478f057a8049c6bb5f8453dbfe284471dee58015db1b9fd9bc2223",
+            "xvs.11m": "b77bf8254043f8fbfd2aa1c3321056a0cdf2413c87e4a6c15f38a8dfc32e576f",
+            "xvs.12m": "8158cabdf8c3045f08adfdbd35cbd9138bf91adb63455d5160a0c8897d6e7b17",
+            "xvs.13m": "5fc6dab88b19f840f76a7cfc03dbf2a176a6a3b6038116b9926ed7360ece7440",
+            "xvs.14m": "f78262b13acc0194f293e8e0fa7c32e4055f54c4cbbe1f01fcc7cf6ceb505330",
+            "xvs.15m": "3ff3f97d715dc9b8bd1a4e37b1a81b80dcf935e46d88a35736661197c666ebfa",
+            "xvs.16m": "b5fe7499152ab1211fea2606a3ea746ff27b3f118efa34ca9223d6c68d563faf",
+            "xvs.17m": "ae27bf05aebe89480e11186e7aa3505601e0e4510ac9060a1d0825aaf5678009",
+            "xvs.18m": "ab3afb5cf3066996224e34ce429281e5f9fa0fb59f913b576c05ed0829cf7dff",
+            "xvs.19m": "5e17da68c62a237092e0450a6cef991d2c8f41438f35cfcb6c5f9aa9b4fbc16a",
+            "xvs.20m": "6304e5e28142309b3243ff194c601bdc2ad485f1d0beb311f288b45358fad3e8",
+            "xvsre.03m": "455fbdc4c23fcbaca8af847b0a7c66db2b8bf34068cc1eae5500670bfdca8485",
+            "xvsre.04m": "016b47b7ef0d558e59be964991bbe0cee55096a70004fab99625090072bb08ff",
+            "xvsre.05a": "8ca6e5013f74a43f37be2cb0b2c0d14d09485d176be7ea7d6e14355cc5344880",
+            "xvsre.06a": "ecf883169a70d07c7e7277a188297bc36c25758c92fcfc594e2673d8a34cf936",
+            "xvsre.09": "ab869194450a01b0662e1f83a59aec5b7e6d975f4964d52e00d553cc34a9c59a"
+          }
+        }
+      },
+      "platform": "hbmame",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-12d0bb076ec24b3e7bbb",
+        "source-2374df97b2478f057a80",
+        "source-3b078489ef4127f5cf88",
+        "source-3ff3f97d715dc9b8bd1a",
+        "source-465c0d0ed84f61a74349",
+        "source-524a25bcd153be24594d",
+        "source-58691feda6dd2febe119",
+        "source-5e17da68c62a237092e0",
+        "source-5fc6dab88b19f840f76a",
+        "source-5ff49f2906f49a7d5e01",
+        "source-6304e5e28142309b3243",
+        "source-66f70aa2cdf3e0913888",
+        "source-674785dda041aed43aaa",
+        "source-8158cabdf8c3045f08ad",
+        "source-ab3afb5cf3066996224e",
+        "source-ae27bf05aebe89480e11",
+        "source-b5fe7499152ab1211fea",
+        "source-b77bf8254043f8fbfd2a",
+        "source-cb4d2704962214beac21",
+        "source-edb1de2288098df42f6d",
+        "source-f78262b13acc0194f293"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/xmvsfj.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "xmvsfj.key": "3b078489ef4127f5cf881ec5057cd0b3b8e97074d0249446ab9ab4ec3bb1dd4b",
+            "xvs.01": "edb1de2288098df42f6dece878c16abeb2504ba54984fdb42e608227ce81bb23",
+            "xvs.02": "465c0d0ed84f61a74349bd9d4b5c0d2ec0b424a24703459d86a4a2e557bfc892",
+            "xvs.05a": "8ca6e5013f74a43f37be2cb0b2c0d14d09485d176be7ea7d6e14355cc5344880",
+            "xvs.06a": "ecf883169a70d07c7e7277a188297bc36c25758c92fcfc594e2673d8a34cf936",
+            "xvs.07": "5ff49f2906f49a7d5e01066e20e5d2d87f1dac5d23a3827891c21a42842163af",
+            "xvs.08": "2374df97b2478f057a8049c6bb5f8453dbfe284471dee58015db1b9fd9bc2223",
+            "xvs.09": "ab869194450a01b0662e1f83a59aec5b7e6d975f4964d52e00d553cc34a9c59a",
+            "xvs.11m": "b77bf8254043f8fbfd2aa1c3321056a0cdf2413c87e4a6c15f38a8dfc32e576f",
+            "xvs.12m": "8158cabdf8c3045f08adfdbd35cbd9138bf91adb63455d5160a0c8897d6e7b17",
+            "xvs.13m": "5fc6dab88b19f840f76a7cfc03dbf2a176a6a3b6038116b9926ed7360ece7440",
+            "xvs.14m": "f78262b13acc0194f293e8e0fa7c32e4055f54c4cbbe1f01fcc7cf6ceb505330",
+            "xvs.15m": "3ff3f97d715dc9b8bd1a4e37b1a81b80dcf935e46d88a35736661197c666ebfa",
+            "xvs.16m": "b5fe7499152ab1211fea2606a3ea746ff27b3f118efa34ca9223d6c68d563faf",
+            "xvs.17m": "ae27bf05aebe89480e11186e7aa3505601e0e4510ac9060a1d0825aaf5678009",
+            "xvs.18m": "ab3afb5cf3066996224e34ce429281e5f9fa0fb59f913b576c05ed0829cf7dff",
+            "xvs.19m": "5e17da68c62a237092e0450a6cef991d2c8f41438f35cfcb6c5f9aa9b4fbc16a",
+            "xvs.20m": "6304e5e28142309b3243ff194c601bdc2ad485f1d0beb311f288b45358fad3e8",
+            "xvsj.03m": "455fbdc4c23fcbaca8af847b0a7c66db2b8bf34068cc1eae5500670bfdca8485",
+            "xvsj.04m": "016b47b7ef0d558e59be964991bbe0cee55096a70004fab99625090072bb08ff"
+          }
+        }
+      },
+      "platform": "mame",
+      "profile": "xmvsf-restoration-default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mister": {
+      "destination_requirements": "Use the MiSTer core named by the included MRA.",
+      "inputs": [
+        "source-12d0bb076ec24b3e7bbb",
+        "source-2374df97b2478f057a80",
+        "source-3b078489ef4127f5cf88",
+        "source-3ff3f97d715dc9b8bd1a",
+        "source-465c0d0ed84f61a74349",
+        "source-524a25bcd153be24594d",
+        "source-58691feda6dd2febe119",
+        "source-5e17da68c62a237092e0",
+        "source-5fc6dab88b19f840f76a",
+        "source-5ff49f2906f49a7d5e01",
+        "source-6304e5e28142309b3243",
+        "source-66f70aa2cdf3e0913888",
+        "source-674785dda041aed43aaa",
+        "source-8158cabdf8c3045f08ad",
+        "source-ab3afb5cf3066996224e",
+        "source-ae27bf05aebe89480e11",
+        "source-b5fe7499152ab1211fea",
+        "source-b77bf8254043f8fbfd2a",
+        "source-cb4d2704962214beac21",
+        "source-edb1de2288098df42f6d",
+        "source-f78262b13acc0194f293"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Restorations/X-Men vs. Street Fighter (USA) [Restoration].mra": {
+          "sha256": "622d75fc461d650e4b8bbbc792292efc81d226bbc5f0a1c77a4a2a469bd0c40b"
+        },
+        "games/mame/xmvsfj.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+            "xmvsfj.key": "3b078489ef4127f5cf881ec5057cd0b3b8e97074d0249446ab9ab4ec3bb1dd4b",
+            "xvs.01": "edb1de2288098df42f6dece878c16abeb2504ba54984fdb42e608227ce81bb23",
+            "xvs.02": "465c0d0ed84f61a74349bd9d4b5c0d2ec0b424a24703459d86a4a2e557bfc892",
+            "xvs.05a": "58691feda6dd2febe119c3cc14e4611e272920b1c8762e5ef9f7cc18a39f5a89",
+            "xvs.06a": "66f70aa2cdf3e091388876b5633e069111cf7ee51fec1b01d5fc30342e9d718e",
+            "xvs.07": "5ff49f2906f49a7d5e01066e20e5d2d87f1dac5d23a3827891c21a42842163af",
+            "xvs.08": "2374df97b2478f057a8049c6bb5f8453dbfe284471dee58015db1b9fd9bc2223",
+            "xvs.09": "12d0bb076ec24b3e7bbbfcf5ef5be2080abb46147ddce7bf11d6a049c8bf14a9",
+            "xvs.11m": "b77bf8254043f8fbfd2aa1c3321056a0cdf2413c87e4a6c15f38a8dfc32e576f",
+            "xvs.12m": "8158cabdf8c3045f08adfdbd35cbd9138bf91adb63455d5160a0c8897d6e7b17",
+            "xvs.13m": "5fc6dab88b19f840f76a7cfc03dbf2a176a6a3b6038116b9926ed7360ece7440",
+            "xvs.14m": "f78262b13acc0194f293e8e0fa7c32e4055f54c4cbbe1f01fcc7cf6ceb505330",
+            "xvs.15m": "3ff3f97d715dc9b8bd1a4e37b1a81b80dcf935e46d88a35736661197c666ebfa",
+            "xvs.16m": "b5fe7499152ab1211fea2606a3ea746ff27b3f118efa34ca9223d6c68d563faf",
+            "xvs.17m": "ae27bf05aebe89480e11186e7aa3505601e0e4510ac9060a1d0825aaf5678009",
+            "xvs.18m": "ab3afb5cf3066996224e34ce429281e5f9fa0fb59f913b576c05ed0829cf7dff",
+            "xvs.19m": "5e17da68c62a237092e0450a6cef991d2c8f41438f35cfcb6c5f9aa9b4fbc16a",
+            "xvs.20m": "6304e5e28142309b3243ff194c601bdc2ad485f1d0beb311f288b45358fad3e8",
+            "xvsj.03m": "cb4d2704962214beac21c4708be7a1949a5661ae3823330935ecb29abae9c354",
+            "xvsj.04m": "674785dda041aed43aaa76fdc3aec3912ff511a5f6a0ca2c415c97f5c15496c6"
+          }
+        }
+      },
+      "platform": "mister",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    }
+  }
+}
