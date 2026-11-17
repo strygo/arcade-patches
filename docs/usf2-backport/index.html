@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Ultra Street Fighter II</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc6</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc6</dd><dt>Updated</dt><dd>2026-11-07</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc7</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc7</dd><dt>Updated</dt><dd>2026-11-14</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/usf2-backport/title_us.png?v=b9dadeae9b" alt="Ultra Street Fighter II (USA) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>USA · <code>usf2u</code></figcaption></figure><figure class="build"><img src="../img/usf2-backport/title_jp.png?v=c0da914e2c" alt="Ultra Street Fighter II (Japan) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>Japan · <code>usf2j</code></figcaption></figure></div>
 <h2>About</h2>
@@ -58,7 +58,7 @@
 <p>Ultra Street Fighter II: The Final Challengers is the 2017 Nintendo Switch edition of Super Street Fighter II Turbo, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.</p>
 <p>Akuma has his own select cell, and Evil Ryu and Violent Ken join the original sixteen fighters with their Ultra moves, colors and endings. Shin Akuma stays hidden, for twenty fighters in all.</p>
 <p>Ultra&#x27;s presentation comes with them: the Ultra title and intro, &quot;The Final Challengers&quot; lettering, a color select for the new fighters, and a choice of sixteen stages or Random once you have picked a fighter.</p>
-<p>The Switch edition&#x27;s sound effects play in every build, and on MiSTer its arranged music plays too. Choose MODERN or CLASSIC sound effects in ULTRA CONFIGURATION; on MiSTer you can choose the music there too. MODERN controls are the default; choose CLASSIC in ULTRA CONFIGURATION to retain the earlier command inputs.</p>
+<p>The Switch edition&#x27;s sound effects play in every build, and on MiSTer its arranged music plays too. Choose ORIGINAL, CLASSIC or MODERN sound in ULTRA CONFIGURATION; MODERN is the default. CLASSIC adds the Switch edition&#x27;s classic announcer, while ORIGINAL keeps the earlier arcade sound. On MiSTer you can choose the music there too. MODERN controls are the default; choose CLASSIC controls to retain the earlier command inputs.</p>
 <p>The USA build is in English; the Japan build keeps the Japanese.</p>
 <p>This is a release candidate.</p>
 <h2>What's included</h2><ul>
@@ -66,8 +66,9 @@
 <li>Ultra&#x27;s classic colors for the new fighters, chosen on a color select screen</li>
 <li>Sixteen stages and Random to choose from after you pick a fighter</li>
 <li>The Ultra title and intro, and ULTRA on the VS, Continue and Game Over screens</li>
-<li>The Switch edition&#x27;s sound effects, and its arranged music on MiSTer; MODERN or CLASSIC options</li>
+<li>ORIGINAL, CLASSIC and MODERN sound options, with the Switch edition&#x27;s classic announcer in CLASSIC and arranged music on MiSTer</li>
 <li>MODERN command inputs with more forgiving motions, or CLASSIC inputs, selected in ULTRA CONFIGURATION</li>
+<li>Configurable game speed, an optional player speed choice and a shared match-length setting for Arcade and Versus</li>
 <li>USA (English) and Japan builds</li>
 </ul>
 <h2>Screenshots</h2>
@@ -85,14 +86,14 @@ You need:</p>
 <tr><td>USA</td><td>Ultra Street Fighter II</td><td class="mono">hsf2</td><td class="mono">usf2u</td></tr><tr><td>Japan</td><td>Ultra Street Fighter II</td><td class="mono">hsf2j</td><td class="mono">usf2j</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-11-10. Game version unchanged.</p>
+
 
 
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/usf2-backport-rc6-kit.zip?v=4f97a46468">usf2-backport-rc6-kit.zip</a>
-  (15.9 MB)</div>
-  <div class="hash">SHA-256: 4f97a46468f720516cda58e2c55f5f461bf4e99c631779599a8c4a5fb3a265b5</div>
+  <div class="file"><a href="../downloads/usf2-backport-rc7-kit.zip?v=5af62d96b8">usf2-backport-rc7-kit.zip</a>
+  (23.0 MB)</div>
+  <div class="hash">SHA-256: 5af62d96b80ca26cbb0c96d619861ae6b9deda0b35639c9a874165c210f4d338</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
@@ -107,13 +108,33 @@ The kit remembers your choices and prepares required helpers and Python packages
 privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
 for the files to copy. Run the same command again to update.</p>
 <details><summary>Advanced command-line reference</summary><h2>How to build</h2>
-<pre><code>unzip usf2-backport-rc6-kit.zip -d usf2-backport
+<pre><code>unzip usf2-backport-rc7-kit.zip -d usf2-backport
 cd usf2-backport
 python3 apply.py</code></pre>
 </details>
 <h3>Darksoft CPS-2</h3>
 <p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices. Darksoft uses native music; the streamed arrangements require CPS+ on MiSTer.</p>
 <h2 id="history">Release history</h2>
+<h3>rc7 (2026-11-14)</h3><ul>
+<li>Fix: Start responds immediately on the title screen and enters player select without palette corruption or resets.</li>
+<li>Fix: Corrected ground-fireball damage for Ryu, Evil Ryu, Violent Ken, Akuma and Shin Akuma, including Shin Akuma’s multi-hit red fireballs.</li>
+<li>Fix: Corrected Violent Ken’s super movement, animation completion and landing.</li>
+<li>Fix: Claw&#x27;s super combos report their three hits and award the earned bonus points, including knockouts.</li>
+<li>Fix: Removed corrupt graphics from Akuma and Shin Akuma&#x27;s crouching medium and heavy kicks.</li>
+<li>New: GAME SPEED offers NORMAL, MODERN and TURBO 1–4, with MODERN as default. SPEED SELECT separately enables the player speed choice.</li>
+<li>New: MAX ROUND sets the shared match length for Arcade and Versus.</li>
+<li>New: ORIGINAL, CLASSIC and MODERN sound choices. CLASSIC adds the Switch edition’s classic announcer; ORIGINAL preserves the previous Classic sound, including saved preferences.</li>
+<li>Improved: Balanced Classic and Modern voice levels, and corrected Evil Ryu and Violent Ken’s Classic voices and defeat cries.</li>
+<li>Fix: Corrected electrical and fire hit sounds, and removed the stray blocking sound from Modern Yoga Fire.</li>
+<li>Fix: Player colors follow the Switch Arcade rules and stay consistent between scenes, including the attract-mode HUD.</li>
+<li>Fix: Removed ULTRA title flicker on MiSTer and synchronized the title lettering when inserting a coin.</li>
+<li>Fix: Corrected Cammy’s stage edges and scrolling background updates.</li>
+<li>Fix: Selected stage names remain visible until the transition to the VS screen, including two-player games.</li>
+<li>Fix: Removed stage scenery left behind during high-score initials entry.</li>
+<li>Improved: Updated country flags and restored Russia’s map caption.</li>
+<li>Fix: The first intro fight ends with Ryu&#x27;s intended combo and synchronized sound cues.</li>
+<li>Improved: Start can end the credits, and Chun-Li’s ending choices appear together after their descriptions.</li>
+</ul>
 <h3>rc6 (2026-11-07)</h3><ul>
 <li>Fix: Restored Versus speed with MODERN and CLASSIC controls.</li>
 <li>Fix: Demon and Zangief super combos show the correct hit counts and award their bonus points, including knockouts.</li>
@@ -199,7 +220,7 @@ python3 apply.py</code></pre>
 </ul>
 <h2>Related projects</h2><ul><li><a href="../ssf2t-gmc/">Super Street Fighter II Turbo: Grand Master Challenge</a>, the English restoration of the game Ultra is built on</li><li><a href="../ssf2-ex/">Super Street Fighter II EX</a>, another enhanced Super Turbo</li><li><a href="../cps2-plus/">CPS-2+ hardware</a>, how the extended system these sets need works</li><li><a href="https://newlegacy.fr/credits.html">Super Street Fighter II Turbo: New Legacy</a>, Tyrone&#x27;s Akuma artwork comes from this project</li></ul>
 <h2>Notes</h2><ul class="notes">
-<li>USA and Japan use the same game configuration with selectable MODERN and CLASSIC sound effects. In unmodified MAME they run as hsf2 (USA) and hsf2j (Japan); no custom MAME build is needed. Choose the sound effects in ULTRA CONFIGURATION. Keep the generated ZIPs separate from original Hyper Street Fighter II ROMs. Checksum warnings are expected. HBMAME needs a build that includes the Ultra Street Fighter II sets.</li>
+<li>USA and Japan use the same game configuration with selectable ORIGINAL, CLASSIC and MODERN sound. In unmodified MAME they run as hsf2 (USA) and hsf2j (Japan); no custom MAME build is needed. Choose the sound in ULTRA CONFIGURATION. Keep the generated ZIPs separate from original Hyper Street Fighter II ROMs. Checksum warnings are expected. HBMAME needs a build that includes the Ultra Street Fighter II sets.</li>
 <li>Installation: install Python 3.10 or newer, extract the kit and run apply.py with your arcade ROMs, Switch game files and prod.keys. The region follows the game files you supply. Scratch and output folders are selected automatically unless you specify them. The installer checks paths before downloading tools, reports setup errors without a traceback, and groups the finished files and instructions by target. No compiler, Git, CMake, NumPy or separate FFmpeg installation is needed. For offline setup, keep cpsplus-tools-v2-offline.zip zipped and add --tools-bundle cpsplus-tools-v2-offline.zip --offline. Optional 7z inputs still need 7-Zip.</li>
 <li>Credits: Akuma&#x27;s imported artwork is Tyrone&#x27;s, from Super Street Fighter II Turbo: New Legacy.</li>
 <li>Special thanks to Gachichan! for bug reports and improvements to the Evil Ryu and Violent Ken profile pictures.</li>
