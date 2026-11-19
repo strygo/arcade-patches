@@ -4524,6 +4524,56 @@
         }
       }
     },
+    "xmvsf-ex": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-11-18",
+          "files": {
+            "ips": {
+              "archive": "archive/7532ea0807dbe6d06f78c9b6508bcb2e2a40143bc42488eca97891a9d6a8cee2/xmvsf-ex-rc1-ips.zip",
+              "name": "xmvsf-ex-rc1-ips.zip",
+              "sha256": "7532ea0807dbe6d06f78c9b6508bcb2e2a40143bc42488eca97891a9d6a8cee2",
+              "size": 664735
+            },
+            "mra": {
+              "archive": "archive/97cb4310fcb041d350c72e6c6897fa88837369f896bc3917542c3ac75176df35/xmvsf-ex-rc1-mra.zip",
+              "name": "xmvsf-ex-rc1-mra.zip",
+              "sha256": "97cb4310fcb041d350c72e6c6897fa88837369f896bc3917542c3ac75176df35",
+              "size": 285968
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "revisions": {
+            "1": {
+              "date": "2026-11-18",
+              "files": {
+                "ips": {
+                  "archive": "archive/7532ea0807dbe6d06f78c9b6508bcb2e2a40143bc42488eca97891a9d6a8cee2/xmvsf-ex-rc1-ips.zip",
+                  "name": "xmvsf-ex-rc1-ips.zip",
+                  "sha256": "7532ea0807dbe6d06f78c9b6508bcb2e2a40143bc42488eca97891a9d6a8cee2",
+                  "size": 664735
+                },
+                "mra": {
+                  "archive": "archive/97cb4310fcb041d350c72e6c6897fa88837369f896bc3917542c3ac75176df35/xmvsf-ex-rc1-mra.zip",
+                  "name": "xmvsf-ex-rc1-mra.zip",
+                  "sha256": "97cb4310fcb041d350c72e6c6897fa88837369f896bc3917542c3ac75176df35",
+                  "size": 285968
+                }
+              },
+              "kind": "rom"
+            }
+          }
+        }
+      }
+    },
     "xmvsf-restoration": {
       "current": "rc1",
       "versions": {
