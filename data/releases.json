@@ -2004,21 +2004,27 @@
           }
         },
         "rc9": {
-          "current_revision": 1,
-          "date": "2026-11-14",
+          "current_revision": 2,
+          "date": "2026-11-17",
           "files": {
             "kit": {
-              "archive": "archive/71f3404f81096dda5ece6b41e3b5d9ca92c3953b56afdcbd8ed05ce69ab2ceae/sfa2-gold-rc9-kit.zip",
+              "archive": "archive/8bbf3dab98ccde1d419fea4729209f1762c812a38c53d2ad54cf09c389df1536/sfa2-gold-rc9-kit.zip",
               "name": "sfa2-gold-rc9-kit.zip",
-              "sha256": "71f3404f81096dda5ece6b41e3b5d9ca92c3953b56afdcbd8ed05ce69ab2ceae",
-              "size": 1780940
+              "sha256": "8bbf3dab98ccde1d419fea4729209f1762c812a38c53d2ad54cf09c389df1536",
+              "size": 1780924
             }
           },
+          "game_contract_sha256": "0d8fa531b9a9b73f14abfa31890a2153f71ab3e043cf2f8d4fc2bb6f49e58cf0",
           "kind": "kit",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-11-17",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "revisions": {
@@ -2032,6 +2038,19 @@
                   "size": 1780940
                 }
               },
+              "kind": "kit"
+            },
+            "2": {
+              "date": "2026-11-17",
+              "files": {
+                "kit": {
+                  "archive": "archive/8bbf3dab98ccde1d419fea4729209f1762c812a38c53d2ad54cf09c389df1536/sfa2-gold-rc9-kit.zip",
+                  "name": "sfa2-gold-rc9-kit.zip",
+                  "sha256": "8bbf3dab98ccde1d419fea4729209f1762c812a38c53d2ad54cf09c389df1536",
+                  "size": 1780924
+                }
+              },
+              "game_contract_sha256": "0d8fa531b9a9b73f14abfa31890a2153f71ab3e043cf2f8d4fc2bb6f49e58cf0",
               "kind": "kit"
             }
           }
@@ -3366,21 +3385,27 @@
           }
         },
         "rc7": {
-          "current_revision": 1,
-          "date": "2026-11-14",
+          "current_revision": 2,
+          "date": "2026-11-17",
           "files": {
             "kit": {
-              "archive": "archive/5af62d96b80ca26cbb0c96d619861ae6b9deda0b35639c9a874165c210f4d338/usf2-backport-rc7-kit.zip",
+              "archive": "archive/5df7f59b133cd82d256db4e151e6b6ec27d92a424ee6d1169d45367ff10de657/usf2-backport-rc7-kit.zip",
               "name": "usf2-backport-rc7-kit.zip",
-              "sha256": "5af62d96b80ca26cbb0c96d619861ae6b9deda0b35639c9a874165c210f4d338",
-              "size": 24125761
+              "sha256": "5df7f59b133cd82d256db4e151e6b6ec27d92a424ee6d1169d45367ff10de657",
+              "size": 24137533
             }
           },
+          "game_contract_sha256": "0d4717ce734f700bfb199e67213167baa49bf4bcc06e4a109af3dc3c482b874d",
           "kind": "kit",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-11-17",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "revisions": {
@@ -3394,6 +3419,19 @@
                   "size": 24125761
                 }
               },
+              "kind": "kit"
+            },
+            "2": {
+              "date": "2026-11-17",
+              "files": {
+                "kit": {
+                  "archive": "archive/5df7f59b133cd82d256db4e151e6b6ec27d92a424ee6d1169d45367ff10de657/usf2-backport-rc7-kit.zip",
+                  "name": "usf2-backport-rc7-kit.zip",
+                  "sha256": "5df7f59b133cd82d256db4e151e6b6ec27d92a424ee6d1169d45367ff10de657",
+                  "size": 24137533
+                }
+              },
+              "game_contract_sha256": "0d4717ce734f700bfb199e67213167baa49bf4bcc06e4a109af3dc3c482b874d",
               "kind": "kit"
             }
           }
@@ -3494,21 +3532,27 @@
           }
         },
         "rc5": {
-          "current_revision": 1,
-          "date": "2026-11-14",
+          "current_revision": 2,
+          "date": "2026-11-17",
           "files": {
             "kit": {
-              "archive": "archive/bacf7e5f3a2b1878504536673a009265de5cb66e8c954d18b175ae589d38b448/vhunt2-arrange-rc5-kit.zip",
+              "archive": "archive/7d75c4acca793241be069cefc561085ab3f195d1b5bcaae8ac7b13cb4a69f4f1/vhunt2-arrange-rc5-kit.zip",
               "name": "vhunt2-arrange-rc5-kit.zip",
-              "sha256": "bacf7e5f3a2b1878504536673a009265de5cb66e8c954d18b175ae589d38b448",
-              "size": 2066391
+              "sha256": "7d75c4acca793241be069cefc561085ab3f195d1b5bcaae8ac7b13cb4a69f4f1",
+              "size": 2077271
             }
           },
+          "game_contract_sha256": "8ffacee7225cd2000f809ae9e490a97ce49ef4a19993c121fdc4f5625120f8e9",
           "kind": "kit",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-11-17",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "revisions": {
@@ -3522,6 +3566,19 @@
                   "size": 2066391
                 }
               },
+              "kind": "kit"
+            },
+            "2": {
+              "date": "2026-11-17",
+              "files": {
+                "kit": {
+                  "archive": "archive/7d75c4acca793241be069cefc561085ab3f195d1b5bcaae8ac7b13cb4a69f4f1/vhunt2-arrange-rc5-kit.zip",
+                  "name": "vhunt2-arrange-rc5-kit.zip",
+                  "sha256": "7d75c4acca793241be069cefc561085ab3f195d1b5bcaae8ac7b13cb4a69f4f1",
+                  "size": 2077271
+                }
+              },
+              "game_contract_sha256": "8ffacee7225cd2000f809ae9e490a97ce49ef4a19993c121fdc4f5625120f8e9",
               "kind": "kit"
             }
           }
@@ -3826,21 +3883,27 @@
           }
         },
         "rc6": {
-          "current_revision": 1,
-          "date": "2026-11-14",
+          "current_revision": 2,
+          "date": "2026-11-17",
           "files": {
             "kit": {
-              "archive": "archive/385896def66838752b10d38b9ec6620f5a0b4d5557ab84c2a8f87bebe5fc0682/vsav-arrange-rc6-kit.zip",
+              "archive": "archive/41b9fe57690e578dbfd4fbddf74f20666f879c2656ffd8ed710bc9b85ac41132/vsav-arrange-rc6-kit.zip",
               "name": "vsav-arrange-rc6-kit.zip",
-              "sha256": "385896def66838752b10d38b9ec6620f5a0b4d5557ab84c2a8f87bebe5fc0682",
-              "size": 2365562
+              "sha256": "41b9fe57690e578dbfd4fbddf74f20666f879c2656ffd8ed710bc9b85ac41132",
+              "size": 2381157
             }
           },
+          "game_contract_sha256": "8362d06697fc522341d813710f4112a180efa34314903f61d0a71acf2bff80f5",
           "kind": "kit",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-11-17",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "revisions": {
@@ -3854,6 +3917,19 @@
                   "size": 2365562
                 }
               },
+              "kind": "kit"
+            },
+            "2": {
+              "date": "2026-11-17",
+              "files": {
+                "kit": {
+                  "archive": "archive/41b9fe57690e578dbfd4fbddf74f20666f879c2656ffd8ed710bc9b85ac41132/vsav-arrange-rc6-kit.zip",
+                  "name": "vsav-arrange-rc6-kit.zip",
+                  "sha256": "41b9fe57690e578dbfd4fbddf74f20666f879c2656ffd8ed710bc9b85ac41132",
+                  "size": 2381157
+                }
+              },
+              "game_contract_sha256": "8362d06697fc522341d813710f4112a180efa34314903f61d0a71acf2bff80f5",
               "kind": "kit"
             }
           }
@@ -4158,21 +4234,27 @@
           }
         },
         "rc5": {
-          "current_revision": 1,
-          "date": "2026-11-14",
+          "current_revision": 2,
+          "date": "2026-11-17",
           "files": {
             "kit": {
-              "archive": "archive/21ed6c9fb491561f188051df5f9adf2e5ec943358e08e99ce8cc5cfea7d64ee8/vsav2-arrange-rc5-kit.zip",
+              "archive": "archive/5851cb47b93abc4da51b503c7bcfa5eb2d4c29f67290e192a24f451b9a1073a1/vsav2-arrange-rc5-kit.zip",
               "name": "vsav2-arrange-rc5-kit.zip",
-              "sha256": "21ed6c9fb491561f188051df5f9adf2e5ec943358e08e99ce8cc5cfea7d64ee8",
-              "size": 1985764
+              "sha256": "5851cb47b93abc4da51b503c7bcfa5eb2d4c29f67290e192a24f451b9a1073a1",
+              "size": 1996554
             }
           },
+          "game_contract_sha256": "1490c230a92411b1f5f4858800e6a27e8564146ce48975de44c9d6bfc22bc6ef",
           "kind": "kit",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-11-17",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "revisions": {
@@ -4186,6 +4268,19 @@
                   "size": 1985764
                 }
               },
+              "kind": "kit"
+            },
+            "2": {
+              "date": "2026-11-17",
+              "files": {
+                "kit": {
+                  "archive": "archive/5851cb47b93abc4da51b503c7bcfa5eb2d4c29f67290e192a24f451b9a1073a1/vsav2-arrange-rc5-kit.zip",
+                  "name": "vsav2-arrange-rc5-kit.zip",
+                  "sha256": "5851cb47b93abc4da51b503c7bcfa5eb2d4c29f67290e192a24f451b9a1073a1",
+                  "size": 1996554
+                }
+              },
+              "game_contract_sha256": "1490c230a92411b1f5f4858800e6a27e8564146ce48975de44c9d6bfc22bc6ef",
               "kind": "kit"
             }
           }
