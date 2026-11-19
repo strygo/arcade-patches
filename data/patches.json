@@ -2583,7 +2583,7 @@
         "Configurable game speed, an optional player speed choice and a shared match-length setting for Arcade and Versus",
         "USA (English) and Japan builds"
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-18",
       "description": [
         "Ultra Street Fighter II: The Final Challengers is the 2017 Nintendo Switch edition of Super Street Fighter II Turbo, and it never had an arcade release. This backport rebuilds it as a CPS-2 game.",
         "Akuma has his own select cell, and Evil Ryu and Violent Ken join the original sixteen fighters with their Ultra moves, colors and endings. Shin Akuma stays hidden, for twenty fighters in all.",
@@ -2624,6 +2624,21 @@
         }
       ],
       "release_history": [
+        {
+          "date": "2026-11-18",
+          "items": [
+            "Fix: Akuma and Shin Akuma throw their fireballs again; RC7 had lost them.",
+            "Fix: After a Raging Demon, the opponent falls to the ground instead of standing beside the attacker.",
+            "Fix: Corrected air-fireball damage for Akuma and Shin Akuma.",
+            "Fix: Evil Ryu\u2019s heavy red fireball deals its full damage on the final hit.",
+            "Fix: The fast low-health music starts at the right time for every MAX ROUND setting, including one-round matches.",
+            "Fix: M. Bison\u2019s VS portrait keeps its colors when Akuma takes over the final fight.",
+            "Fix: Zangief\u2019s Spinning Piledriver voice plays again with MODERN sound.",
+            "Changed: ORIGINAL sound uses the original Russia country call.",
+            "Polish: Removed stray marks from the clouds on Blanka\u2019s stage, and the Ultra Configuration cursor no longer flickers on MiSTer."
+          ],
+          "version": "rc8"
+        },
         {
           "date": "2026-11-14",
           "items": [
@@ -2769,7 +2784,7 @@
       "subtitle": "Arcade backport",
       "summary": "Ultra Street Fighter II: The Final Challengers as a CPS-2 game: Akuma gets his own select cell, Evil Ryu and Violent Ken join the roster, and the Switch edition's title, color select and sound come along. USA and Japan builds.",
       "title": "Ultra Street Fighter II",
-      "version": "rc7"
+      "version": "rc8"
     },
     {
       "artifact": {

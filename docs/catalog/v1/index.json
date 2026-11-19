@@ -126,9 +126,9 @@
       "url": "https://arcadepatches.com/downloads/archive/489e6639a704091dfcffb6df04cbf97117cf8c9a96ec35ac9aecde1c69ef208a/strider-ex-rc1-kit.zip"
     },
     "usf2-backport-kit": {
-      "sha256": "5df7f59b133cd82d256db4e151e6b6ec27d92a424ee6d1169d45367ff10de657",
-      "size": 24137533,
-      "url": "https://arcadepatches.com/downloads/archive/5df7f59b133cd82d256db4e151e6b6ec27d92a424ee6d1169d45367ff10de657/usf2-backport-rc7-kit.zip"
+      "sha256": "95627c0b12ffd74fdc69a884ef3f856dd4b3312c692376971c3484bc5dfa80e2",
+      "size": 24145287,
+      "url": "https://arcadepatches.com/downloads/archive/95627c0b12ffd74fdc69a884ef3f856dd4b3312c692376971c3484bc5dfa80e2/usf2-backport-rc8-kit.zip"
     },
     "vhunt2-arrange-kit": {
       "sha256": "7d75c4acca793241be069cefc561085ab3f195d1b5bcaae8ac7b13cb4a69f4f1",
@@ -255,7 +255,7 @@
       "url": "https://arcadepatches.com/downloads/archive/110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678/xmvsf-restoration-rc1-ips.zip"
     }
   },
-  "generation": 216,
+  "generation": 217,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -347,7 +347,7 @@
       "title": "Strider EX"
     },
     "usf2-backport": {
-      "current": "usf2-backport-rc7-r2",
+      "current": "usf2-backport-rc8-r1",
       "title": "Ultra Street Fighter II"
     },
     "vhunt2-arrange": {
@@ -615,16 +615,16 @@
       "kit": "strider-ex-kit",
       "kit_revision": 15
     },
-    "usf2-backport-rc7-r2": {
+    "usf2-backport-rc8-r1": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "672938c0dd3b6b515e6fee4a0839f2057b9a640fc207578b404e6925b7b1808d",
+        "sha256": "fa8178d43bd7f9e1731cecef5214ac307169f5c6965584a3fb46e529fc563acd",
         "size": 150583,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/672938c0dd3b6b515e6fee4a0839f2057b9a640fc207578b404e6925b7b1808d.json"
+        "url": "https://arcadepatches.com/catalog/v1/definitions/fa8178d43bd7f9e1731cecef5214ac307169f5c6965584a3fb46e529fc563acd.json"
       },
-      "game_version": "rc7",
+      "game_version": "rc8",
       "kit": "usf2-backport-kit",
-      "kit_revision": 2
+      "kit_revision": 1
     },
     "vhunt2-arrange-rc5-r2": {
       "definition": {

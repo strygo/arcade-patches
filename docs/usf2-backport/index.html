@@ -49,8 +49,8 @@
 <a class="back" href="../">&larr; All patches</a>
 <h1>Ultra Street Fighter II</h1>
 <p class="subtitle">Arcade backport</p>
-<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc7</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
-<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc7</dd><dt>Updated</dt><dd>2026-11-14</dd></dl>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc8</span><span class="badge plain">Capcom CPS-2 with the CPS+ core</span></div>
+<dl class="meta"><dt>Game</dt><dd>Ultra Street Fighter II: The Final Challengers (Nintendo Switch)</dd><dt>Hardware</dt><dd>Capcom CPS-2 with the CPS+ core</dd><dt>Version</dt><dd>rc8</dd><dt>Updated</dt><dd>2026-11-18</dd></dl>
 <h2>The two builds</h2>
 <div class="build-gallery"><figure class="build"><img src="../img/usf2-backport/title_us.png?v=b9dadeae9b" alt="Ultra Street Fighter II (USA) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>USA · <code>usf2u</code></figcaption></figure><figure class="build"><img src="../img/usf2-backport/title_jp.png?v=c0da914e2c" alt="Ultra Street Fighter II (Japan) title screen"><figcaption><strong>Ultra Street Fighter II</strong><br>Japan · <code>usf2j</code></figcaption></figure></div>
 <h2>About</h2>
@@ -86,14 +86,14 @@ You need:</p>
 <tr><td>USA</td><td>Ultra Street Fighter II</td><td class="mono">hsf2</td><td class="mono">usf2u</td></tr><tr><td>Japan</td><td>Ultra Street Fighter II</td><td class="mono">hsf2j</td><td class="mono">usf2j</td></tr>
 </table>
 <h2>Download</h2>
-<p>Tools updated 2026-11-17. Game version unchanged.</p>
+
 
 
 <div class="download">
   <div class="kind">Reconstruction kit, rebuilds from your own disc + romset</div>
-  <div class="file"><a href="../downloads/usf2-backport-rc7-kit.zip?v=5df7f59b13">usf2-backport-rc7-kit.zip</a>
+  <div class="file"><a href="../downloads/usf2-backport-rc8-kit.zip?v=95627c0b12">usf2-backport-rc8-kit.zip</a>
   (23.0 MB)</div>
-  <div class="hash">SHA-256: 5df7f59b133cd82d256db4e151e6b6ec27d92a424ee6d1169d45367ff10de657</div>
+  <div class="hash">SHA-256: 95627c0b12ffd74fdc69a884ef3f856dd4b3312c692376971c3484bc5dfa80e2</div>
 </div>
 <p>The kit is our reconstruction code and a short list of byte patches.
 Everything else is rebuilt on your machine from files you already own.</p>
@@ -108,13 +108,24 @@ The kit remembers your choices and prepares required helpers and Python packages
 privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
 for the files to copy. Run the same command again to update.</p>
 <details><summary>Advanced command-line reference</summary><h2>How to build</h2>
-<pre><code>unzip usf2-backport-rc7-kit.zip -d usf2-backport
+<pre><code>unzip usf2-backport-rc8-kit.zip -d usf2-backport
 cd usf2-backport
 python3 apply.py</code></pre>
 </details>
 <h3>Darksoft CPS-2</h3>
 <p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices. Darksoft uses native music; the streamed arrangements require CPS+ on MiSTer.</p>
 <h2 id="history">Release history</h2>
+<h3>rc8 (2026-11-18)</h3><ul>
+<li>Fix: Akuma and Shin Akuma throw their fireballs again; RC7 had lost them.</li>
+<li>Fix: After a Raging Demon, the opponent falls to the ground instead of standing beside the attacker.</li>
+<li>Fix: Corrected air-fireball damage for Akuma and Shin Akuma.</li>
+<li>Fix: Evil Ryu’s heavy red fireball deals its full damage on the final hit.</li>
+<li>Fix: The fast low-health music starts at the right time for every MAX ROUND setting, including one-round matches.</li>
+<li>Fix: M. Bison’s VS portrait keeps its colors when Akuma takes over the final fight.</li>
+<li>Fix: Zangief’s Spinning Piledriver voice plays again with MODERN sound.</li>
+<li>Changed: ORIGINAL sound uses the original Russia country call.</li>
+<li>Polish: Removed stray marks from the clouds on Blanka’s stage, and the Ultra Configuration cursor no longer flickers on MiSTer.</li>
+</ul>
 <h3>rc7 (2026-11-14)</h3><ul>
 <li>Fix: Start responds immediately on the title screen and enters player select without palette corruption or resets.</li>
 <li>Fix: Corrected ground-fireball damage for Ryu, Evil Ryu, Violent Ken, Akuma and Shin Akuma, including Shin Akuma’s multi-hit red fireballs.</li>
