@@ -1060,7 +1060,7 @@
                 "sfx.01": "sfxuc.01",
                 "sfx.02": "sfxuc.02",
                 "sfx.09": "sfxuc.09",
-                "sfx.11m": "sfx.11m",
+                "sfx.11m": "sfxuc.11m",
                 "sfx.12m": "sfx.12m",
                 "sfx.13m": "sfxuc.13m",
                 "sfx.14m": "sfxuc.14m",
@@ -1127,19 +1127,19 @@
           {
             "fbneo": {
               "renames": {
-                "sfx.01": "sfxuc.01",
+                "sfx.01": "sfxucj.01",
                 "sfx.02": "sfxuc.02",
-                "sfx.09": "sfxuc.09",
-                "sfx.11m": "sfx.11m",
+                "sfx.09": "sfxucj.09",
+                "sfx.11m": "sfxuc.11m",
                 "sfx.12m": "sfx.12m",
                 "sfx.13m": "sfxucj.13m",
-                "sfx.14m": "sfxuc.14m",
+                "sfx.14m": "sfxucj.14m",
                 "sfx.15m": "sfxucj.15m",
-                "sfx.16m": "sfxuc.16m",
+                "sfx.16m": "sfxucj.16m",
                 "sfx.17m": "sfxucj.17m",
-                "sfx.18m": "sfxuc.18m",
+                "sfx.18m": "sfxucj.18m",
                 "sfx.19m": "sfxucj.19m",
-                "sfx.20m": "sfxuc.20m",
+                "sfx.20m": "sfxucj.20m",
                 "sfx.21m": "sfxuc.21m",
                 "sfx.23m": "sfxuc.23m",
                 "sfx.25m": "sfxuc.25m",
@@ -1209,7 +1209,7 @@
         "Training with computer actions, guard and Super gauge settings, delayed health recovery, Restart and Change Character",
         "Option Mode for difficulty, time limit on or off, game speed (including NORMAL, slower than Turbo 1), round count and stereo or mono sound; Coin pauses play in Console mode",
         "EX CONFIGURATION in the operator menu: Console or Arcade mode; Japanese or international names; ORIGINAL, 30TH ANNIVERSARY or ULTRA SF2 artwork; BONUS STAGE on or off; and TIME LIMIT on or off. 30TH ANNIVERSARY, the default, uses the 30th Anniversary Collection's Hong Kong flag, Chun-Li's storefront signs and Guile's stage, with the red-winged runway emblem. Settings are saved between sessions. On EXIT, press 1P Start to save and return",
-        "ULTRA SF2 artwork follows Ultra Street Fighter II's stages: its runway emblem and a gold can on Guile's stage, Chun-Li's storefront without its signs, a red sun on E. Honda's bathhouse mural and a plain floor on Zangief's stage, with China's flag and RUSSIA for Zangief's country",
+        "ULTRA SF2 artwork follows Ultra Street Fighter II's stages: its runway emblem and a gold can on Guile's stage, Chun-Li's storefront without its signs, a red sun on E. Honda's bathhouse mural and a plain floor on Zangief's stage, with China's flag and Russia's flag, RUSSIA caption and original-style Russia announcer call for Zangief's country",
         "Tournament Battle: with the link adapter, eight players and three matches across linked cabinets, with the Akuma and random-select cells on its select screen; without it, the game plays normally",
         "A new title screen with an EX mark",
         "Two more colors for every fighter: pick with two punches or two kicks, or hold Start as well for the Old version in those colors. The VS screen and the fight portrait show the color you picked",
@@ -1219,7 +1219,7 @@
         "The existing fighters play exactly as in Japan's Super Turbo"
       ],
       "collection_api": 1,
-      "date": "2026-11-14",
+      "date": "2026-11-18",
       "description": [
         "Super Turbo is the version competitive players swear by, but it left things behind. The bonus stages from Super Street Fighter II were gone. Shin Akuma was a hidden boss you had to earn, and Ten Akuma only turned up years later at home. Tournament Battle, the eight-player linked-cabinet mode, stayed with the earlier Super Street Fighter II.",
         "EX puts it together on the arcade game. Akuma has his own select-screen cell, with Shin and Ten available through codes there; the original Ryu codes still work. A random-select cell sits opposite him. The car, the falling barrels and the oil drums are back between fights. Link cabinets with the adapter and it runs Tournament Battle; without it, it plays as normal. Every fighter gets two more colors, Akuma and Shin Akuma get their colors from Ultra Street Fighter II, the move names are the modern ones, and the title screen carries an EX mark.",
@@ -1270,6 +1270,19 @@
         }
       ],
       "release_history": [
+        {
+          "date": "2026-11-18",
+          "items": [
+            "Pressing LK or Coin to back out of the Versus player setup screen returns to the title instead of freezing the game.",
+            "Ryu's attract intro no longer shows displaced graphics, and completed screen fades stay black during transitions.",
+            "Ten Akuma's finishing glyph stays behind the fighters without hiding the burst effect.",
+            "ULTRA SF2 artwork uses Russia's flag, the RUSSIA caption and its original-style Russia announcer call in both regional builds. ORIGINAL and 30TH ANNIVERSARY retain their own flags and USSR call.",
+            "Chun-Li's English ending choices have consistent lettering and spacing. Japan's service menu is centered, its Option Mode shows PRESS START TO EXIT like the USA build, and its country flags follow the selected artwork throughout the game.",
+            "Console mode skips the FBI notice; Arcade mode keeps its normal regional opening.",
+            "Cleaned up the repeating spots in Blanka's clouds in both regional builds."
+          ],
+          "version": "rc15"
+        },
         {
           "date": "2026-11-14",
           "items": [
@@ -1419,7 +1432,7 @@
       "subtitle": "Enhanced version",
       "summary": "Japan's Super Turbo with Shin and Ten Akuma, the bonus stages, Tournament Battle, extra colors, and Console modes for Versus and Training. In English or Japanese.",
       "title": "Super Street Fighter II EX",
-      "version": "rc14"
+      "version": "rc15"
     },
     {
       "artifact": {

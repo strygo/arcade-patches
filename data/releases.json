@@ -2861,7 +2861,7 @@
       }
     },
     "ssf2-ex": {
-      "current": "rc14",
+      "current": "rc15",
       "versions": {
         "rc13": {
           "current_revision": 4,
@@ -3035,6 +3035,51 @@
                 }
               },
               "game_contract_sha256": "d651f03767cd92db8a51252da3502ddc8d2427ea6daaa537da848ce14ca2f17e",
+              "kind": "rom"
+            }
+          }
+        },
+        "rc15": {
+          "current_revision": 1,
+          "date": "2026-11-18",
+          "files": {
+            "ips": {
+              "archive": "archive/40d13d0b90f379947790e0ca6dc45a9ab3358adb70b0884ae6eb1c5e8a33324e/ssf2-ex-rc15-ips.zip",
+              "name": "ssf2-ex-rc15-ips.zip",
+              "sha256": "40d13d0b90f379947790e0ca6dc45a9ab3358adb70b0884ae6eb1c5e8a33324e",
+              "size": 1616263
+            },
+            "mra": {
+              "archive": "archive/7a410b9009f2b109452d459132e478c352844d8524090b91b6a7098aa5cbc8f5/ssf2-ex-rc15-mra.zip",
+              "name": "ssf2-ex-rc15-mra.zip",
+              "sha256": "7a410b9009f2b109452d459132e478c352844d8524090b91b6a7098aa5cbc8f5",
+              "size": 843000
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "revisions": {
+            "1": {
+              "date": "2026-11-18",
+              "files": {
+                "ips": {
+                  "archive": "archive/40d13d0b90f379947790e0ca6dc45a9ab3358adb70b0884ae6eb1c5e8a33324e/ssf2-ex-rc15-ips.zip",
+                  "name": "ssf2-ex-rc15-ips.zip",
+                  "sha256": "40d13d0b90f379947790e0ca6dc45a9ab3358adb70b0884ae6eb1c5e8a33324e",
+                  "size": 1616263
+                },
+                "mra": {
+                  "archive": "archive/7a410b9009f2b109452d459132e478c352844d8524090b91b6a7098aa5cbc8f5/ssf2-ex-rc15-mra.zip",
+                  "name": "ssf2-ex-rc15-mra.zip",
+                  "sha256": "7a410b9009f2b109452d459132e478c352844d8524090b91b6a7098aa5cbc8f5",
+                  "size": 843000
+                }
+              },
               "kind": "rom"
             }
           }
