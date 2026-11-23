@@ -802,6 +802,44 @@
         }
       }
     },
+    "msh-english-restoration": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-11-23",
+          "files": {
+            "kit": {
+              "archive": "archive/98495f00529c394882a18c1449efbd1e195bb1bca43a7b1d5d999b847e9f0c37/msh-english-restoration-rc1-kit.zip",
+              "name": "msh-english-restoration-rc1-kit.zip",
+              "sha256": "98495f00529c394882a18c1449efbd1e195bb1bca43a7b1d5d999b847e9f0c37",
+              "size": 261171
+            }
+          },
+          "kind": "kit",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "revisions": {
+            "1": {
+              "date": "2026-11-23",
+              "files": {
+                "kit": {
+                  "archive": "archive/98495f00529c394882a18c1449efbd1e195bb1bca43a7b1d5d999b847e9f0c37/msh-english-restoration-rc1-kit.zip",
+                  "name": "msh-english-restoration-rc1-kit.zip",
+                  "sha256": "98495f00529c394882a18c1449efbd1e195bb1bca43a7b1d5d999b847e9f0c37",
+                  "size": 261171
+                }
+              },
+              "kind": "kit"
+            }
+          }
+        }
+      }
+    },
     "mshvsf-ex": {
       "current": "rc7",
       "versions": {

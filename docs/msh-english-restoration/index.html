@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-14XT5KXKKH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-14XT5KXKKH');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marvel Super Heroes · Arcade Patches</title>
+<meta name="description" content="Play the Japanese 951117 arcade revision in English, with its original secret-character codes.">
+<link rel="canonical" href="https://arcadepatches.com/msh-english-restoration/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arcade Patches">
+<meta property="og:title" content="Marvel Super Heroes">
+<meta property="og:description" content="Play the Japanese 951117 arcade revision in English, with its original secret-character codes.">
+<meta property="og:url" content="https://arcadepatches.com/msh-english-restoration/">
+<meta property="og:image" content="https://arcadepatches.com/img/social/msh-english-restoration-e07c7e8413.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Marvel Super Heroes">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ArcadePatches">
+<meta name="twitter:title" content="Marvel Super Heroes">
+<meta name="twitter:description" content="Play the Japanese 951117 arcade revision in English, with its original secret-character codes.">
+<meta name="twitter:image" content="https://arcadepatches.com/img/social/msh-english-restoration-e07c7e8413.png">
+<link rel="icon" href="../favicon.png" type="image/png" sizes="64x64">
+<link rel="alternate icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css?v=3c47e56187">
+</head>
+<body>
+<header class="site">
+  <div class="inner">
+    <a class="brand" href="../">
+      <img class="logo" src="../logo.png" width="48" height="48" alt="">
+      <span><span class="home">Arcade Patches</span>
+      <span class="tagline">Translations, restorations and arranged soundtracks for classic arcade games.</span></span>
+    </a>
+    <nav><a href="../tools/">Tools</a><a href="../about/">About</a><a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">Forum</a><a href="https://x.com/ArcadePatches">X</a></nav>
+  </div>
+</header>
+<main>
+<a class="back" href="../">&larr; All patches</a>
+<h1>Marvel Super Heroes</h1>
+<p class="subtitle">English Restoration</p>
+<div class="badges"><span class="badge release-candidate">Release candidate</span><span class="badge plain">rc1</span><span class="badge plain">CPS-2</span></div>
+<dl class="meta"><dt>Game</dt><dd>Marvel Super Heroes</dd><dt>Hardware</dt><dd>CPS-2</dd><dt>MAME set</dt><dd>mshj</dd><dt>Version</dt><dd>rc1</dd><dt>Updated</dt><dd>2026-11-23</dd></dl>
+<h2>Screenshots</h2>
+<figure class="shot single"><img src="../img/msh-english-restoration/00_single.png?v=d67525fd26" alt="Anita faces Juggernaut."><figcaption>Anita faces Juggernaut.</figcaption></figure>
+<figure class="shot single"><img src="../img/msh-english-restoration/01_single.png?v=59bbae2e81" alt="Spider-Man’s victory quote."><figcaption>Spider-Man’s victory quote.</figcaption></figure>
+<figure class="shot single"><img src="../img/msh-english-restoration/02_single.png?v=12fe2829cf" alt="Continue as Spider-Man."><figcaption>Continue as Spider-Man.</figcaption></figure>
+<figure class="shot single"><img src="../img/msh-english-restoration/03_single.png?v=ee7386de90" alt="Wolverine’s ending."><figcaption>Wolverine’s ending.</figcaption></figure>
+<h2>About this patch</h2>
+
+<p>This USA edition brings the Japanese 951117 arcade script to English. Victory quotes, continue prompts, Automode tips and endings have been retranslated.</p>
+<h2>What's changed</h2><ul>
+<li>Read the Japanese revision’s victory quotes, continue prompts, Automode tips and endings in English.</li>
+<li>Unlock Doctor Doom, Thanos and Anita with their original Japanese codes. Anita has a nameplate on both lifebars.</li>
+<li>Both outcomes of Thanos’s ending retain their original timing.</li>
+</ul>
+<h2>Download</h2>
+
+
+
+<div class="download">
+  <div class="kind">IPS patch kit with MiSTer MRA</div>
+  <div class="file"><a href="../downloads/msh-english-restoration-rc1-kit.zip?v=98495f0052">msh-english-restoration-rc1-kit.zip</a>
+  (255 KB)</div>
+  <div class="hash">SHA-256: 98495f00529c394882a18c1449efbd1e195bb1bca43a7b1d5d999b847e9f0c37</div>
+</div>
+<p>The kit is our reconstruction code and a short list of byte patches.
+Everything else is rebuilt on your machine from files you already own.</p>
+<h3>What you supply</h3>
+<ul><li>Your stock arcade ROMs for the MAME set mshj.</li><li>The standard QSound firmware for MAME, HBMAME and MiSTer.</li></ul>
+<h2>Build or update</h2>
+<p>Extract the kit, open a terminal in its folder, and run:</p>
+<pre><code>python3 apply.py</code></pre>
+<p>On Windows, use <code>py -3.13 apply.py</code>. Choose <strong>Build or update</strong>,
+then select your media folders and available outputs. Your media can stay where it is.
+The kit remembers your choices and prepares required helpers and Python packages
+privately on supported systems. Read <code>INSTALL.txt</code> in the completed output
+for the files to copy. Run the same command again to update.</p>
+<details><summary>Advanced command-line reference</summary><h2>How to build</h2>
+<pre><code>unzip msh-english-restoration-rc1-kit.zip -d msh-english-restoration
+cd msh-english-restoration
+python3 apply.py --rompath /path/to/roms --out-dir out</code></pre>
+</details>
+<h3>Darksoft CPS-2</h3>
+<p>The kit can build Darksoft CPS-2 flash files. Build them with <code>--platform darksoft --out-dir out</code>, then copy the selected game folder from <code>out/darksoft/games/</code> to the card's <code>games/</code> folder. Keep its flash files, key and NAME together. Follow the kit readme for build choices.</p>
+<h2 id="history">Release history</h2>
+<h3>rc1 (2026-11-23)</h3><ul>
+<li>Retranslated victory quotes, continue prompts, Automode tips and endings from the Japanese arcade script.</li>
+<li>Kept the original unlock codes for Doctor Doom, Thanos and Anita, and gave Anita a lifebar nameplate.</li>
+</ul>
+
+<h2>Notes</h2><ul class="notes">
+<li>The kit uses your stock Japan 951117 arcade ROMs. It supports MAME, MiSTer and Darksoft CPS-2 kits, plus HBMAME and FBNeo builds that recognize the mshrest set.</li>
+</ul>
+</main>
+<footer class="site">
+  <div class="inner">
+    <p>These are free, unofficial fan patches. This site is not affiliated with or endorsed
+    by Capcom. All game titles, characters, and artwork remain the property of their
+    respective owners. No ROMs or other copyrighted game data are hosted here.</p>
+    <p><a href="../about/">About</a> · <a href="https://www.arcade-projects.com/forums/strygo-conversions.125/">Support forum</a> · <a href="https://x.com/ArcadePatches">@ArcadePatches on X</a> · <a href="../legal.html">Legal &amp; disclaimers</a></p>
+  </div>
+</footer>
+</body>
+</html>
