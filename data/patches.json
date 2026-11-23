@@ -4109,6 +4109,92 @@
       "summary": "The Japanese arcade game in English, with its full win quotes, dialogue, endings and tips.",
       "title": "X-Men vs. Street Fighter",
       "version": "rc1"
+    },
+    {
+      "artifact": {
+        "parents": [
+          "cybots"
+        ]
+      },
+      "changes": [
+        "Every story scene in all six campaigns and endings, in English that follows the Japanese script.",
+        "Chapter titles before each stage, which the English release never showed.",
+        "Every victory quote in English, including the distinct lines the English release merged into one per grade.",
+        "Devilotte\u2019s servants keep their names, Jigoku Daishi and Dr. Stein.",
+        "Story text paced for reading, with page breaks, roomier line spacing and proper quotes and apostrophes.",
+        "English VA logos and name plates, English service menus and USA attract and copyright screens.",
+        "Japanese arcade gameplay, victory voices and stage signs."
+      ],
+      "date": "2026-11-23",
+      "description": [
+        "Cyberbots\u2019 English release rewrote much of its story and left parts of it out. This restoration plays the Japanese arcade game in English that follows the Japanese script: every campaign and ending, the chapter titles shown before each stage, and the full set of victory quotes.",
+        "Devilotte\u2019s servants keep their Japanese names. Story text is paced and spaced for English, and the VA logos and name plates appear in English. The Japanese release\u2019s gameplay, victory voices and stage signs stay intact.",
+        "It runs on Darksoft CPS-2 hardware, on MiSTer, and in MAME. HBMAME and FBNeo outputs use the same game data.",
+        "This is a release candidate."
+      ],
+      "feedback": true,
+      "game": "Cyberbots: Fullmetal Madness (Japan 950420)",
+      "hardware": "Capcom CPS-2",
+      "hbmame": {
+        "complete": true,
+        "renames": {
+          "cyb.01": "cyb.01",
+          "cyb.02": "cyb.02",
+          "cyb.05": "cyb.05",
+          "cyb.06": "cyb.06",
+          "cyb.07": "cyb.07",
+          "cyb.08": "cyb.08",
+          "cyb.09": "cyb.09",
+          "cyb.10": "cybre.10",
+          "cyb.11m": "cyb.11m",
+          "cyb.12m": "cyb.12m",
+          "cyb.13m": "cybre.13m",
+          "cyb.14m": "cybre.14m",
+          "cyb.15m": "cybre.15m",
+          "cyb.16m": "cybre.16m",
+          "cyb.17m": "cybre.17m",
+          "cyb.18m": "cybre.18m",
+          "cyb.19m": "cybre.19m",
+          "cyb.20m": "cybre.20m",
+          "cybj.03": "cybre.03",
+          "cybj.04": "cybre.04",
+          "cybotsj.key": "cybotsj.key"
+        },
+        "setname": "cybotsru"
+      },
+      "mra": {
+        "category": "Fighting",
+        "catver": "Fighter / Versus",
+        "filename": "Cyberbots Fullmetal Madness (USA) [Restoration].mra",
+        "mraauthor": "jotego,strygo",
+        "name": "Cyberbots: Fullmetal Madness (USA) [Restoration]",
+        "platform": "CPS-2",
+        "region": "USA",
+        "setname": "cybotsru",
+        "zip_dir": "_Arcade/_Arcade Patches/_Restorations"
+      },
+      "notes": [
+        "Supply your own canonical Japan 950420 arcade ROMs (cybotsj, with its cybots parent if your set is split) and QSound firmware. No console disc is needed."
+      ],
+      "patch_kind": "English restoration patch",
+      "patch_noun": "restoration",
+      "release_history": [
+        {
+          "date": "2026-11-23",
+          "items": [
+            "First release candidate: the Japanese arcade game with its complete story, chapter titles and victory quotes in English."
+          ],
+          "version": "rc1"
+        }
+      ],
+      "section": "restorations",
+      "set": "cybotsj",
+      "slug": "cybots-restoration",
+      "status": "release-candidate",
+      "subtitle": "English restoration",
+      "summary": "The Japanese arcade game in English, with its full story, chapter titles and victory quotes.",
+      "title": "Cyberbots: Fullmetal Madness",
+      "version": "rc1"
     }
   ],
   "projects": [

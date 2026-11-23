@@ -96,6 +96,56 @@
         }
       }
     },
+    "cybots-restoration": {
+      "current": "rc1",
+      "versions": {
+        "rc1": {
+          "current_revision": 1,
+          "date": "2026-11-23",
+          "files": {
+            "ips": {
+              "archive": "archive/5c3c387567880f6ccd64918112c13e79c5080d1da1e0267271ba2d20a3acc9c2/cybots-restoration-rc1-ips.zip",
+              "name": "cybots-restoration-rc1-ips.zip",
+              "sha256": "5c3c387567880f6ccd64918112c13e79c5080d1da1e0267271ba2d20a3acc9c2",
+              "size": 263664
+            },
+            "mra": {
+              "archive": "archive/fdabf19f466149d4081b6e0f3d3a03317ef6ec1dc19eef981697206ad1c6775f/cybots-restoration-rc1-mra.zip",
+              "name": "cybots-restoration-rc1-mra.zip",
+              "sha256": "fdabf19f466149d4081b6e0f3d3a03317ef6ec1dc19eef981697206ad1c6775f",
+              "size": 70226
+            }
+          },
+          "kind": "rom",
+          "promotions": [
+            {
+              "reason": "migration",
+              "revision": 1
+            }
+          ],
+          "revisions": {
+            "1": {
+              "date": "2026-11-23",
+              "files": {
+                "ips": {
+                  "archive": "archive/5c3c387567880f6ccd64918112c13e79c5080d1da1e0267271ba2d20a3acc9c2/cybots-restoration-rc1-ips.zip",
+                  "name": "cybots-restoration-rc1-ips.zip",
+                  "sha256": "5c3c387567880f6ccd64918112c13e79c5080d1da1e0267271ba2d20a3acc9c2",
+                  "size": 263664
+                },
+                "mra": {
+                  "archive": "archive/fdabf19f466149d4081b6e0f3d3a03317ef6ec1dc19eef981697206ad1c6775f/cybots-restoration-rc1-mra.zip",
+                  "name": "cybots-restoration-rc1-mra.zip",
+                  "sha256": "fdabf19f466149d4081b6e0f3d3a03317ef6ec1dc19eef981697206ad1c6775f",
+                  "size": 70226
+                }
+              },
+              "kind": "rom"
+            }
+          }
+        }
+      }
+    },
     "dstlk-restoration": {
       "current": "rc1",
       "versions": {

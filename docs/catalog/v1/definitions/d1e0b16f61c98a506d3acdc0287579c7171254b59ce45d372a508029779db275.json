@@ -1,0 +1,1009 @@
+{
+  "api": 1,
+  "game_version": "rc1",
+  "kit_revision": 1,
+  "manifest_sha256": "41bd177d37c85bbb2be115d25a034cc71b03c61dff4f85aa5079af6cda9b029d",
+  "native_outputs": {
+    "darksoft/games/cybots-restoration/NAME": {
+      "sha256": "e89f5cd97f8844bee1f0c6a8ecba6504ef0c9e228f00c6196a1c1d6f237e7271"
+    },
+    "darksoft/games/cybots-restoration/flash.01": {
+      "sha256": "29f30a4d61648ccbf4d63af2e5786d6186649bbf47d5b21c27b3a48f4ccf23bf"
+    },
+    "darksoft/games/cybots-restoration/flash.02": {
+      "sha256": "0e960e92e1d262daeea81b0bf1c01013738b8b85db41ff805fafe3d36d241b71"
+    },
+    "darksoft/games/cybots-restoration/flash.03": {
+      "sha256": "fcd9a11033de730663cad7b2b2f0e400c6f0c3db7345cb910dafb5835fd1c519"
+    },
+    "darksoft/games/cybots-restoration/flash.05": {
+      "sha256": "8258aab92e6cacd3050feef4e06f4923563b0c22b87d6a8688e940cd0f5bc608"
+    },
+    "darksoft/games/cybots-restoration/flash.06": {
+      "sha256": "30be0b82c5fcde3536de89b599a2e45b0f796475fa6d802d0ad835a1ac3b0c74"
+    },
+    "darksoft/games/cybots-restoration/flash.07": {
+      "sha256": "fa598a54e9ae4488ce71245d9da86164462cb46df0bd28c8bee85bf74cb2a8a9"
+    },
+    "darksoft/games/cybots-restoration/flash.08": {
+      "sha256": "822522f05c3bb7edf6c5880ca46aaa4eca788231622fde05a28e219e6369c11e"
+    },
+    "darksoft/games/cybots-restoration/flash.09": {
+      "sha256": "d94542b9bd06e88862980144d72df25288db067b7d1e477c369c3ae306cfe6c5"
+    },
+    "darksoft/games/cybots-restoration/flash.10": {
+      "sha256": "580fb27e9b48100f2da13088e7e269c7604eb0dec2e0c1b421402f4b5214d5d5"
+    },
+    "darksoft/games/cybots-restoration/flash.11": {
+      "sha256": "da57069604e81633bb6136e6297a78bb7892a8062c1413b79e9ae624738de083"
+    },
+    "darksoft/games/cybots-restoration/flash.12": {
+      "sha256": "502d86a0f06c4d501223107325d11ae4f2d89663cc85d862b8fa38240e4a2f39"
+    },
+    "darksoft/games/cybots-restoration/key": {
+      "sha256": "8f9a62155abe63c20c607ce25ab3e95db1c84d7d00a36254ade710be142e209a"
+    },
+    "darksoft/receipts/cybots-restoration.json": {
+      "sha256": "de32f22410529b3cad7c7cdc56dfbbf848d67a73a7b8e23bc98bb4e548bd2e5b"
+    },
+    "fbneo/cybotsru.zip": {
+      "members": {
+        "cyb.01": "2e07f20610543b2661b7a9fee5073674cac88805225f044b5c7b9c5720a1d0a9",
+        "cyb.02": "1084857b1e5f18854cc6291aa6f6aa58dbaa211f20fc9df5feccb1129dc93387",
+        "cyb.05": "612a9c7aa47c3afd236c68a5c100c3885afb8e3e50ce5f5628cf2389c3078c2d",
+        "cyb.06": "defefccffbdc912f0b7469b9aa7934d1d1d5d85a57c6808b99c0d0d9b9aa8553",
+        "cyb.07": "617d5b95179ef4718c45b9239da0b64dbb1f35dc76339fd80a78eb26cb135c0f",
+        "cyb.08": "de9d15e3ba1228b50c7501bbd3e56b2d2e0311def1b32bee6be18c90450a9829",
+        "cyb.09": "da5ed183057fa1dc2e5ee5fdbeeb9b437a82b3a8f27c4fc6f0227a58c2b79339",
+        "cyb.11m": "4c81f90225ce55e620256087af50d2dcb98b056829e2ebd308cb47298fca2d18",
+        "cyb.12m": "df6a54dcd8f0579694ca89bec23b3976aa2cd0427b499f0df53843a5e1e37fa6",
+        "cybotsj.key": "8f9a62155abe63c20c607ce25ab3e95db1c84d7d00a36254ade710be142e209a",
+        "cybre.03": "08b0e8d498c77d90f0514c591f80f60feade58212212e769763cacfcc838174c",
+        "cybre.04": "e0db9497bdbbc3a7170d1292cb5c76a0a3c8d9b22f25fa7fc08610096dbae030",
+        "cybre.10": "54236e583b0b2a2e74537eeaae09b8f4426de6b3d8b2ecdb4b5ad35927a441ea",
+        "cybre.13m": "8258aab92e6cacd3050feef4e06f4923563b0c22b87d6a8688e940cd0f5bc608",
+        "cybre.14m": "30be0b82c5fcde3536de89b599a2e45b0f796475fa6d802d0ad835a1ac3b0c74",
+        "cybre.15m": "fa598a54e9ae4488ce71245d9da86164462cb46df0bd28c8bee85bf74cb2a8a9",
+        "cybre.16m": "822522f05c3bb7edf6c5880ca46aaa4eca788231622fde05a28e219e6369c11e",
+        "cybre.17m": "d94542b9bd06e88862980144d72df25288db067b7d1e477c369c3ae306cfe6c5",
+        "cybre.18m": "580fb27e9b48100f2da13088e7e269c7604eb0dec2e0c1b421402f4b5214d5d5",
+        "cybre.19m": "da57069604e81633bb6136e6297a78bb7892a8062c1413b79e9ae624738de083",
+        "cybre.20m": "502d86a0f06c4d501223107325d11ae4f2d89663cc85d862b8fa38240e4a2f39"
+      }
+    },
+    "hbmame/cybotsru.zip": {
+      "members": {
+        "cyb.01": "2e07f20610543b2661b7a9fee5073674cac88805225f044b5c7b9c5720a1d0a9",
+        "cyb.02": "1084857b1e5f18854cc6291aa6f6aa58dbaa211f20fc9df5feccb1129dc93387",
+        "cyb.05": "612a9c7aa47c3afd236c68a5c100c3885afb8e3e50ce5f5628cf2389c3078c2d",
+        "cyb.06": "defefccffbdc912f0b7469b9aa7934d1d1d5d85a57c6808b99c0d0d9b9aa8553",
+        "cyb.07": "617d5b95179ef4718c45b9239da0b64dbb1f35dc76339fd80a78eb26cb135c0f",
+        "cyb.08": "de9d15e3ba1228b50c7501bbd3e56b2d2e0311def1b32bee6be18c90450a9829",
+        "cyb.09": "da5ed183057fa1dc2e5ee5fdbeeb9b437a82b3a8f27c4fc6f0227a58c2b79339",
+        "cyb.11m": "4c81f90225ce55e620256087af50d2dcb98b056829e2ebd308cb47298fca2d18",
+        "cyb.12m": "df6a54dcd8f0579694ca89bec23b3976aa2cd0427b499f0df53843a5e1e37fa6",
+        "cybotsj.key": "8f9a62155abe63c20c607ce25ab3e95db1c84d7d00a36254ade710be142e209a",
+        "cybre.03": "08b0e8d498c77d90f0514c591f80f60feade58212212e769763cacfcc838174c",
+        "cybre.04": "e0db9497bdbbc3a7170d1292cb5c76a0a3c8d9b22f25fa7fc08610096dbae030",
+        "cybre.10": "54236e583b0b2a2e74537eeaae09b8f4426de6b3d8b2ecdb4b5ad35927a441ea",
+        "cybre.13m": "8258aab92e6cacd3050feef4e06f4923563b0c22b87d6a8688e940cd0f5bc608",
+        "cybre.14m": "30be0b82c5fcde3536de89b599a2e45b0f796475fa6d802d0ad835a1ac3b0c74",
+        "cybre.15m": "fa598a54e9ae4488ce71245d9da86164462cb46df0bd28c8bee85bf74cb2a8a9",
+        "cybre.16m": "822522f05c3bb7edf6c5880ca46aaa4eca788231622fde05a28e219e6369c11e",
+        "cybre.17m": "d94542b9bd06e88862980144d72df25288db067b7d1e477c369c3ae306cfe6c5",
+        "cybre.18m": "580fb27e9b48100f2da13088e7e269c7604eb0dec2e0c1b421402f4b5214d5d5",
+        "cybre.19m": "da57069604e81633bb6136e6297a78bb7892a8062c1413b79e9ae624738de083",
+        "cybre.20m": "502d86a0f06c4d501223107325d11ae4f2d89663cc85d862b8fa38240e4a2f39"
+      }
+    },
+    "mame/cybotsj.zip": {
+      "members": {
+        "cyb.01": "2e07f20610543b2661b7a9fee5073674cac88805225f044b5c7b9c5720a1d0a9",
+        "cyb.02": "1084857b1e5f18854cc6291aa6f6aa58dbaa211f20fc9df5feccb1129dc93387",
+        "cyb.05": "612a9c7aa47c3afd236c68a5c100c3885afb8e3e50ce5f5628cf2389c3078c2d",
+        "cyb.06": "defefccffbdc912f0b7469b9aa7934d1d1d5d85a57c6808b99c0d0d9b9aa8553",
+        "cyb.07": "617d5b95179ef4718c45b9239da0b64dbb1f35dc76339fd80a78eb26cb135c0f",
+        "cyb.08": "de9d15e3ba1228b50c7501bbd3e56b2d2e0311def1b32bee6be18c90450a9829",
+        "cyb.09": "da5ed183057fa1dc2e5ee5fdbeeb9b437a82b3a8f27c4fc6f0227a58c2b79339",
+        "cyb.10": "54236e583b0b2a2e74537eeaae09b8f4426de6b3d8b2ecdb4b5ad35927a441ea",
+        "cyb.11m": "4c81f90225ce55e620256087af50d2dcb98b056829e2ebd308cb47298fca2d18",
+        "cyb.12m": "df6a54dcd8f0579694ca89bec23b3976aa2cd0427b499f0df53843a5e1e37fa6",
+        "cyb.13m": "8258aab92e6cacd3050feef4e06f4923563b0c22b87d6a8688e940cd0f5bc608",
+        "cyb.14m": "30be0b82c5fcde3536de89b599a2e45b0f796475fa6d802d0ad835a1ac3b0c74",
+        "cyb.15m": "fa598a54e9ae4488ce71245d9da86164462cb46df0bd28c8bee85bf74cb2a8a9",
+        "cyb.16m": "822522f05c3bb7edf6c5880ca46aaa4eca788231622fde05a28e219e6369c11e",
+        "cyb.17m": "d94542b9bd06e88862980144d72df25288db067b7d1e477c369c3ae306cfe6c5",
+        "cyb.18m": "580fb27e9b48100f2da13088e7e269c7604eb0dec2e0c1b421402f4b5214d5d5",
+        "cyb.19m": "da57069604e81633bb6136e6297a78bb7892a8062c1413b79e9ae624738de083",
+        "cyb.20m": "502d86a0f06c4d501223107325d11ae4f2d89663cc85d862b8fa38240e4a2f39",
+        "cybj.03": "08b0e8d498c77d90f0514c591f80f60feade58212212e769763cacfcc838174c",
+        "cybj.04": "e0db9497bdbbc3a7170d1292cb5c76a0a3c8d9b22f25fa7fc08610096dbae030",
+        "cybotsj.key": "8f9a62155abe63c20c607ce25ab3e95db1c84d7d00a36254ade710be142e209a",
+        "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+      }
+    },
+    "mister/_Arcade/_Arcade Patches/_Restorations/Cyberbots Fullmetal Madness (USA) [Restoration].mra": {
+      "sha256": "63cfccac5d89ed8f44cb89b06ccce72fb9e50f972810c91c0b4964dcb9040897"
+    }
+  },
+  "prerequisites": {
+    "source-0b2f5b57054279d06dd4": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "77cdad5c",
+          "sha256": "0b2f5b57054279d06dd4572e2003d0af87e4e49821aeca8bf99c471b2e8966a3",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.20m",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.20m"
+    },
+    "source-0fec703fd152ae224dbd": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "f0dce192",
+          "sha256": "0fec703fd152ae224dbda7337ec054f76b2126e55ee7cf4f00b86194e115172e",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.13m",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.13m"
+    },
+    "source-1084857b1e5f18854cc6": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "51cb0c4e",
+          "sha256": "1084857b1e5f18854cc6291aa6f6aa58dbaa211f20fc9df5feccb1129dc93387",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.02",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.02"
+    },
+    "source-13fb4ceeb16d1ddb7540": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "6096eada",
+          "sha256": "13fb4ceeb16d1ddb754096d6b1eca112a2403565278ca9c92e57e4571021a3ef",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cybj.03",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cybj.03"
+    },
+    "source-2e07f20610543b2661b7": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "9c0fb079",
+          "sha256": "2e07f20610543b2661b7a9fee5073674cac88805225f044b5c7b9c5720a1d0a9",
+          "size": 131072
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.01",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.01"
+    },
+    "source-2eefc52b43cb7b751206": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "75f4003b",
+          "sha256": "2eefc52b43cb7b751206875bd1dc767068901bb52f24438ee107ce86084e6928",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.10",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.10"
+    },
+    "source-4c81f90225ce55e62025": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "362ccab2",
+          "sha256": "4c81f90225ce55e620256087af50d2dcb98b056829e2ebd308cb47298fca2d18",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.11m",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.11m"
+    },
+    "source-524a25bcd153be24594d": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d6cf5ef5",
+          "sha256": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18",
+          "size": 24576
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "device",
+      "search_names": [
+        "dl-1425.bin",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "dl-1425.bin"
+    },
+    "source-591aae5a29f6bbdb80b0": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "8a0e4b12",
+          "sha256": "591aae5a29f6bbdb80b01207a46b5e8cd31b488912411d836f638a9496c87346",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.17m",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.17m"
+    },
+    "source-612a9c7aa47c3afd236c": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "ec40408e",
+          "sha256": "612a9c7aa47c3afd236c68a5c100c3885afb8e3e50ce5f5628cf2389c3078c2d",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.05",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.05"
+    },
+    "source-617d5b95179ef4718c45": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "6245a39a",
+          "sha256": "617d5b95179ef4718c45b9239da0b64dbb1f35dc76339fd80a78eb26cb135c0f",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.07",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.07"
+    },
+    "source-8f9a62155abe63c20c60": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d4d560b7",
+          "sha256": "8f9a62155abe63c20c607ce25ab3e95db1c84d7d00a36254ade710be142e209a",
+          "size": 20
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cybotsj.key",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cybotsj.key"
+    },
+    "source-9f0b507d4ccf5047c28e": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "c1537957",
+          "sha256": "9f0b507d4ccf5047c28e8794f7920a9e86d9d55dd4d047228a1bf41ffe3d0daf",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.14m",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.14m"
+    },
+    "source-aaa748a08eb34ed3da9e": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "d83e977d",
+          "sha256": "aaa748a08eb34ed3da9ef98e115f75643fcc664cc7d56c8b968c202d7c90d881",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.18m",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.18m"
+    },
+    "source-ac53840a45da68fdd8e2": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "15349e86",
+          "sha256": "ac53840a45da68fdd8e2467eb04598997c06d7fb28fb7be7c0757f7c6a84412b",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.16m",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.16m"
+    },
+    "source-d436ba5b2240ed90ce9e": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "34b62612",
+          "sha256": "d436ba5b2240ed90ce9e38bbce8e51dab127941b5c084104558f786cdc9ebf29",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.19m",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.19m"
+    },
+    "source-d57d29127a90e21aea4d": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "187aa39c",
+          "sha256": "d57d29127a90e21aea4dc282df7031ae7cc876d086031e19977f8dcd2f6d1330",
+          "size": 4194304
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.15m",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.15m"
+    },
+    "source-da5ed183057fa1dc2e5e": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "e15238f6",
+          "sha256": "da5ed183057fa1dc2e5ee5fdbeeb9b437a82b3a8f27c4fc6f0227a58c2b79339",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.09",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.09"
+    },
+    "source-de9d15e3ba1228b50c75": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "4b48e223",
+          "sha256": "de9d15e3ba1228b50c7501bbd3e56b2d2e0311def1b32bee6be18c90450a9829",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.08",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.08"
+    },
+    "source-defefccffbdc912f0b74": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "1ad0bed2",
+          "sha256": "defefccffbdc912f0b7469b9aa7934d1d1d5d85a57c6808b99c0d0d9b9aa8553",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.06",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.06"
+    },
+    "source-df6a54dcd8f0579694ca": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "7066e9cc",
+          "sha256": "df6a54dcd8f0579694ca89bec23b3976aa2cd0427b499f0df53843a5e1e37fa6",
+          "size": 2097152
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cyb.12m",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cyb.12m"
+    },
+    "source-ed7a95accb52c39dafc7": {
+      "action": "Add the canonical cybotsj arcade set and QSound firmware to a media folder.",
+      "alternatives": [
+        {
+          "crc32": "7b0ffaa9",
+          "sha256": "ed7a95accb52c39dafc7a2eae667a9704e5a6574c1e92862f3dfb25d25f0eeca",
+          "size": 524288
+        }
+      ],
+      "formats": [
+        "loose file",
+        "ZIP member",
+        "7z member"
+      ],
+      "kind": "rom",
+      "search_names": [
+        "cybj.04",
+        "cybotsj",
+        "cybotsj.zip",
+        "cybotsj.7z",
+        "qsound.zip",
+        "qsound_hle.zip"
+      ],
+      "title": "cybj.04"
+    }
+  },
+  "project": "cybots-restoration",
+  "targets": {
+    "default-darksoft": {
+      "destination_requirements": "Use the Darksoft hardware and layout described in this kit's readme.",
+      "inputs": [
+        "source-0b2f5b57054279d06dd4",
+        "source-0fec703fd152ae224dbd",
+        "source-1084857b1e5f18854cc6",
+        "source-13fb4ceeb16d1ddb7540",
+        "source-2e07f20610543b2661b7",
+        "source-2eefc52b43cb7b751206",
+        "source-4c81f90225ce55e62025",
+        "source-591aae5a29f6bbdb80b0",
+        "source-612a9c7aa47c3afd236c",
+        "source-617d5b95179ef4718c45",
+        "source-8f9a62155abe63c20c60",
+        "source-9f0b507d4ccf5047c28e",
+        "source-aaa748a08eb34ed3da9e",
+        "source-ac53840a45da68fdd8e2",
+        "source-d436ba5b2240ed90ce9e",
+        "source-d57d29127a90e21aea4d",
+        "source-da5ed183057fa1dc2e5e",
+        "source-de9d15e3ba1228b50c75",
+        "source-defefccffbdc912f0b74",
+        "source-df6a54dcd8f0579694ca",
+        "source-ed7a95accb52c39dafc7"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "games/cybots-restoration/NAME": {
+          "sha256": "e89f5cd97f8844bee1f0c6a8ecba6504ef0c9e228f00c6196a1c1d6f237e7271"
+        },
+        "games/cybots-restoration/flash.01": {
+          "sha256": "29f30a4d61648ccbf4d63af2e5786d6186649bbf47d5b21c27b3a48f4ccf23bf"
+        },
+        "games/cybots-restoration/flash.02": {
+          "sha256": "0e960e92e1d262daeea81b0bf1c01013738b8b85db41ff805fafe3d36d241b71"
+        },
+        "games/cybots-restoration/flash.03": {
+          "sha256": "fcd9a11033de730663cad7b2b2f0e400c6f0c3db7345cb910dafb5835fd1c519"
+        },
+        "games/cybots-restoration/flash.05": {
+          "sha256": "8258aab92e6cacd3050feef4e06f4923563b0c22b87d6a8688e940cd0f5bc608"
+        },
+        "games/cybots-restoration/flash.06": {
+          "sha256": "30be0b82c5fcde3536de89b599a2e45b0f796475fa6d802d0ad835a1ac3b0c74"
+        },
+        "games/cybots-restoration/flash.07": {
+          "sha256": "fa598a54e9ae4488ce71245d9da86164462cb46df0bd28c8bee85bf74cb2a8a9"
+        },
+        "games/cybots-restoration/flash.08": {
+          "sha256": "822522f05c3bb7edf6c5880ca46aaa4eca788231622fde05a28e219e6369c11e"
+        },
+        "games/cybots-restoration/flash.09": {
+          "sha256": "d94542b9bd06e88862980144d72df25288db067b7d1e477c369c3ae306cfe6c5"
+        },
+        "games/cybots-restoration/flash.10": {
+          "sha256": "580fb27e9b48100f2da13088e7e269c7604eb0dec2e0c1b421402f4b5214d5d5"
+        },
+        "games/cybots-restoration/flash.11": {
+          "sha256": "da57069604e81633bb6136e6297a78bb7892a8062c1413b79e9ae624738de083"
+        },
+        "games/cybots-restoration/flash.12": {
+          "sha256": "502d86a0f06c4d501223107325d11ae4f2d89663cc85d862b8fa38240e4a2f39"
+        },
+        "games/cybots-restoration/key": {
+          "sha256": "8f9a62155abe63c20c607ce25ab3e95db1c84d7d00a36254ade710be142e209a"
+        },
+        "receipts/cybots-restoration.json": {
+          "sha256": "de32f22410529b3cad7c7cdc56dfbbf848d67a73a7b8e23bc98bb4e548bd2e5b"
+        }
+      },
+      "platform": "darksoft",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-fbneo": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0b2f5b57054279d06dd4",
+        "source-0fec703fd152ae224dbd",
+        "source-1084857b1e5f18854cc6",
+        "source-13fb4ceeb16d1ddb7540",
+        "source-2e07f20610543b2661b7",
+        "source-2eefc52b43cb7b751206",
+        "source-4c81f90225ce55e62025",
+        "source-591aae5a29f6bbdb80b0",
+        "source-612a9c7aa47c3afd236c",
+        "source-617d5b95179ef4718c45",
+        "source-8f9a62155abe63c20c60",
+        "source-9f0b507d4ccf5047c28e",
+        "source-aaa748a08eb34ed3da9e",
+        "source-ac53840a45da68fdd8e2",
+        "source-d436ba5b2240ed90ce9e",
+        "source-d57d29127a90e21aea4d",
+        "source-da5ed183057fa1dc2e5e",
+        "source-de9d15e3ba1228b50c75",
+        "source-defefccffbdc912f0b74",
+        "source-df6a54dcd8f0579694ca",
+        "source-ed7a95accb52c39dafc7"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/cybotsru.zip": {
+          "members": {
+            "cyb.01": "2e07f20610543b2661b7a9fee5073674cac88805225f044b5c7b9c5720a1d0a9",
+            "cyb.02": "1084857b1e5f18854cc6291aa6f6aa58dbaa211f20fc9df5feccb1129dc93387",
+            "cyb.05": "612a9c7aa47c3afd236c68a5c100c3885afb8e3e50ce5f5628cf2389c3078c2d",
+            "cyb.06": "defefccffbdc912f0b7469b9aa7934d1d1d5d85a57c6808b99c0d0d9b9aa8553",
+            "cyb.07": "617d5b95179ef4718c45b9239da0b64dbb1f35dc76339fd80a78eb26cb135c0f",
+            "cyb.08": "de9d15e3ba1228b50c7501bbd3e56b2d2e0311def1b32bee6be18c90450a9829",
+            "cyb.09": "da5ed183057fa1dc2e5ee5fdbeeb9b437a82b3a8f27c4fc6f0227a58c2b79339",
+            "cyb.11m": "4c81f90225ce55e620256087af50d2dcb98b056829e2ebd308cb47298fca2d18",
+            "cyb.12m": "df6a54dcd8f0579694ca89bec23b3976aa2cd0427b499f0df53843a5e1e37fa6",
+            "cybotsj.key": "8f9a62155abe63c20c607ce25ab3e95db1c84d7d00a36254ade710be142e209a",
+            "cybre.03": "08b0e8d498c77d90f0514c591f80f60feade58212212e769763cacfcc838174c",
+            "cybre.04": "e0db9497bdbbc3a7170d1292cb5c76a0a3c8d9b22f25fa7fc08610096dbae030",
+            "cybre.10": "54236e583b0b2a2e74537eeaae09b8f4426de6b3d8b2ecdb4b5ad35927a441ea",
+            "cybre.13m": "8258aab92e6cacd3050feef4e06f4923563b0c22b87d6a8688e940cd0f5bc608",
+            "cybre.14m": "30be0b82c5fcde3536de89b599a2e45b0f796475fa6d802d0ad835a1ac3b0c74",
+            "cybre.15m": "fa598a54e9ae4488ce71245d9da86164462cb46df0bd28c8bee85bf74cb2a8a9",
+            "cybre.16m": "822522f05c3bb7edf6c5880ca46aaa4eca788231622fde05a28e219e6369c11e",
+            "cybre.17m": "d94542b9bd06e88862980144d72df25288db067b7d1e477c369c3ae306cfe6c5",
+            "cybre.18m": "580fb27e9b48100f2da13088e7e269c7604eb0dec2e0c1b421402f4b5214d5d5",
+            "cybre.19m": "da57069604e81633bb6136e6297a78bb7892a8062c1413b79e9ae624738de083",
+            "cybre.20m": "502d86a0f06c4d501223107325d11ae4f2d89663cc85d862b8fa38240e4a2f39"
+          }
+        }
+      },
+      "platform": "fbneo",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-hbmame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0b2f5b57054279d06dd4",
+        "source-0fec703fd152ae224dbd",
+        "source-1084857b1e5f18854cc6",
+        "source-13fb4ceeb16d1ddb7540",
+        "source-2e07f20610543b2661b7",
+        "source-2eefc52b43cb7b751206",
+        "source-4c81f90225ce55e62025",
+        "source-524a25bcd153be24594d",
+        "source-591aae5a29f6bbdb80b0",
+        "source-612a9c7aa47c3afd236c",
+        "source-617d5b95179ef4718c45",
+        "source-8f9a62155abe63c20c60",
+        "source-9f0b507d4ccf5047c28e",
+        "source-aaa748a08eb34ed3da9e",
+        "source-ac53840a45da68fdd8e2",
+        "source-d436ba5b2240ed90ce9e",
+        "source-d57d29127a90e21aea4d",
+        "source-da5ed183057fa1dc2e5e",
+        "source-de9d15e3ba1228b50c75",
+        "source-defefccffbdc912f0b74",
+        "source-df6a54dcd8f0579694ca",
+        "source-ed7a95accb52c39dafc7"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/cybotsru.zip": {
+          "members": {
+            "cyb.01": "2e07f20610543b2661b7a9fee5073674cac88805225f044b5c7b9c5720a1d0a9",
+            "cyb.02": "1084857b1e5f18854cc6291aa6f6aa58dbaa211f20fc9df5feccb1129dc93387",
+            "cyb.05": "612a9c7aa47c3afd236c68a5c100c3885afb8e3e50ce5f5628cf2389c3078c2d",
+            "cyb.06": "defefccffbdc912f0b7469b9aa7934d1d1d5d85a57c6808b99c0d0d9b9aa8553",
+            "cyb.07": "617d5b95179ef4718c45b9239da0b64dbb1f35dc76339fd80a78eb26cb135c0f",
+            "cyb.08": "de9d15e3ba1228b50c7501bbd3e56b2d2e0311def1b32bee6be18c90450a9829",
+            "cyb.09": "da5ed183057fa1dc2e5ee5fdbeeb9b437a82b3a8f27c4fc6f0227a58c2b79339",
+            "cyb.11m": "4c81f90225ce55e620256087af50d2dcb98b056829e2ebd308cb47298fca2d18",
+            "cyb.12m": "df6a54dcd8f0579694ca89bec23b3976aa2cd0427b499f0df53843a5e1e37fa6",
+            "cybotsj.key": "8f9a62155abe63c20c607ce25ab3e95db1c84d7d00a36254ade710be142e209a",
+            "cybre.03": "08b0e8d498c77d90f0514c591f80f60feade58212212e769763cacfcc838174c",
+            "cybre.04": "e0db9497bdbbc3a7170d1292cb5c76a0a3c8d9b22f25fa7fc08610096dbae030",
+            "cybre.10": "54236e583b0b2a2e74537eeaae09b8f4426de6b3d8b2ecdb4b5ad35927a441ea",
+            "cybre.13m": "8258aab92e6cacd3050feef4e06f4923563b0c22b87d6a8688e940cd0f5bc608",
+            "cybre.14m": "30be0b82c5fcde3536de89b599a2e45b0f796475fa6d802d0ad835a1ac3b0c74",
+            "cybre.15m": "fa598a54e9ae4488ce71245d9da86164462cb46df0bd28c8bee85bf74cb2a8a9",
+            "cybre.16m": "822522f05c3bb7edf6c5880ca46aaa4eca788231622fde05a28e219e6369c11e",
+            "cybre.17m": "d94542b9bd06e88862980144d72df25288db067b7d1e477c369c3ae306cfe6c5",
+            "cybre.18m": "580fb27e9b48100f2da13088e7e269c7604eb0dec2e0c1b421402f4b5214d5d5",
+            "cybre.19m": "da57069604e81633bb6136e6297a78bb7892a8062c1413b79e9ae624738de083",
+            "cybre.20m": "502d86a0f06c4d501223107325d11ae4f2d89663cc85d862b8fa38240e4a2f39"
+          }
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        }
+      },
+      "platform": "hbmame",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mame": {
+      "destination_requirements": "Use emulator definitions matching this release.",
+      "inputs": [
+        "source-0b2f5b57054279d06dd4",
+        "source-0fec703fd152ae224dbd",
+        "source-1084857b1e5f18854cc6",
+        "source-13fb4ceeb16d1ddb7540",
+        "source-2e07f20610543b2661b7",
+        "source-2eefc52b43cb7b751206",
+        "source-4c81f90225ce55e62025",
+        "source-524a25bcd153be24594d",
+        "source-591aae5a29f6bbdb80b0",
+        "source-612a9c7aa47c3afd236c",
+        "source-617d5b95179ef4718c45",
+        "source-8f9a62155abe63c20c60",
+        "source-9f0b507d4ccf5047c28e",
+        "source-aaa748a08eb34ed3da9e",
+        "source-ac53840a45da68fdd8e2",
+        "source-d436ba5b2240ed90ce9e",
+        "source-d57d29127a90e21aea4d",
+        "source-da5ed183057fa1dc2e5e",
+        "source-de9d15e3ba1228b50c75",
+        "source-defefccffbdc912f0b74",
+        "source-df6a54dcd8f0579694ca",
+        "source-ed7a95accb52c39dafc7"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "roms/cybotsj.zip": {
+          "members": {
+            "cyb.01": "2e07f20610543b2661b7a9fee5073674cac88805225f044b5c7b9c5720a1d0a9",
+            "cyb.02": "1084857b1e5f18854cc6291aa6f6aa58dbaa211f20fc9df5feccb1129dc93387",
+            "cyb.05": "612a9c7aa47c3afd236c68a5c100c3885afb8e3e50ce5f5628cf2389c3078c2d",
+            "cyb.06": "defefccffbdc912f0b7469b9aa7934d1d1d5d85a57c6808b99c0d0d9b9aa8553",
+            "cyb.07": "617d5b95179ef4718c45b9239da0b64dbb1f35dc76339fd80a78eb26cb135c0f",
+            "cyb.08": "de9d15e3ba1228b50c7501bbd3e56b2d2e0311def1b32bee6be18c90450a9829",
+            "cyb.09": "da5ed183057fa1dc2e5ee5fdbeeb9b437a82b3a8f27c4fc6f0227a58c2b79339",
+            "cyb.10": "54236e583b0b2a2e74537eeaae09b8f4426de6b3d8b2ecdb4b5ad35927a441ea",
+            "cyb.11m": "4c81f90225ce55e620256087af50d2dcb98b056829e2ebd308cb47298fca2d18",
+            "cyb.12m": "df6a54dcd8f0579694ca89bec23b3976aa2cd0427b499f0df53843a5e1e37fa6",
+            "cyb.13m": "8258aab92e6cacd3050feef4e06f4923563b0c22b87d6a8688e940cd0f5bc608",
+            "cyb.14m": "30be0b82c5fcde3536de89b599a2e45b0f796475fa6d802d0ad835a1ac3b0c74",
+            "cyb.15m": "fa598a54e9ae4488ce71245d9da86164462cb46df0bd28c8bee85bf74cb2a8a9",
+            "cyb.16m": "822522f05c3bb7edf6c5880ca46aaa4eca788231622fde05a28e219e6369c11e",
+            "cyb.17m": "d94542b9bd06e88862980144d72df25288db067b7d1e477c369c3ae306cfe6c5",
+            "cyb.18m": "580fb27e9b48100f2da13088e7e269c7604eb0dec2e0c1b421402f4b5214d5d5",
+            "cyb.19m": "da57069604e81633bb6136e6297a78bb7892a8062c1413b79e9ae624738de083",
+            "cyb.20m": "502d86a0f06c4d501223107325d11ae4f2d89663cc85d862b8fa38240e4a2f39",
+            "cybj.03": "08b0e8d498c77d90f0514c591f80f60feade58212212e769763cacfcc838174c",
+            "cybj.04": "e0db9497bdbbc3a7170d1292cb5c76a0a3c8d9b22f25fa7fc08610096dbae030",
+            "cybotsj.key": "8f9a62155abe63c20c607ce25ab3e95db1c84d7d00a36254ade710be142e209a",
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        },
+        "roms/qsound.zip": {
+          "members": {
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        }
+      },
+      "platform": "mame",
+      "profile": "cybots-restoration-default",
+      "region": "us",
+      "variant": "default"
+    },
+    "default-mister": {
+      "destination_requirements": "Use the MiSTer core named by the included MRA.",
+      "inputs": [
+        "source-0b2f5b57054279d06dd4",
+        "source-0fec703fd152ae224dbd",
+        "source-1084857b1e5f18854cc6",
+        "source-13fb4ceeb16d1ddb7540",
+        "source-2e07f20610543b2661b7",
+        "source-2eefc52b43cb7b751206",
+        "source-4c81f90225ce55e62025",
+        "source-524a25bcd153be24594d",
+        "source-591aae5a29f6bbdb80b0",
+        "source-612a9c7aa47c3afd236c",
+        "source-617d5b95179ef4718c45",
+        "source-8f9a62155abe63c20c60",
+        "source-9f0b507d4ccf5047c28e",
+        "source-aaa748a08eb34ed3da9e",
+        "source-ac53840a45da68fdd8e2",
+        "source-d436ba5b2240ed90ce9e",
+        "source-d57d29127a90e21aea4d",
+        "source-da5ed183057fa1dc2e5e",
+        "source-de9d15e3ba1228b50c75",
+        "source-defefccffbdc912f0b74",
+        "source-df6a54dcd8f0579694ca",
+        "source-ed7a95accb52c39dafc7"
+      ],
+      "native_variant": null,
+      "outputs": {
+        "_Arcade/_Arcade Patches/_Restorations/Cyberbots Fullmetal Madness (USA) [Restoration].mra": {
+          "sha256": "63cfccac5d89ed8f44cb89b06ccce72fb9e50f972810c91c0b4964dcb9040897"
+        },
+        "games/mame/cybotsj.zip": {
+          "members": {
+            "cyb.01": "2e07f20610543b2661b7a9fee5073674cac88805225f044b5c7b9c5720a1d0a9",
+            "cyb.02": "1084857b1e5f18854cc6291aa6f6aa58dbaa211f20fc9df5feccb1129dc93387",
+            "cyb.05": "612a9c7aa47c3afd236c68a5c100c3885afb8e3e50ce5f5628cf2389c3078c2d",
+            "cyb.06": "defefccffbdc912f0b7469b9aa7934d1d1d5d85a57c6808b99c0d0d9b9aa8553",
+            "cyb.07": "617d5b95179ef4718c45b9239da0b64dbb1f35dc76339fd80a78eb26cb135c0f",
+            "cyb.08": "de9d15e3ba1228b50c7501bbd3e56b2d2e0311def1b32bee6be18c90450a9829",
+            "cyb.09": "da5ed183057fa1dc2e5ee5fdbeeb9b437a82b3a8f27c4fc6f0227a58c2b79339",
+            "cyb.10": "2eefc52b43cb7b751206875bd1dc767068901bb52f24438ee107ce86084e6928",
+            "cyb.11m": "4c81f90225ce55e620256087af50d2dcb98b056829e2ebd308cb47298fca2d18",
+            "cyb.12m": "df6a54dcd8f0579694ca89bec23b3976aa2cd0427b499f0df53843a5e1e37fa6",
+            "cyb.13m": "0fec703fd152ae224dbda7337ec054f76b2126e55ee7cf4f00b86194e115172e",
+            "cyb.14m": "9f0b507d4ccf5047c28e8794f7920a9e86d9d55dd4d047228a1bf41ffe3d0daf",
+            "cyb.15m": "d57d29127a90e21aea4dc282df7031ae7cc876d086031e19977f8dcd2f6d1330",
+            "cyb.16m": "ac53840a45da68fdd8e2467eb04598997c06d7fb28fb7be7c0757f7c6a84412b",
+            "cyb.17m": "591aae5a29f6bbdb80b01207a46b5e8cd31b488912411d836f638a9496c87346",
+            "cyb.18m": "aaa748a08eb34ed3da9ef98e115f75643fcc664cc7d56c8b968c202d7c90d881",
+            "cyb.19m": "d436ba5b2240ed90ce9e38bbce8e51dab127941b5c084104558f786cdc9ebf29",
+            "cyb.20m": "0b2f5b57054279d06dd4572e2003d0af87e4e49821aeca8bf99c471b2e8966a3",
+            "cybj.03": "13fb4ceeb16d1ddb754096d6b1eca112a2403565278ca9c92e57e4571021a3ef",
+            "cybj.04": "ed7a95accb52c39dafc7a2eae667a9704e5a6574c1e92862f3dfb25d25f0eeca",
+            "cybotsj.key": "8f9a62155abe63c20c607ce25ab3e95db1c84d7d00a36254ade710be142e209a",
+            "dl-1425.bin": "524a25bcd153be24594d37c0dbd334fe4f384f77da73c2058dc60fc1f581cf18"
+          }
+        }
+      },
+      "platform": "mister",
+      "profile": "default",
+      "region": "us",
+      "variant": "default"
+    }
+  }
+}

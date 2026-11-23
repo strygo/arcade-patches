@@ -724,6 +724,10 @@
       "sha256": "d07b6ad8ff6b59cdab3062ca5d9085bc802ebf7702c45d103807cd3579a98449",
       "size": 85056
     },
+    "catalog/v1/definitions/d1e0b16f61c98a506d3acdc0287579c7171254b59ce45d372a508029779db275.json": {
+      "sha256": "d1e0b16f61c98a506d3acdc0287579c7171254b59ce45d372a508029779db275",
+      "size": 38727
+    },
     "catalog/v1/definitions/d1f952b1b1b122afbc0153173f7b2b79c15babfc6b0c74ea42d6f72859807b5c.json": {
       "sha256": "d1f952b1b1b122afbc0153173f7b2b79c15babfc6b0c74ea42d6f72859807b5c",
       "size": 74470
@@ -849,8 +853,8 @@
       "size": 512222
     },
     "catalog/v1/index.json": {
-      "sha256": "e60ceca1352eb656890ac9003190054c4336ed35b0e9e1d912f8674006e0d844",
-      "size": 34141
+      "sha256": "973fc3c020e7a55b6e90ce700e6a31e97b1bffa3a97143d49dba49076462f4f7",
+      "size": 35038
     },
     "downloads/archive/03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59/final-fight-ex-cps2-rc3-kit.zip": {
       "sha256": "03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59",
@@ -1027,6 +1031,10 @@
     "downloads/archive/5b40d65c02b1ecce5f9eeaaf8e2c76b9f6a1c952779360f1195674c7661f0197/vhunt2-arrange-rc4-kit.zip": {
       "sha256": "5b40d65c02b1ecce5f9eeaaf8e2c76b9f6a1c952779360f1195674c7661f0197",
       "size": 2073714
+    },
+    "downloads/archive/5c3c387567880f6ccd64918112c13e79c5080d1da1e0267271ba2d20a3acc9c2/cybots-restoration-rc1-ips.zip": {
+      "sha256": "5c3c387567880f6ccd64918112c13e79c5080d1da1e0267271ba2d20a3acc9c2",
+      "size": 263664
     },
     "downloads/archive/5df7f59b133cd82d256db4e151e6b6ec27d92a424ee6d1169d45367ff10de657/usf2-backport-rc7-kit.zip": {
       "sha256": "5df7f59b133cd82d256db4e151e6b6ec27d92a424ee6d1169d45367ff10de657",
@@ -1309,7 +1317,7 @@
       "size": 63646
     }
   },
-  "generation": 219,
+  "generation": 220,
   "launcher": "tools/downloads/archive/e00b7ff1a450dbd45cf083f12c5b790970ea56f7c63c69d4b362256e395500ac/ArcadePatches-0.1.9.zip",
   "publication_schema": 1,
   "schema": 1,

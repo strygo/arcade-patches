@@ -5,6 +5,11 @@
       "size": 18050109,
       "url": "https://arcadepatches.com/downloads/archive/252109eed64da79d96c58c92d63dc1046b8faed0fe9e1eb002d834e9bcfe83ff/cps-plus-1.8-kit.zip"
     },
+    "cybots-restoration-kit": {
+      "sha256": "5c3c387567880f6ccd64918112c13e79c5080d1da1e0267271ba2d20a3acc9c2",
+      "size": 263664,
+      "url": "https://arcadepatches.com/downloads/archive/5c3c387567880f6ccd64918112c13e79c5080d1da1e0267271ba2d20a3acc9c2/cybots-restoration-rc1-ips.zip"
+    },
     "dstlk-restoration-kit": {
       "sha256": "082be53429dcf2c2ec0b53350c22c32d086929797a5cc63f62e51c40ad27d970",
       "size": 216031,
@@ -260,7 +265,7 @@
       "url": "https://arcadepatches.com/downloads/archive/110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678/xmvsf-restoration-rc1-ips.zip"
     }
   },
-  "generation": 219,
+  "generation": 220,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -270,6 +275,10 @@
     "cps-plus": {
       "current": "cps-plus-1-8-r5",
       "title": "CPS+"
+    },
+    "cybots-restoration": {
+      "current": "cybots-restoration-rc1-r1",
+      "title": "Cyberbots: Fullmetal Madness \u00b7 English restoration"
     },
     "dstlk-restoration": {
       "current": "dstlk-restoration-rc1-r10",
@@ -403,6 +412,17 @@
       "game_version": "1.8",
       "kit": "cps-plus-kit",
       "kit_revision": 5
+    },
+    "cybots-restoration-rc1-r1": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "d1e0b16f61c98a506d3acdc0287579c7171254b59ce45d372a508029779db275",
+        "size": 38727,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/d1e0b16f61c98a506d3acdc0287579c7171254b59ce45d372a508029779db275.json"
+      },
+      "game_version": "rc1",
+      "kit": "cybots-restoration-kit",
+      "kit_revision": 1
     },
     "dstlk-restoration-rc1-r10": {
       "definition": {
