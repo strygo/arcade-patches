@@ -856,21 +856,27 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 1,
-          "date": "2026-11-23",
+          "current_revision": 2,
+          "date": "2026-11-24",
           "files": {
             "kit": {
-              "archive": "archive/98495f00529c394882a18c1449efbd1e195bb1bca43a7b1d5d999b847e9f0c37/msh-english-restoration-rc1-kit.zip",
+              "archive": "archive/2e3e7a5cbc222c42cee40681d5c568b76e1b54f0e4c60cf7c75da4a8c1ebbbc7/msh-english-restoration-rc1-kit.zip",
               "name": "msh-english-restoration-rc1-kit.zip",
-              "sha256": "98495f00529c394882a18c1449efbd1e195bb1bca43a7b1d5d999b847e9f0c37",
-              "size": 261171
+              "sha256": "2e3e7a5cbc222c42cee40681d5c568b76e1b54f0e4c60cf7c75da4a8c1ebbbc7",
+              "size": 268825
             }
           },
+          "game_contract_sha256": "e4805e4e81f19df879141591749b36cc41934f466f57ee62cccadde2923ddc11",
           "kind": "kit",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "revisions": {
@@ -884,6 +890,19 @@
                   "size": 261171
                 }
               },
+              "kind": "kit"
+            },
+            "2": {
+              "date": "2026-11-24",
+              "files": {
+                "kit": {
+                  "archive": "archive/2e3e7a5cbc222c42cee40681d5c568b76e1b54f0e4c60cf7c75da4a8c1ebbbc7/msh-english-restoration-rc1-kit.zip",
+                  "name": "msh-english-restoration-rc1-kit.zip",
+                  "sha256": "2e3e7a5cbc222c42cee40681d5c568b76e1b54f0e4c60cf7c75da4a8c1ebbbc7",
+                  "size": 268825
+                }
+              },
+              "game_contract_sha256": "e4805e4e81f19df879141591749b36cc41934f466f57ee62cccadde2923ddc11",
               "kind": "kit"
             }
           }

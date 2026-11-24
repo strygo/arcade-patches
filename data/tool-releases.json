@@ -448,6 +448,10 @@
       "sha256": "7af1361a5325462623c44fccba8008e649a7c0b391749ed244d6ba2bbc24938b",
       "size": 514282
     },
+    "catalog/v1/definitions/7be415a302f9099f74efaa8aa84f4d288a75cd302f8ba680f4c800daf7ce9527.json": {
+      "sha256": "7be415a302f9099f74efaa8aa84f4d288a75cd302f8ba680f4c800daf7ce9527",
+      "size": 38379
+    },
     "catalog/v1/definitions/7c0ae052c82e7c9f335a55737aa2af926ab112d497e9686a5ebb6ffa6757251a.json": {
       "sha256": "7c0ae052c82e7c9f335a55737aa2af926ab112d497e9686a5ebb6ffa6757251a",
       "size": 34959
@@ -853,7 +857,7 @@
       "size": 512222
     },
     "catalog/v1/index.json": {
-      "sha256": "973fc3c020e7a55b6e90ce700e6a31e97b1bffa3a97143d49dba49076462f4f7",
+      "sha256": "f64f85010ef4a8eb92d3674225fcda07ca4141dbcf034d5301e6fb2054ef03bb",
       "size": 35038
     },
     "downloads/archive/03369d1201c72e11773045dd5565a2db79de2b55057c26270e1c848b36e7ec59/final-fight-ex-cps2-rc3-kit.zip": {
@@ -931,6 +935,10 @@
     "downloads/archive/2e3aed6fa6d438fa2a1d3992ba81b299ac17a330f5f0e27499b06c4c8185d59a/vsav2-arrange-rc4-kit.zip": {
       "sha256": "2e3aed6fa6d438fa2a1d3992ba81b299ac17a330f5f0e27499b06c4c8185d59a",
       "size": 1986815
+    },
+    "downloads/archive/2e3e7a5cbc222c42cee40681d5c568b76e1b54f0e4c60cf7c75da4a8c1ebbbc7/msh-english-restoration-rc1-kit.zip": {
+      "sha256": "2e3e7a5cbc222c42cee40681d5c568b76e1b54f0e4c60cf7c75da4a8c1ebbbc7",
+      "size": 268825
     },
     "downloads/archive/2ff53af289e65e52ae55fa67543235fe59bf1d2e04b0bd50c4bea64dfff656db/sfa3-upper-cps2-rc2-kit.zip": {
       "sha256": "2ff53af289e65e52ae55fa67543235fe59bf1d2e04b0bd50c4bea64dfff656db",
@@ -1317,7 +1325,7 @@
       "size": 63646
     }
   },
-  "generation": 220,
+  "generation": 221,
   "launcher": "tools/downloads/archive/e00b7ff1a450dbd45cf083f12c5b790970ea56f7c63c69d4b362256e395500ac/ArcadePatches-0.1.9.zip",
   "publication_schema": 1,
   "schema": 1,

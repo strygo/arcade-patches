@@ -31,9 +31,9 @@
       "url": "https://arcadepatches.com/downloads/archive/8c7907357590e994c64fc8561c329385e029131308f6329c40a68afed6ba7177/hsf2-restoration-rc3-ips.zip"
     },
     "msh-english-restoration-kit": {
-      "sha256": "98495f00529c394882a18c1449efbd1e195bb1bca43a7b1d5d999b847e9f0c37",
-      "size": 261171,
-      "url": "https://arcadepatches.com/downloads/archive/98495f00529c394882a18c1449efbd1e195bb1bca43a7b1d5d999b847e9f0c37/msh-english-restoration-rc1-kit.zip"
+      "sha256": "2e3e7a5cbc222c42cee40681d5c568b76e1b54f0e4c60cf7c75da4a8c1ebbbc7",
+      "size": 268825,
+      "url": "https://arcadepatches.com/downloads/archive/2e3e7a5cbc222c42cee40681d5c568b76e1b54f0e4c60cf7c75da4a8c1ebbbc7/msh-english-restoration-rc1-kit.zip"
     },
     "mshvsf-ex-kit": {
       "sha256": "cb145f1ced3ba4542a1a543e751ad98a2f4237d917ad94f477ba519ca0edce54",
@@ -265,7 +265,7 @@
       "url": "https://arcadepatches.com/downloads/archive/110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678/xmvsf-restoration-rc1-ips.zip"
     }
   },
-  "generation": 220,
+  "generation": 221,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -297,7 +297,7 @@
       "title": "Hyper Street Fighter II: The Anniversary Edition \u00b7 English restoration"
     },
     "msh-english-restoration": {
-      "current": "msh-english-restoration-rc1-r1",
+      "current": "msh-english-restoration-rc1-r2",
       "title": "Marvel Super Heroes"
     },
     "mshvsf-ex": {
@@ -468,16 +468,16 @@
       "kit": "hsf2-restoration-kit",
       "kit_revision": 1
     },
-    "msh-english-restoration-rc1-r1": {
+    "msh-english-restoration-rc1-r2": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "227119093b21f7219bbaa045cd099199c4f64f42717390796c49b658376bd3b8",
-        "size": 38303,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/227119093b21f7219bbaa045cd099199c4f64f42717390796c49b658376bd3b8.json"
+        "sha256": "7be415a302f9099f74efaa8aa84f4d288a75cd302f8ba680f4c800daf7ce9527",
+        "size": 38379,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/7be415a302f9099f74efaa8aa84f4d288a75cd302f8ba680f4c800daf7ce9527.json"
       },
       "game_version": "rc1",
       "kit": "msh-english-restoration-kit",
-      "kit_revision": 1
+      "kit_revision": 2
     },
     "mshvsf-ex-rc7-r2": {
       "definition": {
