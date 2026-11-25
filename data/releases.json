@@ -913,21 +913,28 @@
       "current": "rc1",
       "versions": {
         "rc1": {
-          "current_revision": 1,
+          "additive_output": "hbmame-fbneo",
+          "current_revision": 2,
           "date": "2026-11-25",
           "files": {
             "kit": {
-              "archive": "archive/978dc0dda0b8e11baf23d817d29ea8257e89507762d143556456857f62f52654/msh-ex-rc1-kit.zip",
+              "archive": "archive/8e691b026b5b097d426fd3edaedaed09bfb34ee3c53c48dd2826c4e9617a3a68/msh-ex-rc1-kit.zip",
               "name": "msh-ex-rc1-kit.zip",
-              "sha256": "978dc0dda0b8e11baf23d817d29ea8257e89507762d143556456857f62f52654",
-              "size": 859958
+              "sha256": "8e691b026b5b097d426fd3edaedaed09bfb34ee3c53c48dd2826c4e9617a3a68",
+              "size": 860926
             }
           },
+          "game_contract_sha256": "79b7b871ded8cd04ee435c7934caa8bcb170324680c798dcc10879fdf5fe6923",
           "kind": "kit",
           "promotions": [
             {
               "reason": "migration",
               "revision": 1
+            },
+            {
+              "date": "2026-11-25",
+              "reason": "tooling update",
+              "revision": 2
             }
           ],
           "revisions": {
@@ -941,6 +948,20 @@
                   "size": 859958
                 }
               },
+              "kind": "kit"
+            },
+            "2": {
+              "additive_output": "hbmame-fbneo",
+              "date": "2026-11-25",
+              "files": {
+                "kit": {
+                  "archive": "archive/8e691b026b5b097d426fd3edaedaed09bfb34ee3c53c48dd2826c4e9617a3a68/msh-ex-rc1-kit.zip",
+                  "name": "msh-ex-rc1-kit.zip",
+                  "sha256": "8e691b026b5b097d426fd3edaedaed09bfb34ee3c53c48dd2826c4e9617a3a68",
+                  "size": 860926
+                }
+              },
+              "game_contract_sha256": "79b7b871ded8cd04ee435c7934caa8bcb170324680c798dcc10879fdf5fe6923",
               "kind": "kit"
             }
           }
