@@ -2111,14 +2111,14 @@
           }
         },
         "rc9": {
-          "current_revision": 2,
-          "date": "2026-11-17",
+          "current_revision": 3,
+          "date": "2026-11-24",
           "files": {
             "kit": {
-              "archive": "archive/8bbf3dab98ccde1d419fea4729209f1762c812a38c53d2ad54cf09c389df1536/sfa2-gold-rc9-kit.zip",
+              "archive": "archive/a9d5504e92a3c07d1e214aed1564d55da4cf9b07f8e6abd94fcd7813e72b2cd8/sfa2-gold-rc9-kit.zip",
               "name": "sfa2-gold-rc9-kit.zip",
-              "sha256": "8bbf3dab98ccde1d419fea4729209f1762c812a38c53d2ad54cf09c389df1536",
-              "size": 1780924
+              "sha256": "a9d5504e92a3c07d1e214aed1564d55da4cf9b07f8e6abd94fcd7813e72b2cd8",
+              "size": 1780905
             }
           },
           "game_contract_sha256": "0d8fa531b9a9b73f14abfa31890a2153f71ab3e043cf2f8d4fc2bb6f49e58cf0",
@@ -2132,6 +2132,11 @@
               "date": "2026-11-17",
               "reason": "tooling update",
               "revision": 2
+            },
+            {
+              "date": "2026-11-24",
+              "reason": "tooling update",
+              "revision": 3
             }
           ],
           "revisions": {
@@ -2155,6 +2160,19 @@
                   "name": "sfa2-gold-rc9-kit.zip",
                   "sha256": "8bbf3dab98ccde1d419fea4729209f1762c812a38c53d2ad54cf09c389df1536",
                   "size": 1780924
+                }
+              },
+              "game_contract_sha256": "0d8fa531b9a9b73f14abfa31890a2153f71ab3e043cf2f8d4fc2bb6f49e58cf0",
+              "kind": "kit"
+            },
+            "3": {
+              "date": "2026-11-24",
+              "files": {
+                "kit": {
+                  "archive": "archive/a9d5504e92a3c07d1e214aed1564d55da4cf9b07f8e6abd94fcd7813e72b2cd8/sfa2-gold-rc9-kit.zip",
+                  "name": "sfa2-gold-rc9-kit.zip",
+                  "sha256": "a9d5504e92a3c07d1e214aed1564d55da4cf9b07f8e6abd94fcd7813e72b2cd8",
+                  "size": 1780905
                 }
               },
               "game_contract_sha256": "0d8fa531b9a9b73f14abfa31890a2153f71ab3e043cf2f8d4fc2bb6f49e58cf0",

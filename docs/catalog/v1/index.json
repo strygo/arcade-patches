@@ -71,9 +71,9 @@
       "url": "https://arcadepatches.com/downloads/archive/88b9e922932ad6d4ccab534397363ce6d140f1fe3015030998fa92a72cb54a29/sfa2-ex-rc5-kit.zip"
     },
     "sfa2-gold-kit": {
-      "sha256": "8bbf3dab98ccde1d419fea4729209f1762c812a38c53d2ad54cf09c389df1536",
-      "size": 1780924,
-      "url": "https://arcadepatches.com/downloads/archive/8bbf3dab98ccde1d419fea4729209f1762c812a38c53d2ad54cf09c389df1536/sfa2-gold-rc9-kit.zip"
+      "sha256": "a9d5504e92a3c07d1e214aed1564d55da4cf9b07f8e6abd94fcd7813e72b2cd8",
+      "size": 1780905,
+      "url": "https://arcadepatches.com/downloads/archive/a9d5504e92a3c07d1e214aed1564d55da4cf9b07f8e6abd94fcd7813e72b2cd8/sfa2-gold-rc9-kit.zip"
     },
     "sfa2-restoration-kit": {
       "sha256": "d9861af77468248d2d153a15ef96a5aaf6b11e76f485194db32ee9d8f683fd9e",
@@ -265,7 +265,7 @@
       "url": "https://arcadepatches.com/downloads/archive/110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678/xmvsf-restoration-rc1-ips.zip"
     }
   },
-  "generation": 221,
+  "generation": 222,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -329,7 +329,7 @@
       "title": "Street Fighter Alpha 2 EX"
     },
     "sfa2-gold": {
-      "current": "sfa2-gold-rc9-r2",
+      "current": "sfa2-gold-rc9-r3",
       "title": "Street Fighter Alpha 2 Gold"
     },
     "sfa2-restoration": {
@@ -556,16 +556,16 @@
       "kit": "sfa2-ex-kit",
       "kit_revision": 1
     },
-    "sfa2-gold-rc9-r2": {
+    "sfa2-gold-rc9-r3": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "677129f4cdc726dcfb7e96dabe47f8782292b7642bfe4c7976492b777444ab7e",
-        "size": 160983,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/677129f4cdc726dcfb7e96dabe47f8782292b7642bfe4c7976492b777444ab7e.json"
+        "sha256": "7ca43c9ce97fed206a717a5696587c7bbac38436409b52dda7e4fd36b690e661",
+        "size": 160979,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/7ca43c9ce97fed206a717a5696587c7bbac38436409b52dda7e4fd36b690e661.json"
       },
       "game_version": "rc9",
       "kit": "sfa2-gold-kit",
-      "kit_revision": 2
+      "kit_revision": 3
     },
     "sfa2-restoration-rc2-r9": {
       "definition": {
