@@ -36,9 +36,9 @@
       "url": "https://arcadepatches.com/downloads/archive/2e3e7a5cbc222c42cee40681d5c568b76e1b54f0e4c60cf7c75da4a8c1ebbbc7/msh-english-restoration-rc1-kit.zip"
     },
     "msh-ex-kit": {
-      "sha256": "8e691b026b5b097d426fd3edaedaed09bfb34ee3c53c48dd2826c4e9617a3a68",
-      "size": 860926,
-      "url": "https://arcadepatches.com/downloads/archive/8e691b026b5b097d426fd3edaedaed09bfb34ee3c53c48dd2826c4e9617a3a68/msh-ex-rc1-kit.zip"
+      "sha256": "75cbe1101d3f4b2d506d42897aced9970272cc462125b996c3af43f7e75901b1",
+      "size": 861101,
+      "url": "https://arcadepatches.com/downloads/archive/75cbe1101d3f4b2d506d42897aced9970272cc462125b996c3af43f7e75901b1/msh-ex-rc1-kit.zip"
     },
     "mshvsf-ex-kit": {
       "sha256": "cb145f1ced3ba4542a1a543e751ad98a2f4237d917ad94f477ba519ca0edce54",
@@ -270,7 +270,7 @@
       "url": "https://arcadepatches.com/downloads/archive/110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678/xmvsf-restoration-rc1-ips.zip"
     }
   },
-  "generation": 224,
+  "generation": 225,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -306,7 +306,7 @@
       "title": "Marvel Super Heroes"
     },
     "msh-ex": {
-      "current": "msh-ex-rc1-r2",
+      "current": "msh-ex-rc1-r3",
       "title": "Marvel Super Heroes EX"
     },
     "mshvsf-ex": {
@@ -488,16 +488,16 @@
       "kit": "msh-english-restoration-kit",
       "kit_revision": 2
     },
-    "msh-ex-rc1-r2": {
+    "msh-ex-rc1-r3": {
       "definition": {
         "kind": "native-kit-v1",
-        "sha256": "871c1bf25dce3665f1968726862739cef51b61b60bf0e3b8342cd37836c6fd48",
-        "size": 52247,
-        "url": "https://arcadepatches.com/catalog/v1/definitions/871c1bf25dce3665f1968726862739cef51b61b60bf0e3b8342cd37836c6fd48.json"
+        "sha256": "de3ddd092d4495376d67e0977eb7f6f47c29617eeeb9e9d91486980926d57841",
+        "size": 52281,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/de3ddd092d4495376d67e0977eb7f6f47c29617eeeb9e9d91486980926d57841.json"
       },
       "game_version": "rc1",
       "kit": "msh-ex-kit",
-      "kit_revision": 2
+      "kit_revision": 3
     },
     "mshvsf-ex-rc7-r2": {
       "definition": {

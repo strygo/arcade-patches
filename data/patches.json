@@ -238,7 +238,8 @@
       "game": "Marvel Super Heroes",
       "hardware": "CPS-2",
       "notes": [
-        "The RC1 kit supports MAME, HBMAME, FBNeo and MiSTer for both Japan and USA."
+        "The RC1 kit supports MAME, HBMAME, FBNeo and MiSTer for both Japan and USA.",
+        "On MiSTer, find the USA edition under Arcade Patches / Enhanced Versions and the Japan edition in its Japan subfolder."
       ],
       "release_history": [
         {

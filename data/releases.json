@@ -914,14 +914,14 @@
       "versions": {
         "rc1": {
           "additive_output": "hbmame-fbneo",
-          "current_revision": 2,
+          "current_revision": 3,
           "date": "2026-11-25",
           "files": {
             "kit": {
-              "archive": "archive/8e691b026b5b097d426fd3edaedaed09bfb34ee3c53c48dd2826c4e9617a3a68/msh-ex-rc1-kit.zip",
+              "archive": "archive/75cbe1101d3f4b2d506d42897aced9970272cc462125b996c3af43f7e75901b1/msh-ex-rc1-kit.zip",
               "name": "msh-ex-rc1-kit.zip",
-              "sha256": "8e691b026b5b097d426fd3edaedaed09bfb34ee3c53c48dd2826c4e9617a3a68",
-              "size": 860926
+              "sha256": "75cbe1101d3f4b2d506d42897aced9970272cc462125b996c3af43f7e75901b1",
+              "size": 861101
             }
           },
           "game_contract_sha256": "79b7b871ded8cd04ee435c7934caa8bcb170324680c798dcc10879fdf5fe6923",
@@ -935,6 +935,11 @@
               "date": "2026-11-25",
               "reason": "tooling update",
               "revision": 2
+            },
+            {
+              "date": "2026-11-25",
+              "reason": "tooling update",
+              "revision": 3
             }
           ],
           "revisions": {
@@ -959,6 +964,19 @@
                   "name": "msh-ex-rc1-kit.zip",
                   "sha256": "8e691b026b5b097d426fd3edaedaed09bfb34ee3c53c48dd2826c4e9617a3a68",
                   "size": 860926
+                }
+              },
+              "game_contract_sha256": "79b7b871ded8cd04ee435c7934caa8bcb170324680c798dcc10879fdf5fe6923",
+              "kind": "kit"
+            },
+            "3": {
+              "date": "2026-11-25",
+              "files": {
+                "kit": {
+                  "archive": "archive/75cbe1101d3f4b2d506d42897aced9970272cc462125b996c3af43f7e75901b1/msh-ex-rc1-kit.zip",
+                  "name": "msh-ex-rc1-kit.zip",
+                  "sha256": "75cbe1101d3f4b2d506d42897aced9970272cc462125b996c3af43f7e75901b1",
+                  "size": 861101
                 }
               },
               "game_contract_sha256": "79b7b871ded8cd04ee435c7934caa8bcb170324680c798dcc10879fdf5fe6923",
