@@ -35,6 +35,11 @@
       "size": 268825,
       "url": "https://arcadepatches.com/downloads/archive/2e3e7a5cbc222c42cee40681d5c568b76e1b54f0e4c60cf7c75da4a8c1ebbbc7/msh-english-restoration-rc1-kit.zip"
     },
+    "msh-ex-kit": {
+      "sha256": "978dc0dda0b8e11baf23d817d29ea8257e89507762d143556456857f62f52654",
+      "size": 859958,
+      "url": "https://arcadepatches.com/downloads/archive/978dc0dda0b8e11baf23d817d29ea8257e89507762d143556456857f62f52654/msh-ex-rc1-kit.zip"
+    },
     "mshvsf-ex-kit": {
       "sha256": "cb145f1ced3ba4542a1a543e751ad98a2f4237d917ad94f477ba519ca0edce54",
       "size": 1080292,
@@ -265,7 +270,7 @@
       "url": "https://arcadepatches.com/downloads/archive/110f342cc4a2e6f33fd9ef696a8aea4a7bcf6ed12325d36d61728e817f42e678/xmvsf-restoration-rc1-ips.zip"
     }
   },
-  "generation": 222,
+  "generation": 223,
   "launcher": {
     "url": "https://arcadepatches.com/arcadepatches/",
     "version": "0.1.9"
@@ -299,6 +304,10 @@
     "msh-english-restoration": {
       "current": "msh-english-restoration-rc1-r2",
       "title": "Marvel Super Heroes"
+    },
+    "msh-ex": {
+      "current": "msh-ex-rc1-r1",
+      "title": "Marvel Super Heroes EX"
     },
     "mshvsf-ex": {
       "current": "mshvsf-ex-rc7-r2",
@@ -478,6 +487,17 @@
       "game_version": "rc1",
       "kit": "msh-english-restoration-kit",
       "kit_revision": 2
+    },
+    "msh-ex-rc1-r1": {
+      "definition": {
+        "kind": "native-kit-v1",
+        "sha256": "df8cd524f92d1fb14c9637d3a07abb8b789460f9bfaf28d7b23e70e95966a596",
+        "size": 31625,
+        "url": "https://arcadepatches.com/catalog/v1/definitions/df8cd524f92d1fb14c9637d3a07abb8b789460f9bfaf28d7b23e70e95966a596.json"
+      },
+      "game_version": "rc1",
+      "kit": "msh-ex-kit",
+      "kit_revision": 1
     },
     "mshvsf-ex-rc7-r2": {
       "definition": {
